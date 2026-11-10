@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | spec + plan + tasks written — awaiting approval (STOP-A) |
+| 02 soc-corpus Wave 1 | implementing — B1 written (8 drafts), waiting at STOP-B1 |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -48,6 +48,8 @@ Never delete history; append a new session block; keep the Current state table c
 - `1fd53c6` — STOP-E ticked; Naveed said "push OK": pushed main (scaffold) + feat/01-record-identity; PR #1 opened by Naveed in browser (gh not logged in)
 - Naveed merged PR #1 → main `186b665`; local main fast-forwarded
 - Branch `feat/02-soc-corpus-wave-1`: specs/02-soc-corpus/{spec,plan,tasks,sources}.md (commit below)
+- Feature 02 STOP-A approved; B1 URL list (all HTTP 200) approved.
+- B1 drafts: orientation/how-to-use, orientation/glossary, wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels, windows-events/event-4624, event-4625, event-4648 (commit "Wave 1 B1 …"); verify.mjs: no changed values
 - `aa76b20` — specs/00-final-plan.txt v3 (Wave 3 soc-fundamentals, steps 43-50), Feature 01 spec intake table, history/prompts/0002-scope-l1-operations-wave-3.md
 
 ### Decisions taken
@@ -62,17 +64,22 @@ Never delete history; append a new session block; keep the Current state table c
 - Plan copy landed in `node_modules/@panaversity/ksor/docs/specs/` because my shell cwd had drifted; moved with absolute paths, stray dir removed.
 - `npm run check` refused CLAUDE.md with extra content (`ksor-pointer-changed`: CLAUDE.md must be exactly `@AGENTS.md`). Session rule moved to `.claude/rules/session-protocol.md`; plan/spec/tasks/LEARNING updated.
 - `npm run build` rewrote `system/site/next-env.d.ts` (Next.js churn); restored, not committed.
+- MITRE ATT&CK now lists "Stealth" (TA0005) and "Defense Impairment" (TA0112) instead of Defense Evasion — tactic names must always be read live in B3.
+- Wazuh rule levels are 0–16 (not 0–15); found by reading the source.
+- Dev server serves new pages only after restart (`output: export` static params): restart `npm run dev` after adding documents.
 
 ### Pending / blocked
-- Feature 02 STOP-A: Naveed to approve specs/02-soc-corpus spec/plan/tasks. (Naveed)
+- STOP-B1: Naveed to check 2 random B1 pages against sources and say "next". (Naveed)
 - `gh` CLI not logged in — needed for the PR in T01-14 (`gh auth login`), or PR via browser. (Naveed)
 
 ### TODO-VERIFY list
-- (none — overview cites only the intake interview)
+- glossary: TP / benign TP, IOA, L1/L2/L3, SLA, MTTD/MTTR, enrichment, FP rate → interview I1
+- alert-json-anatomy: `rule.mitre.*` output field names; Security-log `eventdata` key casing → B2 ruleset
+- events 4624/4625/4648: MITRE mapping (B3), Wazuh rule IDs (B2), playbook links (B5 / link pass)
 
 ### Exact next step for the next session
-- After approval: T02-02 — show the B1 URL list with tiers (specs/02-soc-corpus/tasks.md).
+- After "next": T02-06 — verify Wazuh tag and show the B2 URL list.
 
 ### Naveed's manual actions needed
-- Approve Feature 02 spec/plan/tasks.
+- Check 2 random B1 pages against their sources (STOP-B1).
 - Optional before T01-14: `gh auth login`.

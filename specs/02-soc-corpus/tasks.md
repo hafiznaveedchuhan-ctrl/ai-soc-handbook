@@ -6,13 +6,13 @@ verify.mjs run per page · TODO-VERIFY list reported.
 
 - [x] **T02-01** Create branch; write spec, plan, tasks, empty `sources.md`.
   Verify by: files exist; `npm run check` ok.
-- [ ] **STOP-A** Naveed approves Feature 02 spec/plan/tasks.
+- [x] **STOP-A** Naveed approves Feature 02 spec/plan/tasks.
 
 ## B1
-- [ ] **T02-02** Show B1 URL list (NIST, MITRE, Wazuh docs, Microsoft Learn 4624/4625/4648 + Audit Logon) with tiers; confirm each resolves. **STOP:** URLs approved.
-- [ ] **T02-03** Write orientation/glossary, orientation/how-to-use.
-- [ ] **T02-04** Write wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels.
-- [ ] **T02-05** Write windows-events/event-4624, event-4625 (Logon Type + Status/SubStatus tables), event-4648.
+- [x] **T02-02** Show B1 URL list (NIST, MITRE, Wazuh docs, Microsoft Learn 4624/4625/4648 + Audit Logon) with tiers; confirm each resolves. **STOP:** URLs approved.
+- [x] **T02-03** Write orientation/glossary, orientation/how-to-use.
+- [x] **T02-04** Write wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels.
+- [x] **T02-05** Write windows-events/event-4624, event-4625 (Logon Type + Status/SubStatus tables), event-4648.
 - [ ] **STOP-B1** Report; Naveed checks 2 random pages; says "next".
 
 ## B2
