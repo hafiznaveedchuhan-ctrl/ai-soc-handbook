@@ -52,8 +52,8 @@ Each page has the same three parts, in this order:[^naveed-interview-2026-11-10]
 A footnote names the source a claim comes from: an official publication
 (Microsoft, MITRE, NIST, CISA, Wazuh, IETF), a secondary source labelled
 "(secondary source)", or an interview with the handbook's owner. A value that
-has not yet been confirmed is marked `TODO-VERIFY`, and a page carrying that
-marker is still a draft.[^naveed-interview-2026-11-10]
+has not yet been confirmed is flagged as an open item to verify, and a page
+with any open item is still a draft.[^naveed-interview-2026-11-10]
 
 ## Rules when using it
 
