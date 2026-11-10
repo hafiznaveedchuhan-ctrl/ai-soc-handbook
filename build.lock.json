@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:1004cba2890af2ef82eb4155ec6ed35562b364ccf22582e9f5ec0b15f5352fa9",
+  "build_id": "sha256:b945deddc4add2ddf60069eaf1759aaa74a85b74914d843164a9460f7cc99949",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "e00361344372cd4a1dc2f1fb41aa60b4dd38101d",
+  "source_commit": "309dfc57db08726b439fa18675ba3a734143e1b8",
   "dirty": true,
-  "as_of": "2026-11-10T15:13:36.077Z",
+  "as_of": "2026-11-10T15:23:59.467Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -163,6 +163,15 @@
       "admitted": []
     },
     {
+      "path": "networking/email-protocols.md",
+      "sha256": "582c7f30466a1485e631a7c6f9da8153aa1fcfa7e4ae3a5951806a2dc454ce60",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/ethernet-and-mac-addresses.md",
       "sha256": "3d105897431d9771fa28f4de10264b15ef7db75fdfd340e5fb223a1e995444df",
       "status": "draft",
@@ -172,8 +181,35 @@
       "admitted": []
     },
     {
+      "path": "networking/firewalls.md",
+      "sha256": "38c4c9af15f3a5311f22fb06d99e56f6d6cf6890158dcadae4fc0af97bdf1110",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/http-https.md",
+      "sha256": "bf0ed1fba2f5033fb76062a5f560f20d4e1a6619cdf3da7b8c5b2e386be8c5e8",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/icmp-and-icmpv6.md",
       "sha256": "391757a2ef63f49ad2b914d693055641d8a776a1f3f0ee5a3530129979930d7e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ids-ips.md",
+      "sha256": "694876161ac30bf128e88ab18a6a61871ca3c7586f41aa7f2cf7b8e95b24ebea",
       "status": "draft",
       "audience": [
         "public"
@@ -280,6 +316,24 @@
       "admitted": []
     },
     {
+      "path": "networking/proxies.md",
+      "sha256": "486467b3ff6ad9626941aade7ceae30a254a8d2e65f0312dcd48475c4d38b4ef",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/remote-access-protocols.md",
+      "sha256": "1cb264801f42d6986150af7f0d1cab070f4ef0bf53ba46cec7a31096e38bde96",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/routing-basics.md",
       "sha256": "60dd0ec8f710f5ebf8e1e5431ead545e8abb9124fd516c6a291b4c7a117531e0",
       "status": "draft",
@@ -325,6 +379,15 @@
       "admitted": []
     },
     {
+      "path": "networking/tls.md",
+      "sha256": "065aa9ca01cd89c703b761eef696335b3abaa67135ffa13bcf34d6a8a070d266",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/udp.md",
       "sha256": "50c23ba3cc2dbeae83239e45ef612ccc208e0390960fab4a2de8f4f32afb195d",
       "status": "draft",
@@ -336,6 +399,15 @@
     {
       "path": "networking/vlans-and-switching.md",
       "sha256": "648e8898846f2fc729ef0060cff1050a5035563944ad040b28b5fb6876e711a9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/vpn-and-ipsec.md",
+      "sha256": "1424df5c72322d45b51ee9b7b9d1e00bdf6c3a9d5e26e5b5485bf475e1ca47b1",
       "status": "draft",
       "audience": [
         "public"
@@ -829,7 +901,7 @@
     },
     {
       "path": "networking/index.md",
-      "sha256": "8bdcc9b6f02eccdece4fbbba8b22377d8a0c24b295bec847df12e90a9d852be8"
+      "sha256": "273f1aa21ceff041681c941858fa8f75405f2bfe38e815e995938d1b8f094f86"
     },
     {
       "path": "orientation/index.md",
