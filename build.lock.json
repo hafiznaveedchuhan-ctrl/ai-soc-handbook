@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:b945deddc4add2ddf60069eaf1759aaa74a85b74914d843164a9460f7cc99949",
+  "build_id": "sha256:ec6de0969dfc32272d3087ad146bb49bb3e26d6f203b5a6a954639df34537f98",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "309dfc57db08726b439fa18675ba3a734143e1b8",
+  "source_commit": "1092a8391bf65717941bc2c2fa7e96148a94a9ce",
   "dirty": true,
-  "as_of": "2026-11-10T15:23:59.467Z",
+  "as_of": "2026-11-10T15:36:26.552Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -271,6 +271,33 @@
       "admitted": []
     },
     {
+      "path": "networking/netflow-and-ipfix.md",
+      "sha256": "4fcc97e66d2ef27e6a075d089717e944a8bc37fe686079c5863eb5b890a0fb75",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/network-attacks.md",
+      "sha256": "7c453cc5bbe51854ca6a0055c913e247a5a4fe561a7aea65d185931e22f5b846",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/network-segmentation-and-zones.md",
+      "sha256": "6ea74565f1e85a31d76dae74b739e1ee7b747bb52bd35a8dd6ddefc050e0ee6b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/networking-overview.md",
       "sha256": "d51cd003c86531333ddaa9186f2a283afea0ebc2be37d7d791dde1f9a4c55ae5",
       "status": "draft",
@@ -307,6 +334,15 @@
       "admitted": []
     },
     {
+      "path": "networking/packet-capture.md",
+      "sha256": "d939a3575f6902c45f8b173d1851491c7bbfab7adf43c6ad2de2e3526347a4d9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/ports-and-services.md",
       "sha256": "6a5750edd1a141145c536d8b4bcb8ca43543bc73cab1b9e4b8d1e59dee219a31",
       "status": "draft",
@@ -318,6 +354,15 @@
     {
       "path": "networking/proxies.md",
       "sha256": "486467b3ff6ad9626941aade7ceae30a254a8d2e65f0312dcd48475c4d38b4ef",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/reading-network-logs-in-siem.md",
+      "sha256": "8edc6fdbc26d71bb959be61d2fc0009bb179d36ee8876e81a2e01853fd2dc2ef",
       "status": "draft",
       "audience": [
         "public"
@@ -354,6 +399,15 @@
     {
       "path": "networking/special-ipv4-ranges.md",
       "sha256": "c14a21550c14f81a6f9829a4c522f898b6f884fe1428ae26d07d66b20b9c340f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/syslog.md",
+      "sha256": "1170188620ed937cd8763cf0da0423f3ba879322a53f857b51bc10781adeac4e",
       "status": "draft",
       "audience": [
         "public"
@@ -901,7 +955,7 @@
     },
     {
       "path": "networking/index.md",
-      "sha256": "273f1aa21ceff041681c941858fa8f75405f2bfe38e815e995938d1b8f094f86"
+      "sha256": "a01643fcf2e6ea86488eb4acb0a5f58ce2efbe157ca369179510399d214e8715"
     },
     {
       "path": "orientation/index.md",

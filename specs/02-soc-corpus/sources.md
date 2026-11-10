@@ -26,6 +26,7 @@ unattributed blogs, AI text) are never cited.
 | N2 | networking | IANA IPv4 + IPv6 special-purpose registries, ICMP + ICMPv6 parameters, protocol numbers, service names and port numbers; RFC 6890 (+8190), 3927, 6598, 1112, 8200, 4291, 5952, 3849 (+9637), 4193, 4861, 4862, 792, 4443, 9293, 768, 6335 | 2026-11-10 |
 | N3 | networking | RFC 1812, 4632, 792, 2328, 5340, 4271, 3022, 4787, 1918, 9542, 2131, 9915 (replaces obsolete 8415), 4862, 1034, 1035, 5905, 8633 (rfc-editor.org); IANA protocol numbers, IEEE 802 numbers, BOOTP/DHCP parameters, DNS parameters, port numbers; NIST SP 800-81r3 (replaces withdrawn 800-81-2), NIST SP 800-153. IEEE 802.1Q/802.11 blocked — not used | 2026-11-10 |
 | N4 | networking | RFC 9110, 9112, 9846 (replaces obsolete 8446), 8996, 5321, 5322, 9051, 1939, 7208, 6376, 9989 (replaces obsolete 7489), 4251, 4253, 854, 7239, 4301, 4303, 4302, 7296, 3948, 1918 (rfc-editor.org); IANA HTTP status codes, TLS parameters, port numbers, protocol numbers; Microsoft Learn MS-RDPBCGR + RDP listening port + event 4624; NIST SP 800-52r2, 800-41r1, 800-94, 800-77r1 | 2026-11-10 |
+| N5 | networking | RFC 5424 (replaces obsolete 3164), 5425, 5426, 7011, 7012, 3954, 4987, 4732, 2827, 5905 (rfc-editor.org); IANA IPFIX entities; Wazuh syslog + ossec.conf remote docs; MITRE ATT&CK T1040, T1046, T1498.002, T1557.002, T1071.004, T1048 (fetched 2026-11-10); NIST SP 800-41r1, 800-207, 800-215, 800-86, 800-94, 800-92, 800-81r3. PCAP/pcapng are IETF drafts only and tcpdump.org did not answer — not used | 2026-11-10 |
 
 ## Tier 2 log
 

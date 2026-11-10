@@ -22,14 +22,14 @@ Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-netwo
 |---|---|---|
 | 01 record-identity | verified, merged | — |
 | 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
-| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **N1 + N2 + N3 + N4 (32) drafts** | STOP-N4 check, N5 (6), link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
+| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **all 38 drafts (N1–N5)** | STOP-N5 check, link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
 | 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
 | 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
 | 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
 | 04 auth | — | all (provider ADR, sign-in config) |
 | 02 Wave 2 (55 docs) | — | all |
 | 02 Wave 3 (7 docs) | — | all |
-Corpus count now: 73 documents (40 stable, 33 draft = 32 networking + event-7045). Plan total 141. (updated session 3)
+Corpus count now: 79 documents (40 stable, 39 draft = 38 networking + event-7045). Plan total 141. (updated session 3)
 Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
 
 ### 3. EXACT next step
@@ -225,3 +225,10 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - Disagreement kept as two statements (tls page): RFC 8996 "must not negotiate TLS 1.0/1.1" vs NIST SP 800-52r2 "may support for non-government interoperability" → flagged for owner.
 - verify.mjs flags only shorthand (10/8 for 10.0.0.0/8, "1.0/1.1", "110/143"), URL fragments and event ID 4624 (from the Microsoft 4624 page). Check + build OK (73 documents, 40 admitted).
 - Next: STOP-N4 (2-page check) → N5 URL list (segmentation/zones, syslog, NetFlow/IPFIX, packet capture, network attacks, reading network logs in SIEM).
+
+### Session 3 — update (N5)
+- "next and push": pushed `1092a83` (N4). N5 URL list `specs/02-soc-corpus/networking-n5-urls.txt` → "N5 URLS OK".
+- N5 written (6 drafts, order 1340–1345): network-segmentation-and-zones, syslog, netflow-and-ipfix, packet-capture, network-attacks, reading-network-logs-in-siem (type Procedure). All 38 networking pages now exist as drafts.
+- Source changes: RFC 3164 → RFC 5424. PCAP/pcapng not RFCs yet, tcpdump.org unreachable → packet-capture uses NIST SP 800-86/800-94 + MITRE T1040 only.
+- verify.mjs flags only the computed PRI 134 (labelled "computed with divmod") and MITRE URL fragments. Check + build OK (79 documents, 40 admitted).
+- Next: STOP-N5 (2-page check) → TN-08 link pass (events/Wazuh/playbooks/enrichment ↔ networking) → TN-09 38 decks + 38 quizzes → TN-10 review sheet → owner approval.

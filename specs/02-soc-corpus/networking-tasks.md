@@ -6,8 +6,8 @@
 - [x] **TN-03** N1 URL list (STOP) → write 8 → verify.mjs + ipaddress checks → check + build → **STOP-N1**.
 - [x] **TN-04** N2 (same gates) → **STOP-N2**.
 - [x] **TN-05** N3 (8 drafts, order 1320–1327) → **STOP-N3** passed ("next and push").
-- [x] **TN-06** N4 (8 drafts, order 1330–1337) → **STOP-N4** (waiting for Naveed's 2-page check).
-- [ ] **TN-07** N5 → **STOP-N5**.
+- [x] **TN-06** N4 (8 drafts, order 1330–1337) → **STOP-N4** passed ("next and push").
+- [x] **TN-07** N5 (6 drafts, order 1340–1345) → **STOP-N5** (waiting for Naveed's 2-page check).
 - [ ] **TN-08** Link pass both ways (events, Wazuh, playbooks, enrichment ↔ networking).
 - [ ] **TN-09** 38 flashcard decks + 38 quizzes; audit pre-check; `KSOR_DRAFTS=show` build.
 - [ ] **TN-10** Review sheet `specs/02-soc-corpus/networking-review.txt` → **STOP-R** owner approval.
