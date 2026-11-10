@@ -34,8 +34,12 @@ chiefly Wazuh, from Windows, Sysmon and Linux hosts:
 It **also** covers the fundamentals an L1 analyst needs in order to triage,
 explained at that depth and no deeper:
 
-- networking basics — the OSI and TCP/IP models, common ports and protocols,
-  DNS, HTTP and HTTPS;
+- networking — addressing (IPv4, IPv6, binary, decimal and hexadecimal
+  notation, subnetting and CIDR), routing, switching, the core protocols and
+  their ports, network devices and the logs they produce (firewall, IDS/IPS,
+  proxy, VPN, NetFlow/IPFIX, syslog), time synchronisation and packet capture
+  — at the depth a SOC analyst or SIEM engineer needs to read and correlate
+  network evidence;
 - common attack types — brute force, phishing, malware, lateral movement,
   privilege escalation;
 - phishing email analysis — reading headers, and SPF, DKIM and DMARC;
@@ -50,8 +54,8 @@ pricing or licensing, and anything outside SOC L1 operations. It holds no
 client or company data and no real IP addresses, usernames or hostnames from
 any organisation; examples are illustrative lab examples with masked values.
 
-Two kinds of reader use it: SOC analysts reading the website, and the
-soc-worker AI agent, which reads it over MCP to explain an alert, map it to
+Two kinds of reader use it: SOC analysts and SIEM engineers reading the
+website, and the soc-worker AI agent, which reads it over MCP to explain an alert, map it to
 MITRE ATT&CK, follow a playbook and draft a cited triage note.
 
 How to use it:

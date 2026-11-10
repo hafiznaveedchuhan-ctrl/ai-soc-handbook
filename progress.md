@@ -14,7 +14,8 @@ Never delete history; append a new session block; keep the Current state table c
 | 03 site-ui | not started |
 | 04 auth | not started |
 | 02 soc-corpus Wave 2 | not started |
-| 02 soc-corpus Wave 3 (soc-fundamentals) | not started — added in plan v3 |
+| 02 soc-corpus networking (plan v4, 38 pages) | spec + tasks written on feat/02-networking — awaiting approval (STOP-A) |
+| 02 soc-corpus Wave 3 (soc-fundamentals, now 7 pages) | not started |
 
 ---
 
@@ -161,3 +162,9 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Naveed: "APPRORED ALL PUSH". 39 pages set stable with `generated: { by: "claude-opus/5.5", at: <last commit of the page> }` and `ksor.approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }`. event-7045 left draft (TODO-VERIFY).
 - Build: 41 documents, 40 admitted to machine surfaces; llms.txt lists 40.
 - Next: Naveed opens and merges the Wave 1 PR; then Feature 05 spec/plan/tasks + evals (STOP), then provision/refresh/serve/calibrate, each after "haan".
+
+### Session 2 — update (networking topic, plan v4)
+- While Naveed replaces the Gemini key, he asked for a full networking topic. Plan v4 approved: knowledge/networking/ (38 pages, N1–N5), Wave 3 loses its 4 networking pages, totals 141.
+- Branch `feat/02-networking` from main. PHR-0005, plan v4, networking-spec.md, networking-tasks.md.
+- Note: progress.md also changed on feat/05-agent-surface (refresh 401 note) — merge both blocks when the branches meet.
+- Next: STOP-A (spec + instance.md scope wording) → N1 URL list.

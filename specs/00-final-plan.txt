@@ -1,7 +1,7 @@
 SOC TRIAGE HANDBOOK - PHASE 2 - FINAL PLAN
 File: specs/00-final-plan.txt
 Repo: /home/naveed/ai-soc/handbook   KSoR: 0.0.61   Owner/approver: human:naveed (Hafiz Naveed Uddin)
-Version: v3, 2026-11-10, session 1   Status: APPROVED by Naveed (v2 + scope change v3)
+Version: v4, 2026-11-10, session 2   Status: APPROVED by Naveed (v2 + v3 scope + v4 networking)
 Change log:
   v1 2026-11-10  first draft
   v2 2026-11-10  Naveed's changes: Feature 02 split into Wave 1 / Wave 2; feature order
@@ -13,6 +13,11 @@ Change log:
                  the decline list; order ... > 02W2 > 02W3.
   v3.1 2026-11-10 MITRE ATT&CK renumbering found live: T1070.001 -> T1685.005 (page renamed);
                  T1562.001 -> T1685 (Wave 2 page to be re-mapped). Tactic TA0005 is now "Stealth".
+  v4 2026-11-10  New main topic knowledge/networking/ (38 pages, batches N1-N5, order 1300+), done
+                 now on branch feat/02-networking while Feature 05 waits for a valid Gemini key.
+                 soc-fundamentals drops networking-basics, ports-and-protocols, dns, http-https and
+                 moves to order 1400+. Totals 141 docs. Scope sentence widened to SOC analyst +
+                 SIEM engineer networking (owner confirms wording).
 
 ================================================================
 1. GOAL OF PHASE 2
@@ -184,11 +189,20 @@ knowledge/
     vulnerability-scanners.md                 Policy
   sla/                                        (order 12)  [W2]
     severity-response-matrix.md               Policy
-  soc-fundamentals/                           (order 13)  all [W3], each + FC + QZ
-    networking-basics.md                      Definition
-    ports-and-protocols.md                    Definition
-    dns.md                                    Definition
-    http-https.md                             Definition
+  networking/                                 (order 1300+)  all [NET], each + FC + QZ
+    N1: networking-overview (Document), osi-model, tcp-ip-model-and-encapsulation,
+        number-systems-binary-decimal-hex, ethernet-and-mac-addresses, arp, ipv4-addressing,
+        ipv4-subnetting-and-cidr
+    N2: special-ipv4-ranges, ipv6-addressing, ipv6-special-ranges, ipv6-neighbor-discovery-and-slaac,
+        icmp-and-icmpv6, tcp, udp, ports-and-services
+    N3: routing-basics, routing-protocols-overview, nat-and-pat, vlans-and-switching, dhcp, dns,
+        ntp-and-time-sync, wireless-basics
+    N4: http-https, tls, email-protocols, remote-access-protocols, firewalls, ids-ips, proxies,
+        vpn-and-ipsec
+    N5: network-segmentation-and-zones, syslog, netflow-and-ipfix, packet-capture, network-attacks
+        (Procedure-style), reading-network-logs-in-siem (Procedure)
+    (types: Definition unless noted; Standard where a page states protocol rules)
+  soc-fundamentals/                           (order 1400+)  all [W3], each + FC + QZ
     common-attacks.md                         Definition
     phishing-email-analysis.md                Procedure
     email-authentication-spf-dkim-dmarc.md    Standard
@@ -196,7 +210,8 @@ knowledge/
     security-controls-and-log-sources.md      Definition
     iocs-and-threat-intel.md                  Definition
     active-directory-basics.md                Definition
-Totals: 107 documents (Wave 1 = 41 incl. overview, Wave 2 = 55, Wave 3 = 11); flashcards+quizzes:
+Totals (v4): 141 documents (Wave 1 = 41, Wave 2 = 55, networking = 38, Wave 3 = 7).
+Older totals line, superseded: 107 documents (Wave 1 = 41 incl. overview, Wave 2 = 55, Wave 3 = 11); flashcards+quizzes:
 Wave 1 = 15 decks + 15 quizzes, Wave 2 = 15 decks + 15 quizzes (5 playbooks + 10 events chosen in
 Wave 2 spec), Wave 3 = 11 decks + 11 quizzes.
 Wave 1 links to Wave 2 pages are added only when the Wave 2 page exists (no dangling links).
@@ -265,6 +280,16 @@ false-positives
   D  how Naveed confirms benign patterns
 sla
   D  severity -> response-time matrix, labelled "illustrative internal policy"
+networking (v4; every URL resolved and approved per batch; RFC numbers re-checked)
+  T1 IETF RFCs: 791, 1122, 4632, 1918, 6890, 3927, 6598, 5737, 1112, 8200, 4291, 5952, 3849, 4193,
+     4861, 4862, 792, 4443, 826, 9293, 768, 6335, 1034/1035, 2131, 8415, 5905, 5424, 3164, 7011,
+     3954, 2328, 4271, 3022, 4787, 9110, 8446, 5246, 5321, 9051, 1939, 4251-4254, 4301
+  T1 IANA: service names and port numbers; protocol numbers; IPv4/IPv6 special-purpose registries
+  T1 NIST: SP 800-41r1, 800-94, 800-77r1, 800-81-2, 800-92, 800-153
+  T1 tool docs: Microsoft Learn, Wireshark, tcpdump, Zeek, Suricata, Wazuh
+  IEEE 802.3/802.1Q/802.11 via IEEE GET Program if reachable, else TODO-VERIFY
+  T2 (labelled): SANS, vendor learning pages with named authors — explanations only
+  Numeric examples: RFC 5737 / RFC 3849 documentation ranges, checked with Python ipaddress
 soc-fundamentals (Wave 3; every RFC number re-checked at rfc-editor.org before the folder starts)
   T1 NIST SP 800-61 Rev. 3 (incident response lifecycle); https://csrc.nist.gov/glossary
   T1 CISA (cisa.gov guidance on phishing, IOCs, incident response)
