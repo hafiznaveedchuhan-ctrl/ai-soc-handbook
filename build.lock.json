@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:2543c256b42aa4988a7e52772760596be2036ed29a62da9aea50b86575ebf826",
+  "build_id": "sha256:fc66b4a94cf40a3ffbe01c51b3a90e43573c73ec2013478b92b0630fabefa50c",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "f659514a5611ff0e8b309cd6a691e56a875ac630",
+  "source_commit": "dece5d6e4a410a94ab1745abc3c6234d74e21146",
   "dirty": true,
-  "as_of": "2026-11-10T08:04:06.555Z",
+  "as_of": "2026-11-10T08:28:00.143Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -56,7 +56,7 @@
     },
     {
       "path": "wazuh/alert-json-anatomy.md",
-      "sha256": "611d95e7f8c4b61e8d0508812b7dc0d2fc3eb1dbc4be8152ab063adb8073749d",
+      "sha256": "de0d3d718c5c171ac13fc8031a92a5e0ad4e59f828aa4a370ba7928d3b583735",
       "status": "draft",
       "audience": [
         "public"
@@ -82,8 +82,26 @@
       "admitted": []
     },
     {
+      "path": "wazuh/windows-rules-reference.md",
+      "sha256": "20f9efeb87f4b46e6ab9de3ad92138e44220f719605963e8a826e781465bd119",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-1102.md",
+      "sha256": "77bf3a43a42061e94ce7e18fa097cbb3a7d3fc823c53362ecc5d1735c241548e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "windows-events/event-4624.md",
-      "sha256": "59784f3364eab6f0aeba1b11a0b6cceb1fffb1b6bafc63e9396554ac3e5bdb8c",
+      "sha256": "2514c4e42a963a76943c6144de98128ff8105074c6eaecdd735dd10e15efc7d4",
       "status": "draft",
       "audience": [
         "public"
@@ -92,7 +110,7 @@
     },
     {
       "path": "windows-events/event-4625.md",
-      "sha256": "3dccd8d2e518c380307dd972ad3de32ae6131851c87dabefa5f2407139b9912a",
+      "sha256": "fec793bfdda07d564774b4ff33e61b3f48524e5f9340aa8b9e1207a9e4719465",
       "status": "draft",
       "audience": [
         "public"
@@ -101,7 +119,61 @@
     },
     {
       "path": "windows-events/event-4648.md",
-      "sha256": "7069fffebda93c13ac9ded3a407b833b6b185fcb2603f76aa626947a397d5b3a",
+      "sha256": "68dcb748e9f80dbce36c7642c67b19ff5f592df9a59ec8d113e337c61463a0a7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4672.md",
+      "sha256": "000ed17ad21a4bec7a12be0c50f7b0dd59211e364be1c95fe417491573634b75",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4688.md",
+      "sha256": "ac205f782f13b446cc69c12f2d6bf54c54192f972839ca498a5e7c5fdddb6e8c",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4720.md",
+      "sha256": "35d0aca2ba0e12b1c9ddcee1537e542da8b4fbcc4c5f3802625388a70753616a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4732.md",
+      "sha256": "b18f7063091760af916688974721b4f6b2c5255573cfe6bdfc3b211d19bbdfd8",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4740.md",
+      "sha256": "91abb6d65a1da22f981474a399ff3de339918a68346fa135246f701da13a0bcf",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-7045.md",
+      "sha256": "5891491b977c6a2fac6799df26b800c9677db37443aaa383d4cc6c639d4ec7d3",
       "status": "draft",
       "audience": [
         "public"
@@ -122,11 +194,11 @@
     },
     {
       "path": "wazuh/index.md",
-      "sha256": "2ffa243bafad12118ff171814a39c07e6b8ba0ebc3553a52b9165bde9e229345"
+      "sha256": "7a1c0e18758e64454a7594dd0f389abc2e330c5197ea59daf893f54e8b865c5f"
     },
     {
       "path": "windows-events/index.md",
-      "sha256": "09e13ba86c12f0e34974bcd7a00d5712ec3d81c0b4ea8eea95acfb78145e4e4c"
+      "sha256": "5c4e0c08d1e047f0b09a188b71ab54fbe542cf484ded0acf589fc6cd9f572990"
     }
   ],
   "bundles": [
