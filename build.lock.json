@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:d4a009020a23e483fea0a96ec90dfb700cfb44b9b064430adc5109e6526fd79c",
+  "build_id": "sha256:84513f152ac372c695854d6946a01b29fb46835647ec09967ee3d7954218f9ec",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "dd19f23043e0d30f337caf943973909f19750d97",
+  "source_commit": "b15a4f3fa11a35e9cdcb21ce0ddd7dd940dff057",
   "dirty": false,
-  "as_of": "2026-11-10T07:44:21.715Z",
+  "as_of": "2026-11-10T07:45:36.437Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "a5c10073117cbdbcb86cad77820527cffb891a64daee3997ee4315b3f67ede53",
@@ -38,12 +38,14 @@
     },
     {
       "path": "orientation/overview.md",
-      "sha256": "1e5b6bc1441748d8e4c2220488fbca0df7e6f74d5d0f312aa9da160be216b6bf",
-      "status": "draft",
+      "sha256": "50575b9df777ffc832e4052a1de136a20c79c4f9032176794a17b4687e307327",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "surfaces/for-agents.md",
@@ -114,8 +116,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "cf3a16559ea73f2381ad1b1c2933344df17b85b40ea9ba3c589fa473aeb36893",
-      "files": 8
+      "sha256": "a5648ce23bd24d3637d71cd81a726b8456706c196be59e13a390cd974cfa167b",
+      "files": 10
     }
   ]
 }
