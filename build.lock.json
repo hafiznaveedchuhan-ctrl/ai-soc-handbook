@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "build_id": "sha256:6be260d1d3082867c023936383747bca98946fd9ee4613786923a3a6f182d03d",
+  "ksor_version": "0.0.61",
+  "okf": {
+    "version": "0.2",
+    "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
+    "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
+  },
+  "source_commit": "f659514a5611ff0e8b309cd6a691e56a875ac630",
+  "dirty": false,
+  "as_of": "2026-11-10T07:47:57.391Z",
+  "drafts": "hidden",
+  "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
+  "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
+  "people_sha256": "e7752a6ce8aa430cf257125e70cf3dbbfb019669a4569d24219d34c8208ca26b",
+  "ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "ledger_entries": [],
+  "audiences": {
+    "registry": [],
+    "viewers": {
+      "public": [
+        "public"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "path": "orientation/overview.md",
+      "sha256": "50575b9df777ffc832e4052a1de136a20c79c4f9032176794a17b4687e307327",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    }
+  ],
+  "companions": [],
+  "assets": [],
+  "indexes": [
+    {
+      "path": "index.md",
+      "sha256": "3ebfd1a936e3b1d71dcd23f3dd58beee8a6ae272818f24eb41187c8facfdc467"
+    },
+    {
+      "path": "orientation/index.md",
+      "sha256": "a06e6592a61e91ccde814364319e409a7a000eb591b0a695c63cbd318ea4e41c"
+    }
+  ],
+  "bundles": [
+    {
+      "viewer": "public",
+      "sha256": "eeab6fc9ce47bbe3a170ec4d6055a9879ebc9472d86d63bc522cbf62a7d4a454",
+      "files": 3
+    }
+  ]
+}

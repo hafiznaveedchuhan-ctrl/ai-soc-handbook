@@ -29,4 +29,5 @@
 # this file existed. The intake interview offers to add one; the owner can
 # also edit this file by hand — it is theirs.
 version: "0.1"
-people: {}
+people:
+  "human:naveed": Hafiz Naveed Uddin

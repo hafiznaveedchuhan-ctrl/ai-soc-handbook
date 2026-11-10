@@ -1,0 +1,444 @@
+SOC TRIAGE HANDBOOK - PHASE 2 - FINAL PLAN
+File: specs/00-final-plan.txt
+Repo: /home/naveed/ai-soc/handbook   KSoR: 0.0.61   Owner/approver: human:naveed (Hafiz Naveed Uddin)
+Version: v3, 2026-11-10, session 1   Status: APPROVED by Naveed (v2 + scope change v3)
+Change log:
+  v1 2026-11-10  first draft
+  v2 2026-11-10  Naveed's changes: Feature 02 split into Wave 1 / Wave 2; feature order
+                 01 > 02W1 > 05 > 06 > 03 > 04 > 02W2; git branch/PR workflow; interview fallback
+                 ("illustrative - based on <source>"); privacy rule (no former employer or clients);
+                 every ksor command/flag verified with --help; ADR-0003 decided (plain folder names).
+  v3 2026-11-10  scope widened to SOC L1 operations (triage primary + L1 fundamentals); Wave 3
+                 "soc-fundamentals" added (11 docs + FC/QZ); pentest/exploitation how-to added to
+                 the decline list; order ... > 02W2 > 02W3.
+
+================================================================
+1. GOAL OF PHASE 2
+================================================================
+Turn this fresh KSoR scaffold into "SOC Triage Handbook" (machine name soc-handbook), a governed
+System of Record for SOC Level-1 analyst operations: PRIMARILY the triage of SIEM/Wazuh security
+alerts from Windows, Sysmon and Linux hosts, and ALSO the fundamentals an L1 analyst needs to triage
+(networking, common attacks, phishing email analysis and SPF/DKIM/DMARC, the NIST incident response
+lifecycle, security controls and log sources, IOCs and basic threat intelligence, Active Directory
+basics). It declines malware reverse engineering, penetration testing/exploitation how-to,
+legal/compliance advice, vendor pricing and anything outside SOC L1 operations. One
+source serves two readers: SOC analysts on a static website, and the soc-worker AI agent (Phase 3)
+over MCP with cited retrieval and honest abstention. Every page is drafted from Tier 1 official
+sources (Tier 2 only where Tier 1 is silent, labelled secondary) or from Naveed's confirmed
+interview answers, starts as draft, and becomes stable only when Naveed reads and approves it. The AI
+suggests, a human decides; the record is read-only to agents and never holds client data. MCP
+serving comes early (right after Wave 1 of the corpus) because Phase 3 depends on it; UI and auth
+follow. Work follows SDD (constitution, spec, plan, tasks, implement, verify) with ADRs and PHRs,
+using only free tiers.
+
+================================================================
+2. FEATURES (in delivery order)
+================================================================
+01 record-identity   - instance.md (name soc-handbook, title SOC Triage Handbook, scope/boundary
+                       prompt), governance + people.yaml for human:naveed, first own document
+                       approved, starter samples and ksor-starter actor retired, SDD skeleton,
+                       progress.md, LEARNING.md, session rule (.claude/rules/session-protocol.md; CLAUDE.md must stay exactly "@AGENTS.md" - checker rule ksor-pointer-changed).
+02 soc-corpus WAVE 1 - 41 documents the Phase 3 worker needs first (marked [W1] in section 3) +
+                       flashcards and quiz for the 10 Wave 1 events and 5 Wave 1 playbooks;
+                       specs/02-soc-corpus/sources.md (every Tier 2 source logged).
+05 agent-surface     - gateway tuned (server name soc-handbook, scoped search description, k=5);
+                       provision, refresh, serve, calibrate on Wave 1 (each after "haan");
+                       retrieval floor recorded in instance.md; evals for Wave 1:
+                       in-scope questions with expected document id + out-of-scope questions that
+                       must abstain, pass rate reported (expanded after Wave 2).
+06 ci-and-release    - CI on PR: keep validate.yml; add gitleaks, npm run check, npm run build,
+                       Playwright smoke; local Docker image smoke test; no deployment (Phase 8).
+03 site-ui           - "SOC console" theme (navy dark default, teal accent, severity colour tokens,
+                       polished light mode), derived home page, Quick Triage Lookup palette built at
+                       build time from admitted documents only, WCAG AA, Lighthouse >= 90,
+                       Playwright screenshots for review.
+04 auth              - ADR comparing free OIDC providers; Naveed creates the app; existing PKCE
+                       sign-in control configured and restyled; honest docs on what login does and
+                       does not protect.
+02 soc-corpus WAVE 2 - remaining 55 documents (marked [W2]) + their flashcards/quizzes; then
+                       npm run refresh + ksor calibrate --check (+ full recalibration if WATCH),
+                       evals expanded to cover Wave 2.
+02 soc-corpus WAVE 3 - "soc-fundamentals": 11 documents (marked [W3]) + flashcards and quiz for
+                       each (also for Naveed's interview study); then npm run refresh +
+                       ksor calibrate --check (+ recalibration if WATCH); evals extended with
+                       fundamentals questions and pentest/reverse-engineering decline questions.
+
+================================================================
+3. KNOWLEDGE TREE (every planned document, with KSoR type and wave)
+================================================================
+Folder naming (ADR-0003, DECIDED): plain folder names, sidebar position by order: key.
+Every document: status draft, ksor.audience [public], ksor.owner human:naveed, sources + footnotes.
+Body shape: Part 1 "In plain words" (> [!NOTE], not citable) / Part 2 cited authority content /
+Part 3 structured table for the agent.
+FC = <doc>.flashcards.yaml   QZ = <doc>.quiz.yaml
+
+knowledge/
+  orientation/                                (order 1)
+    overview.md                               Document     [W1]  (written in Feature 01)
+    how-to-use.md                             Document     [W1]
+    glossary.md                               Definition   [W1]
+  rules-map/                                  (order 2)
+    invariants.md                             Policy       [W1]
+    escalation-policy.md                      Policy       [W1]
+    severity-model.md                         Standard     [W1]
+    data-handling.md                          Policy       [W1]
+  windows-events/                             (order 3)
+    event-4624.md   Definition  [W1] + FC + QZ
+    event-4625.md   Definition  [W1] + FC + QZ
+    event-4648.md   Definition  [W1] + FC + QZ
+    event-4672.md   Definition  [W1] + FC + QZ
+    event-4688.md   Definition  [W1] + FC + QZ
+    event-4720.md   Definition  [W1] + FC + QZ
+    event-4732.md   Definition  [W1] + FC + QZ
+    event-4740.md   Definition  [W1] + FC + QZ
+    event-1102.md   Definition  [W1] + FC + QZ
+    event-7045.md   Definition  [W1] + FC + QZ
+    event-4634.md   Definition  [W2]
+    event-4697.md   Definition  [W2]
+    event-4698.md   Definition  [W2]
+    event-4719.md   Definition  [W2]
+    event-4722.md   Definition  [W2]
+    event-4724.md   Definition  [W2]
+    event-4725.md   Definition  [W2]
+    event-4726.md   Definition  [W2]
+    event-4728.md   Definition  [W2]
+    event-4738.md   Definition  [W2]
+    event-4756.md   Definition  [W2]
+    event-4768.md   Definition  [W2]
+    event-4769.md   Definition  [W2]
+    event-4771.md   Definition  [W2]
+    event-4776.md   Definition  [W2]
+  sysmon/                                     (order 4)  all [W2]
+    overview.md                               Document
+    event-1-process-create.md                 Definition
+    event-3-network-connection.md             Definition
+    event-7-image-loaded.md                   Definition
+    event-8-create-remote-thread.md           Definition
+    event-10-process-access.md                Definition
+    event-11-file-create.md                   Definition
+    event-12-13-14-registry.md                Definition
+    event-22-dns-query.md                     Definition
+  linux-auth/                                 (order 5)  all [W2]
+    where-auth-logs-live.md                   Definition
+    ssh-failed-password.md                    Definition
+    ssh-accepted.md                           Definition
+    ssh-invalid-user.md                       Definition
+    sudo-usage.md                             Definition
+    new-user-useradd.md                       Definition
+  wazuh/                                      (order 6)
+    architecture.md                           Definition   [W1]
+    alert-json-anatomy.md                     Definition   [W1]
+    rule-levels.md                            Standard     [W1]
+    windows-rules-reference.md                Definition   [W1]
+    rule-groups.md                            Definition   [W2]
+    sshd-rules-reference.md                   Definition   [W2]
+    mitre-in-wazuh.md                         Standard     [W2]
+  mitre/                                      (order 7)
+    t1110-brute-force.md                      Standard     [W1]
+    t1110-001-password-guessing.md            Standard     [W1]
+    t1110-003-password-spraying.md            Standard     [W1]
+    t1078-valid-accounts.md                   Standard     [W1]
+    t1059-001-powershell.md                   Standard     [W1]
+    t1136-001-local-account.md                Standard     [W1]
+    t1098-account-manipulation.md             Standard     [W1]
+    t1070-001-clear-windows-event-logs.md     Standard     [W1]
+    t1110-004-credential-stuffing.md          Standard     [W2]
+    t1053-005-scheduled-task.md               Standard     [W2]
+    t1543-003-windows-service.md              Standard     [W2]
+    t1021-001-remote-desktop-protocol.md      Standard     [W2]
+    t1003-001-lsass-memory.md                 Standard     [W2]
+    t1046-network-service-discovery.md        Standard     [W2]
+    t1548-002-bypass-uac.md                   Standard     [W2]
+    t1562-001-disable-or-modify-tools.md      Standard     [W2]
+    t1566-phishing.md                         Standard     [W2]
+    (technique names are checked against attack.mitre.org before writing)
+  playbooks/                                  (order 8)  every playbook gets FC + QZ in its wave
+    brute-force.md                            Procedure    [W1]
+    success-after-failures.md                 Procedure    [W1]
+    new-local-account.md                      Procedure    [W1]
+    added-to-admin-group.md                   Procedure    [W1]
+    audit-log-cleared.md                      Procedure    [W1]
+    suspicious-powershell.md                  Procedure    [W2]
+    new-service-or-scheduled-task.md          Procedure    [W2]
+    account-lockout-storm.md                  Procedure    [W2]
+    port-scan.md                              Procedure    [W2]
+    fim-or-malware-alert.md                   Procedure    [W2]
+  enrichment/                                 (order 9)
+    ip-reputation-policy.md                   Policy       [W1]
+    private-ip-ranges.md                      Definition   [W1]
+    geo-and-vpn-caveats.md                    Policy       [W2]
+    asset-and-user-context.md                 Policy       [W2]
+  triage-note/                                (order 10)  all [W1]
+    note-template.md                          Policy
+    writing-rules.md                          Policy
+    example-true-positive.md                  Example
+    example-false-positive.md                 Example
+    example-needs-info.md                     Example
+  false-positives/                            (order 11)  all [W2]
+    expired-or-mistyped-passwords.md          Policy
+    service-accounts.md                       Policy
+    backup-jobs.md                            Policy
+    admin-maintenance-windows.md              Policy
+    vulnerability-scanners.md                 Policy
+  sla/                                        (order 12)  [W2]
+    severity-response-matrix.md               Policy
+  soc-fundamentals/                           (order 13)  all [W3], each + FC + QZ
+    networking-basics.md                      Definition
+    ports-and-protocols.md                    Definition
+    dns.md                                    Definition
+    http-https.md                             Definition
+    common-attacks.md                         Definition
+    phishing-email-analysis.md                Procedure
+    email-authentication-spf-dkim-dmarc.md    Standard
+    incident-response-lifecycle.md            Standard
+    security-controls-and-log-sources.md      Definition
+    iocs-and-threat-intel.md                  Definition
+    active-directory-basics.md                Definition
+Totals: 107 documents (Wave 1 = 41 incl. overview, Wave 2 = 55, Wave 3 = 11); flashcards+quizzes:
+Wave 1 = 15 decks + 15 quizzes, Wave 2 = 15 decks + 15 quizzes (5 playbooks + 10 events chosen in
+Wave 2 spec), Wave 3 = 11 decks + 11 quizzes.
+Wave 1 links to Wave 2 pages are added only when the Wave 2 page exists (no dangling links).
+Every folder index.md is generated by ksor build.
+Removed in Feature 01 (after Naveed sees the list): what-is-a-ksor.md, what-is-a-ksor.summary.md,
+governance-ladder.md, surfaces/overview.md, surfaces/for-people.md, surfaces/for-agents.md.
+
+================================================================
+4. SOURCE MAP (each URL is opened and confirmed to resolve before use;
+   the exact list per folder is re-shown for approval before that folder starts)
+================================================================
+Tier 1 = official, citable authority. Tier 2 = reputable secondary, footnote says "(secondary source)",
+cross-checked by 2 independent sources, never the only source for IDs/fields/codes/thresholds.
+Tier D = Naveed interview. Source entry is ALWAYS exactly "human:naveed interview <date>" — no
+employer, company or client name anywhere in knowledge/.
+
+orientation
+  T1 https://csrc.nist.gov/news/2025/nist-revises-sp-800-61 -> final SP 800-61 Rev. 3 page
+  T1 https://csrc.nist.gov/glossary
+  T1 https://attack.mitre.org/
+  D  scope and purpose of the handbook (intake interview)
+rules-map
+  T1 https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
+  T1 NIST SP 800-61 Rev. 3 final publication
+  T1 CISA Federal Government Cybersecurity Incident and Vulnerability Response Playbooks (cisa.gov)
+  D  invariants, escalation triggers, data-handling rules
+windows-events
+  T1 https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-<ID>
+  T1 Microsoft Learn "Audit Logon" and Advanced Audit Policy Configuration pages
+  T1 event 7045: Microsoft official source if found; otherwise Tier 2 + TODO-VERIFY
+  T2 https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/
+  T2 https://github.com/SigmaHQ/sigma (rules referencing the event)
+sysmon
+  T1 https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+  T2 https://github.com/SwiftOnSecurity/sysmon-config
+  T2 https://github.com/olafhartong/sysmon-modular
+linux-auth
+  T1 https://man.openbsd.org/sshd  and  https://man.openbsd.org/sshd_config
+  T1 https://www.sudo.ws/docs/
+  T1 official Ubuntu Server docs and Red Hat Enterprise Linux docs (exact pages approved per folder)
+  T1 https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
+wazuh
+  T1 https://documentation.wazuh.com/current/ (architecture, ruleset, PoC guides)
+  T1 https://github.com/wazuh/wazuh  ruleset/rules at tag v4.14.10 (tag existence verified first;
+     rule IDs only when found in a rules file, cited with file link)
+mitre
+  T1 https://attack.mitre.org/techniques/<ID>/
+  T1 https://attack.mitre.org/resources/legal-and-branding/terms-of-use/ (attribution, own words)
+  T2 https://car.mitre.org/
+  T2 https://github.com/SigmaHQ/sigma
+  T2 Red Canary Threat Detection Report (redcanary.com)
+playbooks
+  T1 NIST SP 800-61 Rev. 3, CISA IR playbooks, MITRE technique pages, Microsoft event pages,
+     Wazuh PoC guides
+  T2 SANS papers/posters, SigmaHQ, https://github.com/elastic/detection-rules
+  D  Naveed's own L1 triage steps from prior SOC experience
+enrichment
+  T1 https://docs.abuseipdb.com/
+  T1 https://www.rfc-editor.org/rfc/rfc1918
+  D  AbuseIPDB score bands (our thresholds), asset/user context practice
+triage-note
+  D  template and writing rules; our own playbooks (internal links)
+false-positives
+  T1 Microsoft event pages, Wazuh docs
+  T2 Ultimate Windows Security, SigmaHQ "falsepositives" fields
+  D  how Naveed confirms benign patterns
+sla
+  D  severity -> response-time matrix, labelled "illustrative internal policy"
+soc-fundamentals (Wave 3; every RFC number re-checked at rfc-editor.org before the folder starts)
+  T1 NIST SP 800-61 Rev. 3 (incident response lifecycle); https://csrc.nist.gov/glossary
+  T1 CISA (cisa.gov guidance on phishing, IOCs, incident response)
+  T1 IETF RFCs: SPF RFC 7208, DKIM RFC 6376, DMARC RFC 7489; email message format RFC 5322,
+     SMTP RFC 5321; DNS RFC 1034/1035; IP RFC 791; TCP RFC 9293; UDP RFC 768;
+     HTTP semantics RFC 9110; TLS 1.3 RFC 8446  (https://www.rfc-editor.org/rfc/rfc<N>)
+  T1 IANA Service Name and Transport Protocol Port Number Registry (ports-and-protocols)
+  T1 Microsoft Learn: Active Directory Domain Services overview and related pages
+  T1 https://attack.mitre.org/ (attack types mapped to tactics/techniques)
+  T2 rules as above (SANS, vendor research with named authors), cross-checked, labelled secondary
+Never: forums, Q&A sites, unattributed blogs, AI-generated text, paywalled copies, client data,
+names of Naveed's former employer or its clients.
+
+INTERVIEW RULES (add-sources "person" path, one question at a time)
+  - Write only what Naveed confirms; source "human:naveed interview <date>".
+  - If Naveed answers "I don't remember" / "not sure": propose an industry-practice answer drawn
+    from Tier 2 sources, labelled in the body "illustrative - based on <source>" with that source
+    in sources + footnote, mark TODO-VERIFY, and let Naveed accept or edit. It stays draft until
+    he accepts.
+  - Never name an employer, company or client; generalise ("in a previous SOC role").
+
+================================================================
+5. VERIFIED KSOR COMMANDS (checked with npx ksor <cmd> --help on 2026-11-10, ksor 0.0.61)
+================================================================
+  npm run check                 node .agents/skills/format-checker/check.mjs
+  npx ksor build [--instance <path>] [--strict] [--bundles]
+  npm run build                 ksor build && site build
+  npm run provision             ksor schema --instance instance.md --apply && ksor grant --instance instance.md
+  npm run refresh               ksor build && ksor ingest --instance instance.md --flip && ksor gc --instance instance.md
+  npm run serve                 ksor serve   (KSOR_MCP_HOST default 127.0.0.1, KSOR_MCP_PORT default 8080)
+  npx ksor calibrate --instance instance.md [--queries-file PATH] [--ooc-file PATH]
+  npx ksor calibrate --instance instance.md --check [--days N]
+  npx ksor gc --instance instance.md [--dry-run]
+  npx ksor takedown --actor human:naveed ... (only if ever needed)
+Any command not listed here is checked with --help before it is used or written down.
+(Exact file format of --queries-file / --ooc-file is confirmed from the package docs/source before
+Feature 05 step "calibrate".)
+
+================================================================
+6. ORDER OF WORK (STOP = I wait for Naveed; HAAN = paid/remote step needs "haan";
+   PR = feature branch pushed only after Naveed's OK, CI runs, Naveed merges)
+================================================================
+ 0. [Naveed] Create private GitHub repo "ai-soc-handbook"; add remote origin. (Can run in
+    parallel with steps 1-2; needed before the first PR.)
+
+FEATURE 01 record-identity  (branch feat/01-record-identity)
+ 1. Write specs/00-final-plan.txt (this file), specs/constitution.md, PHR 0001, progress.md,
+    LEARNING.md, session rule (.claude/rules/session-protocol.md; CLAUDE.md must stay exactly "@AGENTS.md" - checker rule ksor-pointer-changed), ADR-0001 (SDD files outside knowledge/), ADR-0002
+    (generated.by names the drafting agent; approval.by is always human:naveed), ADR-0003
+    (plain folder names + order:, DECIDED).
+ 2. Write specs/01-record-identity/spec.md, plan.md, tasks.md.        STOP: approve 01 docs + ADRs.
+ 3. Rewrite instance.md, .ksor/governance.yaml (human:naveed + keep ksor-starter for now),
+    .ksor/people.yaml; npm run check; npm run build.                 STOP: Naveed confirms read-back.
+ 4. Draft knowledge/orientation/overview.md (draft).                 STOP: Naveed reads on npm run dev,
+                                                                        approves or edits.
+ 5. Record Naveed's approval on overview.md.
+ 6. Show the starter deletion list.                                  STOP: Naveed says delete.
+ 7. Delete starters, remove ksor-starter/0.0.61 in the same commit; check + build.
+ 8. Push branch + open PR.                                           STOP: Naveed OKs push, merges.
+
+FEATURE 02 WAVE 1  (branch feat/02-soc-corpus-wave-1)
+ 9. Feature 02 spec/plan/tasks (both waves described, Wave 1 tasks detailed).   STOP: approve.
+10. Per Wave 1 folder: show exact URL list with tiers.               STOP: approve URLs.
+11. Interviews for rules-map, enrichment (score bands), playbook steps, triage-note
+    (interview rules in section 4).                                  STOP per answer set: confirm.
+12. Write Wave 1 in batches of ~8 docs; after each batch npm run check + npm run build +
+    TODO-VERIFY list.                                                STOP: Naveed checks 2 random
+                                                                     pages, says "next".
+13. Flashcards + quizzes for the 10 Wave 1 events and 5 Wave 1 playbooks (quiz audit must pass).
+14. Naveed approves Wave 1 pages to stable (his act); I record exactly what he says.
+15. Push + PR.                                                       STOP: Naveed OKs push, merges.
+
+FEATURE 05 agent-surface  (branch feat/05-agent-surface)
+16. Feature 05 spec/plan/tasks + evals/ (Wave 1 in-scope questions with expected document id,
+    out-of-scope questions, README).                                 STOP: approve.
+17. Tune system/gateways/content.ts (server name, scoped description, k=5); npm run check/build.
+18. npm run provision                                                HAAN
+19. npm run refresh                                                  HAAN
+20. npm run serve (127.0.0.1:8080, KSOR_AUTH=disabled-local)         HAAN
+21. npx ksor calibrate --instance instance.md --queries-file evals/<file> [--ooc-file evals/<file>]
+                                                                     HAAN; paste retrieval block,
+                                                                     restart serve.
+22. Run evals; report pass rate; show one cited answer + one abstention.   STOP: Naveed verifies.
+23. Push + PR.                                                       STOP: Naveed OKs push, merges.
+
+FEATURE 06 ci-and-release  (branch feat/06-ci-and-release)
+24. Feature 06 spec/plan/tasks.                                      STOP: approve.
+25. Add gitleaks, check, build, Playwright smoke jobs; local docker build + run smoke with
+    -e KSOR_AUTH=disabled-public on the command line only.
+26. Push + PR; CI must be green.                                     STOP: Naveed OKs push, merges.
+
+FEATURE 03 site-ui  (branch feat/03-site-ui)
+27. Feature 03 spec/plan/tasks.                                      STOP: approve.
+28. Implement theme, home, Quick Triage Lookup; Playwright screenshots (desktop+mobile,
+    dark+light) in specs/03-site-ui/screens/; Lighthouse.            STOP: approve screenshots.
+29. Push + PR.                                                       STOP: Naveed OKs push, merges.
+
+FEATURE 04 auth  (branch feat/04-auth)
+30. Feature 04 spec + ADR comparing providers.                       STOP: Naveed chooses provider.
+31. Step-by-step provider setup; Naveed creates the app and fills .env himself.
+                                                                     STOP: Naveed says done.
+32. Configure/restyle sign-in, build, test sign-in/sign-out; document limits.
+33. Push + PR.                                                       STOP: Naveed OKs push, merges.
+
+FEATURE 02 WAVE 2  (branch feat/02-soc-corpus-wave-2)
+34. Wave 2 tasks detailed; per folder URL lists.                     STOP: approve.
+35. Interviews for false-positives, sla, remaining enrichment.       STOP per answer set.
+36. Write Wave 2 in batches of ~8 (same gates as step 12); add Wave 1 <-> Wave 2 cross-links.
+37. Flashcards + quizzes for Wave 2 set.
+38. Naveed approves Wave 2 pages to stable.
+39. npm run refresh                                                  HAAN
+40. npx ksor calibrate --instance instance.md --check; if WATCH, full recalibration   HAAN
+41. Expand evals to Wave 2; report pass rate.                        STOP: Naveed verifies.
+42. Push + PR.                                                       STOP: Naveed OKs push, merges.
+
+FEATURE 02 WAVE 3 soc-fundamentals  (branch feat/02-soc-corpus-wave-3)
+43. Wave 3 tasks detailed; exact URL list with tiers (RFC numbers re-checked).   STOP: approve.
+44. Write the 11 documents in batches (same gates as step 12); cross-link to triage pages
+    (e.g. phishing-email-analysis <-> MITRE T1566, common-attacks <-> playbooks).
+45. Flashcards + quizzes for all 11 (quiz audit must pass).
+46. Naveed approves Wave 3 pages to stable.
+47. npm run refresh                                                  HAAN
+48. npx ksor calibrate --instance instance.md --check; if WATCH, full recalibration   HAAN
+49. Extend evals: fundamentals in-scope questions + pentest / reverse-engineering out-of-scope
+    questions that must abstain; report pass rate.                   STOP: Naveed verifies.
+50. Final progress.md, LEARNING.md, this file updated; push + PR.    STOP: Naveed OKs push, merges.
+
+================================================================
+7. NAVEED'S MANUAL ACTIONS
+================================================================
+- EARLY (step 0): create private GitHub repo "ai-soc-handbook" and add the remote.
+- Merge every feature PR after CI is green; no push happens without his OK.
+- Answer interview questions (rules-map, escalation, AbuseIPDB bands, triage steps, false
+  positives, SLA, triage-note template); accept or edit any "illustrative" fallback answer.
+- Read and approve every page that becomes stable; verify 2 random pages per batch against sources.
+- Choose the auth provider (Feature 04 ADR); create the provider app; put NEXT_PUBLIC_KSOR_* in .env.
+- Keep .env filled (KSOR_DB_URL, GEMINI_API_KEY from aistudio.google.com free tier,
+  KSOR_AUTH=disabled-local).
+- Say "haan" before each Neon/Gemini step.
+- Approve UI screenshots.
+
+================================================================
+8. RISKS AND HOW THEY ARE AVOIDED
+================================================================
+- Invented facts (IDs, codes, rule numbers): only from opened Tier 1 pages; otherwise TODO-VERIFY and
+  the page stays draft.
+- Invented CLI flags: every ksor command verified with --help (section 5).
+- Copied text / MITRE terms of use: own words, attribution footnotes.
+- Wrong Wazuh rule IDs: only from the pinned ruleset files, with file links.
+- Privacy: no former employer or client name in knowledge/; interview source string fixed.
+- ksor-record-empty if starters deleted too early: first own doc approved before deleting.
+- ksor-generated-stale after editing a stable page: move generated.at forward and re-approve.
+- Quiz audit refusals (answer bias, length bias, runs): spread answer positions, equal option lengths.
+- Dangling links Wave 1 -> Wave 2: links added only when the target exists.
+- Floor measured on Wave 1 goes stale after Wave 2: calibrate --check, recalibrate on WATCH.
+- Draft-only build looks empty: expected; explained in LEARNING.md.
+- Free-tier Gemini rate limits: incremental ingest, our own query file for calibration.
+- Secret leakage: .env never opened or committed; gitleaks in CI.
+- Login mistaken for protection: documented that sign-in names a reader and gates nothing.
+- Dependency audit noise: never npm audit fix --force; bump pins deliberately.
+- Large scope/context loss: progress.md protocol every session.
+- Fundamentals pages dilute retrieval for triage questions: recalibrate after Wave 3; evals keep
+  triage questions and check the expected document still ranks.
+- Pentest/exploitation how-to requests: declined by scope (instance.md) and tested in evals.
+- Fundamentals drifting into general textbook content: only what an L1 analyst needs to triage,
+  every claim cited to NIST/CISA/RFC/Microsoft/MITRE.
+
+================================================================
+9. DEFINITION OF DONE
+================================================================
+- Features 01-06 (all three waves of 02): spec, plan, tasks approved; implemented; verified; merged via PR.
+- npm run check and npm run build green; CI green on every PR.
+- Pages Naveed approved are stable; no starter content or ksor-starter actor remains.
+- MCP serves; an in-scope question returns a cited answer and an out-of-scope one abstains;
+  calibration recorded in instance.md with date, generation, model; eval pass rate reported
+  (Wave 1, then Wave 1+2, then Wave 1+2+3).
+- UI screenshots approved; Lighthouse >= 90 on home and one doc page.
+- Sign-in works with the chosen free provider; its limits documented.
+- LEARNING.md, progress.md and specs/00-final-plan.txt complete; everything committed.

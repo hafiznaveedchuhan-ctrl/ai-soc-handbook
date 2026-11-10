@@ -1,17 +1,12 @@
-# The Governance Policy: who has authority over this record. The intake
-# interview replaces `human:you` with real handles. `public` is implicit;
-# register a restricted audience here before any document names it:
-#   audiences:
-#     internal:
-#       description: Employees
+# The Governance Policy: who has authority over this record.
+# Written from the intake interview with human:naveed on 2026-11-10.
+# `public` is implicit; no restricted audiences are registered — every reader
+# sees every published document.
 version: "0.1"
 approval_authorities:
-  # `ksor-starter/...` approved the five sample documents it shipped, so a fresh
-  # record PUBLISHES on the first build instead of admitting nothing. It is a
-  # producer, not a person: it cannot be mistaken for a human who reviewed
-  # anything, and the trust tier stays `unverified`, which is the honest word
-  # for "nobody has checked this". Delete this actor once the samples are gone
-  # — nothing of yours should ever be approved by a tool.
-  - actors: [human:you, ksor-starter/0.0.61]
+  # The scaffold's sample documents and their producer actor
+  # (the starter producer) were removed together on 2026-11-10 (Feature 01,
+  # T01-12). Nothing in this record is approved by a tool.
+  - actors: [human:naveed]
 takedown_authorities:
-  actors: [human:you]
+  actors: [human:naveed]
