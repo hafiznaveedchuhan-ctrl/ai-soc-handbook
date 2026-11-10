@@ -1,5 +1,7 @@
 # progress.md — session log
 
+> **The full HANDOFF (start here) is in progress.md on branch `feat/02-networking`** (written end of session 2). This branch holds Feature 05 only; resume it with HANDOFF §3-A when the Gemini key works.
+
 Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt`.
 Never delete history; append a new session block; keep the Current state table current.
 
