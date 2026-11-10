@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — all 40 drafts written (B1–B5) + link pass; waiting at STOP-B5 |
+| 02 soc-corpus Wave 1 | implementing — 40 drafts + link pass + 15 decks + 15 quizzes done; waiting at STOP-R (owner review/approval) |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -149,3 +149,9 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Verdict tables cite the glossary definitions (interview) and say the rows are the playbook's application, not the owner's words.
 - Remaining TODO-VERIFY (6 lines, 3 pages): alert-json-anatomy `rule.mitre.*`; t1059-001 PowerShell log event IDs; event-7045 policy/fields/MITRE.
 - Next: STOP-B5 → approve 2 extra URLs to close TODOs → T02-18 flashcards + quizzes.
+
+### Session 2 — update (study companions)
+- Pushed `ffa20d2` (closed TODO-VERIFY on alert-json-anatomy via Wazuh MITRE docs, and t1059-001 via Microsoft about_Logging_Windows 4104).
+- `7a05ee9` + `105f990` — 15 flashcard decks + 15 quizzes (6 questions each) for events 4624, 4625, 4648, 4672, 4688, 4720, 4732, 4740, 1102, 7045 and the 5 playbooks. Pre-checked against system/site/lib/quiz-audit.ts thresholds (index share ≤ 60%, length-strategy wins ≤ 60%, no run > 3, no duplicate stems); a `KSOR_DRAFTS=show` build rendered them and passed.
+- Remaining TODO-VERIFY: event-7045 only (4 lines) — that page cannot be approved until Wave 2 (4697 / T1543.003).
+- Next: STOP-R — Naveed reads Wave 1 pages and approves (all at once or per folder); I record approvals (ADR-0002 stamps), then PR.

@@ -38,11 +38,11 @@ verify.mjs run per page · TODO-VERIFY list reported.
 - [x] **T02-14** Show B5 URL list (Tier 1 + Tier 2 for playbooks). **STOP:** approved.
 - [x] **T02-15** Write the 5 playbooks (fixed shape).
 - [x] **T02-16** Write the 3 triage-note examples (illustrative, masked).
-- [ ] **STOP-B5** Report; 2 random pages; "next".
+- [x] **STOP-B5** Report; 2 random pages; "next".
 
 ## Finish
 - [x] **T02-17** Link pass: event ↔ MITRE ↔ playbook ↔ Wazuh rule cross-links; `npm run check` (no dangling links).
-- [ ] **T02-18** 15 flashcard decks + 15 quizzes (10 events, 5 playbooks); `npm run build` quiz audit passes.
+- [x] **T02-18** 15 flashcard decks + 15 quizzes (10 events, 5 playbooks); `npm run build` quiz audit passes.
 - [ ] **STOP-R** Naveed reads Wave 1 on `npm run dev` (TODO-VERIFY must be zero on a page before it can be approved).
 - [ ] **T02-19** Record approvals exactly as Naveed gives them (ADR-0002 stamps); rebuild; `llms.txt` lists approved pages.
 - [ ] **T02-20** Update `progress.md`, `LEARNING.md`, PHR.

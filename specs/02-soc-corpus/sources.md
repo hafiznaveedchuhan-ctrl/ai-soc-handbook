@@ -21,6 +21,7 @@ unattributed blogs, AI text) are never cited.
 | B4 | enrichment | https://docs.abuseipdb.com/, https://www.abuseipdb.com/faq.html, https://www.rfc-editor.org/rfc/rfc1918, https://www.rfc-editor.org/rfc/rfc4193 | 2026-11-10 |
 | B4 | (dropped) | CISA IR playbooks page — 403 to automated requests; not used | 2026-11-10 |
 | B5 | playbooks | https://documentation.wazuh.com/current/proof-of-concept-guide/detect-brute-force-attack.html (+ all earlier approved sources reused) | 2026-11-10 |
+| B5+ | wazuh, mitre | https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html (rule.mitre alert fields); https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows (4104) | 2026-11-10 |
 
 ## Tier 2 log
 
