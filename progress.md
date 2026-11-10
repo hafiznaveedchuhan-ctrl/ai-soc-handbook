@@ -59,6 +59,7 @@ Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approv
 - Scratchpad is wiped between sessions → helpers now live in `scripts/authoring/` (see its README); sources must be re-fetched.
 - Run `pkill -f "next dev"` and `npm run build` in **separate** commands (a combined command killed its own shell, exit 144). Restart `npm run dev` after adding pages (new pages 404/500 until restart).
 - `npm run build` rewrites `system/site/next-env.d.ts` → `git checkout -- system/site/next-env.d.ts`.
+- **Never run `npm run build` while Naveed's `npm run dev` is running** (session 3 bug): build re-stages `system/site/.staged-knowledge/` WITHOUT drafts, so the dev site loses every draft page (networking 404). Fix: restart `npm run dev`. Check first with `ss -ltnp | grep :3000`.
 - YAML: quote titles/descriptions containing ": " or "::".
 - Quiz audit (system/site/lib/quiz-audit.ts): ≤60% same answer position, ≤60% wins for unique-longest/shortest option, no run >3 → pre-check with `scripts/authoring/quiz_precheck.py`.
 - Blocked sites: cisa.gov (403 — do not try browser headers), ISO 7498-1 (licence click-through), ITU X.200, IEEE (403/418). MITRE renumbers: T1070.001→T1685.005, T1562.001→T1685 (always fetch live).
@@ -248,3 +249,8 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - TN-10: `specs/02-soc-corpus/networking-review.txt` — 38 rows (order, type, source count, description, spot-check) + decisions D1 (TLS 1.0/1.1 policy), D2 (reverse links yes/no), D3 (approve with open questions).
 - STOP-R: waiting for Naveed's approval words. Do NOT write ksor.approval until he says "approved …".
 - After approval (TN-11): set status stable + generated {by: claude-opus/5.5, at: last commit of page} + ksor.approval {by: human:naveed, at: approval time}; apply D2 if yes (and re-stamp those 11 pages); build; progress; push + PR via gh (with OK).
+
+### Session 3 — incident (networking missing in dev site)
+- Naveed: networking gone + error. Cause: my `npm run build` runs while his `npm run dev` (pid 7776, started 20:15 local) was up; production build re-staged `.staged-knowledge/` with drafts hidden, so all 38 draft pages returned 404 in dev. Nothing in `knowledge/` was lost (git clean; 38 pages + 76 companions present).
+- `touch` on a knowledge file made the dev watcher re-stage (115 networking files back), but new pages still need a dev restart.
+- Also expected, not a bug: a BUILT site / llms.txt / MCP shows 0 networking pages until they are approved (status draft).
