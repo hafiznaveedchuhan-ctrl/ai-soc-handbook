@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:0c9dace360d17548ffcd3ef6b96a29e4e6d0b6bdbf20f98c8ad4c4f2ca941da2",
+  "build_id": "sha256:627a12cdab90626d3baba9df5537e725844a1a0d5c796a26bf474470b755e951",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "c66c30b818337c3a997fcae0c8f50de72106b470",
+  "source_commit": "af3036b73e2a43c35961100becc41feac5af5361",
   "dirty": true,
-  "as_of": "2026-11-10T10:10:35.385Z",
+  "as_of": "2026-11-10T10:16:15.957Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -134,6 +134,78 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "networking/arp.md",
+      "sha256": "efd90d8f01454daf09eaf532bb0ff163e0c20da158330cdecdd315c4fbf281c9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ethernet-and-mac-addresses.md",
+      "sha256": "3d105897431d9771fa28f4de10264b15ef7db75fdfd340e5fb223a1e995444df",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ipv4-addressing.md",
+      "sha256": "145b07ac4fdb18762f785cccac15cba2ff4b02ffb61e25f5e462c91462602c3f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ipv4-subnetting-and-cidr.md",
+      "sha256": "a5695bd4681838d23e3bf102a392bc487c4729c430f346985f1a4535e5ac4751",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/networking-overview.md",
+      "sha256": "d51cd003c86531333ddaa9186f2a283afea0ebc2be37d7d791dde1f9a4c55ae5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/number-systems-binary-decimal-hex.md",
+      "sha256": "ee86771dec931132dc7ee387a2ef3b2522f0af47f5aee5801cc2c6d3b39a30de",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/osi-model.md",
+      "sha256": "1f06afeae5be383fba8aabe07449aadb4ad5afdd221eb0811e65ab54fad5e7f9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/tcp-ip-model-and-encapsulation.md",
+      "sha256": "b4d3ace8bf391d98a9fb3838ed14b932ca8bdc4f0b876e91648f73f18626ad4f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "orientation/glossary.md",
@@ -605,11 +677,15 @@
     },
     {
       "path": "index.md",
-      "sha256": "13a92f8f854cd7a0f5bf2d66f0c472556a78513f3b38a727f42698727328366c"
+      "sha256": "509ce2ff9fb9889e4ed2d2d6f797e1a572c8f2789fd36ab2c3301dcf9c0d727a"
     },
     {
       "path": "mitre/index.md",
       "sha256": "6e4b86aed623c00390493c121f651f6bd72fd11055ed405eb23fab24b2cfda74"
+    },
+    {
+      "path": "networking/index.md",
+      "sha256": "130a33435b3de31ec27a9b577bb3a58ab64beb842ec603453130a296f67c7b29"
     },
     {
       "path": "orientation/index.md",
