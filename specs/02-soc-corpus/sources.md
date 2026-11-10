@@ -22,6 +22,7 @@ unattributed blogs, AI text) are never cited.
 | B4 | (dropped) | CISA IR playbooks page — 403 to automated requests; not used | 2026-11-10 |
 | B5 | playbooks | https://documentation.wazuh.com/current/proof-of-concept-guide/detect-brute-force-attack.html (+ all earlier approved sources reused) | 2026-11-10 |
 | B5+ | wazuh, mitre | https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html (rule.mitre alert fields); https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows (4104) | 2026-11-10 |
+| N1 | networking | RFC 791, 1122, 1180, 826, 9542 (replaces obsolete 7042), 4632, 1918, 5737, 4291, 6864 (rfc-editor.org); IANA IEEE 802 Numbers; NIST glossary "network"; Microsoft Learn OSI model (ISO/IEC 7498-1 behind a licence click-through and ITU X.200 blocked — not used) | 2026-11-10 |
 
 ## Tier 2 log
 
@@ -38,3 +39,5 @@ unattributed blogs, AI text) are never cited.
 | https://car.mitre.org/analytics/CAR-2021-05-010/ | 2026-11-10 | t1136-001 → local admin via net.exe | MITRE DET0447 | 2 |
 | https://car.mitre.org/analytics/CAR-2021-01-003/ | 2026-11-10 | t1685-005 → wevtutil log clearing | MITRE DET0532 | 2 |
 | https://redcanary.com/threat-detection-report/techniques/powershell/ | 2026-11-10 | t1059-001 → -encodedcommand, HTTP download; logging (event IDs TODO-VERIFY) | MITRE DET0455 | 2 |
+| https://aws.amazon.com/what-is/osi-model/ | 2026-11-10 | networking/osi-model → layers 5–7 descriptions | IBM page (and RFC 1122 for the application-layer boundary, shown as a disagreement) | 2 |
+| https://www.ibm.com/think/topics/osi-model | 2026-11-10 | networking/osi-model → layers 5–7; TCP/IP application layer includes session | AWS page; RFC 1122 disagrees on session — both shown | 2 |

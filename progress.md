@@ -14,7 +14,7 @@ Never delete history; append a new session block; keep the Current state table c
 | 03 site-ui | not started |
 | 04 auth | not started |
 | 02 soc-corpus Wave 2 | not started |
-| 02 soc-corpus networking (plan v4, 38 pages) | spec + tasks written on feat/02-networking — awaiting approval (STOP-A) |
+| 02 soc-corpus networking (plan v4, 38 pages) | implementing — N1 written (8 drafts), waiting at STOP-N1 |
 | 02 soc-corpus Wave 3 (soc-fundamentals, now 7 pages) | not started |
 
 ---
@@ -168,3 +168,6 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Branch `feat/02-networking` from main. PHR-0005, plan v4, networking-spec.md, networking-tasks.md.
 - Note: progress.md also changed on feat/05-agent-surface (refresh 401 note) — merge both blocks when the branches meet.
 - Next: STOP-A (spec + instance.md scope wording) → N1 URL list.
+- Networking STOP-A approved + push. instance.md scope widened (SOC analyst + SIEM engineer networking; SIEM engineers added as readers).
+- N1 written: 8 pages; numeric examples computed with Python ipaddress; unsourced sentences removed or sourced after review; verify.mjs flags only computed values.
+- Source changes in N1: RFC 7042 obsoleted by RFC 9542 (used 9542); ISO 7498-1 needs a licence click-through and ITU X.200 is blocked → Microsoft Learn (layers 1–4) + AWS and IBM (Tier 2, layers 5–7, disagreement with RFC 1122 shown).
