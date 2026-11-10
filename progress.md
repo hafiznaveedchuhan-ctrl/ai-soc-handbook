@@ -9,7 +9,7 @@ Never delete history; append a new session block; keep the Current state table c
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
 | 02 soc-corpus Wave 1 | **verified** — 39 pages stable; PR #3 merged (cbe9e46) |
-| 05 agent-surface | spec + plan + tasks + evals written — awaiting approval (STOP-A) |
+| 05 agent-surface | implementing — gateway done, provision done; BLOCKED: refresh failed (Gemini 401 invalid key) — Naveed creating a new key |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
 | 04 auth | not started |
@@ -168,3 +168,5 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - .env checked by name only (grep -c): KSOR_DB_URL, GEMINI_API_KEY non-empty; KSOR_AUTH=disabled-local. No value printed.
 - Next: STOP-A (approve Feature 05 docs + eval questions) → T05-02 gateway edit → HAAN steps.
 - T05-02 gateway (`8d52f3f`). T05-04 HAAN: `npm run provision` → "schema: applied 2.5 at dim 1536, text search english"; "granted: sor_content_ingest may now ingest soc-handbook".
+- T05-05 HAAN: `npm run refresh` → generation 1: 49 nodes, 343 chunks, embedded 0, failed 343 → ksor-shrink-guard, NOT flipped. One-word diagnostic call to Gemini: 401 UNAUTHENTICATED "API key not valid". Key format inspection was blocked by the permission classifier (credential materialization) — correctly; Naveed replaces the key in .env (no quotes, LF line endings).
+- Next for 05: Naveed says "done" → repeat one-word test → HAAN → refresh again (fresh generation; failed gen 1 reaped later by gc).
