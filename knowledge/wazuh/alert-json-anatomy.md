@@ -17,6 +17,9 @@ sources:
   - id: wazuh-server
     title: Wazuh documentation — Wazuh server
     resource: https://documentation.wazuh.com/current/getting-started/components/wazuh-server.html
+  - id: wazuh-0580
+    title: Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+    resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
 ksor:
   audience: [public]
   owner: human:naveed
@@ -107,6 +110,10 @@ In Wazuh's examples the `eventdata` keys appear as the Windows field name with
 a lower-case first letter (for example `Image` → `image`,
 `ParentImage` → `parentImage`).[^wazuh-event-logging]
 
+The Wazuh ruleset uses the same pattern for Security-log events, for example
+`win.eventdata.targetUserName`, `win.eventdata.ipAddress`,
+`win.eventdata.logonType` and `win.eventdata.subjectUserSid`.[^wazuh-0580]
+
 The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 `agent.name`.[^wazuh-event-logging]
 
@@ -114,12 +121,10 @@ The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 
 - TODO-VERIFY: exact output field names for MITRE data in an alert
   (`rule.mitre.id`, `rule.mitre.tactic`, `rule.mitre.technique`). The rule
-  syntax documents a `<mitre>` element holding technique IDs, but the B1
-  sources do not show it inside an alert. To confirm from the Wazuh ruleset
-  and an alert sample in B2.
-- TODO-VERIFY: that Security-log fields follow the same lower-case-first
-  pattern (for example `TargetUserName` → `targetUserName`) — confirm from the
-  Wazuh ruleset in B2.
+  syntax documents a `<mitre>` element holding technique IDs, and the
+  ruleset's rules carry it,[^wazuh-0580] but no approved source yet shows
+  the field names it produces inside an alert. To confirm from a lab alert
+  or a Wazuh documentation sample.
 
 ## For the agent
 
@@ -137,3 +142,4 @@ The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 [^wazuh-event-logging]: Wazuh documentation, "Event logging", Windows event JSON examples. https://documentation.wazuh.com/current/user-manual/manager/event-logging.html
 [^wazuh-alert-management]: Wazuh documentation, "Alert management". https://documentation.wazuh.com/current/user-manual/manager/alert-management.html
 [^wazuh-server]: Wazuh documentation, "Wazuh server". https://documentation.wazuh.com/current/getting-started/components/wazuh-server.html
+[^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

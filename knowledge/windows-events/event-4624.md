@@ -14,6 +14,9 @@ sources:
   - id: ms-advanced-audit
     title: Microsoft Learn — Advanced security audit policy settings
     resource: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+  - id: wazuh-0580
+    title: Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+    resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
 ksor:
   audience: [public]
   owner: human:naveed
@@ -118,8 +121,13 @@ in batch B3: Valid Accounts, Brute Force follow-up). Added in the link pass.
 
 ## Wazuh rules
 
-TODO-VERIFY: Wazuh rule IDs for 4624 — only from the pinned Wazuh ruleset
-(batch B2).
+In the default ruleset (v4.14.10), rule **60106** (level 3, "Windows Logon
+Success", MITRE tag `T1078`) matches 4624, with child rules for workstation
+logons (60118), a user's first logon on a system (60119) and Logon Type 8
+(60200). Logons by LOCAL SERVICE, NETWORK SERVICE or ANONYMOUS LOGON (60194)
+and Type 5 service logons by built-in service accounts (60232) are set to
+level 0 and do not alert.[^wazuh-0580] Full table: [Windows rules
+reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
@@ -153,3 +161,4 @@ link pass.
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+[^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

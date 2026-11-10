@@ -14,6 +14,9 @@ sources:
   - id: ms-advanced-audit
     title: Microsoft Learn — Advanced security audit policy settings
     resource: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+  - id: wazuh-rules-reference
+    title: Wazuh ruleset v4.14.10 — ruleset/rules directory
+    resource: https://github.com/wazuh/wazuh/tree/v4.14.10/ruleset/rules
 ksor:
   audience: [public]
   owner: human:naveed
@@ -80,8 +83,10 @@ Accounts). Added in the link pass.
 
 ## Wazuh rules
 
-TODO-VERIFY: Wazuh rule IDs for 4648 — only from the pinned Wazuh ruleset
-(batch B2).
+No default rule for 4648 was found in the Wazuh ruleset (v4.14.10, all 168
+rule files searched).[^wazuh-rules-reference] A 4648 will only alert through
+a custom rule. See [Windows rules
+reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
@@ -112,3 +117,4 @@ TODO-VERIFY: playbook link added in the link pass.
 [^ms-4648]: Microsoft Learn, "4648(S): A logon was attempted using explicit credentials" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4648
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+[^wazuh-rules-reference]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/` (searched for event ID 4648). https://github.com/wazuh/wazuh/tree/v4.14.10/ruleset/rules

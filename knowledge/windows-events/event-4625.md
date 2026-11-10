@@ -14,6 +14,9 @@ sources:
   - id: ms-advanced-audit
     title: Microsoft Learn — Advanced security audit policy settings
     resource: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+  - id: wazuh-0580
+    title: Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+    resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
 ksor:
   audience: [public]
   owner: human:naveed
@@ -130,8 +133,17 @@ in the link pass.
 
 ## Wazuh rules
 
-TODO-VERIFY: Wazuh rule IDs for single and repeated 4625 — only from the
-pinned Wazuh ruleset (batch B2).
+In the default ruleset (v4.14.10):[^wazuh-0580]
+
+| Rule | Level | Description | When |
+|---|---|---|---|
+| 60105 | 5 | Windows Logon Failure | any 4625 (audit failure) |
+| 60122 | 5 | Logon Failure - Unknown user or bad password | child of 60105 for 4625 |
+| **60204** | **10** | Multiple Windows Logon Failures | `authentication_failed` group matched 8 times within 240 seconds from the same `ipAddress` |
+
+Rule 60122 matches every 4625 under 60105; it does not read the Status
+code.[^wazuh-0580] Full table: [Windows rules
+reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
@@ -165,3 +177,4 @@ TODO-VERIFY: links to the brute-force and success-after-failures playbooks
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+[^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

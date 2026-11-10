@@ -1,5 +1,12 @@
 # Windows events
 
+* [Event 1102: The audit log was cleared](event-1102.md) - Windows Security event 1102 — the Security audit log was cleared; who cleared it, why it should rarely happen, and the Wazuh rules that alert on it.
 * [Event 4624: An account was successfully logged on](event-4624.md) - Windows Security event 4624 — what a successful logon record means, its key fields and Logon Types, and the patterns that make it worth a second look.
 * [Event 4625: An account failed to log on](event-4625.md) - Windows Security event 4625 — what a failed logon record means, its key fields, Logon Types and the Status / Sub Status codes Microsoft says to monitor, and how to read a run of failures.
 * [Event 4648: A logon was attempted using explicit credentials](event-4648.md) - Windows Security event 4648 — a process logging on by naming an account's credentials explicitly (RunAs, scheduled tasks), its key fields, and when such a logon deserves attention.
+* [Event 4672: Special privileges assigned to new logon](event-4672.md) - Windows Security event 4672 — a new logon session received sensitive (administrator-equivalent) privileges; which privileges trigger it, its fields, and when it is not routine.
+* [Event 4688: A new process has been created](event-4688.md) - Windows Security event 4688 — a process started; its creator and target accounts, process names, command line, token elevation type and integrity label, and the patterns that make a process worth checking.
+* [Event 4720: A user account was created](event-4720.md) - Windows Security event 4720 — a new user account was created; who created it, the new account's attributes, the values Microsoft says are anomalies, and the Wazuh rule that alerts on it.
+* [Event 4732: A member was added to a security-enabled local group](event-4732.md) - Windows Security event 4732 — an account was added to a local security group such as Administrators; its fields, the groups that matter most, and the Wazuh rules that raise the level for privileged groups.
+* [Event 4740: A user account was locked out](event-4740.md) - Windows Security event 4740 — an account was locked after failed logons; which account, from which caller computer, and when a lockout points to password guessing rather than a forgotten password.
+* [Event 7045: New service installed](event-7045.md) - Windows System log event 7045 — a new service was installed; what Microsoft and Wazuh confirm about it, why attackers use services, and what an L1 analyst checks.
