@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4732 — added to local group"
+  description: "Recall checks drawn only from the page Event 4732."
+cards:
+  - front: "What does event 4732 record?"
+    back: "A member was added to a security-enabled local group."
+  - front: "Which field identifies the group?"
+    back: "Group Security ID / Group Name (TargetSid, TargetUserName)."
+  - front: "What is the SID of the local Administrators group used by Wazuh rule 60154?"
+    back: "S-1-5-32-544."
+  - front: "Why is MemberName often '-'?"
+    back: "For local groups it typically shows '-', even for a domain account."
+  - front: "Which Wazuh rule fires for Administrators group changes?"
+    back: "60154, level 12, 'Administrators Group Changed'."
+  - front: "Which event often appears just before 4732?"
+    back: "An empty 4735 (security-enabled local group changed)."

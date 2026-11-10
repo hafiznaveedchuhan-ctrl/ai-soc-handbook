@@ -1,0 +1,16 @@
+deck:
+  title: "Playbook — new local account"
+  description: "Recall checks drawn only from the page Playbook."
+cards:
+  - front: "Which Wazuh rule triggers this playbook?"
+    back: "60109 (level 8) on event 4720."
+  - front: "What is the first L1 step?"
+    back: "Identify the creator (SubjectUserName) and the new account (TargetUserName)."
+  - front: "Which process often comes just before a manual 4720?"
+    back: "net.exe or powershell.exe (4688)."
+  - front: "What do you check right after the 4720?"
+    back: "Whether the account was added to a group, especially Administrators (4732)."
+  - front: "Why can 60109 be a false positive?"
+    back: "It also covers 4722, so a re-enabled account can look new."
+  - front: "Which MITRE technique applies?"
+    back: "T1136.001 Create Account: Local Account."

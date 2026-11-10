@@ -1,0 +1,16 @@
+deck:
+  title: "Event 1102 — audit log cleared"
+  description: "Recall checks drawn only from the page Event 1102."
+cards:
+  - front: "What does event 1102 record?"
+    back: "The Windows Security audit log was cleared."
+  - front: "How often should you see 1102?"
+    back: "Typically never; there is usually no need to clear the Security log manually."
+  - front: "Which fields identify who cleared it?"
+    back: "Subject: Security ID, Account Name, Account Domain, Logon ID."
+  - front: "Which Wazuh rules alert on 1102?"
+    back: "60117 (level 9) and 63103 (level 5)."
+  - front: "Which MITRE ID should a triage note use?"
+    back: "T1685.005 Clear Windows Event Logs (formerly T1070.001)."
+  - front: "Which subcategory does Microsoft list for 1102?"
+    back: "Other Events."

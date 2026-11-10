@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4672 — special privileges"
+  description: "Recall checks drawn only from the page Event 4672."
+cards:
+  - front: "What does event 4672 record?"
+    back: "A new logon received one or more sensitive, administrator-level privileges."
+  - front: "Why are many 4672 events normal?"
+    back: "Every logon of the SYSTEM account triggers one."
+  - front: "Which privilege does Microsoft give as one to restrict?"
+    back: "SeDebugPrivilege."
+  - front: "Which field links 4672 to its 4624?"
+    back: "Subject\\Logon ID (SubjectLogonId)."
+  - front: "Which Wazuh rule covers 4672?"
+    back: "67028, level 3, only when subjectUserSid is not S-1-5-18."
+  - front: "Which audit subcategory produces 4672?"
+    back: "Audit Special Logon (success events only)."

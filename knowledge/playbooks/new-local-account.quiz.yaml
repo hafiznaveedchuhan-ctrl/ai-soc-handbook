@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook — new local account"
+  questionsPerRound: 6
+questions:
+  - question: "Which escalation condition applies if the new account joins Administrators?"
+    options:
+      - "Condition 1"
+      - "Condition 6"
+      - "Condition 4"
+      - "Condition 3"
+    answer: 1
+    explanation: "Condition 6 covers an account added to Administrators."
+    source: "Escalate?"
+  - question: "Which attribute does Microsoft say should usually be 513?"
+    options:
+      - "Primary Group ID"
+      - "Logon Hours"
+      - "Key Length"
+      - "Old UAC Value"
+    answer: 0
+    explanation: "Primary Group ID is typically 513; other values should be monitored."
+    source: "L1 steps"
+  - question: "Which Sigma false positive does the playbook mention?"
+    options:
+      - "Printer installs"
+      - "Browser updates"
+      - "Domain controller logs"
+      - "Time sync events"
+    answer: 2
+    explanation: "Sigma lists domain controller logs and accounts managed by privileged access tools."
+    source: "Enrichment"
+  - question: "Which event shows the command that created the account?"
+    options:
+      - "4740"
+      - "1102"
+      - "4672"
+      - "4688"
+    answer: 3
+    explanation: "A 4688 just before the 4720 shows net.exe or powershell.exe."
+    source: "L1 steps"
+  - question: "When is the verdict benign TP?"
+    options:
+      - "Made by provisioning with a matching request"
+      - "Made by an unknown account"
+      - "Made at night by a script"
+      - "Added to Administrators"
+    answer: 0
+    explanation: "Benign TP is an account created by the provisioning process or admin team with a request."
+    source: "Verdict criteria"
+  - question: "Which other rule follows if the account is added to Administrators?"
+    options:
+      - "60204"
+      - "60154"
+      - "60117"
+      - "61138"
+    answer: 1
+    explanation: "60154 'Administrators Group Changed' fires for 4732 into Administrators."
+    source: "Related pages"

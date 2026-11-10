@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4688 — process created"
+  questionsPerRound: 6
+questions:
+  - question: "What does Token Elevation Type %%1938 mean?"
+    options:
+      - "A full token with no limits"
+      - "A limited token, not elevated"
+      - "An elevated admin token"
+      - "A token for a service account"
+    answer: 1
+    explanation: "%%1938 is Type 3: a limited token, used when the program is not run as administrator."
+    source: "Token Elevation Type"
+  - question: "Why might CommandLine be empty in a 4688?"
+    options:
+      - "The process crashed before it could log anything"
+      - "The process was a service"
+      - "Command-line logging is not enabled"
+      - "The user was SYSTEM"
+    answer: 2
+    explanation: "Process Command Line is empty by default until the policy to include it is enabled."
+    source: "Audit policy"
+  - question: "Which folder location does Microsoft call worth checking?"
+    options:
+      - "Not in System32 or Program Files"
+      - "Only C:\\Windows\\Fonts"
+      - "Only inside mapped network shares on file servers"
+      - "Only removable drives"
+    answer: 0
+    explanation: "Microsoft suggests monitoring processes not in standard folders such as System32 or Program Files."
+    source: "Normal vs suspicious"
+  - question: "Which Mandatory Label SID means System integrity?"
+    options:
+      - "S-1-16-4096"
+      - "S-1-16-8192"
+      - "S-1-16-12288"
+      - "S-1-16-16384"
+    answer: 3
+    explanation: "S-1-16-16384 is System integrity; 4096 low, 8192 medium, 12288 high."
+    source: "Mandatory Label"
+  - question: "What does %%1937 on a standard workstation for a real user mean?"
+    options:
+      - "UAC is turned off"
+      - "The process failed"
+      - "The user ran a program as admin"
+      - "The account is a service"
+    answer: 2
+    explanation: "Microsoft: %%1937 for a real user on a workstation means they ran a program with administrative privileges."
+    source: "Normal vs suspicious"
+  - question: "Which policy produces 4688?"
+    options:
+      - "Audit Process Creation"
+      - "Audit Logon"
+      - "Audit Special Logon"
+      - "Audit File System"
+    answer: 0
+    explanation: "4688 is produced by the Audit Process Creation subcategory (Detailed Tracking)."
+    source: "Audit policy"

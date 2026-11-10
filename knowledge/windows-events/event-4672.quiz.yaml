@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4672 — special privileges"
+  questionsPerRound: 6
+questions:
+  - question: "Which accounts does Microsoft treat as expected subjects of 4672?"
+    options:
+      - "LOCAL SYSTEM, NETWORK SERVICE, LOCAL SERVICE"
+      - "Only the Guest and the Anonymous Logon accounts"
+      - "Any domain user account"
+      - "Only computer accounts"
+    answer: 0
+    explanation: "Microsoft says to monitor 4672 where Subject is not one of those well-known principals or an expected admin."
+    source: "Normal vs suspicious"
+  - question: "What does SeDebugPrivilege allow?"
+    options:
+      - "Backing up files"
+      - "Changing the system time and the time zone settings"
+      - "Debugging and adjusting other processes"
+      - "Loading fonts"
+    answer: 2
+    explanation: "SeDebugPrivilege is 'Debug programs' — debugging and adjusting memory of another account's processes."
+    source: "Meaning"
+  - question: "When does Wazuh rule 67028 fire?"
+    options:
+      - "For every 4672"
+      - "Only for SYSTEM's 4672"
+      - "Only on domain controllers"
+      - "When subject SID is not S-1-5-18"
+    answer: 3
+    explanation: "67028 matches 4672 when win.eventdata.subjectUserSid is not S-1-5-18."
+    source: "Wazuh rules"
+  - question: "How do you find the logon a 4672 belongs to?"
+    options:
+      - "By the event record ID"
+      - "By the Logon ID"
+      - "By the process name"
+      - "By the domain name"
+    answer: 1
+    explanation: "Use Subject\\Logon ID to find the 4624 with the same Logon ID."
+    source: "When Windows writes it"
+  - question: "Which MITRE technique does the handbook use for an unexpected 4672?"
+    options:
+      - "T1484"
+      - "T1110"
+      - "T1078"
+      - "T1543.003"
+    answer: 2
+    explanation: "The owner maps an unexpected privileged logon to T1078; Wazuh's T1484 tag is not used."
+    source: "MITRE ATT&CK"
+  - question: "Does Audit Special Logon have failure events?"
+    options:
+      - "No, success events only"
+      - "Yes, for every logon"
+      - "Only on workstations"
+      - "Only for SYSTEM"
+    answer: 0
+    explanation: "Microsoft notes the subcategory has no failure events."
+    source: "Audit policy"

@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4740 — account locked out"
+  description: "Recall checks drawn only from the page Event 4740."
+cards:
+  - front: "What does event 4740 record?"
+    back: "A user account was locked out."
+  - front: "Which field says where the failing logons came from?"
+    back: "Caller Computer Name."
+  - front: "Does 4740 give the caller's IP address?"
+    back: "No — it gives the computer name, even for computers outside the domain."
+  - front: "Which account normally performs the lockout?"
+    back: "SYSTEM."
+  - front: "Which audit subcategory lists 4740?"
+    back: "Audit User Account Management."
+  - front: "Which Wazuh rule alerts on 4740?"
+    back: "60115, level 9, tagged T1110 and T1531."

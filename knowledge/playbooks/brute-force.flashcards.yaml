@@ -1,0 +1,16 @@
+deck:
+  title: "Playbook — brute-force logons"
+  description: "Recall checks drawn only from the page Playbook."
+cards:
+  - front: "Which Wazuh rules trigger the brute-force playbook?"
+    back: "60204 (and many 60122); possibly 60115 for a lockout."
+  - front: "One account, many failures — which pattern?"
+    back: "Password guessing (T1110.001)."
+  - front: "Many accounts, few failures each from one source — which pattern?"
+    back: "Password spraying (T1110.003)."
+  - front: "What must you always check after the failures?"
+    back: "Whether a 4624 success followed for the same account or source."
+  - front: "When do you escalate under condition 4?"
+    back: "A 4624 within 60 minutes after the brute-force burst."
+  - front: "Is a private source IP sent to AbuseIPDB?"
+    back: "No — find the internal host instead."

@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4732 — added to local group"
+  questionsPerRound: 6
+questions:
+  - question: "What is the Wazuh level of rule 60154?"
+    options:
+      - "5"
+      - "9"
+      - "12"
+      - "15"
+    answer: 2
+    explanation: "60154 'Administrators Group Changed' is level 12."
+    source: "Wazuh rules"
+  - question: "Which event is the global-group version of 4732?"
+    options:
+      - "4728"
+      - "4756"
+      - "4735"
+      - "4733"
+    answer: 0
+    explanation: "4728 is the same event for a global security group; 4756 is for universal groups."
+    source: "Meaning"
+  - question: "Which groups does Microsoft call high-value examples?"
+    options:
+      - "Users and Guests"
+      - "Print Operators only"
+      - "Remote Desktop Users only"
+      - "Administrators, Domain Admins, Enterprise Admins"
+    answer: 3
+    explanation: "Microsoft gives built-in local administrators, domain admins and enterprise admins as examples."
+    source: "Normal vs suspicious"
+  - question: "How many 4732 events does adding three members create?"
+    options:
+      - "One"
+      - "Three"
+      - "Two"
+      - "None"
+    answer: 1
+    explanation: "Microsoft: every added member produces a separate 4732 event."
+    source: "Meaning"
+  - question: "Which MITRE sub-technique fits adding an account to a local group?"
+    options:
+      - "T1098.007"
+      - "T1110.003"
+      - "T1136.001"
+      - "T1685.005"
+    answer: 0
+    explanation: "T1098.007 is Additional Local or Domain Groups, under Account Manipulation."
+    source: "MITRE ATT&CK"
+  - question: "Which escalation condition applies to a 4732 into Administrators?"
+    options:
+      - "Condition 1"
+      - "Condition 3"
+      - "Condition 6"
+      - "Condition 8"
+    answer: 2
+    explanation: "Condition 6 covers an account added to Administrators."
+    source: "Related playbook"

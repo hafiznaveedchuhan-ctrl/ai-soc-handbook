@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4720 — user account created"
+  questionsPerRound: 6
+questions:
+  - question: "Which Primary Group ID should be monitored?"
+    options:
+      - "Any value other than 513"
+      - "Exactly 513"
+      - "Any value above 1000 for a domain account"
+      - "Any even number"
+    answer: 0
+    explanation: "Microsoft: Primary Group ID is typically 513; other values should be monitored."
+    source: "Normal vs suspicious"
+  - question: "Which flag does Microsoft say should never be enabled for user accounts?"
+    options:
+      - "Normal Account"
+      - "Don't Expire Password"
+      - "Server Trust Account"
+      - "Smartcard Required"
+    answer: 2
+    explanation: "'Server Trust Account' should never be enabled for user accounts; it applies to domain controllers."
+    source: "UAC flags"
+  - question: "Which other events share Audit User Account Management with 4720?"
+    options:
+      - "4624, 4625 and 4634"
+      - "4722, 4725, 4740"
+      - "1102 and 7045"
+      - "4688 and 4672"
+    answer: 1
+    explanation: "The subcategory also produces 4722, 4724, 4725, 4726, 4738 and 4740, among others."
+    source: "Audit policy"
+  - question: "What does Password Last Set = <never> typically mean?"
+    options:
+      - "The account is disabled"
+      - "The password expired"
+      - "The account is a service"
+      - "A manually created account"
+    answer: 3
+    explanation: "Microsoft: <never> typically means a manually created user account, which you may want to monitor."
+    source: "Normal vs suspicious"
+  - question: "Which Wazuh rule also covers re-enabled accounts (4722)?"
+    options:
+      - "60109"
+      - "60204"
+      - "60154"
+      - "61138"
+    answer: 0
+    explanation: "Rule 60109 matches 624, 626, 4720 and 4722."
+    source: "Wazuh rules"
+  - question: "Which event should you check right after a suspicious 4720?"
+    options:
+      - "4740 lockout"
+      - "1102 log cleared"
+      - "4732 group membership"
+      - "4634 logoff"
+    answer: 2
+    explanation: "Check whether the new account was added to a group, especially Administrators (4732)."
+    source: "L1 triage questions"

@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4720 — user account created"
+  description: "Recall checks drawn only from the page Event 4720."
+cards:
+  - front: "What does event 4720 record?"
+    back: "A new user account (user object) was created."
+  - front: "Which section shows who created the account?"
+    back: "Subject."
+  - front: "What Primary Group ID is typical for a new user?"
+    back: "513 (Domain Users, or Users for local accounts)."
+  - front: "What is the Old UAC Value for a new account?"
+    back: "Always 0x0."
+  - front: "Which Wazuh rule alerts on 4720?"
+    back: "60109, level 8, 'User account enabled or created'."
+  - front: "Which MITRE technique names 4720 in its detection?"
+    back: "T1136.001 Create Account: Local Account."
