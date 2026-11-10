@@ -238,3 +238,8 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - TN-08 part 1: "Related pages" section on 37 networking pages (links to networking pages + Wave 1 events/playbooks/enrichment/wazuh/rules-map/triage-note); networking-overview table now links all 38 pages. Links only, no new facts. Check + build OK.
 - TN-08 part 2 (Wave 1 → networking) NOT applied: 11 stable pages would need re-approval and would link to unpublished drafts → plan in `specs/02-soc-corpus/networking-reverse-links.txt`, decide at approval.
 - Next: TN-09 — 38 flashcard decks + 38 quizzes (quiz_precheck.py, then KSOR_DRAFTS=show build).
+
+### Session 3 — update (study companions)
+- Stale "batch N2 / N5 / later batches" references in N1–N2 pages replaced with real links (arp, ethernet, icmp, ipv6-nd, tcp-ip-model, tcp, udp). ipv6-nd: ND misuse marked as an open question (no source covers it).
+- TN-09: 38 flashcard decks (5 cards each) + 38 quizzes (6 questions each), every card/answer taken from its page. quiz_precheck: 38/38 ok. `KSOR_DRAFTS=show` build exit 0 (site quiz audit passed); normal build re-run so build.lock.json says drafts hidden.
+- Next: TN-10 review sheet `specs/02-soc-corpus/networking-review.txt` → STOP-R (Naveed approves; decide reverse links yes/no; TLS 1.0/1.1 policy question).

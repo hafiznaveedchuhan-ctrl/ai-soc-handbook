@@ -73,8 +73,8 @@ All rows: [^iana-802]
 - A MAC with the X (local) bit set was assigned by the local network operator,
   not under an IEEE vendor prefix, so its first octets do not name a
   vendor.[^rfc9542]
-- How MAC and [ARP](arp.md) misuse appears in logs is covered in
-  network-attacks (batch N5).
+- ARP cache poisoning (MITRE T1557.002) is covered in
+  [network attacks](network-attacks.md).
 
 ## For the agent
 

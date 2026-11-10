@@ -1,0 +1,58 @@
+quiz:
+  title: "UDP — User Datagram Protocol"
+  questionsPerRound: 6
+questions:
+  - question: "UDP port 123 is …"
+    options:
+      - "domain"
+      - "ntp"
+      - "syslog"
+      - "snmp"
+    answer: 1
+    explanation: "IANA: 123 ntp, 53 domain, 514 syslog, 161 snmp."
+    source: "Common UDP services (IANA)"
+  - question: "UDP 67 and 68 are …"
+    options:
+      - "DNS server and client"
+      - "TFTP and NTP"
+      - "SNMP and trap"
+      - "DHCP server and client"
+    answer: 3
+    explanation: "IANA: 67 bootps, 68 bootpc (DHCP server / client)."
+    source: "Common UDP services (IANA)"
+  - question: "UDP port 514 is …"
+    options:
+      - "syslog"
+      - "tftp"
+      - "snmptrap"
+      - "domain"
+    answer: 0
+    explanation: "IANA: 514 syslog."
+    source: "Common UDP services (IANA)"
+  - question: "Source port 0 in UDP means …"
+    options:
+      - "the packet is invalid"
+      - "a TCP reset"
+      - "the optional field is unused"
+      - "a broadcast packet"
+    answer: 2
+    explanation: "RFC 768: source port optional, zero when not used."
+    source: "What UDP is"
+  - question: "UDP port 69 is …"
+    options:
+      - "ntp"
+      - "tftp"
+      - "snmp"
+      - "bootpc"
+    answer: 1
+    explanation: "IANA: 69 tftp."
+    source: "Common UDP services (IANA)"
+  - question: "Which RFC defines UDP?"
+    options:
+      - "RFC 768"
+      - "RFC 793"
+      - "RFC 9293"
+      - "RFC 1122"
+    answer: 0
+    explanation: "RFC 768 — User Datagram Protocol."
+    source: "What UDP is"

@@ -62,9 +62,9 @@ the link layer. Knowing the layer tells you which device could have seen it.
 | Field seen | Layer | Page |
 |---|---|---|
 | `srcip`, `dstip`, TTL | Internet | [IPv4 addressing](ipv4-addressing.md) |
-| `srcport`, `dstport` | Transport | ports-and-services (batch N2) |
+| `srcport`, `dstport` | Transport | [ports and services](ports-and-services.md) |
 | MAC, EtherType | Link | [Ethernet and MAC](ethernet-and-mac-addresses.md) |
-| URL, query name | Application | later batches |
+| URL, query name | Application | [HTTP](http-https.md), [DNS](dns.md), [email](email-protocols.md) |
 
 ## Related pages
 

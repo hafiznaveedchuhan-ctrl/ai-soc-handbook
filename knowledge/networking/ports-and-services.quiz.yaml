@@ -1,0 +1,58 @@
+quiz:
+  title: "Ports and services"
+  questionsPerRound: 6
+questions:
+  - question: "Port 88 is …"
+    options:
+      - "ldap"
+      - "kerberos"
+      - "epmap"
+      - "http-alt"
+    answer: 1
+    explanation: "IANA: 88 kerberos."
+    source: "Ports to know (IANA names)"
+  - question: "Ports 5985 / 5986 are …"
+    options:
+      - "LDAP / LDAPS"
+      - "IMAP / IMAPS"
+      - "MySQL / MSSQL"
+      - "WS-Management HTTP / TLS"
+    answer: 3
+    explanation: "IANA: 5985 wsman, 5986 wsmans."
+    source: "Ports to know (IANA names)"
+  - question: "Which range is never assigned by IANA?"
+    options:
+      - "49152–65535"
+      - "0–1023"
+      - "1024–49151"
+      - "1–1024"
+    answer: 0
+    explanation: "Dynamic (private / ephemeral) ports are never assigned."
+    source: "Port ranges (RFC 6335)"
+  - question: "TCP 514 in the IANA registry is …"
+    options:
+      - "syslog"
+      - "rsh-tls"
+      - "shell"
+      - "login"
+    answer: 2
+    explanation: "IANA: syslog is udp 514; tcp 514 is 'shell'."
+    source: "Ports to know (IANA names)"
+  - question: "Port 636 is …"
+    options:
+      - "ldap"
+      - "ldaps"
+      - "https"
+      - "imaps"
+    answer: 1
+    explanation: "IANA: 389 ldap, 636 ldaps."
+    source: "Ports to know (IANA names)"
+  - question: "445 between workstations: consider …"
+    options:
+      - "escalation condition 5"
+      - "closing as normal"
+      - "a DNS check only"
+      - "an NTP check"
+    answer: 0
+    explanation: "For the agent: file sharing — consider escalation condition 5."
+    source: "For the agent"

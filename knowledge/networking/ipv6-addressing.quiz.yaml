@@ -1,0 +1,58 @@
+quiz:
+  title: "IPv6 addressing"
+  questionsPerRound: 6
+questions:
+  - question: "Canonical form of 2001:0db8:0:0:0:0:0:1?"
+    options:
+      - "2001:0db8::0001"
+      - "2001:db8::1"
+      - "2001:db8:0:0::1"
+      - "2001:DB8::1"
+    answer: 1
+    explanation: "Leading zeros suppressed, :: used fully, lowercase."
+    source: "Worked examples (machine-checked)"
+  - question: "May '::' shorten just one zero field?"
+    options:
+      - "Yes, always"
+      - "Only at the end"
+      - "Only at the start"
+      - "No, it must not"
+    answer: 3
+    explanation: "RFC 5952: :: MUST NOT shorten just one 16-bit 0 field."
+    source: "The canonical short form (RFC 5952)"
+  - question: "Anycast is delivered to …"
+    options:
+      - "one of a set (the nearest)"
+      - "all members of a set"
+      - "one interface only"
+      - "every host on the link"
+    answer: 0
+    explanation: "RFC 4291: anycast goes to one of a set, the 'nearest'."
+    source: "Format"
+  - question: "Which prefix is for IPv6 documentation (RFC 3849)?"
+    options:
+      - "fe80::/10"
+      - "fc00::/7"
+      - "2001:db8::/32"
+      - "ff00::/8"
+    answer: 2
+    explanation: "Examples use 2001:db8::/32."
+    source: "Worked examples (machine-checked)"
+  - question: "Canonical form of 2001:db8:0:0:0:0:2:1?"
+    options:
+      - "2001:db8:0::2:1"
+      - "2001:db8::2:1"
+      - "2001:db8::0:2:1"
+      - "2001:DB8::2:1"
+    answer: 1
+    explanation: "Computed example on the page: 2001:db8::2:1."
+    source: "Worked examples (machine-checked)"
+  - question: "How do you count distinct IPv6 sources?"
+    options:
+      - "Count the canonical forms"
+      - "Count the raw strings"
+      - "Count only /64 prefixes"
+      - "Count MAC addresses"
+    answer: 0
+    explanation: "For the agent: count canonical forms."
+    source: "For the agent"

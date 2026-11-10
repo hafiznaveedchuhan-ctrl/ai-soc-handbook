@@ -1,0 +1,58 @@
+quiz:
+  title: "Number systems: binary, decimal and hexadecimal"
+  questionsPerRound: 6
+questions:
+  - question: "Hex 1F in decimal is …"
+    options:
+      - "15"
+      - "31"
+      - "16"
+      - "25"
+    answer: 1
+    explanation: "1 × 16 + 15 = 31 (page example)."
+    source: "Method"
+  - question: "168 in hex is …"
+    options:
+      - "8A"
+      - "C8"
+      - "A6"
+      - "A8"
+    answer: 3
+    explanation: "Conversion table: 168 = A8."
+    source: "Converting (worked examples)"
+  - question: "Which notation is used for MAC addresses?"
+    options:
+      - "Hexadecimal"
+      - "Decimal"
+      - "Binary"
+      - "Octal"
+    answer: 0
+    explanation: "MAC addresses and IPv6 are written in hex."
+    source: "Where each notation is used"
+  - question: "10 in 8-bit binary is …"
+    options:
+      - "00000110"
+      - "00010100"
+      - "00001010"
+      - "00001100"
+    answer: 2
+    explanation: "Conversion table: 10 = 00001010."
+    source: "Converting (worked examples)"
+  - question: "Hex C in binary is …"
+    options:
+      - "1010"
+      - "1100"
+      - "0011"
+      - "1110"
+    answer: 1
+    explanation: "Each hex digit is four bits: C = 1100."
+    source: "Method"
+  - question: "192.0.2.10 as one 32-bit decimal number?"
+    options:
+      - "3221225994"
+      - "3232235530"
+      - "3221226010"
+      - "2130706433"
+    answer: 0
+    explanation: "Computed on the page: 3221225994."
+    source: "Converting (worked examples)"

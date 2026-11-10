@@ -68,7 +68,7 @@ All rows: [^iana-icmpv6]
 ## Why a SOC analyst cares
 
 - Echo requests to many addresses in a short time look like host discovery
-  (network-attacks, N5).
+  (scanning patterns: [network attacks](network-attacks.md)).
 - Time Exceeded is the message a router returns when a packet's TTL runs out
   (see [IPv4 addressing](ipv4-addressing.md)).
 - ICMPv6 carries Neighbor Discovery, so it is part of normal IPv6 operation.

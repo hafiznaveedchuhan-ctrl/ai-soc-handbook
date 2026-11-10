@@ -1,0 +1,14 @@
+deck:
+  title: "Networking for SOC analysts — overview"
+  description: "Recall checks drawn only from the page Networking for SOC analysts — overview."
+cards:
+  - front: "How does NIST define a network?"
+    back: "A system of interconnected components such as routers, hubs, cabling and control devices."
+  - front: "What are the four Internet protocol suite layers?"
+    back: "Application, transport, internet and link."
+  - front: "Must a host implement a protocol from every layer?"
+    back: "Yes — at least one from each layer to communicate."
+  - front: "Which page answers 'which real host is behind this IP?'"
+    back: "NAT and PAT, DHCP and proxies."
+  - front: "Which page answers 'how do I read this network log line?'"
+    back: "Reading network logs in the SIEM."

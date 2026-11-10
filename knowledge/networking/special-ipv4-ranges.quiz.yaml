@@ -1,0 +1,58 @@
+quiz:
+  title: "Special-purpose IPv4 address ranges"
+  questionsPerRound: 6
+questions:
+  - question: "198.18.0.0/15 is reserved for …"
+    options:
+      - "Documentation"
+      - "Benchmarking"
+      - "Loopback"
+      - "Shared space"
+    answer: 1
+    explanation: "IANA registry: 198.18.0.0/15 Benchmarking."
+    source: "The registry"
+  - question: "Multicast (class D) addresses run …"
+    options:
+      - "240.0.0.0 to 255.255.255.255"
+      - "192.168.0.0 to 192.168.255.255"
+      - "100.64.0.0 to 100.127.255.255"
+      - "224.0.0.0 to 239.255.255.255"
+    answer: 3
+    explanation: "RFC 1112: class D, 224.0.0.0 to 239.255.255.255."
+    source: "The registry"
+  - question: "Which RFC defines Shared Address Space?"
+    options:
+      - "RFC 6598"
+      - "RFC 1918"
+      - "RFC 5737"
+      - "RFC 3927"
+    answer: 0
+    explanation: "100.64.0.0/10 Shared Address Space, RFC 6598."
+    source: "The registry"
+  - question: "A documentation address in live traffic means …"
+    options:
+      - "normal public traffic"
+      - "an internal server"
+      - "check data quality"
+      - "a loopback test"
+    answer: 2
+    explanation: "Documentation ranges should never appear in real traffic."
+    source: "For the agent"
+  - question: "255.255.255.255/32 is …"
+    options:
+      - "Reserved"
+      - "Limited Broadcast"
+      - "This network"
+      - "Loopback"
+    answer: 1
+    explanation: "IANA registry: Limited Broadcast."
+    source: "The registry"
+  - question: "127.0.0.0/8 traffic points to …"
+    options:
+      - "the local machine"
+      - "an ISP network"
+      - "a VLAN gateway"
+      - "a documentation host"
+    answer: 0
+    explanation: "127/8 is loopback — look at the local process."
+    source: "For the agent"

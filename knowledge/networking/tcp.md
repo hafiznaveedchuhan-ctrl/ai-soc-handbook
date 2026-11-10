@@ -63,7 +63,7 @@ All rows: [^rfc9293]
 |---|---|
 | SYN → SYN-ACK → ACK, then data | Connection established |
 | SYN answered by RST | Nothing accepting the connection on that port |
-| Many SYNs to many ports, few completed | Scan-like pattern (network-attacks, N5) |
+| Many SYNs to many ports, few completed | Scan-like pattern ([network attacks](network-attacks.md)) |
 | Many SYNs, no final ACK | Half-open connections — check for flooding |
 
 ## For the agent

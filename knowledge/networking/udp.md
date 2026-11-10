@@ -51,7 +51,8 @@ All rows: [^iana-ports]
 
 - TCP confirms both ends through its handshake; UDP has none, so treat a UDP
   source address with more caution than a completed TCP connection.
-- Floods of UDP replies to one target are covered in network-attacks (N5).
+- Floods of UDP replies to one target are covered under reflection
+  amplification in [network attacks](network-attacks.md).
 
 ## For the agent
 

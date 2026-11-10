@@ -22,8 +22,8 @@ ksor:
 > **In plain words.** To send to 192.0.2.10 on the same network, a computer
 > must know that machine's MAC address. It shouts "who has 192.0.2.10?" to
 > everyone (broadcast); the owner answers with its MAC. ARP trusts the
-> answer it gets; how misuse of ARP shows up in logs is covered later, in
-> the network-attacks page.
+> answer it gets; how misuse of ARP shows up is covered in
+> [network attacks](network-attacks.md).
 
 ## How ARP works
 
@@ -43,15 +43,15 @@ ksor:
 
 - The request is broadcast to the stations on the local Ethernet, so ARP is a
   local-network protocol.[^rfc826]
-- How ARP misuse appears in logs is covered, with sources, in network-attacks
-  (batch N5).
+- ARP cache poisoning (MITRE T1557.002) is covered, with sources, in
+  [network attacks](network-attacks.md).
 
 ## For the agent
 
 | Signal | Means | Next action |
 |---|---|---|
 | Normal request (op 1) then reply (op 2) | Address lookup | None |
-| IP → MAC mapping changes without a known reason | Check network-attacks (N5) | Flag; identify both MACs |
+| IP → MAC mapping changes without a known reason | Possible ARP poisoning — see [network attacks](network-attacks.md) | Flag; identify both MACs |
 
 ## Related pages
 

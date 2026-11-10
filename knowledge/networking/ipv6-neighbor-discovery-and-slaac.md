@@ -49,7 +49,8 @@ role.[^rfc4291]
 ## Why a SOC analyst cares
 
 - Neighbor Solicitation and Advertisement do for IPv6 what [ARP](arp.md) does
-  for IPv4; how their misuse appears in logs is covered in network-attacks (N5).
+  for IPv4. Misuse of Neighbor Discovery is not yet covered by a source in this
+  record (open question); ARP misuse is in [network attacks](network-attacks.md).
 - An IDS alert about an unexpected Router Advertisement points to the sending
   device — identify it.
 

@@ -9,6 +9,6 @@
 - [x] **TN-06** N4 (8 drafts, order 1330–1337) → **STOP-N4** passed ("next and push").
 - [x] **TN-07** N5 (6 drafts, order 1340–1345) → **STOP-N5** passed ("NEXT AND PUSH").
 - [~] **TN-08** Link pass: networking → networking + Wave 1 done ("Related pages" on 37 pages, overview table links all 38). Reverse direction (11 stable Wave 1 pages) planned in `networking-reverse-links.txt`, applied at approval (needs re-approval).
-- [ ] **TN-09** 38 flashcard decks + 38 quizzes; audit pre-check; `KSOR_DRAFTS=show` build.
+- [x] **TN-09** 38 flashcard decks (5 cards) + 38 quizzes (6 questions); quiz_precheck all ok; `KSOR_DRAFTS=show` build passed the site quiz audit.
 - [ ] **TN-10** Review sheet `specs/02-soc-corpus/networking-review.txt` → **STOP-R** owner approval.
 - [ ] **TN-11** Record approvals; progress/LEARNING; push + PR via gh (with OK); Naveed merges.
