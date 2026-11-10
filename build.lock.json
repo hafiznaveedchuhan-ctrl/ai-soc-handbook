@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "build_id": "sha256:6be260d1d3082867c023936383747bca98946fd9ee4613786923a3a6f182d03d",
+  "build_id": "sha256:2543c256b42aa4988a7e52772760596be2036ed29a62da9aea50b86575ebf826",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
@@ -8,8 +8,8 @@
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
   "source_commit": "f659514a5611ff0e8b309cd6a691e56a875ac630",
-  "dirty": false,
-  "as_of": "2026-11-10T07:47:57.391Z",
+  "dirty": true,
+  "as_of": "2026-11-10T08:04:06.555Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -26,6 +26,24 @@
   },
   "documents": [
     {
+      "path": "orientation/glossary.md",
+      "sha256": "93cd79738c34f9cf5a201f195c546a633701e19403d675adc28c379a45c2f5b9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "orientation/how-to-use.md",
+      "sha256": "eb39da62c6e3ed2a094fd45cf65032400b955dd54363c6f05c5690d5efe345f3",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "orientation/overview.md",
       "sha256": "50575b9df777ffc832e4052a1de136a20c79c4f9032176794a17b4687e307327",
       "status": "stable",
@@ -35,6 +53,60 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "wazuh/alert-json-anatomy.md",
+      "sha256": "611d95e7f8c4b61e8d0508812b7dc0d2fc3eb1dbc4be8152ab063adb8073749d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/architecture.md",
+      "sha256": "59633bc20437434f612af67ab5084b6cfd99168b5bebdf4e41d0625f341cd21d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/rule-levels.md",
+      "sha256": "327ffd2ffb34f7dfadc56ba6a10e1ce723182b302347a585bc11f564fa71dc05",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4624.md",
+      "sha256": "59784f3364eab6f0aeba1b11a0b6cceb1fffb1b6bafc63e9396554ac3e5bdb8c",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4625.md",
+      "sha256": "3dccd8d2e518c380307dd972ad3de32ae6131851c87dabefa5f2407139b9912a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4648.md",
+      "sha256": "7069fffebda93c13ac9ded3a407b833b6b185fcb2603f76aa626947a397d5b3a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     }
   ],
   "companions": [],
@@ -42,11 +114,19 @@
   "indexes": [
     {
       "path": "index.md",
-      "sha256": "3ebfd1a936e3b1d71dcd23f3dd58beee8a6ae272818f24eb41187c8facfdc467"
+      "sha256": "70b7ebfbd5ad057ca7620258dce84e50bc5333a40e3402f9e05c28b18a6c0ab5"
     },
     {
       "path": "orientation/index.md",
-      "sha256": "a06e6592a61e91ccde814364319e409a7a000eb591b0a695c63cbd318ea4e41c"
+      "sha256": "4ae632e1f93ffb64ed1f6eab9b51a2e3c86a47809ee8ec1012cfa743732bb050"
+    },
+    {
+      "path": "wazuh/index.md",
+      "sha256": "2ffa243bafad12118ff171814a39c07e6b8ba0ebc3553a52b9165bde9e229345"
+    },
+    {
+      "path": "windows-events/index.md",
+      "sha256": "09e13ba86c12f0e34974bcd7a00d5712ec3d81c0b4ea8eea95acfb78145e4e4c"
     }
   ],
   "bundles": [
