@@ -1,65 +1,59 @@
 ---
 format: 2
-name: handbook
-title: KSoR
-description: What a Knowledge System of Record is, how a project climbs the governance ladder, and which surfaces publish the same governed knowledge.
+name: soc-handbook
+title: SOC Triage Handbook
+description: Governed, cited guidance for triaging SIEM and Wazuh security alerts from Windows, Sysmon and Linux hosts — event meaning, MITRE ATT&CK mapping, triage playbooks, escalation and triage-note writing.
 toolchain:
   requires: ">=0.0.61"
   scaffolded: "0.0.61"
-# `database.dsn_env` names the environment variable holding your Postgres DSN —
-# never the DSN itself, which belongs in .env. It is filled in because naming a
-# variable costs nothing and needs no database: `npm run dev` and `npm run build` do
-# not read it, and the value only has to exist when you climb to the served
-# rung. To climb: copy .env.example to .env and set KSOR_DB_URL, then
-# `npm run provision` once (schema + grant), then `npm run refresh` to PUBLISH the
-# record, then `npm run serve`. Serving does not publish — that is deliberate, and
-# skipping refresh serves nothing.
-# Nothing else here is required:
-# `embedding:` already defaults to Gemini at 1536 dimensions, and leaving
-# `retrieval:` out starts you with the abstention gate off and honest about it
-# (turn it on afterwards with `ksor calibrate`, once the record is serving).
+# `database.dsn_env` names the environment variable holding the Postgres DSN —
+# never the DSN itself, which lives in .env. `embedding:` is left out on
+# purpose: the default (gemini, gemini-embedding-001, 1536 dimensions) is the
+# space this record uses. `retrieval:` is added only by `ksor calibrate` once
+# the record is serving (Feature 05). `mcp_url` and `version` are added only
+# when the server is actually published.
 database:
   dsn_env: KSOR_DB_URL
-# Where agents reach this record's MCP surface, and the semver it publishes as.
-# Both go into /.well-known/mcp/server.json, the document an agent reads to
-# DISCOVER this record instead of being told the URL. Leave mcp_url out until
-# the server is actually published: an invented URL is worse than none.
-# mcp_url: https://records.example.com/mcp
-# version: 0.1.0
 ---
 
-This record is authoritative for what a Knowledge System of Record is, how a
-project climbs the governance ladder, and which surfaces the same governed
-knowledge is published through. It does not cover the CLI's release history or
-the internals of the retrieval kernel.
+This record is authoritative for the **triage of security alerts raised by a
+SIEM, chiefly Wazuh, from Windows, Sysmon and Linux hosts**. Within that scope
+it covers:
 
-Write and govern the knowledge once; every surface here derives from it. When a
-slide deck, a wiki page or a model's memory disagrees with this record, this
-record wins.
+- what a security event means — Windows Security and System log events, Sysmon
+  events, Linux authentication logs, and the fields of a Wazuh alert;
+- how an event maps to MITRE ATT&CK tactics and techniques;
+- step-by-step triage playbooks for first-level (L1) analysts;
+- when and how to escalate, and how severity is judged;
+- how to enrich an alert (IP reputation, private address ranges, asset and
+  user context) and recognise common false positives;
+- how to write a triage note that cites this record.
 
-## This is a starter, and it is yours to replace
+It does **not** cover, and must decline: malware reverse engineering, legal or
+compliance advice, product pricing or licensing, vendor comparisons, and
+anything outside SOC alert triage. It holds no client or company data and no
+real IP addresses, usernames or hostnames from any organisation; examples are
+illustrative lab examples with masked values.
 
-Everything above describes KSoR itself. It ships filled in so that a fresh
-project has a real governed corpus on the first `npm run dev` — five approved
-documents, three of them inside a folder, and one carrying a summary
-companion — instead of an empty shelf and a placeholder.
-The documents live in `knowledge/`; delete them as your own knowledge arrives.
+Two kinds of reader use it: SOC analysts reading the website, and the
+soc-worker AI agent, which reads it over MCP to explain an alert, map it to
+MITRE ATT&CK, follow a playbook and draft a cited triage note.
 
-Be deliberate about replacing it, because a starter that describes the wrong
-thing describes it _everywhere_. Three things here are read by every surface:
+How to use it:
 
-- **`title:`** is the display title — the human name every page leads with and
-  the heading of the record's root index. The machine identity stays
-  `handbook` in `name:`, and that is what citations and `llms.txt` use.
-- **`description:`** is one sentence that seeds `llms.txt` and the MCP
-  discovery document.
-- **This body** is the MCP server's instructions, handed in full to every
-  connecting agent; its first paragraph is this record's scope, which the site
-  publishes. A record published with it unchanged will tell an agent — quite
-  accurately, and quite uselessly for you — that it is authoritative for what
-  a Knowledge System of Record is.
+- Answer only from this record, and cite the document every claim comes from.
+  If the record does not cover a question, say "not in this record" — that is
+  a correct answer, never an error, and never a reason to fall back on general
+  knowledge.
+- The AI suggests; a human analyst decides. Every verdict, escalation or
+  triage note produced from this record is a suggestion until a human analyst
+  confirms it.
+- This record is read-only guidance. Never block, delete, disable or change
+  anything in any system because of it, and never request, store or repeat
+  client data, credentials or unmasked personal data.
+- When this record and another source disagree, this record wins for triage
+  practice; when two cited sources inside it disagree, both are shown and the
+  disagreement is flagged for a human.
 
-Ask your coding agent to run the **intake interview** (it knows how — see
-`.agents/skills/intake-interview/`), answer its questions, and let it write
-this document with you. Replace those three and every surface follows,
-because every surface reads them from here.
+Owner and sole approver: Hafiz Naveed Uddin (`human:naveed`). Every document
+starts as a draft and is published only after he approves it.
