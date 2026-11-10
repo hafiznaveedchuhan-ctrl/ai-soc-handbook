@@ -4,7 +4,7 @@
 - [x] **STOP-A** Naveed approves the networking spec and the `instance.md` scope wording.
 - [x] **TN-02** Edit `instance.md` (networking bullet + readers); `npm run check` + `npm run build`.
 - [x] **TN-03** N1 URL list (STOP) → write 8 → verify.mjs + ipaddress checks → check + build → **STOP-N1**.
-- [ ] **TN-04** N2 (same gates) → **STOP-N2**.
+- [x] **TN-04** N2 (same gates) → **STOP-N2**.
 - [ ] **TN-05** N3 → **STOP-N3**.
 - [ ] **TN-06** N4 → **STOP-N4**.
 - [ ] **TN-07** N5 → **STOP-N5**.
