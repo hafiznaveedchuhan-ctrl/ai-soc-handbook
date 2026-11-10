@@ -1,0 +1,58 @@
+quiz:
+  title: "Remote access protocols — SSH, RDP, Telnet"
+  questionsPerRound: 6
+questions:
+  - question: "How does an SSH identification string start?"
+    options:
+      - "HELO hostname-version-build string"
+      - "SSH-protoversion-softwareversion"
+      - "RDP-version-build"
+      - "GET / HTTP/1.1"
+    answer: 1
+    explanation: "RFC 4253: both sides send SSH-protoversion-softwareversion SP comments."
+    source: "SSH"
+  - question: "Where is the RDP listening port stored?"
+    options:
+      - "In the hosts file on the remote server itself"
+      - "In the DHCP option 12 field"
+      - "In the Telnet configuration"
+      - "Registry value PortNumber under RDP-Tcp"
+    answer: 3
+    explanation: "Microsoft Learn: PortNumber under ...\\WinStations\\RDP-Tcp."
+    source: "RDP"
+  - question: "Which SSH part authenticates the client?"
+    options:
+      - "User Authentication Protocol"
+      - "Transport Layer Protocol"
+      - "Connection Protocol"
+      - "Key Exchange Protocol"
+    answer: 0
+    explanation: "RFC 4251: the User Authentication Protocol authenticates the client to the server."
+    source: "SSH"
+  - question: "What does RDP transfer?"
+    options:
+      - "Only files between two hosts"
+      - "Only mail between servers"
+      - "Screen to the user, input to the remote"
+      - "Routing tables between the routers of two ASes"
+    answer: 2
+    explanation: "MS-RDPBCGR: graphics display to the user, user input to the remote computer."
+    source: "RDP"
+  - question: "What protection does RFC 854 describe for Telnet?"
+    options:
+      - "Full TLS encryption"
+      - "None — no encryption is described"
+      - "SSH key authentication"
+      - "Kerberos tickets only"
+    answer: 1
+    explanation: "RFC 854 itself describes no encryption; SSH adds confidentiality and integrity."
+    source: "Telnet"
+  - question: "4624 logon type 10 from a public IP means …"
+    options:
+      - "Remote Desktop logon from the internet"
+      - "A local console logon"
+      - "A scheduled task start"
+      - "A service account logon"
+    answer: 0
+    explanation: "Type 10 is RemoteInteractive (Remote Desktop); from a public IP, escalate per policy."
+    source: "For the agent"

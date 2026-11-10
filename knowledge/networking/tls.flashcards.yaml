@@ -1,0 +1,14 @@
+deck:
+  title: "TLS — Transport Layer Security"
+  description: "Recall checks drawn only from the page TLS — Transport Layer Security."
+cards:
+  - front: "Which three properties does TLS give?"
+    back: "Authentication, confidentiality, integrity."
+  - front: "Is the client always authenticated in TLS?"
+    back: "No — the server always, the client optionally."
+  - front: "What does TLS not hide?"
+    back: "The length of the data it sends."
+  - front: "Which RFC is current for TLS 1.3?"
+    back: "RFC 9846 (July 2026), obsoleting RFC 8446."
+  - front: "Where is the SNI server name sent?"
+    back: "In the ClientHello, before the encrypted part of the handshake."

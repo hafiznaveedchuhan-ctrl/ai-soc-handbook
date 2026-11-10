@@ -1,0 +1,58 @@
+quiz:
+  title: "TLS — Transport Layer Security"
+  questionsPerRound: 6
+questions:
+  - question: "In TLS 1.3, what is encrypted?"
+    options:
+      - "Only the ClientHello message"
+      - "All handshake messages after ServerHello"
+      - "Nothing until the first data"
+      - "Only the server's certificate"
+    answer: 1
+    explanation: "RFC 9846: all handshake messages after the ServerHello are encrypted."
+    source: "What stays visible"
+  - question: "What does RFC 8996 say about TLS 1.0 and 1.1?"
+    options:
+      - "They are fine for internal use"
+      - "They should replace TLS 1.3"
+      - "Only TLS 1.1 is deprecated"
+      - "Implementations must not negotiate them"
+    answer: 3
+    explanation: "RFC 8996 deprecates TLS 1.0 and 1.1; MUST NOT negotiate."
+    source: "Versions"
+  - question: "Which TLS alert value is certificate_expired?"
+    options:
+      - "45"
+      - "42"
+      - "48"
+      - "70"
+    answer: 0
+    explanation: "IANA TLS alerts: 42 bad_certificate, 45 certificate_expired, 48 unknown_ca, 70 protocol_version."
+    source: "TLS alerts seen in logs"
+  - question: "NIST SP 800-52r2 minimum TLS version?"
+    options:
+      - "TLS 1.0"
+      - "TLS 1.1"
+      - "TLS 1.2"
+      - "TLS 1.3 only"
+    answer: 2
+    explanation: "SP 800-52r2 requires TLS 1.2 minimum and TLS 1.3 support by 1 January 2024."
+    source: "Versions"
+  - question: "Is the Server Name Indication extension optional?"
+    options:
+      - "Yes, it is rarely used"
+      - "No, it is mandatory to implement"
+      - "Only for TLS 1.2 servers"
+      - "Only for client certificates"
+    answer: 1
+    explanation: "RFC 9846 lists server_name among mandatory-to-implement extensions."
+    source: "What stays visible"
+  - question: "Alert 48 means …"
+    options:
+      - "unknown_ca"
+      - "handshake_failure"
+      - "internal_error"
+      - "unrecognized_name"
+    answer: 0
+    explanation: "IANA: 48 unknown_ca."
+    source: "TLS alerts seen in logs"

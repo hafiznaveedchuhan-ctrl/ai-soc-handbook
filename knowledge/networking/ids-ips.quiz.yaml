@@ -1,0 +1,58 @@
+quiz:
+  title: "IDS and IPS"
+  questionsPerRound: 6
+questions:
+  - question: "Which method compares known-threat patterns?"
+    options:
+      - "Anomaly-based"
+      - "Signature-based"
+      - "Stateful protocol analysis"
+      - "Network behaviour analysis"
+    answer: 1
+    explanation: "A signature is a pattern of a known threat; signature-based detection compares them."
+    source: "Detection methods"
+  - question: "Signature detection is weak against …"
+    options:
+      - "known malware files"
+      - "telnet logins as root"
+      - "exact string matches"
+      - "unknown threats and variants"
+    answer: 3
+    explanation: "Largely ineffective against unknown threats, evasion and variants."
+    source: "Detection methods"
+  - question: "Which IDPS type spots unusual traffic flows?"
+    options:
+      - "Network Behavior Analysis"
+      - "Host-based"
+      - "Wireless"
+      - "Signature-only"
+    answer: 0
+    explanation: "NBA examines traffic to identify threats that generate unusual flows (e.g. DDoS)."
+    source: "Four types"
+  - question: "Reducing false negatives usually …"
+    options:
+      - "removes all false positives"
+      - "has no effect on alerts"
+      - "increases false positives"
+      - "turns an IDS into a firewall"
+    answer: 2
+    explanation: "Reducing one usually increases the other."
+    source: "Sensors and limits"
+  - question: "Anomaly detection compares events with …"
+    options:
+      - "a vendor list of known attacks"
+      - "a profile of normal activity"
+      - "the firewall ruleset"
+      - "a list of open ports"
+    answer: 1
+    explanation: "Anomaly-based detection compares definitions of normal activity with observed events."
+    source: "Detection methods"
+  - question: "Why deploy a sensor inline?"
+    options:
+      - "So it can block attacks"
+      - "So it sees only a copy"
+      - "So it needs no power"
+      - "So it ignores encryption"
+    answer: 0
+    explanation: "The main reason to deploy inline is to stop attacks by blocking traffic."
+    source: "Sensors and limits"

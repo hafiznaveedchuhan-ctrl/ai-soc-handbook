@@ -1,0 +1,58 @@
+quiz:
+  title: "Syslog"
+  questionsPerRound: 6
+questions:
+  - question: "local4 (20) with notice (5) gives PRI …"
+    options:
+      - "25"
+      - "165"
+      - "100"
+      - "205"
+    answer: 1
+    explanation: "20 × 8 + 5 = 165 (RFC 5424 example)."
+    source: "Message format"
+  - question: "<34> decodes to …"
+    options:
+      - "facility 3, severity 4"
+      - "facility 2, severity 4"
+      - "facility 34, severity 0"
+      - "facility 4, severity 2"
+    answer: 3
+    explanation: "RFC 5424 example: facility 4, severity 2."
+    source: "Message format"
+  - question: "Severity 3 is …"
+    options:
+      - "Error"
+      - "Warning"
+      - "Critical"
+      - "Notice"
+    answer: 0
+    explanation: "Severities: 2 Critical, 3 Error, 4 Warning, 5 Notice."
+    source: "Severity and facility"
+  - question: "Which facilities are security/authorization?"
+    options:
+      - "0 and 1"
+      - "16 and 23"
+      - "4 and 10"
+      - "9 and 15"
+    answer: 2
+    explanation: "RFC 5424: facilities 4 and 10 are security/authorization messages."
+    source: "Severity and facility"
+  - question: "Wazuh default port for agent (secure) connections?"
+    options:
+      - "514"
+      - "1514"
+      - "6514"
+      - "4739"
+    answer: 1
+    explanation: "ossec.conf remote: 1514 if secure, 514 if syslog."
+    source: "Wazuh"
+  - question: "Why treat plain UDP syslog with care?"
+    options:
+      - "Messages can be lost or altered"
+      - "It always uses TLS"
+      - "It has no timestamp"
+      - "It only carries severity 7"
+    answer: 0
+    explanation: "Syslog messages may be lost, damaged or maliciously modified in transit."
+    source: "Transport"

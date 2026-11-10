@@ -1,0 +1,14 @@
+deck:
+  title: "Remote access protocols — SSH, RDP, Telnet"
+  description: "Recall checks drawn only from the page Remote access protocols — SSH, RDP, Telnet."
+cards:
+  - front: "Which port does SSH normally use?"
+    back: "TCP 22."
+  - front: "What are SSH's three parts?"
+    back: "Transport Layer, User Authentication and Connection protocols."
+  - front: "Default RDP port?"
+    back: "3389 (IANA name ms-wbt-server)."
+  - front: "Which 4624 logon type is Remote Desktop?"
+    back: "Type 10, RemoteInteractive."
+  - front: "Which port is Telnet?"
+    back: "TCP 23."

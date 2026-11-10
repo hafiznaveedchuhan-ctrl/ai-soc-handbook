@@ -1,0 +1,14 @@
+deck:
+  title: "Routing protocols overview — OSPF and BGP"
+  description: "Recall checks drawn only from the page Routing protocols overview — OSPF and BGP."
+cards:
+  - front: "What does an interior gateway protocol (IGP) do?"
+    back: "Distributes routing information within one autonomous system."
+  - front: "What kind of protocol is OSPF?"
+    back: "A link-state protocol run inside a single AS, building a shortest-path tree."
+  - front: "How is OSPF carried?"
+    back: "Directly over IP as protocol 89 — no TCP or UDP port."
+  - front: "Which port does BGP listen on?"
+    back: "TCP 179."
+  - front: "What are the four BGP message types?"
+    back: "1 OPEN, 2 UPDATE, 3 NOTIFICATION, 4 KEEPALIVE."

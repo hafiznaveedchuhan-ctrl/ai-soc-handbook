@@ -1,0 +1,14 @@
+deck:
+  title: "DHCP and DHCPv6"
+  description: "Recall checks drawn only from the page DHCP and DHCPv6."
+cards:
+  - front: "Which UDP ports does DHCP (IPv4) use?"
+    back: "Client to server 67, server to client 68."
+  - front: "What is a DHCP lease?"
+    back: "An address given for a finite time; it can be extended or released."
+  - front: "Which DHCP option holds the hostname?"
+    back: "Option 12."
+  - front: "Which UDP ports does DHCPv6 use?"
+    back: "Clients 546; servers and relay agents 547."
+  - front: "Which RFC is current for DHCPv6?"
+    back: "RFC 9915 (January 2026), which obsoletes RFC 8415."

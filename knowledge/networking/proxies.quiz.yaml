@@ -1,0 +1,58 @@
+quiz:
+  title: "Proxies and reverse proxies"
+  questionsPerRound: 6
+questions:
+  - question: "What does the Via header show?"
+    options:
+      - "The client's real password in plain text"
+      - "Intermediaries a message passed"
+      - "The TLS version in use"
+      - "The DNS server used"
+    answer: 1
+    explanation: "Via indicates intermediate protocols and recipients, like Received in email."
+    source: "The hidden client address"
+  - question: "Why does a web server see the proxy's IP?"
+    options:
+      - "The client hides its own IP address with TLS"
+      - "DNS rewrites the source address"
+      - "The firewall changes all ports"
+      - "Proxies make requests from their own IP"
+    answer: 3
+    explanation: "RFC 7239: proxies make requests appear to originate from the proxy's IP."
+    source: "The hidden client address"
+  - question: "In Forwarded: for=192.0.2.60;by=203.0.113.43, what is 'for'?"
+    options:
+      - "The original client address"
+      - "The proxy's own address"
+      - "The destination server"
+      - "The DNS resolver"
+    answer: 0
+    explanation: "'for' identifies the node making the request to the proxy (the client)."
+    source: "The hidden client address"
+  - question: "Which entry in Forwarded can you trust most?"
+    options:
+      - "The first entry from the client"
+      - "Every entry equally"
+      - "The one your own proxy added"
+      - "None, delete the header"
+    answer: 2
+    explanation: "Earlier entries are client claims; only your proxy's entry is under your control."
+    source: "For the agent"
+  - question: "What is a tunnel in HTTP?"
+    options:
+      - "A cache of web pages"
+      - "A blind relay between two connections"
+      - "A list of trusted proxies kept by the server"
+      - "A type of status code"
+    answer: 1
+    explanation: "A tunnel acts as a blind relay without changing the messages."
+    source: "Kinds of intermediary"
+  - question: "Status 407 tells the client …"
+    options:
+      - "the proxy wants authentication"
+      - "the page was not found"
+      - "the server is down"
+      - "the tunnel is open"
+    answer: 0
+    explanation: "407 Proxy Authentication Required."
+    source: "For the agent"

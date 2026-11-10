@@ -1,0 +1,58 @@
+quiz:
+  title: "HTTP and HTTPS"
+  questionsPerRound: 6
+questions:
+  - question: "Which method asks for a tunnel?"
+    options:
+      - "OPTIONS"
+      - "CONNECT"
+      - "TRACE"
+      - "HEAD"
+    answer: 1
+    explanation: "CONNECT establishes a tunnel to the server named by the target."
+    source: "Request and response"
+  - question: "Status 407 means …"
+    options:
+      - "Request Timeout"
+      - "Payment Required"
+      - "Method Not Allowed"
+      - "Proxy Authentication Required"
+    answer: 3
+    explanation: "IANA registry: 407 Proxy Authentication Required."
+    source: "Status codes"
+  - question: "Which method is GET without response content?"
+    options:
+      - "HEAD"
+      - "POST"
+      - "PUT"
+      - "OPTIONS"
+    answer: 0
+    explanation: "HEAD: same as GET, but do not transfer the response content."
+    source: "Request and response"
+  - question: "A 5xx status code is a …"
+    options:
+      - "client error"
+      - "redirection"
+      - "server error"
+      - "success"
+    answer: 2
+    explanation: "5xx (Server Error): the server failed to fulfil an apparently valid request."
+    source: "Status codes"
+  - question: "Which header holds the page the link came from?"
+    options:
+      - "Host"
+      - "Referer"
+      - "Via"
+      - "User-Agent"
+    answer: 1
+    explanation: "Referer gives the URI from which the target URI was obtained."
+    source: "Headers worth reading"
+  - question: "Many 401s on a login URL from one source suggest …"
+    options:
+      - "repeated failed authentication"
+      - "a broken TLS certificate"
+      - "a working cache server"
+      - "normal page browsing"
+    answer: 0
+    explanation: "401 is Unauthorized; many from one source fit the brute-force pattern."
+    source: "For the agent"

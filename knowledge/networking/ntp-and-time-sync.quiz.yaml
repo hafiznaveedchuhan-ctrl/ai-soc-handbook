@@ -1,0 +1,58 @@
+quiz:
+  title: "NTP and time synchronisation"
+  questionsPerRound: 6
+questions:
+  - question: "Stratum 0 in a packet means …"
+    options:
+      - "Primary server"
+      - "Unspecified or invalid"
+      - "Unsynchronized clock"
+      - "Secondary server via NTP"
+    answer: 1
+    explanation: "RFC 5905 stratum table: 0 unspecified or invalid, 1 primary, 2–15 secondary, 16 unsynchronized."
+    source: "How NTP works"
+  - question: "A server two levels below a primary is stratum …"
+    options:
+      - "2"
+      - "16"
+      - "1"
+      - "3"
+    answer: 3
+    explanation: "Primary is stratum 1 and each level below adds one: 1, 2, 3."
+    source: "How NTP works"
+  - question: "When does the NTP timestamp field wrap?"
+    options:
+      - "In 2036"
+      - "In 2038"
+      - "In 2100"
+      - "In 1972"
+    answer: 0
+    explanation: "The prime epoch is 1900; the timestamp field wraps in 2036 (era 1 starts 8 Feb 2036)."
+    source: "How NTP works"
+  - question: "Why block NTP Mode 6 queries from outside?"
+    options:
+      - "They reset the server clock"
+      - "They expose the NTP server private key"
+      - "They can be abused for amplification"
+      - "They change the stratum to 16"
+    answer: 2
+    explanation: "RFC 8633: control messages can be a vector for amplification attacks."
+    source: "Best practices (RFC 8633)"
+  - question: "What does an NTP client do?"
+    options:
+      - "Serves time to downstream clients"
+      - "Syncs from upstream, serves no one"
+      - "Holds a reference clock"
+      - "Elects a master server"
+    answer: 1
+    explanation: "A client synchronizes to upstream servers but provides no synchronization to dependents."
+    source: "How NTP works"
+  - question: "Why check clocks before building a timeline?"
+    options:
+      - "Unsynced clocks make log times wrong"
+      - "NTP deletes old log entries every night"
+      - "Syslog needs stratum 1 hosts"
+      - "Clocks change the event IDs"
+    answer: 0
+    explanation: "If clocks are wrong, log times from different machines cannot be compared."
+    source: "Why a SOC analyst cares"
