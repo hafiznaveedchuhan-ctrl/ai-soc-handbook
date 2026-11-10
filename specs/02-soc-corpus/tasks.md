@@ -30,8 +30,8 @@ verify.mjs run per page · TODO-VERIFY list reported.
 - [x] **T02-11** Interview Naveed, one question at a time: invariants, escalation triggers, severity model, data handling, AbuseIPDB score bands, triage-note template and writing rules, L1 steps for the 5 playbooks. "Not sure" → illustrative answer with source + TODO-VERIFY. **STOP** per answer set: Naveed confirms.
 
 ## B4
-- [ ] **T02-12** Show B4 URL list (Wazuh rules-classification, SP 800-61r3, CISA playbooks, AbuseIPDB docs, RFC 1918). **STOP:** approved.
-- [ ] **T02-13** Write rules-map (4), enrichment (2), triage-note/note-template, writing-rules.
+- [x] **T02-12** Show B4 URL list (Wazuh rules-classification, SP 800-61r3, CISA playbooks, AbuseIPDB docs, RFC 1918). **STOP:** approved.
+- [x] **T02-13** Write rules-map (4), enrichment (2), triage-note/note-template, writing-rules.
 - [ ] **STOP-B4** Report; 2 random pages; "next".
 
 ## B5

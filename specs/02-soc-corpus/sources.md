@@ -17,6 +17,9 @@ unattributed blogs, AI text) are never cited.
 | B2 | windows-events | https://learn.microsoft.com/en-us/defender-for-identity/deploy/configure-windows-event-collection, https://learn.microsoft.com/en-us/defender-for-identity/alerts-mdi-classic (7045) | 2026-11-10 |
 | B2 | wazuh | https://github.com/wazuh/wazuh/tree/v4.14.10/ruleset/rules — 0575, 0580, 0590, 0955 (approved list) + 0610, 0220 (same repo and tag, added during writing — owner to confirm at STOP-B2) | 2026-11-10 |
 | B3 | mitre | https://attack.mitre.org/techniques/T1110/, T1110/001/, T1110/003/, T1078/, T1059/001/, T1136/001/, T1098/, T1685/005/ (T1070/001/ redirects there) | 2026-11-10 |
+| B4 | rules-map, triage-note | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf (RS.MA-02, RS.MA-04, RS.AN-03, GV.RM-06); Wazuh rules-classification + alert-management | 2026-11-10 |
+| B4 | enrichment | https://docs.abuseipdb.com/, https://www.abuseipdb.com/faq.html, https://www.rfc-editor.org/rfc/rfc1918, https://www.rfc-editor.org/rfc/rfc4193 | 2026-11-10 |
+| B4 | (dropped) | CISA IR playbooks page — 403 to automated requests; not used | 2026-11-10 |
 
 ## Tier 2 log
 

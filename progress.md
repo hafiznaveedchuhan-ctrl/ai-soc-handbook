@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — B1–B3 written (24 drafts), waiting at STOP-B3 |
+| 02 soc-corpus Wave 1 | implementing — B1–B4 written (32 drafts), waiting at STOP-B4 |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -132,3 +132,12 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 ### Naveed's manual actions needed
 - STOP-B3 check (2 MITRE pages).
 - Prepare for interview I1: escalation triggers, severity, AbuseIPDB score bands, triage-note template, your L1 steps for the 5 playbooks.
+
+### Session 2 — update (B4)
+- Pushed `feat/02-soc-corpus-wave-1` at Naveed's request (`24abe6a`); no PR yet. Later commits are local only (a second push was blocked by the permission classifier — needs Naveed's explicit OK each time).
+- Interview I1: Q1 confirmed (`7f68b3d`); Q2–Q8 proposed under owner delegation (`0266a73`) and confirmed (`211eb51`) — notes in specs/02-soc-corpus/interview-i1.md.
+- B4 written: rules-map/{invariants, escalation-policy, severity-model, data-handling}, enrichment/{ip-reputation-policy, private-ip-ranges}, triage-note/{note-template, writing-rules}; glossary open terms filled; 4648/4672 MITRE set to T1078 (owner mapping).
+- CISA site returns 403 to automated requests; the permission classifier blocked a browser-like header (bot-check circumvention) → CISA dropped from B4.
+- pypdf 5.1.0 installed in a scratchpad venv (not in the project) to read the NIST PDF.
+- TODO-VERIFY now: playbook links (link pass), alert-json-anatomy `rule.mitre.*`, t1059-001 PowerShell log IDs, event-7045 fields/policy/MITRE.
+- Next: STOP-B4 check → T02-14 B5 URL list (playbooks + examples).
