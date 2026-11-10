@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:2f9c4e67a6ba6178aaf9a71e0511a8de71e3e56150f7fc9f84e6299f71684b56",
+  "build_id": "sha256:bfe2ac0c8278a46de2b14a42c1db9e6d4b31822bc74b7fa32d357ac5344f717d",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "65281abe9901ebdf58e0991f5a69780840d9641c",
+  "source_commit": "fb16b483d1e0c98bf44222761f8bb3e192769b61",
   "dirty": true,
-  "as_of": "2026-11-10T09:11:53.590Z",
+  "as_of": "2026-11-10T09:18:01.141Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -45,7 +45,7 @@
     },
     {
       "path": "mitre/t1059-001-powershell.md",
-      "sha256": "72d2200a1758ca275f5bf80f1975078a1dd5d352dc559b7a4ebf369dcdca37ff",
+      "sha256": "20b5ef6b261b605fcf46daced2b9467becafc86e7d55d7f26612cc83395236dd",
       "status": "draft",
       "audience": [
         "public"
@@ -272,7 +272,7 @@
     },
     {
       "path": "wazuh/alert-json-anatomy.md",
-      "sha256": "de0d3d718c5c171ac13fc8031a92a5e0ad4e59f828aa4a370ba7928d3b583735",
+      "sha256": "d2432d683b278c2ebcaa7487e0a2cd2ca566a244f917c1dfbf92ef8a49a67799",
       "status": "draft",
       "audience": [
         "public"

@@ -20,6 +20,9 @@ sources:
   - id: wazuh-0580
     title: Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
     resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
+  - id: wazuh-mitre
+    title: Wazuh documentation — MITRE ATT&CK framework
+    resource: https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html
 ksor:
   audience: [public]
   owner: human:naveed
@@ -117,14 +120,13 @@ The Wazuh ruleset uses the same pattern for Security-log events, for example
 The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 `agent.name`.[^wazuh-event-logging]
 
-## Open questions
+## MITRE data in an alert
 
-- TODO-VERIFY: exact output field names for MITRE data in an alert
-  (`rule.mitre.id`, `rule.mitre.tactic`, `rule.mitre.technique`). The rule
-  syntax documents a `<mitre>` element holding technique IDs, and the
-  ruleset's rules carry it,[^wazuh-0580] but no approved source yet shows
-  the field names it produces inside an alert. To confirm from a lab alert
-  or a Wazuh documentation sample.
+When the matching rule carries MITRE IDs, the alert holds them under
+`rule.mitre` as three arrays — `id` (for example `T1543.003`), `tactic` (for
+example `Persistence`, `Privilege Escalation`) and `technique` (for example
+`Windows Service`).[^wazuh-mitre] These are the IDs written in the Wazuh rule;
+use the handbook's MITRE pages for the mapping in a triage note.
 
 ## For the agent
 
@@ -135,7 +137,8 @@ The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 | 3 | `data.win.system.eventID`, `data.win.system.channel` | Open the matching Windows event page |
 | 4 | `data.win.eventdata.*` | Who, from where, which process — mask users and IPs |
 | 5 | `rule.groups`, `rule.frequency`, `rule.firedtimes`, `previous_output` | Is this a correlation of many events? |
-| 6 | `full_log` | Confirm against the original record |
+| 6 | `rule.mitre.id`, `rule.mitre.tactic` | Wazuh's tag — check against the handbook's MITRE pages |
+| 7 | `full_log` | Confirm against the original record |
 | — | `timestamp` | Build the time window for evidence |
 
 [^wazuh-rules-syntax]: Wazuh documentation, "Rules syntax", alert example in the `same_field` section. https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
@@ -143,3 +146,4 @@ The Wazuh documentation also filters events by `agent.id`, `agent.ip` or
 [^wazuh-alert-management]: Wazuh documentation, "Alert management". https://documentation.wazuh.com/current/user-manual/manager/alert-management.html
 [^wazuh-server]: Wazuh documentation, "Wazuh server". https://documentation.wazuh.com/current/getting-started/components/wazuh-server.html
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
+[^wazuh-mitre]: Wazuh documentation, "MITRE ATT&CK framework" (alert example with `rule.mitre`). https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html
