@@ -77,7 +77,8 @@ lists:[^mdi-classic-alerts]
 | Sub-techniques | Service Execution (T1569.002), Windows Service (T1543.003) |
 
 These names are as Microsoft's page gives them; the live ATT&CK names (for
-example, ATT&CK now lists "Stealth" for TA0005) are checked in batch B3.
+example, ATT&CK now lists "Stealth" for TA0005) are on the handbook's MITRE
+pages.
 
 ## Wazuh rules
 
@@ -88,8 +89,9 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: confirm against attack.mitre.org in batch B3 — both Microsoft and
-Wazuh point to Windows Service, T1543.003.
+TODO-VERIFY: Microsoft and Wazuh both point to Windows Service, T1543.003.
+The handbook's T1543.003 page is in Wave 2; the mapping is confirmed against
+attack.mitre.org then.
 
 ## Related playbook
 

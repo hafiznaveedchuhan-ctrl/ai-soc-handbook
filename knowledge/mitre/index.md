@@ -1,0 +1,10 @@
+# Mitre
+
+* [T1110 Brute Force](t1110-brute-force.md) - MITRE ATT&CK T1110 Brute Force — guessing or cracking credentials to get into accounts; its sub-techniques, how it shows up in Windows and Wazuh alerts, and what to look for.
+* [T1110.001 Brute Force: Password Guessing](t1110-001-password-guessing.md) - MITRE ATT&CK T1110.001 Password Guessing — repeated password attempts against one account or a few accounts, the services it targets, and how the pattern appears in Windows failed-logon events.
+* [T1110.003 Brute Force: Password Spraying](t1110-003-password-spraying.md) - MITRE ATT&CK T1110.003 Password Spraying — one or a few common passwords tried against many accounts to avoid lockouts; why it can slip under per-account and per-source thresholds, and what to look for.
+* [T1078 Valid Accounts](t1078-valid-accounts.md) - MITRE ATT&CK T1078 Valid Accounts — adversaries logging on with real, stolen or inactive credentials; why it looks like normal activity, and the logon patterns that give it away.
+* [T1059.001 Command and Scripting Interpreter: PowerShell](t1059-001-powershell.md) - MITRE ATT&CK T1059.001 PowerShell — adversaries running commands and scripts through PowerShell; what to look for in process creation, command lines and PowerShell logging.
+* [T1136.001 Create Account: Local Account](t1136-001-local-account.md) - MITRE ATT&CK T1136.001 Local Account — adversaries creating a local account to keep access; how it appears as event 4720 and as net user /add on the command line.
+* [T1098 Account Manipulation](t1098-account-manipulation.md) - MITRE ATT&CK T1098 Account Manipulation — changing accounts or their group memberships to keep or raise access; including the sub-technique for adding accounts to local or domain groups, and how it appears as event 4732.
+* [T1685.005 Disable or Modify Tools: Clear Windows Event Logs](t1685-005-clear-windows-event-logs.md) - MITRE ATT&CK T1685.005 Clear Windows Event Logs (formerly T1070.001) — adversaries wiping Windows event logs to hide their activity; the commands used and how it appears as event 1102.

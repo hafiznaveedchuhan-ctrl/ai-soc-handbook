@@ -78,8 +78,10 @@ From Microsoft's monitoring recommendations for 4648:[^ms-4648]
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping (candidate to check in batch B3: Valid
-Accounts). Added in the link pass.
+TODO-VERIFY: none of the approved MITRE sources names 4648 or explicit-credential
+logons directly. The closest candidate is [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+(use of an existing account's credentials). Owner to decide in interview I1
+whether the handbook maps 4648 to T1078.
 
 ## Wazuh rules
 

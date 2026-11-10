@@ -103,8 +103,10 @@ channel.[^wazuh-0220] Which set fires depends on how the logs are collected.
 > [!WARNING]
 > The MITRE tags above are the ones written inside the Wazuh rules. They are
 > not always consistent — for example 1102 is tagged `T1070.004` in rule
-> 60117 and `T1070` in rule 63103, and failed logon 60105 is tagged `T1078`. The handbook's MITRE pages (batch B3) give the mapping
-> checked against attack.mitre.org; use those in triage notes.
+> 60117 and `T1070` in rule 63103, and failed logon 60105 is tagged `T1078`.
+> The handbook's MITRE pages give the mapping checked against
+> attack.mitre.org; use those in triage notes. For 1102 the current ATT&CK ID
+> is [T1685.005](../mitre/t1685-005-clear-windows-event-logs.md).
 
 - A level-0 rule (for example 60194, 60232) means Wazuh deliberately
   suppresses that case; it will not reach the dashboard as an

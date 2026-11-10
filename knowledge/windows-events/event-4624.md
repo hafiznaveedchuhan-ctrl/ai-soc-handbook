@@ -116,8 +116,13 @@ patterns:[^ms-4624]
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping (candidates to check against attack.mitre.org
-in batch B3: Valid Accounts, Brute Force follow-up). Added in the link pass.
+| Technique | Basis |
+|---|---|
+| [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md) | 4624 records successful logons; MITRE's T1078 detection looks for anomalous logon patterns and logon types on Windows endpoints |
+| [T1110 Brute Force](../mitre/t1110-brute-force.md) | A 4624 that follows many 4625 failures for the same account is the "failures followed by success" pattern in MITRE's T1110 detection |
+
+These links are the handbook's mapping, built from the cited pages; MITRE
+does not name event 4624 itself.
 
 ## Wazuh rules
 

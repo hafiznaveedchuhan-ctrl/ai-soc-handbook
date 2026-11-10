@@ -85,8 +85,13 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping checked in batch B3 (Wazuh tags `T1110` Brute
-Force and `T1531`).
+| Technique | Basis |
+|---|---|
+| [T1110.001 Password Guessing](../mitre/t1110-001-password-guessing.md) | MITRE notes guessing can cause many failures and account lockouts |
+| [T1110 Brute Force](../mitre/t1110-brute-force.md) | Parent technique; Wazuh rule 60115 also tags `T1110` |
+
+This link is the handbook's mapping; a lockout is also often benign (an old
+saved password).
 
 ## Related playbook
 

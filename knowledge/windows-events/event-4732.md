@@ -90,8 +90,12 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping checked in batch B3 (candidate: Account
-Manipulation, T1098; Wazuh's own tag is `T1484`).
+| Technique | Basis |
+|---|---|
+| [T1098 Account Manipulation](../mitre/t1098-account-manipulation.md), sub-technique T1098.007 Additional Local or Domain Groups | 4732 records a member added to a local group; MITRE's T1098 covers changes to permission groups and lists T1098.007 |
+
+This link is the handbook's mapping; MITRE does not name event 4732 itself.
+Wazuh's own rule tag is `T1484`.
 
 ## Related playbook
 

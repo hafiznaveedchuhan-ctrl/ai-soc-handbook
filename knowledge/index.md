@@ -7,3 +7,4 @@ okf_version: "0.2"
 * [Orientation](orientation/)
 * [Windows events](windows-events/)
 * [Wazuh](wazuh/)
+* [Mitre](mitre/)

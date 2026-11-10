@@ -101,9 +101,10 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping checked in batch B3 (candidates: Create
-Account: Local Account, T1136.001; Account Manipulation, T1098 — Wazuh's own
-tag).
+| Technique | Basis |
+|---|---|
+| [T1136.001 Create Account: Local Account](../mitre/t1136-001-local-account.md) | MITRE's detection strategy names account-creation event 4720 |
+| [T1098 Account Manipulation](../mitre/t1098-account-manipulation.md) | Wazuh rule 60109 tags `T1098`; relevant when the new account is then added to a group (4732) |
 
 ## Related playbook
 

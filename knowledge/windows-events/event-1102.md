@@ -78,16 +78,17 @@ Which of the two fires for a given event depends on the rule tree; check
 
 > [!WARNING]
 > The MITRE tag in rule 60117 (`T1070.004`) and in rule 63103 (`T1070`)
-> differ. The technique for clearing Windows event logs is confirmed from
-> attack.mitre.org in batch B3 — TODO-VERIFY. Do not copy the rule's tag into
-> a triage note without that check.
+> differ, and neither is the current ATT&CK ID. Use T1685.005 (see below).
 
 See [Windows rules reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping checked in batch B3 (candidate: Indicator
-Removal: Clear Windows Event Logs, T1070.001).
+| Technique | Basis |
+|---|---|
+| [T1685.005 Clear Windows Event Logs](../mitre/t1685-005-clear-windows-event-logs.md) (formerly T1070.001) | 1102 records that the Security log was cleared; T1685.005 is clearing Windows event logs. Sigma's 1102 rule uses the same tag |
+
+Use **T1685.005** in triage notes, not the tags inside the Wazuh rules.
 
 ## Related playbook
 

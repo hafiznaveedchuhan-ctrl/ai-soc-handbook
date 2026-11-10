@@ -127,9 +127,11 @@ From Microsoft's monitoring recommendations for 4625:[^ms-4625]
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping (candidates to check in batch B3: Brute
-Force and its sub-techniques Password Guessing and Password Spraying). Added
-in the link pass.
+| Technique | Basis |
+|---|---|
+| [T1110.001 Password Guessing](../mitre/t1110-001-password-guessing.md) | MITRE's detection strategy names a series of 4625 failures against the same or similar accounts |
+| [T1110.003 Password Spraying](../mitre/t1110-003-password-spraying.md) | MITRE names 4625 as the failure event spraying tries to avoid; failures across many accounts |
+| [T1110 Brute Force](../mitre/t1110-brute-force.md) | Parent technique |
 
 ## Wazuh rules
 

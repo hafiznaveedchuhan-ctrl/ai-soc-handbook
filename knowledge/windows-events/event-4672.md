@@ -95,8 +95,10 @@ ruleset. See [Windows rules reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping checked against attack.mitre.org in batch B3
-(Wazuh's own tag above is `T1484`).
+TODO-VERIFY: none of the approved MITRE sources names 4672 directly, and
+Wazuh's tag `T1484` is not confirmed by a MITRE page in this record. Candidate:
+[T1078 Valid Accounts](../mitre/t1078-valid-accounts.md) (privileged logon by an
+unexpected account). Owner to decide in interview I1.
 
 ## Related playbook
 

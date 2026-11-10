@@ -106,8 +106,13 @@ carries no MITRE tag. No other default rule for 4688 was found. See
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: technique mapping in batch B3 (candidate: PowerShell, T1059.001,
-when the new process is PowerShell).
+| Technique | Basis |
+|---|---|
+| [T1059.001 PowerShell](../mitre/t1059-001-powershell.md) | When `NewProcessName` is powershell.exe: MITRE's PowerShell detection looks at how PowerShell is launched (encoded commands, unusual parents) |
+| [T1136.001 Local Account](../mitre/t1136-001-local-account.md) | MITRE's detection pairs process creation of net.exe or powershell.exe with a following 4720 |
+
+These links are the handbook's mapping; 4688 itself records every process
+start.
 
 ## Related playbook
 
