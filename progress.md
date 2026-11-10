@@ -8,8 +8,8 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implemented — 39 pages approved stable (event-7045 draft until Wave 2); awaiting PR merge |
-| 05 agent-surface | not started |
+| 02 soc-corpus Wave 1 | **verified** — 39 pages stable; PR #3 merged (cbe9e46) |
+| 05 agent-surface | spec + plan + tasks + evals written — awaiting approval (STOP-A) |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
 | 04 auth | not started |
@@ -161,3 +161,9 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Naveed: "APPRORED ALL PUSH". 39 pages set stable with `generated: { by: "claude-opus/5.5", at: <last commit of the page> }` and `ksor.approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }`. event-7045 left draft (TODO-VERIFY).
 - Build: 41 documents, 40 admitted to machine surfaces; llms.txt lists 40.
 - Next: Naveed opens and merges the Wave 1 PR; then Feature 05 spec/plan/tasks + evals (STOP), then provision/refresh/serve/calibrate, each after "haan".
+
+### Session 2 — update (Feature 05 start)
+- `gh auth login` done by Naveed (device flow); I created PR #3 with `gh pr create`; CI "Format checker" pass; Naveed merged (cbe9e46). Earlier PR #2 had been merged at 24abe6a — that is why GitHub showed no compare button.
+- Branch `feat/05-agent-surface` from main. Wrote specs/05-agent-surface/{spec,plan,tasks}.md and evals/{wave1-in-scope.tsv (40), wave1-out-of-scope.txt (20), calibrate-in.txt, run-evals.mjs, README.md}. Calibrate file format confirmed from ksor source (parseQueriesFile: one per line, # comments).
+- .env checked by name only (grep -c): KSOR_DB_URL, GEMINI_API_KEY non-empty; KSOR_AUTH=disabled-local. No value printed.
+- Next: STOP-A (approve Feature 05 docs + eval questions) → T05-02 gateway edit → HAAN steps.
