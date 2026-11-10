@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:bfe2ac0c8278a46de2b14a42c1db9e6d4b31822bc74b7fa32d357ac5344f717d",
+  "build_id": "sha256:64a347a37424305ba0d5219445e37d88f7663d0256592eb89d0554e3e7435b9b",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "fb16b483d1e0c98bf44222761f8bb3e192769b61",
-  "dirty": true,
-  "as_of": "2026-11-10T09:18:01.141Z",
+  "source_commit": "7a05ee9a1da3f6591449ed732c43d9de90838429",
+  "dirty": false,
+  "as_of": "2026-11-10T09:23:23.682Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -397,7 +397,128 @@
       "admitted": []
     }
   ],
-  "companions": [],
+  "companions": [
+    {
+      "path": "playbooks/added-to-admin-group.flashcards.yaml",
+      "sha256": "e59454447c9b9aaf5b17f605002f2dae4b87be202ef3fb1a9fbdb0a0af87d4f0"
+    },
+    {
+      "path": "playbooks/added-to-admin-group.quiz.yaml",
+      "sha256": "b6793b682044203637017f2b275ebee86a0d33b6ea06f61f0dc5412193fe61d7"
+    },
+    {
+      "path": "playbooks/audit-log-cleared.flashcards.yaml",
+      "sha256": "acf859690483caf185ce9740e3952a0d08f016581bb42d096011b364b22ac6c6"
+    },
+    {
+      "path": "playbooks/audit-log-cleared.quiz.yaml",
+      "sha256": "f6686220ff68e3da1bbd1cd1a7aa07bd1956bd1d788273e6a3c461bc47ebacfd"
+    },
+    {
+      "path": "playbooks/brute-force.flashcards.yaml",
+      "sha256": "b883bb19c1490ebf2d680a38a5927fbaefc66b983921153d9371d57484f083f6"
+    },
+    {
+      "path": "playbooks/brute-force.quiz.yaml",
+      "sha256": "072821e82ce9e9cfe3cc5b9f6be18a6c51dc211e0f09f483081f0a959b8fa9a1"
+    },
+    {
+      "path": "playbooks/new-local-account.flashcards.yaml",
+      "sha256": "9c70983f14a5c704660814b637e3227231d8a3559b09a212b78b90a014144c76"
+    },
+    {
+      "path": "playbooks/new-local-account.quiz.yaml",
+      "sha256": "f891b41509dafb443b805f7e4beacebd812caa8eed6d79b7286bda392e968868"
+    },
+    {
+      "path": "playbooks/success-after-failures.flashcards.yaml",
+      "sha256": "8c1493882caf8b256161ad8d7c5b9dcc7e2dde4734801a3459ef8693d2ecde2c"
+    },
+    {
+      "path": "playbooks/success-after-failures.quiz.yaml",
+      "sha256": "a7224ed2767b0aaee81ed64210ad710ba9112d30c3ff229691eaf29d4bddde4c"
+    },
+    {
+      "path": "windows-events/event-1102.flashcards.yaml",
+      "sha256": "2f4f2a344c5d2a75f21713750ea2ba172dfaaa00a138e80cd67d7ccbfeee347a"
+    },
+    {
+      "path": "windows-events/event-1102.quiz.yaml",
+      "sha256": "47c89167f344c6055d9ebb127b42dcf13e231d8087f12756b3386334811e8c25"
+    },
+    {
+      "path": "windows-events/event-4624.flashcards.yaml",
+      "sha256": "ab05b418beb264bd1e0b7ab5fa8006a0609fab28ae7247ccbbbc0e5f96839436"
+    },
+    {
+      "path": "windows-events/event-4624.quiz.yaml",
+      "sha256": "3eb53e5c4261ca68fe7706ffcf89b09e60697d2da241abb8fe6833ec198759e7"
+    },
+    {
+      "path": "windows-events/event-4625.flashcards.yaml",
+      "sha256": "1aa1b3d526f9bce3d959d183c1ac29bd841a379aa98a1cf34532d1e7a2094f40"
+    },
+    {
+      "path": "windows-events/event-4625.quiz.yaml",
+      "sha256": "88c4567d9d76ce76d71f1f5e9077deecacb256ed11a1727eabdc3f8b6f0acbef"
+    },
+    {
+      "path": "windows-events/event-4648.flashcards.yaml",
+      "sha256": "b9c2fd7d28dedc6a1cd2279ee812db20bdac20231c1e04aa4350208fb7a751ae"
+    },
+    {
+      "path": "windows-events/event-4648.quiz.yaml",
+      "sha256": "4f7525a5d5502dda717711a33b125cf18b9ad2b2966a6ab9fabbff387cc9f523"
+    },
+    {
+      "path": "windows-events/event-4672.flashcards.yaml",
+      "sha256": "e0087df88c9973996426a6567f9268b7992fe5f9c700b9cd8e76a74f91993908"
+    },
+    {
+      "path": "windows-events/event-4672.quiz.yaml",
+      "sha256": "f59d8f5ab85ae9d1fe7dc02c23e9f4356b938008788b32d307db9d4f64f87a38"
+    },
+    {
+      "path": "windows-events/event-4688.flashcards.yaml",
+      "sha256": "52d3b87011d5989f23522e28725678fb35edf0cce0d4c70f235930e2404607fa"
+    },
+    {
+      "path": "windows-events/event-4688.quiz.yaml",
+      "sha256": "5edda779880ac123f47f199569398d645ea0a562774af79e00325c8859b6f188"
+    },
+    {
+      "path": "windows-events/event-4720.flashcards.yaml",
+      "sha256": "ea2ce1493958021876bcab7aa2aedd3a0044346924b8ab77730d0d1159dc45bf"
+    },
+    {
+      "path": "windows-events/event-4720.quiz.yaml",
+      "sha256": "7eec471aeb1e608f52f79391959411489a4102e900b9338ed7fa27b32fd405f5"
+    },
+    {
+      "path": "windows-events/event-4732.flashcards.yaml",
+      "sha256": "cf4b3b95ed662b8045fcdadabd3dcf97f4b8157300dda990ae0b58b78992e745"
+    },
+    {
+      "path": "windows-events/event-4732.quiz.yaml",
+      "sha256": "d3bff4e1a1b6e5ea90db95d50f96b45c2365b99e4a26f8309a45710b24419cd1"
+    },
+    {
+      "path": "windows-events/event-4740.flashcards.yaml",
+      "sha256": "006599a89345c5fb4cf99dbc903f634fa22345c1d2294c13bf0c0eb73774132d"
+    },
+    {
+      "path": "windows-events/event-4740.quiz.yaml",
+      "sha256": "5bdfaa61925e51689e3fd93bf34be819e9aa415e8d4494be91bd4b0d34ee83c6"
+    },
+    {
+      "path": "windows-events/event-7045.flashcards.yaml",
+      "sha256": "82ffe1beb2b53f6018f5d430dd6d534ea56e264af2d7e2d5d96f963901d95a18"
+    },
+    {
+      "path": "windows-events/event-7045.quiz.yaml",
+      "sha256": "3c0a4d2a1150542ff9855b03e9c60cc3a74e1b1f7a87a84d4ee7b843d89782a4"
+    }
+  ],
   "assets": [],
   "indexes": [
     {
