@@ -53,3 +53,23 @@ SRC.update({
 "wazuh-architecture":('"Wazuh documentation — Architecture"',"https://documentation.wazuh.com/current/getting-started/architecture.html",'Wazuh documentation, "Architecture" (required ports). https://documentation.wazuh.com/current/getting-started/architecture.html'),
 "ms-4625":('"Microsoft Learn — 4625(F): An account failed to log on"',"https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625",'Microsoft Learn, "4625(F): An account failed to log on" (Source Network Address). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625'),
 })
+# N3 sources (session 3, 2026-11-10)
+N="https://nvlpubs.nist.gov/nistpubs"
+SRC.update({
+"rfc1812":rfc(1812,"Requirements for IP Version 4 Routers"),
+"rfc2328":rfc(2328,"OSPF Version 2"),
+"rfc5340":rfc(5340,"OSPF for IPv6"),
+"rfc4271":rfc(4271,"A Border Gateway Protocol 4 (BGP-4)"),
+"rfc3022":rfc(3022,"Traditional IP Network Address Translator (Traditional NAT)"),
+"rfc4787":rfc(4787,"Network Address Translation (NAT) Behavioral Requirements for Unicast UDP"),
+"rfc2131":rfc(2131,"Dynamic Host Configuration Protocol"),
+"rfc9915":rfc(9915,"Dynamic Host Configuration Protocol for IPv6 (DHCPv6)",", January 2026, obsoletes RFC 8415"),
+"iana-dhcp":iana("bootp-dhcp-parameters","Dynamic Host Configuration Protocol (DHCP) and Bootstrap Protocol (BOOTP) Parameters"),
+"rfc1034":rfc(1034,"Domain Names — Concepts and Facilities"),
+"rfc1035":rfc(1035,"Domain Names — Implementation and Specification"),
+"iana-dns":iana("dns-parameters","Domain Name System (DNS) Parameters"),
+"nist-sp800-81r3":('"NIST SP 800-81 Rev. 3 — Secure Domain Name System (DNS) Deployment Guide"',f"{N}/SpecialPublications/NIST.SP.800-81r3.pdf",f'NIST SP 800-81 Rev. 3, "Secure Domain Name System (DNS) Deployment Guide", March 2026 (sections 2.1, 2.1.3, 4.2.4). {N}/SpecialPublications/NIST.SP.800-81r3.pdf'),
+"rfc5905":rfc(5905,"Network Time Protocol Version 4: Protocol and Algorithms Specification"),
+"rfc8633":rfc(8633,"Network Time Protocol Best Current Practices"),
+"nist-sp800-153":('"NIST SP 800-153 — Guidelines for Securing Wireless Local Area Networks (WLANs)"',f"{N}/Legacy/SP/nistspecialpublication800-153.pdf",f'NIST SP 800-153, "Guidelines for Securing Wireless Local Area Networks (WLANs)", February 2012 (executive summary, sections 3.1.1 and 3.2). {N}/Legacy/SP/nistspecialpublication800-153.pdf'),
+})

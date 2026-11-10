@@ -5,7 +5,7 @@
 - [x] **TN-02** Edit `instance.md` (networking bullet + readers); `npm run check` + `npm run build`.
 - [x] **TN-03** N1 URL list (STOP) → write 8 → verify.mjs + ipaddress checks → check + build → **STOP-N1**.
 - [x] **TN-04** N2 (same gates) → **STOP-N2**.
-- [ ] **TN-05** N3 → **STOP-N3**.
+- [x] **TN-05** N3 (8 drafts, order 1320–1327) → **STOP-N3** (waiting for Naveed's 2-page check).
 - [ ] **TN-06** N4 → **STOP-N4**.
 - [ ] **TN-07** N5 → **STOP-N5**.
 - [ ] **TN-08** Link pass both ways (events, Wazuh, playbooks, enrichment ↔ networking).

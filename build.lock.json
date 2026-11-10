@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:e2f43de8795037061623268e297b76a94f9afbcc5e1f24a5cf3152937e587ea5",
+  "build_id": "sha256:1004cba2890af2ef82eb4155ec6ed35562b364ccf22582e9f5ec0b15f5352fa9",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "0dbe46d5d5cf9846123510da420a633f6462bdf5",
+  "source_commit": "e00361344372cd4a1dc2f1fb41aa60b4dd38101d",
   "dirty": true,
-  "as_of": "2026-11-10T10:23:45.791Z",
+  "as_of": "2026-11-10T15:13:36.077Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -145,6 +145,24 @@
       "admitted": []
     },
     {
+      "path": "networking/dhcp.md",
+      "sha256": "012fd134826bb26874b4b11ded18d1b4c868638af6a812a370d6d14bdbe9c328",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/dns.md",
+      "sha256": "122ea73a4845d4d486cd24218a5602527f97bcc3a04b73aa1a302e054cb84f2b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/ethernet-and-mac-addresses.md",
       "sha256": "3d105897431d9771fa28f4de10264b15ef7db75fdfd340e5fb223a1e995444df",
       "status": "draft",
@@ -208,8 +226,26 @@
       "admitted": []
     },
     {
+      "path": "networking/nat-and-pat.md",
+      "sha256": "638d5b0507105bf62365323838949c8e16004201a986ebd2668f9399677613a8",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/networking-overview.md",
       "sha256": "d51cd003c86531333ddaa9186f2a283afea0ebc2be37d7d791dde1f9a4c55ae5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ntp-and-time-sync.md",
+      "sha256": "568302780e0f7f05de610dd4499a92c09e9ef9f4232ec268ac6f51753a58375d",
       "status": "draft",
       "audience": [
         "public"
@@ -237,6 +273,24 @@
     {
       "path": "networking/ports-and-services.md",
       "sha256": "6a5750edd1a141145c536d8b4bcb8ca43543bc73cab1b9e4b8d1e59dee219a31",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/routing-basics.md",
+      "sha256": "60dd0ec8f710f5ebf8e1e5431ead545e8abb9124fd516c6a291b4c7a117531e0",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/routing-protocols-overview.md",
+      "sha256": "5b028a784f68b176f35831d2e20756017829a5bbf6005287f2defce1687091b9",
       "status": "draft",
       "audience": [
         "public"
@@ -273,6 +327,24 @@
     {
       "path": "networking/udp.md",
       "sha256": "50c23ba3cc2dbeae83239e45ef612ccc208e0390960fab4a2de8f4f32afb195d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/vlans-and-switching.md",
+      "sha256": "648e8898846f2fc729ef0060cff1050a5035563944ad040b28b5fb6876e711a9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/wireless-basics.md",
+      "sha256": "3d08f0defb47b711dccef32fc5fa7eb1e6efd2e61e5ef68b7a6343a8d31fdd8f",
       "status": "draft",
       "audience": [
         "public"
@@ -757,7 +829,7 @@
     },
     {
       "path": "networking/index.md",
-      "sha256": "e6b90e987aa38e1f0d0e30516babc17b2aeb675596ac5862415642a9e9c4881a"
+      "sha256": "8bdcc9b6f02eccdece4fbbba8b22377d8a0c24b295bec847df12e90a9d852be8"
     },
     {
       "path": "orientation/index.md",

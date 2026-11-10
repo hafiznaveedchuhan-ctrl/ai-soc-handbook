@@ -22,14 +22,14 @@ Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-netwo
 |---|---|---|
 | 01 record-identity | verified, merged | — |
 | 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
-| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **N1 (8) + N2 (8) drafts** | N3 (8), N4 (8), N5 (6), link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
+| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **N1 (8) + N2 (8) + N3 (8) drafts** | STOP-N3 check, N4 (8), N5 (6), link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
 | 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
 | 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
 | 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
 | 04 auth | — | all (provider ADR, sign-in config) |
 | 02 Wave 2 (55 docs) | — | all |
 | 02 Wave 3 (7 docs) | — | all |
-Corpus count now: 57 documents (40 stable, 17 draft = 16 networking + event-7045). Plan total 141.
+Corpus count now: 65 documents (40 stable, 25 draft = 24 networking + event-7045). Plan total 141. (updated session 3)
 Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
 
 ### 3. EXACT next step
@@ -178,3 +178,42 @@ HANDOFF §3 (A if key done, else B: N3 URL list).
 - New Gemini key in `.env` → say "key done".
 - STOP-N2 2-page check → say "next" (and "push" when wanted).
 - Later: merge the networking PR; approve networking pages; Feature 05 HAAN steps.
+
+---
+
+## Session 3 — block
+
+### Last updated
+2026-11-10T15:20:00Z — session 3
+
+### Done this session (files changed + commit hash)
+- N3 URL list `specs/02-soc-corpus/networking-n3-urls.txt`; Naveed: "both ok" (URLs + RFC 8633).
+- N3 written (8 drafts, order 1320–1327): routing-basics, routing-protocols-overview, nat-and-pat, vlans-and-switching, dhcp, dns, ntp-and-time-sync, wireless-basics.
+- `scripts/authoring/netsrc.py` (N3 sources), `scripts/authoring/example-batch-generator-n3.py`, sources.md N3 row, networking-tasks TN-05 ticked. Commit: see `git log` (N3 commit, local only — not pushed).
+
+### Current state
+HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still blocked on Gemini key.
+
+### Decisions taken
+- RFC 8415 obsoleted → RFC 9915 (DHCPv6, Jan 2026). NIST SP 800-81-2 withdrawn → SP 800-81r3 (March 2026).
+- IEEE 802.1Q / 802.11 values not used (blocked): VLAN and wireless pages carry an "Open question (needs a source)" section instead of numbers — no TODO-VERIFY, nothing invented.
+- "PAT" used as the handbook's name for NAPT (RFC 3022 term), stated as such.
+
+### Errors hit + fixes
+- `pkill -f "next dev"` was blocked by the auto-mode classifier; build ran fine without it (no dev server was needed).
+- verify.mjs flags only computed values (longest-match examples, reverse-DNS example — labelled "computed with Python ipaddress") and composite "67/68", "546/547".
+
+### Pending / blocked
+- STOP-N3: Naveed checks 2 random N3 pages → "next" (and "push" if wanted).
+- Gemini key (Naveed) → Feature 05.
+
+### TODO-VERIFY list
+- event-7045 (unchanged). N3 pages: none (gaps written as open questions: IEEE 802.1Q VLAN ID/MAC learning; 802.11 frame/security details).
+
+### Exact next step for the next session
+- After "next": N4 URL list (network devices and their logs) → STOP for URL approval. If "key done": HANDOFF §3 A.
+
+### Naveed's manual actions needed
+- STOP-N3 2-page check; say "push" to push `feat/02-networking`.
+- New Gemini key → "key done".
+- Optional: a free source for IEEE 802.1Q / 802.11 values (else those stay open questions).
