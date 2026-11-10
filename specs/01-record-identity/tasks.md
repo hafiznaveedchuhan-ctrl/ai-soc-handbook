@@ -14,7 +14,7 @@ a point where Claude waits for Naveed.
 - [x] **T01-05** Write this spec, plan, tasks.
   Verify by: `npm run check` and `npm run build` still pass (no knowledge change).
 - [x] **STOP-A** Naveed approves constitution, ADRs, and Feature 01 spec/plan/tasks.
-- [ ] **T01-06** [Naveed] Create private GitHub repo `ai-soc-handbook`; `git remote add origin …`.
+- [x] **T01-06** [Naveed] Create private GitHub repo `ai-soc-handbook`; `git remote add origin …`.
   Verify by: `git remote -v` shows origin.
 - [x] **T01-07** Rewrite `instance.md` (name `soc-handbook`, title, description, body); keep `format`, `toolchain`, `database`.
   Verify by: `npm run check` exit 0.
