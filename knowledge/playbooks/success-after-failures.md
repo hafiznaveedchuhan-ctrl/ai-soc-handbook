@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: successful logon after failures"
 description: L1 steps when an account that just produced many failed logons then logs on successfully — the moment a brute-force attempt may have worked; always an immediate escalation.
-status: draft
+status: stable
 order: 801
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!NOTE]
 > **In plain words.** Failures followed by a success can mean the attacker

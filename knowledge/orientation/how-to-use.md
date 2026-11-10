@@ -2,8 +2,9 @@
 type: Document
 title: How to use this handbook
 description: How SOC analysts and the soc-worker agent find, read and cite pages in this handbook, and what each part of a page is for.
-status: draft
+status: stable
 order: 2
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:29:48Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

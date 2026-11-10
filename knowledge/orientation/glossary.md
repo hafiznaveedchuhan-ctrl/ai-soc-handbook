@@ -2,8 +2,9 @@
 type: Definition
 title: Glossary
 description: Core SOC triage terms — SIEM, log, event, alert, incident, IOC, false positive and negative, tactic and technique, decoder and rule — defined from NIST, MITRE ATT&CK and Wazuh sources.
-status: draft
+status: stable
 order: 3
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: nist-siem
     title: NIST CSRC Glossary — security information and event management (from NIST SP 800-92)
@@ -50,6 +51,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

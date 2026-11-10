@@ -2,8 +2,9 @@
 type: Definition
 title: Private IP address ranges
 description: The IPv4 private ranges reserved by RFC 1918 and the IPv6 unique local range from RFC 4193 — how to recognise an internal address in an alert and why it is never sent for reputation lookup.
-status: draft
+status: stable
 order: 901
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: rfc1918
     title: "RFC 1918 — Address Allocation for Private Internets"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

@@ -2,8 +2,9 @@
 type: Standard
 title: "T1110.003 Brute Force: Password Spraying"
 description: MITRE ATT&CK T1110.003 Password Spraying — one or a few common passwords tried against many accounts to avoid lockouts; why it can slip under per-account and per-source thresholds, and what to look for.
-status: draft
+status: stable
 order: 703
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1110-003
     title: "MITRE ATT&CK — T1110.003 Brute Force: Password Spraying"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

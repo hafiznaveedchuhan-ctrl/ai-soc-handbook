@@ -2,8 +2,9 @@
 type: Policy
 title: Triage note writing rules
 description: The writing rules for a triage note — facts separated from inferences, a source for every fact, masked values, no guessing, how to choose confidence, and plain English.
-status: draft
+status: stable
 order: 1001
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

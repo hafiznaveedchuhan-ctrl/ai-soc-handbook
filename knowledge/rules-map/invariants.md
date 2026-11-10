@@ -2,8 +2,9 @@
 type: Policy
 title: Invariants — rules that are never broken
 description: The five rules every analyst and every AI agent using this handbook follows without exception — humans decide, the AI never acts, read-only access, masking before any LLM, cite or abstain.
-status: draft
+status: stable
 order: 200
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

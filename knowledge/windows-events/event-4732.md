@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4732: A member was added to a security-enabled local group"
 description: Windows Security event 4732 — an account was added to a local security group such as Administrators; its fields, the groups that matter most, and the Wazuh rules that raise the level for privileged groups.
-status: draft
+status: stable
 order: 380
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4732
     title: "Microsoft Learn — 4732(S): A member was added to a security-enabled local group"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

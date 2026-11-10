@@ -2,8 +2,9 @@
 type: Standard
 title: "T1059.001 Command and Scripting Interpreter: PowerShell"
 description: MITRE ATT&CK T1059.001 PowerShell — adversaries running commands and scripts through PowerShell; what to look for in process creation, command lines and PowerShell logging.
-status: draft
+status: stable
 order: 720
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:18:01Z }
 sources:
   - id: mitre-t1059-001
     title: "MITRE ATT&CK — T1059.001 Command and Scripting Interpreter: PowerShell"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

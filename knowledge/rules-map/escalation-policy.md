@@ -2,8 +2,9 @@
 type: Policy
 title: Escalation policy
 description: The eight conditions under which an L1 analyst escalates an alert to L2 immediately, with the alert fields and handbook pages that show each one.
-status: draft
+status: stable
 order: 201
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

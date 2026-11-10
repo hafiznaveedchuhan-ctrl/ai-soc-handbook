@@ -2,8 +2,9 @@
 type: Policy
 title: Triage note template
 description: The fixed structure of every triage note — fields, order and allowed values — written by an analyst or drafted by the soc-worker agent for a human to confirm.
-status: draft
+status: stable
 order: 1000
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

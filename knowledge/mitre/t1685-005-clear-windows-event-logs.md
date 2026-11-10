@@ -2,8 +2,9 @@
 type: Standard
 title: "T1685.005 Disable or Modify Tools: Clear Windows Event Logs"
 description: MITRE ATT&CK T1685.005 Clear Windows Event Logs (formerly T1070.001) — adversaries wiping Windows event logs to hide their activity; the commands used and how it appears as event 1102.
-status: draft
+status: stable
 order: 750
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1685-005
     title: "MITRE ATT&CK — T1685.005 Disable or Modify Tools: Clear Windows Event Logs"
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

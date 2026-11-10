@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: new local account created"
 description: L1 steps for event 4720 — identify who created which account, check its attributes against Microsoft's anomaly list, look for the command that created it and any group membership that followed.
-status: draft
+status: stable
 order: 802
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!NOTE]
 > **In plain words.** A new account appeared. Usually that is IT doing its

@@ -2,8 +2,9 @@
 type: Standard
 title: Wazuh rule levels
 description: The seventeen Wazuh rule levels from 0 to 16, what each means, and the default thresholds at which an event becomes an alert or an email.
-status: draft
+status: stable
 order: 602
+generated: { by: "claude-opus/5.5", at: 2026-11-10T08:05:29Z }
 sources:
   - id: wazuh-rules-classification
     title: Wazuh documentation — Rules classification
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

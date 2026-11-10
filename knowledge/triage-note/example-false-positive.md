@@ -2,8 +2,9 @@
 type: Example
 title: "Example note: false positive — saved old password"
 description: An illustrative, fully masked triage note where repeated failed logons and a lockout came from one user's own device holding an old saved password — verdict false positive, not escalated.
-status: draft
+status: stable
 order: 1011
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!IMPORTANT]
 > **Illustrative lab example.** Every value is masked or a placeholder; times

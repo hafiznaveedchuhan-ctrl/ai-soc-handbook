@@ -2,8 +2,9 @@
 type: Example
 title: "Example note: true positive — brute force followed by success"
 description: An illustrative, fully masked triage note for a brute-force burst against one account that ended in a successful RDP logon — verdict true positive, escalated under condition 4.
-status: draft
+status: stable
 order: 1010
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!IMPORTANT]
 > **Illustrative lab example.** Every value is masked or a placeholder; times

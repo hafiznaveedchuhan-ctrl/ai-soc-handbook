@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: brute-force logon attempts"
 description: L1 steps for a burst of failed Windows logons — confirm the pattern, collect counts and sources, enrich the source IP, decide guessing vs spraying vs benign, and escalate on success or privileged targets.
-status: draft
+status: stable
 order: 800
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -32,6 +33,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone is trying many passwords. Your job is to find

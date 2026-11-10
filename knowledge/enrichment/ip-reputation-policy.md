@@ -2,8 +2,9 @@
 type: Policy
 title: IP reputation policy (AbuseIPDB)
 description: How an L1 analyst reads an AbuseIPDB result — what abuseConfidenceScore means, the handbook's score bands, which fields to note, and which addresses are never looked up.
-status: draft
+status: stable
 order: 900
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

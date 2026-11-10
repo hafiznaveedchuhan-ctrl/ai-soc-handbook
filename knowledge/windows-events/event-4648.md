@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4648: A logon was attempted using explicit credentials"
 description: Windows Security event 4648 — a process logging on by naming an account's credentials explicitly (RunAs, scheduled tasks), its key fields, and when such a logon deserves attention.
-status: draft
+status: stable
 order: 340
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4648
     title: "Microsoft Learn — 4648(S): A logon was attempted using explicit credentials"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: Security audit log cleared"
 description: L1 steps for event 1102 — who cleared the Security log from which session, what happened just before, and why it is escalated unless a documented maintenance reason exists.
-status: draft
+status: stable
 order: 804
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone wiped the Security log. Attackers do this to

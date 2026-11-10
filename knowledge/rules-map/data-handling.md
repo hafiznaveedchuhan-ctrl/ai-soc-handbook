@@ -2,8 +2,9 @@
 type: Policy
 title: Data handling
 description: How alert data is masked before it reaches any language model, what may never appear in the handbook or a prompt, and what a triage note keeps.
-status: draft
+status: stable
 order: 203
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
