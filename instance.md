@@ -2,7 +2,7 @@
 format: 2
 name: soc-handbook
 title: SOC Triage Handbook
-description: Governed, cited guidance for triaging SIEM and Wazuh security alerts from Windows, Sysmon and Linux hosts — event meaning, MITRE ATT&CK mapping, triage playbooks, escalation and triage-note writing.
+description: Governed, cited guidance for SOC Level-1 analyst operations — primarily triage of SIEM and Wazuh alerts from Windows, Sysmon and Linux hosts, plus the security fundamentals an L1 analyst needs for triage.
 toolchain:
   requires: ">=0.0.61"
   scaffolded: "0.0.61"
@@ -16,24 +16,39 @@ database:
   dsn_env: KSOR_DB_URL
 ---
 
-This record is authoritative for the **triage of security alerts raised by a
-SIEM, chiefly Wazuh, from Windows, Sysmon and Linux hosts**. Within that scope
-it covers:
+This record is authoritative for **SOC Level-1 (L1) analyst operations**.
+
+Its **primary** subject is the triage of security alerts raised by a SIEM,
+chiefly Wazuh, from Windows, Sysmon and Linux hosts:
 
 - what a security event means — Windows Security and System log events, Sysmon
   events, Linux authentication logs, and the fields of a Wazuh alert;
 - how an event maps to MITRE ATT&CK tactics and techniques;
-- step-by-step triage playbooks for first-level (L1) analysts;
+- step-by-step triage playbooks for L1 analysts;
+- enrichment of an alert — IP reputation, private address ranges, asset and
+  user context;
 - when and how to escalate, and how severity is judged;
-- how to enrich an alert (IP reputation, private address ranges, asset and
-  user context) and recognise common false positives;
+- how to recognise common false positives;
 - how to write a triage note that cites this record.
 
-It does **not** cover, and must decline: malware reverse engineering, legal or
-compliance advice, product pricing or licensing, vendor comparisons, and
-anything outside SOC alert triage. It holds no client or company data and no
-real IP addresses, usernames or hostnames from any organisation; examples are
-illustrative lab examples with masked values.
+It **also** covers the fundamentals an L1 analyst needs in order to triage,
+explained at that depth and no deeper:
+
+- networking basics — the OSI and TCP/IP models, common ports and protocols,
+  DNS, HTTP and HTTPS;
+- common attack types — brute force, phishing, malware, lateral movement,
+  privilege escalation;
+- phishing email analysis — reading headers, and SPF, DKIM and DMARC;
+- the incident response lifecycle, as described in NIST SP 800-61 Rev. 3;
+- security controls and the log sources they produce — firewall, IDS/IPS, EDR,
+  web proxy, Active Directory;
+- indicators of compromise (IOCs) and basic threat intelligence.
+
+It does **not** cover, and must decline: malware reverse engineering,
+penetration testing or exploitation how-to, legal or compliance advice, vendor
+pricing or licensing, and anything outside SOC L1 operations. It holds no
+client or company data and no real IP addresses, usernames or hostnames from
+any organisation; examples are illustrative lab examples with masked values.
 
 Two kinds of reader use it: SOC analysts reading the website, and the
 soc-worker AI agent, which reads it over MCP to explain an alert, map it to
