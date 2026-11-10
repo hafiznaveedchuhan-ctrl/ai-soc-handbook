@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:6be260d1d3082867c023936383747bca98946fd9ee4613786923a3a6f182d03d",
+  "build_id": "sha256:86ef289d8c79beac5de6b1074f54c81dd90ec67c0af1dca3f7c4db317d6c7bfc",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "f659514a5611ff0e8b309cd6a691e56a875ac630",
-  "dirty": false,
-  "as_of": "2026-11-10T07:47:57.391Z",
+  "source_commit": "ff6999fcfd0243814408b0946e6efd023aae6000",
+  "dirty": true,
+  "as_of": "2026-11-10T08:53:22.949Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -26,6 +26,96 @@
   },
   "documents": [
     {
+      "path": "mitre/t1059-001-powershell.md",
+      "sha256": "6feb55226a094ee9b6387350997ff40eb5f8ddf9edd83e09bf3e682b2cfacaa5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1078-valid-accounts.md",
+      "sha256": "678e1b7b0616d54c98f71c49f2c4ac3936eea40b9d7e850ae46d43785b730f67",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1098-account-manipulation.md",
+      "sha256": "b0366757add5ff3659ed3f664b950655a849a7fa0a208c518e27e1205866f659",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1110-001-password-guessing.md",
+      "sha256": "1ac8b2b7d267db8cf480c08db7d7879f0a4be920661570324709b511468a9d99",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1110-003-password-spraying.md",
+      "sha256": "90da2d680cc7d8e7c3a44f16dec6348c3d7fc76bcff6e93a748fe0cd7c7f125e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1110-brute-force.md",
+      "sha256": "04ae2bc0f1938c102a9084f59d35a90cf16c07b499704e68562308f72917ae23",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1136-001-local-account.md",
+      "sha256": "ea10063f61b72221a78042598c32df9691f9e080e35a5f6ca1fa62b50b348980",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1685-005-clear-windows-event-logs.md",
+      "sha256": "90933a2962037b039bca2fd1bca69d6d2cd4815e3f0a0183af0be78d2d6434d2",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "orientation/glossary.md",
+      "sha256": "93cd79738c34f9cf5a201f195c546a633701e19403d675adc28c379a45c2f5b9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "orientation/how-to-use.md",
+      "sha256": "eb39da62c6e3ed2a094fd45cf65032400b955dd54363c6f05c5690d5efe345f3",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "orientation/overview.md",
       "sha256": "50575b9df777ffc832e4052a1de136a20c79c4f9032176794a17b4687e307327",
       "status": "stable",
@@ -35,6 +125,132 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "wazuh/alert-json-anatomy.md",
+      "sha256": "de0d3d718c5c171ac13fc8031a92a5e0ad4e59f828aa4a370ba7928d3b583735",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/architecture.md",
+      "sha256": "59633bc20437434f612af67ab5084b6cfd99168b5bebdf4e41d0625f341cd21d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/rule-levels.md",
+      "sha256": "327ffd2ffb34f7dfadc56ba6a10e1ce723182b302347a585bc11f564fa71dc05",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/windows-rules-reference.md",
+      "sha256": "771b5175582ca31c7850e0fad6a6f3693096de5dfe3c2d382513ac64c7a61c5b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-1102.md",
+      "sha256": "0093fa5753b25b8411b3ccc782084eee16a2af3abc159f05857ef95394a7bf1b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4624.md",
+      "sha256": "60aead451b07740d9e0d9dd1fb5ea706f6abd0e704ff395360ac2c2e4b82f225",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4625.md",
+      "sha256": "dc8a76e58b09acb048a512e55119086651c5f7349feec9270e7c377630fa096e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4648.md",
+      "sha256": "3402f9f1486b18a1ff16a1682cdb54abd13814f8894af82beb811152e604375a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4672.md",
+      "sha256": "a1935b5384a8b50c9085af536375035032f4c631f78178426ec5dff29a63c65e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4688.md",
+      "sha256": "15d9e45506f076069dea018b41a8612cb9e91221c4a3f0f6d78a9d4cb38a932a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4720.md",
+      "sha256": "cbcfdc1e961a5b7e911345bff0d5afca6903d168688e98d13f9fe5548c5c9c21",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4732.md",
+      "sha256": "dcfb1cc7ef283d7e483b68875e74b658a5914d4b94442fa55bf9d53471e493cd",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4740.md",
+      "sha256": "094fe77961f94a443d73f7f606f20867db31a451aa3cd597f4ab48aa0dbc6be4",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-7045.md",
+      "sha256": "ce0f40b157dc3bcd242b4c0567a0e7b5f88b83696134e374b796862a24f23a47",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     }
   ],
   "companions": [],
@@ -42,11 +258,23 @@
   "indexes": [
     {
       "path": "index.md",
-      "sha256": "3ebfd1a936e3b1d71dcd23f3dd58beee8a6ae272818f24eb41187c8facfdc467"
+      "sha256": "eb09055aa32163938a1082bf352d08fa0b643333e443bfadf596fb96cc08a000"
+    },
+    {
+      "path": "mitre/index.md",
+      "sha256": "6e4b86aed623c00390493c121f651f6bd72fd11055ed405eb23fab24b2cfda74"
     },
     {
       "path": "orientation/index.md",
-      "sha256": "a06e6592a61e91ccde814364319e409a7a000eb591b0a695c63cbd318ea4e41c"
+      "sha256": "4ae632e1f93ffb64ed1f6eab9b51a2e3c86a47809ee8ec1012cfa743732bb050"
+    },
+    {
+      "path": "wazuh/index.md",
+      "sha256": "7a1c0e18758e64454a7594dd0f389abc2e330c5197ea59daf893f54e8b865c5f"
+    },
+    {
+      "path": "windows-events/index.md",
+      "sha256": "5c4e0c08d1e047f0b09a188b71ab54fbe542cf484ded0acf589fc6cd9f572990"
     }
   ],
   "bundles": [

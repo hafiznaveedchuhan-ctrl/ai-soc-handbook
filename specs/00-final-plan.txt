@@ -11,6 +11,8 @@ Change log:
   v3 2026-11-10  scope widened to SOC L1 operations (triage primary + L1 fundamentals); Wave 3
                  "soc-fundamentals" added (11 docs + FC/QZ); pentest/exploitation how-to added to
                  the decline list; order ... > 02W2 > 02W3.
+  v3.1 2026-11-10 MITRE ATT&CK renumbering found live: T1070.001 -> T1685.005 (page renamed);
+                 T1562.001 -> T1685 (Wave 2 page to be re-mapped). Tactic TA0005 is now "Stealth".
 
 ================================================================
 1. GOAL OF PHASE 2
@@ -141,7 +143,7 @@ knowledge/
     t1059-001-powershell.md                   Standard     [W1]
     t1136-001-local-account.md                Standard     [W1]
     t1098-account-manipulation.md             Standard     [W1]
-    t1070-001-clear-windows-event-logs.md     Standard     [W1]
+    t1685-005-clear-windows-event-logs.md     Standard     [W1]  (MITRE moved T1070.001 -> T1685.005)
     t1110-004-credential-stuffing.md          Standard     [W2]
     t1053-005-scheduled-task.md               Standard     [W2]
     t1543-003-windows-service.md              Standard     [W2]
@@ -149,7 +151,7 @@ knowledge/
     t1003-001-lsass-memory.md                 Standard     [W2]
     t1046-network-service-discovery.md        Standard     [W2]
     t1548-002-bypass-uac.md                   Standard     [W2]
-    t1562-001-disable-or-modify-tools.md      Standard     [W2]
+    t1562-001-disable-or-modify-tools.md      Standard     [W2]  (MITRE now redirects T1562.001 -> T1685; re-map in Wave 2)
     t1566-phishing.md                         Standard     [W2]
     (technique names are checked against attack.mitre.org before writing)
   playbooks/                                  (order 8)  every playbook gets FC + QZ in its wave

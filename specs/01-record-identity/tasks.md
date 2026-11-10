@@ -34,5 +34,5 @@ a point where Claude waits for Naveed.
 - [x] **T01-13** Update `progress.md`, `LEARNING.md`, tick this file.
   Verify by: Current state shows 01 = verified.
 - [x] **STOP-E** Naveed OKs push.
-- [ ] **T01-14** Push `feat/01-record-identity`, open PR (CI = validate.yml); Naveed merges.
+- [x] **T01-14** Push `feat/01-record-identity`, open PR (CI = validate.yml); Naveed merges.
   Verify by: PR checks green; merged into `main`.
