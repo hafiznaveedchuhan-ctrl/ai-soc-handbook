@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:627a12cdab90626d3baba9df5537e725844a1a0d5c796a26bf474470b755e951",
+  "build_id": "sha256:e2f43de8795037061623268e297b76a94f9afbcc5e1f24a5cf3152937e587ea5",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "af3036b73e2a43c35961100becc41feac5af5361",
+  "source_commit": "0dbe46d5d5cf9846123510da420a633f6462bdf5",
   "dirty": true,
-  "as_of": "2026-11-10T10:16:15.957Z",
+  "as_of": "2026-11-10T10:23:45.791Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -154,6 +154,15 @@
       "admitted": []
     },
     {
+      "path": "networking/icmp-and-icmpv6.md",
+      "sha256": "391757a2ef63f49ad2b914d693055641d8a776a1f3f0ee5a3530129979930d7e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/ipv4-addressing.md",
       "sha256": "145b07ac4fdb18762f785cccac15cba2ff4b02ffb61e25f5e462c91462602c3f",
       "status": "draft",
@@ -165,6 +174,33 @@
     {
       "path": "networking/ipv4-subnetting-and-cidr.md",
       "sha256": "a5695bd4681838d23e3bf102a392bc487c4729c430f346985f1a4535e5ac4751",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ipv6-addressing.md",
+      "sha256": "6ce8ed05ac3a85af7af74eda1218c17041abde3f7ec3f6828d57841bc060994c",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ipv6-neighbor-discovery-and-slaac.md",
+      "sha256": "4b88845f0908badb292ed12863cb4e23f5eb545087dd570c3e7528de0ecfd6b7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/ipv6-special-ranges.md",
+      "sha256": "24485bdb63276c6ba176dbb6d97d7c96aababb87d36bbdc1f412bd0cd93e90c6",
       "status": "draft",
       "audience": [
         "public"
@@ -199,8 +235,44 @@
       "admitted": []
     },
     {
+      "path": "networking/ports-and-services.md",
+      "sha256": "6a5750edd1a141145c536d8b4bcb8ca43543bc73cab1b9e4b8d1e59dee219a31",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/special-ipv4-ranges.md",
+      "sha256": "c14a21550c14f81a6f9829a4c522f898b6f884fe1428ae26d07d66b20b9c340f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/tcp.md",
+      "sha256": "7cccda3a0e73ccdb44b0f38ff4368dcf4b5edcbcb9a90ce52846cdfa49b22f60",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "networking/tcp-ip-model-and-encapsulation.md",
       "sha256": "b4d3ace8bf391d98a9fb3838ed14b932ca8bdc4f0b876e91648f73f18626ad4f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "networking/udp.md",
+      "sha256": "50c23ba3cc2dbeae83239e45ef612ccc208e0390960fab4a2de8f4f32afb195d",
       "status": "draft",
       "audience": [
         "public"
@@ -685,7 +757,7 @@
     },
     {
       "path": "networking/index.md",
-      "sha256": "130a33435b3de31ec27a9b577bb3a58ab64beb842ec603453130a296f67c7b29"
+      "sha256": "e6b90e987aa38e1f0d0e30516babc17b2aeb675596ac5862415642a9e9c4881a"
     },
     {
       "path": "orientation/index.md",
