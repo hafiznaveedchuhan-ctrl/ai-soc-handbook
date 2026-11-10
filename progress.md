@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — B1 + B2 written (16 drafts), waiting at STOP-B2 |
+| 02 soc-corpus Wave 1 | implementing — B1–B3 written (24 drafts), waiting at STOP-B3 |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -87,3 +87,48 @@ Never delete history; append a new session block; keep the Current state table c
 ### Naveed's manual actions needed
 - Check 2 random B2 pages (STOP-B2); confirm ruleset files 0610 and 0220.
 - Optional before T01-14: `gh auth login`.
+
+---
+
+## Session 2
+
+### Last updated
+2026-11-10T09:00:00Z — session 2
+
+### Done this session
+- Session 1 tail (before the restart): STOP-B2 "next"; owner delegated choices ("best to best") → kept Wazuh rule files 0610 and 0220. B3 URL list approved. 8 MITRE pages written; event-page MITRE sections rewritten.
+- Re-downloaded B3 sources (scratchpad was cleared by the session restart) and ran verify.mjs on all 8 MITRE pages: no changed values; added missing citations for rules 67027 (0955) and 63103 (0610).
+- `92c0d69` — knowledge/mitre/{t1110-brute-force, t1110-001-password-guessing, t1110-003-password-spraying, t1078-valid-accounts, t1059-001-powershell, t1136-001-local-account, t1098-account-manipulation, t1685-005-clear-windows-event-logs}.md; MITRE sections of events 4624, 4625, 4688, 4720, 4732, 4740, 1102 (mapped), 4648/4672/7045 (TODO); windows-rules-reference warning
+- `75c1939` — build.lock.json
+- (next commit) — specs/00-final-plan.txt v3.1, specs/02-soc-corpus/sources.md (B3 Tier 1 + 11 Tier 2 rows), tasks.md, progress.md
+
+### Current state
+See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
+
+### Decisions taken
+- MITRE page for log clearing named after the live ID: `t1685-005-clear-windows-event-logs.md` (T1070.001 redirects there). Plan v3.1.
+- Event ↔ MITRE links written only where the MITRE page names the event (4625↔T1110.001/.003, 4720↔T1136.001) or where two cited facts combine directly; each mapping table has a "Basis" column and says when it is the handbook's mapping.
+- 4648 and 4672 MITRE mapping left to the owner (interview I1); 7045 → Wave 2 T1543.003 page.
+- Tier 2 event IDs from Red Canary (4104/800/4103) not used as fact — marked TODO-VERIFY.
+
+### Errors hit + fixes
+- Scratchpad emptied by session restart → sources re-fetched.
+- `pkill -f next-server` in the same command as the build killed that shell (exit 144) → run pkill and build as separate commands.
+
+### Pending / blocked
+- STOP-B3: Naveed to check 2 random MITRE pages and say "next". (Naveed)
+
+### TODO-VERIFY list
+- glossary: TP / benign TP, IOA, L1/L2/L3, SLA, MTTD/MTTR, enrichment, FP rate → interview I1
+- alert-json-anatomy: `rule.mitre.*` output field names
+- event-4648, event-4672: MITRE mapping → owner decision in I1
+- event-7045: audit setting, field names, MITRE (Wave 2 T1543.003 page)
+- t1059-001: PowerShell logging event IDs (4104/800/4103) need a Microsoft source
+- all events + MITRE pages: playbook links (B5 / link pass)
+
+### Exact next step for the next session
+- After "next": T02-11 — interview I1 (one question at a time), starting with the rules-map invariants.
+
+### Naveed's manual actions needed
+- STOP-B3 check (2 MITRE pages).
+- Prepare for interview I1: escalation triggers, severity, AbuseIPDB score bands, triage-note template, your L1 steps for the 5 playbooks.

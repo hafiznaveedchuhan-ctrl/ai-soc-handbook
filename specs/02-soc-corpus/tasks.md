@@ -19,11 +19,11 @@ verify.mjs run per page · TODO-VERIFY list reported.
 - [x] **T02-06** Verify Wazuh tag (v4.14.10 or newest existing); show B2 URL list. **STOP:** URLs + tag approved.
 - [x] **T02-07** Write events 4672, 4688, 4720, 4732, 4740, 1102, 7045.
 - [x] **T02-08** Write wazuh/windows-rules-reference (rule IDs only from ruleset files, with links).
-- [ ] **STOP-B2** Report; 2 random pages; "next".
+- [x] **STOP-B2** Report; 2 random pages; "next".
 
 ## B3
-- [ ] **T02-09** Show B3 URL list (8 MITRE technique pages T1 + Sigma/CAR/Red Canary T2). **STOP:** approved.
-- [ ] **T02-10** Write the 8 mitre pages; log Tier 2 in `sources.md`.
+- [x] **T02-09** Show B3 URL list (8 MITRE technique pages T1 + Sigma/CAR/Red Canary T2). **STOP:** approved.
+- [x] **T02-10** Write the 8 mitre pages; log Tier 2 in `sources.md`.
 - [ ] **STOP-B3** Report; 2 random pages; "next".
 
 ## I1 — interview
