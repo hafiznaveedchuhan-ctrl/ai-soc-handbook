@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:86ef289d8c79beac5de6b1074f54c81dd90ec67c0af1dca3f7c4db317d6c7bfc",
+  "build_id": "sha256:84b056a2028f41ac40b1653eef06ffed6b1b2997668a84637d47825b209ec05d",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "ff6999fcfd0243814408b0946e6efd023aae6000",
+  "source_commit": "92c0d694df8dc6ee88b65a0e680c8ba3758abf10",
   "dirty": true,
-  "as_of": "2026-11-10T08:53:22.949Z",
+  "as_of": "2026-11-10T09:04:43.495Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -25,6 +25,24 @@
     }
   },
   "documents": [
+    {
+      "path": "enrichment/ip-reputation-policy.md",
+      "sha256": "919d878bdbfd75d60551452be80c5ea273c06faaf3b69dc8912821d2ab998ca3",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "enrichment/private-ip-ranges.md",
+      "sha256": "f23e5f4886d8efa7e431c6b7416c9f90e805fe09e017f23224230455383230d5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
     {
       "path": "mitre/t1059-001-powershell.md",
       "sha256": "6feb55226a094ee9b6387350997ff40eb5f8ddf9edd83e09bf3e682b2cfacaa5",
@@ -99,7 +117,7 @@
     },
     {
       "path": "orientation/glossary.md",
-      "sha256": "93cd79738c34f9cf5a201f195c546a633701e19403d675adc28c379a45c2f5b9",
+      "sha256": "27aef4cf2bc07dd605cec250c8b65ad65f6263b1cf123924cf292584cb2c7fe1",
       "status": "draft",
       "audience": [
         "public"
@@ -108,7 +126,7 @@
     },
     {
       "path": "orientation/how-to-use.md",
-      "sha256": "eb39da62c6e3ed2a094fd45cf65032400b955dd54363c6f05c5690d5efe345f3",
+      "sha256": "a654fd0f2b2c00159410749b3737267770dacf828e6850b3f0dc18e4db10f573",
       "status": "draft",
       "audience": [
         "public"
@@ -125,6 +143,60 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "rules-map/data-handling.md",
+      "sha256": "93584b78bfcdaa3b03958d62f3f798e314d42a2687207fc9cbd585874cfed2b7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "rules-map/escalation-policy.md",
+      "sha256": "856e05c161e9c5b1984e5129d5cf7879c7be196c8c2187c635dd0fcfbbbe5410",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "rules-map/invariants.md",
+      "sha256": "f4d4f3509d6ca256baf7bec3c049e8a18115dde52b40d3eb324d9457c92442cb",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "rules-map/severity-model.md",
+      "sha256": "3a7d4f69cd766385ff05177e2e9c215085c563e9730a5319bfef7cc0f0a73090",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "triage-note/note-template.md",
+      "sha256": "18dcc78c596781d3f8e75d8775e5b2d26fdb740377cf23e7c42c7c373497af54",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "triage-note/writing-rules.md",
+      "sha256": "fcb70b0053ad4c2ccb88e093c95fb157dc2fabc05fccdd6d513130ed5dcbb1f6",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "wazuh/alert-json-anatomy.md",
@@ -191,7 +263,7 @@
     },
     {
       "path": "windows-events/event-4648.md",
-      "sha256": "3402f9f1486b18a1ff16a1682cdb54abd13814f8894af82beb811152e604375a",
+      "sha256": "d0814fc160b330e3a59057fed2f538b559dffc12e9a507f058e9bcd1e6f959b7",
       "status": "draft",
       "audience": [
         "public"
@@ -200,7 +272,7 @@
     },
     {
       "path": "windows-events/event-4672.md",
-      "sha256": "a1935b5384a8b50c9085af536375035032f4c631f78178426ec5dff29a63c65e",
+      "sha256": "0a182df1ef0cde452f9c1d16d8f362582476490a4a760f4b76c3df59c3ba3799",
       "status": "draft",
       "audience": [
         "public"
@@ -257,8 +329,12 @@
   "assets": [],
   "indexes": [
     {
+      "path": "enrichment/index.md",
+      "sha256": "0e116bd1c67e218a194fec0f5171637bd80a937a0695eca214ca0b4bdac1ed83"
+    },
+    {
       "path": "index.md",
-      "sha256": "eb09055aa32163938a1082bf352d08fa0b643333e443bfadf596fb96cc08a000"
+      "sha256": "c38ed901ea27d51fc0991bfca7c33f1b3e865e723e6381f12e39ad8a6de4b738"
     },
     {
       "path": "mitre/index.md",
@@ -267,6 +343,14 @@
     {
       "path": "orientation/index.md",
       "sha256": "4ae632e1f93ffb64ed1f6eab9b51a2e3c86a47809ee8ec1012cfa743732bb050"
+    },
+    {
+      "path": "rules-map/index.md",
+      "sha256": "6ab82303eda5feca903b57e5e57f626cabc8003472c421cb801d919a42b1e1f1"
+    },
+    {
+      "path": "triage-note/index.md",
+      "sha256": "e740c65e2f50fd9e7b26c15cb97a779e0dd1aed8c3b6ae21d55550d6c84cfee0"
     },
     {
       "path": "wazuh/index.md",
