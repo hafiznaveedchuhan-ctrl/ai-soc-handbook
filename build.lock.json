@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:87713ef0f21c3280738a68f2cd81b0434f542c8e129d3a8595da5c1d6606fd6c",
+  "build_id": "sha256:17429709677b6a8d6518682704e9d5bb400bc13b71bbb2aea70443641a84c89d",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "45613601ec9cc53caee44c120ac138195a40cb4c",
-  "dirty": true,
-  "as_of": "2026-11-10T09:29:47.768Z",
+  "source_commit": "c66c30b818337c3a997fcae0c8f50de72106b470",
+  "dirty": false,
+  "as_of": "2026-11-10T09:31:32.722Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -27,111 +27,135 @@
   "documents": [
     {
       "path": "enrichment/ip-reputation-policy.md",
-      "sha256": "919d878bdbfd75d60551452be80c5ea273c06faaf3b69dc8912821d2ab998ca3",
-      "status": "draft",
+      "sha256": "625fc5b4880c18918edbeb76ab706e8530055f7457e749093d218c4b566055b9",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "enrichment/private-ip-ranges.md",
-      "sha256": "f23e5f4886d8efa7e431c6b7416c9f90e805fe09e017f23224230455383230d5",
-      "status": "draft",
+      "sha256": "4579262a2b61121ae2f3584d6de3c11d55f94bdc4d1f40514eb864b42339f6b5",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1059-001-powershell.md",
-      "sha256": "20b5ef6b261b605fcf46daced2b9467becafc86e7d55d7f26612cc83395236dd",
-      "status": "draft",
+      "sha256": "c62ac4a2f74f5c6158a6b4d8215a09d95861de2cd3b1a940d36d2945c5cebe4f",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1078-valid-accounts.md",
-      "sha256": "ac02903d7afe3d77d7c091c166cfd499674e1a5071db09a0e1f29cd58e2100b0",
-      "status": "draft",
+      "sha256": "98738564b3bed8143996fe160fc98e229f4d38a226904d65a656fe1336c8ee2d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1098-account-manipulation.md",
-      "sha256": "f565c8e56660e50542fec29f26fda74c4d317cd12601eb5221ae371b8433ab93",
-      "status": "draft",
+      "sha256": "6cf0d5d912e8955a4d01fd1ca08ce4fc0216d9955e4fe8293ba4e58f5e213b8d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1110-001-password-guessing.md",
-      "sha256": "eb57a6ab33444c82ef2bed7f476d24a5ec233b5549f17e12514e30013cc02877",
-      "status": "draft",
+      "sha256": "2c27131be7e6105329f24b6ba8d16cd09e8e8907e135bfb9e8815d30d55cc9b3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1110-003-password-spraying.md",
-      "sha256": "0410e71c425c5d41903ab00eb258abe6a430ca96a5d518bc6e2053a81527e4b0",
-      "status": "draft",
+      "sha256": "f73a138cd54d96c74c25870bda9ea006c012a8c7fc9e4c21b1851c654a3462f6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1110-brute-force.md",
-      "sha256": "e924cfd459bbadad3c40a87ca9035e2dfb55e08598ff7fde82c0cd144997d651",
-      "status": "draft",
+      "sha256": "da0bf77c6b51efb03c0d7667fccbda34ca92cce78d5324240609efcdd3a860a0",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1136-001-local-account.md",
-      "sha256": "38daef5e5f824c953129f619d46e654409d2c84e05979d7bdee75116b773baeb",
-      "status": "draft",
+      "sha256": "40ed9eb20540002de90d0749447d935f650329a2ec5d94eafb9bd5e3e3121124",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "mitre/t1685-005-clear-windows-event-logs.md",
-      "sha256": "699c7a6b47336896c489f2d10d23e4aefc7aafdd2d4d0b2fc77eac61b8aadfe5",
-      "status": "draft",
+      "sha256": "46eb13c3ca59f968e15d7419b11047c23d46c5411a488df82d7beacc1a59afef",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "orientation/glossary.md",
-      "sha256": "27aef4cf2bc07dd605cec250c8b65ad65f6263b1cf123924cf292584cb2c7fe1",
-      "status": "draft",
+      "sha256": "bb4cec7780a24410780c199e81f6ed4dc2d239c92b043268e7e699e4d16cddee",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "orientation/how-to-use.md",
-      "sha256": "62d5794d133592ccde6f8d44cef159ab8ad4b5b5509c764c60f4c1f0237b2b02",
-      "status": "draft",
+      "sha256": "c95f7f5c78c1080176b57ef6f3e50ef148474ed34d25ad029d3a60c49b77e699",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "orientation/overview.md",
@@ -146,246 +170,300 @@
     },
     {
       "path": "playbooks/added-to-admin-group.md",
-      "sha256": "d033e35d2748a3feb3ade7ad2a4b08e0933c29658d67c7f9faebc7080b2b979c",
-      "status": "draft",
+      "sha256": "dd01cba0bac39a9e17de1af306fb851774129ac62ac2866b10dce11afff96695",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "playbooks/audit-log-cleared.md",
-      "sha256": "808432a25e5e6a0661ab8638ef6b728842bf8be675ad3d843a3451de8fe7333b",
-      "status": "draft",
+      "sha256": "e10e30d8d2999271a3e071b96227d379fead105886914301b0f13796d4ccc7ae",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "playbooks/brute-force.md",
-      "sha256": "d99842971b95991ac7be1cf9b63122cf642cc32da0507ad2ae61d02cd83fbf57",
-      "status": "draft",
+      "sha256": "80163dba6edab54432e6808351734d95ab33fc5c85e6efa54403a528e2f689ee",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "playbooks/new-local-account.md",
-      "sha256": "6ed6b3964664331192b0034c5fb05bcb2bcbce35a0f3d0e44111a97fc58961ce",
-      "status": "draft",
+      "sha256": "90652a9b39cfc496c2663f9b5bd81f998c374fde269163faab0064173b92b275",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "playbooks/success-after-failures.md",
-      "sha256": "13f3bdab3acd73fd39bf6a5ab3a6b5e4f566995be50f78dd8e4099fe8a4b5d78",
-      "status": "draft",
+      "sha256": "f8bff44e0e3404a4bd485b5fc8a836da1d70dd974da79df6b75c4e1ad86572c8",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "rules-map/data-handling.md",
-      "sha256": "93584b78bfcdaa3b03958d62f3f798e314d42a2687207fc9cbd585874cfed2b7",
-      "status": "draft",
+      "sha256": "ce52c4050f028cb689b37c372b236d889fef93545c80434b2930cd95fded462c",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "rules-map/escalation-policy.md",
-      "sha256": "856e05c161e9c5b1984e5129d5cf7879c7be196c8c2187c635dd0fcfbbbe5410",
-      "status": "draft",
+      "sha256": "450f03ab82e86f5acf1008d3861e139d11f80f77f5ec8d6f20b8f0423722376a",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "rules-map/invariants.md",
-      "sha256": "f4d4f3509d6ca256baf7bec3c049e8a18115dde52b40d3eb324d9457c92442cb",
-      "status": "draft",
+      "sha256": "49be5510fadbb88e736f6e67acf642766bd6785bf0fd4d9df5b572e90b8e613a",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "rules-map/severity-model.md",
-      "sha256": "3a7d4f69cd766385ff05177e2e9c215085c563e9730a5319bfef7cc0f0a73090",
-      "status": "draft",
+      "sha256": "08c5f8d92d369967d64b4d3d0e1d24893ed9518aabbc0fcf776ad72add8db0bb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "triage-note/example-false-positive.md",
-      "sha256": "60fbbe79c819a45be30e239dab60d07781fdca33043f25b3f68629763da94672",
-      "status": "draft",
+      "sha256": "5a2464f23c18983d2dc6587275f5fe127423985ea6fa798ee35f9512c9dbde9e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "triage-note/example-needs-info.md",
-      "sha256": "d0b8d911dd885a39839f906e586f94628a21712cfd2cf85b6c81c127ded06608",
-      "status": "draft",
+      "sha256": "73770266eaa42e9f11f09fe88071a2fd104bd0afe32bf33aa466575a2aa98d09",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "triage-note/example-true-positive.md",
-      "sha256": "6cf1ce9f620d6f09341de2d20b3aae2436e55430dbd499230379df18630196a8",
-      "status": "draft",
+      "sha256": "be0ce5ba4b593823e06f6af9ff27879981480a42b9b547c39e8e93b66cbfff72",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "triage-note/note-template.md",
-      "sha256": "18dcc78c596781d3f8e75d8775e5b2d26fdb740377cf23e7c42c7c373497af54",
-      "status": "draft",
+      "sha256": "85b420e99682eb365552eb70b44bd35d7dbd0017727371d2b0b240722c1d7cac",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "triage-note/writing-rules.md",
-      "sha256": "fcb70b0053ad4c2ccb88e093c95fb157dc2fabc05fccdd6d513130ed5dcbb1f6",
-      "status": "draft",
+      "sha256": "10efbff62b29ad092fb2ff98010fcfaff99e6a3abfaea4d8d74b41e299bb5864",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "wazuh/alert-json-anatomy.md",
-      "sha256": "d2432d683b278c2ebcaa7487e0a2cd2ca566a244f917c1dfbf92ef8a49a67799",
-      "status": "draft",
+      "sha256": "5ffbbc51ddc99c1eaa61269a3b72278ca8ec20274547f8e97876137f227b3e9a",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "wazuh/architecture.md",
-      "sha256": "59633bc20437434f612af67ab5084b6cfd99168b5bebdf4e41d0625f341cd21d",
-      "status": "draft",
+      "sha256": "c4e918ce31838096a49fb2260ce4d2d9ecd65f008add8726a0bc50a21bd177ed",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "wazuh/rule-levels.md",
-      "sha256": "327ffd2ffb34f7dfadc56ba6a10e1ce723182b302347a585bc11f564fa71dc05",
-      "status": "draft",
+      "sha256": "8eb7b03b8ce7a13c3eb26d2bfd22fb1b083d755c1e74574f17f437b0f48727c3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "wazuh/windows-rules-reference.md",
-      "sha256": "771b5175582ca31c7850e0fad6a6f3693096de5dfe3c2d382513ac64c7a61c5b",
-      "status": "draft",
+      "sha256": "9be03936ba8582c245f620f61f89b1710183c380f2d1c4c1c9c71daad6aa9e07",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-1102.md",
-      "sha256": "8ee6854c9ccacd8f0ba9c6157745f12e0c968475fcb5c459b323548587033ea2",
-      "status": "draft",
+      "sha256": "42ffd0c4fa8aa48cf88dca6734972e594072c84dc0bed0f6e9fbf5f695c717b2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4624.md",
-      "sha256": "215b56935f5711b142d196053bfb962692ed22503d1be56569e794405668e11b",
-      "status": "draft",
+      "sha256": "16b197924522ffe50fd2b80c53ef637bbd1f95e92e82876c4fdea617da5f5b0d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4625.md",
-      "sha256": "65c89b47b1981439022679b424c7b542482583d10544446d91afd38e5e5c67ab",
-      "status": "draft",
+      "sha256": "c4f84a0f5bde86f254d0c2c614d67b381360a8a85958c2421f46ec55c87152cb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4648.md",
-      "sha256": "3f5da5cfc90c27ee9218354b4a8640f7ab18997bab48896e89a73c09bc9de5fd",
-      "status": "draft",
+      "sha256": "dc170f1c85b947544d6e983a43610a1d736c460de0376e11e21b91901f42071d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4672.md",
-      "sha256": "274d6d558bdd610687528795f866f1d6fe891ab37a324ef0da114538fd2dfc3a",
-      "status": "draft",
+      "sha256": "cf6f3a1ee0c23cf6db6488c5c2d8005ed4d7cc69e1e39a216ad2d0678709a295",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4688.md",
-      "sha256": "e049f0dcd28e2f41cf38113f28407e0df29612b22ce1522e8128e66f989663fb",
-      "status": "draft",
+      "sha256": "8ad70da4cacb8506e51f7db724e9b742c9ed1923ca87778d1e4cccf58a23c991",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4720.md",
-      "sha256": "d283da1ff827956a980d5cc16bc632e8157d649a4eea3b07e7436c2294e5c1ed",
-      "status": "draft",
+      "sha256": "71444ce8abd3ef63daca77346c8053e9f4eab559775c5aeae0f66897ba27c884",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4732.md",
-      "sha256": "be342135d02817a87d860e3a1d7fd42cf093f5d306350db7b550820caadb0380",
-      "status": "draft",
+      "sha256": "c1920e0da8653da33f8cc94f86899d3b49ed461acec1de211ba048eca38b2749",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-4740.md",
-      "sha256": "92de70b78f456a3a81f569aeaca5cd036bb12942dbeeba1e8a3880d2fe471bdd",
-      "status": "draft",
+      "sha256": "c34e311f56084e9ed6294146ad6dbe67741148b45e76fee826b9af22cdec58c7",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "windows-events/event-7045.md",
@@ -561,8 +639,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "eeab6fc9ce47bbe3a170ec4d6055a9879ebc9472d86d63bc522cbf62a7d4a454",
-      "files": 3
+      "sha256": "b390158bcc3f2f4cdb35641289ee7cf6c213817bcc78f85c1e5a7af742ae97c0",
+      "files": 77
     }
   ]
 }

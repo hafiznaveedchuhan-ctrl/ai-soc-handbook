@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — 40 drafts + link pass + 15 decks + 15 quizzes done; waiting at STOP-R (owner review/approval) |
+| 02 soc-corpus Wave 1 | implemented — 39 pages approved stable (event-7045 draft until Wave 2); awaiting PR merge |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -155,3 +155,9 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - `7a05ee9` + `105f990` — 15 flashcard decks + 15 quizzes (6 questions each) for events 4624, 4625, 4648, 4672, 4688, 4720, 4732, 4740, 1102, 7045 and the 5 playbooks. Pre-checked against system/site/lib/quiz-audit.ts thresholds (index share ≤ 60%, length-strategy wins ≤ 60%, no run > 3, no duplicate stems); a `KSOR_DRAFTS=show` build rendered them and passed.
 - Remaining TODO-VERIFY: event-7045 only (4 lines) — that page cannot be approved until Wave 2 (4697 / T1543.003).
 - Next: STOP-R — Naveed reads Wave 1 pages and approves (all at once or per folder); I record approvals (ADR-0002 stamps), then PR.
+
+### Session 2 — update (audit + approval)
+- Strict audit: 40/100 with evidence (specs/audit/2026-11-10-audit.txt); fixed agent tables, how-to-use links, LEARNING.md, PHR-0003/0004 (`4561360`, `39eeb0f`).
+- Naveed: "APPRORED ALL PUSH". 39 pages set stable with `generated: { by: "claude-opus/5.5", at: <last commit of the page> }` and `ksor.approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }`. event-7045 left draft (TODO-VERIFY).
+- Build: 41 documents, 40 admitted to machine surfaces; llms.txt lists 40.
+- Next: Naveed opens and merges the Wave 1 PR; then Feature 05 spec/plan/tasks + evals (STOP), then provision/refresh/serve/calibrate, each after "haan".

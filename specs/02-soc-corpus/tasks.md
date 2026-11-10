@@ -43,8 +43,8 @@ verify.mjs run per page · TODO-VERIFY list reported.
 ## Finish
 - [x] **T02-17** Link pass: event ↔ MITRE ↔ playbook ↔ Wazuh rule cross-links; `npm run check` (no dangling links).
 - [x] **T02-18** 15 flashcard decks + 15 quizzes (10 events, 5 playbooks); `npm run build` quiz audit passes.
-- [ ] **STOP-R** Naveed reads Wave 1 on `npm run dev` (TODO-VERIFY must be zero on a page before it can be approved).
-- [ ] **T02-19** Record approvals exactly as Naveed gives them (ADR-0002 stamps); rebuild; `llms.txt` lists approved pages.
-- [ ] **T02-20** Update `progress.md`, `LEARNING.md`, PHR.
+- [x] **STOP-R** Naveed reads Wave 1 on `npm run dev` (TODO-VERIFY must be zero on a page before it can be approved).
+- [x] **T02-19** Record approvals exactly as Naveed gives them (ADR-0002 stamps); rebuild; `llms.txt` lists approved pages.
+- [x] **T02-20** Update `progress.md`, `LEARNING.md`, PHR.
 - [ ] **STOP-P** Naveed OKs push.
 - [ ] **T02-21** Push branch; Naveed opens PR (link given), CI green, Naveed merges.
