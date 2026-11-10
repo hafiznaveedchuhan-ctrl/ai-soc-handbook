@@ -167,3 +167,4 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Branch `feat/05-agent-surface` from main. Wrote specs/05-agent-surface/{spec,plan,tasks}.md and evals/{wave1-in-scope.tsv (40), wave1-out-of-scope.txt (20), calibrate-in.txt, run-evals.mjs, README.md}. Calibrate file format confirmed from ksor source (parseQueriesFile: one per line, # comments).
 - .env checked by name only (grep -c): KSOR_DB_URL, GEMINI_API_KEY non-empty; KSOR_AUTH=disabled-local. No value printed.
 - Next: STOP-A (approve Feature 05 docs + eval questions) → T05-02 gateway edit → HAAN steps.
+- T05-02 gateway (`8d52f3f`). T05-04 HAAN: `npm run provision` → "schema: applied 2.5 at dim 1536, text search english"; "granted: sor_content_ingest may now ingest soc-handbook".
