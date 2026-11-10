@@ -2,15 +2,17 @@
 type: Document
 title: About the SOC Triage Handbook
 description: What this handbook covers, what it declines, who reads it, and the rules every reader — person or AI agent — follows when using it.
-status: draft
+status: stable
 order: 1
+generated: { by: "claude-opus/5.5", at: 2026-11-10T07:44:21Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
-    resource: "human:naveed interview 2026-11-10T13:30:00+05:00"
+    resource: "human:naveed interview 2026-11-10"
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T07:45:24Z }
 ---
 
 > [!NOTE]
