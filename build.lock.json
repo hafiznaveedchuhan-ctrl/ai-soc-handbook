@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:fe4a47f286b47dd0bcd3c8eba22090ea4b1bd2955534a04b7f7d8eddcbd1b5fa",
+  "build_id": "sha256:87713ef0f21c3280738a68f2cd81b0434f542c8e129d3a8595da5c1d6606fd6c",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "7a05ee9a1da3f6591449ed732c43d9de90838429",
+  "source_commit": "45613601ec9cc53caee44c120ac138195a40cb4c",
   "dirty": true,
-  "as_of": "2026-11-10T09:26:18.766Z",
+  "as_of": "2026-11-10T09:29:47.768Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -126,7 +126,7 @@
     },
     {
       "path": "orientation/how-to-use.md",
-      "sha256": "a654fd0f2b2c00159410749b3737267770dacf828e6850b3f0dc18e4db10f573",
+      "sha256": "62d5794d133592ccde6f8d44cef159ab8ad4b5b5509c764c60f4c1f0237b2b02",
       "status": "draft",
       "audience": [
         "public"

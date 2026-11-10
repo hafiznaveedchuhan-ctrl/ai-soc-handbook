@@ -1,0 +1,96 @@
+SOC TRIAGE HANDBOOK — STRICT AUDIT
+Auditor role: independent judge (not the builder). Date: 2026-11-10. Branch: feat/02-soc-corpus-wave-1.
+Measured against: specs/00-final-plan.txt v3.1, section 9 "Definition of done", and specs/constitution.md.
+Rule: no score without evidence; nothing assumed.
+
+================================================================
+SCORE: 40 / 100   (38 before the fixes made during this audit)
+================================================================
+
+AREA                                   WEIGHT  SCORE  EVIDENCE
+1  Record identity & governance (F01)    10     10    PR #1 merged (186b665); instance.md scope v3; governance.yaml
+                                                      approval/takedown = [human:naveed]; people.yaml; starters and
+                                                      ksor-starter retired; npm run check ok.
+2  Corpus quality, Wave 1 (F02 W1)        20     14.5  40 drafts, every page has sources+footnotes, verify.mjs clean
+                                                      (flags only names/dates/cross-refs), live ATT&CK renumbering
+                                                      caught, Tier 2 labelled and logged (11 rows in sources.md).
+                                                      LOST: 0 of 39 approvable pages approved -> llms.txt publishes
+                                                      1 document only (system/site/out/llms.txt); event-7045 has
+                                                      4 TODO-VERIFY; Wazuh coverage is Windows-only so far.
+3  Corpus completeness (107 planned)      10      3.8  41 of 107 documents exist (find knowledge -name '*.md').
+                                                      Wave 2 (55) and Wave 3 (11) not started.
+4  Study companions (82 planned)           5      2    30 of 82 files (15 decks + 15 quizzes, Wave 1 complete);
+                                                      quiz audit passes (KSOR_DRAFTS=show build).
+5  Agent surface (F05)                    15      0    system/gateways/content.ts unchanged: server name "ksor"
+                                                      (line 43), description FLOOR only (line 62), k default 10
+                                                      (line 77). evals/ empty. No provision/ingest/serve/calibrate
+                                                      run; no retrieval: block in instance.md.
+6  CI & release (F06)                     10      1    .github/workflows has only the shipped validate.yml.
+                                                      No gitleaks, build or Playwright job; no Docker smoke test.
+7  Site UI + Quick Triage Lookup (F03)    15      0    git diff 0d2869a -- system/site: no changes. --primary is the
+                                                      scaffold blue #1d4ed8; no severity tokens; no lookup widget
+                                                      component; no screenshots; no Lighthouse run.
+8  Auth (F04)                              5      0    sign-in control is the scaffold's, unconfigured; no provider
+                                                      ADR; no spec.
+9  SDD process & documentation            10      8.7  constitution, final plan v3.1, specs 01 and 02, ADR 0001-0003,
+                                                      PHR 0001-0003, progress.md (sessions 1-2), interview notes,
+                                                      review sheet. LEARNING.md updated during this audit.
+                                                      LOST: specs for 03/04/05/06 not yet written (expected later);
+                                                      no ADR yet for scope v3 or the MITRE renumbering decision.
+                                        -----  -----
+                                         100   40
+
+================================================================
+WHAT IS GENUINELY STRONG (evidence)
+================================================================
+- Governance is real, not decorative: only human:naveed can approve; no approval was ever written
+  on his behalf (grep "approval:" knowledge -> only orientation/overview, approved 2026-11-10T07:45:24Z).
+- Citation discipline: every Wave 1 page passes npm run check; unused-source and orphan-footnote
+  scan found 0 problems; values checked with verify.mjs against saved source text.
+- Correctness traps avoided with evidence: Wazuh levels are 0-16 not 0-15; T1070.001 now redirects
+  to T1685.005; Wazuh rule MITRE tags disagree (60117 T1070.004 vs 63103 T1070) and are not copied;
+  4648 has no default Wazuh rule (all 168 rule files searched); rule 60122 does not read Status.
+- Privacy: no employer or client name in knowledge/; .env untracked (git ls-files .env -> 0).
+
+================================================================
+DEFECTS FOUND AND FIXED DURING THIS AUDIT
+================================================================
+D1  Playbooks (5) and examples (3) lacked the Part 3 "For the agent" table   -> fixed (4561360)
+D2  how-to-use pointed to "the Windows events section" etc. with no links    -> fixed (real links)
+D3  LEARNING.md stale (described Feature 01 only)                            -> fixed
+D4  No PHR for the delegated interview and Wave 1 work                       -> PHR-0003 added
+
+================================================================
+OPEN DEFECTS (cannot be fixed by the builder alone)
+================================================================
+O1  39 pages unapproved -> nothing of Wave 1 is published.           Needs: Naveed "approved ...".
+O2  event-7045 fields / audit setting / MITRE unconfirmed.            Needs: Wave 2 (4697, T1543.003).
+O3  Agent surface not built.                                          Needs: Naveed "haan" for Neon/Gemini.
+O4  Site UI and Quick Triage Lookup not built.                        Needs: Feature 03 (after 05, 06).
+O5  Auth not configured.                                              Needs: provider choice + Naveed's account.
+O6  Wave 1 not merged.                                                Needs: Naveed OK for push + PR merge.
+
+================================================================
+PATH TO 100 (points recoverable, in plan order)
+================================================================
+STEP                                                       +POINTS  GATE (who)
+1  Approve the 39 ready Wave 1 pages; PR + merge             +5.5   Naveed: "approved all", "push", merge
+2  Feature 05: gateway tuning (name, scoped description, k=5),
+   evals (in-scope + out-of-scope), provision, refresh, serve,
+   calibrate, report pass rate                              +15     Naveed: "haan" per paid step
+3  Feature 06: gitleaks, check, build, Playwright smoke,
+   Docker smoke                                             +9      Naveed: PR merge
+4  Feature 03: SOC-console theme, severity tokens, derived home,
+   Quick Triage Lookup (build-time, admitted docs only),
+   WCAG AA, Lighthouse >= 90, screenshots                   +15     Naveed: screenshot approval
+5  Feature 04: provider ADR, configured sign-in, honest docs  +5     Naveed: provider + app setup
+6  Wave 2 (55 docs + 30 study files), closes event-7045       +11    Naveed: URL lists, interview, approval
+7  Wave 3 (11 docs + 22 study files)                          +4.3   Naveed: approval
+8  Specs 03-06, ADRs for scope v3 and ATT&CK renumbering,
+   final progress/LEARNING                                    +1.3   builder
+                                                             ------
+                                                              +60  -> 100
+
+VERDICT: The work that exists is high quality and honestly governed, but the project is about 40%
+of the locked plan. A 100/100 is reachable only by completing Features 05, 06, 03, 04 and Waves 2-3;
+no amount of polishing Wave 1 can earn the 60 missing points.

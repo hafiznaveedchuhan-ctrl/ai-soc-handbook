@@ -2,7 +2,7 @@
 
 A guide for Naveed (and anyone new) to every folder and file here: what it is,
 why it exists, and which command uses it. Updated whenever a feature adds
-something. Last updated: 2026-11-10 (Feature 01 complete: one stable document, `orientation/overview`; starter samples retired).
+something. Last updated: 2026-11-10 (Feature 01 merged; Feature 02 Wave 1 written — 40 drafts, 15 flashcard decks, 15 quizzes — awaiting the owner's approval).
 
 ## The big picture in one flow
 
@@ -70,13 +70,58 @@ knowledge/*.md  ───────────────►  npm run build 
 | `evals/` | Question sets for calibration and retrieval tests | Feature 05 |
 | `node_modules/` | Installed packages (incl. ksor docs in `node_modules/@panaversity/ksor/docs/`) | Never edit |
 
+## Inside `knowledge/` (Wave 1)
+
+| Folder | Holds | Page type | Order |
+|---|---|---|---|
+| `orientation/` | overview, how-to-use, glossary | Document / Definition | 1–3 |
+| `rules-map/` | invariants, escalation policy, severity model, data handling | Policy / Standard | 200+ |
+| `windows-events/` | one page per Event ID (4624 … 7045) + `.flashcards.yaml` + `.quiz.yaml` | Definition | 300+ |
+| `wazuh/` | architecture, alert JSON anatomy, rule levels, Windows rules reference | Definition / Standard | 600+ |
+| `mitre/` | one page per ATT&CK technique (T1110 … T1685.005) | Standard | 700+ |
+| `playbooks/` | five L1 procedures + flashcards + quiz | Procedure | 800+ |
+| `enrichment/` | IP reputation policy, private IP ranges | Policy / Definition | 900+ |
+| `triage-note/` | note template, writing rules, three illustrative examples | Policy / Example | 1000+ |
+
+Every page has three parts: **In plain words** (a NOTE callout, not citable),
+the **authority content** (every load-bearing value has a footnote naming its
+source), and a **For the agent** table. A folder sorts by its lowest `order:`
+(ADR-0003).
+
+### How a page is checked before you approve it
+
+1. Sources are fetched and saved as text in the session scratchpad (never in
+   `knowledge/`).
+2. `node .agents/skills/add-sources/verify.mjs <source.txt> <page.md>` lists
+   every number, code or name in the page that is not in the source.
+3. `npm run check` (format rules) and `npm run build` (site build + quiz audit:
+   no answer position above 60%, no "pick the longest" trick, no run of 4).
+4. Anything still unconfirmed is marked `TODO-VERIFY`; such a page stays draft.
+
+### Where the owner's own knowledge is recorded
+
+`specs/02-soc-corpus/interview-i1.md` holds the interview answers (escalation
+conditions, severity, masking, AbuseIPDB bands, note template). Pages cite it as
+`human:naveed interview 2026-11-10`. `specs/02-soc-corpus/sources.md` logs every
+approved Tier 1 list and every Tier 2 source. `specs/02-soc-corpus/wave1-review.txt`
+is the one-page review sheet for approval.
+
+### What the MITRE renumbering taught us
+
+ATT&CK changes. On 2026-11-10 `T1070.001` redirected to `T1685.005` and
+`T1562.001` to `T1685`, and tactic TA0005 is now "Stealth". The handbook takes
+IDs from the live site, never from memory, and never copies the IDs written
+inside Wazuh rules into a triage note.
+
 ## Commands
 
 | Command | Costs money / touches cloud? | What it does |
 |---|---|---|
 | `npm run check` | no | Format checker: frontmatter, filenames, links, governance |
 | `npm run dev` | no | Website at http://localhost:3000 with drafts visible |
-| `npm run build` | no | `ksor build` + static site into `system/site/out/` |
+| `npm run build` | no | `ksor build` + static site into `system/site/out/` (runs the quiz audit) |
+| `KSOR_DRAFTS=show npm run build` | no | Review build that also renders drafts (noindex); never for shipping |
+| `node .agents/skills/add-sources/verify.mjs <src> <page>` | no | Lists values in a page that are not in its source |
 | `npm run provision` | **yes (Neon) — needs "haan"** | `ksor schema --apply` + `ksor grant`: create tables, authorize ingest (once) |
 | `npm run refresh` | **yes (Neon + Gemini) — needs "haan"** | build + `ksor ingest --flip` + `ksor gc` |
 | `npm run serve` | **yes (Neon) — needs "haan"** | MCP server at 127.0.0.1:8080 |
