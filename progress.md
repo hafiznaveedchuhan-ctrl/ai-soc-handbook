@@ -189,7 +189,7 @@ HANDOFF §3 (A if key done, else B: N3 URL list).
 ### Done this session (files changed + commit hash)
 - N3 URL list `specs/02-soc-corpus/networking-n3-urls.txt`; Naveed: "both ok" (URLs + RFC 8633).
 - N3 written (8 drafts, order 1320–1327): routing-basics, routing-protocols-overview, nat-and-pat, vlans-and-switching, dhcp, dns, ntp-and-time-sync, wireless-basics.
-- `scripts/authoring/netsrc.py` (N3 sources), `scripts/authoring/example-batch-generator-n3.py`, sources.md N3 row, networking-tasks TN-05 ticked. Commit: see `git log` (N3 commit, local only — not pushed).
+- `scripts/authoring/netsrc.py` (N3 sources), `scripts/authoring/example-batch-generator-n3.py`, sources.md N3 row, networking-tasks TN-05 ticked. Commit `309dfc5` (local only — not pushed).
 
 ### Current state
 HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still blocked on Gemini key.
