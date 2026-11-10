@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "build_id": "sha256:64a347a37424305ba0d5219445e37d88f7663d0256592eb89d0554e3e7435b9b",
+  "build_id": "sha256:fe4a47f286b47dd0bcd3c8eba22090ea4b1bd2955534a04b7f7d8eddcbd1b5fa",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
@@ -8,8 +8,8 @@
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
   "source_commit": "7a05ee9a1da3f6591449ed732c43d9de90838429",
-  "dirty": false,
-  "as_of": "2026-11-10T09:23:23.682Z",
+  "dirty": true,
+  "as_of": "2026-11-10T09:26:18.766Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -146,7 +146,7 @@
     },
     {
       "path": "playbooks/added-to-admin-group.md",
-      "sha256": "aeb832d284b5ce2add3bedd8e5d6ee2e2b68ec811cfbc02b844980aaa683a965",
+      "sha256": "d033e35d2748a3feb3ade7ad2a4b08e0933c29658d67c7f9faebc7080b2b979c",
       "status": "draft",
       "audience": [
         "public"
@@ -155,7 +155,7 @@
     },
     {
       "path": "playbooks/audit-log-cleared.md",
-      "sha256": "f974e0f5b18bd37c27921eab4048c3536f144cf97b4007a79fa5c9207f032d5f",
+      "sha256": "808432a25e5e6a0661ab8638ef6b728842bf8be675ad3d843a3451de8fe7333b",
       "status": "draft",
       "audience": [
         "public"
@@ -164,7 +164,7 @@
     },
     {
       "path": "playbooks/brute-force.md",
-      "sha256": "0852c68b2b75adcf58dd278a6fefbab14ea2acc0450204e60787bf0a7c848c8a",
+      "sha256": "d99842971b95991ac7be1cf9b63122cf642cc32da0507ad2ae61d02cd83fbf57",
       "status": "draft",
       "audience": [
         "public"
@@ -173,7 +173,7 @@
     },
     {
       "path": "playbooks/new-local-account.md",
-      "sha256": "c24bc4f16bc6bed42dcfb756bc247893bbbac4c0bc38a91face9860e829d8969",
+      "sha256": "6ed6b3964664331192b0034c5fb05bcb2bcbce35a0f3d0e44111a97fc58961ce",
       "status": "draft",
       "audience": [
         "public"
@@ -182,7 +182,7 @@
     },
     {
       "path": "playbooks/success-after-failures.md",
-      "sha256": "b5481b382c119a60c39c6a49ca096b243c9884e94b62d8e7ff589ab886b13ccb",
+      "sha256": "13f3bdab3acd73fd39bf6a5ab3a6b5e4f566995be50f78dd8e4099fe8a4b5d78",
       "status": "draft",
       "audience": [
         "public"
@@ -227,7 +227,7 @@
     },
     {
       "path": "triage-note/example-false-positive.md",
-      "sha256": "2040ebb533d3c305005ef6c583f18ac0c23774fe87fee70af2d3736f5fd5a606",
+      "sha256": "60fbbe79c819a45be30e239dab60d07781fdca33043f25b3f68629763da94672",
       "status": "draft",
       "audience": [
         "public"
@@ -236,7 +236,7 @@
     },
     {
       "path": "triage-note/example-needs-info.md",
-      "sha256": "6b3d6ddde4516dee4ff33a245c333f8ff0d46e66473e7a7d65adae28219edb10",
+      "sha256": "d0b8d911dd885a39839f906e586f94628a21712cfd2cf85b6c81c127ded06608",
       "status": "draft",
       "audience": [
         "public"
@@ -245,7 +245,7 @@
     },
     {
       "path": "triage-note/example-true-positive.md",
-      "sha256": "fb8f091ef7c2ee11afdff3f3741840cca3e9a4a70b2427b100cb91219500f3bb",
+      "sha256": "6cf1ce9f620d6f09341de2d20b3aae2436e55430dbd499230379df18630196a8",
       "status": "draft",
       "audience": [
         "public"

@@ -70,6 +70,15 @@ Final decision: human analyst
 | Confidence 0.85 | High band (0.70–1.00): same source, success right after failures |
 | Masking | `<USER-1>`, `<HOST-1>`, `<IP-1>` per data handling[^naveed-interview-2026-11-10] |
 
+## For the agent
+
+| Use | How |
+|---|---|
+| As a model note | Copy the field order and line style; replace every value with the real, masked alert data |
+| Values | Everything here is illustrative — never cite an example's values as evidence |
+| Reasoning | Follow the "why" table: each line maps to a rule, policy or event page |
+| Final line | Always "Final decision: human analyst" |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624

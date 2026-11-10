@@ -114,6 +114,17 @@ the credentials of existing accounts.[^mitre-t1078]
 
 These limits come from the handbook's [invariants](../rules-map/invariants.md).[^naveed-interview-2026-11-10]
 
+## For the agent
+
+| Step | Agent does | Output |
+|---|---|---|
+| Trigger | 4624 ≤ 60 min after 60204 or ≥ 8 failures, same account/source | Open this playbook |
+| Timeline | First failure, last failure, success (UTC) | Ordered list |
+| Source | Compare 4624 `IpAddress` / `WorkstationName` with the failures | same / different |
+| Session | 4688 and 4672 with the 4624 `TargetLogonId` | Processes, privileges |
+| Escalate | Always condition 4 (+2 if privileged) | "yes — condition 4" |
+| Note | Template + writing rules | Draft note; final decision: human analyst |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), CSF elements RS.MA-02, RS.MA-03, RS.AN-03, DE.AE-08. https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624

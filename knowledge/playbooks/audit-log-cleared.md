@@ -104,6 +104,18 @@ severity is Critical.[^naveed-interview-2026-11-10]
 
 These limits come from the handbook's [invariants](../rules-map/invariants.md).[^naveed-interview-2026-11-10]
 
+## For the agent
+
+| Step | Agent does | Output |
+|---|---|---|
+| Trigger | `rule.id` 60117 or 63103 on 1102 | Open this playbook |
+| Who | `SubjectUserName`, `SubjectLogonId` → matching 4624 | Actor, session source |
+| How | 4688 for wevtutil.exe `cl` or `Remove-EventLog` | Command line |
+| Before | 4720, 4732, 4688, 7045 for the same account/host | Preceding activity |
+| Reason | Maintenance / agent rollout / provisioning record — ask the analyst | needs-info if missing |
+| Escalate | Condition 3 unless documented; severity Critical | "yes — condition 3" |
+| MITRE | T1685.005 | Technique ID |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^ms-1102]: Microsoft Learn, "1102(S): The audit log was cleared". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102
 [^mitre-t1685-005]: MITRE ATT&CK, "Disable or Modify Tools: Clear Windows Event Logs, Sub-technique T1685.005". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1685/005/

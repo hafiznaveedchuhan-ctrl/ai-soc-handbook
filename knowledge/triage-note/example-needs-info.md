@@ -66,6 +66,15 @@ Final decision: human analyst
 | needs-info | The deciding evidence (maintenance record) is missing — the note lists it[^naveed-interview-2026-11-10] |
 | Confidence 0.40 | Medium band (0.40–0.69) |
 
+## For the agent
+
+| Use | How |
+|---|---|
+| As a model note | Copy the field order and line style; replace every value with the real, masked alert data |
+| Values | Everything here is illustrative — never cite an example's values as evidence |
+| Reasoning | Follow the "why" table: each line maps to a rule, policy or event page |
+| Final line | Always "Final decision: human analyst" |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^ms-1102]: Microsoft Learn, "1102(S): The audit log was cleared". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

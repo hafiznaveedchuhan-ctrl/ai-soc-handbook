@@ -1,0 +1,164 @@
+SOC TRIAGE HANDBOOK — WAVE 1 REVIEW SHEET (for Naveed)
+Generated 2026-11-10. Read on http://localhost:3000/docs/<path>/
+
+HOW TO APPROVE: reply 'approved all' (39 pages), or 'approved: <folder>, <folder>', or 'change <X> in <page>'.
+NOT READY: windows-events/event-7045 (4 TODO-VERIFY, waits for Wave 2). orientation/overview is already stable.
+
+PAGE | TYPE | SOURCES | WHAT IT SAYS | WHAT TO SPOT-CHECK
+
+enrichment/ip-reputation-policy  [Policy, 3 sources]
+   says:  How an L1 analyst reads an AbuseIPDB result — what abuseConfidenceScore means, the handbook's score bands, which fields to note, and which addresses are never looked up.
+   check: Bands 0 / 1-24 / 25-74 / 75-100 = your Q6; AbuseIPDB: <25% too wide, 75-100% recommended for blocking
+
+enrichment/private-ip-ranges  [Definition, 4 sources]
+   says:  The IPv4 private ranges reserved by RFC 1918 and the IPv6 unique local range from RFC 4193 — how to recognise an internal address in an alert and why it is never sent for reputation lookup.
+   check: 10/8, 172.16/12, 192.168/16 (RFC 1918); FC00::/7 (RFC 4193)
+
+mitre/t1059-001-powershell  [Standard, 6 sources]
+   says:  MITRE ATT&CK T1059.001 PowerShell — adversaries running commands and scripts through PowerShell; what to look for in process creation, command lines and PowerShell logging.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1078-valid-accounts  [Standard, 5 sources]
+   says:  MITRE ATT&CK T1078 Valid Accounts — adversaries logging on with real, stolen or inactive credentials; why it looks like normal activity, and the logon patterns that give it away.
+   check: Tactics Stealth, Persistence, Privilege Escalation, Initial Access
+
+mitre/t1098-account-manipulation  [Standard, 4 sources]
+   says:  MITRE ATT&CK T1098 Account Manipulation — changing accounts or their group memberships to keep or raise access; including the sub-technique for adding accounts to local or domain groups, and how it appears as event 4732.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1110-001-password-guessing  [Standard, 2 sources]
+   says:  MITRE ATT&CK T1110.001 Password Guessing — repeated password attempts against one account or a few accounts, the services it targets, and how the pattern appears in Windows failed-logon events.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1110-003-password-spraying  [Standard, 2 sources]
+   says:  MITRE ATT&CK T1110.003 Password Spraying — one or a few common passwords tried against many accounts to avoid lockouts; why it can slip under per-account and per-source thresholds, and what to look for.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1110-brute-force  [Standard, 4 sources]
+   says:  MITRE ATT&CK T1110 Brute Force — guessing or cracking credentials to get into accounts; its sub-techniques, how it shows up in Windows and Wazuh alerts, and what to look for.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1136-001-local-account  [Standard, 5 sources]
+   says:  MITRE ATT&CK T1136.001 Local Account — adversaries creating a local account to keep access; how it appears as event 4720 and as net user /add on the command line.
+   check: read Part 1 and the agent table; open one footnote link
+
+mitre/t1685-005-clear-windows-event-logs  [Standard, 7 sources]
+   says:  MITRE ATT&CK T1685.005 Clear Windows Event Logs (formerly T1070.001) — adversaries wiping Windows event logs to hide their activity; the commands used and how it appears as event 1102.
+   check: T1070.001 redirects to T1685.005; tactic Defense Impairment
+
+orientation/glossary  [Definition, 14 sources]
+   says:  Core SOC triage terms — SIEM, log, event, alert, incident, IOC, false positive and negative, tactic and technique, decoder and rule — defined from NIST, MITRE ATT&CK and Wazuh sources.
+   check: read Part 1 and the agent table; open one footnote link
+
+orientation/how-to-use  [Document, 1 sources]
+   says:  How SOC analysts and the soc-worker agent find, read and cite pages in this handbook, and what each part of a page is for.
+   check: read Part 1 and the agent table; open one footnote link
+
+playbooks/added-to-admin-group  [Procedure, 5 sources]
+   says:  L1 steps for event 4732 into the local Administrators group (Wazuh 60154) — who added whom, whether it was planned, and why it is an immediate escalation when it was not.
+   check: read Part 1 and the agent table; open one footnote link
+
+playbooks/audit-log-cleared  [Procedure, 6 sources]
+   says:  L1 steps for event 1102 — who cleared the Security log from which session, what happened just before, and why it is escalated unless a documented maintenance reason exists.
+   check: read Part 1 and the agent table; open one footnote link
+
+playbooks/brute-force  [Procedure, 8 sources]
+   says:  L1 steps for a burst of failed Windows logons — confirm the pattern, collect counts and sources, enrich the source IP, decide guessing vs spraying vs benign, and escalate on success or privileged targets.
+   check: Trigger 60204/60122; escalation conditions 4, 2, 1
+
+playbooks/new-local-account  [Procedure, 6 sources]
+   says:  L1 steps for event 4720 — identify who created which account, check its attributes against Microsoft's anomaly list, look for the command that created it and any group membership that followed.
+   check: read Part 1 and the agent table; open one footnote link
+
+playbooks/success-after-failures  [Procedure, 7 sources]
+   says:  L1 steps when an account that just produced many failed logons then logs on successfully — the moment a brute-force attempt may have worked; always an immediate escalation.
+   check: Always escalated (condition 4)
+
+rules-map/data-handling  [Policy, 2 sources]
+   says:  How alert data is masked before it reaches any language model, what may never appear in the handbook or a prompt, and what a triage note keeps.
+   check: Masking tokens; RFC 1918 ranges
+
+rules-map/escalation-policy  [Policy, 4 sources]
+   says:  The eight conditions under which an L1 analyst escalates an alert to L2 immediately, with the alert fields and handbook pages that show each one.
+   check: 8 conditions = your I1 answers; level 12 reason (Wazuh "High importance event", email threshold 12)
+
+rules-map/invariants  [Policy, 1 sources]
+   says:  The five rules every analyst and every AI agent using this handbook follows without exception — humans decide, the AI never acts, read-only access, masking before any LLM, cite or abstain.
+   check: 5 rules = your I1 answer Q1
+
+rules-map/severity-model  [Standard, 4 sources]
+   says:  How the handbook rates an alert Low, Medium, High or Critical from its Wazuh rule level and the escalation conditions, and how context may raise but never lower that rating.
+   check: Critical/High/Medium/Low table = your I1 answer Q3
+
+triage-note/example-false-positive  [Example, 3 sources]
+   says:  An illustrative, fully masked triage note where repeated failed logons and a lockout came from one user's own device holding an old saved password — verdict false positive, not escalated.
+   check: read Part 1 and the agent table; open one footnote link
+
+triage-note/example-needs-info  [Example, 3 sources]
+   says:  An illustrative, fully masked triage note for a Security log clear by an admin account where no maintenance record can be confirmed yet — verdict needs-info, escalated under condition 3.
+   check: read Part 1 and the agent table; open one footnote link
+
+triage-note/example-true-positive  [Example, 3 sources]
+   says:  An illustrative, fully masked triage note for a brute-force burst against one account that ended in a successful RDP logon — verdict true positive, escalated under condition 4.
+   check: read Part 1 and the agent table; open one footnote link
+
+triage-note/note-template  [Policy, 2 sources]
+   says:  The fixed structure of every triage note — fields, order and allowed values — written by an analyst or drafted by the soc-worker agent for a human to confirm.
+   check: Template fields = your Q7
+
+triage-note/writing-rules  [Policy, 1 sources]
+   says:  The writing rules for a triage note — facts separated from inferences, a source for every fact, masked values, no guessing, how to choose confidence, and plain English.
+   check: 7 rules = your Q7
+
+wazuh/alert-json-anatomy  [Definition, 6 sources]
+   says:  The fields of a Wazuh alert in JSON — rule, agent, manager, decoder, data, full_log, location — and which ones an L1 analyst reads first, including the data.win fields of Windows events.
+   check: read Part 1 and the agent table; open one footnote link
+
+wazuh/architecture  [Definition, 5 sources]
+   says:  How a Wazuh deployment moves security data from the agent on an endpoint through the server, indexer and dashboard, with the default ports each link uses.
+   check: read Part 1 and the agent table; open one footnote link
+
+wazuh/rule-levels  [Standard, 2 sources]
+   says:  The seventeen Wazuh rule levels from 0 to 16, what each means, and the default thresholds at which an event becomes an alert or an email.
+   check: Levels 0-16 vs Wazuh rules-classification
+
+wazuh/windows-rules-reference  [Definition, 7 sources]
+   says:  The default Wazuh rules (ruleset v4.14.10) that fire on the Windows events in this handbook — rule IDs, levels, parent rules, correlation thresholds and the MITRE tags written in each rule — with links to the rule files.
+   check: Spot-check 3 rule rows against 0580-win-security_rules.xml
+
+windows-events/event-1102  [Definition, 4 sources]
+   says:  Windows Security event 1102 — the Security audit log was cleared; who cleared it, why it should rarely happen, and the Wazuh rules that alert on it.
+   check: Wazuh 60117 L9 / 63103 L5; use T1685.005
+
+windows-events/event-4624  [Definition, 4 sources]
+   says:  Windows Security event 4624 — what a successful logon record means, its key fields and Logon Types, and the patterns that make it worth a second look.
+   check: Logon Type table 0,2-5,7-13 vs Microsoft
+
+windows-events/event-4625  [Definition, 4 sources]
+   says:  Windows Security event 4625 — what a failed logon record means, its key fields, Logon Types and the Status / Sub Status codes Microsoft says to monitor, and how to read a run of failures.
+   check: 11 Status/SubStatus codes vs Microsoft table; Wazuh 60204 = 8 in 240 s
+
+windows-events/event-4648  [Definition, 5 sources]
+   says:  Windows Security event 4648 — a process logging on by naming an account's credentials explicitly (RunAs, scheduled tasks), its key fields, and when such a logon deserves attention.
+   check: read Part 1 and the agent table; open one footnote link
+
+windows-events/event-4672  [Definition, 5 sources]
+   says:  Windows Security event 4672 — a new logon session received sensitive (administrator-equivalent) privileges; which privileges trigger it, its fields, and when it is not routine.
+   check: read Part 1 and the agent table; open one footnote link
+
+windows-events/event-4688  [Definition, 4 sources]
+   says:  Windows Security event 4688 — a process started; its creator and target accounts, process names, command line, token elevation type and integrity label, and the patterns that make a process worth checking.
+   check: read Part 1 and the agent table; open one footnote link
+
+windows-events/event-4720  [Definition, 4 sources]
+   says:  Windows Security event 4720 — a new user account was created; who created it, the new account's attributes, the values Microsoft says are anomalies, and the Wazuh rule that alerts on it.
+   check: read Part 1 and the agent table; open one footnote link
+
+windows-events/event-4732  [Definition, 4 sources]
+   says:  Windows Security event 4732 — an account was added to a local security group such as Administrators; its fields, the groups that matter most, and the Wazuh rules that raise the level for privileged groups.
+   check: Wazuh 60154 level 12, targetSid S-1-5-32-544
+
+windows-events/event-4740  [Definition, 5 sources]
+   says:  Windows Security event 4740 — an account was locked after failed logons; which account, from which caller computer, and when a lockout points to password guessing rather than a forgotten password.
+   check: read Part 1 and the agent table; open one footnote link
+

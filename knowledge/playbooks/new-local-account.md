@@ -90,6 +90,18 @@ the rows are this playbook's application of them, for the analyst to judge.
 | Creator is a privileged account behaving unexpectedly | **Yes** | 2 |
 | Expected creator, normal attributes, no group change | No | — |
 
+## For the agent
+
+| Step | Agent does | Output |
+|---|---|---|
+| Trigger | `rule.id` 60109 on 4720 | Open this playbook |
+| Who/what | `SubjectUserName`, `TargetUserName`, `SamAccountName` | Creator, new account |
+| Attributes | Compare with Microsoft's typical values (Primary Group 513, delegation, SID History, flags) | List of anomalies |
+| Command | 4688 for net.exe / powershell.exe just before | Process + command line |
+| Group change | 4732 / 60154 after | yes/no |
+| Escalate | Added to Administrators (6); privileged creator acting unexpectedly (2) | Condition number or "no" |
+| Note | Template + writing rules | Draft note; final decision: human analyst |
+
 [^naveed-interview-2026-11-10]
 
 ## MITRE ATT&CK

@@ -70,6 +70,15 @@ Final decision: human analyst
 | Not escalated | Ordinary account, one internal source, no success, owner confirmed — no escalation condition applies[^naveed-interview-2026-11-10] |
 | Medium | Wazuh level 9 with no condition = Medium in the severity model[^naveed-interview-2026-11-10] |
 
+## For the agent
+
+| Use | How |
+|---|---|
+| As a model note | Copy the field order and line style; replace every value with the real, masked alert data |
+| Values | Everything here is illustrative — never cite an example's values as evidence |
+| Reasoning | Follow the "why" table: each line maps to a rule, policy or event page |
+| Final line | Always "Final decision: human analyst" |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^ms-4740]: Microsoft Learn, "4740(S): A user account was locked out". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4740
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625

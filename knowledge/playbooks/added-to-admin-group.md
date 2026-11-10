@@ -99,6 +99,18 @@ sub-technique T1098.007 Additional Local or Domain Groups.[^mitre-t1098]
 
 These limits come from the handbook's [invariants](../rules-map/invariants.md).[^naveed-interview-2026-11-10]
 
+## For the agent
+
+| Step | Agent does | Output |
+|---|---|---|
+| Trigger | `rule.id` 60154 (`targetSid` S-1-5-32-544) | Open this playbook |
+| Who | `MemberSid` added by `SubjectUserName` | Member, actor |
+| New member? | 4720 for the member shortly before | yes/no |
+| Command | 4688 with `localgroup … /add` or `Add-LocalGroupMember` | Command line |
+| Change record | Ask the analyst; the agent cannot confirm it | needs-info if missing |
+| Escalate | Condition 6 unless a change record exists; Critical on a DC | Condition number |
+| Note | Template + writing rules | Draft note; final decision: human analyst |
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^ms-4732]: Microsoft Learn, "4732(S): A member was added to a security-enabled local group". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4732
 [^mitre-t1098]: MITRE ATT&CK, "Account Manipulation, Technique T1098". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1098/
