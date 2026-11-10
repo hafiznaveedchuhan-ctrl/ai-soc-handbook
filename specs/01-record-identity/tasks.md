@@ -13,14 +13,14 @@ a point where Claude waits for Naveed.
   Verify by: `cat CLAUDE.md` is exactly `@AGENTS.md`; `npm run check` ok; `progress.md` has the 9 sections.
 - [x] **T01-05** Write this spec, plan, tasks.
   Verify by: `npm run check` and `npm run build` still pass (no knowledge change).
-- [ ] **STOP-A** Naveed approves constitution, ADRs, and Feature 01 spec/plan/tasks.
+- [x] **STOP-A** Naveed approves constitution, ADRs, and Feature 01 spec/plan/tasks.
 - [ ] **T01-06** [Naveed] Create private GitHub repo `ai-soc-handbook`; `git remote add origin …`.
   Verify by: `git remote -v` shows origin.
-- [ ] **T01-07** Rewrite `instance.md` (name `soc-handbook`, title, description, body); keep `format`, `toolchain`, `database`.
+- [x] **T01-07** Rewrite `instance.md` (name `soc-handbook`, title, description, body); keep `format`, `toolchain`, `database`.
   Verify by: `npm run check` exit 0.
-- [ ] **T01-08** Rewrite `.ksor/governance.yaml` (`human:naveed`, keep `ksor-starter/0.0.61` for now) and `.ksor/people.yaml`.
+- [x] **T01-08** Rewrite `.ksor/governance.yaml` (`human:naveed`, keep `ksor-starter/0.0.61` for now) and `.ksor/people.yaml`.
   Verify by: `grep -rn "human:you" .ksor knowledge` empty; `npm run check` exit 0.
-- [ ] **T01-09** `npx ksor build` + `npm run build`; commit with regenerated indexes and `build.lock.json`.
+- [x] **T01-09** `npx ksor build` + `npm run build`; commit with regenerated indexes and `build.lock.json`.
   Verify by: both exit 0; `system/site/out/llms.txt` shows new name/description.
 - [ ] **STOP-B** Naveed reads `instance.md` back, restarts/opens `npm run dev`, confirms title and name.
 - [ ] **T01-10** Draft `knowledge/orientation/overview.md` (status draft, order 1, three-part body, interview source).
