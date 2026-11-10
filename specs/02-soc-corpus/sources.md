@@ -20,6 +20,7 @@ unattributed blogs, AI text) are never cited.
 | B4 | rules-map, triage-note | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf (RS.MA-02, RS.MA-04, RS.AN-03, GV.RM-06); Wazuh rules-classification + alert-management | 2026-11-10 |
 | B4 | enrichment | https://docs.abuseipdb.com/, https://www.abuseipdb.com/faq.html, https://www.rfc-editor.org/rfc/rfc1918, https://www.rfc-editor.org/rfc/rfc4193 | 2026-11-10 |
 | B4 | (dropped) | CISA IR playbooks page — 403 to automated requests; not used | 2026-11-10 |
+| B5 | playbooks | https://documentation.wazuh.com/current/proof-of-concept-guide/detect-brute-force-attack.html (+ all earlier approved sources reused) | 2026-11-10 |
 
 ## Tier 2 log
 

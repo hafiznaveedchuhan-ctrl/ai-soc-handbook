@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — B1–B4 written (32 drafts), waiting at STOP-B4 |
+| 02 soc-corpus Wave 1 | implementing — all 40 drafts written (B1–B5) + link pass; waiting at STOP-B5 |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -141,3 +141,11 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - pypdf 5.1.0 installed in a scratchpad venv (not in the project) to read the NIST PDF.
 - TODO-VERIFY now: playbook links (link pass), alert-json-anatomy `rule.mitre.*`, t1059-001 PowerShell log IDs, event-7045 fields/policy/MITRE.
 - Next: STOP-B4 check → T02-14 B5 URL list (playbooks + examples).
+
+### Session 2 — update (B5)
+- Pushed `dad2e31` at Naveed's request.
+- B5 written: playbooks/{brute-force, success-after-failures, new-local-account, added-to-admin-group, audit-log-cleared}; triage-note/{example-true-positive, example-false-positive, example-needs-info} (illustrative, masked, relative times).
+- Link pass done: every event and MITRE page now links its playbook(s); Wave 2 playbooks named as planned, no dangling links.
+- Verdict tables cite the glossary definitions (interview) and say the rows are the playbook's application, not the owner's words.
+- Remaining TODO-VERIFY (6 lines, 3 pages): alert-json-anatomy `rule.mitre.*`; t1059-001 PowerShell log event IDs; event-7045 policy/fields/MITRE.
+- Next: STOP-B5 → approve 2 extra URLs to close TODOs → T02-18 flashcards + quizzes.
