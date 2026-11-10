@@ -1,19 +1,19 @@
 {
   "format": 1,
-  "build_id": "sha256:71d306faf806b079cd8c410365758bd68cb4d6a990e850e128ba3d20c09647f7",
+  "build_id": "sha256:b653647602bd5775b1ac54fdd2bb35ac4d6226a00c04cc736edcdf56e9dd14d8",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "0d2869a293138aafafa509efee67ea3f6ed5998e",
+  "source_commit": "5793a7b7df026d5b49e7b60f0a11840790d164a9",
   "dirty": false,
-  "as_of": "2026-11-10T07:24:51.720Z",
+  "as_of": "2026-11-10T07:30:03.043Z",
   "drafts": "hidden",
-  "instance_sha256": "b9228a0aa6813c8b4dcd5ce02d221e8003fcc8e27c7c847181465d32ce966a70",
-  "policy_sha256": "eade322f855d289f9b0ec5f32a40785da2d61269c5d7fc8669dd3cda853da339",
-  "people_sha256": "01755a5e3cf0b00cd93a6844a765547fff8c5e22e378098193e13044a9bb4721",
+  "instance_sha256": "17f78443531ad7c51b7a2a0fc12800a72d40b01f830dd85a9d59e8a0dedb2c8e",
+  "policy_sha256": "a5c10073117cbdbcb86cad77820527cffb891a64daee3997ee4315b3f67ede53",
+  "people_sha256": "e7752a6ce8aa430cf257125e70cf3dbbfb019669a4569d24219d34c8208ca26b",
   "ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "ledger_entries": [],
   "audiences": {
@@ -91,7 +91,7 @@
   "indexes": [
     {
       "path": "index.md",
-      "sha256": "29a2c8dab95c24cf21ba55634c2b9a88f16e624307b594e9eae41d113a99a16c"
+      "sha256": "6b266f6db7e702c08d53411f902fc6a8b25f7adfebb366d33517547b924331d3"
     },
     {
       "path": "surfaces/index.md",
@@ -101,7 +101,7 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "140de09b946b9d36ca4a72688e048dda56d8ae6a00e14644e72e076bd384c00e",
+      "sha256": "cf3a16559ea73f2381ad1b1c2933344df17b85b40ea9ba3c589fa473aeb36893",
       "files": 8
     }
   ]
