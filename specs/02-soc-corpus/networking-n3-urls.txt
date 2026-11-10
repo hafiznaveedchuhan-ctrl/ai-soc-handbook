@@ -1,0 +1,53 @@
+NETWORKING N3 — SOURCE URL LIST (STOP: needs Naveed's approval before any fetch/write)
+Written 2026-11-10, session 3. Branch feat/02-networking. Order numbers 1320-1327.
+Status of every RFC checked live on rfc-editor.org JSON (obsoleted_by) on 2026-11-10.
+
+CHANGES FOUND WHILE CHECKING (same as RFC 7042 -> 9542 in N1)
+  1. RFC 8415 (DHCPv6) is OBSOLETED by RFC 9915 (Internet Standard, January 2026) -> use RFC 9915.
+  2. NIST SP 800-81-2 (DNS) is WITHDRAWN -> use NIST SP 800-81 Rev. 3.
+  3. IEEE 802.1Q / 802.11 are blocked (403/418) -> VLAN values only from IANA 802 registry + RFC 9542;
+     anything only IEEE states stays TODO-VERIFY (blocks approval of that page).
+
+PAGE -> SOURCES (all Tier 1)
+
+1320 routing-basics
+  - RFC 1812  Requirements for IP Version 4 Routers   https://www.rfc-editor.org/rfc/rfc1812.txt
+  - RFC 4632  CIDR (already used in N1, reuse)         https://www.rfc-editor.org/rfc/rfc4632.txt
+
+1321 routing-protocols-overview
+  - RFC 2328  OSPF Version 2                           https://www.rfc-editor.org/rfc/rfc2328.txt
+  - RFC 5340  OSPF for IPv6                            https://www.rfc-editor.org/rfc/rfc5340.txt
+  - RFC 4271  BGP-4                                    https://www.rfc-editor.org/rfc/rfc4271.txt
+  - IANA protocol numbers (OSPF = 89, reuse from N2)   https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
+
+1322 nat-and-pat
+  - RFC 3022  Traditional NAT                          https://www.rfc-editor.org/rfc/rfc3022.txt
+  - RFC 4787  NAT behaviour for unicast UDP            https://www.rfc-editor.org/rfc/rfc4787.txt
+
+1323 vlans-and-switching
+  - RFC 9542  IANA + IEEE 802 parameters (reuse N1)    https://www.rfc-editor.org/rfc/rfc9542.txt
+  - IANA IEEE 802 numbers (EtherTypes 8100 / 88A8)     https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml
+
+1324 dhcp
+  - RFC 2131  DHCP (IPv4)                              https://www.rfc-editor.org/rfc/rfc2131.txt
+  - RFC 9915  DHCPv6 (replaces RFC 8415)               https://www.rfc-editor.org/rfc/rfc9915.txt
+  - IANA BOOTP/DHCP parameters (option numbers)        https://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml
+
+1325 dns
+  - RFC 1034  DNS concepts                             https://www.rfc-editor.org/rfc/rfc1034.txt
+  - RFC 1035  DNS implementation                       https://www.rfc-editor.org/rfc/rfc1035.txt
+  - IANA DNS parameters (record types, RCODEs)         https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml
+  - NIST SP 800-81 Rev. 3 (replaces 800-81-2)          https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-81r3.pdf
+
+1326 ntp-and-time-sync
+  - RFC 5905  NTPv4                                    https://www.rfc-editor.org/rfc/rfc5905.txt
+  - RFC 8633  NTP Best Current Practices (NEW, optional) https://www.rfc-editor.org/rfc/rfc8633.txt
+
+1327 wireless-basics
+  - NIST SP 800-153 Securing WLANs                     https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-153.pdf
+    (802.11 frame/standard details are IEEE-only -> TODO-VERIFY if needed)
+
+NAVEED — reply with one of:
+  "N3 URLs OK"                  -> fetch, write 8 drafts, verify, check, build, then STOP-N3
+  "N3 URLs OK, without 8633"    -> same, NTP page cites RFC 5905 only
+  or name any URL to drop/change.

@@ -24,6 +24,7 @@ unattributed blogs, AI text) are never cited.
 | B5+ | wazuh, mitre | https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html (rule.mitre alert fields); https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows (4104) | 2026-11-10 |
 | N1 | networking | RFC 791, 1122, 1180, 826, 9542 (replaces obsolete 7042), 4632, 1918, 5737, 4291, 6864 (rfc-editor.org); IANA IEEE 802 Numbers; NIST glossary "network"; Microsoft Learn OSI model (ISO/IEC 7498-1 behind a licence click-through and ITU X.200 blocked — not used) | 2026-11-10 |
 | N2 | networking | IANA IPv4 + IPv6 special-purpose registries, ICMP + ICMPv6 parameters, protocol numbers, service names and port numbers; RFC 6890 (+8190), 3927, 6598, 1112, 8200, 4291, 5952, 3849 (+9637), 4193, 4861, 4862, 792, 4443, 9293, 768, 6335 | 2026-11-10 |
+| N3 | networking | RFC 1812, 4632, 792, 2328, 5340, 4271, 3022, 4787, 1918, 9542, 2131, 9915 (replaces obsolete 8415), 4862, 1034, 1035, 5905, 8633 (rfc-editor.org); IANA protocol numbers, IEEE 802 numbers, BOOTP/DHCP parameters, DNS parameters, port numbers; NIST SP 800-81r3 (replaces withdrawn 800-81-2), NIST SP 800-153. IEEE 802.1Q/802.11 blocked — not used | 2026-11-10 |
 
 ## Tier 2 log
 
