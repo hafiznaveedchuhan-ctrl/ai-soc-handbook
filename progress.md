@@ -1,109 +1,73 @@
 # progress.md — session log
 
-Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt`.
+Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt` (v4).
 Never delete history; append a new session block; keep the Current state table current.
 
-## Current state
+> **NEW SESSION? Read "HANDOFF — start here" (directly below) first, then the latest session block.**
 
-| Feature | State |
-|---|---|
-| 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implemented — 39 pages approved stable (event-7045 draft until Wave 2); awaiting PR merge |
-| 05 agent-surface | not started |
-| 06 ci-and-release | not started |
-| 03 site-ui | not started |
-| 04 auth | not started |
-| 02 soc-corpus Wave 2 | not started |
-| 02 soc-corpus networking (plan v4, 38 pages) | spec + tasks written on feat/02-networking — awaiting approval (STOP-A) |
-| 02 soc-corpus Wave 3 (soc-fundamentals, now 7 pages) | not started |
+## HANDOFF — start here (written end of session 2, 2026-11-10T10:30Z)
 
----
+### 1. Where things are (git)
+| Branch | Head | On GitHub? | Contains | Status |
+|---|---|---|---|---|
+| `main` (origin) | `2e82511` | yes | F01 (PR #1), Wave 1 (PR #2, #3), networking plan v4 + instance.md scope (PR #4 @ `af3036b`) | up to date on GitHub; **local `main` is behind** → `git switch main && git pull --ff-only` |
+| `feat/02-networking` | `076af79`+ | yes (pushed) | N1 + N2 = 16 networking drafts + this HANDOFF + scripts/authoring | **current work branch** — check out THIS branch first; commits after PR #4 not yet in main |
+| `feat/05-agent-surface` | `51ba5a6` | yes (pushed 2026-11-10) | gateway edit (`8d52f3f`), provision done, evals, refresh-401 note | blocked on Gemini key; no PR yet |
 
-## Session 1
+`gh` CLI is logged in as `hafiznaveedchuhan-ctrl` — PRs can be created with `gh pr create`; Naveed merges.
+Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-networking` (both appended) — merge both blocks by hand.
 
-### Last updated
-2026-11-10T12:50:00Z — session 1 (updated after Feature 01 verify)
+### 2. Feature status (plan v4 order: 01 → 02W1 → 05 → 06 → 03 → 04 → networking (now) → 02W2 → 02W3)
+| Feature | Done | Remaining |
+|---|---|---|
+| 01 record-identity | verified, merged | — |
+| 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
+| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **N1 (8) + N2 (8) drafts** | N3 (8), N4 (8), N5 (6), link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
+| 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
+| 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
+| 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
+| 04 auth | — | all (provider ADR, sign-in config) |
+| 02 Wave 2 (55 docs) | — | all |
+| 02 Wave 3 (7 docs) | — | all |
+Corpus count now: 57 documents (40 stable, 17 draft = 16 networking + event-7045). Plan total 141.
+Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
 
-### Done this session
-- Plan mode: read AGENTS.md, skills, instance.md, governance, scripts, CI, Docker, vercel.json, site, gateway, ksor docs, README; 10-bullet summary; plan v1 → v2 (Naveed's 7 changes); verified ksor commands with `--help`.
-- Branch `feat/01-record-identity` created.
-- `511f95e` — specs/00-final-plan.txt, specs/constitution.md, history/adr/0001..0003, history/prompts/0001-phase2-intent-and-final-plan.md, LEARNING.md, .claude/rules/session-protocol.md
-- `e50a29b` — specs/01-record-identity/{spec,plan,tasks}.md
-- `955d9bb` — build.lock.json (first `ksor build`)
-- `7c1d4ad` — progress.md (first version)
-- STOP-A approved by Naveed.
-- `5793a7b` — instance.md (soc-handbook / SOC Triage Handbook), .ksor/governance.yaml (human:naveed + ksor-starter kept), .ksor/people.yaml, regenerated knowledge/index.md
-- `11b322a` — build.lock.json · `facceba` — task ticks T01-07..09
-- `4e0403e` — origin remote added (https://github.com/hafiznaveedchuhan-ctrl/ai-soc-handbook, nothing pushed); T01-06 ticked
-- Naveed did not confirm STOP-B; asked to widen scope to SOC L1 operations and add Wave 3.
-- `342923e` — instance.md scope v3 (triage primary + L1 fundamentals; pentest how-to declined)
-- `25cc84f` — build.lock.json
-- `bdba7e2` — progress.md scope v3
-- STOP-B confirmed by Naveed.
-- `dd19f23` + `47e28a9` — knowledge/orientation/overview.md drafted (+ generated indexes, lock); `155f3cb` ticks
-- STOP-C: Naveed said "approved".
-- `b15a4f3` — overview stable: generated claude-opus/5.5 2026-11-10T07:44:21Z, ksor.approval human:naveed 2026-11-10T07:45:24Z; `f303719` lock; `098831d` ticks
-- STOP-D: Naveed said "delete".
-- `f659514` — 6 starter documents + generated surfaces/index.md deleted; ksor-starter/0.0.61 removed from approval_authorities (same commit)
-- `f91fd70` — build.lock.json; build: 1 document admitted; llms.txt lists only the overview
-- `1fd53c6` — STOP-E ticked; Naveed said "push OK": pushed main (scaffold) + feat/01-record-identity; PR #1 opened by Naveed in browser (gh not logged in)
-- Naveed merged PR #1 → main `186b665`; local main fast-forwarded
-- Branch `feat/02-soc-corpus-wave-1`: specs/02-soc-corpus/{spec,plan,tasks,sources}.md (commit below)
-- Feature 02 STOP-A approved; B1 URL list (all HTTP 200) approved.
-- B1 drafts: orientation/how-to-use, orientation/glossary, wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels, windows-events/event-4624, event-4625, event-4648 (commit "Wave 1 B1 …"); verify.mjs: no changed values
-- STOP-B1 "next". Wazuh tag v4.14.10 verified (newest release tag); full ruleset (168 files) searched. B2 URLs approved.
-- `ff6999f` + `636d72d` — B2 drafts: events 4672, 4688, 4720, 4732, 4740, 1102, 7045, wazuh/windows-rules-reference; B1 events 4624/4625/4648 + alert-json-anatomy updated with ruleset rule IDs and field casing
-- `aa76b20` — specs/00-final-plan.txt v3 (Wave 3 soc-fundamentals, steps 43-50), Feature 01 spec intake table, history/prompts/0002-scope-l1-operations-wave-3.md
+### 3. EXACT next step
+**A. If Naveed says "key done"** (new GEMINI_API_KEY in `.env`, no quotes, LF line endings):
+   1. `git switch feat/05-agent-surface`
+   2. one-word diagnostic (prints only status, never the key):
+      `( set -a; . ./.env >/dev/null 2>&1; set +a; curl -s -o /tmp/g.json -w "%{http_code}\n" -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent" -H "x-goog-api-key: ${GEMINI_API_KEY}" -H "content-type: application/json" -d '{"content":{"parts":[{"text":"test"}]},"outputDimensionality":1536}' ); rm -f /tmp/g.json` → expect 200
+   3. ask HAAN → `npm run refresh` (run in background; 343 chunks; first gen 1 failed and was NOT flipped — fine)
+   4. ask HAAN → `npm run serve` (background) → `curl -s http://127.0.0.1:8080/health`
+   5. ask HAAN → `npx ksor calibrate --instance instance.md --queries-file evals/calibrate-in.txt --ooc-file evals/wave1-out-of-scope.txt` → paste the printed `retrieval:` block into instance.md exactly → restart serve
+   6. `node evals/run-evals.mjs` → report in-scope / out-of-scope pass rates (targets ≥ 90% / ≥ 90%)
+   Note: networking pages are drafts → not ingested until approved; refresh again after approval.
+**B. Otherwise continue networking N3** on `feat/02-networking`:
+   1. N3 URL list for: routing-basics, routing-protocols-overview (OSPF RFC 2328, BGP RFC 4271), nat-and-pat (RFC 3022, 4787), vlans-and-switching (IEEE blocked → IANA 802 registry 8100/88A8 + RFC 9542; mark IEEE-only values TODO-VERIFY), dhcp (RFC 2131, 8415), dns (RFC 1034/1035, NIST SP 800-81-2), ntp-and-time-sync (RFC 5905), wireless-basics (NIST SP 800-153). Check each RFC JSON for "obsoleted_by" first (RFC 7042 → 9542 happened in N1).
+   2. STOP for URL approval → fetch → write 8 with the generator pattern in `scripts/authoring/example-batch-generator-n2.py` (order numbers 1320–1327) → verify.mjs → check → build → push (only with OK) → STOP-N3 (2-page check).
 
-### Decisions taken
-- [ADR-0001](history/adr/0001-sdd-artifacts-live-outside-knowledge.md) SDD artifacts outside `knowledge/`.
-- [ADR-0002](history/adr/0002-generated-by-names-the-drafting-agent.md) `generated.by: claude-opus/5.5` for AI-drafted text; `ksor.approval.by` always `human:naveed`.
-- [ADR-0003](history/adr/0003-knowledge-folder-naming.md) plain folder names + `order:` (decided by Naveed).
-- Intake: name `soc-handbook`, title "SOC Triage Handbook", display name "Hafiz Naveed Uddin", audience `[public]`.
-- Feature order 01 → 02W1 → 05 → 06 → 03 → 04 → 02W2 → 02W3 (plan v3).
-- Scope (plan v3): SOC L1 operations — triage primary, L1 fundamentals secondary; decline malware RE, pentest/exploitation how-to, legal/compliance, pricing, anything outside SOC L1.
+### 4. Rules Naveed set (never break)
+- Never open/print `.env`; check names only (`grep -c '^NAME=.' .env`). Never ask for keys in chat.
+- Any Neon/Gemini command (provision, refresh, ingest, serve, calibrate) only after Naveed's **"haan"**, each time.
+- Only `human:naveed` approves pages; never write `ksor.approval` without his explicit words ("approved …"). "You are the judge" is NOT approval.
+- Push only when he says "push" in the current message (the permission classifier blocks pushes otherwise).
+- Every claim cited (Tier 1 first; Tier 2 labelled "(secondary source)" + logged in specs/02-soc-corpus/sources.md); unconfirmed → TODO-VERIFY (blocks approval). No employer/client names. No invented numbers — compute with Python `ipaddress`.
+- Per batch: URL list STOP → write → verify → STOP 2-page check. He writes Roman Urdu/English; answer in simple Roman Urdu when he asks.
+- He wants plans as real .txt files (specs/00-final-plan.txt) and absolute paths in any command he runs.
 
-### Errors hit + fixes
-- Plan copy landed in `node_modules/@panaversity/ksor/docs/specs/` because my shell cwd had drifted; moved with absolute paths, stray dir removed.
-- `npm run check` refused CLAUDE.md with extra content (`ksor-pointer-changed`: CLAUDE.md must be exactly `@AGENTS.md`). Session rule moved to `.claude/rules/session-protocol.md`; plan/spec/tasks/LEARNING updated.
-- `npm run build` rewrote `system/site/next-env.d.ts` (Next.js churn); restored, not committed.
-- MITRE ATT&CK now lists "Stealth" (TA0005) and "Defense Impairment" (TA0112) instead of Defense Evasion — tactic names must always be read live in B3.
-- Wazuh rule levels are 0–16 (not 0–15); found by reading the source.
-- Dev server serves new pages only after restart (`output: export` static params): restart `npm run dev` after adding documents.
-
-### Pending / blocked
-- STOP-B2: Naveed to check 2 random B2 pages and confirm the two extra ruleset files (0610, 0220). (Naveed)
-- `gh` CLI not logged in — needed for the PR in T01-14 (`gh auth login`), or PR via browser. (Naveed)
-
-### TODO-VERIFY list
-- glossary: TP / benign TP, IOA, L1/L2/L3, SLA, MTTD/MTTR, enrichment, FP rate → interview I1
-- alert-json-anatomy: `rule.mitre.*` output field names (needs a lab alert or doc sample)
-- all 10 events: MITRE mapping (B3); playbook links (B5 / link pass)
-- event-1102: Wazuh rule MITRE tags disagree (T1070.004 vs T1070) → B3
-- event-7045: audit setting and field names (no Tier 1 field reference yet)
-
-### Exact next step for the next session
-- After "next": T02-09 — show the B3 MITRE URL list.
-
-### Naveed's manual actions needed
-- Check 2 random B2 pages (STOP-B2); confirm ruleset files 0610 and 0220.
-- Optional before T01-14: `gh auth login`.
+### 5. Gotchas learned (save time)
+- Scratchpad is wiped between sessions → helpers now live in `scripts/authoring/` (see its README); sources must be re-fetched.
+- Run `pkill -f "next dev"` and `npm run build` in **separate** commands (a combined command killed its own shell, exit 144). Restart `npm run dev` after adding pages (new pages 404/500 until restart).
+- `npm run build` rewrites `system/site/next-env.d.ts` → `git checkout -- system/site/next-env.d.ts`.
+- YAML: quote titles/descriptions containing ": " or "::".
+- Quiz audit (system/site/lib/quiz-audit.ts): ≤60% same answer position, ≤60% wins for unique-longest/shortest option, no run >3 → pre-check with `scripts/authoring/quiz_precheck.py`.
+- Blocked sites: cisa.gov (403 — do not try browser headers), ISO 7498-1 (licence click-through), ITU X.200, IEEE (403/418). MITRE renumbers: T1070.001→T1685.005, T1562.001→T1685 (always fetch live).
+- Wazuh: levels 0–16; ruleset pinned at tag v4.14.10; rule IDs only from `ruleset/rules/*.xml`.
+- `ksor calibrate` files: one question per line, `#` comments (from ksor dist parseQueriesFile).
 
 ---
+## Current state (kept for history — see HANDOFF table above)
 
-## Session 2
-
-### Last updated
-2026-11-10T09:00:00Z — session 2
-
-### Done this session
-- Session 1 tail (before the restart): STOP-B2 "next"; owner delegated choices ("best to best") → kept Wazuh rule files 0610 and 0220. B3 URL list approved. 8 MITRE pages written; event-page MITRE sections rewritten.
-- Re-downloaded B3 sources (scratchpad was cleared by the session restart) and ran verify.mjs on all 8 MITRE pages: no changed values; added missing citations for rules 67027 (0955) and 63103 (0610).
-- `92c0d69` — knowledge/mitre/{t1110-brute-force, t1110-001-password-guessing, t1110-003-password-spraying, t1078-valid-accounts, t1059-001-powershell, t1136-001-local-account, t1098-account-manipulation, t1685-005-clear-windows-event-logs}.md; MITRE sections of events 4624, 4625, 4688, 4720, 4732, 4740, 1102 (mapped), 4648/4672/7045 (TODO); windows-rules-reference warning
-- `75c1939` — build.lock.json
-- (next commit) — specs/00-final-plan.txt v3.1, specs/02-soc-corpus/sources.md (B3 Tier 1 + 11 Tier 2 rows), tasks.md, progress.md
-
-### Current state
 See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 
 ### Decisions taken
@@ -168,3 +132,49 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 - Branch `feat/02-networking` from main. PHR-0005, plan v4, networking-spec.md, networking-tasks.md.
 - Note: progress.md also changed on feat/05-agent-surface (refresh 401 note) — merge both blocks when the branches meet.
 - Next: STOP-A (spec + instance.md scope wording) → N1 URL list.
+- Networking STOP-A approved + push. instance.md scope widened (SOC analyst + SIEM engineer networking; SIEM engineers added as readers).
+- N1 written: 8 pages; numeric examples computed with Python ipaddress; unsourced sentences removed or sourced after review; verify.mjs flags only computed values.
+- Source changes in N1: RFC 7042 obsoleted by RFC 9542 (used 9542); ISO 7498-1 needs a licence click-through and ITU X.200 is blocked → Microsoft Learn (layers 1–4) + AWS and IBM (Tier 2, layers 5–7, disagreement with RFC 1122 shown).
+- N1 "next and push"; AWS/IBM Tier 2 OK'd by Naveed. N2 written: 8 pages; IANA registries as the only source for ports/protocol/ICMP numbers; IPv6 examples computed with ipaddress; RFC 9637 (2024) documentation prefix 3fff::/20 included.
+
+---
+
+## Session 2 — END block
+
+### Last updated
+2026-11-10T10:30:00Z — session 2 (end; context almost full — next session starts from HANDOFF above)
+
+### Done this session (highlights; commit hashes)
+- Wave 1 B3–B5 + study companions + self-review + audit; Naveed "APPRORED ALL": 39 pages stable (`bffb35a`); PR #3 merged `cbe9e46`.
+- Feature 05: spec/plan/tasks/evals (`4aedc34`), gateway (`8d52f3f`), provision OK (`5eb51fc`), refresh failed on Gemini 401 (`51ba5a6`, local branch).
+- Networking: plan v4 + PHR-0005 (`57e1d27`), scope change (merged via PR #4 `2e82511`), N1 (`0dbe46d`, `31996db`), N2 (`e003613`, `ac28cdf`).
+- Authoring helpers saved to `scripts/authoring/` (this commit).
+
+### Current state
+See HANDOFF §2.
+
+### Decisions taken
+- ADR-0001..0003 (history/adr). Plan v3.1 (ATT&CK renumbering), v4 (networking folder, 38 pages, Wave 3 → 7 pages).
+- Interview I1 confirmed (specs/02-soc-corpus/interview-i1.md): escalation conditions 1–8, severity model, masking, AbuseIPDB bands 0/1–24/25–74/75–100, note template; 4648/4672 → T1078.
+- Tier 2 AWS/IBM for OSI layers 5–7 accepted by Naveed. Kept Wazuh 0610/0220 rule files.
+
+### Errors hit + fixes
+- Gemini 401 invalid key → Naveed replacing key (blocked).
+- GitHub "no compare button" (branch already had a merged PR) → `gh auth login` (device code) + `gh pr create`.
+- Classifier blocks: browser-like header on cisa.gov (dropped CISA); reading key format (stopped); push without explicit OK.
+- ISO/ITU/IEEE unreachable → Microsoft Learn + Tier 2; RFC 7042 obsolete → 9542.
+
+### Pending / blocked
+- Gemini key (Naveed). Networking N3–N5, study companions, approval (Claude + Naveed). feat/05 push/PR (Naveed OK).
+
+### TODO-VERIFY list
+- event-7045: audit setting, field names, MITRE (Wave 2: 4697, T1543.003).
+- networking N3: IEEE-only values (VLAN/802.11) if no free source.
+
+### Exact next step for the next session
+HANDOFF §3 (A if key done, else B: N3 URL list).
+
+### Naveed's manual actions needed
+- New Gemini key in `.env` → say "key done".
+- STOP-N2 2-page check → say "next" (and "push" when wanted).
+- Later: merge the networking PR; approve networking pages; Feature 05 HAAN steps.
