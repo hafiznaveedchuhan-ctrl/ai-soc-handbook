@@ -1,8 +1,8 @@
 # Networking topic — tasks (branch `feat/02-networking`)
 
 - [x] **TN-01** PHR-0005; plan v4 in specs/00-final-plan.txt; this spec and task list.
-- [ ] **STOP-A** Naveed approves the networking spec and the `instance.md` scope wording.
-- [ ] **TN-02** Edit `instance.md` (networking bullet + readers); `npm run check` + `npm run build`.
+- [x] **STOP-A** Naveed approves the networking spec and the `instance.md` scope wording.
+- [x] **TN-02** Edit `instance.md` (networking bullet + readers); `npm run check` + `npm run build`.
 - [ ] **TN-03** N1 URL list (STOP) → write 8 → verify.mjs + ipaddress checks → check + build → **STOP-N1**.
 - [ ] **TN-04** N2 (same gates) → **STOP-N2**.
 - [ ] **TN-05** N3 → **STOP-N3**.
