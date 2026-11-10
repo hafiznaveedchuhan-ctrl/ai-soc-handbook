@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:f50c7ab89e90c2000466a8a41cd7f743e901e9fdb02c16c51df325f378629267",
+  "build_id": "sha256:d4a009020a23e483fea0a96ec90dfb700cfb44b9b064430adc5109e6526fd79c",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "342923e63f6884bd5192508541aba1e727fafea1",
+  "source_commit": "dd19f23043e0d30f337caf943973909f19750d97",
   "dirty": false,
-  "as_of": "2026-11-10T07:42:44.996Z",
+  "as_of": "2026-11-10T07:44:21.715Z",
   "drafts": "hidden",
   "instance_sha256": "0c4e6c6e0e14324058ab3c204d24973c22805b1d4e41079b363a8382ffc82fdf",
   "policy_sha256": "a5c10073117cbdbcb86cad77820527cffb891a64daee3997ee4315b3f67ede53",
@@ -35,6 +35,15 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "orientation/overview.md",
+      "sha256": "1e5b6bc1441748d8e4c2220488fbca0df7e6f74d5d0f312aa9da160be216b6bf",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "surfaces/for-agents.md",
@@ -91,7 +100,11 @@
   "indexes": [
     {
       "path": "index.md",
-      "sha256": "6b266f6db7e702c08d53411f902fc6a8b25f7adfebb366d33517547b924331d3"
+      "sha256": "2ae4bd9dee9c06fa26400d2d3bb926f05742443a294aa5deb6f38ab03b099382"
+    },
+    {
+      "path": "orientation/index.md",
+      "sha256": "a06e6592a61e91ccde814364319e409a7a000eb591b0a695c63cbd318ea4e41c"
     },
     {
       "path": "surfaces/index.md",
