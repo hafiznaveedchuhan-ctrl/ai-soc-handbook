@@ -254,3 +254,4 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - Naveed: networking gone + error. Cause: my `npm run build` runs while his `npm run dev` (pid 7776, started 20:15 local) was up; production build re-staged `.staged-knowledge/` with drafts hidden, so all 38 draft pages returned 404 in dev. Nothing in `knowledge/` was lost (git clean; 38 pages + 76 companions present).
 - `touch` on a knowledge file made the dev watcher re-stage (115 networking files back), but new pages still need a dev restart.
 - Also expected, not a bug: a BUILT site / llms.txt / MCP shows 0 networking pages until they are approved (status draft).
+- Follow-up: dev's generated page list `system/site/.source/` was still the build's (0 networking). Fixed without stopping his server: `cd system/site && NODE_ENV=development npx fumadocs-mdx` → 38 networking entries; all 38 pages 200 on the running dev server, sidebar lists 38, flashcards + quiz render.
