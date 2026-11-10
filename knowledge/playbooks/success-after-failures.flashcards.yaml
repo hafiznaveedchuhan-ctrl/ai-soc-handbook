@@ -1,0 +1,16 @@
+deck:
+  title: "Playbook — success after failures"
+  description: "Recall checks drawn only from the page Playbook."
+cards:
+  - front: "What triggers this playbook?"
+    back: "A 4624 for an account or source that had a brute-force pattern in the previous 60 minutes."
+  - front: "Is this playbook always escalated?"
+    back: "Yes — condition 4, plus condition 2 if the account is privileged."
+  - front: "What is the first L1 step?"
+    back: "Line up the timeline: first failure, last failure, the success (UTC)."
+  - front: "Which field links the success to later activity?"
+    back: "The Logon ID (TargetLogonId) of the 4624."
+  - front: "Which MITRE techniques apply?"
+    back: "T1110 Brute Force leading to T1078 Valid Accounts."
+  - front: "When is it a benign TP?"
+    back: "The owner confirms a mistyped password then a logon from their usual machine."

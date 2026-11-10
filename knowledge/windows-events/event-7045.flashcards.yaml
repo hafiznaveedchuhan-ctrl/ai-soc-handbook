@@ -1,0 +1,16 @@
+deck:
+  title: "Event 7045 — new service installed"
+  description: "Recall checks drawn only from the page Event 7045."
+cards:
+  - front: "What does Microsoft name event 7045?"
+    back: "New Service Installed."
+  - front: "Which log is 7045 written to?"
+    back: "The System log (not the Security log)."
+  - front: "Which Wazuh rule alerts on 7045?"
+    back: "61138, level 5, 'New Windows Service Created'."
+  - front: "Which MITRE sub-technique do Microsoft and Wazuh point to?"
+    back: "T1543.003 Windows Service (to be confirmed in Wave 2)."
+  - front: "Which Microsoft alert relies on 7045?"
+    back: "Defender for Identity's 'Suspicious service creation'."
+  - front: "On which hosts is 7045 an escalation condition?"
+    back: "Domain controllers, AD FS and AD CS servers (condition 7)."

@@ -1,0 +1,16 @@
+deck:
+  title: "Playbook — added to Administrators"
+  description: "Recall checks drawn only from the page Playbook."
+cards:
+  - front: "Which Wazuh rule triggers this playbook?"
+    back: "60154 'Administrators Group Changed' (level 12)."
+  - front: "What SID marks the local Administrators group?"
+    back: "S-1-5-32-544."
+  - front: "Which field identifies who was added?"
+    back: "MemberSid (MemberName is usually '-' for local groups)."
+  - front: "When is it not escalated?"
+    back: "When a matching change record exists."
+  - front: "What severity applies on a domain controller?"
+    back: "Critical."
+  - front: "Which MITRE sub-technique applies?"
+    back: "T1098.007 Additional Local or Domain Groups."

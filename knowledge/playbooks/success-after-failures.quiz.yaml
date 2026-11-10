@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook — success after failures"
+  questionsPerRound: 6
+questions:
+  - question: "Which events show what the attacker did after logging on?"
+    options:
+      - "4688 and 4672 with the same Logon ID"
+      - "1102 events for the Security log only"
+      - "4740 only"
+      - "7045 only"
+    answer: 0
+    explanation: "Check processes (4688) and special privileges (4672) under the same Logon ID."
+    source: "L1 steps"
+  - question: "Must this alert be escalated?"
+    options:
+      - "Only on servers"
+      - "Only if the IP is public"
+      - "Only after the owner replies"
+      - "Yes, always — condition 4"
+    answer: 3
+    explanation: "The playbook escalates always under condition 4."
+    source: "Escalate?"
+  - question: "What should you compare between the failures and the success?"
+    options:
+      - "The event record IDs of the two events"
+      - "The source IP and workstation"
+      - "The Windows version"
+      - "The log channel name"
+    answer: 1
+    explanation: "Compare IpAddress / WorkstationName of the success with the failures' source."
+    source: "L1 steps"
+  - question: "Which verdict fits a success from the attacking source?"
+    options:
+      - "FP"
+      - "Benign TP"
+      - "TP"
+      - "Needs-info"
+    answer: 2
+    explanation: "A success from the attacking source is a TP per the verdict criteria."
+    source: "Verdict criteria"
+  - question: "Within what window is a success counted after a burst?"
+    options:
+      - "60 minutes"
+      - "24 hours"
+      - "5 minutes"
+      - "7 days"
+    answer: 0
+    explanation: "Condition 4 counts a 4624 within 60 minutes after the brute-force pattern."
+    source: "Trigger"
+  - question: "Which technique describes using stolen working credentials?"
+    options:
+      - "T1685.005"
+      - "T1078 Valid Accounts"
+      - "T1136.001"
+      - "T1098.007"
+    answer: 1
+    explanation: "T1078 Valid Accounts covers using the credentials of existing accounts."
+    source: "MITRE ATT&CK"

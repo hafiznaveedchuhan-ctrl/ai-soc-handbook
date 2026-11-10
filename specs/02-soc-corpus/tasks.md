@@ -24,27 +24,27 @@ verify.mjs run per page · TODO-VERIFY list reported.
 ## B3
 - [x] **T02-09** Show B3 URL list (8 MITRE technique pages T1 + Sigma/CAR/Red Canary T2). **STOP:** approved.
 - [x] **T02-10** Write the 8 mitre pages; log Tier 2 in `sources.md`.
-- [ ] **STOP-B3** Report; 2 random pages; "next".
+- [x] **STOP-B3** Report; 2 random pages; "next".
 
 ## I1 — interview
-- [ ] **T02-11** Interview Naveed, one question at a time: invariants, escalation triggers, severity model, data handling, AbuseIPDB score bands, triage-note template and writing rules, L1 steps for the 5 playbooks. "Not sure" → illustrative answer with source + TODO-VERIFY. **STOP** per answer set: Naveed confirms.
+- [x] **T02-11** Interview Naveed, one question at a time: invariants, escalation triggers, severity model, data handling, AbuseIPDB score bands, triage-note template and writing rules, L1 steps for the 5 playbooks. "Not sure" → illustrative answer with source + TODO-VERIFY. **STOP** per answer set: Naveed confirms.
 
 ## B4
-- [ ] **T02-12** Show B4 URL list (Wazuh rules-classification, SP 800-61r3, CISA playbooks, AbuseIPDB docs, RFC 1918). **STOP:** approved.
-- [ ] **T02-13** Write rules-map (4), enrichment (2), triage-note/note-template, writing-rules.
-- [ ] **STOP-B4** Report; 2 random pages; "next".
+- [x] **T02-12** Show B4 URL list (Wazuh rules-classification, SP 800-61r3, CISA playbooks, AbuseIPDB docs, RFC 1918). **STOP:** approved.
+- [x] **T02-13** Write rules-map (4), enrichment (2), triage-note/note-template, writing-rules.
+- [x] **STOP-B4** Report; 2 random pages; "next".
 
 ## B5
-- [ ] **T02-14** Show B5 URL list (Tier 1 + Tier 2 for playbooks). **STOP:** approved.
-- [ ] **T02-15** Write the 5 playbooks (fixed shape).
-- [ ] **T02-16** Write the 3 triage-note examples (illustrative, masked).
-- [ ] **STOP-B5** Report; 2 random pages; "next".
+- [x] **T02-14** Show B5 URL list (Tier 1 + Tier 2 for playbooks). **STOP:** approved.
+- [x] **T02-15** Write the 5 playbooks (fixed shape).
+- [x] **T02-16** Write the 3 triage-note examples (illustrative, masked).
+- [x] **STOP-B5** Report; 2 random pages; "next".
 
 ## Finish
-- [ ] **T02-17** Link pass: event ↔ MITRE ↔ playbook ↔ Wazuh rule cross-links; `npm run check` (no dangling links).
-- [ ] **T02-18** 15 flashcard decks + 15 quizzes (10 events, 5 playbooks); `npm run build` quiz audit passes.
-- [ ] **STOP-R** Naveed reads Wave 1 on `npm run dev` (TODO-VERIFY must be zero on a page before it can be approved).
-- [ ] **T02-19** Record approvals exactly as Naveed gives them (ADR-0002 stamps); rebuild; `llms.txt` lists approved pages.
-- [ ] **T02-20** Update `progress.md`, `LEARNING.md`, PHR.
+- [x] **T02-17** Link pass: event ↔ MITRE ↔ playbook ↔ Wazuh rule cross-links; `npm run check` (no dangling links).
+- [x] **T02-18** 15 flashcard decks + 15 quizzes (10 events, 5 playbooks); `npm run build` quiz audit passes.
+- [x] **STOP-R** Naveed reads Wave 1 on `npm run dev` (TODO-VERIFY must be zero on a page before it can be approved).
+- [x] **T02-19** Record approvals exactly as Naveed gives them (ADR-0002 stamps); rebuild; `llms.txt` lists approved pages.
+- [x] **T02-20** Update `progress.md`, `LEARNING.md`, PHR.
 - [ ] **STOP-P** Naveed OKs push.
 - [ ] **T02-21** Push branch; Naveed opens PR (link given), CI green, Naveed merges.

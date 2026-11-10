@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4648: A logon was attempted using explicit credentials"
 description: Windows Security event 4648 — a process logging on by naming an account's credentials explicitly (RunAs, scheduled tasks), its key fields, and when such a logon deserves attention.
-status: draft
+status: stable
 order: 340
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4648
     title: "Microsoft Learn — 4648(S): A logon was attempted using explicit credentials"
@@ -17,9 +18,13 @@ sources:
   - id: wazuh-rules-reference
     title: Wazuh ruleset v4.14.10 — ruleset/rules directory
     resource: https://github.com/wazuh/wazuh/tree/v4.14.10/ruleset/rules
+  - id: naveed-interview-2026-11-10
+    title: human:naveed interview 2026-11-10
+    resource: "human:naveed interview 2026-11-10"
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -78,10 +83,12 @@ From Microsoft's monitoring recommendations for 4648:[^ms-4648]
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: none of the approved MITRE sources names 4648 or explicit-credential
-logons directly. The closest candidate is [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
-(use of an existing account's credentials). Owner to decide in interview I1
-whether the handbook maps 4648 to T1078.
+| Technique | Basis |
+|---|---|
+| [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md) | 4648 records a process using an existing account's credentials; the handbook maps that to T1078[^naveed-interview-2026-11-10] |
+
+This is the handbook's mapping, set by its owner; MITRE does not name event
+4648 itself.
 
 ## Wazuh rules
 
@@ -92,7 +99,7 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: playbook link added in the link pass.
+- No dedicated Wave 1 playbook; explicit credentials against an unexpected remote server is escalation condition 5 in the [escalation policy](../rules-map/escalation-policy.md)
 
 ## L1 triage questions
 
@@ -120,3 +127,4 @@ TODO-VERIFY: playbook link added in the link pass.
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
 [^wazuh-rules-reference]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/` (searched for event ID 4648). https://github.com/wazuh/wazuh/tree/v4.14.10/ruleset/rules
+[^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 8).

@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook — added to Administrators"
+  questionsPerRound: 6
+questions:
+  - question: "Which field shows who made the change?"
+    options:
+      - "MemberSid"
+      - "SubjectUserName"
+      - "TargetSid"
+      - "PrivilegeList of the event"
+    answer: 1
+    explanation: "Subject (SubjectUserName, SubjectLogonId) shows who added the member."
+    source: "L1 steps"
+  - question: "Which commands can add an account to Administrators?"
+    options:
+      - "net localgroup /add, Add-LocalGroupMember"
+      - "ipconfig /all, ping and tracert to the host"
+      - "whoami, hostname"
+      - "tasklist, netstat"
+    answer: 0
+    explanation: "The playbook looks for net localgroup … /add or PowerShell Add-LocalGroupMember in 4688."
+    source: "L1 steps"
+  - question: "Which changes does Sigma exclude?"
+    options:
+      - "Changes at night"
+      - "Changes made by members of Domain Admins"
+      - "Changes by computer accounts ($)"
+      - "Changes on servers"
+    answer: 2
+    explanation: "Sigma excludes changes made by computer accounts whose names end in $."
+    source: "Enrichment"
+  - question: "What is the escalation condition number here?"
+    options:
+      - "Condition 2"
+      - "Condition 4"
+      - "Condition 8"
+      - "Condition 6"
+    answer: 3
+    explanation: "Condition 6 covers an account added to Administrators."
+    source: "Escalate?"
+  - question: "Why could 60154 be a false positive?"
+    options:
+      - "It also fires on removals (60145)"
+      - "It fires on every logon"
+      - "It only fires on Linux"
+      - "It ignores the group SID"
+    answer: 0
+    explanation: "60154 is a child of both 60144 and 60145, so a removal can be misread."
+    source: "Verdict criteria"
+  - question: "What makes this a strong persistence pattern?"
+    options:
+      - "The member logs off"
+      - "The member was just created (4720)"
+      - "The group is renamed"
+      - "The host restarts"
+    answer: 1
+    explanation: "An account created minutes earlier then made admin is a strong persistence pattern."
+    source: "L1 steps"

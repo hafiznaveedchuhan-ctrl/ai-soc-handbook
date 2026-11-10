@@ -2,8 +2,9 @@
 type: Standard
 title: "T1059.001 Command and Scripting Interpreter: PowerShell"
 description: MITRE ATT&CK T1059.001 PowerShell — adversaries running commands and scripts through PowerShell; what to look for in process creation, command lines and PowerShell logging.
-status: draft
+status: stable
 order: 720
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:18:01Z }
 sources:
   - id: mitre-t1059-001
     title: "MITRE ATT&CK — T1059.001 Command and Scripting Interpreter: PowerShell"
@@ -20,9 +21,13 @@ sources:
   - id: wazuh-0955
     title: Wazuh ruleset v4.14.10 — 0955-WEF-baseline_rules.xml
     resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0955-WEF-baseline_rules.xml
+  - id: ms-pslog
+    title: Microsoft Learn — about_Logging_Windows (PowerShell)
+    resource: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -51,7 +56,7 @@ without powershell.exe, through the System.Management.Automation assembly in
 | Source | What to look at | Page |
 |---|---|---|
 | Windows Security | [4688](../windows-events/event-4688.md) with `NewProcessName` ending in powershell.exe — parent process, account, command line (only if command-line auditing is enabled) | |
-| PowerShell logging | Script block logging and module logging record script content and loaded modules (secondary source).[^rc-powershell] TODO-VERIFY: the event IDs Red Canary gives for these (4104, 800, 4103) must be confirmed from Microsoft before use | |
+| PowerShell logging | For PowerShell 7 on Windows, Microsoft documents that with Script Block Logging enabled, script content is recorded as event **4104** in the PowerShellCore/Operational log (Windows PowerShell 5.1 is documented separately).[^ms-pslog] Red Canary also highlights script block and module logging as detection sources (secondary source).[^rc-powershell] | |
 | Wazuh | 67027 "A process was created." for 4688[^wazuh-0955] | [Windows rules reference](../wazuh/windows-rules-reference.md) |
 
 ## Detection hints
@@ -70,8 +75,7 @@ without powershell.exe, through the System.Management.Automation assembly in
 
 ## Related playbook
 
-TODO-VERIFY: suspicious-powershell playbook is Wave 2; link added when it
-exists.
+- A dedicated suspicious-powershell playbook is planned for Wave 2
 
 ## For the agent
 
@@ -88,3 +92,4 @@ exists.
 [^rc-powershell]: Red Canary, "Threat Detection Report — PowerShell" (secondary source). https://redcanary.com/threat-detection-report/techniques/powershell/
 [^car-2014-11-004]: MITRE CAR, "CAR-2014-11-004: Remote PowerShell Sessions" (secondary source). https://car.mitre.org/analytics/CAR-2014-11-004/
 [^wazuh-0955]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0955-WEF-baseline_rules.xml`, rule 67027. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0955-WEF-baseline_rules.xml
+[^ms-pslog]: Microsoft Learn, "about_Logging_Windows" (PowerShell), Script Block Logging. https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows

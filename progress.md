@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — B1–B3 written (24 drafts), waiting at STOP-B3 |
+| 02 soc-corpus Wave 1 | implemented — 39 pages approved stable (event-7045 draft until Wave 2); awaiting PR merge |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -132,3 +132,32 @@ See the table at the top (02 Wave 1: B1–B3 done, waiting at STOP-B3).
 ### Naveed's manual actions needed
 - STOP-B3 check (2 MITRE pages).
 - Prepare for interview I1: escalation triggers, severity, AbuseIPDB score bands, triage-note template, your L1 steps for the 5 playbooks.
+
+### Session 2 — update (B4)
+- Pushed `feat/02-soc-corpus-wave-1` at Naveed's request (`24abe6a`); no PR yet. Later commits are local only (a second push was blocked by the permission classifier — needs Naveed's explicit OK each time).
+- Interview I1: Q1 confirmed (`7f68b3d`); Q2–Q8 proposed under owner delegation (`0266a73`) and confirmed (`211eb51`) — notes in specs/02-soc-corpus/interview-i1.md.
+- B4 written: rules-map/{invariants, escalation-policy, severity-model, data-handling}, enrichment/{ip-reputation-policy, private-ip-ranges}, triage-note/{note-template, writing-rules}; glossary open terms filled; 4648/4672 MITRE set to T1078 (owner mapping).
+- CISA site returns 403 to automated requests; the permission classifier blocked a browser-like header (bot-check circumvention) → CISA dropped from B4.
+- pypdf 5.1.0 installed in a scratchpad venv (not in the project) to read the NIST PDF.
+- TODO-VERIFY now: playbook links (link pass), alert-json-anatomy `rule.mitre.*`, t1059-001 PowerShell log IDs, event-7045 fields/policy/MITRE.
+- Next: STOP-B4 check → T02-14 B5 URL list (playbooks + examples).
+
+### Session 2 — update (B5)
+- Pushed `dad2e31` at Naveed's request.
+- B5 written: playbooks/{brute-force, success-after-failures, new-local-account, added-to-admin-group, audit-log-cleared}; triage-note/{example-true-positive, example-false-positive, example-needs-info} (illustrative, masked, relative times).
+- Link pass done: every event and MITRE page now links its playbook(s); Wave 2 playbooks named as planned, no dangling links.
+- Verdict tables cite the glossary definitions (interview) and say the rows are the playbook's application, not the owner's words.
+- Remaining TODO-VERIFY (6 lines, 3 pages): alert-json-anatomy `rule.mitre.*`; t1059-001 PowerShell log event IDs; event-7045 policy/fields/MITRE.
+- Next: STOP-B5 → approve 2 extra URLs to close TODOs → T02-18 flashcards + quizzes.
+
+### Session 2 — update (study companions)
+- Pushed `ffa20d2` (closed TODO-VERIFY on alert-json-anatomy via Wazuh MITRE docs, and t1059-001 via Microsoft about_Logging_Windows 4104).
+- `7a05ee9` + `105f990` — 15 flashcard decks + 15 quizzes (6 questions each) for events 4624, 4625, 4648, 4672, 4688, 4720, 4732, 4740, 1102, 7045 and the 5 playbooks. Pre-checked against system/site/lib/quiz-audit.ts thresholds (index share ≤ 60%, length-strategy wins ≤ 60%, no run > 3, no duplicate stems); a `KSOR_DRAFTS=show` build rendered them and passed.
+- Remaining TODO-VERIFY: event-7045 only (4 lines) — that page cannot be approved until Wave 2 (4697 / T1543.003).
+- Next: STOP-R — Naveed reads Wave 1 pages and approves (all at once or per folder); I record approvals (ADR-0002 stamps), then PR.
+
+### Session 2 — update (audit + approval)
+- Strict audit: 40/100 with evidence (specs/audit/2026-11-10-audit.txt); fixed agent tables, how-to-use links, LEARNING.md, PHR-0003/0004 (`4561360`, `39eeb0f`).
+- Naveed: "APPRORED ALL PUSH". 39 pages set stable with `generated: { by: "claude-opus/5.5", at: <last commit of the page> }` and `ksor.approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }`. event-7045 left draft (TODO-VERIFY).
+- Build: 41 documents, 40 admitted to machine surfaces; llms.txt lists 40.
+- Next: Naveed opens and merges the Wave 1 PR; then Feature 05 spec/plan/tasks + evals (STOP), then provision/refresh/serve/calibrate, each after "haan".

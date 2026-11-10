@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 1102 — audit log cleared"
+  questionsPerRound: 6
+questions:
+  - question: "Which MITRE ID does the handbook use for 1102?"
+    options:
+      - "T1070.004"
+      - "T1685.005"
+      - "T1070"
+      - "T1078"
+    answer: 1
+    explanation: "The current ATT&CK ID for clearing Windows event logs is T1685.005; Wazuh's tags differ."
+    source: "MITRE ATT&CK"
+  - question: "What does Microsoft recommend when 1102 appears?"
+    options:
+      - "Ignore it if the user is admin"
+      - "Restart the server"
+      - "Investigate why it was cleared"
+      - "Delete the old logs too"
+    answer: 2
+    explanation: "Microsoft recommends monitoring 1102 and investigating why the action was performed."
+    source: "Normal vs suspicious"
+  - question: "Which field links 1102 to the session that cleared the log?"
+    options:
+      - "SubjectLogonId"
+      - "EventRecordID"
+      - "Keywords"
+      - "Opcode"
+    answer: 0
+    explanation: "SubjectLogonId links to the 4624 for that session."
+    source: "Key fields"
+  - question: "What is the level of Wazuh rule 60117?"
+    options:
+      - "5"
+      - "12"
+      - "3"
+      - "9"
+    answer: 3
+    explanation: "60117 'Windows audit log was cleared' is level 9; 63103 is level 5."
+    source: "Wazuh rules"
+  - question: "Which escalation condition applies to 1102 without a maintenance reason?"
+    options:
+      - "Condition 3"
+      - "Condition 5"
+      - "Condition 6"
+      - "Condition 1"
+    answer: 0
+    explanation: "Condition 3 covers a cleared Security log without a documented reason."
+    source: "Related playbook"
+  - question: "Under which XML element is 1102 data stored?"
+    options:
+      - "EventData"
+      - "UserData / LogFileCleared"
+      - "System / Security"
+      - "Correlation"
+    answer: 1
+    explanation: "Microsoft's sample shows the data under UserData, LogFileCleared."
+    source: "Key fields"

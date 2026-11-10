@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4624 — successful logon"
+  questionsPerRound: 6
+questions:
+  - question: "Which Logon Type means an RDP logon?"
+    options:
+      - "Type 2 — Interactive (console)"
+      - "Type 10 — RemoteInteractive"
+      - "Type 5 — Service"
+      - "Type 7 — Unlock"
+    answer: 1
+    explanation: "Type 10 is RemoteInteractive: Terminal Services or Remote Desktop. Type 2 is at the console, 5 is a service, 7 an unlock."
+    source: "Logon Types"
+  - question: "On which computer is 4624 recorded?"
+    options:
+      - "Only the domain controller of the domain"
+      - "The user's home computer"
+      - "The computer that was accessed"
+      - "The SIEM server"
+    answer: 2
+    explanation: "Microsoft says 4624 is generated on the computer that was accessed, where the session was created."
+    source: "Meaning"
+  - question: "Which 4624 should be reported according to Microsoft?"
+    options:
+      - "When Subject is not SYSTEM"
+      - "When Logon Type is 2"
+      - "When the port is 0"
+      - "When the package is Kerberos"
+    answer: 0
+    explanation: "Microsoft recommends reporting 4624 whenever Subject\\Security ID is not SYSTEM, because it is normally triggered by SYSTEM."
+    source: "Normal vs suspicious"
+  - question: "A domain admin logs on with Logon Type 5. How should L1 read it?"
+    options:
+      - "Normal service behaviour"
+      - "Only a network issue"
+      - "A logon by a cached user"
+      - "A mismatch worth investigating"
+    answer: 3
+    explanation: "Microsoft lists a domain admin using Logon Type 4 or 5 as a mismatch to monitor."
+    source: "Normal vs suspicious"
+  - question: "What does Source Network Address 127.0.0.1 mean?"
+    options:
+      - "The logon came from the internet"
+      - "The logon was made on the same machine"
+      - "The address could not be read"
+      - "The logon used IPv6 only"
+    answer: 1
+    explanation: "Microsoft notes ::1 or 127.0.0.1 means localhost."
+    source: "Key fields"
+  - question: "Which Wazuh rule matches a normal 4624?"
+    options:
+      - "60106 Windows Logon Success"
+      - "60204 Multiple Logon Failures"
+      - "60117 Audit log cleared"
+      - "61138 New service created"
+    answer: 0
+    explanation: "Rule 60106 (level 3) is Windows Logon Success for 4624."
+    source: "Wazuh rules"

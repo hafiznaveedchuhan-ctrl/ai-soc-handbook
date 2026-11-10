@@ -2,8 +2,9 @@
 type: Standard
 title: "T1110.001 Brute Force: Password Guessing"
 description: MITRE ATT&CK T1110.001 Password Guessing — repeated password attempts against one account or a few accounts, the services it targets, and how the pattern appears in Windows failed-logon events.
-status: draft
+status: stable
 order: 701
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1110-001
     title: "MITRE ATT&CK — T1110.001 Brute Force: Password Guessing"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -61,7 +63,7 @@ followed by a possible success from the same host.[^mitre-t1110-001]
 
 ## Related playbook
 
-TODO-VERIFY: brute-force playbook (batch B5), linked in the link pass.
+- [Brute-force logon attempts](../playbooks/brute-force.md)
 
 ## For the agent
 

@@ -2,8 +2,9 @@
 type: Definition
 title: Wazuh architecture
 description: How a Wazuh deployment moves security data from the agent on an endpoint through the server, indexer and dashboard, with the default ports each link uses.
-status: draft
+status: stable
 order: 600
+generated: { by: "claude-opus/5.5", at: 2026-11-10T08:05:29Z }
 sources:
   - id: wazuh-architecture
     title: Wazuh documentation — Architecture
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

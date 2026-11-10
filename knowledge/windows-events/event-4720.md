@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4720: A user account was created"
 description: Windows Security event 4720 — a new user account was created; who created it, the new account's attributes, the values Microsoft says are anomalies, and the Wazuh rule that alerts on it.
-status: draft
+status: stable
 order: 370
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4720
     title: "Microsoft Learn — 4720(S): A user account was created"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -108,7 +110,8 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: new-local-account playbook link added in the link pass.
+- [New local account created](../playbooks/new-local-account.md)
+- [Account added to Administrators](../playbooks/added-to-admin-group.md) (when the new account is added to a group)
 
 ## L1 triage questions
 

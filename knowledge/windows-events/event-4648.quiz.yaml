@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4648 — explicit credentials"
+  questionsPerRound: 6
+questions:
+  - question: "Which command does Microsoft name as a common cause of 4648?"
+    options:
+      - "ipconfig"
+      - "RUNAS"
+      - "netstat"
+      - "tasklist"
+    answer: 1
+    explanation: "Microsoft says 4648 most commonly occurs with scheduled tasks or the RUNAS command."
+    source: "When Windows writes it"
+  - question: "Which field shows the account that used someone's credentials?"
+    options:
+      - "TargetServerName"
+      - "TargetInfo"
+      - "SubjectUserName"
+      - "LogonGuid"
+    answer: 2
+    explanation: "Subject is the account that requested the new session with explicit credentials."
+    source: "Key fields"
+  - question: "What does Microsoft suggest about Process Name?"
+    options:
+      - "Ignore it for 4648"
+      - "Only check its length"
+      - "It is always svchost.exe"
+      - "Check for non-standard folders"
+    answer: 3
+    explanation: "Microsoft suggests monitoring Process Name outside standard folders or with restricted words."
+    source: "Normal vs suspicious"
+  - question: "Will a 4648 alert in default Wazuh?"
+    options:
+      - "Only through a custom rule"
+      - "Yes, as rule 60106"
+      - "Yes, as rule 60204"
+      - "Yes, as rule 67027"
+    answer: 0
+    explanation: "No default rule for 4648 was found in the ruleset; it alerts only through a custom rule."
+    source: "Wazuh rules"
+  - question: "Which escalation condition covers 4648 against an unexpected remote server?"
+    options:
+      - "Condition 1"
+      - "Condition 5"
+      - "Condition 3"
+      - "Condition 7"
+    answer: 1
+    explanation: "Condition 5 covers explicit-credential use against an unexpected remote server."
+    source: "Related playbook"
+  - question: "What value does Logon GUID show when it is not captured?"
+    options:
+      - "A random GUID"
+      - "The SID of SYSTEM"
+      - "All zeros"
+      - "The word 'none'"
+    answer: 2
+    explanation: "Microsoft: if not captured, Logon GUID appears as {00000000-0000-0000-0000-000000000000}."
+    source: "Key fields"

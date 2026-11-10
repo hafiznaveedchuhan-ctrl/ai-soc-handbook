@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4740 — account locked out"
+  questionsPerRound: 6
+questions:
+  - question: "When does Microsoft recommend reporting a 4740?"
+    options:
+      - "When Subject is not SYSTEM"
+      - "On every workstation"
+      - "Only on Fridays"
+      - "When the account is disabled"
+    answer: 0
+    explanation: "Microsoft: since 4740 is typically triggered by SYSTEM, report it when Subject is not SYSTEM."
+    source: "Normal vs suspicious"
+  - question: "What does 'Audit Account Lockout' record?"
+    options:
+      - "The lockout event itself (4740) and nothing else"
+      - "Group changes"
+      - "Failed logons to an already locked account"
+      - "Password resets"
+    answer: 2
+    explanation: "Audit Account Lockout records failed logon attempts to an account that is already locked out."
+    source: "Audit policy"
+  - question: "What is the level of Wazuh rule 60115?"
+    options:
+      - "5"
+      - "8"
+      - "12"
+      - "9"
+    answer: 3
+    explanation: "60115 'User account locked out (multiple login errors)' is level 9."
+    source: "Wazuh rules"
+  - question: "What does Caller Computer Name contain?"
+    options:
+      - "An IP address"
+      - "A computer name"
+      - "A user name"
+      - "A MAC address of the client"
+    answer: 1
+    explanation: "Microsoft: you get the computer name instead of an IP address in 4740."
+    source: "Key fields"
+  - question: "Which earlier event should you look for after a 4740?"
+    options:
+      - "4625 failures from the same source"
+      - "1102 log clear"
+      - "7045 service install"
+      - "4672 privileges"
+    answer: 0
+    explanation: "Look for the 4625 failures from the same source that led to the lockout."
+    source: "L1 triage questions"
+  - question: "Which locked accounts are worth a closer look?"
+    options:
+      - "Accounts of new users only"
+      - "Admin, service or high-value accounts"
+      - "Accounts with long names"
+      - "Accounts created today"
+    answer: 1
+    explanation: "Microsoft recommends monitoring every lockout of high-value accounts such as domain admins."
+    source: "Normal vs suspicious"

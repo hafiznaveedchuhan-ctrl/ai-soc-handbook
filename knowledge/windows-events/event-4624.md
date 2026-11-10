@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4624: An account was successfully logged on"
 description: Windows Security event 4624 — what a successful logon record means, its key fields and Logon Types, and the patterns that make it worth a second look.
-status: draft
+status: stable
 order: 320
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4624
     title: "Microsoft Learn — 4624(S): An account was successfully logged on"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -136,8 +138,7 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: links to the success-after-failures playbook (batch B5) in the
-link pass.
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## L1 triage questions
 

@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4625 — failed logon"
+  description: "Recall checks drawn only from the page Event 4625."
+cards:
+  - front: "What does event 4625 record?"
+    back: "A logon failure — any logon failure."
+  - front: "Which two fields say why it failed?"
+    back: "Status and Sub Status."
+  - front: "What does 0xC0000064 mean?"
+    back: "Logon with a misspelled or bad user account name."
+  - front: "What does 0xC000006A mean?"
+    back: "Logon with a misspelled or bad password."
+  - front: "What can several 0xC0000064 in a row indicate?"
+    back: "A user enumeration attempt."
+  - front: "Which Wazuh rule fires on 8 failures in 240 seconds from one source?"
+    back: "60204 Multiple Windows Logon Failures (level 10)."

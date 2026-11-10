@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4624 — successful logon"
+  description: "Recall checks drawn only from the page Event 4624."
+cards:
+  - front: "What does event 4624 record?"
+    back: "That a logon session was created, on the computer that was accessed."
+  - front: "Which field says how the logon happened?"
+    back: "Logon Type (LogonType)."
+  - front: "What is Logon Type 10?"
+    back: "RemoteInteractive — a logon through Terminal Services or Remote Desktop."
+  - front: "What is Logon Type 3?"
+    back: "Network — a user or computer logged on from the network."
+  - front: "When does Microsoft recommend reporting a 4624?"
+    back: "Whenever Subject\\Security ID is not SYSTEM."
+  - front: "What does Elevated Token = Yes mean?"
+    back: "The session is elevated and has administrator privileges."

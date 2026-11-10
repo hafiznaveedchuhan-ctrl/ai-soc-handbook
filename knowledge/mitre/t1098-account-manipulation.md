@@ -2,8 +2,9 @@
 type: Standard
 title: "T1098 Account Manipulation"
 description: MITRE ATT&CK T1098 Account Manipulation — changing accounts or their group memberships to keep or raise access; including the sub-technique for adding accounts to local or domain groups, and how it appears as event 4732.
-status: draft
+status: stable
 order: 740
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1098
     title: MITRE ATT&CK — T1098 Account Manipulation
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -68,7 +70,7 @@ Rule rows: [^wazuh-0580]
 
 ## Related playbook
 
-TODO-VERIFY: added-to-admin-group playbook (batch B5), linked in the link pass.
+- [Account added to Administrators](../playbooks/added-to-admin-group.md)
 
 ## For the agent
 

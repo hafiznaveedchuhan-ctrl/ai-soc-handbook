@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 7045 — new service installed"
+  questionsPerRound: 6
+questions:
+  - question: "Which log does 7045 come from?"
+    options:
+      - "Security"
+      - "Application"
+      - "System"
+      - "Sysmon"
+    answer: 2
+    explanation: "7045 is a System log event; Wazuh's rule sits under the System channel rules."
+    source: "Meaning"
+  - question: "What is the Wazuh level of rule 61138?"
+    options:
+      - "5"
+      - "9"
+      - "10"
+      - "12"
+    answer: 0
+    explanation: "61138 'New Windows Service Created' is level 5."
+    source: "Wazuh rules"
+  - question: "Which servers does Microsoft's suspicious-service alert cover?"
+    options:
+      - "Any laptop"
+      - "Mail servers only"
+      - "Web servers only"
+      - "DCs and AD FS / AD CS servers"
+    answer: 3
+    explanation: "Microsoft's alert covers a suspicious service created on a DC or an AD FS / AD CS server."
+    source: "When Windows writes it"
+  - question: "Which MITRE ID is in Wazuh rule 61138?"
+    options:
+      - "T1543.003"
+      - "T1110"
+      - "T1098"
+      - "T1685.005"
+    answer: 0
+    explanation: "Rule 61138 carries the MITRE tag T1543.003."
+    source: "Wazuh rules"
+  - question: "What is Microsoft's primary MITRE tactic for that alert?"
+    options:
+      - "Credential Access"
+      - "Execution"
+      - "Discovery"
+      - "Collection"
+    answer: 1
+    explanation: "Microsoft lists Execution (TA0002) as the primary tactic."
+    source: "How Microsoft maps it"
+  - question: "Which escalation condition covers 7045 on a DC?"
+    options:
+      - "Condition 2"
+      - "Condition 4"
+      - "Condition 7"
+      - "Condition 1"
+    answer: 2
+    explanation: "Condition 7 covers a new service on a domain controller, AD FS or AD CS server."
+    source: "Related playbook"

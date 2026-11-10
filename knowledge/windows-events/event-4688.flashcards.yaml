@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4688 — process created"
+  description: "Recall checks drawn only from the page Event 4688."
+cards:
+  - front: "What does event 4688 record?"
+    back: "Every time a new process starts."
+  - front: "Why can Process Command Line be empty?"
+    back: "It is empty by default; a policy must enable command-line logging."
+  - front: "What does Token Elevation Type %%1937 mean?"
+    back: "An elevated token — the program was run as administrator with UAC on."
+  - front: "What does %%1936 for a real user usually mean?"
+    back: "UAC is disabled for that account."
+  - front: "Which field names the parent process?"
+    back: "Creator Process Name (ParentProcessName)."
+  - front: "Which Wazuh rule covers 4688?"
+    back: "67027, level 3, 'A process was created.'"

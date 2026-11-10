@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4688: A new process has been created"
 description: Windows Security event 4688 — a process started; its creator and target accounts, process names, command line, token elevation type and integrity label, and the patterns that make a process worth checking.
-status: draft
+status: stable
 order: 360
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4688
     title: "Microsoft Learn — 4688(S): A new process has been created"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -116,7 +118,8 @@ start.
 
 ## Related playbook
 
-TODO-VERIFY: link added in the link pass.
+- Used in [New local account created](../playbooks/new-local-account.md), [Account added to Administrators](../playbooks/added-to-admin-group.md) and [Security audit log cleared](../playbooks/audit-log-cleared.md) to find the command behind an account or log change
+- A dedicated suspicious-powershell playbook is planned for Wave 2
 
 ## L1 triage questions
 

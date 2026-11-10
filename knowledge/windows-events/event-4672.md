@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4672: Special privileges assigned to new logon"
 description: Windows Security event 4672 — a new logon session received sensitive (administrator-equivalent) privileges; which privileges trigger it, its fields, and when it is not routine.
-status: draft
+status: stable
 order: 350
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-4672
     title: "Microsoft Learn — 4672(S): Special privileges assigned to new logon"
@@ -17,9 +18,13 @@ sources:
   - id: ms-advanced-audit
     title: Microsoft Learn — Advanced security audit policy settings
     resource: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+  - id: naveed-interview-2026-11-10
+    title: human:naveed interview 2026-11-10
+    resource: "human:naveed interview 2026-11-10"
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -95,14 +100,17 @@ ruleset. See [Windows rules reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: none of the approved MITRE sources names 4672 directly, and
-Wazuh's tag `T1484` is not confirmed by a MITRE page in this record. Candidate:
-[T1078 Valid Accounts](../mitre/t1078-valid-accounts.md) (privileged logon by an
-unexpected account). Owner to decide in interview I1.
+| Technique | Basis |
+|---|---|
+| [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md) | When the account receiving special privileges is unexpected; the handbook maps that to T1078[^naveed-interview-2026-11-10] |
+
+This is the handbook's mapping, set by its owner. Wazuh's own rule tag for
+4672 (`T1484`) is not used in triage notes.
 
 ## Related playbook
 
-TODO-VERIFY: link added in the link pass (candidate: added-to-admin-group).
+- Used in [Successful logon after failures](../playbooks/success-after-failures.md) to see what a suspicious logon was allowed to do
+- [Account added to Administrators](../playbooks/added-to-admin-group.md)
 
 ## L1 triage questions
 
@@ -126,3 +134,4 @@ TODO-VERIFY: link added in the link pass (candidate: added-to-admin-group).
 [^ms-audit-special-logon]: Microsoft Learn, "Audit Special Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-special-logon
 [^wazuh-0955]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0955-WEF-baseline_rules.xml`, rule 67028. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0955-WEF-baseline_rules.xml
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings
+[^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 8).

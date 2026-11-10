@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4625 — failed logon"
+  questionsPerRound: 6
+questions:
+  - question: "What does Status 0xC0000072 mean?"
+    options:
+      - "Account disabled by an administrator"
+      - "Password has expired"
+      - "A logon outside the allowed logon hours"
+      - "No logon servers available"
+    answer: 0
+    explanation: "0xC0000072 is a logon to an account disabled by an administrator."
+    source: "Status codes"
+  - question: "Several 0xC0000064 failures in a row most likely point to what?"
+    options:
+      - "A network outage"
+      - "An expired account"
+      - "User enumeration"
+      - "A disabled workstation"
+    answer: 2
+    explanation: "Microsoft: several bad user name failures in a row can be a sign of user enumeration."
+    source: "Status codes"
+  - question: "Which accounts does Microsoft say to monitor on every 4625?"
+    options:
+      - "Only guest accounts"
+      - "Local and service accounts"
+      - "Only computer accounts (names ending in $)"
+      - "Only accounts with SPNs"
+    answer: 1
+    explanation: "Microsoft recommends monitoring all 4625 events for local accounts and for service accounts."
+    source: "Normal vs suspicious"
+  - question: "Which code is usually an infrastructure issue, not security?"
+    options:
+      - "0xC000006A bad password"
+      - "0xC0000064 bad user name"
+      - "0xC0000193 logon with an expired account"
+      - "0xC000005E no logon servers"
+    answer: 3
+    explanation: "Microsoft notes 0xC000005E (no logon servers) is typically not a security issue."
+    source: "Status codes"
+  - question: "What does Wazuh rule 60204 require?"
+    options:
+      - "8 failures in 240 s, same ipAddress"
+      - "3 failures in 60 s, same user"
+      - "Any single 4625 event"
+      - "5 lockouts in one hour"
+    answer: 0
+    explanation: "60204 fires when the authentication_failed group matches 8 times in 240 seconds with the same ipAddress."
+    source: "Wazuh rules"
+  - question: "Does Wazuh rule 60122 read the Status code?"
+    options:
+      - "Yes, it needs 0xC000006A"
+      - "Yes, it needs 0xC0000064"
+      - "No, it matches every 4625"
+      - "Only for local accounts"
+    answer: 2
+    explanation: "Rule 60122 matches every 4625 under 60105; it does not read the Status code."
+    source: "Wazuh rules"

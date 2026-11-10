@@ -1,0 +1,16 @@
+deck:
+  title: "Event 4648 — explicit credentials"
+  description: "Recall checks drawn only from the page Event 4648."
+cards:
+  - front: "What does event 4648 record?"
+    back: "A process tried to log on an account by explicitly giving that account's credentials."
+  - front: "When does 4648 commonly appear?"
+    back: "With scheduled tasks or the RUNAS command, and in routine OS activity."
+  - front: "Which section names whose credentials were used?"
+    back: "Account Whose Credentials Were Used (TargetUserName)."
+  - front: "What does Target Server Name 'localhost' mean?"
+    back: "The process was run locally."
+  - front: "Is there a default Wazuh rule for 4648?"
+    back: "No — none was found in ruleset v4.14.10."
+  - front: "Which MITRE technique does the handbook map 4648 to?"
+    back: "T1078 Valid Accounts (the owner's mapping)."

@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook — brute-force logons"
+  questionsPerRound: 6
+questions:
+  - question: "What is the first L1 step?"
+    options:
+      - "Lock the account"
+      - "Confirm the alert, open 4625"
+      - "Block the source IP"
+      - "Reset the password"
+    answer: 1
+    explanation: "Step 1 is to confirm the alert and open event 4625; the AI never acts on systems."
+    source: "L1 steps"
+  - question: "A success follows the burst from the same source. What now?"
+    options:
+      - "Close as FP"
+      - "Wait one day"
+      - "Escalate — condition 4"
+      - "Only add a comment"
+    answer: 2
+    explanation: "A 4624 after the burst is escalation condition 4."
+    source: "Escalate?"
+  - question: "Failures for many accounts from one source suggest what?"
+    options:
+      - "Password spraying"
+      - "Password guessing"
+      - "A lockout storm only"
+      - "An expired password"
+    answer: 0
+    explanation: "Many accounts with few failures each from one source is spraying (T1110.003)."
+    source: "L1 steps"
+  - question: "Which field gives the source address?"
+    options:
+      - "TargetUserName"
+      - "LogonType"
+      - "Status"
+      - "IpAddress"
+    answer: 3
+    explanation: "IpAddress (Source Network Address) gives where the attempts came from."
+    source: "Evidence to collect"
+  - question: "A privileged account is targeted. Which condition?"
+    options:
+      - "Condition 2"
+      - "Condition 3"
+      - "Condition 6"
+      - "Condition 7"
+    answer: 0
+    explanation: "Condition 2 covers a privileged or service account as the target."
+    source: "Escalate?"
+  - question: "What does an AbuseIPDB score of 0 tell you?"
+    options:
+      - "The IP is safe"
+      - "Nobody has reported it"
+      - "It is a private IP"
+      - "It is a known scanner"
+    answer: 1
+    explanation: "A score of 0 means no reports — not proof the IP is safe."
+    source: "Enrichment"

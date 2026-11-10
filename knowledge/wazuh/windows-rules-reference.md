@@ -2,8 +2,9 @@
 type: Definition
 title: Wazuh Windows rules reference
 description: The default Wazuh rules (ruleset v4.14.10) that fire on the Windows events in this handbook — rule IDs, levels, parent rules, correlation thresholds and the MITRE tags written in each rule — with links to the rule files.
-status: draft
+status: stable
 order: 603
+generated: { by: "claude-opus/5.5", at: 2026-11-10T08:54:15Z }
 sources:
   - id: wazuh-0575
     title: Wazuh ruleset v4.14.10 — 0575-win-base_rules.xml
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]

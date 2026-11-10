@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook — audit log cleared"
+  questionsPerRound: 6
+questions:
+  - question: "Which command does MITRE name for clearing the Security log?"
+    options:
+      - "wevtutil cl security"
+      - "net user /add"
+      - "sc create"
+      - "ipconfig /flushdns on the domain controller"
+    answer: 0
+    explanation: "MITRE gives wevtutil cl security, among others."
+    source: "L1 steps"
+  - question: "What severity does this playbook assign without a reason?"
+    options:
+      - "Low"
+      - "Medium"
+      - "High, unless the host is a server"
+      - "Critical"
+    answer: 3
+    explanation: "Condition 3 maps to Critical in the severity model."
+    source: "Escalate?"
+  - question: "Which verdict fits documented maintenance by the expected admin?"
+    options:
+      - "TP"
+      - "Benign TP"
+      - "FP"
+      - "Needs-info"
+    answer: 1
+    explanation: "Documented maintenance by the expected admin is a benign TP."
+    source: "Verdict criteria"
+  - question: "Why is FP not used for 1102?"
+    options:
+      - "1102 is always a real clear"
+      - "1102 never fires"
+      - "FP is only for logons"
+      - "1102 is a Linux event"
+    answer: 0
+    explanation: "A 1102 is always a real clear; the question is whether it was authorised."
+    source: "Verdict criteria"
+  - question: "Where else should you look before the clear?"
+    options:
+      - "The browser history"
+      - "The printer queue"
+      - "4720, 4732, 4688, 7045"
+      - "The DNS cache"
+    answer: 2
+    explanation: "Look at new accounts, group changes, processes and services just before."
+    source: "L1 steps"
+  - question: "Which MITRE ID should the note use?"
+    options:
+      - "T1070.004"
+      - "T1070"
+      - "T1685.005"
+      - "T1110"
+    answer: 2
+    explanation: "Use T1685.005, not the tags written in the Wazuh rules."
+    source: "MITRE ATT&CK"

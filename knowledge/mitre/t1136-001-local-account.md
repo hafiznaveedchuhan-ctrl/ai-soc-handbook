@@ -2,8 +2,9 @@
 type: Standard
 title: "T1136.001 Create Account: Local Account"
 description: MITRE ATT&CK T1136.001 Local Account — adversaries creating a local account to keep access; how it appears as event 4720 and as net user /add on the command line.
-status: draft
+status: stable
 order: 730
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1136-001
     title: "MITRE ATT&CK — T1136.001 Create Account: Local Account"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -72,7 +74,7 @@ Rule row: [^wazuh-0580]
 
 ## Related playbook
 
-TODO-VERIFY: new-local-account playbook (batch B5), linked in the link pass.
+- [New local account created](../playbooks/new-local-account.md)
 
 ## For the agent
 

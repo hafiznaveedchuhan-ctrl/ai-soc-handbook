@@ -2,8 +2,9 @@
 type: Standard
 title: "T1078 Valid Accounts"
 description: MITRE ATT&CK T1078 Valid Accounts — adversaries logging on with real, stolen or inactive credentials; why it looks like normal activity, and the logon patterns that give it away.
-status: draft
+status: stable
 order: 710
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: mitre-t1078
     title: MITRE ATT&CK — T1078 Valid Accounts
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -71,7 +73,7 @@ enterprise administrator.[^mitre-t1078]
 
 ## Related playbook
 
-TODO-VERIFY: success-after-failures playbook (batch B5), linked in the link pass.
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## For the agent
 

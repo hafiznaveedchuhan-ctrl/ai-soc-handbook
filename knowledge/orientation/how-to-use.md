@@ -2,8 +2,9 @@
 type: Document
 title: How to use this handbook
 description: How SOC analysts and the soc-worker agent find, read and cite pages in this handbook, and what each part of a page is for.
-status: draft
+status: stable
 order: 2
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:29:48Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -27,12 +29,13 @@ arrives.[^naveed-interview-2026-11-10]
 
 | You have | Go to |
 |---|---|
-| A Windows Event ID (for example 4625) | the Windows events section |
-| A Wazuh rule ID, level or alert field | the Wazuh section |
-| A MITRE ATT&CK technique ID | the MITRE section |
-| An alert to work through end to end | the playbooks section |
-| An IP address, user or host to check | the enrichment section |
-| A verdict to write up | the triage-note section |
+| A decision to make (escalate? how severe?) | [escalation policy](../rules-map/escalation-policy.md), [severity model](../rules-map/severity-model.md) |
+| A Windows Event ID (for example 4625) | the Windows events section, for example [event 4625](../windows-events/event-4625.md) |
+| A Wazuh rule ID, level or alert field | [Windows rules reference](../wazuh/windows-rules-reference.md), [rule levels](../wazuh/rule-levels.md), [alert JSON anatomy](../wazuh/alert-json-anatomy.md) |
+| A MITRE ATT&CK technique ID | the MITRE section, for example [T1110 Brute Force](../mitre/t1110-brute-force.md) |
+| An alert to work through end to end | the playbooks section, for example [brute-force](../playbooks/brute-force.md) |
+| An IP address, user or host to check | [IP reputation policy](../enrichment/ip-reputation-policy.md), [private IP ranges](../enrichment/private-ip-ranges.md) |
+| A verdict to write up | [note template](../triage-note/note-template.md), [writing rules](../triage-note/writing-rules.md) |
 | A term you do not know | the [glossary](glossary.md) |
 
 ## How every page is built
@@ -52,8 +55,8 @@ Each page has the same three parts, in this order:[^naveed-interview-2026-11-10]
 A footnote names the source a claim comes from: an official publication
 (Microsoft, MITRE, NIST, CISA, Wazuh, IETF), a secondary source labelled
 "(secondary source)", or an interview with the handbook's owner. A value that
-has not yet been confirmed is marked `TODO-VERIFY`, and a page carrying that
-marker is still a draft.[^naveed-interview-2026-11-10]
+has not yet been confirmed is flagged as an open item to verify, and a page
+with any open item is still a draft.[^naveed-interview-2026-11-10]
 
 ## Rules when using it
 

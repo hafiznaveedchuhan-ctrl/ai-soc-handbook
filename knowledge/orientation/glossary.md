@@ -2,8 +2,9 @@
 type: Definition
 title: Glossary
 description: Core SOC triage terms — SIEM, log, event, alert, incident, IOC, false positive and negative, tactic and technique, decoder and rule — defined from NIST, MITRE ATT&CK and Wazuh sources.
-status: draft
+status: stable
 order: 3
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
 sources:
   - id: nist-siem
     title: NIST CSRC Glossary — security information and event management (from NIST SP 800-92)
@@ -44,9 +45,13 @@ sources:
   - id: wazuh-rules-classification
     title: Wazuh documentation — Rules classification
     resource: https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
+  - id: naveed-interview-2026-11-10
+    title: human:naveed interview 2026-11-10
+    resource: "human:naveed interview 2026-11-10"
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -121,18 +126,28 @@ access.[^mitre-tactics]
 goal — for example, dumping credentials to gain credential
 access.[^mitre-techniques]
 
-## Open questions
+## Verdicts and SOC terms
 
-The following terms are used across SOC teams but are not defined in the
-sources above. They will be defined from the owner's interview (and, where he
-asks, an illustrative definition with a named secondary source):
+These are the handbook's own definitions, set by its owner:[^naveed-interview-2026-11-10]
 
-- TODO-VERIFY: true positive and benign true positive
-- TODO-VERIFY: indicator of attack (IOA)
-- TODO-VERIFY: L1 / L2 / L3 analyst tiers
-- TODO-VERIFY: SLA, MTTD and MTTR
-- TODO-VERIFY: enrichment
-- TODO-VERIFY: false-positive rate
+- **True positive (TP):** the alert fired on real malicious or unauthorised
+  activity.
+- **Benign true positive:** the alert correctly detected the activity, but the
+  activity was authorised — for example admin maintenance, an approved scanner
+  or a penetration test.
+- **Needs-info:** the evidence is not enough to decide; the note lists what is
+  missing.
+- **Indicator of attack (IOA):** behaviour that shows an attack in progress
+  (for example a password-spraying pattern), as opposed to an IOC artifact.
+- **L1 / L2 / L3:** L1 triages and escalates; L2 investigates and contains; L3
+  handles advanced investigation, threat hunting and detection engineering.
+- **SLA:** the response time the handbook sets for each severity.
+- **MTTD / MTTR:** mean time to detect and mean time to respond, measured per
+  severity.
+- **Enrichment:** adding context to an alert — IP reputation, asset, user role,
+  history.
+- **False-positive rate:** the share of a rule's alerts closed as false
+  positive over a period.
 
 ## For the agent
 
@@ -151,6 +166,12 @@ asks, an illustrative definition with a named secondary source):
 | False negative | Malicious classified as benign | NIST |
 | Tactic | Adversary's goal ("why") | MITRE ATT&CK |
 | Technique | Adversary's method ("how") | MITRE ATT&CK |
+| True positive | Real malicious or unauthorised activity | Owner |
+| Benign true positive | Correct detection of authorised activity | Owner |
+| Needs-info | Evidence not enough; list what is missing | Owner |
+| IOA | Behaviour showing an attack in progress | Owner |
+| L1 / L2 / L3 | Triage / investigate and contain / advanced and hunting | Owner |
+| Enrichment | Added context: IP reputation, asset, user, history | Owner |
 
 [^nist-siem]: NIST CSRC Glossary, "security information and event management (SIEM) software", source NIST SP 800-92. https://csrc.nist.gov/glossary/term/security_information_and_event_management
 [^nist-log]: NIST CSRC Glossary, "log", source NIST SP 800-92. https://csrc.nist.gov/glossary/term/log
@@ -165,3 +186,4 @@ asks, an illustrative definition with a named secondary source):
 [^wazuh-alert-management]: Wazuh documentation, "Alert management". https://documentation.wazuh.com/current/user-manual/manager/alert-management.html
 [^wazuh-server]: Wazuh documentation, "Wazuh server". https://documentation.wazuh.com/current/getting-started/components/wazuh-server.html
 [^wazuh-rules-classification]: Wazuh documentation, "Rules classification". https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
+[^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 4).

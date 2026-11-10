@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 1102: The audit log was cleared"
 description: Windows Security event 1102 — the Security audit log was cleared; who cleared it, why it should rarely happen, and the Wazuh rules that alert on it.
-status: draft
+status: stable
 order: 310
+generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
 sources:
   - id: ms-1102
     title: "Microsoft Learn — 1102(S): The audit log was cleared"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
 ---
 
 > [!NOTE]
@@ -92,7 +94,7 @@ Use **T1685.005** in triage notes, not the tags inside the Wazuh rules.
 
 ## Related playbook
 
-TODO-VERIFY: audit-log-cleared playbook link added in the link pass.
+- [Security audit log cleared](../playbooks/audit-log-cleared.md)
 
 ## L1 triage questions
 
