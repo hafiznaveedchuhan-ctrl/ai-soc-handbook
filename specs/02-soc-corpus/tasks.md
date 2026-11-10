@@ -13,12 +13,12 @@ verify.mjs run per page · TODO-VERIFY list reported.
 - [x] **T02-03** Write orientation/glossary, orientation/how-to-use.
 - [x] **T02-04** Write wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels.
 - [x] **T02-05** Write windows-events/event-4624, event-4625 (Logon Type + Status/SubStatus tables), event-4648.
-- [ ] **STOP-B1** Report; Naveed checks 2 random pages; says "next".
+- [x] **STOP-B1** Report; Naveed checks 2 random pages; says "next".
 
 ## B2
-- [ ] **T02-06** Verify Wazuh tag (v4.14.10 or newest existing); show B2 URL list. **STOP:** URLs + tag approved.
-- [ ] **T02-07** Write events 4672, 4688, 4720, 4732, 4740, 1102, 7045.
-- [ ] **T02-08** Write wazuh/windows-rules-reference (rule IDs only from ruleset files, with links).
+- [x] **T02-06** Verify Wazuh tag (v4.14.10 or newest existing); show B2 URL list. **STOP:** URLs + tag approved.
+- [x] **T02-07** Write events 4672, 4688, 4720, 4732, 4740, 1102, 7045.
+- [x] **T02-08** Write wazuh/windows-rules-reference (rule IDs only from ruleset files, with links).
 - [ ] **STOP-B2** Report; 2 random pages; "next".
 
 ## B3

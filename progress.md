@@ -8,7 +8,7 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State |
 |---|---|
 | 01 record-identity | **verified** — PR #1 merged into main (186b665) |
-| 02 soc-corpus Wave 1 | implementing — B1 written (8 drafts), waiting at STOP-B1 |
+| 02 soc-corpus Wave 1 | implementing — B1 + B2 written (16 drafts), waiting at STOP-B2 |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -50,6 +50,8 @@ Never delete history; append a new session block; keep the Current state table c
 - Branch `feat/02-soc-corpus-wave-1`: specs/02-soc-corpus/{spec,plan,tasks,sources}.md (commit below)
 - Feature 02 STOP-A approved; B1 URL list (all HTTP 200) approved.
 - B1 drafts: orientation/how-to-use, orientation/glossary, wazuh/architecture, wazuh/alert-json-anatomy, wazuh/rule-levels, windows-events/event-4624, event-4625, event-4648 (commit "Wave 1 B1 …"); verify.mjs: no changed values
+- STOP-B1 "next". Wazuh tag v4.14.10 verified (newest release tag); full ruleset (168 files) searched. B2 URLs approved.
+- `ff6999f` + `636d72d` — B2 drafts: events 4672, 4688, 4720, 4732, 4740, 1102, 7045, wazuh/windows-rules-reference; B1 events 4624/4625/4648 + alert-json-anatomy updated with ruleset rule IDs and field casing
 - `aa76b20` — specs/00-final-plan.txt v3 (Wave 3 soc-fundamentals, steps 43-50), Feature 01 spec intake table, history/prompts/0002-scope-l1-operations-wave-3.md
 
 ### Decisions taken
@@ -69,17 +71,19 @@ Never delete history; append a new session block; keep the Current state table c
 - Dev server serves new pages only after restart (`output: export` static params): restart `npm run dev` after adding documents.
 
 ### Pending / blocked
-- STOP-B1: Naveed to check 2 random B1 pages against sources and say "next". (Naveed)
+- STOP-B2: Naveed to check 2 random B2 pages and confirm the two extra ruleset files (0610, 0220). (Naveed)
 - `gh` CLI not logged in — needed for the PR in T01-14 (`gh auth login`), or PR via browser. (Naveed)
 
 ### TODO-VERIFY list
 - glossary: TP / benign TP, IOA, L1/L2/L3, SLA, MTTD/MTTR, enrichment, FP rate → interview I1
-- alert-json-anatomy: `rule.mitre.*` output field names; Security-log `eventdata` key casing → B2 ruleset
-- events 4624/4625/4648: MITRE mapping (B3), Wazuh rule IDs (B2), playbook links (B5 / link pass)
+- alert-json-anatomy: `rule.mitre.*` output field names (needs a lab alert or doc sample)
+- all 10 events: MITRE mapping (B3); playbook links (B5 / link pass)
+- event-1102: Wazuh rule MITRE tags disagree (T1070.004 vs T1070) → B3
+- event-7045: audit setting and field names (no Tier 1 field reference yet)
 
 ### Exact next step for the next session
-- After "next": T02-06 — verify Wazuh tag and show the B2 URL list.
+- After "next": T02-09 — show the B3 MITRE URL list.
 
 ### Naveed's manual actions needed
-- Check 2 random B1 pages against their sources (STOP-B1).
+- Check 2 random B2 pages (STOP-B2); confirm ruleset files 0610 and 0220.
 - Optional before T01-14: `gh auth login`.
