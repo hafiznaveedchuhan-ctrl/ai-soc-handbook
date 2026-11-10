@@ -22,8 +22,8 @@ a point where Claude waits for Naveed.
   Verify by: `grep -rn "human:you" .ksor knowledge` empty; `npm run check` exit 0.
 - [x] **T01-09** `npx ksor build` + `npm run build`; commit with regenerated indexes and `build.lock.json`.
   Verify by: both exit 0; `system/site/out/llms.txt` shows new name/description.
-- [ ] **STOP-B** Naveed reads `instance.md` back, restarts/opens `npm run dev`, confirms title and name.
-- [ ] **T01-10** Draft `knowledge/orientation/overview.md` (status draft, order 1, three-part body, interview source).
+- [x] **STOP-B** Naveed reads `instance.md` back, restarts/opens `npm run dev`, confirms title and name.
+- [x] **T01-10** Draft `knowledge/orientation/overview.md` (status draft, order 1, three-part body, interview source).
   Verify by: `npm run check` exit 0; page visible on `npm run dev` marked draft.
 - [ ] **STOP-C** Naveed reads the overview and says "approved" (or gives edits).
 - [ ] **T01-11** Record approval: `status: stable`, `generated { by: "claude-opus/5.5", at }`, `ksor.approval { by: "human:naveed", at }`.
