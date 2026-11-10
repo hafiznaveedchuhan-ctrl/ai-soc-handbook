@@ -95,6 +95,12 @@ All rows: [^iana-dhcp]
 | UDP 67/68 offers from an unknown server | Possible rogue DHCP server — escalate per policy |
 | UDP 546/547, ff02::1:2 | DHCPv6 traffic |
 
+## Related pages
+
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^rfc2131]: IETF, "RFC 2131 — Dynamic Host Configuration Protocol". https://www.rfc-editor.org/rfc/rfc2131
 [^iana-dhcp]: IANA, "Dynamic Host Configuration Protocol (DHCP) and Bootstrap Protocol (BOOTP) Parameters". https://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml
 [^rfc9915]: IETF, "RFC 9915 — Dynamic Host Configuration Protocol for IPv6 (DHCPv6)", January 2026, obsoletes RFC 8415. https://www.rfc-editor.org/rfc/rfc9915

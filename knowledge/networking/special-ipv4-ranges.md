@@ -86,6 +86,13 @@ All rows: [^iana-ipv4-special]
 | 224/4 | Multicast | Group traffic, not one host |
 | anything else | Public | Check IP reputation |
 
+## Related pages
+
+- [IPv4 addressing and the IPv4 header](ipv4-addressing.md)
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [Firewalls](firewalls.md)
+- [Private IP ranges](../enrichment/private-ip-ranges.md)
+
 [^iana-ipv4-special]: IANA, "IANA IPv4 Special-Purpose Address Registry". https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
 [^rfc6890]: IETF, "RFC 6890 — Special-Purpose IP Address Registries", updated by RFC 8190. https://www.rfc-editor.org/rfc/rfc6890
 [^rfc1918]: IETF, "RFC 1918 — Address Allocation for Private Internets". https://www.rfc-editor.org/rfc/rfc1918

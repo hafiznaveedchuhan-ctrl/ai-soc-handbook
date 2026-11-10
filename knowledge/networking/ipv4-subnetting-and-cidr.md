@@ -95,6 +95,12 @@ The addresses are documentation ranges (192.0.2.0/24, 198.51.100.0/24,
 | Mask for /n? | n ones then (32−n) zeros, written in decimal |
 | Network / broadcast of X/n? | Host bits all 0 / all 1 |
 
+## Related pages
+
+- [IPv4 addressing and the IPv4 header](ipv4-addressing.md)
+- [Routing basics](routing-basics.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+
 [^rfc4632]: IETF, "RFC 4632 — Classless Inter-domain Routing (CIDR)", August 2006. https://www.rfc-editor.org/rfc/rfc4632
 [^rfc1918]: IETF, "RFC 1918 — Address Allocation for Private Internets". https://www.rfc-editor.org/rfc/rfc1918
 [^rfc5737]: IETF, "RFC 5737 — IPv4 Address Blocks Reserved for Documentation". https://www.rfc-editor.org/rfc/rfc5737

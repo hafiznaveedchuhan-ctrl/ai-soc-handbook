@@ -80,6 +80,12 @@ Worked examples with the same table plus a default route (computed with Python
 | Route 0.0.0.0/0 | Default route |
 | Two routes match | The longer prefix wins |
 
+## Related pages
+
+- [IPv4 subnetting and CIDR](ipv4-subnetting-and-cidr.md)
+- [Routing protocols overview — OSPF and BGP](routing-protocols-overview.md)
+- [ICMP and ICMPv6](icmp-and-icmpv6.md)
+
 [^rfc1812]: IETF, "RFC 1812 — Requirements for IP Version 4 Routers". https://www.rfc-editor.org/rfc/rfc1812
 [^rfc4632]: IETF, "RFC 4632 — Classless Inter-domain Routing (CIDR)", August 2006. https://www.rfc-editor.org/rfc/rfc4632
 [^rfc792]: IETF, "RFC 792 — Internet Control Message Protocol". https://www.rfc-editor.org/rfc/rfc792

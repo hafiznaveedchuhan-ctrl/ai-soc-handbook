@@ -76,6 +76,12 @@ Computed with Python's `ipaddress`, using the documentation prefix
 | Count distinct sources | Count canonical forms |
 | Classify | Use [IPv6 special ranges](ipv6-special-ranges.md) |
 
+## Related pages
+
+- [Special-purpose IPv6 address ranges](ipv6-special-ranges.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Number systems: binary, decimal and hexadecimal](number-systems-binary-decimal-hex.md)
+
 [^rfc8200]: IETF, "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification". https://www.rfc-editor.org/rfc/rfc8200
 [^rfc4291]: IETF, "RFC 4291 — IP Version 6 Addressing Architecture". https://www.rfc-editor.org/rfc/rfc4291
 [^rfc5952]: IETF, "RFC 5952 — A Recommendation for IPv6 Address Text Representation". https://www.rfc-editor.org/rfc/rfc5952

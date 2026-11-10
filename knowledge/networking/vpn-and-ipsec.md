@@ -79,6 +79,13 @@ All rows: [^nist-sp800-77r1]
 | VPN login from an unusual country/IP, then internal access | Check the user and the session — escalate per policy |
 | Network IDS silent on VPN traffic | Expected — it is encrypted ([IDS and IPS](ids-ips.md)) |
 
+## Related pages
+
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [Remote access protocols — SSH, RDP, Telnet](remote-access-protocols.md)
+- [IDS and IPS](ids-ips.md)
+- [Brute-force playbook](../playbooks/brute-force.md)
+
 [^rfc4301]: IETF, "RFC 4301 — Security Architecture for the Internet Protocol". https://www.rfc-editor.org/rfc/rfc4301
 [^rfc4303]: IETF, "RFC 4303 — IP Encapsulating Security Payload (ESP)". https://www.rfc-editor.org/rfc/rfc4303
 [^rfc4302]: IETF, "RFC 4302 — IP Authentication Header". https://www.rfc-editor.org/rfc/rfc4302

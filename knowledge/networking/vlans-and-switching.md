@@ -59,5 +59,10 @@ approved. Do not fill them from memory.
 | 0x8100 | VLAN-tagged frame (C-Tag) |
 | 0x88A8 | Provider / outer VLAN tag (S-Tag) |
 
+## Related pages
+
+- [Ethernet and MAC addresses](ethernet-and-mac-addresses.md)
+- [Network segmentation and zones](network-segmentation-and-zones.md)
+
 [^rfc9542]: IETF, "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters", April 2024. https://www.rfc-editor.org/rfc/rfc9542
 [^iana-802]: IANA, "IEEE 802 Numbers" registry (EtherTypes). https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml

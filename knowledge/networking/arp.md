@@ -53,6 +53,12 @@ ksor:
 | Normal request (op 1) then reply (op 2) | Address lookup | None |
 | IP → MAC mapping changes without a known reason | Check network-attacks (N5) | Flag; identify both MACs |
 
+## Related pages
+
+- [Ethernet and MAC addresses](ethernet-and-mac-addresses.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Common network attacks](network-attacks.md)
+
 [^rfc826]: IETF, "RFC 826 — An Ethernet Address Resolution Protocol". https://www.rfc-editor.org/rfc/rfc826
 [^rfc9542]: IETF, "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters", April 2024. https://www.rfc-editor.org/rfc/rfc9542
 [^iana-802]: IANA, "IEEE 802 Numbers" registry (EtherTypes). https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml

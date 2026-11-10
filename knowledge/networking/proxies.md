@@ -60,6 +60,13 @@ ksor:
 | CONNECT to an unusual host:port | Tunnel through the proxy — check what it reached |
 | 407 status | Proxy wants authentication |
 
+## Related pages
+
+- [HTTP and HTTPS](http-https.md)
+- [TLS — Transport Layer Security](tls.md)
+- [Firewalls](firewalls.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^rfc9110]: IETF, "RFC 9110 — HTTP Semantics", June 2022. https://www.rfc-editor.org/rfc/rfc9110
 [^rfc7239]: IETF, "RFC 7239 — Forwarded HTTP Extension". https://www.rfc-editor.org/rfc/rfc7239
 [^nist-sp800-41r1]: NIST SP 800-41 Rev. 1, "Guidelines on Firewalls and Firewall Policy", September 2009 (sections 2.1, 4.1, 5.2.3, glossary). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf

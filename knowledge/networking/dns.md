@@ -100,6 +100,13 @@ All rows: [^iana-dns]
 | TCP 53 from a workstation | Large answer or zone transfer — note it |
 | PTR query | Reverse lookup of an address |
 
+## Related pages
+
+- [UDP — User Datagram Protocol](udp.md)
+- [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
+- [Common network attacks](network-attacks.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^rfc1034]: IETF, "RFC 1034 — Domain Names — Concepts and Facilities". https://www.rfc-editor.org/rfc/rfc1034
 [^rfc1035]: IETF, "RFC 1035 — Domain Names — Implementation and Specification". https://www.rfc-editor.org/rfc/rfc1035
 [^iana-dns]: IANA, "Domain Name System (DNS) Parameters". https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml

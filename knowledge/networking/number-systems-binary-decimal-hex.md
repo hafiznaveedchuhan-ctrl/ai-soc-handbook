@@ -81,6 +81,12 @@ The address **192.0.2.10** is:
 | Binary octet | sum of place values | ≤ 255 |
 | Hex pair | 16 × first + second | ≤ 255 |
 
+## Related pages
+
+- [IPv4 subnetting and CIDR](ipv4-subnetting-and-cidr.md)
+- [IPv6 addressing](ipv6-addressing.md)
+- [Ethernet and MAC addresses](ethernet-and-mac-addresses.md)
+
 [^rfc791]: IETF, "RFC 791 — Internet Protocol". https://www.rfc-editor.org/rfc/rfc791
 [^rfc4291]: IETF, "RFC 4291 — IP Version 6 Addressing Architecture". https://www.rfc-editor.org/rfc/rfc4291
 [^rfc5737]: IETF, "RFC 5737 — IPv4 Address Blocks Reserved for Documentation". https://www.rfc-editor.org/rfc/rfc5737

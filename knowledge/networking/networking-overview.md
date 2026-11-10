@@ -42,7 +42,12 @@ applications.[^rfc1180]
 | Foundations | [OSI model](osi-model.md), [TCP/IP model and encapsulation](tcp-ip-model-and-encapsulation.md), [number systems](number-systems-binary-decimal-hex.md) |
 | Link layer | [Ethernet and MAC addresses](ethernet-and-mac-addresses.md), [ARP](arp.md) |
 | IPv4 | [IPv4 addressing](ipv4-addressing.md), [subnetting and CIDR](ipv4-subnetting-and-cidr.md), [private ranges](../enrichment/private-ip-ranges.md) |
-| Later batches | IPv6, ICMP, TCP, UDP, ports, routing, NAT, VLANs, DHCP, DNS, NTP, wireless, HTTP/TLS, email, remote access, firewalls, IDS/IPS, proxies, VPN, segmentation, syslog, NetFlow, packet capture, network attacks, reading network logs |
+| IPv4 ranges | [special IPv4 ranges](special-ipv4-ranges.md) |
+| IPv6 | [IPv6 addressing](ipv6-addressing.md), [IPv6 special ranges](ipv6-special-ranges.md), [neighbor discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md) |
+| Transport | [ICMP and ICMPv6](icmp-and-icmpv6.md), [TCP](tcp.md), [UDP](udp.md), [ports and services](ports-and-services.md) |
+| Infrastructure | [routing basics](routing-basics.md), [routing protocols](routing-protocols-overview.md), [NAT and PAT](nat-and-pat.md), [VLANs](vlans-and-switching.md), [DHCP](dhcp.md), [DNS](dns.md), [NTP](ntp-and-time-sync.md), [wireless](wireless-basics.md) |
+| Applications and devices | [HTTP/HTTPS](http-https.md), [TLS](tls.md), [email](email-protocols.md), [remote access](remote-access-protocols.md), [firewalls](firewalls.md), [IDS/IPS](ids-ips.md), [proxies](proxies.md), [VPN and IPsec](vpn-and-ipsec.md) |
+| SOC / SIEM | [segmentation and zones](network-segmentation-and-zones.md), [syslog](syslog.md), [NetFlow/IPFIX](netflow-and-ipfix.md), [packet capture](packet-capture.md), [network attacks](network-attacks.md), [reading network logs in the SIEM](reading-network-logs-in-siem.md) |
 
 ## Why a SOC analyst cares
 
@@ -60,6 +65,10 @@ applications.[^rfc1180]
 | "Convert / is this address in that range?" | number-systems-binary-decimal-hex, ipv4-subnetting-and-cidr |
 | "What is this MAC / EtherType?" | ethernet-and-mac-addresses |
 | "Internal or external IP?" | enrichment/private-ip-ranges |
+| "What service is on this port?" | ports-and-services |
+| "Which real host is behind this IP?" | nat-and-pat, dhcp, proxies |
+| "Is this traffic an attack pattern?" | network-attacks |
+| "How do I read this network log line?" | reading-network-logs-in-siem |
 | Out of networking scope (exploitation how-to) | "not in this record" |
 
 [^nist-network]: NIST CSRC Glossary, "network" (sources NIST SP 800-171r3, SP 800-37 Rev. 2). https://csrc.nist.gov/glossary/term/network

@@ -75,6 +75,13 @@ RFC 4787 names three mapping behaviours:[^rfc4787]
 | Inbound connection to an inside host | Expect a static mapping; if none, investigate |
 | Same public IP, many ports | Normal for PAT — do not treat as one host |
 
+## Related pages
+
+- [DHCP and DHCPv6](dhcp.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [VPNs and IPsec](vpn-and-ipsec.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^rfc3022]: IETF, "RFC 3022 — Traditional IP Network Address Translator (Traditional NAT)". https://www.rfc-editor.org/rfc/rfc3022
 [^rfc4787]: IETF, "RFC 4787 — Network Address Translation (NAT) Behavioral Requirements for Unicast UDP". https://www.rfc-editor.org/rfc/rfc4787
 [^rfc1918]: IETF, "RFC 1918 — Address Allocation for Private Internets". https://www.rfc-editor.org/rfc/rfc1918

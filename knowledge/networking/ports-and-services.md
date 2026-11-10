@@ -107,6 +107,15 @@ not prove which program is listening.[^iana-ports]
 | 445 between workstations | File sharing — consider escalation condition 5 |
 | Port not listed | Look it up in the IANA registry; the port alone does not prove the program |
 
+## Related pages
+
+- [TCP — Transmission Control Protocol](tcp.md)
+- [UDP — User Datagram Protocol](udp.md)
+- [Remote access protocols — SSH, RDP, Telnet](remote-access-protocols.md)
+- [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
+- [HTTP and HTTPS](http-https.md)
+- [Wazuh architecture](../wazuh/architecture.md)
+
 [^rfc6335]: IETF, "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry". https://www.rfc-editor.org/rfc/rfc6335
 [^iana-ports]: IANA, "Service Name and Transport Protocol Port Number Registry". https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
 [^iana-proto]: IANA, "Protocol Numbers". https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml

@@ -61,6 +61,12 @@ role.[^rfc4291]
 | 135 / 136 | Neighbour (link-layer address) discovery — the IPv6 counterpart of ARP |
 | 137 | Redirect — check the sending router |
 
+## Related pages
+
+- [ARP — Address Resolution Protocol](arp.md)
+- [ICMP and ICMPv6](icmp-and-icmpv6.md)
+- [DHCP and DHCPv6](dhcp.md)
+
 [^rfc4861]: IETF, "RFC 4861 — Neighbor Discovery for IP version 6 (IPv6)". https://www.rfc-editor.org/rfc/rfc4861
 [^rfc4862]: IETF, "RFC 4862 — IPv6 Stateless Address Autoconfiguration". https://www.rfc-editor.org/rfc/rfc4862
 [^iana-icmpv6]: IANA, "ICMPv6 Parameters". https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml

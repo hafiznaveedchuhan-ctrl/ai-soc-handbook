@@ -83,6 +83,12 @@ guarantee; reliability is left to higher layers.[^rfc1122]
 | Protocol | Decide TCP / UDP / ICMP page |
 | DF / MF, fragment offset | Fragment-related IDS alert context |
 
+## Related pages
+
+- [IPv4 subnetting and CIDR](ipv4-subnetting-and-cidr.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [Private IP ranges](../enrichment/private-ip-ranges.md)
+
 [^rfc791]: IETF, "RFC 791 — Internet Protocol". https://www.rfc-editor.org/rfc/rfc791
 [^rfc6864]: IETF, "RFC 6864 — Updated Specification of the IPv4 ID Field". https://www.rfc-editor.org/rfc/rfc6864
 [^rfc4632]: IETF, "RFC 4632 — Classless Inter-domain Routing (CIDR)", August 2006. https://www.rfc-editor.org/rfc/rfc4632

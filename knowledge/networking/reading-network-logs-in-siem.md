@@ -71,6 +71,14 @@ ksor:
 | 6 | Allowed or blocked? | Say it is unknown; check the firewall log before deciding |
 | 8 | Which pattern and playbook? | Escalate per policy |
 
+## Related pages
+
+- [Common network attacks](network-attacks.md)
+- [Wazuh alert JSON anatomy](../wazuh/alert-json-anatomy.md)
+- [IP reputation policy](../enrichment/ip-reputation-policy.md)
+- [Triage note template](../triage-note/note-template.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
+
 [^nist-sp800-92]: NIST SP 800-92, "Guide to Computer Security Log Management", September 2006 (sections 2.3, 3.3, 3.4). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf
 [^wazuh-syslog]: Wazuh documentation, "Syslog" (log data collection). https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html
 [^rfc5905]: IETF, "RFC 5905 — Network Time Protocol Version 4: Protocol and Algorithms Specification". https://www.rfc-editor.org/rfc/rfc5905

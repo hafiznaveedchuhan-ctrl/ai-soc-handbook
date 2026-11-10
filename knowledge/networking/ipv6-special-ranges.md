@@ -72,6 +72,12 @@ localhost.[^ms-4625] For example `::ffff:192.0.2.10` is the IPv4 address
 | `2001:db8:` or inside 3fff::/20 | Documentation | Should not appear |
 | other | Global | Reputation check |
 
+## Related pages
+
+- [IPv6 addressing](ipv6-addressing.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [IP reputation policy](../enrichment/ip-reputation-policy.md)
+
 [^iana-ipv6-special]: IANA, "IANA IPv6 Special-Purpose Address Registry". https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml
 [^rfc4291]: IETF, "RFC 4291 — IP Version 6 Addressing Architecture". https://www.rfc-editor.org/rfc/rfc4291
 [^rfc4193]: IETF, "RFC 4193 — Unique Local IPv6 Unicast Addresses". https://www.rfc-editor.org/rfc/rfc4193

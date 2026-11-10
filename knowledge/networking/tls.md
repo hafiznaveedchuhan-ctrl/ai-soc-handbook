@@ -80,6 +80,13 @@ All rows: [^iana-tls]
 | SNI / server name in log | The site the client asked for (not the content) |
 | Alert 45 / 48 | Expired certificate / unknown CA |
 
+## Related pages
+
+- [HTTP and HTTPS](http-https.md)
+- [Proxies and reverse proxies](proxies.md)
+- [IDS and IPS](ids-ips.md)
+- [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
+
 [^rfc9846]: IETF, "RFC 9846 — The Transport Layer Security (TLS) Protocol Version 1.3", July 2026, obsoletes RFC 8446. https://www.rfc-editor.org/rfc/rfc9846
 [^rfc8996]: IETF, "RFC 8996 — Deprecating TLS 1.0 and TLS 1.1", March 2021. https://www.rfc-editor.org/rfc/rfc8996
 [^nist-sp800-52r2]: NIST SP 800-52 Rev. 2, "Guidelines for the Selection, Configuration, and Use of Transport Layer Security (TLS) Implementations", August 2019. https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf

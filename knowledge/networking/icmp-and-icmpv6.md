@@ -83,6 +83,12 @@ All rows: [^iana-icmpv6]
 | Type 11 | TTL expired |
 | ICMPv6 133–137 | Neighbor Discovery |
 
+## Related pages
+
+- [Routing basics](routing-basics.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Common network attacks](network-attacks.md)
+
 [^rfc792]: IETF, "RFC 792 — Internet Control Message Protocol". https://www.rfc-editor.org/rfc/rfc792
 [^rfc4443]: IETF, "RFC 4443 — Internet Control Message Protocol (ICMPv6) for IPv6". https://www.rfc-editor.org/rfc/rfc4443
 [^iana-icmp]: IANA, "ICMP Parameters". https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml

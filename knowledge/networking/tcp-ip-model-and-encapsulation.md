@@ -66,5 +66,13 @@ the link layer. Knowing the layer tells you which device could have seen it.
 | MAC, EtherType | Link | [Ethernet and MAC](ethernet-and-mac-addresses.md) |
 | URL, query name | Application | later batches |
 
+## Related pages
+
+- [The OSI model](osi-model.md)
+- [IPv4 addressing and the IPv4 header](ipv4-addressing.md)
+- [TCP — Transmission Control Protocol](tcp.md)
+- [UDP — User Datagram Protocol](udp.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^rfc1122]: IETF, "RFC 1122 — Requirements for Internet Hosts — Communication Layers", section 1.1.3. https://www.rfc-editor.org/rfc/rfc1122
 [^rfc1180]: IETF, "RFC 1180 — A TCP/IP Tutorial" (Informational). https://www.rfc-editor.org/rfc/rfc1180

@@ -71,6 +71,12 @@ All rows: [^rfc5905]
 | Stratum 16 | Clock not synchronized — treat its timestamps with care |
 | Many NTP control (Mode 6) queries from outside | Possible amplification abuse |
 
+## Related pages
+
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+- [Syslog](syslog.md)
+- [Common network attacks](network-attacks.md)
+
 [^rfc5905]: IETF, "RFC 5905 — Network Time Protocol Version 4: Protocol and Algorithms Specification". https://www.rfc-editor.org/rfc/rfc5905
 [^rfc8633]: IETF, "RFC 8633 — Network Time Protocol Best Current Practices". https://www.rfc-editor.org/rfc/rfc8633
 [^iana-ports]: IANA, "Service Name and Transport Protocol Port Number Registry". https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml

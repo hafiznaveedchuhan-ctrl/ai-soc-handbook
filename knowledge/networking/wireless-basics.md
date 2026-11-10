@@ -65,4 +65,10 @@ them. Add them only from an approved source.
 | Host on wired network and WLAN at once | Dual-connected — check if policy allows it |
 | Flood of wireless frames, users disconnected | Possible wireless DoS |
 
+## Related pages
+
+- [IDS and IPS](ids-ips.md)
+- [Network segmentation and zones](network-segmentation-and-zones.md)
+- [VPNs and IPsec](vpn-and-ipsec.md)
+
 [^nist-sp800-153]: NIST SP 800-153, "Guidelines for Securing Wireless Local Area Networks (WLANs)", February 2012 (executive summary, sections 3.1.1 and 3.2). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-153.pdf

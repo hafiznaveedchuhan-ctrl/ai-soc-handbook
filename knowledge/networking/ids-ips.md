@@ -66,4 +66,11 @@ All rows: [^nist-sp800-94]
 | IPS "blocked" | Inline sensor stopped it — check whether other attempts got through |
 | No IDS alert on HTTPS/SSH/VPN traffic | Expected blind spot — use host or proxy logs |
 
+## Related pages
+
+- [Firewalls](firewalls.md)
+- [Packet capture](packet-capture.md)
+- [Wireless (WLAN) basics for the SOC](wireless-basics.md)
+- [TLS — Transport Layer Security](tls.md)
+
 [^nist-sp800-94]: NIST SP 800-94, "Guide to Intrusion Detection and Prevention Systems (IDPS)", February 2007 (sections 2.1–2.3, 4.2, 4.3). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf

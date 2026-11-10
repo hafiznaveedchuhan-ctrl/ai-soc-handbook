@@ -70,6 +70,12 @@ All rows: [^iana-ipfix]
 | One source, many destination ports | Scan pattern — see [network attacks](network-attacks.md) |
 | tcpControlBits with SYN only, no reply flows | Connection attempts that did not complete |
 
+## Related pages
+
+- [Packet capture](packet-capture.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+- [Common network attacks](network-attacks.md)
+
 [^rfc7011]: IETF, "RFC 7011 — Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information". https://www.rfc-editor.org/rfc/rfc7011
 [^rfc7012]: IETF, "RFC 7012 — Information Model for IP Flow Information Export (IPFIX)". https://www.rfc-editor.org/rfc/rfc7012
 [^rfc3954]: IETF, "RFC 3954 — Cisco Systems NetFlow Services Export Version 9" (Informational). https://www.rfc-editor.org/rfc/rfc3954

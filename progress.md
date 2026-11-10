@@ -232,3 +232,9 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - Source changes: RFC 3164 → RFC 5424. PCAP/pcapng not RFCs yet, tcpdump.org unreachable → packet-capture uses NIST SP 800-86/800-94 + MITRE T1040 only.
 - verify.mjs flags only the computed PRI 134 (labelled "computed with divmod") and MITRE URL fragments. Check + build OK (79 documents, 40 admitted).
 - Next: STOP-N5 (2-page check) → TN-08 link pass (events/Wazuh/playbooks/enrichment ↔ networking) → TN-09 38 decks + 38 quizzes → TN-10 review sheet → owner approval.
+
+### Session 3 — update (link pass)
+- "NEXT AND PUSH": pushed `6117589` (N5).
+- TN-08 part 1: "Related pages" section on 37 networking pages (links to networking pages + Wave 1 events/playbooks/enrichment/wazuh/rules-map/triage-note); networking-overview table now links all 38 pages. Links only, no new facts. Check + build OK.
+- TN-08 part 2 (Wave 1 → networking) NOT applied: 11 stable pages would need re-approval and would link to unpublished drafts → plan in `specs/02-soc-corpus/networking-reverse-links.txt`, decide at approval.
+- Next: TN-09 — 38 flashcard decks + 38 quizzes (quiz_precheck.py, then KSOR_DRAFTS=show build).

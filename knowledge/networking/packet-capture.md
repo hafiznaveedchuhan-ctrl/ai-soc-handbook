@@ -62,6 +62,12 @@ ksor:
 | Analyst needs a capture | Follow the capture policy; record what, when, who |
 | Cleartext protocol in a capture (Telnet, POP3 110, HTTP) | Credentials may be exposed — see [remote access](remote-access-protocols.md) |
 
+## Related pages
+
+- [NetFlow and IPFIX](netflow-and-ipfix.md)
+- [IDS and IPS](ids-ips.md)
+- [Remote access protocols — SSH, RDP, Telnet](remote-access-protocols.md)
+
 [^nist-sp800-86]: NIST SP 800-86, "Guide to Integrating Forensic Techniques into Incident Response", August 2006 (sections 6.2.2, 6.2.3, 6.3.1). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf
 [^nist-sp800-94]: NIST SP 800-94, "Guide to Intrusion Detection and Prevention Systems (IDPS)", February 2007 (sections 2.1–2.3, 4.2, 4.3). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf
 [^mitre-t1040]: MITRE ATT&CK, "Network Sniffing, Technique T1040". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1040/

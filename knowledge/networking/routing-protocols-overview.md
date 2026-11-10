@@ -76,6 +76,12 @@ ksor:
 | TCP 179 | BGP |
 | Source not a router | Unexpected — check the asset |
 
+## Related pages
+
+- [Routing basics](routing-basics.md)
+- [TCP — Transmission Control Protocol](tcp.md)
+- [Network segmentation and zones](network-segmentation-and-zones.md)
+
 [^rfc1812]: IETF, "RFC 1812 — Requirements for IP Version 4 Routers". https://www.rfc-editor.org/rfc/rfc1812
 [^rfc2328]: IETF, "RFC 2328 — OSPF Version 2". https://www.rfc-editor.org/rfc/rfc2328
 [^rfc5340]: IETF, "RFC 5340 — OSPF for IPv6". https://www.rfc-editor.org/rfc/rfc5340

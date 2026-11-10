@@ -61,6 +61,14 @@ All rows: [^iana-ports]
 | dst port 53 / 123 / 514 | DNS / NTP / syslog |
 | Source port 0 | Allowed (optional field) — note it |
 
+## Related pages
+
+- [TCP — Transmission Control Protocol](tcp.md)
+- [DNS — Domain Name System](dns.md)
+- [NTP and time synchronisation](ntp-and-time-sync.md)
+- [Syslog](syslog.md)
+- [Common network attacks](network-attacks.md)
+
 [^rfc768]: IETF, "RFC 768 — User Datagram Protocol". https://www.rfc-editor.org/rfc/rfc768
 [^rfc1122]: IETF, "RFC 1122 — Requirements for Internet Hosts — Communication Layers", section 1.1.3. https://www.rfc-editor.org/rfc/rfc1122
 [^iana-proto]: IANA, "Protocol Numbers". https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml

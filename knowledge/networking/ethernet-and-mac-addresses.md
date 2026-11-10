@@ -86,6 +86,12 @@ All rows: [^iana-802]
 | EtherType 0806 | ARP frame |
 | EtherType 8100 | VLAN-tagged frame |
 
+## Related pages
+
+- [ARP — Address Resolution Protocol](arp.md)
+- [VLANs and switching](vlans-and-switching.md)
+- [The OSI model](osi-model.md)
+
 [^rfc9542]: IETF, "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters", April 2024. https://www.rfc-editor.org/rfc/rfc9542
 [^iana-802]: IANA, "IEEE 802 Numbers" registry (EtherTypes). https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml
 [^rfc1122]: IETF, "RFC 1122 — Requirements for Internet Hosts — Communication Layers", section 1.1.3. https://www.rfc-editor.org/rfc/rfc1122

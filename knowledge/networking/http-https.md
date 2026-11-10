@@ -86,6 +86,13 @@ logs (names from the IANA registry):[^iana-http-status]
 | Method CONNECT | Tunnel request (usually through a proxy) — see [Proxies](proxies.md) |
 | Unusual User-Agent | A client claim, not proof — do not decide on it alone |
 
+## Related pages
+
+- [TLS — Transport Layer Security](tls.md)
+- [Proxies and reverse proxies](proxies.md)
+- [Ports and services](ports-and-services.md)
+- [Brute-force playbook](../playbooks/brute-force.md)
+
 [^rfc9110]: IETF, "RFC 9110 — HTTP Semantics", June 2022. https://www.rfc-editor.org/rfc/rfc9110
 [^rfc9112]: IETF, "RFC 9112 — HTTP/1.1", June 2022. https://www.rfc-editor.org/rfc/rfc9112
 [^iana-http-status]: IANA, "Hypertext Transfer Protocol (HTTP) Status Code Registry". https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml

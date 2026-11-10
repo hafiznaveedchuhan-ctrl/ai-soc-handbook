@@ -76,6 +76,14 @@ ksor:
 | RDP on a port other than 3389 | Port was changed in the registry — confirm it is approved |
 | Telnet (23) in use | No protection from the protocol itself — note as a finding |
 
+## Related pages
+
+- [Ports and services](ports-and-services.md)
+- [TLS — Transport Layer Security](tls.md)
+- [Event 4624](../windows-events/event-4624.md)
+- [Event 4625](../windows-events/event-4625.md)
+- [Brute-force playbook](../playbooks/brute-force.md)
+
 [^rfc4251]: IETF, "RFC 4251 — The Secure Shell (SSH) Protocol Architecture". https://www.rfc-editor.org/rfc/rfc4251
 [^rfc4253]: IETF, "RFC 4253 — The Secure Shell (SSH) Transport Layer Protocol". https://www.rfc-editor.org/rfc/rfc4253
 [^rfc854]: IETF, "RFC 854 — Telnet Protocol Specification". https://www.rfc-editor.org/rfc/rfc854

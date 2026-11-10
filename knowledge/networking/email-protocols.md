@@ -102,6 +102,13 @@ All rows: [^rfc7208]
 | First (bottom) Received line IP | The connecting host's address — check its reputation |
 | Login traffic to 110/143 (no TLS) | Cleartext mail access — note it |
 
+## Related pages
+
+- [DNS — Domain Name System](dns.md)
+- [TLS — Transport Layer Security](tls.md)
+- [Ports and services](ports-and-services.md)
+- [IP reputation policy](../enrichment/ip-reputation-policy.md)
+
 [^rfc5321]: IETF, "RFC 5321 — Simple Mail Transfer Protocol". https://www.rfc-editor.org/rfc/rfc5321
 [^rfc5322]: IETF, "RFC 5322 — Internet Message Format". https://www.rfc-editor.org/rfc/rfc5322
 [^rfc9051]: IETF, "RFC 9051 — Internet Message Access Protocol (IMAP) — Version 4rev2". https://www.rfc-editor.org/rfc/rfc9051

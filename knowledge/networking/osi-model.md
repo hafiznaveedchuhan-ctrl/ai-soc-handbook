@@ -76,6 +76,12 @@ shown here.
 | 4 | Source / destination port, TCP flags |
 | 7 | URL, DNS query, SMTP sender, user agent |
 
+## Related pages
+
+- [The TCP/IP model and encapsulation](tcp-ip-model-and-encapsulation.md)
+- [Ethernet and MAC addresses](ethernet-and-mac-addresses.md)
+- [TCP — Transmission Control Protocol](tcp.md)
+
 [^ms-osi]: Microsoft Learn, "Windows network architecture and the OSI model". https://learn.microsoft.com/en-us/windows-hardware/drivers/network/windows-network-architecture-and-the-osi-model
 [^aws-osi]: Amazon Web Services, "What is the OSI Model?" (secondary source). https://aws.amazon.com/what-is/osi-model/
 [^ibm-osi]: IBM, "What is the OSI model?" (secondary source). https://www.ibm.com/think/topics/osi-model

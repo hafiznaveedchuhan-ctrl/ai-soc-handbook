@@ -62,5 +62,13 @@ All rows: [^nist-sp800-41r1]
 | Deny lines, many ports, one source | Scan blocked — note the source; check for any allow |
 | Allow line matching an alert | Traffic actually passed — higher priority than a deny |
 
+## Related pages
+
+- [Network segmentation and zones](network-segmentation-and-zones.md)
+- [IDS and IPS](ids-ips.md)
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [Syslog](syslog.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+
 [^nist-sp800-41r1]: NIST SP 800-41 Rev. 1, "Guidelines on Firewalls and Firewall Policy", September 2009 (sections 2.1, 4.1, 5.2.3, glossary). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf
 [^rfc1918]: IETF, "RFC 1918 — Address Allocation for Private Internets". https://www.rfc-editor.org/rfc/rfc1918

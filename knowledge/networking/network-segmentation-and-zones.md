@@ -65,6 +65,12 @@ ksor:
 | Internal source, many internal destinations | Possible lateral movement — see [firewalls](firewalls.md) logs |
 | "Internal" used as a reason to close | Not enough on its own (zero trust) |
 
+## Related pages
+
+- [Firewalls](firewalls.md)
+- [VLANs and switching](vlans-and-switching.md)
+- [Common network attacks](network-attacks.md)
+
 [^nist-sp800-41r1]: NIST SP 800-41 Rev. 1, "Guidelines on Firewalls and Firewall Policy", September 2009 (sections 2.1, 4.1, 5.2.3, glossary). https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf
 [^nist-sp800-207]: NIST SP 800-207, "Zero Trust Architecture", August 2020. https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
 [^nist-sp800-215]: NIST SP 800-215, "Guide to a Secure Enterprise Network Landscape", November 2022 (section 5.1 microsegmentation). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-215.pdf

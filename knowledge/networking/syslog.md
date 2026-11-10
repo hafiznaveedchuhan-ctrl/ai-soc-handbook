@@ -95,6 +95,13 @@ security/authorization, 5 syslogd, 9 and 15 clock daemon, 11 FTP, 12 NTP,
 | Device logs missing in Wazuh | Check `<allowed-ips>` and the port in `<remote>` |
 | Plain UDP 514 | No protection in transit — treat content with care |
 
+## Related pages
+
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+- [Firewalls](firewalls.md)
+- [NTP and time synchronisation](ntp-and-time-sync.md)
+- [Wazuh architecture](../wazuh/architecture.md)
+
 [^rfc5424]: IETF, "RFC 5424 — The Syslog Protocol". https://www.rfc-editor.org/rfc/rfc5424
 [^rfc5426]: IETF, "RFC 5426 — Transmission of Syslog Messages over UDP". https://www.rfc-editor.org/rfc/rfc5426
 [^rfc5425]: IETF, "RFC 5425 — Transport Layer Security (TLS) Transport Mapping for Syslog". https://www.rfc-editor.org/rfc/rfc5425
