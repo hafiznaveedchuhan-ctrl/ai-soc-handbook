@@ -108,7 +108,8 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: new-local-account playbook link added in the link pass.
+- [New local account created](../playbooks/new-local-account.md)
+- [Account added to Administrators](../playbooks/added-to-admin-group.md) (when the new account is added to a group)
 
 ## L1 triage questions
 

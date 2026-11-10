@@ -68,7 +68,7 @@ Rule rows: [^wazuh-0580]
 
 ## Related playbook
 
-TODO-VERIFY: added-to-admin-group playbook (batch B5), linked in the link pass.
+- [Account added to Administrators](../playbooks/added-to-admin-group.md)
 
 ## For the agent
 

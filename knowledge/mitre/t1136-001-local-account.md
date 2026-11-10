@@ -72,7 +72,7 @@ Rule row: [^wazuh-0580]
 
 ## Related playbook
 
-TODO-VERIFY: new-local-account playbook (batch B5), linked in the link pass.
+- [New local account created](../playbooks/new-local-account.md)
 
 ## For the agent
 

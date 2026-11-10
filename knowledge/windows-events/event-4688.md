@@ -116,7 +116,8 @@ start.
 
 ## Related playbook
 
-TODO-VERIFY: link added in the link pass.
+- Used in [New local account created](../playbooks/new-local-account.md), [Account added to Administrators](../playbooks/added-to-admin-group.md) and [Security audit log cleared](../playbooks/audit-log-cleared.md) to find the command behind an account or log change
+- A dedicated suspicious-powershell playbook is planned for Wave 2
 
 ## L1 triage questions
 

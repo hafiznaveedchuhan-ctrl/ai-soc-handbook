@@ -70,8 +70,7 @@ without powershell.exe, through the System.Management.Automation assembly in
 
 ## Related playbook
 
-TODO-VERIFY: suspicious-powershell playbook is Wave 2; link added when it
-exists.
+- A dedicated suspicious-powershell playbook is planned for Wave 2
 
 ## For the agent
 

@@ -92,7 +92,7 @@ Use **T1685.005** in triage notes, not the tags inside the Wazuh rules.
 
 ## Related playbook
 
-TODO-VERIFY: audit-log-cleared playbook link added in the link pass.
+- [Security audit log cleared](../playbooks/audit-log-cleared.md)
 
 ## L1 triage questions
 

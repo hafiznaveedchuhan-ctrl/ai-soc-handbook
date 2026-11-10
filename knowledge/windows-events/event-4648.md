@@ -97,7 +97,7 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: playbook link added in the link pass.
+- No dedicated Wave 1 playbook; explicit credentials against an unexpected remote server is escalation condition 5 in the [escalation policy](../rules-map/escalation-policy.md)
 
 ## L1 triage questions
 

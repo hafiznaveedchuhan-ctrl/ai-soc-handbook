@@ -107,7 +107,8 @@ This is the handbook's mapping, set by its owner. Wazuh's own rule tag for
 
 ## Related playbook
 
-TODO-VERIFY: link added in the link pass (candidate: added-to-admin-group).
+- Used in [Successful logon after failures](../playbooks/success-after-failures.md) to see what a suspicious logon was allowed to do
+- [Account added to Administrators](../playbooks/added-to-admin-group.md)
 
 ## L1 triage questions
 

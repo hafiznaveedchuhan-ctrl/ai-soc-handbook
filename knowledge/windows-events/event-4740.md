@@ -95,8 +95,7 @@ saved password).
 
 ## Related playbook
 
-TODO-VERIFY: brute-force playbook link added in the link pass (Wave 2:
-account-lockout-storm).
+- [Brute-force logon attempts](../playbooks/brute-force.md) (a dedicated account-lockout-storm playbook is planned for Wave 2)
 
 ## L1 triage questions
 

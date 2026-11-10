@@ -136,8 +136,7 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: links to the success-after-failures playbook (batch B5) in the
-link pass.
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## L1 triage questions
 

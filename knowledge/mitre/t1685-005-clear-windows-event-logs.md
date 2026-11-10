@@ -85,7 +85,7 @@ Rule rows: [^wazuh-0580][^wazuh-0610]
 
 ## Related playbook
 
-TODO-VERIFY: audit-log-cleared playbook (batch B5), linked in the link pass.
+- [Security audit log cleared](../playbooks/audit-log-cleared.md)
 
 ## For the agent
 

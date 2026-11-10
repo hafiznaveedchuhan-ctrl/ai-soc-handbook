@@ -60,7 +60,7 @@ network devices.[^mitre-t1110-003]
 
 ## Related playbook
 
-TODO-VERIFY: brute-force playbook (batch B5), linked in the link pass.
+- [Brute-force logon attempts](../playbooks/brute-force.md)
 
 ## For the agent
 

@@ -99,7 +99,7 @@ Wazuh's own rule tag is `T1484`.
 
 ## Related playbook
 
-TODO-VERIFY: added-to-admin-group playbook link added in the link pass.
+- [Account added to Administrators](../playbooks/added-to-admin-group.md)
 
 ## L1 triage questions
 

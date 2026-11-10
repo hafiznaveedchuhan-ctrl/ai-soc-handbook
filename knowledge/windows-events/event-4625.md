@@ -149,8 +149,8 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## Related playbook
 
-TODO-VERIFY: links to the brute-force and success-after-failures playbooks
-(batch B5) in the link pass.
+- [Brute-force logon attempts](../playbooks/brute-force.md)
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## L1 triage questions
 

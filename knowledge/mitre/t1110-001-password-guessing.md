@@ -61,7 +61,7 @@ followed by a possible success from the same host.[^mitre-t1110-001]
 
 ## Related playbook
 
-TODO-VERIFY: brute-force playbook (batch B5), linked in the link pass.
+- [Brute-force logon attempts](../playbooks/brute-force.md)
 
 ## For the agent
 

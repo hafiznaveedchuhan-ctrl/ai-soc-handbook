@@ -70,8 +70,8 @@ Rule rows: [^wazuh-0580]
 
 ## Related playbook
 
-TODO-VERIFY: brute-force and success-after-failures playbooks (batch B5),
-linked in the link pass.
+- [Brute-force logon attempts](../playbooks/brute-force.md)
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## For the agent
 

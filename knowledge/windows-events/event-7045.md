@@ -95,8 +95,7 @@ attack.mitre.org then.
 
 ## Related playbook
 
-TODO-VERIFY: new-service-or-scheduled-task playbook (Wave 2) link added when
-it exists.
+- A dedicated new-service-or-scheduled-task playbook is planned for Wave 2; on a domain controller, AD FS or AD CS server this is escalation condition 7 in the [escalation policy](../rules-map/escalation-policy.md)
 
 ## L1 triage questions
 

@@ -9,5 +9,6 @@ okf_version: "0.2"
 * [Windows events](windows-events/)
 * [Wazuh](wazuh/)
 * [Mitre](mitre/)
+* [Playbooks](playbooks/)
 * [Enrichment](enrichment/)
 * [Triage note](triage-note/)

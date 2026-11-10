@@ -71,7 +71,7 @@ enterprise administrator.[^mitre-t1078]
 
 ## Related playbook
 
-TODO-VERIFY: success-after-failures playbook (batch B5), linked in the link pass.
+- [Successful logon after failures](../playbooks/success-after-failures.md)
 
 ## For the agent
 
