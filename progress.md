@@ -7,8 +7,8 @@ Never delete history; append a new session block; keep the Current state table c
 
 | Feature | State |
 |---|---|
-| 01 record-identity | verified locally — all tasks done except push/PR (STOP-E, T01-14) |
-| 02 soc-corpus Wave 1 | not started |
+| 01 record-identity | **verified** — PR #1 merged into main (186b665) |
+| 02 soc-corpus Wave 1 | spec + plan + tasks written — awaiting approval (STOP-A) |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
 | 03 site-ui | not started |
@@ -45,6 +45,9 @@ Never delete history; append a new session block; keep the Current state table c
 - STOP-D: Naveed said "delete".
 - `f659514` — 6 starter documents + generated surfaces/index.md deleted; ksor-starter/0.0.61 removed from approval_authorities (same commit)
 - `f91fd70` — build.lock.json; build: 1 document admitted; llms.txt lists only the overview
+- `1fd53c6` — STOP-E ticked; Naveed said "push OK": pushed main (scaffold) + feat/01-record-identity; PR #1 opened by Naveed in browser (gh not logged in)
+- Naveed merged PR #1 → main `186b665`; local main fast-forwarded
+- Branch `feat/02-soc-corpus-wave-1`: specs/02-soc-corpus/{spec,plan,tasks,sources}.md (commit below)
 - `aa76b20` — specs/00-final-plan.txt v3 (Wave 3 soc-fundamentals, steps 43-50), Feature 01 spec intake table, history/prompts/0002-scope-l1-operations-wave-3.md
 
 ### Decisions taken
@@ -61,15 +64,15 @@ Never delete history; append a new session block; keep the Current state table c
 - `npm run build` rewrote `system/site/next-env.d.ts` (Next.js churn); restored, not committed.
 
 ### Pending / blocked
-- STOP-E: Naveed to OK pushing `feat/01-record-identity` to origin and opening the PR. (Naveed)
+- Feature 02 STOP-A: Naveed to approve specs/02-soc-corpus spec/plan/tasks. (Naveed)
 - `gh` CLI not logged in — needed for the PR in T01-14 (`gh auth login`), or PR via browser. (Naveed)
 
 ### TODO-VERIFY list
 - (none — overview cites only the intake interview)
 
 ### Exact next step for the next session
-- T01-14: `git push -u origin feat/01-record-identity` (after Naveed's OK), open PR to main, CI green, Naveed merges. Then step 9: Feature 02 spec/plan/tasks on `feat/02-soc-corpus-wave-1`.
+- After approval: T02-02 — show the B1 URL list with tiers (specs/02-soc-corpus/tasks.md).
 
 ### Naveed's manual actions needed
-- OK the push (STOP-E); merge the PR on GitHub after CI is green.
+- Approve Feature 02 spec/plan/tasks.
 - Optional before T01-14: `gh auth login`.
