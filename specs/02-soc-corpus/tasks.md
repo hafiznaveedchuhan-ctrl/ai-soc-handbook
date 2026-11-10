@@ -24,10 +24,10 @@ verify.mjs run per page · TODO-VERIFY list reported.
 ## B3
 - [x] **T02-09** Show B3 URL list (8 MITRE technique pages T1 + Sigma/CAR/Red Canary T2). **STOP:** approved.
 - [x] **T02-10** Write the 8 mitre pages; log Tier 2 in `sources.md`.
-- [ ] **STOP-B3** Report; 2 random pages; "next".
+- [x] **STOP-B3** Report; 2 random pages; "next".
 
 ## I1 — interview
-- [ ] **T02-11** Interview Naveed, one question at a time: invariants, escalation triggers, severity model, data handling, AbuseIPDB score bands, triage-note template and writing rules, L1 steps for the 5 playbooks. "Not sure" → illustrative answer with source + TODO-VERIFY. **STOP** per answer set: Naveed confirms.
+- [x] **T02-11** Interview Naveed, one question at a time: invariants, escalation triggers, severity model, data handling, AbuseIPDB score bands, triage-note template and writing rules, L1 steps for the 5 playbooks. "Not sure" → illustrative answer with source + TODO-VERIFY. **STOP** per answer set: Naveed confirms.
 
 ## B4
 - [ ] **T02-12** Show B4 URL list (Wazuh rules-classification, SP 800-61r3, CISA playbooks, AbuseIPDB docs, RFC 1918). **STOP:** approved.

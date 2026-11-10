@@ -19,7 +19,7 @@ No additions.
 Naveed said: "jo best to best ho usko phla judge kro phr final best select kr k
 implement kro" (judge the options, select the best, implement). Everything below is
 Claude's proposal. It becomes the owner's policy only when Naveed confirms it.
-Status: AWAITING CONFIRMATION.
+Status: CONFIRMED by human:naveed ("confirmed", 2026-11-10). These are now the owner's policy.
 
 ### Q2 — escalation triggers (rules-map/escalation-policy)
 Escalate to L2 immediately when any of these is true:
