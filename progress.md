@@ -7,7 +7,7 @@ Never delete history; append a new session block; keep the Current state table c
 
 | Feature | State |
 |---|---|
-| 01 record-identity | implementing — T01-07..09 done (identity, scope v3); waiting at STOP-B |
+| 01 record-identity | verified locally — all tasks done except push/PR (STOP-E, T01-14) |
 | 02 soc-corpus Wave 1 | not started |
 | 05 agent-surface | not started |
 | 06 ci-and-release | not started |
@@ -21,7 +21,7 @@ Never delete history; append a new session block; keep the Current state table c
 ## Session 1
 
 ### Last updated
-2026-11-10T13:30:00+05:00 — session 1 (updated)
+2026-11-10T12:50:00Z — session 1 (updated after Feature 01 verify)
 
 ### Done this session
 - Plan mode: read AGENTS.md, skills, instance.md, governance, scripts, CI, Docker, vercel.json, site, gateway, ksor docs, README; 10-bullet summary; plan v1 → v2 (Naveed's 7 changes); verified ksor commands with `--help`.
@@ -37,6 +37,14 @@ Never delete history; append a new session block; keep the Current state table c
 - Naveed did not confirm STOP-B; asked to widen scope to SOC L1 operations and add Wave 3.
 - `342923e` — instance.md scope v3 (triage primary + L1 fundamentals; pentest how-to declined)
 - `25cc84f` — build.lock.json
+- `bdba7e2` — progress.md scope v3
+- STOP-B confirmed by Naveed.
+- `dd19f23` + `47e28a9` — knowledge/orientation/overview.md drafted (+ generated indexes, lock); `155f3cb` ticks
+- STOP-C: Naveed said "approved".
+- `b15a4f3` — overview stable: generated claude-opus/5.5 2026-11-10T07:44:21Z, ksor.approval human:naveed 2026-11-10T07:45:24Z; `f303719` lock; `098831d` ticks
+- STOP-D: Naveed said "delete".
+- `f659514` — 6 starter documents + generated surfaces/index.md deleted; ksor-starter/0.0.61 removed from approval_authorities (same commit)
+- `f91fd70` — build.lock.json; build: 1 document admitted; llms.txt lists only the overview
 - `aa76b20` — specs/00-final-plan.txt v3 (Wave 3 soc-fundamentals, steps 43-50), Feature 01 spec intake table, history/prompts/0002-scope-l1-operations-wave-3.md
 
 ### Decisions taken
@@ -53,15 +61,15 @@ Never delete history; append a new session block; keep the Current state table c
 - `npm run build` rewrote `system/site/next-env.d.ts` (Next.js churn); restored, not committed.
 
 ### Pending / blocked
-- STOP-B: Naveed to read the scope-v3 `instance.md` and reply "confirmed" or give edits. (Naveed)
+- STOP-E: Naveed to OK pushing `feat/01-record-identity` to origin and opening the PR. (Naveed)
 - `gh` CLI not logged in — needed for the PR in T01-14 (`gh auth login`), or PR via browser. (Naveed)
 
 ### TODO-VERIFY list
-- (none yet — no knowledge content written)
+- (none — overview cites only the intake interview)
 
 ### Exact next step for the next session
-- After STOP-B "confirmed": T01-10 — draft `knowledge/orientation/overview.md` (specs/01-record-identity/tasks.md).
+- T01-14: `git push -u origin feat/01-record-identity` (after Naveed's OK), open PR to main, CI green, Naveed merges. Then step 9: Feature 02 spec/plan/tasks on `feat/02-soc-corpus-wave-1`.
 
 ### Naveed's manual actions needed
-- Read `instance.md` (scope v3) and confirm.
+- OK the push (STOP-E); merge the PR on GitHub after CI is green.
 - Optional before T01-14: `gh auth login`.

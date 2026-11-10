@@ -2,7 +2,7 @@
 
 A guide for Naveed (and anyone new) to every folder and file here: what it is,
 why it exists, and which command uses it. Updated whenever a feature adds
-something. Last updated: 2026-11-10 (Feature 01, step 1).
+something. Last updated: 2026-11-10 (Feature 01 complete: one stable document, `orientation/overview`; starter samples retired).
 
 ## The big picture in one flow
 

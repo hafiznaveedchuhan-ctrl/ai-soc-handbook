@@ -28,10 +28,10 @@ a point where Claude waits for Naveed.
 - [x] **STOP-C** Naveed reads the overview and says "approved" (or gives edits).
 - [x] **T01-11** Record approval: `status: stable`, `generated { by: "claude-opus/5.5", at }`, `ksor.approval { by: "human:naveed", at }`.
   Verify by: `npm run check` + `npm run build` exit 0; overview appears in `out/llms.txt`.
-- [ ] **STOP-D** Show the starter deletion list; Naveed says "delete".
-- [ ] **T01-12** Delete the 6 starter files (+ generated `surfaces/index.md`), remove `ksor-starter/0.0.61` from `approval_authorities`, rebuild — ONE commit.
+- [x] **STOP-D** Show the starter deletion list; Naveed says "delete".
+- [x] **T01-12** Delete the 6 starter files (+ generated `surfaces/index.md`), remove `ksor-starter/0.0.61` from `approval_authorities`, rebuild — ONE commit.
   Verify by: check + build exit 0; `grep -rn "ksor-starter\|human:you" knowledge .ksor` empty; `out/llms.txt` lists only the overview.
-- [ ] **T01-13** Update `progress.md`, `LEARNING.md`, tick this file.
+- [x] **T01-13** Update `progress.md`, `LEARNING.md`, tick this file.
   Verify by: Current state shows 01 = verified.
 - [ ] **STOP-E** Naveed OKs push.
 - [ ] **T01-14** Push `feat/01-record-identity`, open PR (CI = validate.yml); Naveed merges.
