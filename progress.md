@@ -11,8 +11,8 @@ Never delete history; append a new session block; keep the Current state table c
 | Branch | Head | On GitHub? | Contains | Status |
 |---|---|---|---|---|
 | `main` (origin) | `2e82511` | yes | F01 (PR #1), Wave 1 (PR #2, #3), networking plan v4 + instance.md scope (PR #4 @ `af3036b`) | up to date on GitHub; **local `main` is behind** → `git switch main && git pull --ff-only` |
-| `feat/02-networking` | `ac28cdf` | yes (pushed) | N1 + N2 = 16 networking drafts, after PR #4 | **current work branch**; 4 commits not yet in main |
-| `feat/05-agent-surface` | `51ba5a6` | **no (local only)** | gateway edit (`8d52f3f`), provision done, evals, refresh-401 note | blocked on Gemini key; push needs Naveed's OK |
+| `feat/02-networking` | `076af79`+ | yes (pushed) | N1 + N2 = 16 networking drafts + this HANDOFF + scripts/authoring | **current work branch** — check out THIS branch first; commits after PR #4 not yet in main |
+| `feat/05-agent-surface` | `51ba5a6` | yes (pushed 2026-11-10) | gateway edit (`8d52f3f`), provision done, evals, refresh-401 note | blocked on Gemini key; no PR yet |
 
 `gh` CLI is logged in as `hafiznaveedchuhan-ctrl` — PRs can be created with `gh pr create`; Naveed merges.
 Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-networking` (both appended) — merge both blocks by hand.
