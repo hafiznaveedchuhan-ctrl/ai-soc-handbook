@@ -25,8 +25,8 @@ a point where Claude waits for Naveed.
 - [x] **STOP-B** Naveed reads `instance.md` back, restarts/opens `npm run dev`, confirms title and name.
 - [x] **T01-10** Draft `knowledge/orientation/overview.md` (status draft, order 1, three-part body, interview source).
   Verify by: `npm run check` exit 0; page visible on `npm run dev` marked draft.
-- [ ] **STOP-C** Naveed reads the overview and says "approved" (or gives edits).
-- [ ] **T01-11** Record approval: `status: stable`, `generated { by: "claude-opus/5.5", at }`, `ksor.approval { by: "human:naveed", at }`.
+- [x] **STOP-C** Naveed reads the overview and says "approved" (or gives edits).
+- [x] **T01-11** Record approval: `status: stable`, `generated { by: "claude-opus/5.5", at }`, `ksor.approval { by: "human:naveed", at }`.
   Verify by: `npm run check` + `npm run build` exit 0; overview appears in `out/llms.txt`.
 - [ ] **STOP-D** Show the starter deletion list; Naveed says "delete".
 - [ ] **T01-12** Delete the 6 starter files (+ generated `surfaces/index.md`), remove `ksor-starter/0.0.61` from `approval_authorities`, rebuild — ONE commit.
