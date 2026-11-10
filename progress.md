@@ -243,3 +243,8 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - Stale "batch N2 / N5 / later batches" references in N1–N2 pages replaced with real links (arp, ethernet, icmp, ipv6-nd, tcp-ip-model, tcp, udp). ipv6-nd: ND misuse marked as an open question (no source covers it).
 - TN-09: 38 flashcard decks (5 cards each) + 38 quizzes (6 questions each), every card/answer taken from its page. quiz_precheck: 38/38 ok. `KSOR_DRAFTS=show` build exit 0 (site quiz audit passed); normal build re-run so build.lock.json says drafts hidden.
 - Next: TN-10 review sheet `specs/02-soc-corpus/networking-review.txt` → STOP-R (Naveed approves; decide reverse links yes/no; TLS 1.0/1.1 policy question).
+
+### Session 3 — update (review sheet, STOP-R)
+- TN-10: `specs/02-soc-corpus/networking-review.txt` — 38 rows (order, type, source count, description, spot-check) + decisions D1 (TLS 1.0/1.1 policy), D2 (reverse links yes/no), D3 (approve with open questions).
+- STOP-R: waiting for Naveed's approval words. Do NOT write ksor.approval until he says "approved …".
+- After approval (TN-11): set status stable + generated {by: claude-opus/5.5, at: last commit of page} + ksor.approval {by: human:naveed, at: approval time}; apply D2 if yes (and re-stamp those 11 pages); build; progress; push + PR via gh (with OK).
