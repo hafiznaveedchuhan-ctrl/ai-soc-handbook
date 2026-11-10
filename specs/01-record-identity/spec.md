@@ -26,8 +26,8 @@ agent would have no boundary telling it what to decline.
 
 | Item | Value | Answered or default |
 |---|---|---|
-| Authoritative for | Triage of SIEM/Wazuh security alerts from Windows, Sysmon and Linux hosts: event meaning, MITRE ATT&CK mapping, step-by-step triage playbooks, escalation, triage-note writing | answered |
-| Not authoritative for | Malware reverse engineering, legal/compliance advice, product pricing, anything outside SOC alert triage → decline | answered |
+| Authoritative for | SOC Level-1 analyst operations. PRIMARY: triage of SIEM/Wazuh alerts from Windows, Sysmon and Linux hosts (event meaning, MITRE ATT&CK mapping, triage playbooks, enrichment, escalation, triage notes). ALSO: L1 fundamentals for triage — networking basics (OSI/TCP-IP, ports and protocols, DNS, HTTP/S), common attack types, phishing email analysis (headers, SPF/DKIM/DMARC), incident response lifecycle (NIST SP 800-61r3), security controls and log sources (firewall, IDS/IPS, EDR, proxy, AD), IOCs and basic threat intelligence | answered (revised 2026-11-10, plan v3) |
+| Not authoritative for | Malware reverse engineering, penetration testing/exploitation how-to, legal/compliance advice, vendor pricing, anything outside SOC L1 operations → decline | answered (revised 2026-11-10) |
 | Readers | SOC analysts (site) and the soc-worker AI agent (MCP) | answered |
 | Audience | `[public]` only; no registered audiences | answered |
 | Never contains | Client/company data; former employer or client names | answered |
@@ -44,7 +44,8 @@ agent would have no boundary telling it what to decline.
   header, browser title and root index heading read "SOC Triage Handbook", and
   `llms.txt` uses the name `soc-handbook` and the new one-sentence description.
 - Given an agent connects over MCP (Feature 05), when it reads the server
-  instructions, then they state the scope, the boundary, the readers, "AI
+  instructions, then they state the scope (primary triage + L1 fundamentals),
+  the boundary, the readers, "AI
   suggests, a human decides", and that out-of-scope questions are declined.
 
 **US-2 — Authority is a real person.**
