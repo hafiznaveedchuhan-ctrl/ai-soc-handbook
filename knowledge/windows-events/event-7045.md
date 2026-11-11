@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 7045: New service installed"
 description: Windows System log event 7045 — a new service was installed; what Microsoft and Wazuh confirm about it, why attackers use services, and what an L1 analyst checks.
-status: draft
+status: stable
 order: 399
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:32:37Z }
 sources:
   - id: ms-unexpected-reboots
     title: Microsoft Learn — Troubleshoot unexpected reboots using system event logs
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:37:38Z }
 ---
 
 > [!NOTE]
