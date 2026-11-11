@@ -30,7 +30,7 @@ Never delete history; append a new session block; keep the Current state table c
 | 05 MCP agent surface | done, merged | abstention gate OFF (calibrate not separable, see `evals/results-2026-11-11.txt`) |
 | 03 site UI | done, merged | mobile Lighthouse perf 74–83 (<90): lazy-hydrate study aids (follow-up) |
 | 04 auth | DEFERRED | resume before Phase 8 (ADR-0004 on `feat/04-auth`) |
-| **02 Wave 2 (55)** | **47 drafts written (B1–B5)** | **B6 (8 owner-policy proposals), link pass, 55 decks+quizzes, refresh+calibrate --check, evals, review sheet, ONE owner "approved", PR** |
+| **02 Wave 2 (55)** | **55 drafts written (B1–B6); B6 = proposals awaiting interview I2** | **I2 answers, link pass, 55 decks+quizzes, refresh+calibrate --check, evals, review sheet, ONE owner "approved", PR** |
 | 02 Wave 3 | not started | plan v4 says 7 docs (soc-fundamentals) — check `specs/00-final-plan.txt` [W3] list |
 
 ### 3. EXACT next steps (owner gave standing approval for all Wave 2/3 process steps)
@@ -382,3 +382,5 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 HANDOFF §3 step 1–2 (B6 owner-policy proposals).
 
 - 2026-11-11: PR #14 had a progress.md conflict with main (after #13) — resolved by merging main (kept both blocks); Naveed merged #14 and #13. Branch fast-forwarded to main.
+
+- 2026-11-11 (session 4): B6 done — 8 owner-policy proposal drafts (wazuh/geo-and-vpn-caveats, wazuh/asset-and-user-context, false-positives/×5, sla/severity-response-matrix), commit 2e7a3a9; questions in `specs/02-soc-corpus/interview-i2.md` (Q1–Q22, waiting on Naveed). Wave 2 now 55/55 drafts. Next: HANDOFF §3 step 3 (link pass).
