@@ -227,3 +227,4 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - Naveed: "vercel a ho ya b … jo behtar lage, with push" → chose (a): `vercel.json` `"git": { "deploymentEnabled": false }` until Phase 8 (deployment). Re-enable by deleting that key when Phase 8 starts.
 - PR #10 (feat/06-ci-and-release → main): 4 checks green (Format checker 6s, gitleaks 5s, Build 1m4s, Browser smoke 50s); Vercel check gone. PR #8 still shows the old red Vercel check on its last commit — harmless; merging #10 first then #8 is fine.
 - Remaining Feature 06: T06-07 Docker smoke (Docker Desktop must be running), T06-09 AC2/AC3 demos. Feature 05 blocked: Gemini key returns 401.
+- T06-07 Docker smoke done ("docker on"): build ok 85 MB; run without DSN → exit 3 `KSOR_DB_URL is not set` (fail-closed, expected); image has no .env/knowledge. Evidence specs/06-ci-and-release/docker-smoke.txt.
