@@ -14,7 +14,8 @@
     "schema": "ksor schema --instance instance.md --apply",
     "grant": "ksor grant --instance instance.md",
     "ingest": "ksor ingest --instance instance.md --flip",
-    "gc": "ksor gc --instance instance.md"
+    "gc": "ksor gc --instance instance.md",
+    "smoke": "playwright test -c tests/smoke"
   },
   "dependencies": {
     "@panaversity/ksor": "0.0.61"
@@ -29,5 +30,8 @@
   ],
   "overrides": {
     "mdast-util-to-markdown": "2.1.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1"
   }
 }

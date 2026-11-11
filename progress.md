@@ -284,3 +284,10 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 ### Session 3 — Feature 06 started (2026-11-11, branch feat/06-ci-and-release)
 - Networking pushed (`920568e`) and PR #8 opened (feat/02-networking → main) — Naveed merges. NOTE: this branch was cut from main BEFORE PR #8; progress.md blocks from feat/02-networking (N4..approval) must be merged by hand when the branches meet.
 - T06-01: specs/06-ci-and-release/{spec,plan,tasks}.md + feature-06-plan.txt. STOP-06A: waiting for Naveed's approval.
+- STOP-06A approved ("approved"). T06-02..06 done locally: ci.yml (gitleaks binary + build + Playwright smoke), tests/smoke (12 passed locally), gitleaks local: no leaks. Not pushed yet.
+- GitHub red X = **Vercel** deployment check (not GitHub Actions; all Actions runs green). Vercel build error: `[MISSING_SERVICE_CONFIG] Service "site" detected framework "container" in "."` — scaffold vercel.json has site + door both at root "." and the root Dockerfile makes Vercel detect "container" for site. Deployment is Phase 8 in the plan → decision for Naveed.
+- Gemini key test: HTTP 401 again (.env line format is fine: 1 line, no quotes/spaces/CR) → Google rejects the key itself. Feature 05 still blocked.
+- Naveed: "vercel a ho ya b … jo behtar lage, with push" → chose (a): `vercel.json` `"git": { "deploymentEnabled": false }` until Phase 8 (deployment). Re-enable by deleting that key when Phase 8 starts.
+- PR #10 (feat/06-ci-and-release → main): 4 checks green (Format checker 6s, gitleaks 5s, Build 1m4s, Browser smoke 50s); Vercel check gone. PR #8 still shows the old red Vercel check on its last commit — harmless; merging #10 first then #8 is fine.
+- Remaining Feature 06: T06-07 Docker smoke (Docker Desktop must be running), T06-09 AC2/AC3 demos. Feature 05 blocked: Gemini key returns 401.
+- T06-07 Docker smoke done ("docker on"): build ok 85 MB; run without DSN → exit 3 `KSOR_DB_URL is not set` (fail-closed, expected); image has no .env/knowledge. Evidence specs/06-ci-and-release/docker-smoke.txt.

@@ -1,0 +1,20 @@
+FEATURE 06 — T06-07 LOCAL DOCKER SMOKE (evidence)
+Run 2026-11-11 by Claude on Naveed's machine (Docker 29.5.3). No --env-file: no DSN or key entered the container.
+
+1. docker build -t soc-handbook-door:smoke .
+   -> exit 0, image 85 MB.
+
+2. docker run -d --name soc-door-smoke -p 18080:80 -e KSOR_AUTH=disabled-public soc-handbook-door:smoke
+   -> container exited with code 3. Log:
+      error: KSOR_DB_URL is not set — instance.md names it as the database DSN variable
+      (database.dsn_env); export it with the Postgres connection string before serving
+   = the door refuses BY NAME without a database (fail-closed). This is the expected result
+     for a smoke with no DB (spec Q2 / AC5).
+
+3. Image contents (/app): instance.md, node_modules, package.json, package-lock.json, system/gateways
+   -> no .env, no knowledge/  (as .dockerignore intends).
+
+4. Container removed afterwards.
+
+NOT DONE (needs "haan"): booting the image WITH the Neon DSN and checking /health and /ready —
+that reaches the database, so it belongs to Feature 05 once the Gemini key works.

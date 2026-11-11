@@ -32,3 +32,8 @@ system/site/public/sims/
 !.env.example
 
 .DS_Store
+
+# Playwright smoke output (Feature 06)
+playwright-report/
+test-results/
+tests/smoke/test-results/
