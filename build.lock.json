@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:e7a112590a242a778eae14113c836c6385a435085dfaf4691901ad0f6e0e5e80",
+  "build_id": "sha256:c479e68faeecefe73c15b2244b6444ce0289fbe3cc858382b52fb75ee2daa5dd",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "676d370492be06f67495791cde480fda824534d6",
-  "dirty": true,
-  "as_of": "2026-11-10T15:46:52.946Z",
+  "source_commit": "d3b76d7bd707ef86de7bfbe2b36a8855736869c6",
+  "dirty": false,
+  "as_of": "2026-11-11T04:02:08.484Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -137,345 +137,421 @@
     },
     {
       "path": "networking/arp.md",
-      "sha256": "097875840e2e07c7d705b4289a652f8086080b7091e5f1c07efdadc843a90379",
-      "status": "draft",
+      "sha256": "23717100e042f554dac6ae6c009346ff6cf53f0f7d28c8f24301b58e24cdbfe6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/dhcp.md",
-      "sha256": "a4bcd81dfcac709ad69b21ff78dd65e578da2452e9c8954bae0424ff2fb5f1d2",
-      "status": "draft",
+      "sha256": "7f672edb056a6682139f67d49dde28729f6f46fea1372bc8a5e9bcad656e2060",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/dns.md",
-      "sha256": "4718c21dd69867410e3c98b613a4997c9beed536deb187ceefc220655cd5e6fb",
-      "status": "draft",
+      "sha256": "428a7cc84e89e0663c89e83fcce2d3479aa1cde8309da5e110c6a9e0561d0282",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/email-protocols.md",
-      "sha256": "19596a86e5a15d997668acbeac35f2883d43303b4365ba05f84a1716b43a1546",
-      "status": "draft",
+      "sha256": "8ccfdad8e7651c79c10108ade64f4854f456fe1f82cefa574cd2c683647d8c17",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ethernet-and-mac-addresses.md",
-      "sha256": "da97ed92ce2ae358ca346671f1cfaf91625a376b9d31a59f1440128dde0ae2b6",
-      "status": "draft",
+      "sha256": "e5a86c7cb7e377a3d3f02578884dfc27e35ea76cdf43d62f91edb00100a7c91e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/firewalls.md",
-      "sha256": "50c06e4fa40b44b86d409e598452595207e20c50b7b0c9121f24b31a65f76e06",
-      "status": "draft",
+      "sha256": "c9ccba1bc645e028f97013a0aa9b8d24f8469b7d17cb99ffbc05214c8e020c89",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/http-https.md",
-      "sha256": "2bf136546c59e1146da29b766d2a651ad60339a37ef2df64d7f56e2939b97d6b",
-      "status": "draft",
+      "sha256": "a0e22e4a29f6878fb8340e589743a77424724ee611c733d72ef5f10f7091e38f",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/icmp-and-icmpv6.md",
-      "sha256": "f7dedecffabbdc4c7ccb41d82aa171047eb89dbef0ff7a64b37711f396713a48",
-      "status": "draft",
+      "sha256": "f06b39017e0ef7b43ee1e48f6a4248bd906b24e656d9ca58a4ceb65e3b337ed2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ids-ips.md",
-      "sha256": "f3d59f150f4198258fea4aec8e2861e1f5f9181ee00318b3a4ae65feaa0a50a9",
-      "status": "draft",
+      "sha256": "408ca33ee166f11a53224e0b7f1fe7397ee390dcb0da50b888e3ab6cd0405ae7",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv4-addressing.md",
-      "sha256": "c6cd87349d3a0e2aab56fc6ef8cd71042c4fd3ba036360d1157520a384742f40",
-      "status": "draft",
+      "sha256": "59b7b424311ba3358aa4d3289a7de9b2ea33638a8c3a6348e73f6e893fad52b5",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv4-subnetting-and-cidr.md",
-      "sha256": "725680e136853badde3dc750ff3cfea77aff1e9925e867f97086c4df5595cacb",
-      "status": "draft",
+      "sha256": "6330b4070b266bdba094744603babfaa2e1167ec5180d77b2bf631540a951dad",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-addressing.md",
-      "sha256": "adb77f68613ae4ef3210548b816d59fdf903464c78f69369a0aed86e2c279c22",
-      "status": "draft",
+      "sha256": "b85f15ea15a6e096f93accb9472290753fb9cf81240a1e07210183cfe5902195",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-neighbor-discovery-and-slaac.md",
-      "sha256": "b61adfca760153b23800f7e59b01c769d6f116f795fffa243499cde239a49c4c",
-      "status": "draft",
+      "sha256": "c7d484bfde50dc9f9c13517c70ccc29648d86ae9372988a09d41531bffe956e3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-special-ranges.md",
-      "sha256": "55c577ecea6d0697bacf784ab307eb0f11252c2c67d0fce2c0ad89c1fc30216a",
-      "status": "draft",
+      "sha256": "c732d8bc71fa5db01d88bb2b310af629d08b5a26591bdf7cbc38683f3e349095",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/nat-and-pat.md",
-      "sha256": "0b5f8a85425684ddbf0ad6b8c664867c64b046b507e00e4d8fe27db47d2e86ad",
-      "status": "draft",
+      "sha256": "360007e1e901cd26a279955bcb20e04e7958d058faba1d7dd6a60893b10c2e00",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/netflow-and-ipfix.md",
-      "sha256": "a61c58ad165d335ecda723349886e3045e893e321bd8e20bb21ba2ad8eb5406a",
-      "status": "draft",
+      "sha256": "58daa02abf99470d63fe697021f0ef58923ecc656d9b5f94ccfd8d2a95424e98",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/network-attacks.md",
-      "sha256": "e20b608cc8811a3af304d195d241a56b70a5f6f728aed09ffe6c6ffbc232daaf",
-      "status": "draft",
+      "sha256": "73e13a783ebee0c0bae9127c5e2e9ba5f95510792fd2d874dbc18ed96b5e04b2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/network-segmentation-and-zones.md",
-      "sha256": "1ff1fe1ef23207562f7019274586c59e4bc7b09d443cf901b22c034c057d12a8",
-      "status": "draft",
+      "sha256": "6fbcb004d24462b424ade86924322ff51f4c623eda47604876b9c7e6c3c778f6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/networking-overview.md",
-      "sha256": "e9d526da4ceec85a541505299111bee6c68b1da8e1400532305ed92c1c849ee5",
-      "status": "draft",
+      "sha256": "39d849344310eae7b2cde4340598e90d14fd166e961feaa3c86cfef933c8319e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ntp-and-time-sync.md",
-      "sha256": "e48d13e1c55257f47a5889e9de72ad40567c962dd581e6e0de8037715aa6cb76",
-      "status": "draft",
+      "sha256": "df6a1d20441e38b03157445c011559b2e541ed888980c35b35dc9ecb5366ed01",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/number-systems-binary-decimal-hex.md",
-      "sha256": "615d0175c8adae11e7cdd42b004091b1ae924305b1b3cc7ec4156b0bafb84900",
-      "status": "draft",
+      "sha256": "db0b9583f659b2508ff06d43b72d8a3596e7b93dfd76e7b661418c35bb319ab5",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/osi-model.md",
-      "sha256": "8fd78ca8a74eee2c102b206974f9996e8f796142a072fd569dbcd531180401de",
-      "status": "draft",
+      "sha256": "05804db8c8b4ac323eba9df40dac8079b2edd70a964eb4b00651664e2a3c351b",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/packet-capture.md",
-      "sha256": "d188130144cc6cec087f28b23851e2dc26d1320a7db5edd89787b625874e43c4",
-      "status": "draft",
+      "sha256": "7d41d830649e2317f31a58ffcdb3506258c3ce84fa5b5c32cea1bf4bc3d919bf",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ports-and-services.md",
-      "sha256": "43c86f4113379509e174ded47edda4e7e167727e4224e60bc61613a5eabf68ee",
-      "status": "draft",
+      "sha256": "b2fccb09d37ed3801e8db7984e8324b3283557519a9ba99335a57a0b60489fc3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/proxies.md",
-      "sha256": "a7e4fca57e17b46cb5999839aa4cc529d7fdc6b5d19e9d79ea41875e515419fc",
-      "status": "draft",
+      "sha256": "dbdd077de57c2082e44e72525280d8a76e42a50c874ac770acabb0dac5b36f72",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/reading-network-logs-in-siem.md",
-      "sha256": "db56db84d5c8df961f28af04a2075d67e4f1165ac03f56671dae24dd3cba57cd",
-      "status": "draft",
+      "sha256": "c2aae150f2b4914b12484d43093b0b8f27645f78e7c0f99b7062ab780e2a9abb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/remote-access-protocols.md",
-      "sha256": "d7d257ac720e1de4cfe7577b215b0a9354029db14a8900a97fcce46caa435d84",
-      "status": "draft",
+      "sha256": "6d9a7de794f4658e2c0b93e9c6bc39ce10278ac2ccd54a13bd56ef2a18ad2d4e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/routing-basics.md",
-      "sha256": "44398ac8d395cffc24dad6b174ee878ee709f183abf79cce924c8ebf73782bfe",
-      "status": "draft",
+      "sha256": "00888a7e87a821eca0174c9d8662bbfa36ca2da718761b776b02f201e9f2dd02",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/routing-protocols-overview.md",
-      "sha256": "eeb152bbc239afb66cc8f9aa027193a8e62b1f9a078d19217c6d6eb085a447ab",
-      "status": "draft",
+      "sha256": "38cdc6fc80233389e6d83eb5df60c2c5b923cab721bf9dc6cea8e2d9ad2fc24e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/special-ipv4-ranges.md",
-      "sha256": "f443e90b075e4ed0c2fc2e355b2e53abe2387f0e1c9becabba56c4213681e33f",
-      "status": "draft",
+      "sha256": "4d9e0b79c00d7201f215b10408b58af59d3fd6b23c87a0dc05e56e3371bc6c80",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/syslog.md",
-      "sha256": "6218f337bf230813bedab1e9ea1e5965393024a419b7728821b09c54fffe92e0",
-      "status": "draft",
+      "sha256": "949dbad0d05712b969581486abff04a1dd74397cbb5ccf087d3b217bbac873dc",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/tcp.md",
-      "sha256": "47165fd56caddd3ed251bdb0fd288e2445dd8e8c0dba25cee613339239c8f335",
-      "status": "draft",
+      "sha256": "4b9216e651952800d85c964ab818e025c2c9a6c360bab6a85852676138e89626",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/tcp-ip-model-and-encapsulation.md",
-      "sha256": "c3d1ffec20a0ce2800141bccda6d68c1788aab9b274304f2ffc6553670d6a24d",
-      "status": "draft",
+      "sha256": "55d41d054d9e8bb368bacce2f0920ce130934d2d99b3ca42ac137b3963a1b027",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/tls.md",
-      "sha256": "017892a30eea2d921318ce8430ba10024f74a810db2c287bb8624805900a57ef",
-      "status": "draft",
+      "sha256": "99e99e4bc4a782c3ed0bf0afc2c8f1f7556d45fe24eb3ca81179c796ddd7e5a2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/udp.md",
-      "sha256": "655d461571bea95c36d237e518b1f32e1588b9d3e82b26f739860f1627365cf3",
-      "status": "draft",
+      "sha256": "b69f9fffc9b946d4d89c22aa77cea6315dc397fb383e91512afaaf68440c9b9d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/vlans-and-switching.md",
-      "sha256": "e3fee3f85d364263971b2b2685ccebe779e7cdd19b5447488e0bf06fdb3e2364",
-      "status": "draft",
+      "sha256": "aaa04c15e3f7cecbe1aa8a94614a7aa4f072a0add6191ecf8dfd1e068c4f47eb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/vpn-and-ipsec.md",
-      "sha256": "7323b7f2bef56d95bd43b5571cce374e2dc4f31b8d3bb05d590caf35b724013c",
-      "status": "draft",
+      "sha256": "533624b3aad8c36ec28d751a49bbf2c8d48ae1aa661f8fea92e25c19f951996a",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/wireless-basics.md",
-      "sha256": "a4d1099503aadcc081f464dcd37e270fde0f7eee03baa287cb7be1307428fbbf",
-      "status": "draft",
+      "sha256": "6e466061c814ea8da4cf451c0952d428ffa2c443df52a6c4c90489fdf64f0456",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "orientation/glossary.md",
@@ -1289,8 +1365,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "b390158bcc3f2f4cdb35641289ee7cf6c213817bcc78f85c1e5a7af742ae97c0",
-      "files": 77
+      "sha256": "ee8b05d711be8b41c41fd481827ddc471d7c5183d22e3e976e1fbd08bebd5f01",
+      "files": 192
     }
   ]
 }

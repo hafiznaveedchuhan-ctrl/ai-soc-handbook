@@ -22,14 +22,14 @@ Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-netwo
 |---|---|---|
 | 01 record-identity | verified, merged | — |
 | 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
-| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **all 38 drafts (N1–N5)** | STOP-N5 check, link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
+| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **all 38 STABLE (approved 2026-11-11)** | push + PR; reverse links (D2) optional; then link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
 | 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
 | 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
 | 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
 | 04 auth | — | all (provider ADR, sign-in config) |
 | 02 Wave 2 (55 docs) | — | all |
 | 02 Wave 3 (7 docs) | — | all |
-Corpus count now: 79 documents (40 stable, 39 draft = 38 networking + event-7045). Plan total 141. (updated session 3)
+Corpus count now: 79 documents (78 stable, 1 draft = event-7045). (updated 2026-11-11) Plan total 141. (updated session 3)
 Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
 
 ### 3. EXACT next step
@@ -255,3 +255,27 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - `touch` on a knowledge file made the dev watcher re-stage (115 networking files back), but new pages still need a dev restart.
 - Also expected, not a bug: a BUILT site / llms.txt / MCP shows 0 networking pages until they are approved (status draft).
 - Follow-up: dev's generated page list `system/site/.source/` was still the build's (0 networking). Fixed without stopping his server: `cd system/site && NODE_ENV=development npx fumadocs-mdx` → 38 networking entries; all 38 pages 200 on the running dev server, sidebar lists 38, flashcards + quiz render.
+
+---
+
+## Session 3 — block (approval, 2026-11-11)
+
+### Last updated
+2026-11-11T04:05:00Z — session 3
+
+### Done
+- Naveed: "approved all networking and all topics". 38 networking pages → status stable, `generated: { by: "claude-opus/5.5", at: <last commit of page> }`, `ksor.approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }`.
+- Build: 79 documents, 78 admitted to machine surfaces; llms.txt lists 38 networking pages.
+
+### Decisions taken
+- "all topics": every other page was already stable except event-7045, which still has 4 TODO-VERIFY lines → NOT approved (rule: TODO-VERIFY blocks approval); it waits for Wave 2 (4697 / T1543.003).
+- D1 (TLS 1.0/1.1) not answered → page keeps both cited statements (no change).
+- D2 (reverse links) not answered → not applied; Wave 1 stable pages unchanged. Can be done later (needs re-approval of 11 pages).
+- D3 → approval given with the open questions in place.
+
+### Pending / blocked
+- Push `feat/02-networking` + PR (needs Naveed's "push"). Gemini key → Feature 05 (then refresh to ingest the 38 new stable pages).
+
+### Exact next step
+- On "push": `git push`, `gh pr create` (feat/02-networking → main), Naveed merges; merge the progress.md blocks from feat/05-agent-surface by hand.
+- Then: Feature 06 (CI) spec, or Wave 2, or Feature 05 if "key done".
