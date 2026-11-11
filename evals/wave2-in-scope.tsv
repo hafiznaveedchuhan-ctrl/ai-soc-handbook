@@ -2,7 +2,7 @@
 How fast must a Critical alert be acknowledged?	knowledge/sla/severity-response-matrix
 When does the SLA clock start for an alert?	knowledge/sla/severity-response-matrix
 A user mistyped their password a few times — is that a false positive?	knowledge/false-positives/expired-or-mistyped-passwords
-What does NTLM error 0xC0000071 mean?	knowledge/false-positives/expired-or-mistyped-passwords
+What does NTLM error 0xC0000071 mean?	knowledge/windows-events/event-4776
 Is a service account logon with Logon Type 5 normal?	knowledge/false-positives/service-accounts
 Why do backup jobs trigger SeBackupPrivilege alerts?	knowledge/false-positives/backup-jobs
 What is the admin maintenance window and does it need a change ticket?	knowledge/false-positives/admin-maintenance-windows
