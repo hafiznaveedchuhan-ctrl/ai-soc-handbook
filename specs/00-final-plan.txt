@@ -18,6 +18,10 @@ Change log:
                  soc-fundamentals drops networking-basics, ports-and-protocols, dns, http-https and
                  moves to order 1400+. Totals 141 docs. Scope sentence widened to SOC analyst +
                  SIEM engineer networking (owner confirms wording).
+  v6 2026-11-11  CLOSED for this project. Owner: login = button only (provider + MCP door deploy move
+                 to the AI-workers project, Phase 3); mobile speed accepted (home 94, docs 81-84);
+                 abstention gate DECISION C FINAL (OFF; agent declines by scope); retrieval evals
+                 80/80; site live at https://ai-soc-handbook.vercel.app (static, manual deploys).
   v5 2026-11-11  Feature 02 DONE: Wave 2 (55, incl. B6 owner policy from interview I2) and Wave 3
                  (7) approved; event-7045 closed and approved; record 141/141 stable; PRs #14-#17.
                  Embeddings moved to OpenAI text-embedding-3-small (Gemini key invalid). Open against

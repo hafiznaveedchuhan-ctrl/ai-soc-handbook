@@ -14,7 +14,13 @@ toolchain:
 # later means re-embedding the whole corpus. `retrieval:` is left out on
 # purpose: `ksor calibrate` found no floor that separates in-scope from
 # scope-adjacent questions (evals/results-2026-11-11.txt), so the abstention
-# gate is OFF and the scope text below is what tells an agent to decline. `mcp_url` and `version` are added only
+# gate is OFF and the scope text below is what tells an agent to decline.
+# DECISION C — FINAL (owner, 2026-11-11): re-measured on generation 4 with 110
+# in-corpus and 35 out-of-corpus probes: min in-corpus 0.484 < max OOC 0.650
+# (security-adjacent probes such as pentest/exploit/SIEM-query questions score
+# like real ones). The gate stays OFF by design; declining is the job of the
+# agent reading this scope (AI workers, Phase 3). Do not paste a floor that
+# `ksor calibrate` did not print. `mcp_url` and `version` are added only
 # when the server is actually published.
 database:
   dsn_env: KSOR_DB_URL
