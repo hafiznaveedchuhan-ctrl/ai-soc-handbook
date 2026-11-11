@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:f3f8af542d850eecbbd07aabef43ef07e5a7879ffc93b2ba5e9aff6f35a1b051",
+  "build_id": "sha256:cfe7ef25c43bd58e215d4141e1c484f880a4da9aac8f6d1b3f1945d711eab8a0",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "2e7a3a9b1e8cb8d1c7350fa40449c4f891862c8f",
-  "dirty": true,
-  "as_of": "2026-11-11T07:51:33.858Z",
+  "source_commit": "405d2941056cddc1ea6cb926d6b16abeaecc3297",
+  "dirty": false,
+  "as_of": "2026-11-11T10:38:21.264Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -49,7 +49,7 @@
     },
     {
       "path": "false-positives/admin-maintenance-windows.md",
-      "sha256": "e916e15efd2e6fd32e002b875fbec46f1a61ed0167dbf6de395ec5b35c218641",
+      "sha256": "7ba30ce98405550f2f42ed8fea69a63c73b9ebcddaedf6003301e904f391ebb0",
       "status": "draft",
       "audience": [
         "public"
@@ -58,7 +58,7 @@
     },
     {
       "path": "false-positives/backup-jobs.md",
-      "sha256": "0d7e6b33a33c2ae1c66d8e32c97f33a6dad862ba532dec6745a4e24205fca313",
+      "sha256": "981bd47abf37dba93402b54d6d6bb290830c7b7ea8a2d3824f4bbf70bea62c24",
       "status": "draft",
       "audience": [
         "public"
@@ -67,7 +67,7 @@
     },
     {
       "path": "false-positives/expired-or-mistyped-passwords.md",
-      "sha256": "ce8ee3bef42e00e5f343700924ac8c0946e40190f441ca0df64e4ea1d84aebea",
+      "sha256": "cc8f2f57235772760aa272e517dcbd7a3021c0fd3ab9a0c8f553393521db8d5d",
       "status": "draft",
       "audience": [
         "public"
@@ -76,7 +76,7 @@
     },
     {
       "path": "false-positives/service-accounts.md",
-      "sha256": "ce51861bf4b62f6a1d9d22babb0d4aa9f0693648d67af030e42d8ec1486df9b9",
+      "sha256": "c62163ed7ed757a6277af4495669a41b99bd083ba6f7f2765d28948820da6983",
       "status": "draft",
       "audience": [
         "public"
@@ -85,7 +85,7 @@
     },
     {
       "path": "false-positives/vulnerability-scanners.md",
-      "sha256": "524d47644dfc9c6953d05f8ed767632ca31d4237480c0739ddd9bb66aabd48b6",
+      "sha256": "b047a426d74005067d791165dec3fdd2389a9541b3274d4cf9a113abfbe601b5",
       "status": "draft",
       "audience": [
         "public"
@@ -94,7 +94,7 @@
     },
     {
       "path": "linux-auth/new-user-useradd.md",
-      "sha256": "7f82c46c652ccd150eb85061d36134830c70a74c794d31910777cc33306c5e52",
+      "sha256": "268e8e6144b9a6da1aee9cbbceef207e9d84d54b7364fb90ee296008630fabd9",
       "status": "draft",
       "audience": [
         "public"
@@ -103,7 +103,7 @@
     },
     {
       "path": "linux-auth/ssh-accepted.md",
-      "sha256": "eb9ffafba47ce25462091febeb0b4681ec6105a4238693a850ef25e36bcb9352",
+      "sha256": "4d163166a2dc580ca55fa51c1c095ae2958f69c8f88bb95cb1b8fc7394a88faf",
       "status": "draft",
       "audience": [
         "public"
@@ -112,7 +112,7 @@
     },
     {
       "path": "linux-auth/ssh-failed-password.md",
-      "sha256": "6e8138a87341de822723113916870424cbed06ddf27dc3f64ba759fa11891d02",
+      "sha256": "0f2045c6b3451a06e71ea80599d23b2e545e876a754f04b5a5a4b07e2bfa7271",
       "status": "draft",
       "audience": [
         "public"
@@ -121,7 +121,7 @@
     },
     {
       "path": "linux-auth/ssh-invalid-user.md",
-      "sha256": "e98dad7f8b83c5502ea470f78be4138cbd86af33a7f7c47045c4419f5c1984f7",
+      "sha256": "1b09bf94472e01c7e371b8b9ae5cb26b249991ce4c29ca43c7cbed79081da968",
       "status": "draft",
       "audience": [
         "public"
@@ -130,7 +130,7 @@
     },
     {
       "path": "linux-auth/sudo-usage.md",
-      "sha256": "c5cff526cfe8f737045fdcd21aa7d1fbdb5c41b35ce1c5e66a61a204c3a6d3ae",
+      "sha256": "5185e2ece6205b50187fe0143f12882e13cd60e6982d5f9895d00fa8fe49af93",
       "status": "draft",
       "audience": [
         "public"
@@ -139,7 +139,7 @@
     },
     {
       "path": "linux-auth/where-auth-logs-live.md",
-      "sha256": "6d2cbcf5f2a680de9bfd27ad9ac34782d5269ea4c1748b59b9a905e439fedcae",
+      "sha256": "8821ed9b33c5f6b153b88a1d2b3a25bb11ec88f927264161542957f7c7ec3808",
       "status": "draft",
       "audience": [
         "public"
@@ -148,7 +148,7 @@
     },
     {
       "path": "mitre/t1003-001-lsass-memory.md",
-      "sha256": "5a6362986f056ab5bf541085b5d09ff0e96c5e9466aa79c14ddbe8b893accdee",
+      "sha256": "3151d9c3dd1fa7ce328735019219f9fa3d336f007bb894c7e58222ce872d1c4e",
       "status": "draft",
       "audience": [
         "public"
@@ -157,7 +157,7 @@
     },
     {
       "path": "mitre/t1021-001-remote-desktop-protocol.md",
-      "sha256": "ace3e03170cdc2cb33e2cf3c74424b82beb53674bcb6b053a95f645e408e2f8e",
+      "sha256": "35228221b8fbbed401df180e87c856f4649f7c0b1801e72ffef3762a6eaec9d4",
       "status": "draft",
       "audience": [
         "public"
@@ -166,7 +166,7 @@
     },
     {
       "path": "mitre/t1046-network-service-discovery.md",
-      "sha256": "e0913867dcf40cf3ca86aeca142227c40bf818fa4cc5b26020991db9423f9c8a",
+      "sha256": "82d4e720f2965b41919cc6ee921e9b8f4e293b2a55f4da81cf9eff8c9abfec22",
       "status": "draft",
       "audience": [
         "public"
@@ -175,7 +175,7 @@
     },
     {
       "path": "mitre/t1053-005-scheduled-task.md",
-      "sha256": "c129e0fbf5e2d1520363d5a1de516939c31488fddabe01e4d15d9ddf0714786f",
+      "sha256": "075c3e333cc79ab648c6f72caba3cae177caf398dd89304a1eddee4492462e19",
       "status": "draft",
       "audience": [
         "public"
@@ -239,7 +239,7 @@
     },
     {
       "path": "mitre/t1110-004-credential-stuffing.md",
-      "sha256": "462a4ba390c411036fbbd881e3ebd6cdcad291dd085ce0219caa13339d2d5a3a",
+      "sha256": "05fb04ae8d106cfaa0719ed99cd885d8872d1d7ec5b1c1b668887ccf425fb9a9",
       "status": "draft",
       "audience": [
         "public"
@@ -270,7 +270,7 @@
     },
     {
       "path": "mitre/t1543-003-windows-service.md",
-      "sha256": "031d85d5021df7329fb9507177cd92c07bd46b2bd6e4a46f482374e59c218db9",
+      "sha256": "ae2839d05e51f4e78f70f742c412c3e3baab0ae5e0e36e5257e80e7c7350c711",
       "status": "draft",
       "audience": [
         "public"
@@ -279,7 +279,7 @@
     },
     {
       "path": "mitre/t1548-002-bypass-uac.md",
-      "sha256": "657a9d2c72cbd236c9ebef1711084fe73aae1beb1b2fc1f03a045a317bef8a26",
+      "sha256": "3b09c8b2fd47b827bb94ebe7f65adae0f67cf05689df9ca41a4e7843301f87c8",
       "status": "draft",
       "audience": [
         "public"
@@ -288,7 +288,7 @@
     },
     {
       "path": "mitre/t1566-phishing.md",
-      "sha256": "02eba4204bfbe3754b514170a8f976f5a14b860a66891630e74f5ef599b937d6",
+      "sha256": "325522f20b32981b2ab91b9b048b7ac45a63c631dea92bc699e3f70785afc5eb",
       "status": "draft",
       "audience": [
         "public"
@@ -308,7 +308,7 @@
     },
     {
       "path": "mitre/t1685-disable-or-modify-tools.md",
-      "sha256": "3f55180b097462521469cd18072388a293047a43c348d56332edff59b24eb270",
+      "sha256": "b50385c4ccc7c9846e7245071d0cbf316ec91a3f94e7dd0635fd707e5223c2f6",
       "status": "draft",
       "audience": [
         "public"
@@ -768,7 +768,7 @@
     },
     {
       "path": "playbooks/account-lockout-storm.md",
-      "sha256": "d2723e7453ae2996527a794c415fed13f42bfc0a1d684af0734b16479665cd53",
+      "sha256": "f47cd2729fc50502bd70c5da91917230c695fb7d59983ba5a04d749c9e617787",
       "status": "draft",
       "audience": [
         "public"
@@ -810,7 +810,7 @@
     },
     {
       "path": "playbooks/fim-or-malware-alert.md",
-      "sha256": "9ff35ca551b7694d7b9cc9481582136e2dbf336c6f8806eed3b0eb3b7d852836",
+      "sha256": "a3cafe4b8709bae36a8ce82cc833bf05e07109fcab1288605cc9c0fc0e25dbe9",
       "status": "draft",
       "audience": [
         "public"
@@ -830,7 +830,7 @@
     },
     {
       "path": "playbooks/new-service-or-scheduled-task.md",
-      "sha256": "50986779c4bf5a8c1c8b5950120f11df5b445289f3027466725c84a2b7a11a53",
+      "sha256": "c7be3796ebe434e2848ff692d1c647457f5824c8a823e5c37e70c0cc0b58ee26",
       "status": "draft",
       "audience": [
         "public"
@@ -839,7 +839,7 @@
     },
     {
       "path": "playbooks/port-scan.md",
-      "sha256": "0ea6597d4862f6449390608229255273e356989760bd1c9728eefc919b630cac",
+      "sha256": "853ab68293eea81b8b9153219cf01e9c5119d82d872a3dd3503b66a0be4f5031",
       "status": "draft",
       "audience": [
         "public"
@@ -859,7 +859,7 @@
     },
     {
       "path": "playbooks/suspicious-powershell.md",
-      "sha256": "c0fa6cd75126a410c3b3f09cc1750d20a9ac9105a07a840be664f23f3e5d8653",
+      "sha256": "c6381a0441fcc9dcf4b9e9ff7e961c313a9083b9d502b4be878422cf4b99fe4c",
       "status": "draft",
       "audience": [
         "public"
@@ -912,7 +912,7 @@
     },
     {
       "path": "sla/severity-response-matrix.md",
-      "sha256": "020cb615de2fccd97c8590aa7abc0b3d93444116ed8890eaeba763baacddea7b",
+      "sha256": "d8456b50e8004d5d89c121cb9be1e714cc74025ba300569f5f0031f57b6e638e",
       "status": "draft",
       "audience": [
         "public"
@@ -921,7 +921,7 @@
     },
     {
       "path": "sysmon/event-1-process-create.md",
-      "sha256": "c298526bf51930c2d182b7d8427430beedc23ce2ab5d3f1ae7fe3169b9ea1cce",
+      "sha256": "dcf38a016e1e119c5ae5f3c6739e657f47d637dbc972d48f21d82d60c6432388",
       "status": "draft",
       "audience": [
         "public"
@@ -930,7 +930,7 @@
     },
     {
       "path": "sysmon/event-10-process-access.md",
-      "sha256": "bedfca1822de743f0afbd1c73c381dde7c4e7fee2630f9814c46ad5c24d3b4c4",
+      "sha256": "ab3f01c281e4661a61f39ce381cc91b3574d9310cb396475518f2e1a2897f8c2",
       "status": "draft",
       "audience": [
         "public"
@@ -939,7 +939,7 @@
     },
     {
       "path": "sysmon/event-11-file-create.md",
-      "sha256": "3a0f900513a4af391fa796efb286675a7af847824e776e65e239d297c527a4cd",
+      "sha256": "8b94047eaef7949f2c5103860598c29cf5d639bec650f8c1f9d9e3499d8d8aef",
       "status": "draft",
       "audience": [
         "public"
@@ -948,7 +948,7 @@
     },
     {
       "path": "sysmon/event-12-13-14-registry.md",
-      "sha256": "a8ec08ccde2ac130b3592c88e0074768aa358fb5dae9050243664b70fb8a8326",
+      "sha256": "c84ae58f9ebaf13871d252517f429c09cd7262ab1b3b9ded92958879b3682b70",
       "status": "draft",
       "audience": [
         "public"
@@ -957,7 +957,7 @@
     },
     {
       "path": "sysmon/event-22-dns-query.md",
-      "sha256": "7ec319ce0654965990a8181e07619ca10c696350e481ae3c8eb8bf12aa792203",
+      "sha256": "26400353063638380ba911e3179615f95c12ef50a746ff5a2e334353ca747631",
       "status": "draft",
       "audience": [
         "public"
@@ -966,7 +966,7 @@
     },
     {
       "path": "sysmon/event-3-network-connection.md",
-      "sha256": "8dd920f4ab0b3594ab14917a6060335e7e6631ad800460b8038c7f9f621a6431",
+      "sha256": "2e7da9ebe41d1447b3f4bb92ad094897f6e9454f7714b6da7b92b30332a25641",
       "status": "draft",
       "audience": [
         "public"
@@ -975,7 +975,7 @@
     },
     {
       "path": "sysmon/event-7-image-loaded.md",
-      "sha256": "1f5234915abb2859c98316860f064ab9ad964721201a9419bd103565d3a13b91",
+      "sha256": "636d2ca1896d90a860a2494fa82eb1075a460464aac9793affb66715d3fbb8e4",
       "status": "draft",
       "audience": [
         "public"
@@ -984,7 +984,7 @@
     },
     {
       "path": "sysmon/event-8-create-remote-thread.md",
-      "sha256": "fef601b34db184497017cc0ab90320c77344e0f4a46b14b5db59e9f32ee5b9ab",
+      "sha256": "89774d42c06f41aaff3973e0f77e40fc0a297d3944a77dc2e10920e49f40209c",
       "status": "draft",
       "audience": [
         "public"
@@ -993,7 +993,7 @@
     },
     {
       "path": "sysmon/overview.md",
-      "sha256": "9966c518359455151536cd32c4a4bfc7f20491de816f5c622fc6ce8f949d391c",
+      "sha256": "1619d823a8b233221a75ec9a1d7f7acd7f907eb8d2f23bb32bc2dec63a41c514",
       "status": "draft",
       "audience": [
         "public"
@@ -1079,7 +1079,7 @@
     },
     {
       "path": "wazuh/asset-and-user-context.md",
-      "sha256": "04691685722c9f56e97b23ca558e60a9b07baa62584d4c21673319f6ae9f292d",
+      "sha256": "cd2df07c0ee445ab900b68a4f9455c9dd3439976c05f6f05091a01ae7b061a22",
       "status": "draft",
       "audience": [
         "public"
@@ -1088,7 +1088,7 @@
     },
     {
       "path": "wazuh/geo-and-vpn-caveats.md",
-      "sha256": "50a382555311a2384234afb9f3658908ad71990d52b78bcd61a827fe854d81dd",
+      "sha256": "4d36e0e3c0246806c378a7c2a6a5c80507ddfce896b860f97884219c8a487790",
       "status": "draft",
       "audience": [
         "public"
@@ -1097,7 +1097,7 @@
     },
     {
       "path": "wazuh/mitre-in-wazuh.md",
-      "sha256": "41fe77b0d8337924b6134a23015910b56722c7ab17cf5b879869ebc4e9d0aae7",
+      "sha256": "f0adf562b6954a802ca81dd9be247627f724474b421cd972a05da622b703f3b0",
       "status": "draft",
       "audience": [
         "public"
@@ -1106,7 +1106,7 @@
     },
     {
       "path": "wazuh/rule-groups.md",
-      "sha256": "607f6ca02a26fda39da576909e2a63e2246767532b207dc159377e570027e04d",
+      "sha256": "cab6b06628f3fb28ecc8b928491acedb3b14d9aa3fdf4885806f11c6a1aeacfc",
       "status": "draft",
       "audience": [
         "public"
@@ -1126,7 +1126,7 @@
     },
     {
       "path": "wazuh/sshd-rules-reference.md",
-      "sha256": "2c96bc89c46017d37683bc4bbf3500480639f0e0ed8d491a2dfde026ca16804c",
+      "sha256": "c938ab989bd36bb6bfcd92da157c081daa14259e231ca1fbc5ee2cd021304ade",
       "status": "draft",
       "audience": [
         "public"
@@ -1179,7 +1179,7 @@
     },
     {
       "path": "windows-events/event-4634.md",
-      "sha256": "53355d6afae4d2a8e29a6070a9f46591ff87cc2c34751ee0e2b0f5710e88fcd2",
+      "sha256": "b4173c8a3be2e9461bec245375a65fa0146ba6a7af7ede10cea5cb6b42262973",
       "status": "draft",
       "audience": [
         "public"
@@ -1221,7 +1221,7 @@
     },
     {
       "path": "windows-events/event-4697.md",
-      "sha256": "e103dcb9cb67993ce3dd1ba7924924512d649b6be645b1a86b528e2ec5471ce6",
+      "sha256": "5876f6f778af011666e07d329b8eba95a0922529240d36fd215ad6928f0dffcf",
       "status": "draft",
       "audience": [
         "public"
@@ -1230,7 +1230,7 @@
     },
     {
       "path": "windows-events/event-4698.md",
-      "sha256": "85b75bf05d4bf477b82163b4eb6ff384d830ab425aae8d2e56cfeb704f180689",
+      "sha256": "15ac228f1965bbb1a44d32d9f8790974185ed1752721b74dae9c801fdde3aebe",
       "status": "draft",
       "audience": [
         "public"
@@ -1239,7 +1239,7 @@
     },
     {
       "path": "windows-events/event-4719.md",
-      "sha256": "5e02976976380e8085cb8d91088b42578c053de2896c1b5f0e4ac520ad0ec386",
+      "sha256": "39d1bf8c657c8405da97a94c9ff8cd83681040a5274ddf6fdf1a49276c4b083d",
       "status": "draft",
       "audience": [
         "public"
@@ -1259,7 +1259,7 @@
     },
     {
       "path": "windows-events/event-4722.md",
-      "sha256": "79b80e5aa79ee06e2814318ee2ece47388d7a350320b13b5521e9867172e7a5a",
+      "sha256": "1c01c61625bdbebabc1af897b5a82aae1515732664ff4609214497632bb46133",
       "status": "draft",
       "audience": [
         "public"
@@ -1268,7 +1268,7 @@
     },
     {
       "path": "windows-events/event-4724.md",
-      "sha256": "8f3fbff4c34d9bc86f489b05f46a748a117d0f29c2774655737f362555d75d13",
+      "sha256": "07af8467cbddd408c3c6b816bb6e0dc62d936983b14d4de643354e91e4f94c26",
       "status": "draft",
       "audience": [
         "public"
@@ -1277,7 +1277,7 @@
     },
     {
       "path": "windows-events/event-4725.md",
-      "sha256": "c780f36f12b52665fe5c49d5b5526a1beb40d4439b6b207995fc71c00c16d5b4",
+      "sha256": "d80d825eab564692c4099a5d8bbad8fce30ad1c2bd876aba1eba3975262014d2",
       "status": "draft",
       "audience": [
         "public"
@@ -1286,7 +1286,7 @@
     },
     {
       "path": "windows-events/event-4726.md",
-      "sha256": "23148112c935636f32e9e4848d8b39613c74c8c40fdfbbb0d4dcae41fcea1657",
+      "sha256": "f8ac4c48307c75460a94a8ff973e20fdd3fcfe196b710ea800d30fdb61c8ad48",
       "status": "draft",
       "audience": [
         "public"
@@ -1295,7 +1295,7 @@
     },
     {
       "path": "windows-events/event-4728.md",
-      "sha256": "2de7ebade5c4ca1d2d9903f27788b297ee7ff3e35ca33f1dd43d53c07688dd01",
+      "sha256": "a6185da0270eac5d10fa791bce925c6591bad54489c49d16b64f926fb9a42fe5",
       "status": "draft",
       "audience": [
         "public"
@@ -1315,7 +1315,7 @@
     },
     {
       "path": "windows-events/event-4738.md",
-      "sha256": "646259209a426aa18a24f833becf790829c7272f6487b9e574f11189e2e803ca",
+      "sha256": "e56b5ec0b3c29f12962e196724819e2d777209a11c2cb4aaa2465160edebaf3f",
       "status": "draft",
       "audience": [
         "public"
@@ -1335,7 +1335,7 @@
     },
     {
       "path": "windows-events/event-4756.md",
-      "sha256": "6385df2cf93f498abf7a4de441b583ee7e55428e75d4d037a66d13e55ed894f5",
+      "sha256": "0e47d52b09b5e00beb70b8790f35939238fb9f4f79d5142e4d553c6a01ac05a2",
       "status": "draft",
       "audience": [
         "public"
@@ -1344,7 +1344,7 @@
     },
     {
       "path": "windows-events/event-4768.md",
-      "sha256": "1e9d380de8a4fe86c54c02688826caae68ec790376eeb2df904d681ae04118ce",
+      "sha256": "e5bf359906e2b32bb43ebf75d9e911745e4b0670600893948550e7f9622646db",
       "status": "draft",
       "audience": [
         "public"
@@ -1353,7 +1353,7 @@
     },
     {
       "path": "windows-events/event-4769.md",
-      "sha256": "84d6dc47d13c1dd082cd66c01655be2ba9df28c2e688e826ae532566e9438ad5",
+      "sha256": "ecb9564d587f3dfd7496b3c962f87da94c70625edae6ca529b4969426568e273",
       "status": "draft",
       "audience": [
         "public"
@@ -1362,7 +1362,7 @@
     },
     {
       "path": "windows-events/event-4771.md",
-      "sha256": "dc459b6206c34af9c653a171792252538ede6bf5fc19a588d48d994feb1496f8",
+      "sha256": "fa6d17765eeb941de2877dc4ae6e69cf2430913d8f33c1956ae008402866480f",
       "status": "draft",
       "audience": [
         "public"
@@ -1371,7 +1371,7 @@
     },
     {
       "path": "windows-events/event-4776.md",
-      "sha256": "76a5667d565413834fd0dbd8bf4899045438b0ea9469e4f68bfc357e9a6ad27d",
+      "sha256": "edb43673badf2540e5d3ccdc3cf37245c336ee06d6e0274605feba8161378ea4",
       "status": "draft",
       "audience": [
         "public"
@@ -1389,6 +1389,166 @@
     }
   ],
   "companions": [
+    {
+      "path": "false-positives/admin-maintenance-windows.flashcards.yaml",
+      "sha256": "8064ae56f020bc00167084fa11ae0b77850e7ad69484e0f5004dd4f8e44cb9f9"
+    },
+    {
+      "path": "false-positives/admin-maintenance-windows.quiz.yaml",
+      "sha256": "086c2e5c02b2aa45964460554ff8fa341d69e5c80407dd0064bb7fd3e43aa8c7"
+    },
+    {
+      "path": "false-positives/backup-jobs.flashcards.yaml",
+      "sha256": "f46e84b706c32b98d4377d749c7031c5bc746afd7ef1e4e95dae6317c1dffb28"
+    },
+    {
+      "path": "false-positives/backup-jobs.quiz.yaml",
+      "sha256": "b91586a172edb2585a28aa01286f181a0de5569aa1f4e6cf285d78b2508cdb8c"
+    },
+    {
+      "path": "false-positives/expired-or-mistyped-passwords.flashcards.yaml",
+      "sha256": "235bba9a7f4cb878f87329c822d12d2cb0e9c058213f78552f875c326c524c81"
+    },
+    {
+      "path": "false-positives/expired-or-mistyped-passwords.quiz.yaml",
+      "sha256": "8be0ecb3870195c3fc2db1ba44f7291b3691b1241d7aedb20fe14e390f3ec670"
+    },
+    {
+      "path": "false-positives/service-accounts.flashcards.yaml",
+      "sha256": "73b2b37a3eb68f2582a01fc4ba2c5e79881b700808fb2897a1508ac2d859e9cd"
+    },
+    {
+      "path": "false-positives/service-accounts.quiz.yaml",
+      "sha256": "bafc7e2e0157ea9972275668d7db5a7e42012edd770d3ceef932175c1570edd8"
+    },
+    {
+      "path": "false-positives/vulnerability-scanners.flashcards.yaml",
+      "sha256": "ae1d73f1fce34a9a7193026bb9114c30cd8213c46bd07897a872106f428793f0"
+    },
+    {
+      "path": "false-positives/vulnerability-scanners.quiz.yaml",
+      "sha256": "6324f58b88136777f43c5d86ae656508ae9a2ce27bb3fe9305a6aa4387f344fc"
+    },
+    {
+      "path": "linux-auth/new-user-useradd.flashcards.yaml",
+      "sha256": "11985b766a597fd1d7ec607da1e059a7b945e2d73949d242c6b1fb3ceec1a85f"
+    },
+    {
+      "path": "linux-auth/new-user-useradd.quiz.yaml",
+      "sha256": "d987ac1a3f00baa3ba43a779e27fe73c57595b23bda533f33fe74318fbf9fc19"
+    },
+    {
+      "path": "linux-auth/ssh-accepted.flashcards.yaml",
+      "sha256": "d1f777c47e924d43da1af19e85cf5a7aef37bb86ae9b6b96ecc19cfd57307120"
+    },
+    {
+      "path": "linux-auth/ssh-accepted.quiz.yaml",
+      "sha256": "4e7f51ed88298f625a27c1ca59ef890751e7fe4ac3178bd251810cfc28626a71"
+    },
+    {
+      "path": "linux-auth/ssh-failed-password.flashcards.yaml",
+      "sha256": "3823b5f25c04eb0cd35248f411491837da87da95d7772b0e4bf7818b7ac98d91"
+    },
+    {
+      "path": "linux-auth/ssh-failed-password.quiz.yaml",
+      "sha256": "0cbc0313a714d8c5dfbc1ca50f5e12c180777c3663076ec84a890754a8a656df"
+    },
+    {
+      "path": "linux-auth/ssh-invalid-user.flashcards.yaml",
+      "sha256": "fd4b58cb6ee71e739626c8ec013bb519092832d30fd6541aef8f474a4ea58fe7"
+    },
+    {
+      "path": "linux-auth/ssh-invalid-user.quiz.yaml",
+      "sha256": "78d590254edd0de724d69f8b5c2be345bf938836335ba01f44e7e86c59107ba8"
+    },
+    {
+      "path": "linux-auth/sudo-usage.flashcards.yaml",
+      "sha256": "c03d903cb1c495e0e28a5835587dae6ccc798c23aa241b5482a5d460045be0af"
+    },
+    {
+      "path": "linux-auth/sudo-usage.quiz.yaml",
+      "sha256": "e85cf63dfb8a85a10b42e5bb2ac83111a4b034c1feadeb94dc8675de39a102c4"
+    },
+    {
+      "path": "linux-auth/where-auth-logs-live.flashcards.yaml",
+      "sha256": "4e77e472c185e17b2f979698e36b492d8850d238b4ac4c24260e53da86dc5879"
+    },
+    {
+      "path": "linux-auth/where-auth-logs-live.quiz.yaml",
+      "sha256": "2192256b832c166bbc5e09d0cc7a2eddb6928e21e2117131a071e66c16214a42"
+    },
+    {
+      "path": "mitre/t1003-001-lsass-memory.flashcards.yaml",
+      "sha256": "ea95315b851d75ce70a9ad138f541105f1caeb5fe5698d94327130b4d146831f"
+    },
+    {
+      "path": "mitre/t1003-001-lsass-memory.quiz.yaml",
+      "sha256": "419b70d2e9b7e418f425694c6947379081067be2319a8ae74ab667671e5e0789"
+    },
+    {
+      "path": "mitre/t1021-001-remote-desktop-protocol.flashcards.yaml",
+      "sha256": "6193396ab8c7c1fab475d321501c5b96561e61a32e2d2c24d2396cba6e8657aa"
+    },
+    {
+      "path": "mitre/t1021-001-remote-desktop-protocol.quiz.yaml",
+      "sha256": "09cfc3e848a602c8fa4a43c6c6327f4ecd717c35866053b9fbfef4c3426e3aa4"
+    },
+    {
+      "path": "mitre/t1046-network-service-discovery.flashcards.yaml",
+      "sha256": "cc6ae528119e55ab6c5b1e55ae53413b41c8dfb30c853d4751622cec29c2c2b3"
+    },
+    {
+      "path": "mitre/t1046-network-service-discovery.quiz.yaml",
+      "sha256": "8664b5e6c0d22698f1129b6db6163ae52d33ce8cb4eabed6358aef43079d08e3"
+    },
+    {
+      "path": "mitre/t1053-005-scheduled-task.flashcards.yaml",
+      "sha256": "20d78a037f47600727af14db50b658ee9c691f193793f6b24736ffe230a1d2a7"
+    },
+    {
+      "path": "mitre/t1053-005-scheduled-task.quiz.yaml",
+      "sha256": "d2ac9cdbb1dfffcfcbe95720b8f3448bb0ed5e8d73d293a63befc1fbf2254831"
+    },
+    {
+      "path": "mitre/t1110-004-credential-stuffing.flashcards.yaml",
+      "sha256": "ec19c36038f86a23c620dd9d54dd81cc5863907f4f5f36c992de4c56d0fc75df"
+    },
+    {
+      "path": "mitre/t1110-004-credential-stuffing.quiz.yaml",
+      "sha256": "95bc1b45a281de1702d8aee24df8e775938c8353efa24a07b60b18eb9523aba5"
+    },
+    {
+      "path": "mitre/t1543-003-windows-service.flashcards.yaml",
+      "sha256": "0f2c6eaf1db89b8db4784fbba420a0020936da8c09891f50ae9d4f5cd7738724"
+    },
+    {
+      "path": "mitre/t1543-003-windows-service.quiz.yaml",
+      "sha256": "fc51bd0755f927b92106e943af87ff9e5359a55654aff1b933e30549c0f009df"
+    },
+    {
+      "path": "mitre/t1548-002-bypass-uac.flashcards.yaml",
+      "sha256": "5bcbfc599f98d92c174be746c3ecaa5a89b294b7ee109cdce56a3725c8692411"
+    },
+    {
+      "path": "mitre/t1548-002-bypass-uac.quiz.yaml",
+      "sha256": "062b1f7de51338e9a99ac9553a6d2245500290717e65e313810aed11e5050b3d"
+    },
+    {
+      "path": "mitre/t1566-phishing.flashcards.yaml",
+      "sha256": "350a905c1bfc7290aaf58c3ed0ec54c259557b2353189967379836de44d6066b"
+    },
+    {
+      "path": "mitre/t1566-phishing.quiz.yaml",
+      "sha256": "1a79e2415eca47b7ed236e4b8654f756dea28206e2c941b163ade1657f2edc8a"
+    },
+    {
+      "path": "mitre/t1685-disable-or-modify-tools.flashcards.yaml",
+      "sha256": "d56e3451ec757802c19e8eac73840ba4ce244502e955b2ad256c825b55432b44"
+    },
+    {
+      "path": "mitre/t1685-disable-or-modify-tools.quiz.yaml",
+      "sha256": "cb3905fa26e18376c7cc7e25c44cac64823211e01c144e962e5104308dbd4d23"
+    },
     {
       "path": "networking/arp.flashcards.yaml",
       "sha256": "2292457630e2229fce4d8d8e3bcfc37ca2991a7b4db18fc05ec6474659df9d09"
@@ -1694,6 +1854,14 @@
       "sha256": "635997ea70385685ddb361b1753e3a567b4e8b52850cb32c9ba781321103561d"
     },
     {
+      "path": "playbooks/account-lockout-storm.flashcards.yaml",
+      "sha256": "867fbcd25b772dd8138065345604d8c3f7807d71377c258cbe3b89a80fa06d07"
+    },
+    {
+      "path": "playbooks/account-lockout-storm.quiz.yaml",
+      "sha256": "e32e3621e86b1d14bad5f9bdcd8c79ed252854c227a363516fdbd1275e47614e"
+    },
+    {
       "path": "playbooks/added-to-admin-group.flashcards.yaml",
       "sha256": "e59454447c9b9aaf5b17f605002f2dae4b87be202ef3fb1a9fbdb0a0af87d4f0"
     },
@@ -1718,6 +1886,14 @@
       "sha256": "072821e82ce9e9cfe3cc5b9f6be18a6c51dc211e0f09f483081f0a959b8fa9a1"
     },
     {
+      "path": "playbooks/fim-or-malware-alert.flashcards.yaml",
+      "sha256": "bed9510b7cf7ec8522a142fe57e4d624e3cc8d1aee9b255558f72701923aa2ec"
+    },
+    {
+      "path": "playbooks/fim-or-malware-alert.quiz.yaml",
+      "sha256": "cc6c39c3c7fa206f075f3ef140157dbe45ab544bc617abf3be15116749e7cb42"
+    },
+    {
       "path": "playbooks/new-local-account.flashcards.yaml",
       "sha256": "9c70983f14a5c704660814b637e3227231d8a3559b09a212b78b90a014144c76"
     },
@@ -1726,12 +1902,156 @@
       "sha256": "f891b41509dafb443b805f7e4beacebd812caa8eed6d79b7286bda392e968868"
     },
     {
+      "path": "playbooks/new-service-or-scheduled-task.flashcards.yaml",
+      "sha256": "5f020c1f2cc294e915c06fd2ca2fde3fa3d30fdb1590b8227a48d25c9526e69b"
+    },
+    {
+      "path": "playbooks/new-service-or-scheduled-task.quiz.yaml",
+      "sha256": "aa847dafce71eb31d71fcebcb52970e87f2e287f0ba8945bd388bca7d795288f"
+    },
+    {
+      "path": "playbooks/port-scan.flashcards.yaml",
+      "sha256": "cd0af22b947b01be163cdc7cec0d68fd30a0afed7f2cb53de32d4abf9d1791ad"
+    },
+    {
+      "path": "playbooks/port-scan.quiz.yaml",
+      "sha256": "e1173249d34a342ac07ea794d7ad1933cfc954ab29024856a3fc8ac8453ebe3b"
+    },
+    {
       "path": "playbooks/success-after-failures.flashcards.yaml",
       "sha256": "8c1493882caf8b256161ad8d7c5b9dcc7e2dde4734801a3459ef8693d2ecde2c"
     },
     {
       "path": "playbooks/success-after-failures.quiz.yaml",
       "sha256": "a7224ed2767b0aaee81ed64210ad710ba9112d30c3ff229691eaf29d4bddde4c"
+    },
+    {
+      "path": "playbooks/suspicious-powershell.flashcards.yaml",
+      "sha256": "4e4676377c897865ceaf95e176c856f40912c289920c21de5b2355f8caf14ab1"
+    },
+    {
+      "path": "playbooks/suspicious-powershell.quiz.yaml",
+      "sha256": "22b5da49fa3fca8b6261de56e100ea4aa8dc58db31ef18445e2708578ebcb1eb"
+    },
+    {
+      "path": "sla/severity-response-matrix.flashcards.yaml",
+      "sha256": "53ac4a4471190845321ef10721d8f5de8c18f7adc70b806289d6191ec315655e"
+    },
+    {
+      "path": "sla/severity-response-matrix.quiz.yaml",
+      "sha256": "5467cd341def3ac6529bfbc98b063a1821097165d02289afb9fe52083390df69"
+    },
+    {
+      "path": "sysmon/event-1-process-create.flashcards.yaml",
+      "sha256": "07a523dc34db58ee2bd983ec085a0f482595a6e767b439427628fd7f21f1b9ce"
+    },
+    {
+      "path": "sysmon/event-1-process-create.quiz.yaml",
+      "sha256": "00b3f7de82c1f8ba7e7b4c8949a8bf16925248df442befd1ece85845e490d328"
+    },
+    {
+      "path": "sysmon/event-10-process-access.flashcards.yaml",
+      "sha256": "e9386d27762a3d3c714c217a888ede2e00ac5f5873f6d6b5e7ef95b9d6ee5110"
+    },
+    {
+      "path": "sysmon/event-10-process-access.quiz.yaml",
+      "sha256": "ada5033ac98f7f09f8138d214c8dd6b80e8962104e4c4f3b4e6d3bf178da4583"
+    },
+    {
+      "path": "sysmon/event-11-file-create.flashcards.yaml",
+      "sha256": "cf1a71d8bed552d5e56a2272102517f0375f1cb4bd04b4f60198ef515ce0565f"
+    },
+    {
+      "path": "sysmon/event-11-file-create.quiz.yaml",
+      "sha256": "23c27d25c65f4f60cb0f3e31afc24ae56a13735cda2a2ef0b3fa60e452a3606d"
+    },
+    {
+      "path": "sysmon/event-12-13-14-registry.flashcards.yaml",
+      "sha256": "fff788998c522204af4639676a14c46723eb9c8592cf56f276dddae086b6abed"
+    },
+    {
+      "path": "sysmon/event-12-13-14-registry.quiz.yaml",
+      "sha256": "47a5cc5d878fc5c166ccac9925b35375a9ee7900ef95f66c40ffd38bbfa00567"
+    },
+    {
+      "path": "sysmon/event-22-dns-query.flashcards.yaml",
+      "sha256": "2e70de9088069de531748f48a98ef23551c6541dd78db9c45bd11a72e55a6ab2"
+    },
+    {
+      "path": "sysmon/event-22-dns-query.quiz.yaml",
+      "sha256": "9bbcf3f8faba81d557db9afb97d715d6ec7f01a6ef188ba698924d037914b8d4"
+    },
+    {
+      "path": "sysmon/event-3-network-connection.flashcards.yaml",
+      "sha256": "ec94e822c69649faa45d62e5e07bf728be450208006b9ae70640bfb214b47abd"
+    },
+    {
+      "path": "sysmon/event-3-network-connection.quiz.yaml",
+      "sha256": "6b777614397b119f80c7511e8fb060fcee193e6ffea9d6ac07d5f8d2d7689564"
+    },
+    {
+      "path": "sysmon/event-7-image-loaded.flashcards.yaml",
+      "sha256": "f150b3ec3f08438c5b6ef6eb99bd28c1780d241cd1ab585c3de8b20415e9b515"
+    },
+    {
+      "path": "sysmon/event-7-image-loaded.quiz.yaml",
+      "sha256": "490dbdc8b3ac195fa1854aff2f81f878f2cdaa5dc1be5d8e3674004fcdb291ee"
+    },
+    {
+      "path": "sysmon/event-8-create-remote-thread.flashcards.yaml",
+      "sha256": "f55b165a41539b9531da2b68cd6631a27049988aa5ed875931d48c8e6a0516e2"
+    },
+    {
+      "path": "sysmon/event-8-create-remote-thread.quiz.yaml",
+      "sha256": "33f7b9d2b67f2e82dd05154ae624a232c5c596c21a566dcf76d5e38697678b0d"
+    },
+    {
+      "path": "sysmon/overview.flashcards.yaml",
+      "sha256": "19ccf0b47c7a0f197a40c819ab15d8a40647181badbe2b50d56ae44d114eec15"
+    },
+    {
+      "path": "sysmon/overview.quiz.yaml",
+      "sha256": "189ec402de298c14590ca60480719983b1bbbdeec981e5f2a07854ce30e3f4ae"
+    },
+    {
+      "path": "wazuh/asset-and-user-context.flashcards.yaml",
+      "sha256": "7607c438728312ad9a3a4d63952eb4b840d7cb47b5d265ca0bc12dc51b55e7d8"
+    },
+    {
+      "path": "wazuh/asset-and-user-context.quiz.yaml",
+      "sha256": "ce1d39fc1c35d9817f079cfc9f22184c6094006dc5a1525b6bee78326767cff4"
+    },
+    {
+      "path": "wazuh/geo-and-vpn-caveats.flashcards.yaml",
+      "sha256": "e2efd5663eee4ccee30852ff907c871c23c6591f88ee9b2b472a2f0a922b5c7d"
+    },
+    {
+      "path": "wazuh/geo-and-vpn-caveats.quiz.yaml",
+      "sha256": "fc49c3c434d5906157f0b44ad2999aedec6459e3668b9d81b8772a6fc367a00a"
+    },
+    {
+      "path": "wazuh/mitre-in-wazuh.flashcards.yaml",
+      "sha256": "6764ce6bd854cd80fc7ec12455371867612af0f0164766340b73c7b2fd107499"
+    },
+    {
+      "path": "wazuh/mitre-in-wazuh.quiz.yaml",
+      "sha256": "d60fb2ae32cfc8511b21b983545df4059726dcb4e180ccd45d26d13e4fe0f9e7"
+    },
+    {
+      "path": "wazuh/rule-groups.flashcards.yaml",
+      "sha256": "2aa2f4997279094cb85d019633b6bb518721d2156a134e9ad6079135f2d60bb0"
+    },
+    {
+      "path": "wazuh/rule-groups.quiz.yaml",
+      "sha256": "48e7f15ef3b1c1a0504de84fbf4657c13051d1ea2f65dc69ecd73e09b01d72d8"
+    },
+    {
+      "path": "wazuh/sshd-rules-reference.flashcards.yaml",
+      "sha256": "a2ad6a4333286870f643e995e01da69ac5e35aaa958e5b252a2b5676fd4e7367"
+    },
+    {
+      "path": "wazuh/sshd-rules-reference.quiz.yaml",
+      "sha256": "b44eb65c2fb16a1893387cbc1496bab948969b00c8123a17bb173a5752df202c"
     },
     {
       "path": "windows-events/event-1102.flashcards.yaml",
@@ -1758,6 +2078,14 @@
       "sha256": "88c4567d9d76ce76d71f1f5e9077deecacb256ed11a1727eabdc3f8b6f0acbef"
     },
     {
+      "path": "windows-events/event-4634.flashcards.yaml",
+      "sha256": "2fc5d694e67664fab62a0c4b311157c74b18337b0aa13aae6233110a70e4d965"
+    },
+    {
+      "path": "windows-events/event-4634.quiz.yaml",
+      "sha256": "a89912e00365dc093798a9fe73c627b2169bf142c195b9b6abd32e509edad34f"
+    },
+    {
       "path": "windows-events/event-4648.flashcards.yaml",
       "sha256": "b9c2fd7d28dedc6a1cd2279ee812db20bdac20231c1e04aa4350208fb7a751ae"
     },
@@ -1782,12 +2110,76 @@
       "sha256": "5edda779880ac123f47f199569398d645ea0a562774af79e00325c8859b6f188"
     },
     {
+      "path": "windows-events/event-4697.flashcards.yaml",
+      "sha256": "3849b6d206498910bd94bab2283b883410b954fcb9b3a42556f55ff228a506a6"
+    },
+    {
+      "path": "windows-events/event-4697.quiz.yaml",
+      "sha256": "f40a49f179e8cf779a3d02b2e20e9aacfa4180befe3e93d478ceee1fd706db55"
+    },
+    {
+      "path": "windows-events/event-4698.flashcards.yaml",
+      "sha256": "6f66aea21093ceb4cb4da45f0d76c8ee0fc8482f8fb1ea8e61596170b4d484b1"
+    },
+    {
+      "path": "windows-events/event-4698.quiz.yaml",
+      "sha256": "129cd519b59c33080466ce26c388779cbb324dcc999755b4835bf62232a21e37"
+    },
+    {
+      "path": "windows-events/event-4719.flashcards.yaml",
+      "sha256": "ffb465a94af9b3608b1e0407878a2a70f1e35cfd92986fe174544503f859103f"
+    },
+    {
+      "path": "windows-events/event-4719.quiz.yaml",
+      "sha256": "9b8838e84af0bf4c40bb4d5ed8e8e48a0e11b7330142d43753352991034b774e"
+    },
+    {
       "path": "windows-events/event-4720.flashcards.yaml",
       "sha256": "ea2ce1493958021876bcab7aa2aedd3a0044346924b8ab77730d0d1159dc45bf"
     },
     {
       "path": "windows-events/event-4720.quiz.yaml",
       "sha256": "7eec471aeb1e608f52f79391959411489a4102e900b9338ed7fa27b32fd405f5"
+    },
+    {
+      "path": "windows-events/event-4722.flashcards.yaml",
+      "sha256": "66b342d30b62d6dbe14dca18a051c25b1b83703ed1b3c417fdd8840821a486ab"
+    },
+    {
+      "path": "windows-events/event-4722.quiz.yaml",
+      "sha256": "04d0ac7856b1d17cc4505e8bd9e219a58ec2eda62dc03636f0f9d5d255116920"
+    },
+    {
+      "path": "windows-events/event-4724.flashcards.yaml",
+      "sha256": "bd364f703080826d00d3141a45033c2e4a31153ce6124f5ac635f8bcc2235c51"
+    },
+    {
+      "path": "windows-events/event-4724.quiz.yaml",
+      "sha256": "a31222a15e13214ca03894772f27734cfcacc54a50b535cddb6882a024be94f6"
+    },
+    {
+      "path": "windows-events/event-4725.flashcards.yaml",
+      "sha256": "368119ea5817af535651af0f28cac0b104428461e0d21424ecbd51e13cf0a6ed"
+    },
+    {
+      "path": "windows-events/event-4725.quiz.yaml",
+      "sha256": "ff4c331472ba3f9f913a7bff7c64bd6b085f74e25fdeae76108cf061956208bc"
+    },
+    {
+      "path": "windows-events/event-4726.flashcards.yaml",
+      "sha256": "33201e0da84ab8ab32a14e943c7ae2012c97bef7ffd59f9f465ffdb36d5dcc94"
+    },
+    {
+      "path": "windows-events/event-4726.quiz.yaml",
+      "sha256": "751c621cd91507fd6991f5d78165b8847b75b1695179bf0e61976981cf764ccb"
+    },
+    {
+      "path": "windows-events/event-4728.flashcards.yaml",
+      "sha256": "e35b3ec48c524a84e9d2ea23dc2c2cacefe6d43b0fa65aa65cb5f037f13f7ce7"
+    },
+    {
+      "path": "windows-events/event-4728.quiz.yaml",
+      "sha256": "a3c2737a543634c485363d109d15c923250e3fbf29e6858a7662d2dacc2b3038"
     },
     {
       "path": "windows-events/event-4732.flashcards.yaml",
@@ -1798,12 +2190,60 @@
       "sha256": "d3bff4e1a1b6e5ea90db95d50f96b45c2365b99e4a26f8309a45710b24419cd1"
     },
     {
+      "path": "windows-events/event-4738.flashcards.yaml",
+      "sha256": "72a545bb9c9d96ecf3646058b797163647f8537a841c58b6250734dd830b880a"
+    },
+    {
+      "path": "windows-events/event-4738.quiz.yaml",
+      "sha256": "904f4ec809363514faad95c38a417ea0cfc6369570c6bcdbb935f01cf775021b"
+    },
+    {
       "path": "windows-events/event-4740.flashcards.yaml",
       "sha256": "006599a89345c5fb4cf99dbc903f634fa22345c1d2294c13bf0c0eb73774132d"
     },
     {
       "path": "windows-events/event-4740.quiz.yaml",
       "sha256": "5bdfaa61925e51689e3fd93bf34be819e9aa415e8d4494be91bd4b0d34ee83c6"
+    },
+    {
+      "path": "windows-events/event-4756.flashcards.yaml",
+      "sha256": "8cca223ca49b3501a91eb92983bef39dc6d2028e4012c30140a7e0b706473201"
+    },
+    {
+      "path": "windows-events/event-4756.quiz.yaml",
+      "sha256": "eca916dbc114cb16d314160d4484aa5aa5d975991ca108cbe8a5f8588ab97319"
+    },
+    {
+      "path": "windows-events/event-4768.flashcards.yaml",
+      "sha256": "a389ca1f1ce3d80c4b1339c8ad58267823934c8dd990d71c2be86b5417b12ca6"
+    },
+    {
+      "path": "windows-events/event-4768.quiz.yaml",
+      "sha256": "540af30697a094f82d4fd73feda94c3dc8db2e4c0534836b7589e1bd277a5499"
+    },
+    {
+      "path": "windows-events/event-4769.flashcards.yaml",
+      "sha256": "506bd9a5baca77a42342ec619110ed1d4a2d8ef52643bb3a772b875e0bad9002"
+    },
+    {
+      "path": "windows-events/event-4769.quiz.yaml",
+      "sha256": "91066ac0ae574525f2b128692e653cd6e8c71d498d207811b3306fa14e522ac5"
+    },
+    {
+      "path": "windows-events/event-4771.flashcards.yaml",
+      "sha256": "67821d0aa9a8994d80d793a3b366848defd2e34e228d256704573e876f5ace74"
+    },
+    {
+      "path": "windows-events/event-4771.quiz.yaml",
+      "sha256": "f3e3726b61b8d627e211fc5de4201992f54c9d29d466ecb09d598ef7fdd56ecc"
+    },
+    {
+      "path": "windows-events/event-4776.flashcards.yaml",
+      "sha256": "0feab9aa74dab3ca28bdb5dfbe2ca51ee64237688e75027fc43373cb641d4030"
+    },
+    {
+      "path": "windows-events/event-4776.quiz.yaml",
+      "sha256": "250d2ec61c7ad1d675047cd993eddb457477a6df0f99ea7e259b2b33bfda9874"
     },
     {
       "path": "windows-events/event-7045.flashcards.yaml",
