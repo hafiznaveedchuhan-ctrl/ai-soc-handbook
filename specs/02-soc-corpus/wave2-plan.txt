@@ -1,0 +1,19 @@
+WAVE 2 — BATCH PLAN (55 documents + flashcards + quizzes)
+Written 2026-11-11. Branch feat/02-soc-corpus-wave-2. Owner gave standing approval for every process
+step (no per-batch STOPs). Pages stay DRAFT until Naveed says "approved" once at the end.
+
+W2-B1 mitre (9)          t1110-004, t1053-005, t1543-003, t1021-001, t1003-001, t1046, t1548-002,
+                          t1562-001 (re-map: MITRE now redirects to T1685), t1566   — attack.mitre.org live
+W2-B2 windows-events (15) 4634 4697 4698 4719 4722 4724 4725 4726 4728 4738 4756 4768 4769 4771 4776
+                          + close event-7045 TODO-VERIFY (4697 + T1543.003)          — Microsoft Learn
+W2-B3 sysmon (9)         overview, events 1, 3, 7, 8, 10, 11, 12/13/14, 22           — Microsoft Learn Sysmon
+W2-B4 linux-auth (6) + wazuh (3)  where-auth-logs-live, ssh-failed-password, ssh-accepted, ssh-invalid-user,
+                          sudo-usage, new-user-useradd; rule-groups, sshd-rules-reference, mitre-in-wazuh
+                                                                                     — Wazuh ruleset v4.14.10, man pages
+W2-B5 playbooks (5)      suspicious-powershell, new-service-or-scheduled-task, account-lockout-storm,
+                          port-scan, fim-or-malware-alert                            — B1–B4 pages + escalation policy
+W2-B6 owner policy (8)   wazuh/geo-and-vpn-caveats, wazuh/asset-and-user-context, false-positives/ (5),
+                          sla/severity-response-matrix — written as PROPOSALS (interview I2), owner confirms
+Then: link pass W1<->W2 (+ reverse networking links), 55 decks + 55 quizzes, refresh + calibrate --check,
+evals extended, review sheet, ONE owner approval, PR.
+Gates kept per batch (no owner stop): verify.mjs, npm run check, build in an isolated worktree if dev runs.

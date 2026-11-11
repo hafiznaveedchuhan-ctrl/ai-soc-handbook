@@ -17,6 +17,12 @@ sources:
   - id: wazuh-0575
     title: Wazuh ruleset v4.14.10 — 0575-win-base_rules.xml
     resource: https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0575-win-base_rules.xml
+  - id: det0497
+    title: "MITRE ATT&CK — DET0497 Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms"
+    resource: https://attack.mitre.org/detectionstrategies/DET0497/
+  - id: det0552
+    title: "MITRE ATT&CK — DET0552 Detection of Windows Service Creation or Modification"
+    resource: https://attack.mitre.org/detectionstrategies/DET0552/
 ksor:
   audience: [public]
   owner: human:naveed
@@ -89,13 +95,17 @@ reference](../wazuh/windows-rules-reference.md).
 
 ## MITRE ATT&CK
 
-TODO-VERIFY: Microsoft and Wazuh both point to Windows Service, T1543.003.
-The handbook's T1543.003 page is in Wave 2; the mapping is confirmed against
-attack.mitre.org then.
+MITRE's detection strategy DET0497 lists **System event 7045** as its
+"Service Creation" source,[^det0497] and DET0552 for
+[T1543.003 Windows Service](../mitre/t1543-003-windows-service.md) uses the same
+Service Creation data component with Security event
+[4697](event-4697.md).[^det0552] The handbook therefore maps 7045 to
+T1543.003 (persistence via a new service) and, when the new service stops or
+replaces a security tool, to [T1685](../mitre/t1685-disable-or-modify-tools.md).
 
 ## Related playbook
 
-- A dedicated new-service-or-scheduled-task playbook is planned for Wave 2; on a domain controller, AD FS or AD CS server this is escalation condition 7 in the [escalation policy](../rules-map/escalation-policy.md)
+- A dedicated new-service-or-scheduled-task playbook is being written in Wave 2; on a domain controller, AD FS or AD CS server this is escalation condition 7 in the [escalation policy](../rules-map/escalation-policy.md)
 
 ## L1 triage questions
 
@@ -121,3 +131,5 @@ attack.mitre.org then.
 [^mdi-classic-alerts]: Microsoft Learn, "Microsoft Defender for Identity classic security alerts", section "Suspicious service creation". https://learn.microsoft.com/en-us/defender-for-identity/alerts-mdi-classic
 [^wazuh-0590]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0590-win-system_rules.xml`, rules 61100 and 61138. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0590-win-system_rules.xml
 [^wazuh-0575]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0575-win-base_rules.xml`, rule 60002 (`win.system.channel` = System). https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0575-win-base_rules.xml
+[^det0497]: MITRE ATT&CK, "Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms, Detection Strategy DET0497" (Service Creation: WinEventLog:System EventCode=7045). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0497/
+[^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552" (Service Creation: WinEventLog:Security EventCode=4697). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/

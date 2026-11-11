@@ -3,68 +3,72 @@
 Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt` (v4).
 Never delete history; append a new session block; keep the Current state table current.
 
-> **NEW SESSION? Read "HANDOFF — start here" (directly below) first, then the latest session block.**
+> **NEW SESSION? Read "HANDOFF — start here" (directly below) first — it is current as of end of session 3 (2026-11-11).**
 
-## HANDOFF — start here (written end of session 2, 2026-11-10T10:30Z)
+## HANDOFF — start here (written end of session 3, 2026-11-11 ~07:20Z)
 
-### 1. Where things are (git)
-| Branch | Head | On GitHub? | Contains | Status |
-|---|---|---|---|---|
-| `main` (origin) | `2e82511` | yes | F01 (PR #1), Wave 1 (PR #2, #3), networking plan v4 + instance.md scope (PR #4 @ `af3036b`) | up to date on GitHub; **local `main` is behind** → `git switch main && git pull --ff-only` |
-| `feat/02-networking` | `076af79`+ | yes (pushed) | N1 + N2 = 16 networking drafts + this HANDOFF + scripts/authoring | **current work branch** — check out THIS branch first; commits after PR #4 not yet in main |
-| `feat/05-agent-surface` | `51ba5a6` | yes (pushed 2026-11-10) | gateway edit (`8d52f3f`), provision done, evals, refresh-401 note | blocked on Gemini key; no PR yet |
+> New session: read THIS section fully, then `git switch feat/02-soc-corpus-wave-2`, then do §3.
+> Older "HANDOFF (session 2)" text was replaced; all history blocks below are unchanged.
 
-`gh` CLI is logged in as `hafiznaveedchuhan-ctrl` — PRs can be created with `gh pr create`; Naveed merges.
-Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-networking` (both appended) — merge both blocks by hand.
+### 1. Git state
+| Branch | Head | Pushed | Status |
+|---|---|---|---|
+| `main` | `22cfb8f` | yes | contains F01, Wave 1, networking (38 stable, PR #8), CI (PR #10), F05 MCP (PR #11), F03 site UI (PR #12) |
+| `feat/02-soc-corpus-wave-2` | latest (`git log -1`) | yes | **CURRENT WORK** — Wave 2 B1–B5 = 47 draft pages; no PR yet |
+| `feat/04-auth` | `d55b345` | yes | ADR-0004 (Auth0 recommended) — **DEFERRED by owner** ("abhi login skip karo"); no PR |
+| old branches (`feat/02-networking`, `feat/03-site-ui`, `feat/05-agent-surface`, `feat/06-ci-and-release`) | merged | — | ignore |
 
-### 2. Feature status (plan v4 order: 01 → 02W1 → 05 → 06 → 03 → 04 → networking (now) → 02W2 → 02W3)
-| Feature | Done | Remaining |
+`gh` is logged in (hafiznaveedchuhan-ctrl). Naveed merges PRs himself on GitHub. CI on every PR: Format checker, gitleaks, Build, Playwright smoke (all must be green). Vercel auto-deploy is OFF (`vercel.json` git.deploymentEnabled=false) until Phase 8.
+
+### 2. Feature status (overall ≈ 70%)
+| Feature | State | Left |
 |---|---|---|
-| 01 record-identity | verified, merged | — |
-| 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
-| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **all 38 STABLE (approved 2026-11-11)** | push + PR; reverse links (D2) optional; then link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
-| 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
-| 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
-| 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
-| 04 auth | — | all (provider ADR, sign-in config) |
-| 02 Wave 2 (55 docs) | — | all |
-| 02 Wave 3 (7 docs) | — | all |
-Corpus count now: 79 documents (78 stable, 1 draft = event-7045). (updated 2026-11-11) Plan total 141. (updated session 3)
-Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
+| 01 record identity | done, merged | — |
+| 02 Wave 1 (41) | 40 stable | event-7045 draft (3 TODO-VERIFY: audit setting + field names need a Microsoft source) |
+| 02 networking (38) | 38 stable, merged | optional reverse links Wave1→networking (`specs/02-soc-corpus/networking-reverse-links.txt`) |
+| 06 CI | done, merged | AC2/AC3 demo (throwaway branches) optional |
+| 05 MCP agent surface | done, merged | abstention gate OFF (calibrate not separable, see `evals/results-2026-11-11.txt`) |
+| 03 site UI | done, merged | mobile Lighthouse perf 74–83 (<90): lazy-hydrate study aids (follow-up) |
+| 04 auth | DEFERRED | resume before Phase 8 (ADR-0004 on `feat/04-auth`) |
+| **02 Wave 2 (55)** | **47 drafts written (B1–B5)** | **B6 (8 owner-policy proposals), link pass, 55 decks+quizzes, refresh+calibrate --check, evals, review sheet, ONE owner "approved", PR** |
+| 02 Wave 3 | not started | plan v4 says 7 docs (soc-fundamentals) — check `specs/00-final-plan.txt` [W3] list |
 
-### 3. EXACT next step
-**A. If Naveed says "key done"** (new GEMINI_API_KEY in `.env`, no quotes, LF line endings):
-   1. `git switch feat/05-agent-surface`
-   2. one-word diagnostic (prints only status, never the key):
-      `( set -a; . ./.env >/dev/null 2>&1; set +a; curl -s -o /tmp/g.json -w "%{http_code}\n" -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent" -H "x-goog-api-key: ${GEMINI_API_KEY}" -H "content-type: application/json" -d '{"content":{"parts":[{"text":"test"}]},"outputDimensionality":1536}' ); rm -f /tmp/g.json` → expect 200
-   3. ask HAAN → `npm run refresh` (run in background; 343 chunks; first gen 1 failed and was NOT flipped — fine)
-   4. ask HAAN → `npm run serve` (background) → `curl -s http://127.0.0.1:8080/health`
-   5. ask HAAN → `npx ksor calibrate --instance instance.md --queries-file evals/calibrate-in.txt --ooc-file evals/wave1-out-of-scope.txt` → paste the printed `retrieval:` block into instance.md exactly → restart serve
-   6. `node evals/run-evals.mjs` → report in-scope / out-of-scope pass rates (targets ≥ 90% / ≥ 90%)
-   Note: networking pages are drafts → not ingested until approved; refresh again after approval.
-**B. Otherwise continue networking N3** on `feat/02-networking`:
-   1. N3 URL list for: routing-basics, routing-protocols-overview (OSPF RFC 2328, BGP RFC 4271), nat-and-pat (RFC 3022, 4787), vlans-and-switching (IEEE blocked → IANA 802 registry 8100/88A8 + RFC 9542; mark IEEE-only values TODO-VERIFY), dhcp (RFC 2131, 8415), dns (RFC 1034/1035, NIST SP 800-81-2), ntp-and-time-sync (RFC 5905), wireless-basics (NIST SP 800-153). Check each RFC JSON for "obsoleted_by" first (RFC 7042 → 9542 happened in N1).
-   2. STOP for URL approval → fetch → write 8 with the generator pattern in `scripts/authoring/example-batch-generator-n2.py` (order numbers 1320–1327) → verify.mjs → check → build → push (only with OK) → STOP-N3 (2-page check).
+### 3. EXACT next steps (owner gave standing approval for all Wave 2/3 process steps)
+1. `git switch feat/02-soc-corpus-wave-2 && git pull`
+2. **B6 — owner-policy PROPOSALS (8 pages, draft):** `wazuh/geo-and-vpn-caveats`, `wazuh/asset-and-user-context`, `false-positives/{expired-or-mistyped-passwords, service-accounts, backup-jobs, admin-maintenance-windows, vulnerability-scanners}`, `sla/severity-response-matrix`. Write from Tier-1 sources (NIST SP 800-61r3, Wazuh docs, MaxMind/GeoIP caveats if a source exists) + existing pages (severity-model, escalation-policy). Mark every org-specific number (SLA minutes, scanner IPs, windows) as **"Proposed — owner to confirm (interview I2)"**; never invent them as fact. Record the questions in `specs/02-soc-corpus/interview-i2.md`.
+3. **Link pass:** Wave 1 + networking pages ↔ new pages (e.g. 4625→4771/4776, 4720→4722/4726, 7045→4697, playbooks→sysmon). NOTE: Wave 1/networking pages are STABLE → editing their body needs re-approval (`ksor-generated-stale`); prefer adding links FROM the new draft pages, and collect stable-page edits in one list for the final approval.
+4. **Decks + quizzes** for all 55: `scripts/authoring/study_writer.py` (pattern `study-n3.py`), 5 cards + 6 questions each, every answer from the page; run `python3 -I scripts/authoring/quiz_precheck.py knowledge/**/*.quiz.yaml` until all ok.
+5. **Build/verify:** `npm run check`; full `npm run build` ONLY if Naveed's dev server is NOT running (`ss -ltnp | grep :3000`), else build in a git worktree in the scratchpad (see gotchas).
+6. **MCP refresh** (drafts are not ingested; do after approval): `NODE_OPTIONS="--network-family-autoselection-attempt-timeout=3000" npm run refresh`, then `npx ksor calibrate --instance instance.md --check`; extend `evals/` with Wave 2 questions and run `node --network-family-autoselection-attempt-timeout=3000 evals/run-evals.mjs` (server must be running: `npm run serve` in background).
+7. Review sheet `specs/02-soc-corpus/wave2-review.txt` (like `networking-review.txt`) → ask Naveed ONCE for "approved" → stamp `status: stable`, `generated {by: "claude-opus/5.5", at: <last commit of page>}`, `ksor.approval {by: "human:naveed", at: <now UTC>}` (script used for networking is in session-3 history) → build → PR.
+8. Then Wave 3 (same pipeline).
 
 ### 4. Rules Naveed set (never break)
-- Never open/print `.env`; check names only (`grep -c '^NAME=.' .env`). Never ask for keys in chat.
-- Any Neon/Gemini command (provision, refresh, ingest, serve, calibrate) only after Naveed's **"haan"**, each time.
-- Only `human:naveed` approves pages; never write `ksor.approval` without his explicit words ("approved …"). "You are the judge" is NOT approval.
-- Push only when he says "push" in the current message (the permission classifier blocks pushes otherwise).
-- Every claim cited (Tier 1 first; Tier 2 labelled "(secondary source)" + logged in specs/02-soc-corpus/sources.md); unconfirmed → TODO-VERIFY (blocks approval). No employer/client names. No invented numbers — compute with Python `ipaddress`.
-- Per batch: URL list STOP → write → verify → STOP 2-page check. He writes Roman Urdu/English; answer in simple Roman Urdu when he asks.
-- He wants plans as real .txt files (specs/00-final-plan.txt) and absolute paths in any command he runs.
+- Session protocol: start by reading this HANDOFF and telling Naveed in 3 lines where we are; end by updating progress.md (`.claude/rules/session-protocol.md`).
+- **Standing approval (2026-11-11) for Wave 2/3:** no per-batch STOPs, no URL-list approval, no per-command "haan" (refresh/calibrate included). STILL REQUIRED: his explicit "approved …" before any `ksor.approval` (never approve on his behalf); owner-policy numbers confirmed by him; push only when his message says push (he said "push" for this session's work).
+- Never open/print `.env`; check names only (`grep -c '^NAME=.' .env`). Keys pasted in chat (OpenAI, Anthropic) — remind him to rotate them.
+- Every claim cited from a fetched Tier-1 source; unconfirmed → TODO-VERIFY (blocks approval); no employer/client names; numbers computed (Python `ipaddress`), never invented. Link only to pages that EXIST.
+- He writes Roman Urdu/English; answer in simple Roman Urdu. Plans as real .txt files with absolute paths.
 
-### 5. Gotchas learned (save time)
-- Scratchpad is wiped between sessions → helpers now live in `scripts/authoring/` (see its README); sources must be re-fetched.
-- Run `pkill -f "next dev"` and `npm run build` in **separate** commands (a combined command killed its own shell, exit 144). Restart `npm run dev` after adding pages (new pages 404/500 until restart).
-- `npm run build` rewrites `system/site/next-env.d.ts` → `git checkout -- system/site/next-env.d.ts`.
-- **Never run `npm run build` while Naveed's `npm run dev` is running** (session 3 bug): build re-stages `system/site/.staged-knowledge/` WITHOUT drafts, so the dev site loses every draft page (networking 404). Fix: restart `npm run dev`. Check first with `ss -ltnp | grep :3000`.
-- YAML: quote titles/descriptions containing ": " or "::".
-- Quiz audit (system/site/lib/quiz-audit.ts): ≤60% same answer position, ≤60% wins for unique-longest/shortest option, no run >3 → pre-check with `scripts/authoring/quiz_precheck.py`.
-- Blocked sites: cisa.gov (403 — do not try browser headers), ISO 7498-1 (licence click-through), ITU X.200, IEEE (403/418). MITRE renumbers: T1070.001→T1685.005, T1562.001→T1685 (always fetch live).
-- Wazuh: levels 0–16; ruleset pinned at tag v4.14.10; rule IDs only from `ruleset/rules/*.xml`.
-- `ksor calibrate` files: one question per line, `#` comments (from ksor dist parseQueriesFile).
+### 5. Environment facts
+- `.env`: `KSOR_DB_URL` → Neon db **soc_handbook_openai** (ACTIVE, generation 2, 88 nodes, 590 chunks, OpenAI `text-embedding-3-small` @1536). Also kept: `KSOR_DB_URL_GEMINI_OLD` (neondb, old Gemini tenant), `KSOR_DB_URL_OPENAI_LARGE` (soc_handbook_large, test). Keys: `OPENAI_API_KEY` (works), `ANTHROPIC_API_KEY` (unused by ksor), `GEMINI_API_KEY` (invalid). `KSOR_AUTH=disabled-local`.
+- `instance.md`: `embedding: {provider: openai, model: text-embedding-3-small, dim: 1536}`; no `retrieval:` block on purpose (gate off).
+- WSL + Neon: Node needs `--network-family-autoselection-attempt-timeout=3000` (via NODE_OPTIONS or flag) or connects time out. Sourcing `.env` in bash breaks the DSN (`&`) — read it from Node instead.
+- learn.microsoft.com sometimes fails DNS from WSL (curl exit 6) — retry later with `curl -4`.
+
+### 6. Gotchas (save time)
+- **Never run `npm run build` while Naveed's `npm run dev` runs** — it re-stages `system/site/.staged-knowledge/` without drafts and his site loses draft pages. If it happened: `cd system/site && NODE_ENV=development npx fumadocs-mdx` regenerates `.source` without stopping his server. For builds while dev runs: `git worktree add <scratchpad>/wt HEAD && cd <wt> && npm ci && npm run build`.
+- `npx ksor build` alone (indexes + lock) is safe while dev runs; run it after adding pages (fixes `ksor-index-stale`).
+- Generators: quote title/description with `json.dumps` (a `": "` breaks YAML). Footnote ids must match `sources[].id` (`ksor-footnote-unkeyed`).
+- MITRE moved event IDs to Detection Strategy pages (`attack.mitre.org/detectionstrategies/DET####/`) — cite them as separate sources. T1562.001 → T1685. Microsoft has no pages for 4728/4756 (use "Audit Security Group Management").
+- Quiz audit rules: answer position ≤60%, longest/shortest option wins ≤60%, no run >3 → `quiz_precheck.py`; lengthen distractors to fix length bias.
+- Playwright smoke: `npm run smoke` (needs a built `system/site/out`, serves on :4173). Chromium for 1.64.1: `npx playwright install chromium`.
+- `build.lock.json` conflicts on merges: take main's (`git checkout --theirs`), it is regenerated. `progress.md` conflicts: keep both blocks.
+
+### 7. Where things are
+- Plan of record `specs/00-final-plan.txt`; Wave 2 batches `specs/02-soc-corpus/wave2-plan.txt`; source log `specs/02-soc-corpus/sources.md` (Wave 2 rows still to add).
+- Authoring helpers `scripts/authoring/` (generators per batch `example-batch-generator-*.py`, `study_writer.py`, `quiz_precheck.py`, `html2txt.py`, `pdf2txt.py`). Scratchpad is wiped between sessions — re-fetch sources.
+- Feature specs: `specs/03-site-ui/`, `specs/04-auth/`, `specs/05-agent-surface/`, `specs/06-ci-and-release/`; ADRs `history/adr/0001–0004`.
 
 ---
 ## Current state (kept for history — see HANDOFF table above)
@@ -344,3 +348,35 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 ### Session 3 — Feature 04 started (2026-11-11, branch feat/04-auth)
 - ADR-0004 (Proposed): providers compared against the scaffold's needs (OIDC discovery, public PKCE client, browser CORS at token endpoint, later RS256 + aud + M2M). Recommendation Auth0 (ksor has a tested recipe); fallback Keycloak. STOP-04A: owner chooses.
 - Owner chose "abhi login skip karo": Feature 04 deferred (ADR-0004 Proposed-deferred). Next: Wave 2.
+
+
+### Session 3 — Wave 2 started (2026-11-11, branch feat/02-soc-corpus-wave-2)
+- Owner standing approval for all Wave 2/3 process steps (memory: wave2-3-standing-approval). Pages stay draft until ONE "approved" at the end; owner-policy pages are proposals.
+- Feature 04 deferred by owner; PR #12 (Feature 03) merged.
+- Plan: specs/02-soc-corpus/wave2-plan.txt (B1 mitre 9, B2 windows-events 15, B3 sysmon 9, B4 linux-auth 6 + wazuh 3, B5 playbooks 5, B6 owner policy 8).
+- B1 DONE (`5332906`): 9 MITRE drafts, order 704/760–767; MITRE moved event IDs to Detection Strategy pages (DET####) — cited as separate sources. T1562.001 → T1685 (page t1685-disable-or-modify-tools).
+- learn.microsoft.com unreachable from WSL since ~06:40 (DNS, curl exit 6) → B2/B3 wait; doing B4 next.
+- Gotcha: links only to EXISTING pages (4698/4697 etc. as plain text until B2 exists; link pass later).
+- B4 DONE: linux-auth 6 (order 500–530) + wazuh 3 (604–606), sources Wazuh ruleset 0095/0020, rules syntax + MITRE docs, Ubuntu/Red Hat rsyslog defaults, sshd_config(5). Descriptions now json-quoted in generators.
+- B2 DONE: 15 Windows events (order 322, 371–375, 381–386, 395–397); 4728/4756 sourced from MS 'Audit Security Group Management' (their own pages 404); event-7045 MITRE TODO closed (DET0497 + DET0552) — 3 TODO-VERIFY remain (audit setting, field names) → 7045 still not approvable.
+- B3 DONE: sysmon 9 (order 400–408), source MS Sysmon v15.22 page + MITRE DET pages; each event page lists which B1 techniques' detections use it.
+
+---
+
+## Session 3 — END block (2026-11-11)
+
+### Done this session (all pushed)
+- Networking N3–N5 + link pass + 38 decks/quizzes + approval → PR #8 merged.
+- Feature 06 CI (gitleaks, build, Playwright smoke, Docker smoke) → PR #10 merged; Vercel deploys paused.
+- Feature 05 on OpenAI embeddings: new Neon db, refresh, serve, calibrate (not separable → gate off), evals 39/40 → PR #11 merged.
+- Feature 03 SOC console theme, Quick Triage Lookup, a11y + LCP fixes, screenshots, Lighthouse → PR #12 merged.
+- Feature 04 ADR-0004 → deferred by owner.
+- Wave 2 B1–B5: 47 draft pages on `feat/02-soc-corpus-wave-2` (mitre 9, windows-events 15, sysmon 9, linux-auth 6, wazuh 3, playbooks 5); event-7045 MITRE TODO closed.
+
+### Pending / blocked
+- Wave 2 B6 + link pass + study aids + approval (Claude, then Naveed's one "approved").
+- 7045 still has 3 TODO-VERIFY (needs a Microsoft source for its audit setting/fields).
+- Naveed: rotate OpenAI + Anthropic keys (pasted in chat); optionally delete test Neon dbs (neondb tenant, soc_handbook_large).
+
+### Exact next step
+HANDOFF §3 step 1–2 (B6 owner-policy proposals).
