@@ -62,3 +62,10 @@ been built in this repo. Mistakes are found by Naveed on his laptop, after merge
 - Q3 Playwright version: pin an exact version at least two weeks old; add it as a devDependency of
   the repo root (not `system/site`), test files under `tests/smoke/` (outside `knowledge/` and
   outside the site, per critical rule 1).
+
+## Answers (T06-02, 2026-11-11)
+
+- Q1 → gitleaks **binary v8.30.1** from the official release, verified with its checksums file; no third-party action, no token. Local run over the full history: 77 commits, **no leaks found**.
+- Q2 → `ksor` docs (`deploying.md`): `/health` = the door booted (and its posture), `/ready` = the database answers. Whether the door boots with no `KSOR_DB_URL` is checked in the Docker smoke itself (local `ksor serve` would read `.env` and reach Neon, which needs "haan").
+- Q3 → `@playwright/test` **1.64.1** (released 2026-10-14), root devDependency, tests in `tests/smoke/`, preview on port 4173 (never 3000). Local result: **12 passed**.
+- Also learned: the CI build job needs `fetch-depth: 0` (change-control reads every committed version).

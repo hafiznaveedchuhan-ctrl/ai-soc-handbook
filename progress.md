@@ -221,3 +221,6 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 ### Session 3 — Feature 06 started (2026-11-11, branch feat/06-ci-and-release)
 - Networking pushed (`920568e`) and PR #8 opened (feat/02-networking → main) — Naveed merges. NOTE: this branch was cut from main BEFORE PR #8; progress.md blocks from feat/02-networking (N4..approval) must be merged by hand when the branches meet.
 - T06-01: specs/06-ci-and-release/{spec,plan,tasks}.md + feature-06-plan.txt. STOP-06A: waiting for Naveed's approval.
+- STOP-06A approved ("approved"). T06-02..06 done locally: ci.yml (gitleaks binary + build + Playwright smoke), tests/smoke (12 passed locally), gitleaks local: no leaks. Not pushed yet.
+- GitHub red X = **Vercel** deployment check (not GitHub Actions; all Actions runs green). Vercel build error: `[MISSING_SERVICE_CONFIG] Service "site" detected framework "container" in "."` — scaffold vercel.json has site + door both at root "." and the root Dockerfile makes Vercel detect "container" for site. Deployment is Phase 8 in the plan → decision for Naveed.
+- Gemini key test: HTTP 401 again (.env line format is fine: 1 line, no quotes/spaces/CR) → Google rejects the key itself. Feature 05 still blocked.
