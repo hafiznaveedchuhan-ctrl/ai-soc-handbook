@@ -344,6 +344,11 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - Fixed scaffold a11y (flashcard name/focus, quiz progress label, governance dl) and LCP (no fade on title/purpose).
 - Screens: specs/03-site-ui/screens/ (home, lookup, doc × desktop/mobile × dark/light = 12).
 - Built in an isolated git worktree in the scratchpad because Naveed's `npm run dev` was running (no shared .staged-knowledge disturbed).
+- Feature 03 PR #12 MERGED by Naveed.
+### Session 3 — Feature 04 started (2026-11-11, branch feat/04-auth)
+- ADR-0004 (Proposed): providers compared against the scaffold's needs (OIDC discovery, public PKCE client, browser CORS at token endpoint, later RS256 + aud + M2M). Recommendation Auth0 (ksor has a tested recipe); fallback Keycloak. STOP-04A: owner chooses.
+- Owner chose "abhi login skip karo": Feature 04 deferred (ADR-0004 Proposed-deferred). Next: Wave 2.
+
 
 ### Session 3 — Wave 2 started (2026-11-11, branch feat/02-soc-corpus-wave-2)
 - Owner standing approval for all Wave 2/3 process steps (memory: wave2-3-standing-approval). Pages stay draft until ONE "approved" at the end; owner-policy pages are proposals.
