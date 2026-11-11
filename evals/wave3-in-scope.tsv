@@ -1,0 +1,11 @@
+# question<TAB>expected stable_id — Wave 3 (soc-fundamentals), 10 in-scope questions
+What are the MITRE ATT&CK enterprise tactics?	knowledge/soc-fundamentals/common-attacks
+What is the Defense Impairment tactic?	knowledge/soc-fundamentals/common-attacks
+How do I read the Received headers of a phishing e-mail?	knowledge/soc-fundamentals/phishing-email-analysis
+What is the difference between From and Reply-To in a suspicious e-mail?	knowledge/soc-fundamentals/phishing-email-analysis
+What does SPF softfail mean?	knowledge/soc-fundamentals/email-authentication-spf-dkim-dmarc
+What is DMARC relaxed alignment?	knowledge/soc-fundamentals/email-authentication-spf-dkim-dmarc
+What are the six CSF 2.0 functions in incident response?	knowledge/soc-fundamentals/incident-response-lifecycle
+What is the difference between an event and an incident?	knowledge/soc-fundamentals/incident-response-lifecycle
+What is an indicator of compromise?	knowledge/soc-fundamentals/iocs-and-threat-intel
+What does the Kerberos KDC do in Active Directory?	knowledge/soc-fundamentals/active-directory-basics
