@@ -2,8 +2,9 @@
 type: Standard
 title: "Special-purpose IPv4 address ranges"
 description: The IPv4 blocks reserved for special purposes — private, shared (CGNAT), loopback, link-local, documentation, benchmarking, reserved and broadcast — and how to classify an address from an alert before looking it up.
-status: draft
+status: stable
 order: 1310
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: iana-ipv4-special
     title: "IANA — IANA IPv4 Special-Purpose Address Registry"
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Some IPv4 addresses are never "someone on the

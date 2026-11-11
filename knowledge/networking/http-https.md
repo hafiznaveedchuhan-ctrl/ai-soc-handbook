@@ -2,8 +2,9 @@
 type: Definition
 title: "HTTP and HTTPS"
 description: What an HTTP request and response contain — method, target, status code, Host, User-Agent and Referer headers — the default ports 80 and 443, and how to read web and proxy log lines in an alert.
-status: draft
+status: stable
 order: 1330
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc9110
     title: "RFC 9110 — HTTP Semantics"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A browser sends a *request* (a method such as GET and a

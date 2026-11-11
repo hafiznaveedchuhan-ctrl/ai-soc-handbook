@@ -2,8 +2,9 @@
 type: Definition
 title: "IDS and IPS"
 description: What intrusion detection and prevention systems do (NIST SP 800-94), the four IDPS types, signature versus anomaly versus stateful protocol analysis, inline versus passive sensors, false positives and negatives, and the encrypted-traffic blind spot.
-status: draft
+status: stable
 order: 1335
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-94
     title: "NIST SP 800-94 — Guide to Intrusion Detection and Prevention Systems (IDPS)"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** An IDS watches and raises alerts; an IPS can also

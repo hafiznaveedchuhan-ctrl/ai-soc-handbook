@@ -2,8 +2,9 @@
 type: Definition
 title: "ICMP and ICMPv6"
 description: What ICMP is for — error reporting and diagnostics — the type numbers analysts see most (echo, destination unreachable, time exceeded, redirect) for IPv4 and IPv6, and how they appear in alerts.
-status: draft
+status: stable
 order: 1314
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc792
     title: "RFC 792 — Internet Control Message Protocol"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** ICMP is how the network reports problems ("can't reach

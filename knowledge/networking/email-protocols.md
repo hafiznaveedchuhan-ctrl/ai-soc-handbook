@@ -2,8 +2,9 @@
 type: Definition
 title: "Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC"
 description: How email moves (SMTP, submission, IMAP, POP3 and their ports), the difference between the SMTP envelope and the From header, Received trace lines, and how SPF, DKIM and DMARC results help judge a phishing alert.
-status: draft
+status: stable
 order: 1332
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc5321
     title: "RFC 5321 — Simple Mail Transfer Protocol"
@@ -32,6 +33,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Mail servers pass messages with SMTP; people read mail

@@ -2,8 +2,9 @@
 type: Definition
 title: "DHCP and DHCPv6"
 description: How hosts get addresses — DHCP's DISCOVER/OFFER/REQUEST/ACK exchange on UDP 67/68, leases, the option numbers seen in logs, DHCPv6 on UDP 546/547 — and how DHCP logs map an IP back to a machine.
-status: draft
+status: stable
 order: 1324
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc2131
     title: "RFC 2131 — Dynamic Host Configuration Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** DHCP hands out IP addresses for a limited time (a

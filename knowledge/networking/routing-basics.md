@@ -2,8 +2,9 @@
 type: Definition
 title: "Routing basics"
 description: How a router picks the next hop — longest matching prefix, default route, static routes — what TTL does at each hop, and what that means for reading source addresses and traceroute-like ICMP in alerts.
-status: draft
+status: stable
 order: 1320
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc1812
     title: "RFC 1812 — Requirements for IP Version 4 Routers"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A router looks at the destination address, finds the

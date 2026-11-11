@@ -2,8 +2,9 @@
 type: Definition
 title: "Packet capture"
 description: What packet sniffers and protocol analyzers do (promiscuous mode, filters, reassembly), when an analyst captures traffic, the legal and privacy rules NIST SP 800-86 sets, and how attackers use sniffing (MITRE T1040).
-status: draft
+status: stable
 order: 1343
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-86
     title: "NIST SP 800-86 — Guide to Integrating Forensic Techniques into Incident Response"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A packet capture records the actual traffic, byte for

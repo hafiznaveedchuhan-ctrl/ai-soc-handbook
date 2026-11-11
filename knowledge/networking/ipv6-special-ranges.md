@@ -2,8 +2,9 @@
 type: Standard
 title: "Special-purpose IPv6 address ranges"
 description: The IPv6 blocks an analyst must recognise — loopback, unspecified, IPv4-mapped (::ffff:), link-local, unique-local, multicast and the documentation prefixes — and what each means in a log.
-status: draft
+status: stable
 order: 1312
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: iana-ipv6-special
     title: "IANA — IANA IPv6 Special-Purpose Address Registry"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** IPv6 also has addresses meaning "this machine", "this

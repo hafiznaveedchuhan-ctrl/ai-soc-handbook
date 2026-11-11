@@ -2,8 +2,9 @@
 type: Definition
 title: "TLS — Transport Layer Security"
 description: What TLS gives a connection (server authentication, confidentiality, integrity), what TLS 1.3 encrypts and what stays visible (the ClientHello and its SNI), which versions are deprecated, and the TLS alerts seen in logs.
-status: draft
+status: stable
 order: 1331
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc9846
     title: "RFC 9846 — The Transport Layer Security (TLS) Protocol Version 1.3"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** TLS is the lock in HTTPS. It proves the server's

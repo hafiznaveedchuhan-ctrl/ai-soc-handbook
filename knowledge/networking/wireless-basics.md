@@ -2,8 +2,9 @@
 type: Definition
 title: "Wireless (WLAN) basics for the SOC"
 description: What NIST SP 800-153 says about WLAN risk — dual-connected devices, rogue access points, passive versus active attacks, WIDPS sensors — and what that means when a wireless alert reaches triage.
-status: draft
+status: stable
 order: 1327
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-153
     title: "NIST SP 800-153 — Guidelines for Securing Wireless Local Area Networks (WLANs)"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Wi-Fi is easier to reach than a cable, so it is

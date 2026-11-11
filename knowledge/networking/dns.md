@@ -2,8 +2,9 @@
 type: Definition
 title: "DNS — Domain Name System"
 description: How DNS works — names, records, recursive versus iterative resolution, UDP/TCP 53, response codes, reverse lookups — and what NIST SP 800-81r3 tells a SOC to log and watch for (tunnelling, exfiltration, protective DNS).
-status: draft
+status: stable
 order: 1325
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc1034
     title: "RFC 1034 — Domain Names — Concepts and Facilities"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** DNS turns names into addresses. Almost every connection

@@ -2,8 +2,9 @@
 type: Definition
 title: "UDP — User Datagram Protocol"
 description: What UDP is — connectionless datagrams with a four-field header — which common services use it, and why a UDP source address is weaker evidence than a completed TCP connection.
-status: draft
+status: stable
 order: 1316
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc768
     title: "RFC 768 — User Datagram Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** UDP just sends a message — no handshake and no delivery

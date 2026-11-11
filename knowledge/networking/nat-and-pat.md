@@ -2,8 +2,9 @@
 type: Definition
 title: "NAT and PAT (NAPT)"
 description: What Basic NAT and NAPT (port address translation) change in a packet, why one public address can stand for many internal hosts, the UDP mapping-timeout rule, and how NAT hides the real source in alerts.
-status: draft
+status: stable
 order: 1322
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc3022
     title: "RFC 3022 — Traditional IP Network Address Translator (Traditional NAT)"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** NAT swaps private addresses for a public one at the

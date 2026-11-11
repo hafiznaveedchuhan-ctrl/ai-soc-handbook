@@ -2,8 +2,9 @@
 type: Definition
 title: "ARP — Address Resolution Protocol"
 description: How ARP maps an IPv4 address to a MAC address on the local network with a broadcast request and a reply, and why unexpected ARP changes matter to an analyst.
-status: draft
+status: stable
 order: 1305
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc826
     title: "RFC 826 — An Ethernet Address Resolution Protocol"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** To send to 192.0.2.10 on the same network, a computer

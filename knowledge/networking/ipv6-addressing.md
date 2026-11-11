@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv6 addressing"
 description: "How an IPv6 address is written — eight 16-bit hex groups, leading-zero and double-colon compression, lowercase — the three address types, and machine-checked examples of the canonical short form."
-status: draft
+status: stable
 order: 1311
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc8200
     title: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** An IPv6 address is 128 bits, written as eight groups of

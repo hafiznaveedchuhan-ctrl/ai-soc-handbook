@@ -2,8 +2,9 @@
 type: Definition
 title: "VLANs and switching"
 description: What an 802.1Q VLAN tag is, the EtherType values that mark a customer (C-Tag) or service (S-Tag) VLAN tag, and why a VLAN is a separate network segment when reading logs.
-status: draft
+status: stable
 order: 1323
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc9542
     title: "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A VLAN splits one physical switch network into several

@@ -2,8 +2,9 @@
 type: Definition
 title: "The OSI model"
 description: The seven layers of the OSI reference model, what each does, how they line up with the TCP/IP model, and how analysts use layer numbers when describing alerts.
-status: draft
+status: stable
 order: 1301
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: ms-osi
     title: "Microsoft Learn — Windows network architecture and the OSI model"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** The OSI model splits networking into seven layers, from

@@ -2,8 +2,9 @@
 type: Standard
 title: "TCP — Transmission Control Protocol"
 description: How TCP opens a connection with the three-way handshake, what each control flag means, the main connection states, and how SYN and RST patterns read in firewall and IDS logs.
-status: draft
+status: stable
 order: 1315
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc9293
     title: "RFC 9293 — Transmission Control Protocol (TCP)"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** TCP gives applications a reliable, ordered stream. A

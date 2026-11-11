@@ -2,8 +2,9 @@
 type: Definition
 title: "NTP and time synchronisation"
 description: How NTP keeps clocks in step — UDP 123, strata, the 1900 epoch and the 2036 wrap — RFC 8633's best practices (four sources, block control queries), and why correct time is the base of every timeline in triage.
-status: draft
+status: stable
 order: 1326
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc5905
     title: "RFC 5905 — Network Time Protocol Version 4: Protocol and Algorithms Specification"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** NTP keeps every machine's clock correct. If clocks are

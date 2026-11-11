@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv4 addressing and the IPv4 header"
 description: What an IPv4 address is, the historical classes, and the IPv4 header fields an analyst meets in logs — TTL, protocol, flags, fragment offset, identification and length.
-status: draft
+status: stable
 order: 1306
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc791
     title: "RFC 791 — Internet Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** An IPv4 address is 32 bits, written as four numbers

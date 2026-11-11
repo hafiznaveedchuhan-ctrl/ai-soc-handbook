@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv6 Neighbor Discovery and SLAAC"
 description: How IPv6 hosts find routers and neighbours with the five Neighbor Discovery messages (ICMPv6 133–137) and configure their own addresses with SLAAC — the IPv6 counterpart of ARP.
-status: draft
+status: stable
 order: 1313
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc4861
     title: "RFC 4861 — Neighbor Discovery for IP version 6 (IPv6)"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** IPv6 has no ARP and no broadcast. Hosts send small

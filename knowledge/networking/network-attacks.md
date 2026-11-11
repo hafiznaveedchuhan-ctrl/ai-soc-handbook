@@ -2,8 +2,9 @@
 type: Definition
 title: "Common network attacks"
 description: The network attacks a SOC sees most — scanning (T1046), SYN floods, spoofing and ingress filtering, reflection amplification (T1498.002), ARP poisoning (T1557.002), DNS command and control (T1071.004) and exfiltration over other protocols (T1048) — and the log signs of each.
-status: draft
+status: stable
 order: 1344
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: mitre-t1046
     title: "MITRE ATT&CK — T1046 Network Service Discovery"
@@ -35,6 +36,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Most network alerts are one of a few patterns: someone

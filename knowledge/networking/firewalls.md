@@ -2,8 +2,9 @@
 type: Definition
 title: "Firewalls"
 description: The firewall types in NIST SP 800-41r1 (packet filter, stateful inspection, application firewall, proxy gateway, WAF), deny-by-default, which addresses should never cross the perimeter, and what firewall logs tell an analyst.
-status: draft
+status: stable
 order: 1334
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-41r1
     title: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A firewall decides which traffic may pass. The safe

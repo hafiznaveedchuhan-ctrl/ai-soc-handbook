@@ -2,8 +2,9 @@
 type: Definition
 title: "Proxies and reverse proxies"
 description: What forward proxies, reverse proxies (gateways) and tunnels are in HTTP, why a proxy hides the real client address, and how to read the Forwarded, X-Forwarded-For and Via headers without trusting them blindly.
-status: draft
+status: stable
 order: 1336
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc9110
     title: "RFC 9110 — HTTP Semantics"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A proxy makes requests on behalf of someone else, so

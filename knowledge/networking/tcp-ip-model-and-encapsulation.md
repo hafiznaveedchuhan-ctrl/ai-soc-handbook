@@ -2,8 +2,9 @@
 type: Definition
 title: "The TCP/IP model and encapsulation"
 description: The four layers of the Internet protocol suite — application, transport, internet, link — what each provides, and how data is wrapped layer by layer on the way out.
-status: draft
+status: stable
 order: 1302
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc1122
     title: "RFC 1122 — Requirements for Internet Hosts — Communication Layers"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** When an application sends data, each layer adds its own

@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv4 subnetting and CIDR"
 description: How CIDR prefix notation (/24, /26) defines a network, how to work out the mask, network address, broadcast address and usable hosts, and how to tell whether an address belongs to a subnet — with machine-checked examples.
-status: draft
+status: stable
 order: 1307
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc4632
     title: "RFC 4632 — Classless Inter-domain Routing (CIDR)"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** "/26" means "the first 26 bits are the network". The

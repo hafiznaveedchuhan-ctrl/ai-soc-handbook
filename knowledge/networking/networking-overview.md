@@ -2,8 +2,9 @@
 type: Document
 title: "Networking for SOC analysts — overview"
 description: What a network is, how the networking pages in this handbook are organised, and why every alert a SOC analyst triages carries network evidence.
-status: draft
+status: stable
 order: 1300
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-network
     title: "NIST CSRC Glossary — network"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Almost every alert says *who talked to whom*: an IP

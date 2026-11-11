@@ -2,8 +2,9 @@
 type: Definition
 title: "Network segmentation and zones"
 description: Why networks are split into zones — the firewall DMZ, internal segments, microsegmentation — and the zero-trust idea that network location alone earns no trust, with what each means for judging lateral movement in an alert.
-status: draft
+status: stable
 order: 1340
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-41r1
     title: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A network is cut into zones so that one break-in does

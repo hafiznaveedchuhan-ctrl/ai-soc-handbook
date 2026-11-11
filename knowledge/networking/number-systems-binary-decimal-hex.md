@@ -2,8 +2,9 @@
 type: Definition
 title: "Number systems: binary, decimal and hexadecimal"
 description: How the same value is written in binary, decimal and hexadecimal, how to convert between them, and where each notation appears in network data — IPv4 octets, MAC addresses, IPv6 groups and Windows hex fields.
-status: draft
+status: stable
 order: 1303
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc791
     title: "RFC 791 — Internet Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Computers store bits (0 and 1). People write the same

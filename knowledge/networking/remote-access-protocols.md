@@ -2,8 +2,9 @@
 type: Definition
 title: "Remote access protocols — SSH, RDP, Telnet"
 description: What SSH (TCP 22), RDP (TCP/UDP 3389) and Telnet (TCP 23) are, what each protects, how RDP logons appear as logon type 10, and how to triage remote-access attempts.
-status: draft
+status: stable
 order: 1333
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc4251
     title: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture"
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** SSH and RDP let someone control a computer from far

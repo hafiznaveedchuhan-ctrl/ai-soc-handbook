@@ -2,8 +2,9 @@
 type: Definition
 title: "Ethernet and MAC addresses"
 description: How a 48-bit MAC address is built — vendor prefix, unicast versus multicast bit, global versus local bit — and the EtherType values that say what an Ethernet frame carries.
-status: draft
+status: stable
 order: 1304
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc9542
     title: "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Every network card has a 48-bit MAC address, written

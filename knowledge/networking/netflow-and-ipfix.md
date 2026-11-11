@@ -2,8 +2,9 @@
 type: Definition
 title: "NetFlow and IPFIX"
 description: What a flow record is, how IPFIX (RFC 7011) and NetFlow v9 export flows from an exporter to a collector on port 4739, the information elements a flow carries, and what flow data can and cannot show in triage.
-status: draft
+status: stable
 order: 1342
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc7011
     title: "RFC 7011 — Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A flow record is a summary of a conversation: who

@@ -2,8 +2,9 @@
 type: Procedure
 title: "Reading network logs in the SIEM"
 description: A step-by-step way to read any network log line in the SIEM — check the timestamp, find the 5-tuple, classify the addresses, resolve NAT, DHCP and proxy layers to a real host, and correlate across log sources — built on NIST SP 800-92.
-status: draft
+status: stable
 order: 1345
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: nist-sp800-92
     title: "NIST SP 800-92 — Guide to Computer Security Log Management"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Every network alert comes down to: *when*, *who talked

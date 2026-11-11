@@ -2,8 +2,9 @@
 type: Definition
 title: "Routing protocols overview — OSPF and BGP"
 description: Interior versus exterior routing, what OSPF (link-state, IP protocol 89) and BGP (path-vector over TCP 179) do, their identifying numbers, and why unexpected OSPF or BGP traffic deserves a look.
-status: draft
+status: stable
 order: 1321
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc1812
     title: "RFC 1812 — Requirements for IP Version 4 Routers"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Inside one organisation, routers share routes with an
