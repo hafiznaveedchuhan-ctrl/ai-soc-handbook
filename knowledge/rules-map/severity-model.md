@@ -4,7 +4,7 @@ title: Severity model
 description: How alert severity is decided — the handbook rates an alert Low, Medium, High or Critical from its Wazuh rule level and the escalation conditions, and how context may raise but never lower that rating.
 status: stable
 order: 202
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

@@ -4,7 +4,7 @@ title: "Syslog"
 description: How syslog messages are built (PRI = facility × 8 + severity, header fields), the facility and severity tables, UDP 514 and TLS 6514, its weaknesses, and how Wazuh receives syslog from devices without an agent.
 status: stable
 order: 1341
-generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: rfc5424
     title: "RFC 5424 — The Syslog Protocol"
@@ -24,7 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** Firewalls, routers and switches send their logs as

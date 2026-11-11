@@ -4,7 +4,7 @@ title: "Event 4672: Special privileges assigned to new logon"
 description: Windows Security event 4672 — a new logon session received sensitive (administrator-equivalent) privileges; which privileges trigger it, its fields, and when it is not routine.
 status: stable
 order: 350
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4672
     title: "Microsoft Learn — 4672(S): Special privileges assigned to new logon"
@@ -24,7 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

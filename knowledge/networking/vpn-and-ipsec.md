@@ -4,7 +4,7 @@ title: "VPNs and IPsec"
 description: How IPsec protects traffic — ESP (IP protocol 50), AH (51), transport versus tunnel mode, IKEv2 on UDP 500 and NAT traversal on 4500 — the VPN architectures in NIST SP 800-77r1, and what VPN logs give a SOC.
 status: stable
 order: 1337
-generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: rfc4301
     title: "RFC 4301 — Security Architecture for the Internet Protocol"
@@ -33,7 +33,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** A VPN builds an encrypted tunnel across an untrusted

@@ -4,7 +4,7 @@ title: "T1110 Brute Force"
 description: MITRE ATT&CK T1110 Brute Force — guessing or cracking credentials to get into accounts; its sub-techniques, how it shows up in Windows and Wazuh alerts, and what to look for.
 status: stable
 order: 700
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: mitre-t1110
     title: MITRE ATT&CK — T1110 Brute Force
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

@@ -4,7 +4,7 @@ title: Wazuh alert JSON anatomy
 description: The fields of a Wazuh alert in JSON — rule, agent, manager, decoder, data, full_log, location — and which ones an L1 analyst reads first, including the data.win fields of Windows events.
 status: stable
 order: 601
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:18:01Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: wazuh-rules-syntax
     title: Wazuh documentation — Rules syntax (alert example under same_field)
@@ -27,7 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

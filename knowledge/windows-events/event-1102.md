@@ -4,7 +4,7 @@ title: "Event 1102: The audit log was cleared"
 description: Windows Security event 1102 — the Security audit log was cleared; who cleared it, why it should rarely happen, and the Wazuh rules that alert on it.
 status: stable
 order: 310
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-1102
     title: "Microsoft Learn — 1102(S): The audit log was cleared"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:3185bb8ff9c546136ea097a59791463ec83524ffdf73ffc0f80fbc65ceee5322",
+  "build_id": "sha256:9a8af4e42af6d51caeae9de29f20a4f32112b0b679150a83513c30008ae9df6e",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "7c08bfa5d5eb58bf9b3dff00907a88c95e4db677",
-  "dirty": false,
-  "as_of": "2026-11-11T11:38:41.195Z",
+  "source_commit": "3aa2ab416d466dc26076dfbac54070be7db1a887",
+  "dirty": true,
+  "as_of": "2026-11-11T12:24:10.635Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -27,7 +27,7 @@
   "documents": [
     {
       "path": "enrichment/ip-reputation-policy.md",
-      "sha256": "625fc5b4880c18918edbeb76ab706e8530055f7457e749093d218c4b566055b9",
+      "sha256": "d22e55ddc3a665d36440274bd62b953180346076c6faf0aa93e51a5484c0560b",
       "status": "stable",
       "audience": [
         "public"
@@ -214,7 +214,7 @@
     },
     {
       "path": "mitre/t1059-001-powershell.md",
-      "sha256": "c62ac4a2f74f5c6158a6b4d8215a09d95861de2cd3b1a940d36d2945c5cebe4f",
+      "sha256": "a9dbaa90de0a5a19d24333904489f4fc088708d733cd8db271eb63f14429e08a",
       "status": "stable",
       "audience": [
         "public"
@@ -280,7 +280,7 @@
     },
     {
       "path": "mitre/t1110-brute-force.md",
-      "sha256": "da0bf77c6b51efb03c0d7667fccbda34ca92cce78d5324240609efcdd3a860a0",
+      "sha256": "49481f5a61c8f4a52873dc37d424e5d230cc19b021cf6420e29a7d1191aceb18",
       "status": "stable",
       "audience": [
         "public"
@@ -379,7 +379,7 @@
     },
     {
       "path": "networking/dns.md",
-      "sha256": "428a7cc84e89e0663c89e83fcce2d3479aa1cde8309da5e110c6a9e0561d0282",
+      "sha256": "4d6f3dfa1e0cca9c2df99bd30877d8661a59dcb75633254d8f4ec563835033b9",
       "status": "stable",
       "audience": [
         "public"
@@ -610,7 +610,7 @@
     },
     {
       "path": "networking/ports-and-services.md",
-      "sha256": "b2fccb09d37ed3801e8db7984e8324b3283557519a9ba99335a57a0b60489fc3",
+      "sha256": "2822cce72dca9ca80fa5a1ff7aee4a3d47bf74b170f81bebdf8cba0b592ab5ac",
       "status": "stable",
       "audience": [
         "public"
@@ -687,7 +687,7 @@
     },
     {
       "path": "networking/syslog.md",
-      "sha256": "949dbad0d05712b969581486abff04a1dd74397cbb5ccf087d3b217bbac873dc",
+      "sha256": "d35486fcec956bad309586b53515b022cdfd3d4b7ba7783f442827e86811f614",
       "status": "stable",
       "audience": [
         "public"
@@ -753,7 +753,7 @@
     },
     {
       "path": "networking/vpn-and-ipsec.md",
-      "sha256": "533624b3aad8c36ec28d751a49bbf2c8d48ae1aa661f8fea92e25c19f951996a",
+      "sha256": "d49183f70fd39fc7033dd63945e39752e27a8ceee9896545099ba05bb370b479",
       "status": "stable",
       "audience": [
         "public"
@@ -819,7 +819,7 @@
     },
     {
       "path": "playbooks/added-to-admin-group.md",
-      "sha256": "dd01cba0bac39a9e17de1af306fb851774129ac62ac2866b10dce11afff96695",
+      "sha256": "c87241e4f7725bc512029773267e23d30bf9ae84e43d7e3f733b41c321128387",
       "status": "stable",
       "audience": [
         "public"
@@ -841,7 +841,7 @@
     },
     {
       "path": "playbooks/brute-force.md",
-      "sha256": "80163dba6edab54432e6808351734d95ab33fc5c85e6efa54403a528e2f689ee",
+      "sha256": "f2ab5b1e684d6c4a25fffa3fdf32b6d40962152cde8a794f8718cb10b5b435cb",
       "status": "stable",
       "audience": [
         "public"
@@ -929,7 +929,7 @@
     },
     {
       "path": "rules-map/escalation-policy.md",
-      "sha256": "450f03ab82e86f5acf1008d3861e139d11f80f77f5ec8d6f20b8f0423722376a",
+      "sha256": "78658b5c627146b89d7239791b79c23fc67c01ca74a30628dcbccfa486886486",
       "status": "stable",
       "audience": [
         "public"
@@ -951,7 +951,7 @@
     },
     {
       "path": "rules-map/severity-model.md",
-      "sha256": "08c5f8d92d369967d64b4d3d0e1d24893ed9518aabbc0fcf776ad72add8db0bb",
+      "sha256": "7b6d97589e54c3c8c2e2fbd5cbce2ff8df2f9739b3f49dcaa871aff9f947ae0f",
       "status": "stable",
       "audience": [
         "public"
@@ -1204,7 +1204,7 @@
     },
     {
       "path": "wazuh/alert-json-anatomy.md",
-      "sha256": "5ffbbc51ddc99c1eaa61269a3b72278ca8ec20274547f8e97876137f227b3e9a",
+      "sha256": "d0139725e77619ea44be72c940e552dbf2a50673fa8e06e9713ea11e77a4d1ca",
       "status": "stable",
       "audience": [
         "public"
@@ -1270,7 +1270,7 @@
     },
     {
       "path": "wazuh/rule-levels.md",
-      "sha256": "8eb7b03b8ce7a13c3eb26d2bfd22fb1b083d755c1e74574f17f437b0f48727c3",
+      "sha256": "254c51bae5ae94ac48d1bd2678f8e31875ac04089494e397141b61981397374a",
       "status": "stable",
       "audience": [
         "public"
@@ -1303,7 +1303,7 @@
     },
     {
       "path": "windows-events/event-1102.md",
-      "sha256": "42ffd0c4fa8aa48cf88dca6734972e594072c84dc0bed0f6e9fbf5f695c717b2",
+      "sha256": "762712e3563fa1448e7380a20556b5b0c9e5f5e879dce80a6ced88aa8d098082",
       "status": "stable",
       "audience": [
         "public"
@@ -1314,7 +1314,7 @@
     },
     {
       "path": "windows-events/event-4624.md",
-      "sha256": "16b197924522ffe50fd2b80c53ef637bbd1f95e92e82876c4fdea617da5f5b0d",
+      "sha256": "8e86ca2c59130fea5f7d8dc1b55f26a8eb84b36f0c514c58b41917d5d52841b0",
       "status": "stable",
       "audience": [
         "public"
@@ -1325,7 +1325,7 @@
     },
     {
       "path": "windows-events/event-4625.md",
-      "sha256": "c4f84a0f5bde86f254d0c2c614d67b381360a8a85958c2421f46ec55c87152cb",
+      "sha256": "f4bb66afe6b1e4c8f1a1ba4c92c2674eb2616e1e78de8e5587786d4088a219b8",
       "status": "stable",
       "audience": [
         "public"
@@ -1358,7 +1358,7 @@
     },
     {
       "path": "windows-events/event-4672.md",
-      "sha256": "cf6f3a1ee0c23cf6db6488c5c2d8005ed4d7cc69e1e39a216ad2d0678709a295",
+      "sha256": "be7fdbb21f6a8c0f4ceb4decf0dbad0741c54b46cdad2131ff9d0d8c135d173d",
       "status": "stable",
       "audience": [
         "public"
@@ -1369,7 +1369,7 @@
     },
     {
       "path": "windows-events/event-4688.md",
-      "sha256": "8ad70da4cacb8506e51f7db724e9b742c9ed1923ca87778d1e4cccf58a23c991",
+      "sha256": "511495e3157347487a26dd205e8f205c9448bf3e4e2c53845e216989306ff6c3",
       "status": "stable",
       "audience": [
         "public"
@@ -1413,7 +1413,7 @@
     },
     {
       "path": "windows-events/event-4720.md",
-      "sha256": "71444ce8abd3ef63daca77346c8053e9f4eab559775c5aeae0f66897ba27c884",
+      "sha256": "e2ef97ced45993a19f6997ac02b1ba6f7fbd780f17e760b59f341de7037a2e85",
       "status": "stable",
       "audience": [
         "public"
@@ -1479,7 +1479,7 @@
     },
     {
       "path": "windows-events/event-4732.md",
-      "sha256": "c1920e0da8653da33f8cc94f86899d3b49ed461acec1de211ba048eca38b2749",
+      "sha256": "fac23ed740c7eb13d42ea248031ee64c44228a34bc287d6bf2561fc9b40fd114",
       "status": "stable",
       "audience": [
         "public"
@@ -1501,7 +1501,7 @@
     },
     {
       "path": "windows-events/event-4740.md",
-      "sha256": "c34e311f56084e9ed6294146ad6dbe67741148b45e76fee826b9af22cdec58c7",
+      "sha256": "b3b543f74fbb7ec6606aacd32368f64d61b3e110418662ee83902e52809f4752",
       "status": "stable",
       "audience": [
         "public"
@@ -1556,7 +1556,7 @@
     },
     {
       "path": "windows-events/event-4776.md",
-      "sha256": "41055f4ab23e146f2275debd8bf2b53b49235ffd329511e2ece04befd77d342f",
+      "sha256": "c7627daa69d214fbc09fb750bd58f6903467e42e5acb72efc77faf2da91577ac",
       "status": "stable",
       "audience": [
         "public"
@@ -2531,11 +2531,11 @@
     },
     {
       "path": "playbooks/index.md",
-      "sha256": "1a59cca26f371b5a1eb93f87bb0dc1eea3e1165511adbf151e90b3c6fe3fa122"
+      "sha256": "a14dfa8df582e25ade43832d4ad421c37d073c2f8266f52135853d8d00b5435f"
     },
     {
       "path": "rules-map/index.md",
-      "sha256": "6ab82303eda5feca903b57e5e57f626cabc8003472c421cb801d919a42b1e1f1"
+      "sha256": "14692135f6134cc6eb6c6ae1d433871d1441a14b9b267bc993c80d94b3231f4b"
     },
     {
       "path": "sla/index.md",
@@ -2565,7 +2565,7 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "f8ddceba492405b0ad30ea65f203f46c5f58571ca207cf07447d815d7fbba611",
+      "sha256": "a7e7985b60c46e513017141802a7766894a71cdcd381e9b247ea58ca40b2fc54",
       "files": 386
     }
   ]

@@ -4,7 +4,7 @@ title: "Event 4625: An account failed to log on"
 description: Windows Security event 4625 — what a failed logon record means, its key fields, Logon Types and the Status / Sub Status codes Microsoft says to monitor, and how to read a run of failures.
 status: stable
 order: 330
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4625
     title: "Microsoft Learn — 4625(F): An account failed to log on"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

@@ -4,7 +4,7 @@ title: "Event 4688: A new process has been created"
 description: Windows Security event 4688 — a process started; its creator and target accounts, process names, command line, token elevation type and integrity label, and the patterns that make a process worth checking.
 status: stable
 order: 360
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4688
     title: "Microsoft Learn — 4688(S): A new process has been created"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

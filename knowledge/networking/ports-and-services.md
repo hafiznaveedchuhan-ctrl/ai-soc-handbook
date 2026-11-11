@@ -4,7 +4,7 @@ title: "Ports and services"
 description: The three port ranges, the well-known ports a SOC analyst must recognise with IANA's official names, the IP protocol numbers, and the ports Wazuh itself uses.
 status: stable
 order: 1317
-generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: rfc6335
     title: "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** A port number says which service a connection is for:

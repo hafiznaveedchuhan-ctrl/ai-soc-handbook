@@ -4,7 +4,7 @@ title: "Event 4720: A user account was created"
 description: Windows Security event 4720 — a new user account was created; who created it, the new account's attributes, the values Microsoft says are anomalies, and the Wazuh rule that alerts on it.
 status: stable
 order: 370
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4720
     title: "Microsoft Learn — 4720(S): A user account was created"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]

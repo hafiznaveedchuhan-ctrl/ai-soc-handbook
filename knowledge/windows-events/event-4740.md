@@ -4,7 +4,7 @@ title: "Event 4740: A user account was locked out"
 description: Windows Security event 4740 — an account was locked after failed logons; which account, from which caller computer, and when a lockout points to password guessing rather than a forgotten password.
 status: stable
 order: 390
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4740
     title: "Microsoft Learn — 4740(S): A user account was locked out"
@@ -24,7 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
