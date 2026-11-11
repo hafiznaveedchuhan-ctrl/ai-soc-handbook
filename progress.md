@@ -217,3 +217,7 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - STOP-N3 2-page check; say "push" to push `feat/02-networking`.
 - New Gemini key → "key done".
 - Optional: a free source for IEEE 802.1Q / 802.11 values (else those stay open questions).
+
+### Session 3 — Feature 06 started (2026-11-11, branch feat/06-ci-and-release)
+- Networking pushed (`920568e`) and PR #8 opened (feat/02-networking → main) — Naveed merges. NOTE: this branch was cut from main BEFORE PR #8; progress.md blocks from feat/02-networking (N4..approval) must be merged by hand when the branches meet.
+- T06-01: specs/06-ci-and-release/{spec,plan,tasks}.md + feature-06-plan.txt. STOP-06A: waiting for Naveed's approval.
