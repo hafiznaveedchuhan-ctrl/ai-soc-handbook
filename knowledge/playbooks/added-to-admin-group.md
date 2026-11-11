@@ -37,7 +37,7 @@ Wazuh **60154** "Administrators Group Changed" (level 12) — a child of 60144
 "Security Enabled Local Group Member Added" when `win.eventdata.targetSid` is
 `S-1-5-32-544`.[^wazuh-0580]
 
-## L1 steps
+## What to do when an account is added to Administrators (L1 steps)
 
 1. **Who was added:** `MemberSid` (and `MemberName` if filled — for local
    groups it is usually `-`).[^ms-4732]

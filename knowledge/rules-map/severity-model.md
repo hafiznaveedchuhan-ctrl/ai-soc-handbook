@@ -36,7 +36,7 @@ to confirm an incident occurred and then given an estimated severity and
 urgency (RS.MA-02).[^nist-sp800-61r3] This model is how an L1 analyst makes
 that estimate for a Wazuh alert.
 
-## The model
+## How alert severity is decided
 
 | Severity | When |
 |---|---|
