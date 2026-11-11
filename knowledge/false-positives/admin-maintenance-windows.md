@@ -80,6 +80,14 @@ The agent may point out that this benign explanation fits and list the evidence 
 closing the alert stays with the analyst, and context never lowers a severity below what
 the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [Event 1102: The audit log was cleared](../windows-events/event-1102.md)
+- [Playbook: Security audit log cleared](../playbooks/audit-log-cleared.md)
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+- [Event 4720: A user account was created](../windows-events/event-4720.md)
+- [Wazuh rule levels](../wazuh/rule-levels.md)
+
 [^wazuh-rules-syntax]: Wazuh documentation, "Rules" (ruleset XML syntax: `time`, `weekday`, `srcgeoip`, `list`). https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^wazuh-custom-rules]: Wazuh documentation, "Custom rules". https://documentation.wazuh.com/current/user-manual/ruleset/rules/custom.html
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf

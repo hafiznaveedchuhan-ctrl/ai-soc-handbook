@@ -42,5 +42,12 @@ All rows: [^wazuh-0580]
 | A long-disabled or ex-employee account enabled | Ask who and why; check for a following logon |
 | High-value account enabled | Escalate per escalation policy |
 
+## Related pages
+
+- [Event 4720: A user account was created](event-4720.md)
+- [Event 4725: A user account was disabled](event-4725.md)
+- [Event 4738: A user account was changed](event-4738.md)
+- [T1098 Account Manipulation](../mitre/t1098-account-manipulation.md)
+
 [^ms-4722]: Microsoft Learn, "4722(S): A user account was enabled". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4722
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

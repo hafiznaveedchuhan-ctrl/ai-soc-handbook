@@ -54,5 +54,11 @@ All rows: [^det0363]
 | A `.dmp` file created right after lsass access | Escalate |
 | Credentials then used from that host | Follow [T1078 Valid Accounts](t1078-valid-accounts.md) |
 
+## Related pages
+
+- [Sysmon event 10: ProcessAccess](../sysmon/event-10-process-access.md)
+- [Sysmon event 8: CreateRemoteThread](../sysmon/event-8-create-remote-thread.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
+
 [^mitre-t1003-001]: MITRE ATT&CK, "OS Credential Dumping: LSASS Memory, Sub-technique T1003.001". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1003/001/
 [^det0363]: MITRE ATT&CK, "Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence, Detection Strategy DET0363". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0363/

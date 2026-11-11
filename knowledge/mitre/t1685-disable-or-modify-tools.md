@@ -52,5 +52,10 @@ All rows: [^det0497]
 | AV/EDR process terminated or service stopped | Escalate per escalation policy |
 | Security log cleared | [Audit log cleared playbook](../playbooks/audit-log-cleared.md) |
 
+## Related pages
+
+- [Event 1102: The audit log was cleared](../windows-events/event-1102.md)
+- [Event 4719: System audit policy was changed](../windows-events/event-4719.md)
+
 [^mitre-t1685]: MITRE ATT&CK, "Disable or Modify Tools, Technique T1685". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1685/
 [^det0497]: MITRE ATT&CK, "Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms, Detection Strategy DET0497". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0497/

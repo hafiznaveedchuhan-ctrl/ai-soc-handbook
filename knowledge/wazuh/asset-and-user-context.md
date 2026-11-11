@@ -85,6 +85,13 @@ no client names and no personal data.
 
 Context may raise a severity, never lower it.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [Wazuh alert JSON anatomy](alert-json-anatomy.md)
+- [Wazuh architecture](architecture.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
+- [False positives: backup jobs](../false-positives/backup-jobs.md)
+
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^wazuh-labels]: Wazuh documentation, "Agent labels". https://documentation.wazuh.com/current/user-manual/agent/agent-management/labels.html
 [^wazuh-cdb]: Wazuh documentation, "Using CDB lists". https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html

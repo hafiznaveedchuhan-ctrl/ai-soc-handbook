@@ -34,5 +34,10 @@ ksor:
 | Name the technique in the triage note | Use the alert's MITRE ID and link the handbook page if one exists ([mitre/](../mitre/t1110-brute-force.md)) |
 | Decide severity | Do **not** decide on the MITRE tag alone — use the [severity model](../rules-map/severity-model.md) |
 
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+
 [^wazuh-mitre]: Wazuh documentation, "MITRE ATT&CK framework". https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

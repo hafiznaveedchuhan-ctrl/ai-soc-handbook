@@ -91,6 +91,15 @@ Owner policy (interview I2, Q1–Q3).[^naveed-interview-2026-11-11]
 Escalation is still decided by the [escalation policy](../rules-map/escalation-policy.md)
 conditions; location is not one of them.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [VPNs and IPsec](../networking/vpn-and-ipsec.md)
+- [Proxies and reverse proxies](../networking/proxies.md)
+- [NAT and PAT (NAPT)](../networking/nat-and-pat.md)
+- [Wazuh alert JSON anatomy](alert-json-anatomy.md)
+- [Asset and user context in alerts](asset-and-user-context.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+
 [^wazuh-pipeline]: Wazuh, tag v4.14.10, `extensions/filebeat/7.x/wazuh-module/alerts/ingest/pipeline.json` (geoip processors). https://github.com/wazuh/wazuh/blob/v4.14.10/extensions/filebeat/7.x/wazuh-module/alerts/ingest/pipeline.json
 [^wazuh-rules-syntax]: Wazuh documentation, "Rules" (ruleset XML syntax: `time`, `weekday`, `srcgeoip`, `list`). https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^maxmind-accuracy]: MaxMind Knowledge Base, "Geolocation accuracy". https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy

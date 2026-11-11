@@ -42,5 +42,12 @@ All rows: [^wazuh-0095]
 | 5720 or 5763 | Brute force from one source — see the [brute-force playbook](../playbooks/brute-force.md) |
 | Followed by [SSH accepted](ssh-accepted.md) from the same IP | Escalate per escalation policy |
 
+## Related pages
+
+- [Wazuh sshd rules reference](../wazuh/sshd-rules-reference.md)
+- [SSH invalid (non-existent) user](ssh-invalid-user.md)
+- [T1110.001 Brute Force: Password Guessing](../mitre/t1110-001-password-guessing.md)
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
+
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml
 [^wazuh-rules-xml]: Wazuh documentation, "Rules" (ruleset XML syntax: group, if_group, frequency, timeframe, ignore). https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html

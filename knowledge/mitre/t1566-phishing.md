@@ -47,5 +47,11 @@ For the e-mail side (SPF, DKIM, DMARC, Received headers) see [Email protocols](.
 | SPF/DMARC fail + attachment opened | Escalate per escalation policy |
 | User reports a suspicious e-mail, nothing executed | Record in the triage note; check other recipients |
 
+## Related pages
+
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+- [Sysmon event 11: FileCreate](../sysmon/event-11-file-create.md)
+
 [^mitre-t1566]: MITRE ATT&CK, "Phishing, Technique T1566". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1566/
 [^det0070]: MITRE ATT&CK, "Detection Strategy for Phishing across platforms, Detection Strategy DET0070". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0070/

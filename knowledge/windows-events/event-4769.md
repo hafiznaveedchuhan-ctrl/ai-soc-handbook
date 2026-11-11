@@ -43,5 +43,11 @@ All rows: [^wazuh-0580]
 | Ticket Encryption Type 0x17 (RC4) in a modern domain | Unusual — note it; many from one account is suspicious |
 | One account requesting tickets for many services quickly | Escalate per policy |
 
+## Related pages
+
+- [Event 4768: A Kerberos authentication ticket (TGT) was requested](event-4768.md)
+- [Event 4624: An account was successfully logged on](event-4624.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+
 [^ms-4769]: Microsoft Learn, "4769(S, F): A Kerberos service ticket was requested". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

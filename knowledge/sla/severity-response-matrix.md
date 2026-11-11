@@ -64,6 +64,13 @@ share of alerts that met each column of the matrix.
 | Any escalation condition | "Escalate now" regardless of severity row |
 | Deadline already passed | Say so at the top of the note |
 
+## Related pages
+
+- [Invariants — rules that are never broken](../rules-map/invariants.md)
+- [Triage note template](../triage-note/note-template.md)
+- [Glossary](../orientation/glossary.md)
+- [Wazuh rule levels](../wazuh/rule-levels.md)
+
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
 [^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

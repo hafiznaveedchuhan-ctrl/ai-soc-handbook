@@ -36,4 +36,9 @@ ksor:
 
 All rows: [^wazuh-0095]
 
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [Playbook: brute-force logon attempts](../playbooks/brute-force.md)
+
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

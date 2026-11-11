@@ -45,4 +45,9 @@ Event names and defaults: [^ms-sysmon]
 | Time zone of Sysmon timestamps | UTC — convert before comparing with local logs |
 | No Sysmon 3 or 7 events at all | They are off by default; check the configuration before concluding "no activity" |
 
+## Related pages
+
+- [Wazuh architecture](../wazuh/architecture.md)
+- [Event 4688: A new process has been created](../windows-events/event-4688.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon

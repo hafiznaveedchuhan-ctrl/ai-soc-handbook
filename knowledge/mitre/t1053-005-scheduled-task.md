@@ -55,5 +55,12 @@ All rows: [^det0441]
 | New task running as SYSTEM, created by a normal user | Escalate per escalation policy |
 | Process started by `svchost.exe`/`taskeng.exe` right after a new task | Link the task to the process |
 
+## Related pages
+
+- [Event 4698: A scheduled task was created](../windows-events/event-4698.md)
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+- [T1543.003 Create or Modify System Process: Windows Service](t1543-003-windows-service.md)
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+
 [^mitre-t1053-005]: MITRE ATT&CK, "Scheduled Task/Job: Scheduled Task, Sub-technique T1053.005". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1053/005/
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/

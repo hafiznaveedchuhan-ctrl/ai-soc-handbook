@@ -54,5 +54,10 @@ See [4688](../windows-events/event-4688.md) and [4672](../windows-events/event-4
 | `eventvwr.exe` or `sdclt.exe` spawning a shell or script host | Suspicious — escalate |
 | Registry change to an auto-elevate handler key, then elevated process | Escalate |
 
+## Related pages
+
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+- [Sysmon events 12, 13, 14: Registry](../sysmon/event-12-13-14-registry.md)
+
 [^mitre-t1548-002]: MITRE ATT&CK, "Abuse Elevation Control Mechanism: Bypass User Account Control, Sub-technique T1548.002". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1548/002/
 [^det0388]: MITRE ATT&CK, "Detection Strategy for T1548.002 – Bypass User Account Control (UAC), Detection Strategy DET0388". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0388/

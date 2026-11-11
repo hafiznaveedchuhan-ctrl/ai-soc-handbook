@@ -40,6 +40,11 @@ ksor:
 | Odd, random-looking names from one process | See [DNS](../networking/dns.md) tunnelling signs |
 | Known-bad domain queried | Find what ran just before (event 1) |
 
+## Related pages
+
+- [Sysmon event 3: Network connection](event-3-network-connection.md)
+- [IP reputation policy (AbuseIPDB)](../enrichment/ip-reputation-policy.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0376]: MITRE ATT&CK, "Behavioral Detection Strategy for Network Service Discovery Across Platforms, Detection Strategy DET0376". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0376/
 [^det0327]: MITRE ATT&CK, "Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity, Detection Strategy DET0327". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0327/

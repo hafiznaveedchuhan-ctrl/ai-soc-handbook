@@ -37,4 +37,11 @@ All rows: [^wazuh-0095]
 | 5712 from a public IP | Automated guessing — brute-force playbook; check for any 5715 from that IP |
 | 5710 for a name that looks like a real employee | Possible targeted attempt — note it |
 
+## Related pages
+
+- [SSH failed password](ssh-failed-password.md)
+- [T1110.003 Brute Force: Password Spraying](../mitre/t1110-003-password-spraying.md)
+- [Wazuh sshd rules reference](../wazuh/sshd-rules-reference.md)
+- [Remote access protocols — SSH, RDP, Telnet](../networking/remote-access-protocols.md)
+
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

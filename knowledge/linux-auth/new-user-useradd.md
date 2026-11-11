@@ -38,4 +38,9 @@ See also the Windows counterpart [4720](../windows-events/event-4720.md) and the
 | 5902 outside a change window | Ask who created it; check for a following SSH login |
 | 2961 (added to sudo) | Privilege change — escalate per policy |
 
+## Related pages
+
+- [T1136.001 Create Account: Local Account](../mitre/t1136-001-local-account.md)
+- [sudo usage](sudo-usage.md)
+
 [^wazuh-0020]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0020-syslog_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0020-syslog_rules.xml

@@ -45,5 +45,10 @@ All rows: [^wazuh-0580]
 | Added to Enterprise Admins or another admin group | Escalate |
 | Unexpected adder | Ask for the change ticket |
 
+## Related pages
+
+- [Event 4728: A member was added to a security-enabled global group](event-4728.md)
+- [Playbook: account added to Administrators](../playbooks/added-to-admin-group.md)
+
 [^ms-4756]: Microsoft Learn, "Audit Security Group Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

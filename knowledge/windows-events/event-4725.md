@@ -42,5 +42,11 @@ All rows: [^wazuh-0580]
 | Admin or service account disabled | Escalate per escalation policy |
 | Many accounts disabled at once | Possible impact attack — escalate |
 
+## Related pages
+
+- [Event 4722: A user account was enabled](event-4722.md)
+- [Event 4726: A user account was deleted](event-4726.md)
+- [Event 4738: A user account was changed](event-4738.md)
+
 [^ms-4725]: Microsoft Learn, "4725(S): A user account was disabled". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4725
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

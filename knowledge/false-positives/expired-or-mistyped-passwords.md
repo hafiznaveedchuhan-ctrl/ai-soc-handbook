@@ -94,6 +94,15 @@ The agent may point out that this benign explanation fits and list the evidence 
 closing the alert stays with the analyst, and context never lowers a severity below what
 the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [Event 4625: An account failed to log on](../windows-events/event-4625.md)
+- [Event 4740: A user account was locked out](../windows-events/event-4740.md)
+- [Playbook: successful logon after failures](../playbooks/success-after-failures.md)
+- [Example note: false positive — saved old password](../triage-note/example-false-positive.md)
+- [SSH failed password](../linux-auth/ssh-failed-password.md)
+- [Glossary](../orientation/glossary.md)
+
 [^ms-4776]: Microsoft Learn, "4776(S, F): The computer attempted to validate the credentials for an account". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776
 [^ms-4771]: Microsoft Learn, "4771(F): Kerberos pre-authentication failed". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4771
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625

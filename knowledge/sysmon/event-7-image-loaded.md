@@ -36,5 +36,11 @@ ksor:
 | Unsigned DLL loaded into a system process | Escalate |
 | No event 7 at all | Expected unless configured — not evidence of absence |
 
+## Related pages
+
+- [Sysmon event 1: Process creation](event-1-process-create.md)
+- [T1059.001 Command and Scripting Interpreter: PowerShell](../mitre/t1059-001-powershell.md)
+- [Sysmon overview](overview.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0388]: MITRE ATT&CK, "Detection Strategy for T1548.002 – Bypass User Account Control (UAC), Detection Strategy DET0388". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0388/

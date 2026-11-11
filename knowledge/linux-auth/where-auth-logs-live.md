@@ -48,6 +48,14 @@ ksor:
 | Same on RHEL/CentOS/Rocky | `/var/log/secure` |
 | No auth events from a host | Check that the agent or rsyslog forwarding is running |
 
+## Related pages
+
+- [Syslog](../networking/syslog.md)
+- [Wazuh architecture](../wazuh/architecture.md)
+- [SSH accepted (successful login)](ssh-accepted.md)
+- [sudo usage](sudo-usage.md)
+- [Wazuh sshd rules reference](../wazuh/sshd-rules-reference.md)
+
 [^ubuntu-rsyslog]: Ubuntu rsyslog source package, `debian/50-default.conf`. https://git.launchpad.net/ubuntu/+source/rsyslog/plain/debian/50-default.conf
 [^redhat-rsyslog]: rsyslog project, `platform/redhat/rsyslog.conf` (Red Hat default). https://raw.githubusercontent.com/rsyslog/rsyslog/main/platform/redhat/rsyslog.conf
 [^sshd-config]: OpenBSD manual page `sshd_config(5)` (SyslogFacility, LogLevel). https://man.openbsd.org/sshd_config.5

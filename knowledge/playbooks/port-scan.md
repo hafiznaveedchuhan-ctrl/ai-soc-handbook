@@ -53,4 +53,12 @@ Firewall, IDS or flow alerts showing one source touching many ports or hosts (se
 The agent may gather evidence and propose a verdict; the escalation decision and any containment
 stay with the analyst, per the [escalation policy](../rules-map/escalation-policy.md).
 
+## Related pages
+
+- [False positives: vulnerability scanners](../false-positives/vulnerability-scanners.md)
+- [Ports and services](../networking/ports-and-services.md)
+- [TCP — Transmission Control Protocol](../networking/tcp.md)
+- [Firewalls](../networking/firewalls.md)
+- [IP reputation policy (AbuseIPDB)](../enrichment/ip-reputation-policy.md)
+
 [^det0376]: MITRE ATT&CK, "Behavioral Detection Strategy for Network Service Discovery Across Platforms, Detection Strategy DET0376". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0376/

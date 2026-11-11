@@ -27,4 +27,10 @@ ksor:
 | Remote thread into lsass.exe, explorer.exe or a browser | Escalate |
 | Source is an unknown or user-folder binary | Escalate |
 
+## Related pages
+
+- [Sysmon event 10: ProcessAccess](event-10-process-access.md)
+- [T1003.001 OS Credential Dumping: LSASS Memory](../mitre/t1003-001-lsass-memory.md)
+- [Sysmon overview](overview.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon

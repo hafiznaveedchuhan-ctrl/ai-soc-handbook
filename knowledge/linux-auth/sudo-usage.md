@@ -40,4 +40,11 @@ All rows: [^wazuh-0020]
 | 5404 | Repeated wrong sudo password — check for a stolen session |
 | 5403 for a service or new account | Unexpected first sudo — escalate per policy |
 
+## Related pages
+
+- [Where Linux authentication logs live](where-auth-logs-live.md)
+- [New Linux user or group (useradd, gpasswd)](new-user-useradd.md)
+- [T1548.002 Abuse Elevation Control Mechanism: Bypass UAC](../mitre/t1548-002-bypass-uac.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
+
 [^wazuh-0020]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0020-syslog_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0020-syslog_rules.xml

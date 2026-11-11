@@ -31,4 +31,9 @@ High-value accounts: you might need to monitor each action of high-value domain 
 | TGT for a disabled, expired or honeypot account | Escalate |
 | Many failed 4768 for one account | Possible password guessing — compare with [4771](event-4771.md) |
 
+## Related pages
+
+- [Event 4769: A Kerberos service ticket was requested](event-4769.md)
+- [Event 4624: An account was successfully logged on](event-4624.md)
+
 [^ms-4768]: Microsoft Learn, "4768(S, F): A Kerberos authentication ticket (TGT) was requested". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768

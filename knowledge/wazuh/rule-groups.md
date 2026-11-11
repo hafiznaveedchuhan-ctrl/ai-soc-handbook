@@ -46,5 +46,13 @@ The same rules also carry compliance groups (for example `pci_dss_10.2.4`, `nist
 | All failed logins | `rule.groups: authentication_failed` |
 | All brute-force correlations | `rule.groups: authentication_failures` |
 
+## Related pages
+
+- [Wazuh rule levels](rule-levels.md)
+- [Wazuh Windows rules reference](windows-rules-reference.md)
+- [Wazuh sshd rules reference](sshd-rules-reference.md)
+- [MITRE ATT&CK in Wazuh](mitre-in-wazuh.md)
+- [Wazuh alert JSON anatomy](alert-json-anatomy.md)
+
 [^wazuh-rules-xml]: Wazuh documentation, "Rules" (ruleset XML syntax: group, if_group, frequency, timeframe, ignore). https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

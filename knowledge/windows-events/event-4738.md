@@ -42,5 +42,11 @@ All rows: [^wazuh-0580]
 | Change made by an unexpected account | Ask for the change ticket |
 | Change on a high-value account | Escalate per escalation policy |
 
+## Related pages
+
+- [Event 4720: A user account was created](event-4720.md)
+- [Event 4724: An attempt was made to reset an account's password](event-4724.md)
+- [T1098 Account Manipulation](../mitre/t1098-account-manipulation.md)
+
 [^ms-4738]: Microsoft Learn, "4738(S): A user account was changed". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4738
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

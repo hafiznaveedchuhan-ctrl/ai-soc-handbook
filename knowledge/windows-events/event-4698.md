@@ -46,5 +46,10 @@ All rows: [^wazuh-0580]
 | Task Name in the library root (`\Name`) | Suspicious per Microsoft — check the action it runs |
 | Task runs a script host or a file in a user folder | Escalate per escalation policy |
 
+## Related pages
+
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+- [False positives: admin maintenance windows](../false-positives/admin-maintenance-windows.md)
+
 [^ms-4698]: Microsoft Learn, "4698(S): A scheduled task was created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

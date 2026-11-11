@@ -44,6 +44,11 @@ ksor:
 | Executable or script written to Startup, Temp or Downloads | Check the creating process (ProcessGuid) |
 | `.dmp` file after lsass access (event 10) | Escalate |
 
+## Related pages
+
+- [Playbook: file integrity (FIM) or malware alert](../playbooks/fim-or-malware-alert.md)
+- [Sysmon event 1: Process creation](event-1-process-create.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/
 [^det0363]: MITRE ATT&CK, "Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence, Detection Strategy DET0363". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0363/

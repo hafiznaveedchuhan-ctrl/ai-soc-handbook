@@ -66,5 +66,9 @@ MITRE's log sources for this chain: Sysmon 1 and 7, PowerShell 4103–4106 and 4
 The agent may gather evidence and propose a verdict; the escalation decision and any containment
 stay with the analyst, per the [escalation policy](../rules-map/escalation-policy.md).
 
+## Related pages
+
+- [T1566 Phishing](../mitre/t1566-phishing.md)
+
 [^det0455]: MITRE ATT&CK, "Abuse of PowerShell for Arbitrary Execution, Detection Strategy DET0455". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0455/
 [^ms-pslog]: Microsoft Learn, "about_Logging_Windows" (Script Block Logging, event 4104). https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows

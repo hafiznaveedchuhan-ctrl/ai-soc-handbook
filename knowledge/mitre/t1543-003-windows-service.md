@@ -56,5 +56,11 @@ The System-log event [7045](../windows-events/event-7045.md) also records a new 
 | Service created right after a remote logon | Possible lateral movement — escalate per policy |
 | Driver load (Sysmon 6) of an unsigned driver | Escalate |
 
+## Related pages
+
+- [Event 4697: A service was installed in the system](../windows-events/event-4697.md)
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+- [Sysmon events 12, 13, 14: Registry](../sysmon/event-12-13-14-registry.md)
+
 [^mitre-t1543-003]: MITRE ATT&CK, "Create or Modify System Process: Windows Service, Sub-technique T1543.003". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1543/003/
 [^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/

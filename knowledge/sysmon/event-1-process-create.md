@@ -53,6 +53,12 @@ ksor:
 | Encoded or obfuscated command line | See [T1059.001 PowerShell](../mitre/t1059-001-powershell.md) |
 | Correlate with other Sysmon events | Use ProcessGuid |
 
+## Related pages
+
+- [Event 4688: A new process has been created](../windows-events/event-4688.md)
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
+- [Sysmon overview](overview.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/
 [^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/

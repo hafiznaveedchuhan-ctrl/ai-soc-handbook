@@ -69,6 +69,14 @@ The agent may point out that this benign explanation fits and list the evidence 
 closing the alert stays with the analyst, and context never lowers a severity below what
 the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [Event 4732: A member was added to a security-enabled local group](../windows-events/event-4732.md)
+- [Event 4728: A member was added to a security-enabled global group](../windows-events/event-4728.md)
+- [False positives: service accounts](service-accounts.md)
+- [False positives: admin maintenance windows](admin-maintenance-windows.md)
+- [Wazuh rule levels](../wazuh/rule-levels.md)
+
 [^ms-security-groups]: Microsoft Learn, "Active Directory security groups" (Backup Operators). https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups
 [^ms-4672]: Microsoft Learn, "4672(S): Special privileges assigned to new logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672
 [^wazuh-syscheck]: Wazuh documentation, "syscheck" (local configuration reference). https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/syscheck.html

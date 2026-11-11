@@ -34,4 +34,10 @@ Row: [^wazuh-0095]
 | 5715 for `root` or from a public IP | Check whether that is expected for this host |
 | 5715 at an unusual time for the user | Note in the triage note |
 
+## Related pages
+
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+- [Remote access protocols — SSH, RDP, Telnet](../networking/remote-access-protocols.md)
+- [GeoIP and VPN caveats](../wazuh/geo-and-vpn-caveats.md)
+
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

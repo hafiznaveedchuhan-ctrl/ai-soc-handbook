@@ -49,6 +49,11 @@ ksor:
 | Change under a Run key or the Services key | Persistence — check the process and value |
 | Change to Sysmon's own or a security tool's keys | Possible tampering — [T1685](../mitre/t1685-disable-or-modify-tools.md) |
 
+## Related pages
+
+- [Event 7045: New service installed](../windows-events/event-7045.md)
+- [Sysmon overview](overview.md)
+
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/
 [^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/

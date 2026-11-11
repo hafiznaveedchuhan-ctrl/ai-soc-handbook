@@ -35,4 +35,8 @@ Monitor this event especially on high-value assets: a new service installation s
 | Service File Name outside %windir% / Program Files | Suspicious per Microsoft — escalate |
 | Service installed right after a remote logon | Possible lateral movement — escalate |
 
+## Related pages
+
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+
 [^ms-4697]: Microsoft Learn, "4697(S): A service was installed in the system". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697

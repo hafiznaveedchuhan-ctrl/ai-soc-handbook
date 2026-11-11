@@ -54,5 +54,9 @@ See [4624](../windows-events/event-4624.md), [4648](../windows-events/event-4648
 | RDP logon, then new processes or connections to other hosts | Possible lateral movement — escalate |
 | RDP after many failures | [Success after failures](../playbooks/success-after-failures.md) |
 
+## Related pages
+
+- [T1078 Valid Accounts](t1078-valid-accounts.md)
+
 [^mitre-t1021-001]: MITRE ATT&CK, "Remote Services: Remote Desktop Protocol, Sub-technique T1021.001". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1021/001/
 [^det0327]: MITRE ATT&CK, "Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity, Detection Strategy DET0327". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0327/

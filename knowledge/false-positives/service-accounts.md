@@ -81,6 +81,15 @@ The agent may point out that this benign explanation fits and list the evidence 
 closing the alert stays with the analyst, and context never lowers a severity below what
 the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-2026-11-10]
 
+## Related pages
+
+- [Event 4624: An account was successfully logged on](../windows-events/event-4624.md)
+- [Event 4625: An account failed to log on](../windows-events/event-4625.md)
+- [Event 4672: Special privileges assigned to new logon](../windows-events/event-4672.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
+- [Asset and user context in alerts](../wazuh/asset-and-user-context.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
+
 [^ms-service-accounts]: Microsoft Learn, "Service accounts" (Windows Server). https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-service-accounts
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
