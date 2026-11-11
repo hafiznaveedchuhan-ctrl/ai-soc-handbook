@@ -26,6 +26,15 @@ EDITS = {
  ],
 }
 
+# Set 2 (prepared 2026-11-11 after evals on generation 6 — needs its OWN owner approval):
+# the description edits above did not move retrieval, because search reads the text, not the
+# description. These rename one heading per page so the text says what analysts ask.
+EDITS2 = {
+ "knowledge/rules-map/severity-model.md": [("\n## The model\n", "\n## How alert severity is decided\n")],
+ "knowledge/playbooks/added-to-admin-group.md": [("\n## L1 steps\n", "\n## What to do when an account is added to Administrators (L1 steps)\n")],
+}
+if "--set2" in sys.argv: EDITS = EDITS2
+
 def git(*a): return subprocess.run(["git", *a], capture_output=True, text=True, check=True).stdout.strip()
 
 def apply_edits():
@@ -35,7 +44,8 @@ def apply_edits():
             if b in s: continue
             assert s.count(a) == 1, (p, a[:50]); s = s.replace(a, b)
         open(p, "w").write(s)
-    subprocess.run([sys.executable, "-I", "scripts/authoring/linkpass-w2.py", "--stable"], check=True)
+    if "--set2" not in sys.argv:
+        subprocess.run([sys.executable, "-I", "scripts/authoring/linkpass-w2.py", "--stable"], check=True)
 
 def restamp(paths, at):
     for p in paths:
