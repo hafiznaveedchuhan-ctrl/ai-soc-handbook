@@ -126,7 +126,7 @@ export function HomeCover({
             </div>
 
             {lookup === undefined ? null : (
-              <div className="mt-8 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 motion-safe:[animation-delay:300ms] motion-safe:[animation-fill-mode:backwards]">
+              <div className="relative z-30 mt-8 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 motion-safe:[animation-delay:300ms] motion-safe:[animation-fill-mode:backwards]">
                 {lookup}
               </div>
             )}
