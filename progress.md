@@ -340,3 +340,11 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - Fixed scaffold a11y (flashcard name/focus, quiz progress label, governance dl) and LCP (no fade on title/purpose).
 - Screens: specs/03-site-ui/screens/ (home, lookup, doc × desktop/mobile × dark/light = 12).
 - Built in an isolated git worktree in the scratchpad because Naveed's `npm run dev` was running (no shared .staged-knowledge disturbed).
+
+### Session 3 — Wave 2 started (2026-11-11, branch feat/02-soc-corpus-wave-2)
+- Owner standing approval for all Wave 2/3 process steps (memory: wave2-3-standing-approval). Pages stay draft until ONE "approved" at the end; owner-policy pages are proposals.
+- Feature 04 deferred by owner; PR #12 (Feature 03) merged.
+- Plan: specs/02-soc-corpus/wave2-plan.txt (B1 mitre 9, B2 windows-events 15, B3 sysmon 9, B4 linux-auth 6 + wazuh 3, B5 playbooks 5, B6 owner policy 8).
+- B1 DONE (`5332906`): 9 MITRE drafts, order 704/760–767; MITRE moved event IDs to Detection Strategy pages (DET####) — cited as separate sources. T1562.001 → T1685 (page t1685-disable-or-modify-tools).
+- learn.microsoft.com unreachable from WSL since ~06:40 (DNS, curl exit 6) → B2/B3 wait; doing B4 next.
+- Gotcha: links only to EXISTING pages (4698/4697 etc. as plain text until B2 exists; link pass later).
