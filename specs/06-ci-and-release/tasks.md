@@ -8,6 +8,6 @@
 - [x] **T06-05** Playwright devDependency, `tests/smoke/` config + spec; `npm run smoke` green locally.
 - [x] **T06-06** smoke job in `ci.yml`.
 - [ ] **T06-07** Local Docker build + run smoke (CLI `-e KSOR_AUTH=disabled-public` only); evidence in `docker-smoke.txt`. Needs Docker Desktop running (Naveed).
-- [ ] **T06-08** `npm run check`; progress.md; push (with OK) → PR; CI green (AC1).
+- [x] **T06-08** (PR #10: format checker, gitleaks, build, smoke all green; no Vercel check) `npm run check`; progress.md; push (with OK) → PR; CI green (AC1).
 - [ ] **T06-09** AC2 + AC3 demonstrations on throwaway branches (with OK), then delete them.
 - [ ] **STOP-06B** Naveed reviews the green PR and merges.
