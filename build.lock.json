@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:33e0bc0a2819288cfce658d66c0125e8fe61c5518489512ef23efbb5b1a74a8b",
+  "build_id": "sha256:3b110b0e99bb4eb980e5342f897e404ac36f59e3ba359c234bd3f7df75463966",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "aaca2cab3a7f1d497800079c7af29adf4faa28bf",
+  "source_commit": "533290647865144ebb02aa4e8e581f1919238d02",
   "dirty": true,
-  "as_of": "2026-11-11T07:03:45.952Z",
+  "as_of": "2026-11-11T07:07:32.322Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -46,6 +46,60 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "linux-auth/new-user-useradd.md",
+      "sha256": "7f82c46c652ccd150eb85061d36134830c70a74c794d31910777cc33306c5e52",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "linux-auth/ssh-accepted.md",
+      "sha256": "eb9ffafba47ce25462091febeb0b4681ec6105a4238693a850ef25e36bcb9352",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "linux-auth/ssh-failed-password.md",
+      "sha256": "6e8138a87341de822723113916870424cbed06ddf27dc3f64ba759fa11891d02",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "linux-auth/ssh-invalid-user.md",
+      "sha256": "e98dad7f8b83c5502ea470f78be4138cbd86af33a7f7c47045c4419f5c1984f7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "linux-auth/sudo-usage.md",
+      "sha256": "c5cff526cfe8f737045fdcd21aa7d1fbdb5c41b35ce1c5e66a61a204c3a6d3ae",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "linux-auth/where-auth-logs-live.md",
+      "sha256": "6d2cbcf5f2a680de9bfd27ad9ac34782d5269ea4c1748b59b9a905e439fedcae",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "mitre/t1003-001-lsass-memory.md",
@@ -844,6 +898,24 @@
       ]
     },
     {
+      "path": "wazuh/mitre-in-wazuh.md",
+      "sha256": "41fe77b0d8337924b6134a23015910b56722c7ab17cf5b879869ebc4e9d0aae7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "wazuh/rule-groups.md",
+      "sha256": "607f6ca02a26fda39da576909e2a63e2246767532b207dc159377e570027e04d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "wazuh/rule-levels.md",
       "sha256": "8eb7b03b8ce7a13c3eb26d2bfd22fb1b083d755c1e74574f17f437b0f48727c3",
       "status": "stable",
@@ -853,6 +925,15 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "wazuh/sshd-rules-reference.md",
+      "sha256": "2c96bc89c46017d37683bc4bbf3500480639f0e0ed8d491a2dfde026ca16804c",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "wazuh/windows-rules-reference.md",
@@ -1408,7 +1489,11 @@
     },
     {
       "path": "index.md",
-      "sha256": "509ce2ff9fb9889e4ed2d2d6f797e1a572c8f2789fd36ab2c3301dcf9c0d727a"
+      "sha256": "09306e6bd26d4f9d4db88a8841d801f200d09593fbf20620e769fa420b09c58e"
+    },
+    {
+      "path": "linux-auth/index.md",
+      "sha256": "c89efa94a2aa496c994e5fbe8f5bea31b4362ecb3d636c27d1e08a69fd9d4153"
     },
     {
       "path": "mitre/index.md",
@@ -1436,7 +1521,7 @@
     },
     {
       "path": "wazuh/index.md",
-      "sha256": "7a1c0e18758e64454a7594dd0f389abc2e330c5197ea59daf893f54e8b865c5f"
+      "sha256": "3bad680537a4a3e1589bdff0a66254300307426d052ecbed641abed35e8fbce4"
     },
     {
       "path": "windows-events/index.md",
