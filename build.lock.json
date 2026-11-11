@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:11bd10417e3ea02af7ffcff157a68cc6dbaa068301cce583afd5a895d09ebe70",
+  "build_id": "sha256:c29fb8d3af2cccb79c74d8367c4b7a411dab8fa2e96130ff63a077c20a39754f",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "e2029d1b1d5f0c1a5a2584de0509d41f486d998a",
+  "source_commit": "1478d9854ee691804a87a4cf76c74afd804e1b8c",
   "dirty": true,
-  "as_of": "2026-11-11T11:11:03.202Z",
+  "as_of": "2026-11-11T11:12:07.280Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -2113,6 +2113,62 @@
     {
       "path": "sla/severity-response-matrix.quiz.yaml",
       "sha256": "5467cd341def3ac6529bfbc98b063a1821097165d02289afb9fe52083390df69"
+    },
+    {
+      "path": "soc-fundamentals/active-directory-basics.flashcards.yaml",
+      "sha256": "4e12a4e993da5d5469729574381777001c3e337420fa122fe439db35ebbc839a"
+    },
+    {
+      "path": "soc-fundamentals/active-directory-basics.quiz.yaml",
+      "sha256": "b0f8087250c7d032c1881495e49c99aa55c5cfb0537e20ee8d86fde742ef30c6"
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.flashcards.yaml",
+      "sha256": "2a4dddd40e801f146694f2d9cdb8c2ab4f2281b5f46657027d52557e2661a310"
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.quiz.yaml",
+      "sha256": "53ebcecff51ba5316f24a9576df6b6392882a0ac1e3f49c5643e2c9957bd8774"
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.flashcards.yaml",
+      "sha256": "4cf53d636cc8a1dfec0639bb59b5f2c21d206c2dc0b2e8a2c60277ae2455dfe9"
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.quiz.yaml",
+      "sha256": "f03b9163ba657ca68b43acdaae4e7a23e4b61a82e5390670e75022dd06736114"
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.flashcards.yaml",
+      "sha256": "d12b741088efabdb99045855fb4c2db4f0e1b2b20e7540550ef437a4e6ee3568"
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.quiz.yaml",
+      "sha256": "0f9ea53aead66f93b2719ec4f027125fada10edb544a5c4a835a082d080b0508"
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.flashcards.yaml",
+      "sha256": "be733148813b3d33acd48b9035198a4226c84377736fd7825322d290f19f647d"
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.quiz.yaml",
+      "sha256": "8acb959dc28caa69874a0df31fc2f89d0d3efd62fe7de5421609edf3a22d5fd3"
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.flashcards.yaml",
+      "sha256": "2cee4f8e9a60cdf3e0cabab2c166ad238f184f9ba51f90c56a5ebd980d688e61"
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.quiz.yaml",
+      "sha256": "57cd67ff15f49e81170c9a2c9517897a88730f34d2b0a7f4a99e3258815bd73f"
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.flashcards.yaml",
+      "sha256": "8adf42fe48b9e411add6719fabca1599ff9e321df4fceccfaf97a2a66d0bd27a"
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.quiz.yaml",
+      "sha256": "c75d3d86d6ed3f3c2274e624e594512fd4afb3e1d03af10a23b205b15b3ce989"
     },
     {
       "path": "sysmon/event-1-process-create.flashcards.yaml",

@@ -1,0 +1,58 @@
+quiz:
+  title: "IOCs and threat intelligence"
+  questionsPerRound: 6
+questions:
+  - question: "Which is an example of an indicator?"
+    options:
+      - "An actor's preferred tool"
+      - "A malware file hash"
+      - "A vendor advisory"
+      - "A SIEM install guide"
+    answer: 1
+    explanation: "Indicators include IPs, domains, URLs, file hashes, subject lines."
+    source: "Five kinds of threat information"
+  - question: "Which kind are CERT advisories and vulnerability notes?"
+    options:
+      - "Indicators"
+      - "TTPs"
+      - "Tool configurations"
+      - "Security alerts"
+    answer: 3
+    explanation: "Security alerts: brief technical notices — advisories, bulletins, vulnerability notes."
+    source: "Five kinds of threat information"
+  - question: "Which TTP level is the most detailed?"
+    options:
+      - "Procedures"
+      - "Tactics"
+      - "Techniques"
+      - "Indicators"
+    answer: 0
+    explanation: "Procedures are the lowest-level, most detailed description."
+    source: "Five kinds of threat information"
+  - question: "Which NIST element integrates CTI into analysis?"
+    options:
+      - "RS.MI-01"
+      - "ID.AM-01"
+      - "DE.AE-07"
+      - "RS.CO-02"
+    answer: 2
+    explanation: "DE.AE-07: CTI and other context are integrated into analysis."
+    source: "In incident response"
+  - question: "Prose describing actors and targets is a…"
+    options:
+      - "Security alert"
+      - "Threat intelligence report"
+      - "Tool configuration"
+      - "Single indicator"
+    answer: 1
+    explanation: "Threat intelligence reports are prose documents."
+    source: "Five kinds of threat information"
+  - question: "Indicators naming internal hosts in a note must be…"
+    options:
+      - "Masked per data handling"
+      - "Written in full"
+      - "Left out entirely"
+      - "Sent to AbuseIPDB"
+    answer: 0
+    explanation: "Mask them per the data handling rules."
+    source: "How L1 uses them"

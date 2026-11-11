@@ -1,0 +1,58 @@
+quiz:
+  title: "E-mail authentication: SPF, DKIM and DMARC"
+  questionsPerRound: 6
+questions:
+  - question: "Which SPF result means a transient DNS error?"
+    options:
+      - "permerror"
+      - "temperror"
+      - "softfail"
+      - "neutral"
+    answer: 1
+    explanation: "temperror: transient (generally DNS) error; a retry may succeed."
+    source: "SPF results"
+  - question: "Which DKIM tag names the signing domain?"
+    options:
+      - "s="
+      - "h="
+      - "b="
+      - "d="
+    answer: 3
+    explanation: "d= is the SDID claiming responsibility."
+    source: "DKIM"
+  - question: "Relaxed alignment means the domains share…"
+    options:
+      - "An Organizational Domain"
+      - "The exact same name"
+      - "The same mail server"
+      - "The same IP address"
+    answer: 0
+    explanation: "Relaxed: same Organizational Domain; strict: identical."
+    source: "DMARC (RFC 9989)"
+  - question: "Default adkim / aspf mode?"
+    options:
+      - "Strict"
+      - "None"
+      - "Relaxed"
+      - "Quarantine"
+    answer: 2
+    explanation: "adkim and aspf default to r (relaxed)."
+    source: "DMARC (RFC 9989)"
+  - question: "spf=pass but DMARC fails. Reading?"
+    options:
+      - "Genuine — SPF passed"
+      - "Not aligned — not genuine"
+      - "DNS error — retry"
+      - "Test mode — ignore"
+    answer: 1
+    explanation: "An unaligned SPF pass does not prove use of the From: domain."
+    source: "For the agent"
+  - question: "Which tag replaced part of what pct did?"
+    options:
+      - "t="
+      - "np="
+      - "sp="
+      - "fo="
+    answer: 0
+    explanation: "RFC 9989: t= (test mode) replaces some pct functionality."
+    source: "DMARC (RFC 9989)"

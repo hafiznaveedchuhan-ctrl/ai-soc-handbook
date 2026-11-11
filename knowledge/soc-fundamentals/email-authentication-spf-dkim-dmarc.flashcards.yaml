@@ -1,0 +1,14 @@
+deck:
+  title: "E-mail authentication: SPF, DKIM and DMARC"
+  description: "Recall checks drawn only from the page E-mail authentication: SPF, DKIM and DMARC."
+cards:
+  - front: "SPF softfail means…"
+    back: "A weak statement that the host is probably not authorised."
+  - front: "Where is a DKIM public key looked up?"
+    back: "At <selector>._domainkey.<domain>."
+  - front: "What does a DMARC pass need?"
+    back: "An SPF or DKIM pass on a domain aligned with the From: domain."
+  - front: "Which RFC now defines DMARC?"
+    back: "RFC 9989 (May 2026), obsoleting RFC 7489 and 9091."
+  - front: "Missing p= tag in a DMARC record?"
+    back: "Treated as p=none."

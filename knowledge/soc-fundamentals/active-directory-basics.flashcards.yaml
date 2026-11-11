@@ -1,0 +1,14 @@
+deck:
+  title: "Active Directory basics"
+  description: "Recall checks drawn only from the page Active Directory basics."
+cards:
+  - front: "What does a domain controller hold?"
+    back: "A complete copy of the domain's directory, kept in sync by replication."
+  - front: "Where does the Kerberos KDC run?"
+    back: "On every domain controller, using the AD DS database."
+  - front: "What is a TGT?"
+    back: "A ticket-granting ticket — lets the client request service tickets without the password again."
+  - front: "When is NTLM still required?"
+    back: "For workgroup systems and local logon on non-domain-controllers."
+  - front: "Enterprise Admins exists where?"
+    back: "Only in the forest root domain."

@@ -1,0 +1,14 @@
+deck:
+  title: "Security controls and log sources"
+  description: "Recall checks drawn only from the page Security controls and log sources."
+cards:
+  - front: "What is a security control (NIST)?"
+    back: "A safeguard or countermeasure protecting confidentiality, integrity and availability."
+  - front: "What is a log?"
+    back: "A record of events in an organisation's systems and networks, made of entries."
+  - front: "What do authentication servers log?"
+    back: "Each attempt — origin, username, success or failure, time."
+  - front: "What do web proxies keep?"
+    back: "A record of all URLs accessed through them."
+  - front: "What do OS audit records hold?"
+    back: "Authentication attempts, file access, policy and account changes, privilege use."

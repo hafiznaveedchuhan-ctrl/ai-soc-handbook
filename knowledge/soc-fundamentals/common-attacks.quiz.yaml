@@ -1,0 +1,58 @@
+quiz:
+  title: "Common attacks and the ATT&CK tactics"
+  questionsPerRound: 6
+questions:
+  - question: "How many enterprise tactics does MITRE list?"
+    options:
+      - "12"
+      - "15"
+      - "14"
+      - "16"
+    answer: 1
+    explanation: "The tactics page lists 15 enterprise tactics."
+    source: "The fifteen enterprise tactics"
+  - question: "Which tactic means 'trying to steal data'?"
+    options:
+      - "Collection"
+      - "Impact"
+      - "Discovery"
+      - "Exfiltration"
+    answer: 3
+    explanation: "TA0010 Exfiltration — the adversary is trying to steal data."
+    source: "The fifteen enterprise tactics"
+  - question: "TA0112 Defense Impairment means the adversary is…"
+    options:
+      - "Breaking defenders' tools"
+      - "Hiding as normal activity"
+      - "Guessing many passwords"
+      - "Moving between hosts"
+    answer: 0
+    explanation: "Breaking security mechanisms so defenders can't see or trust what's happening."
+    source: "The fifteen enterprise tactics"
+  - question: "Which technique is 'exploit public-facing application'?"
+    options:
+      - "T1195"
+      - "T1498"
+      - "T1190"
+      - "T1557"
+    answer: 2
+    explanation: "T1190 — exploiting a weakness in an Internet-facing host."
+    source: "Common attack types"
+  - question: "T1557 serves which tactics?"
+    options:
+      - "Initial Access only"
+      - "Credential Access and Collection"
+      - "Impact and Exfiltration"
+      - "Discovery and Execution"
+    answer: 1
+    explanation: "Adversary-in-the-middle: Credential Access, Collection."
+    source: "Common attack types"
+  - question: "Supply chain compromise (T1195) is which tactic?"
+    options:
+      - "Initial Access"
+      - "Persistence"
+      - "Impact"
+      - "Lateral Movement"
+    answer: 0
+    explanation: "T1195 is listed under Initial Access."
+    source: "Common attack types"

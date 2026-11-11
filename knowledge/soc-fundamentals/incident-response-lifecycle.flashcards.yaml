@@ -1,0 +1,14 @@
+deck:
+  title: "Incident response lifecycle (NIST SP 800-61r3)"
+  description: "Recall checks drawn only from the page Incident response lifecycle (NIST SP 800-61r3)."
+cards:
+  - front: "What is an event (NIST)?"
+    back: "Any observable occurrence involving computing assets."
+  - front: "The six CSF 2.0 Functions?"
+    back: "Govern, Identify, Protect, Detect, Respond, Recover."
+  - front: "Which Functions are incident response itself?"
+    back: "Detect, Respond and Recover."
+  - front: "RS.MI-01 vs RS.MI-02?"
+    back: "Contained (stop expansion) vs eradicated (remove effects, e.g. malware, breached accounts)."
+  - front: "Where does L1 triage sit?"
+    back: "Detect plus RS.MA-02 — validate, estimate severity, escalate."
