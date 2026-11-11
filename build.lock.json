@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:ca0eb87893902c10070e9d92edfb983b601275c60dd041ba5171d08a76013514",
+  "build_id": "sha256:51439881cf4c9bbf1a1ab988d8497e8e088ff0fc8668fb85f6f8022534fd5df4",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "eeadf61acfe6dc3584f7a48da3f706d3dee6a7e5",
+  "source_commit": "7aa2b7cdf49122165c983beec584e08a41cf35a1",
   "dirty": true,
-  "as_of": "2026-11-11T07:13:17.860Z",
+  "as_of": "2026-11-11T07:17:38.749Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -722,6 +722,15 @@
       ]
     },
     {
+      "path": "playbooks/account-lockout-storm.md",
+      "sha256": "d2723e7453ae2996527a794c415fed13f42bfc0a1d684af0734b16479665cd53",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "playbooks/added-to-admin-group.md",
       "sha256": "dd01cba0bac39a9e17de1af306fb851774129ac62ac2866b10dce11afff96695",
       "status": "stable",
@@ -755,6 +764,15 @@
       ]
     },
     {
+      "path": "playbooks/fim-or-malware-alert.md",
+      "sha256": "9ff35ca551b7694d7b9cc9481582136e2dbf336c6f8806eed3b0eb3b7d852836",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "playbooks/new-local-account.md",
       "sha256": "90652a9b39cfc496c2663f9b5bd81f998c374fde269163faab0064173b92b275",
       "status": "stable",
@@ -766,6 +784,24 @@
       ]
     },
     {
+      "path": "playbooks/new-service-or-scheduled-task.md",
+      "sha256": "50986779c4bf5a8c1c8b5950120f11df5b445289f3027466725c84a2b7a11a53",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "playbooks/port-scan.md",
+      "sha256": "0ea6597d4862f6449390608229255273e356989760bd1c9728eefc919b630cac",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "playbooks/success-after-failures.md",
       "sha256": "f8bff44e0e3404a4bd485b5fc8a836da1d70dd974da79df6b75c4e1ad86572c8",
       "status": "stable",
@@ -775,6 +811,15 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "playbooks/suspicious-powershell.md",
+      "sha256": "c0fa6cd75126a410c3b3f09cc1750d20a9ac9105a07a840be664f23f3e5d8653",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "rules-map/data-handling.md",
@@ -1725,7 +1770,7 @@
     },
     {
       "path": "playbooks/index.md",
-      "sha256": "f2d055f1afc3e0530198defadfb129cce95edd400c5629cfffc01f138545d676"
+      "sha256": "1a59cca26f371b5a1eb93f87bb0dc1eea3e1165511adbf151e90b3c6fe3fa122"
     },
     {
       "path": "rules-map/index.md",
