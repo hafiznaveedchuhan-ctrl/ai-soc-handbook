@@ -85,6 +85,11 @@ Rule rows: [^wazuh-0580]
 | 4624 after failures, same account | Possible successful brute force | Escalate per escalation policy |
 | Source IP public | External attempt | Enrich IP reputation |
 
+## Related pages
+
+- [T1110.004 Brute Force: Credential Stuffing](t1110-004-credential-stuffing.md)
+- [SSH failed password](../linux-auth/ssh-failed-password.md)
+
 [^mitre-t1110]: MITRE ATT&CK, "Brute Force, Technique T1110 – Enterprise" (version 2.8). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1110/
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`, rules 60115, 60122, 60204. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

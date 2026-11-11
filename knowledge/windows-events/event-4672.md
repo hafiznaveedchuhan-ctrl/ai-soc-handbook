@@ -130,6 +130,11 @@ This is the handbook's mapping, set by its owner. Wazuh's own rule tag for
 | `SubjectLogonId` | Matches a normal 4624 | Matches a suspicious 4624 | Read the 4624 |
 | Wazuh `rule.id` | 67028 (non-SYSTEM subject) | — | Triage per above |
 
+## Related pages
+
+- [Event 4634: An account was logged off](event-4634.md)
+- [False positives: backup jobs](../false-positives/backup-jobs.md)
+
 [^ms-4672]: Microsoft Learn, "4672(S): Special privileges assigned to new logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672
 [^ms-audit-special-logon]: Microsoft Learn, "Audit Special Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-special-logon
 [^wazuh-0955]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0955-WEF-baseline_rules.xml`, rule 67028. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0955-WEF-baseline_rules.xml

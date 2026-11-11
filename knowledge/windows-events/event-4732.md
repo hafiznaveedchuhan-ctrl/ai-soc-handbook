@@ -124,6 +124,11 @@ Wazuh's own rule tag is `T1484`.
 | `SubjectUserName` | Known admin | Unexpected account | Flag |
 | Wazuh `rule.id` | 60144 (level 5) | 60154 (level 12) and other privileged-group rules | Prioritise |
 
+## Related pages
+
+- [Event 4728: A member was added to a security-enabled global group](event-4728.md)
+- [Event 4756: A member was added to a security-enabled universal group](event-4756.md)
+
 [^ms-4732]: Microsoft Learn, "4732(S): A member was added to a security-enabled local group". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4732
 [^ms-audit-security-group-management]: Microsoft Learn, "Audit Security Group Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`, rules 60113, 60144, 60154 and the group child rules. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

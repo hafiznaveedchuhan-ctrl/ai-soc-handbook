@@ -85,6 +85,10 @@ days.[^abuseipdb-docs]
 | 25–74 | "Suspicious AbuseIPDB score" + reports, usage type | unchanged; weigh |
 | 75–100 | "Likely malicious per AbuseIPDB" + reports, last seen | +1 step |
 
+## Related pages
+
+- [GeoIP and VPN caveats](../wazuh/geo-and-vpn-caveats.md)
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 6).
 [^abuseipdb-docs]: AbuseIPDB, "APIv2 documentation" (check endpoint, blacklist endpoint notes on confidence). https://docs.abuseipdb.com/
 [^abuseipdb-faq]: AbuseIPDB, "FAQ — What is the 'Confidence of Abuse' rating? How is it calculated?". https://www.abuseipdb.com/faq.html

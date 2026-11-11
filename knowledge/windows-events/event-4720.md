@@ -138,6 +138,13 @@ reference](../wazuh/windows-rules-reference.md).
 | Follow-up 4732 | None or expected group | Added to Administrators | Open added-to-admin-group playbook |
 | Wazuh `rule.id` | 60109 (level 8) | — | Triage per above |
 
+## Related pages
+
+- [Event 4722: A user account was enabled](event-4722.md)
+- [Event 4726: A user account was deleted](event-4726.md)
+- [Event 4738: A user account was changed](event-4738.md)
+- [New Linux user or group (useradd, gpasswd)](../linux-auth/new-user-useradd.md)
+
 [^ms-4720]: Microsoft Learn, "4720(S): A user account was created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4720
 [^ms-audit-user-account-management]: Microsoft Learn, "Audit User Account Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-user-account-management
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`, rule 60109. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

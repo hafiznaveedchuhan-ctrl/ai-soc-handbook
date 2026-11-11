@@ -120,6 +120,11 @@ saved password).
 | `SubjectUserName` | SYSTEM | Not SYSTEM | Report per Microsoft recommendation |
 | Wazuh `rule.id` | 60115 (level 9) | Many 60115 in a short time | Open brute-force playbook |
 
+## Related pages
+
+- [Playbook: account lockout storm](../playbooks/account-lockout-storm.md)
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
+
 [^ms-4740]: Microsoft Learn, "4740(S): A user account was locked out". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4740
 [^ms-audit-user-account-management]: Microsoft Learn, "Audit User Account Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-user-account-management
 [^ms-audit-account-lockout]: Microsoft Learn, "Audit Account Lockout". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-account-lockout

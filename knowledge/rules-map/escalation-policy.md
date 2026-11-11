@@ -83,6 +83,11 @@ same line for "a human at L2 must look now".[^naveed-interview-2026-11-10]
 | 8 | Verdict needs-info and severity High/Critical | Escalate (8) |
 | none | — | L1 continues; final decision: human analyst |
 
+## Related pages
+
+- [Severity response matrix (SLA)](../sla/severity-response-matrix.md)
+- [False positives: service accounts](../false-positives/service-accounts.md)
+
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 2).
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), CSF elements RS.MA-04 and GV.RM-06 (note N2). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^wazuh-rules-classification]: Wazuh documentation, "Rules classification". https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html

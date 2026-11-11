@@ -103,6 +103,7 @@ security/authorization, 5 syslogd, 9 and 15 clock daemon, 11 FTP, 12 NTP,
 - [Firewalls](firewalls.md)
 - [NTP and time synchronisation](ntp-and-time-sync.md)
 - [Wazuh architecture](../wazuh/architecture.md)
+- [Where Linux authentication logs live](../linux-auth/where-auth-logs-live.md)
 
 [^rfc5424]: IETF, "RFC 5424 — The Syslog Protocol". https://www.rfc-editor.org/rfc/rfc5424
 [^rfc5426]: IETF, "RFC 5426 — Transmission of Syslog Messages over UDP". https://www.rfc-editor.org/rfc/rfc5426

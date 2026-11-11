@@ -117,6 +117,8 @@ not prove which program is listening.[^iana-ports]
 - [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
 - [HTTP and HTTPS](http-https.md)
 - [Wazuh architecture](../wazuh/architecture.md)
+- [Playbook: port scan](../playbooks/port-scan.md)
+- [T1046 Network Service Discovery](../mitre/t1046-network-service-discovery.md)
 
 [^rfc6335]: IETF, "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry". https://www.rfc-editor.org/rfc/rfc6335
 [^iana-ports]: IANA, "Service Name and Transport Protocol Port Number Registry". https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml

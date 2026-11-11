@@ -108,6 +108,7 @@ All rows: [^iana-dns]
 - [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
 - [Common network attacks](network-attacks.md)
 - [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+- [Sysmon event 22: DNS query](../sysmon/event-22-dns-query.md)
 
 [^rfc1034]: IETF, "RFC 1034 — Domain Names — Concepts and Facilities". https://www.rfc-editor.org/rfc/rfc1034
 [^rfc1035]: IETF, "RFC 1035 — Domain Names — Implementation and Specification". https://www.rfc-editor.org/rfc/rfc1035

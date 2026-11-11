@@ -164,6 +164,13 @@ reference](../wazuh/windows-rules-reference.md).
 | `SubjectUserSid` | SYSTEM | Not SYSTEM | Review per Microsoft recommendation |
 | Preceding 4625s | None | Many failures then success | Open success-after-failures playbook |
 
+## Related pages
+
+- [Event 4634: An account was logged off](event-4634.md)
+- [Event 4768: A Kerberos authentication ticket (TGT) was requested](event-4768.md)
+- [False positives: service accounts](../false-positives/service-accounts.md)
+- [T1021.001 Remote Services: Remote Desktop Protocol](../mitre/t1021-001-remote-desktop-protocol.md)
+
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings

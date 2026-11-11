@@ -178,6 +178,13 @@ reference](../wazuh/windows-rules-reference.md).
 | `ProcessName` | Standard system path | Non-standard folder; restricted words | Flag |
 | Following 4624 | None | Success after failures, same account | Open success-after-failures playbook |
 
+## Related pages
+
+- [Event 4771: Kerberos pre-authentication failed](event-4771.md)
+- [Event 4776: The computer attempted to validate the credentials for an account](event-4776.md)
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
+- [Playbook: account lockout storm](../playbooks/account-lockout-storm.md)
+
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon
 [^ms-advanced-audit]: Microsoft Learn, "Advanced security audit policy settings". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-audit-policy-settings

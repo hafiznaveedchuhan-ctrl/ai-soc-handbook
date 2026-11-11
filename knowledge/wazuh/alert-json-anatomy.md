@@ -143,6 +143,11 @@ use the handbook's MITRE pages for the mapping in a triage note.
 | 7 | `full_log` | Confirm against the original record |
 | — | `timestamp` | Build the time window for evidence |
 
+## Related pages
+
+- [GeoIP and VPN caveats](geo-and-vpn-caveats.md)
+- [Asset and user context in alerts](asset-and-user-context.md)
+
 [^wazuh-rules-syntax]: Wazuh documentation, "Rules syntax", alert example in the `same_field` section. https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^wazuh-event-logging]: Wazuh documentation, "Event logging", Windows event JSON examples. https://documentation.wazuh.com/current/user-manual/manager/event-logging.html
 [^wazuh-alert-management]: Wazuh documentation, "Alert management". https://documentation.wazuh.com/current/user-manual/manager/alert-management.html

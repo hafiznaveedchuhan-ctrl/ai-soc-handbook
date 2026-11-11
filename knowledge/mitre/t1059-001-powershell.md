@@ -87,6 +87,11 @@ without powershell.exe, through the System.Management.Automation assembly in
 | wsmprovhost.exe started by svchost.exe | Remote PowerShell session — check source logon |
 | Command line empty in 4688 | Command-line auditing is off — note the gap |
 
+## Related pages
+
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+
 [^mitre-t1059-001]: MITRE ATT&CK, "Command and Scripting Interpreter: PowerShell, Sub-technique T1059.001 – Enterprise". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1059/001/
 [^ms-4688]: Microsoft Learn, "4688(S): A new process has been created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4688
 [^rc-powershell]: Red Canary, "Threat Detection Report — PowerShell" (secondary source). https://redcanary.com/threat-detection-report/techniques/powershell/

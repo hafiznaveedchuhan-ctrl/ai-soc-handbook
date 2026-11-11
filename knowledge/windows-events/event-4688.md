@@ -144,6 +144,11 @@ start.
 | `SubjectUserName` / `TargetUserName` | Expected domain accounts | Local, never-used or high-value account | Check the 4624 for that logon |
 | Wazuh `rule.id` | 67027 | — | Triage per above |
 
+## Related pages
+
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
+
 [^ms-4688]: Microsoft Learn, "4688(S): A new process has been created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4688
 [^ms-audit-process-creation]: Microsoft Learn, "Audit Process Creation". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation
 [^wazuh-0955]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0955-WEF-baseline_rules.xml`, rule 67027. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0955-WEF-baseline_rules.xml

@@ -26,7 +26,7 @@ ksor:
 
 High-value accounts: you might need to monitor each action.[^ms-4776]
 
-Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC0000064 the username does not exist; 0xC0000234 account locked; 0xC0000072 account disabled by administrator; 0xC0000193 expired account.[^ms-4776]
+Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC0000064 the username does not exist; 0xC0000234 account locked; 0xC0000072 account disabled by administrator; 0xC0000193 expired account; 0xC0000071 expired password; 0xC0000224 "Change Password at Next Logon" flagged.[^ms-4776]
 
 ## For the agent
 
@@ -37,6 +37,8 @@ Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC00
 | 0xC0000234 | Account locked |
 | 0xC0000072 | Account disabled by administrator |
 | 0xC0000193 | Account expired |
+| 0xC0000071 | Expired password — usually a support case ([expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)) |
+| 0xC0000224 | Must change password at next logon |
 | Many failures, one source | See [brute-force playbook](../playbooks/brute-force.md) |
 
 ## Related pages

@@ -89,5 +89,10 @@ escalation rules is set in the rules-map section (written in a later batch).
 Bands are a reading aid built from the Wazuh table above; severity and
 escalation decisions follow the rules-map section and a human analyst.
 
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [MITRE ATT&CK in Wazuh](mitre-in-wazuh.md)
+
 [^wazuh-rules-classification]: Wazuh documentation, "Rules classification". https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
 [^wazuh-alert-management]: Wazuh documentation, "Alert management" (alert threshold, `log_alert_level`, `email_alert_level`). https://documentation.wazuh.com/current/user-manual/manager/alert-management.html

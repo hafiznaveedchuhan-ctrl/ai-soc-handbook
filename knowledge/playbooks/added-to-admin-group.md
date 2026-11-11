@@ -1,7 +1,7 @@
 ---
 type: Procedure
 title: "Playbook: account added to Administrators"
-description: L1 steps for event 4732 into the local Administrators group (Wazuh 60154) — who added whom, whether it was planned, and why it is an immediate escalation when it was not.
+description: What to do when an account is added to the Administrators group — L1 steps for event 4732 into the local Administrators group (Wazuh 60154) — who added whom, whether it was planned, and why it is an immediate escalation when it was not.
 status: stable
 order: 803
 generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
