@@ -348,3 +348,4 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - B1 DONE (`5332906`): 9 MITRE drafts, order 704/760–767; MITRE moved event IDs to Detection Strategy pages (DET####) — cited as separate sources. T1562.001 → T1685 (page t1685-disable-or-modify-tools).
 - learn.microsoft.com unreachable from WSL since ~06:40 (DNS, curl exit 6) → B2/B3 wait; doing B4 next.
 - Gotcha: links only to EXISTING pages (4698/4697 etc. as plain text until B2 exists; link pass later).
+- B4 DONE: linux-auth 6 (order 500–530) + wazuh 3 (604–606), sources Wazuh ruleset 0095/0020, rules syntax + MITRE docs, Ubuntu/Red Hat rsyslog defaults, sshd_config(5). Descriptions now json-quoted in generators.
