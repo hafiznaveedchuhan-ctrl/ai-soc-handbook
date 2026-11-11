@@ -55,3 +55,19 @@ What does a TCP SYN answered by RST mean?
 What is the X-Forwarded-For header and can it be trusted?
 Which UDP ports does IPsec IKE use?
 What is ARP cache poisoning?
+# More in-corpus questions (added 2026-11-11)
+What does event 4740 mean?
+Which Wazuh rule level means a high-importance event?
+What is the difference between NAT and PAT?
+What does stratum 16 mean in NTP?
+How do I read Received headers in an email?
+What is a DMZ?
+What is microsegmentation?
+What does a flow record contain in NetFlow or IPFIX?
+What is promiscuous mode in packet capture?
+What is reflection amplification?
+Which ICMP type is Echo Request?
+What is the IPv6 loopback address?
+What does the TTL field do in an IPv4 header?
+What is a rogue access point?
+What does the TLS ClientHello reveal?

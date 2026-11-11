@@ -20,3 +20,16 @@ NEXT OPTIONS (owner decides):
   A. Widen probes as ksor advises: scope-adjacent near-miss OOC questions + more in-corpus questions; re-run calibrate.
   B. Larger embedding model (text-embedding-3-large) for better separation — costs more, needs a new database again.
   C. Keep the gate OFF and rely on instance.md's scope text (the MCP instructions) for the agent to decline.
+
+UPDATE — owner: "jo aapko best lage wo karo" (do what you think is best)
+  A. Probes widened: +10 scope-adjacent OOC (vendor configs, SPL/KQL), +15 in-corpus -> 70 in / 30 OOC.
+     -small: AURC 0.0611, margin -0.224, NOT separable (max OOC 0.650).
+  B. text-embedding-3-large @1536 in a new database (soc_handbook_large): AURC 0.0571, margin -0.188,
+     NOT separable (max OOC 0.609 "Sentinel KQL ... password spraying"). Evals 38/40 (95%) — not better than -small.
+  Finding: the overlapping OOC probes are half in scope (password spraying, failed logons, firewall/VPN are
+     covered; the vendor tool or query language is not) — a single vector floor cannot split them.
+  DECISION (C): keep text-embedding-3-small (database soc_handbook_openai, generation 2), abstention gate OFF,
+     no `retrieval:` block; instance.md comment records why. The agent declines from instance.md's scope text.
+  Final evals on -small: in-scope 39/40 (98%); out-of-scope 0/30 (gate off, expected).
+  Known retrieval miss: "account added to Administrators" -> playbooks/added-to-admin-group not in top 3 (content wording, Wave 2 link pass).
+  Databases now in the Neon project: neondb (old Gemini tenant), soc_handbook_openai (ACTIVE), soc_handbook_large (test; can be dropped).

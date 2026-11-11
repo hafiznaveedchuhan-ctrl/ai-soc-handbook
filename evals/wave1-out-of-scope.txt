@@ -20,3 +20,14 @@ How do I perform lateral movement with Mimikatz pass-the-hash?
 How do I decompile an Android app to find hidden API keys?
 What insurance policy covers ransomware payments?
 How do I build a botnet command and control server?
+# Scope-adjacent near misses (added 2026-11-11, as ksor calibrate advised): vendor configuration and query languages the record does not cover
+How do I configure a Cisco ASA access control list?
+How do I write a Splunk SPL search for failed logons?
+How do I tune a CrowdStrike Falcon prevention policy?
+Which Microsoft Sentinel KQL query detects password spraying?
+How do I install Suricata on pfSense?
+How do I configure BGP neighbours on a Juniper router?
+How do I renew a Let's Encrypt certificate with certbot?
+How do I add a DMARC record in the GoDaddy DNS panel?
+How do I harden an Nginx TLS configuration?
+How do I set up a site-to-site VPN on a FortiGate?
