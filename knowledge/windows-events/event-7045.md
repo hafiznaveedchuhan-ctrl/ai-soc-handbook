@@ -5,6 +5,9 @@ description: Windows System log event 7045 — a new service was installed; what
 status: draft
 order: 399
 sources:
+  - id: ms-unexpected-reboots
+    title: Microsoft Learn — Troubleshoot unexpected reboots using system event logs
+    resource: https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/troubleshoot-unexpected-reboots-system-event-logs
   - id: mdi-event-collection
     title: Microsoft Learn — Defender for Identity, configure Windows event collection
     resource: https://learn.microsoft.com/en-us/defender-for-identity/deploy/configure-windows-event-collection
@@ -51,24 +54,36 @@ server.[^mdi-classic-alerts]
 
 ## Audit policy that enables it
 
-TODO-VERIFY: no Microsoft source in this batch states the policy or setting
-that controls 7045 (it is a System log event, not an advanced audit policy
-event). Microsoft Defender for Identity lists it among the events to collect
-on domain controllers.[^mdi-event-collection]
+7045 is written to the System log by the **Service Control Manager** ("A
+service was installed in the system").[^ms-unexpected-reboots] Microsoft
+Defender for Identity lists it among the events to collect on domain
+controllers.[^mdi-event-collection]
+
+**Open question:** no Microsoft source found names a policy or setting that
+turns 7045 on or off; this page does not guess one.
 
 ## Key fields
 
-TODO-VERIFY: Microsoft does not publish a field reference page for 7045 in
-the sources approved for this batch. Until a Tier 1 source is found, only
-these fields are confirmed:
+Microsoft shows these fields in the event text:[^ms-unexpected-reboots]
+
+| Field | Example from Microsoft |
+|---|---|
+| Service Name | Intel(R) Dynamic Application Loader Host Interface Service |
+| Service File Name | `%SystemRoot%\System32\DriverStore\FileRepository\…\jhi_service.exe` |
+| Service Type | user mode service |
+| Service Start Type | auto start |
+| Service Account | LocalSystem |
+
+In Wazuh, these fields are confirmed:
 
 | Field | Where confirmed |
 |---|---|
 | `data.win.system.eventID` = `7045` | Wazuh rule 61138[^wazuh-0590] |
 | `data.win.system.channel` = `System` | Wazuh base rule 60002 (parent of the System rules)[^wazuh-0575] |
 
-Wave 2's page for Security event 4697 ("A service was installed in the
-system") may supply an official field list for service installation.
+The Security-log counterpart is [4697](event-4697.md); Microsoft's advice
+there is to alert when the service file is outside `%windir%` or Program
+Files.
 
 ## How Microsoft maps it
 
@@ -105,7 +120,7 @@ replaces a security tool, to [T1685](../mitre/t1685-disable-or-modify-tools.md).
 
 ## Related playbook
 
-- A dedicated new-service-or-scheduled-task playbook is being written in Wave 2; on a domain controller, AD FS or AD CS server this is escalation condition 7 in the [escalation policy](../rules-map/escalation-policy.md)
+- Use the [new service or scheduled task playbook](../playbooks/new-service-or-scheduled-task.md); on a domain controller, AD FS or AD CS server this is escalation condition 7 in the [escalation policy](../rules-map/escalation-policy.md)
 
 ## L1 triage questions
 
@@ -115,8 +130,8 @@ replaces a security tool, to [T1685](../mitre/t1685-disable-or-modify-tools.md).
 2. Was the install expected — a software deployment or change ticket?
 3. Which account and process were active on that host just before (4624,
    [4688](event-4688.md))?
-4. TODO-VERIFY: which service name and binary path were installed — field
-   names to be confirmed.
+4. Which **Service Name** and **Service File Name** were installed, under which
+   **Service Account**?[^ms-unexpected-reboots]
 
 ## For the agent
 
@@ -133,3 +148,4 @@ replaces a security tool, to [T1685](../mitre/t1685-disable-or-modify-tools.md).
 [^wazuh-0575]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0575-win-base_rules.xml`, rule 60002 (`win.system.channel` = System). https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0575-win-base_rules.xml
 [^det0497]: MITRE ATT&CK, "Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms, Detection Strategy DET0497" (Service Creation: WinEventLog:System EventCode=7045). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0497/
 [^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552" (Service Creation: WinEventLog:Security EventCode=4697). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/
+[^ms-unexpected-reboots]: Microsoft Learn, "Troubleshoot unexpected reboots using system event logs" (Event ID 7045, Service Control Manager). https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/troubleshoot-unexpected-reboots-system-event-logs
