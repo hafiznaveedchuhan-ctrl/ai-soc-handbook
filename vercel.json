@@ -5,6 +5,6 @@
   },
   "framework": null,
   "installCommand": "npm ci --no-audit --no-fund",
-  "buildCommand": "npm run build",
+  "buildCommand": "git fetch --quiet --unshallow https://github.com/hafiznaveedchuhan-ctrl/ai-soc-handbook.git && npm run build",
   "outputDirectory": "system/site/out"
 }
