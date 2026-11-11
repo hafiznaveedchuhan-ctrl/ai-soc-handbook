@@ -349,3 +349,4 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - learn.microsoft.com unreachable from WSL since ~06:40 (DNS, curl exit 6) → B2/B3 wait; doing B4 next.
 - Gotcha: links only to EXISTING pages (4698/4697 etc. as plain text until B2 exists; link pass later).
 - B4 DONE: linux-auth 6 (order 500–530) + wazuh 3 (604–606), sources Wazuh ruleset 0095/0020, rules syntax + MITRE docs, Ubuntu/Red Hat rsyslog defaults, sshd_config(5). Descriptions now json-quoted in generators.
+- B2 DONE: 15 Windows events (order 322, 371–375, 381–386, 395–397); 4728/4756 sourced from MS 'Audit Security Group Management' (their own pages 404); event-7045 MITRE TODO closed (DET0497 + DET0552) — 3 TODO-VERIFY remain (audit setting, field names) → 7045 still not approvable.
