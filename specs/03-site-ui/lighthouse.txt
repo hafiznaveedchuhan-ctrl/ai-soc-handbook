@@ -20,3 +20,14 @@ Not met: mobile PERFORMANCE >= 90. Remaining cost is Total Blocking Time from Re
 (chunk 606, ~240 KB, 0.8 s on home / 1.8 s on a document under 4x CPU throttling). A document page
 hydrates its whole tree (tables, flashcards, quiz, slides). Follow-up idea: hydrate the study aids
 lazily (on visibility) — an architectural change, left for a separate task.
+
+FOLLOW-UP 2026-11-11 (session 4) — lazy study aids, mobile (simulated 4G, Lighthouse 13.6.0, gzip server)
+                                   before          after
+  doc networking/dns               74 (TBT 1590)   76–77 (TBT 1160–1180)
+  doc windows-events/event-4625    —               72–75 (TBT 1390–1940, run-to-run variance)
+  home                             85 (TBT 610)    83–85 (unchanged by design)
+Change kept: flashcards + quiz are a separate chunk loaded when the reader scrolls within 400px
+(components/lazy-study-aids.tsx). Tried and reverted: lazy search dialog (home got worse: 78).
+Finding: the remaining TBT is chunk 606 (Next.js + Fumadocs client shell, 1.4–2.3 s boot under 4x
+CPU throttle). Mobile >= 90 needs a lighter docs shell — an architectural change, NOT done here.
+Desktop stays >= 95.

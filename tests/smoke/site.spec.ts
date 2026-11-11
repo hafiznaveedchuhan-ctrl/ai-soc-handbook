@@ -14,6 +14,12 @@ const PAGES: Array<[string, string]> = [
   ["/docs/rules-map/escalation-policy/", "scalation"],
   ["/docs/triage-note/note-template/", "template"],
   ["/docs/wazuh/architecture/", "rchitecture"],
+  ["/docs/networking/osi-model/", "OSI"],
+  ["/docs/sysmon/overview/", "Sysmon"],
+  ["/docs/linux-auth/ssh-failed-password/", "SSH"],
+  ["/docs/false-positives/service-accounts/", "ervice accounts"],
+  ["/docs/sla/severity-response-matrix/", "SLA"],
+  ["/docs/soc-fundamentals/common-attacks/", "ttacks"],
 ];
 
 function watchConsole(page: Page): string[] {
@@ -44,6 +50,8 @@ for (const [path, word] of PAGES) {
 
 test("flashcards and quiz render on a page that has them", async ({ page }) => {
   await page.goto("/docs/windows-events/event-4740/");
+  // Study aids load when the reader scrolls near them (lazy-study-aids.tsx).
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
   await expect(page.getByLabel("Card 1 of 6")).toBeVisible();
   await expect(page.getByText("What does event 4740 record?").first()).toBeVisible();
   await expect(page.getByRole("region", { name: "Quiz" })).toBeVisible();
@@ -78,4 +86,13 @@ test("quick triage lookup finds an event by its ID and opens it", async ({ page 
 test("navy dark is the default theme", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveClass(/dark/);
+});
+
+test("sign-in button shows and explains it is not connected yet", async ({ page }) => {
+  await page.goto("/");
+  const button = page.getByRole("button", { name: "Sign in" });
+  await expect(button).toBeVisible();
+  await button.click();
+  await expect(page.getByText("Sign-in is not connected yet")).toBeVisible();
+  await expect(page).toHaveURL(/\/$/); // no redirect to any provider
 });

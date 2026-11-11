@@ -474,3 +474,12 @@ FEATURE 02 WAVE 3 soc-fundamentals  (branch feat/02-soc-corpus-wave-3)
 - UI screenshots approved; Lighthouse >= 90 on home and one doc page.
 - Sign-in works with the chosen free provider; its limits documented.
 - LEARNING.md, progress.md and specs/00-final-plan.txt complete; everything committed.
+
+PHASE 8 NOTE (2026-11-11, session 4): Vercel deploys the STATIC SITE only. vercel.json no longer
+declares the "door" (MCP container) service: a public door needs the DB URL + OpenAI key as Vercel
+env vars and an auth decision (owner moved the login provider to Phase 3, AI workers). Until then
+the door runs locally (npm run serve). Earlier Vercel builds failed with MISSING_SERVICE_CONFIG
+because the root Dockerfile made the "site" service detect framework "container".
+To restore later: services { site: {root ".", ...}, door: {runtime "container", entrypoint
+"Dockerfile"} } + rewrites (/mcp, /health, /ready, /.well-known/oauth-protected-resource → door;
+catch-all last → site), with framework pinned on the site service.
