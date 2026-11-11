@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/link";
 import Image, { type StaticImageData } from "next/image";
 import type { ReactElement } from "react";
 

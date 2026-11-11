@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { appTitle } from "@/lib/shared";
 import { basePath, badgeByUrl } from "@/lib/source";
 import { readStageManifest } from "@/lib/stage-manifest";
-import KsorSearchDialog from "@/components/search-dialog";
+import KsorSearchDialog from "@/components/lazy-search-dialog";
+import { ShellLink } from "@/components/link";
 
 // No next/font/google: it fetches the face from Google at BUILD time, so a
 // scaffolded project could not build offline and two builds of one commit
@@ -43,6 +44,8 @@ export default function Layout({ children }: LayoutProps<"/">) {
           }}
         />
         <RootProvider
+          // No viewport prefetch for shell links — see components/link.tsx.
+          components={{ Link: ShellLink }}
           // SOC console (Feature 03): navy dark is the default — analysts work
           // in dim rooms on long shifts. A reader's own choice (the theme
           // toggle) still wins and is remembered; "system" is not the default
@@ -59,6 +62,9 @@ export default function Layout({ children }: LayoutProps<"/">) {
             // surface where it looked identical to the one that replaced it,
             // and the one whose snippet quotes its obsolete figures.
             SearchDialog: KsorSearchDialog,
+            // Mount (and fetch) the dialog only when search is opened — see
+            // components/lazy-search-dialog.tsx.
+            preload: false,
             options: { api: `${basePath}/api/search` },
           }}
         >

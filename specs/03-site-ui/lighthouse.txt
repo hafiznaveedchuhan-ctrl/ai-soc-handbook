@@ -31,3 +31,17 @@ Change kept: flashcards + quiz are a separate chunk loaded when the reader scrol
 Finding: the remaining TBT is chunk 606 (Next.js + Fumadocs client shell, 1.4–2.3 s boot under 4x
 CPU throttle). Mobile >= 90 needs a lighter docs shell — an architectural change, NOT done here.
 Desktop stays >= 95.
+
+FOLLOW-UP 2 2026-11-11 (session 4) — median of 3 mobile runs each (Lighthouse 13.6.0, gzip server)
+                       start   +lazy search (preload:false)   +no link prefetch
+  home                  85        89                              94   (TBT 290 ms)
+  doc networking/dns    74        76                              84   (TBT 660 ms)
+  doc event-4625        72–75     81                              81   (TBT 783 ms)
+Fixes: (1) chunk 216 was fumadocs' search result renderer — parse5 + micromark + unified, ~320 KB —
+mounted on every page because the shell's SearchProvider defaults to preload: true. Now React.lazy +
+preload: false (components/lazy-search-dialog.tsx). (2) next/link prefetched an RSC payload for every
+link in the viewport (24 on the DNS page) and the router parsed each one; components/link.tsx turns
+prefetch off for the shell (RootProvider components.Link) and our own links.
+Left: one ~400–600 ms hydration task — App Router hydrates the whole page DOM (~880 elements) plus the
+TOC/sidebar effects. Doc pages >= 90 on simulated mobile would need a non-App-Router docs shell.
+Desktop >= 95 throughout. Smoke 22/22 (new: lazy search opens with Ctrl/⌘K and finds a page).

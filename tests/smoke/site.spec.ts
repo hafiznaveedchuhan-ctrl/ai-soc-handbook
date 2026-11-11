@@ -96,3 +96,12 @@ test("sign-in button shows and explains it is not connected yet", async ({ page 
   await expect(page.getByText("Sign-in is not connected yet")).toBeVisible();
   await expect(page).toHaveURL(/\/$/); // no redirect to any provider
 });
+
+test("search opens on demand (lazy dialog) and finds a page", async ({ page }) => {
+  await page.goto("/docs/orientation/glossary/");
+  await page.keyboard.press("ControlOrMeta+k");
+  const input = page.getByRole("dialog").getByRole("textbox").first();
+  await expect(input).toBeVisible();
+  await input.fill("lockout");
+  await expect(page.getByRole("dialog").getByText(/4740|lockout/i).first()).toBeVisible();
+});
