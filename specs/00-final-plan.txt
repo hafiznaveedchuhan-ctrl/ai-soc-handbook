@@ -18,6 +18,11 @@ Change log:
                  soc-fundamentals drops networking-basics, ports-and-protocols, dns, http-https and
                  moves to order 1400+. Totals 141 docs. Scope sentence widened to SOC analyst +
                  SIEM engineer networking (owner confirms wording).
+  v5 2026-11-11  Feature 02 DONE: Wave 2 (55, incl. B6 owner policy from interview I2) and Wave 3
+                 (7) approved; event-7045 closed and approved; record 141/141 stable; PRs #14-#17.
+                 Embeddings moved to OpenAI text-embedding-3-small (Gemini key invalid). Open against
+                 Definition of Done: abstention gate OFF (calibration not separable); Feature 04 auth
+                 deferred; Phase 8 deploy not started.
 
 ================================================================
 1. GOAL OF PHASE 2
