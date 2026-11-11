@@ -28,6 +28,7 @@ export function HomeCover({
   firstUrl,
   lead,
   behind,
+  lookup,
 }: {
   mark: StaticImageData;
   name: string;
@@ -41,6 +42,8 @@ export function HomeCover({
   behind: readonly RecordEntry[];
   /** Signed from inside the cover, so the front door is one screen. */
   foot?: ReactElement;
+  /** The Quick Triage Lookup (Feature 03), under the primary action. */
+  lookup?: ReactElement;
 }): ReactElement {
   // The cover fills the window under the navbar (measured at 56px, the shell's
   // `h-14`): a front door is the whole view, not a band with the page's
@@ -121,6 +124,12 @@ export function HomeCover({
                 </span>
               </Link>
             </div>
+
+            {lookup === undefined ? null : (
+              <div className="mt-8 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 motion-safe:[animation-delay:300ms] motion-safe:[animation-fill-mode:backwards]">
+                {lookup}
+              </div>
+            )}
           </div>
 
           {/* The record, not a picture of one. It also carries what the meta
