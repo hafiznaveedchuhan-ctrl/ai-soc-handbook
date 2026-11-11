@@ -1,0 +1,127 @@
+FEATURE 06 — CI AND RELEASE — PLAN FOR REVIEW (plain-text copy of spec.md + plan.md + tasks.md)
+Branch feat/06-ci-and-release. Written 2026-11-11.
+
+=================== spec.md ===================
+# Feature 06 — CI and release: spec
+
+- Status: Draft — awaiting owner approval
+- Owner: human:naveed · Drafted: 2026-11-11 · Branch: `feat/06-ci-and-release`
+- Constitution: `specs/constitution.md` · Plan of record: `specs/00-final-plan.txt` (steps 24–26)
+
+## Problem
+
+Today a pull request runs one job: the format checker (`.github/workflows/validate.yml`).
+Nothing on GitHub proves that the site still **builds** (quiz audit, `ksor-generated-stale`,
+link and audience rules only run in `ksor build`), that no **secret** was committed, or that the
+built site actually **opens in a browser**. The MCP door ships as a Docker image that has never
+been built in this repo. Mistakes are found by Naveed on his laptop, after merge.
+
+## Users
+
+- **Naveed (owner)** — merges PRs; wants a red/green signal before merging.
+- **Claude (author)** — needs CI to catch what `npm run check` cannot (the build-only rules).
+- **Phase 3 soc-worker** — depends on the door image building cleanly.
+
+## Scope (in)
+
+1. Keep `validate.yml` unchanged (format checker, full history).
+2. **Secret scan** on every PR and push to main: gitleaks over the full git history.
+3. **Build job**: `npm ci` → `npm run build` (runs `ksor build`, quiz audit, site build). Fails the PR
+   on any refusal.
+4. **Browser smoke** (Playwright, Chromium only) against the built static site served by
+   `npm run preview`: home page, one page per top-level folder, one networking page, `llms.txt`,
+   one `/md/` twin; checks HTTP 200, the title, no console errors, the flashcard + quiz panels render
+   on one page that has them.
+5. **Docker smoke (local, by Claude)**: `docker build`, then `docker run` with
+   `-e KSOR_AUTH=disabled-public` **on the command line only** (never in `.env`); check the
+   container starts and answers its health endpoint. Not a GitHub job in this feature.
+6. All third-party Actions pinned by full commit SHA (same style as `validate.yml`),
+   `permissions: contents: read`, `persist-credentials: false`.
+
+## Scope (out)
+
+- Any deployment (Vercel, Cloud Run, container registry) — that is Phase 8.
+- Database, Gemini key, `ksor serve` against real data, `ksor calibrate` — Feature 05.
+- Lighthouse and visual screenshots — Feature 03.
+- Scheduled rebuilds for `stale_after` (the record uses none today).
+
+## Acceptance criteria
+
+- AC1 A PR to `main` shows four checks: format checker, gitleaks, build, browser smoke — all green.
+- AC2 A test branch with a fake secret makes gitleaks fail (shown once, then the branch is deleted).
+- AC3 A broken quiz (all answers at index 0) makes the build job fail with `ksor-quiz-answer-bias`
+  (shown once on a throwaway branch, not merged).
+- AC4 Smoke test passes locally (`npx playwright test`) and in CI.
+- AC5 Docker image builds locally; the container starts with the CLI flag above and its health
+  endpoint answers; `.env` is not in the image (`.dockerignore`).
+- AC6 No secret, DSN or key appears in any workflow file or log.
+
+## Open questions (TODO-VERIFY before implementing)
+
+- Q1 gitleaks: official `gitleaks/gitleaks-action` (free for personal accounts) or the gitleaks
+  binary run directly — decide after reading its current README; pin by SHA either way.
+- Q2 Does `ksor serve` boot in the container **without** `KSOR_DB_URL`, and which endpoint is the
+  liveness check (`/health` vs `/ready`)? Read `node_modules/@panaversity/ksor/docs/deploying.md`
+  before writing the Docker smoke. If it needs a DB, the smoke checks only that it refuses by name.
+- Q3 Playwright version: pin an exact version at least two weeks old; add it as a devDependency of
+  the repo root (not `system/site`), test files under `tests/smoke/` (outside `knowledge/` and
+  outside the site, per critical rule 1).
+
+=================== plan.md ===================
+# Feature 06 — CI and release: plan
+
+Branch `feat/06-ci-and-release` (from `main` @ `51a9ac7`). Spec: `spec.md`.
+
+## Files
+
+| File | Change |
+|---|---|
+| `.github/workflows/validate.yml` | unchanged |
+| `.github/workflows/ci.yml` | NEW — jobs `gitleaks`, `build`, `smoke` (smoke `needs: build`, gets `system/site/out/` as an artifact) |
+| `package.json` (root) | add devDependency `@playwright/test` (exact pinned version); script `"smoke": "playwright test -c tests/smoke"` |
+| `tests/smoke/playwright.config.ts` | NEW — Chromium only; `webServer` starts `npm run preview`; baseURL from that port |
+| `tests/smoke/site.spec.ts` | NEW — the checks in spec scope item 4 |
+| `.gitleaks.toml` | only if needed to allow-list known false positives (e.g. documentation example values) — each entry commented |
+| `specs/06-ci-and-release/docker-smoke.txt` | NEW — the exact local docker commands run and their output (evidence for AC5) |
+
+## Job design
+
+1. **gitleaks** — checkout with `fetch-depth: 0`, scan whole history. Fails on any finding.
+2. **build** — Node 24, `npm ci`, `npm run build`; then `git diff --exit-code -- build.lock.json`
+   is NOT required (CI builds produce a new timestamp); upload `system/site/out` as artifact.
+3. **smoke** — download artifact, `npx playwright install --with-deps chromium`, `npm run smoke`.
+   Uploads the Playwright report on failure only.
+
+Caching: `actions/setup-node` npm cache only. No secrets used by any job.
+
+## Local verification (before push)
+
+1. `npm run check` (always) — `npm run build` only when Naveed's dev server is NOT running
+   (`ss -ltnp | grep :3000` first).
+2. `npm run smoke` locally against the built site.
+3. Docker: `docker build -t soc-handbook-door .` then
+   `docker run --rm -p 8080:80 -e KSOR_AUTH=disabled-public soc-handbook-door` (no `--env-file`, so
+   no DSN goes in) → curl the health endpoint → stop. Record in `docker-smoke.txt`.
+4. Throwaway branches for AC2 and AC3, pushed only with Naveed's OK, deleted after.
+
+## Risks
+
+- Docker Desktop on Windows via WSL may be slow or not running → Naveed starts it; Claude does not.
+- First Playwright run downloads Chromium in CI (~1 min) — acceptable.
+- The build in CI rewrites `build.lock.json` timestamps — CI never commits, so no drift.
+
+=================== tasks.md ===================
+# Feature 06 — CI and release: tasks
+
+- [x] **T06-01** spec.md, plan.md, tasks.md (+ plain-text copy `feature-06-plan.txt`).
+- [ ] **STOP-06A** Naveed approves spec/plan/tasks.
+- [ ] **T06-02** Resolve Q1–Q3 (gitleaks choice, door health endpoint, Playwright version) from their docs; note answers in spec.
+- [ ] **T06-03** `ci.yml` with gitleaks job (SHA-pinned).
+- [ ] **T06-04** `ci.yml` build job + artifact.
+- [ ] **T06-05** Playwright devDependency, `tests/smoke/` config + spec; `npm run smoke` green locally.
+- [ ] **T06-06** smoke job in `ci.yml`.
+- [ ] **T06-07** Local Docker build + run smoke (CLI `-e KSOR_AUTH=disabled-public` only); evidence in `docker-smoke.txt`. Needs Docker Desktop running (Naveed).
+- [ ] **T06-08** `npm run check`; progress.md; push (with OK) → PR; CI green (AC1).
+- [ ] **T06-09** AC2 + AC3 demonstrations on throwaway branches (with OK), then delete them.
+- [ ] **STOP-06B** Naveed reviews the green PR and merges.
+
