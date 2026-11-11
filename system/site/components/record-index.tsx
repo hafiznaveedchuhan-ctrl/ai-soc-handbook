@@ -1,5 +1,5 @@
 import { ArrowRight, FileText, Folder } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/link";
 import type { ReactElement } from "react";
 
 import { badgeLabel, badgeTone } from "@/lib/governance";
