@@ -71,3 +71,43 @@ What is the IPv6 loopback address?
 What does the TTL field do in an IPv4 header?
 What is a rogue access point?
 What does the TLS ClientHello reveal?
+How fast must a Critical alert be acknowledged?
+When does the SLA clock start for an alert?
+A user mistyped their password a few times — is that a false positive?
+What does NTLM error 0xC0000071 mean?
+Is a service account logon with Logon Type 5 normal?
+Why do backup jobs trigger SeBackupPrivilege alerts?
+What is the admin maintenance window and does it need a change ticket?
+How do I tell an approved vulnerability scanner from an attacker's scan?
+How accurate is GeoIP city location?
+A logon from a foreign country came through our VPN — what does the location mean?
+How do Wazuh agent labels add asset context to alerts?
+What are Wazuh rule groups and if_group?
+What does Wazuh sshd rule 5763 mean?
+Where is the SSH auth log on Red Hat?
+What does Wazuh rule 5710 invalid user mean?
+What does sudo rule 5405 user NOT in sudoers mean?
+A new Linux user was added with useradd — what rule fires?
+A process opened lsass.exe with access 0x1F0FFF — what technique is that?
+What is credential stuffing?
+How do attackers bypass UAC with eventvwr.exe?
+What does Windows event 4697 mean?
+What does event 4698 scheduled task created mean?
+Someone changed the audit policy, event 4719 — what now?
+What does Kerberos failure code 0x18 in event 4771 mean?
+What does ticket encryption type 0x17 RC4 in 4769 mean?
+What does Sysmon event 10 ProcessAccess record?
+Is Sysmon event 3 enabled by default?
+What time zone are Sysmon timestamps in?
+Many accounts locked out at once — what do I do?
+How do I triage a port scan alert?
+What are the MITRE ATT&CK enterprise tactics?
+What is the Defense Impairment tactic?
+How do I read the Received headers of a phishing e-mail?
+What is the difference between From and Reply-To in a suspicious e-mail?
+What does SPF softfail mean?
+What is DMARC relaxed alignment?
+What are the six CSF 2.0 functions in incident response?
+What is the difference between an event and an incident?
+What is an indicator of compromise?
+What does the Kerberos KDC do in Active Directory?

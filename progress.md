@@ -24,14 +24,14 @@ Never delete history; append a new session block; keep the Current state table c
 | Feature | State | Left |
 |---|---|---|
 | 01 record identity | done, merged | — |
-| 02 Wave 1 (41) | 40 stable | event-7045 draft (3 TODO-VERIFY: audit setting + field names need a Microsoft source) |
+| 02 Wave 1 (41) | 40 stable | event-7045 draft — TODO-VERIFY closed 2026-11-11 (Microsoft Learn reboot article: SCM + 5 fields); needs Naveed's "approved" |
 | 02 networking (38) | 38 stable, merged | optional reverse links Wave1→networking (`specs/02-soc-corpus/networking-reverse-links.txt`) |
 | 06 CI | done, merged | AC2/AC3 demo (throwaway branches) optional |
 | 05 MCP agent surface | done, merged | abstention gate OFF (calibrate not separable, see `evals/results-2026-11-11.txt`) |
 | 03 site UI | done, merged | mobile Lighthouse perf 74–83 (<90): lazy-hydrate study aids (follow-up) |
 | 04 auth | DEFERRED | resume before Phase 8 (ADR-0004 on `feat/04-auth`) |
 | **02 Wave 2 (55)** | **55 STABLE (approved 2026-11-11T10:43:03Z), decks+quizzes, MCP generation 3** | PR (session 4); optional reverse links onto 20 stable pages (`linkpass-w2.py --stable`, needs Naveed's re-approval) |
-| 02 Wave 3 | not started | plan v4 says 7 docs (soc-fundamentals) — check `specs/00-final-plan.txt` [W3] list |
+| 02 Wave 3 (7) | 7 STABLE (approved 2026-11-11T11:21:41Z), decks+quizzes, MCP generation 4, PR #16 merged | evals follow-up PR (`feat/02-wave3-evals`) |
 
 ### 3. EXACT next steps (owner gave standing approval for all Wave 2/3 process steps)
 1. `git switch feat/02-soc-corpus-wave-2 && git pull`

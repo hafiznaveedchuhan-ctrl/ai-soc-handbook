@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "build_id": "sha256:6c31faf454fadd8757de0fad170aff76d95564347ab19e0bdb37ef8aa302d8f7",
+  "build_id": "sha256:c83fecf4e969a28a453094bb60ba24a5c164c119ccc505d8fb56a4c89b39cacd",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
@@ -8,8 +8,8 @@
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
   "source_commit": "ea0d49788bd6264de30304c959635b5f0ef10d96",
-  "dirty": false,
-  "as_of": "2026-11-11T11:21:45.274Z",
+  "dirty": true,
+  "as_of": "2026-11-11T11:32:30.540Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -1567,7 +1567,7 @@
     },
     {
       "path": "windows-events/event-7045.md",
-      "sha256": "00b756171c29a1633ea2740c27b0b0a437389015872f2d501fbe9996eb0919f1",
+      "sha256": "553e132a006bc0883c15752552b293536838638a9d2253051bb10d70ca49583e",
       "status": "draft",
       "audience": [
         "public"
