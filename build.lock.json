@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:bf62fcba3ef18b55d17c8b124730a96a13c29695470cebfa93f68e03edf64f1c",
+  "build_id": "sha256:33e0bc0a2819288cfce658d66c0125e8fe61c5518489512ef23efbb5b1a74a8b",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "c025cab5be9232edf59e13ba5840167e4b26ee95",
+  "source_commit": "aaca2cab3a7f1d497800079c7af29adf4faa28bf",
   "dirty": true,
-  "as_of": "2026-11-11T05:43:43.122Z",
+  "as_of": "2026-11-11T07:03:45.952Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -46,6 +46,42 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "mitre/t1003-001-lsass-memory.md",
+      "sha256": "5a6362986f056ab5bf541085b5d09ff0e96c5e9466aa79c14ddbe8b893accdee",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1021-001-remote-desktop-protocol.md",
+      "sha256": "ace3e03170cdc2cb33e2cf3c74424b82beb53674bcb6b053a95f645e408e2f8e",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1046-network-service-discovery.md",
+      "sha256": "e0913867dcf40cf3ca86aeca142227c40bf818fa4cc5b26020991db9423f9c8a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1053-005-scheduled-task.md",
+      "sha256": "c129e0fbf5e2d1520363d5a1de516939c31488fddabe01e4d15d9ddf0714786f",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "mitre/t1059-001-powershell.md",
@@ -103,6 +139,15 @@
       ]
     },
     {
+      "path": "mitre/t1110-004-credential-stuffing.md",
+      "sha256": "462a4ba390c411036fbbd881e3ebd6cdcad291dd085ce0219caa13339d2d5a3a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "mitre/t1110-brute-force.md",
       "sha256": "da0bf77c6b51efb03c0d7667fccbda34ca92cce78d5324240609efcdd3a860a0",
       "status": "stable",
@@ -125,6 +170,33 @@
       ]
     },
     {
+      "path": "mitre/t1543-003-windows-service.md",
+      "sha256": "031d85d5021df7329fb9507177cd92c07bd46b2bd6e4a46f482374e59c218db9",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1548-002-bypass-uac.md",
+      "sha256": "657a9d2c72cbd236c9ebef1711084fe73aae1beb1b2fc1f03a045a317bef8a26",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "mitre/t1566-phishing.md",
+      "sha256": "02eba4204bfbe3754b514170a8f976f5a14b860a66891630e74f5ef599b937d6",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "mitre/t1685-005-clear-windows-event-logs.md",
       "sha256": "46eb13c3ca59f968e15d7419b11047c23d46c5411a488df82d7beacc1a59afef",
       "status": "stable",
@@ -134,6 +206,15 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "mitre/t1685-disable-or-modify-tools.md",
+      "sha256": "3f55180b097462521469cd18072388a293047a43c348d56332edff59b24eb270",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "networking/arp.md",
@@ -1331,7 +1412,7 @@
     },
     {
       "path": "mitre/index.md",
-      "sha256": "6e4b86aed623c00390493c121f651f6bd72fd11055ed405eb23fab24b2cfda74"
+      "sha256": "c37b51c29f745d0be4d72a571095652f2a0b8e76606f2adec65fd283bb429019"
     },
     {
       "path": "networking/index.md",
