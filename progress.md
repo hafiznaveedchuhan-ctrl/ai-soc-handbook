@@ -279,3 +279,4 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 ### Exact next step
 - On "push": `git push`, `gh pr create` (feat/02-networking → main), Naveed merges; merge the progress.md blocks from feat/05-agent-surface by hand.
 - Then: Feature 06 (CI) spec, or Wave 2, or Feature 05 if "key done".
+- 2026-11-11: vercel.json `"git": { "deploymentEnabled": false }` cherry-picked here from feat/06-ci-and-release (bbb78f0) so this branch's Vercel check stops failing (MISSING_SERVICE_CONFIG). Deployment = Phase 8.
