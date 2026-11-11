@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 1: Process creation"
 description: "Sysmon event 1 — a new process with its full command line, hashes and ProcessGuid; the most used event in triage and the base of many MITRE detections."
-status: draft
+status: stable
 order: 401
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A program started. You get the full command line, the parent process and a hash of the file.

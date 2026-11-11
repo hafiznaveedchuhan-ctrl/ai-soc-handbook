@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4756: A member was added to a security-enabled universal group"
 description: "Windows Security event 4756 — a member was added to a universal security group; same as 4732 for universal groups, domain groups only; Wazuh rule 60151."
-status: draft
+status: stable
 order: 382
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4756
     title: "Microsoft Learn — Audit Security Group Management"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone was added to a universal security group (forest-wide). Treat admin-granting groups like 4728.

@@ -2,8 +2,9 @@
 type: Policy
 title: "False positives: service accounts"
 description: "Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and the handbook allow-list rule for telling the two apart."
-status: draft
+status: stable
 order: 1101
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-service-accounts
     title: "Microsoft Learn — Service accounts in Windows Server"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A service account is a login used by a program, not a

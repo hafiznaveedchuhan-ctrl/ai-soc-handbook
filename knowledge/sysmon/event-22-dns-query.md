@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 22: DNS query"
 description: "Sysmon event 22 — a DNS query made by a process, successful or failed, cached or not; available from Windows 8.1; ties DNS activity to the program."
-status: draft
+status: stable
 order: 408
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A program looked up a domain name. You see which program asked, even if the connection never happened.

@@ -2,8 +2,9 @@
 type: Definition
 title: "Wazuh rule groups"
 description: "What the <group> element in a Wazuh rule is, how to filter alerts by rule.groups, the authentication groups the sshd rules use, and how if_group and frequency/timeframe build correlation rules."
-status: draft
+status: stable
 order: 604
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-rules-xml
     title: "Wazuh documentation — Rules syntax"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Every Wazuh rule carries one or more group labels, such

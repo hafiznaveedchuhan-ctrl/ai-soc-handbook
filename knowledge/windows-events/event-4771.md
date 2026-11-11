@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4771: Kerberos pre-authentication failed"
 description: "Windows Security event 4771 — the domain controller refused a Kerberos TGT; failure code 0x18 means a wrong password, and Microsoft's advice that N of them in N minutes can mean brute force."
-status: draft
+status: stable
 order: 385
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4771
     title: "Microsoft Learn — 4771(F): Kerberos pre-authentication failed"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A Kerberos logon failed at the domain controller. Failure code 0x18 means the password was wrong — the Kerberos twin of a 4625.

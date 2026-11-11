@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 7: Image loaded"
 description: "Sysmon event 7 — a module (DLL) loaded into a process, with hashes and signature; disabled by default and very noisy unless filtered."
-status: draft
+status: stable
 order: 403
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A DLL was loaded into a running program. Useful to spot unsigned or odd modules in trusted processes.

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4738: A user account was changed"
 description: "Windows Security event 4738 — a user account's properties changed; Microsoft notes some organisations monitor every 4738; the Wazuh rule 60110 (T1098)."
-status: draft
+status: stable
 order: 375
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4738
     title: "Microsoft Learn — 4738(S): A user account was changed"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Something about an account changed — flags, password settings, names. Look at what changed and who changed it.

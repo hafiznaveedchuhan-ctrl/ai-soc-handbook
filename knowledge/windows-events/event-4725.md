@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4725: A user account was disabled"
 description: "Windows Security event 4725 — a user or computer account was disabled; Microsoft's advice for accounts that should never be disabled, and the Wazuh rule (T1098, T1531)."
-status: draft
+status: stable
 order: 373
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4725
     title: "Microsoft Learn — 4725(S): A user account was disabled"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** An account was switched off. Normal for leavers; dangerous if an attacker disables admins or security accounts.

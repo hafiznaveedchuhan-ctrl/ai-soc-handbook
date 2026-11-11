@@ -2,8 +2,9 @@
 type: Policy
 title: "False positives: backup jobs"
 description: "Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and the handbook rule for recognising a scheduled backup."
-status: draft
+status: stable
 order: 1102
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-security-groups
     title: "Microsoft Learn — Active Directory security groups"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A backup reads (and a restore writes) almost every file,

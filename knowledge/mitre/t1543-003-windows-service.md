@@ -2,8 +2,9 @@
 type: Standard
 title: "T1543.003 Create or Modify System Process: Windows Service"
 description: MITRE ATT&CK T1543.003 Windows Service — creating or changing a Windows service so a payload runs at startup; the log sources MITRE names (4697, Sysmon 1/6/13/14) and how 7045 relates.
-status: draft
+status: stable
 order: 761
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1543-003
     title: "MITRE ATT&CK — T1543.003 Create or Modify System Process: Windows Service"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A Windows service starts automatically, usually as

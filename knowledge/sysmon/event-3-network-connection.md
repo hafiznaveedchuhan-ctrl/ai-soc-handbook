@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 3: Network connection"
 description: "Sysmon event 3 — a TCP/UDP connection linked to the process that made it; disabled by default; how it ties network logs back to a program."
-status: draft
+status: stable
 order: 402
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A program made a network connection. Unlike a firewall log, it tells you *which program* did it.

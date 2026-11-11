@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 11: FileCreate"
 description: "Sysmon event 11 — a file created or overwritten; Microsoft's advice to watch autostart, temporary and download folders where malware drops files."
-status: draft
+status: stable
 order: 406
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A file was created or overwritten. Malware has to drop files somewhere, usually in a few predictable folders.

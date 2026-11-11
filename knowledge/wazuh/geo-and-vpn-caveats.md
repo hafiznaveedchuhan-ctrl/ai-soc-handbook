@@ -2,8 +2,9 @@
 type: Standard
 title: "GeoIP and VPN caveats"
 description: "What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and the handbook rule for using location in a verdict."
-status: draft
+status: stable
 order: 607
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-pipeline
     title: Wazuh v4.14.10 — Filebeat alerts ingest pipeline
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** The country next to an IP address is a guess about where

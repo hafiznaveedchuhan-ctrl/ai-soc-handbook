@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4728: A member was added to a security-enabled global group"
 description: "Windows Security event 4728 — a member was added to a domain global security group; same fields and advice as 4732, generated only for domain groups; Wazuh rule 60141."
-status: draft
+status: stable
 order: 381
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4728
     title: "Microsoft Learn — Audit Security Group Management"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone was added to a domain (global) security group. If that group grants admin rights, this is privilege escalation.

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4776: The computer attempted to validate the credentials for an account"
 description: "Windows Security event 4776 — an NTLM credential validation; logged on the computer authoritative for the account; the error codes that mean bad password, bad username, locked, disabled or expired."
-status: draft
+status: stable
 order: 386
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4776
     title: "Microsoft Learn — 4776(S, F): The computer attempted to validate the credentials for an account"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A computer checked a username and password using NTLM. The error code tells you why it failed.

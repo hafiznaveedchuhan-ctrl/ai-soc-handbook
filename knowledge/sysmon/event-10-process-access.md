@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 10: ProcessAccess"
 description: "Sysmon event 10 — a process opening another process; the key signal for LSASS credential theft (T1003.001), best collected with filters."
-status: draft
+status: stable
 order: 405
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** One program opened another program's memory. When the target is lsass.exe, someone may be stealing passwords.

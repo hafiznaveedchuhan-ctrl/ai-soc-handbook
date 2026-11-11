@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: suspicious PowerShell"
 description: "L1 steps for a suspicious PowerShell alert — read the full command line (Sysmon 1 / 4688) and script block (4104), check the parent process and what ran next, and decide using MITRE's PowerShell detection chain."
-status: draft
+status: stable
 order: 805
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: det0455
     title: "MITRE ATT&CK — DET0455 Abuse of PowerShell for Arbitrary Execution"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** PowerShell is a normal admin tool, so the question is

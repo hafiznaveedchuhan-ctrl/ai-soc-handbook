@@ -2,8 +2,9 @@
 type: Standard
 title: "T1053.005 Scheduled Task/Job: Scheduled Task"
 description: MITRE ATT&CK T1053.005 Scheduled Task — abusing Windows Task Scheduler for execution, persistence or privilege escalation; the log sources MITRE names (4698, 4702, Sysmon 1/11/13/14) and what makes a task suspicious.
-status: draft
+status: stable
 order: 760
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1053-005
     title: "MITRE ATT&CK — T1053.005 Scheduled Task/Job: Scheduled Task"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A scheduled task runs a program at a set time or at

@@ -2,8 +2,9 @@
 type: Standard
 title: "T1685 Disable or Modify Tools"
 description: MITRE ATT&CK T1685 Disable or Modify Tools (formerly T1562.001) — stopping or tampering with EDR, antivirus, logging agents and sensors; the signals MITRE names (7045, Sysmon 5/13/14) and why missing telemetry is itself evidence.
-status: draft
+status: stable
 order: 766
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1685
     title: "MITRE ATT&CK — T1685 Disable or Modify Tools"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Attackers switch off or break security tools — the

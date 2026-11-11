@@ -2,8 +2,9 @@
 type: Definition
 title: "Wazuh sshd rules reference"
 description: "One table of the Wazuh v4.14.10 sshd rules an L1 analyst meets — level, what they match, frequency settings and MITRE tags — with links to the Linux auth pages that explain each."
-status: draft
+status: stable
 order: 605
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0095
     title: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** The quick lookup for SSH alerts: find the rule ID from

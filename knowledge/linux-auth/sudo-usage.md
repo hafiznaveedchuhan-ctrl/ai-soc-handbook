@@ -2,8 +2,9 @@
 type: Definition
 title: "sudo usage"
 description: "How Wazuh classifies sudo events — failed password (5401), three failures (5404), user not in sudoers (5405), successful sudo to root (5402) and first-time sudo (5403) — all mapped to T1548.003."
-status: draft
+status: stable
 order: 520
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0020
     title: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** `sudo` runs a command with higher rights. Failed sudo

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4769: A Kerberos service ticket was requested"
 description: "Windows Security event 4769 — a domain controller received a Kerberos service-ticket (TGS) request; ticket encryption types (0x17 = RC4-HMAC), Wazuh rules 60106/60131, and the 2025 field update."
-status: draft
+status: stable
 order: 384
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4769
     title: "Microsoft Learn — 4769(S, F): A Kerberos service ticket was requested"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A user asked the domain controller for a ticket to reach a specific service. The encryption type in the ticket matters: old RC4 tickets stand out.

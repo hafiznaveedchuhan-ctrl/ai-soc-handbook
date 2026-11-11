@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4634: An account was logged off"
 description: "Windows Security event 4634 — a logon session ended; how it pairs with 4624 by Logon ID, how it differs from 4647, and what Microsoft says to watch."
-status: draft
+status: stable
 order: 322
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4634
     title: "Microsoft Learn — 4634(S): An account was logged off"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A logon session ended. Pair it with the 4624 that started it to know how long someone was on.

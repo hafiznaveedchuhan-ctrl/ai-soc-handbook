@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4768: A Kerberos authentication ticket (TGT) was requested"
 description: "Windows Security event 4768 — a domain controller issued (or refused) a Kerberos TGT; the start of every domain logon, Microsoft's high-value-account advice, and the 2025 field update."
-status: draft
+status: stable
 order: 383
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4768
     title: "Microsoft Learn — 4768(S, F): A Kerberos authentication ticket (TGT) was requested"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A user asked the domain controller for a Kerberos 'login ticket'. It is the first step of a domain logon and is logged only on domain controllers.

@@ -2,8 +2,9 @@
 type: Standard
 title: "Asset and user context in alerts"
 description: "How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and the set of labels and lists for this handbook."
-status: draft
+status: stable
 order: 608
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: nist-sp800-61r3
     title: NIST SP 800-61 Rev. 3 (April 2025)
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** The same alert means different things on a domain

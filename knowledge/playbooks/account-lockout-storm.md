@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: account lockout storm"
 description: "L1 steps when many 4740 lockouts arrive together — tell a stale-password device from password guessing or spraying, using the Caller Computer Name, the 4625/4771 failures behind the lockouts and Wazuh 60115."
-status: draft
+status: stable
 order: 807
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4740
     title: "Microsoft Learn — 4740(S): A user account was locked out"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Many accounts locked at once is either one broken

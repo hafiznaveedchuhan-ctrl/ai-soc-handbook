@@ -2,8 +2,9 @@
 type: Policy
 title: "Severity response matrix (SLA)"
 description: "How fast the SOC acts on each severity — acknowledge, triage note, escalation — as the handbook matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model."
-status: draft
+status: stable
 order: 1200
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: nist-sp800-61r3
     title: NIST SP 800-61 Rev. 3 (April 2025)
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** The severity word (Low → Critical) decides the clock. A

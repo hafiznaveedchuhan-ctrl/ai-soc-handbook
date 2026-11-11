@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: new service or scheduled task"
 description: "L1 steps for a new service (4697 / 7045) or scheduled task (4698) — check the binary path and task location against Microsoft's guidance, find who created it, and escalate on unexpected persistence."
-status: draft
+status: stable
 order: 806
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4697
     title: "Microsoft Learn — 4697(S): A service was installed in the system"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Services and scheduled tasks both make a program run

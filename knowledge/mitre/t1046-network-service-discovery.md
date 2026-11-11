@@ -2,8 +2,9 @@
 type: Standard
 title: "T1046 Network Service Discovery"
 description: MITRE ATT&CK T1046 Network Service Discovery — scanning hosts for listening services (port, vulnerability, wordlist scans); the process + connection pattern MITRE correlates and how it shows up in firewall and flow logs.
-status: draft
+status: stable
 order: 764
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1046
     title: "MITRE ATT&CK — T1046 Network Service Discovery"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Before attacking, adversaries find out which services

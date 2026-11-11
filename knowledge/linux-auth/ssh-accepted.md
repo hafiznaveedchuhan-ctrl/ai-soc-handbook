@@ -2,8 +2,9 @@
 type: Definition
 title: "SSH accepted (successful login)"
 description: "How Wazuh records a successful SSH login (rule 5715, level 3, mapped to T1078 and T1021), and when a normal-looking success is the most important line in a brute-force story."
-status: draft
+status: stable
 order: 511
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0095
     title: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone logged in over SSH successfully. Usually normal —

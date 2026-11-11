@@ -2,8 +2,9 @@
 type: Standard
 title: "T1110.004 Brute Force: Credential Stuffing"
 description: MITRE ATT&CK T1110.004 Credential Stuffing — username/password pairs from unrelated breach dumps tried against your accounts; how it differs from guessing and spraying, and how 4625 failures from one source with many distinct pairs reveal it.
-status: draft
+status: stable
 order: 704
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1110-004
     title: "MITRE ATT&CK — T1110.004 Brute Force: Credential Stuffing"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Attackers take username + password pairs leaked from

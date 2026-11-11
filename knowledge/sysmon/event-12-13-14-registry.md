@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon events 12, 13, 14: Registry"
 description: "Sysmon registry events — 12 key/value create and delete, 13 value set, 14 rename; Microsoft's abbreviated root key names (HKLM, HKU, HKCR) and autostart monitoring."
-status: draft
+status: stable
 order: 407
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Registry keys or values were created, changed, deleted or renamed. Autostart keys are where persistence hides.

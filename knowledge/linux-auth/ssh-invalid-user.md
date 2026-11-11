@@ -2,8 +2,9 @@
 type: Definition
 title: "SSH invalid (non-existent) user"
 description: "Wazuh rules 5710 and 5712 for SSH attempts against usernames that do not exist, and 5718/5719 for denied users — the clearest sign of automated username guessing."
-status: draft
+status: stable
 order: 512
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0095
     title: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone tried to log in with a username that does not

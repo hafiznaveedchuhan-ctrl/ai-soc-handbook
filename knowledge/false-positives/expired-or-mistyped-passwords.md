@@ -2,8 +2,9 @@
 type: Policy
 title: "False positives: expired or mistyped passwords"
 description: "How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and the handbook threshold for closing such alerts."
-status: draft
+status: stable
 order: 1100
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4776
     title: "Microsoft Learn — 4776(S, F): The computer attempted to validate the credentials for an account"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** People mistype passwords, and passwords expire. A few

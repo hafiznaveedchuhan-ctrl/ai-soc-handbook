@@ -2,8 +2,9 @@
 type: Definition
 title: "New Linux user or group (useradd, gpasswd)"
 description: "Wazuh rules for account changes on Linux — new user (5902, T1136), new group (5901), useradd failed (5905), user added to a group (2960) and to the sudo group (2961)."
-status: draft
+status: stable
 order: 530
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0020
     title: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A new user account or group appeared on a Linux server,

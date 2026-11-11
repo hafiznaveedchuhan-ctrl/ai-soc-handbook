@@ -2,8 +2,9 @@
 type: Definition
 title: "SSH failed password"
 description: "What an sshd authentication failure looks like to Wazuh (rules 5716, 5760), when repeated failures become a brute-force alert (5720, 5763: 8 from one source), and how to triage it."
-status: draft
+status: stable
 order: 510
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0095
     title: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone tried to log in over SSH and the password (or

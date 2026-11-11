@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4722: A user account was enabled"
 description: "Windows Security event 4722 — a user or computer account was enabled; Microsoft's advice for high-value and never-enable accounts, and the Wazuh rule."
-status: draft
+status: stable
 order: 371
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4722
     title: "Microsoft Learn — 4722(S): A user account was enabled"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A disabled account was switched back on. Attackers re-enable old accounts to get in without creating new ones.

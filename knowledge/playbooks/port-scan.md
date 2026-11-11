@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: port scan"
 description: "L1 steps for a port or service scan — identify the scanning host and process, separate an authorised scanner from an intruder, and check whether anything after the scan succeeded."
-status: draft
+status: stable
 order: 808
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: det0376
     title: "MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A scan is someone knocking on many doors to see which

@@ -2,8 +2,9 @@
 type: Document
 title: "Sysmon overview"
 description: "What Sysmon (System Monitor) is, where its events are written (Microsoft-Windows-Sysmon/Operational), that timestamps are UTC, which events are off by default, and which Sysmon event IDs this handbook covers."
-status: draft
+status: stable
 order: 400
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Sysmon is a free Microsoft tool that records much more

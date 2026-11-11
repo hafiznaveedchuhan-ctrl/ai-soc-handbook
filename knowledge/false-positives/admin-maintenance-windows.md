@@ -2,8 +2,9 @@
 type: Policy
 title: "False positives: admin maintenance windows"
 description: "How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and the handbook change-ticket rule for maintenance windows."
-status: draft
+status: stable
 order: 1103
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-rules-syntax
     title: "Wazuh documentation — Rules syntax"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** When admins patch servers, they create accounts, restart

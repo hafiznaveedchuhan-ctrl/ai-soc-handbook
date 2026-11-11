@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4719: System audit policy was changed"
 description: "Windows Security event 4719 — the audit policy changed; always logged, Microsoft's advice that every change should be planned, and why turning auditing off is a defense-evasion signal."
-status: draft
+status: stable
 order: 397
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4719
     title: "Microsoft Learn — 4719(S): System audit policy was changed"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone changed what Windows records. Turning auditing off blinds the SOC, so an unplanned change matters.

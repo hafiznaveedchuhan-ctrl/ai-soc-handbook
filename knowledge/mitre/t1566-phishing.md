@@ -2,8 +2,9 @@
 type: Standard
 title: "T1566 Phishing"
 description: MITRE ATT&CK T1566 Phishing — e-mailed or third-party messages with malicious attachments or links; the post-delivery signals MITRE correlates (new files, new processes, network activity) and the e-mail checks in this handbook.
-status: draft
+status: stable
 order: 767
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1566
     title: "MITRE ATT&CK — T1566 Phishing"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Phishing is a message that tricks someone into opening

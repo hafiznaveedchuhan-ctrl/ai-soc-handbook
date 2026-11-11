@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4698: A scheduled task was created"
 description: "Windows Security event 4698 — a scheduled task was created; Microsoft's advice to watch tasks in the Task Scheduler Library root, the Wazuh rule, and the T1053.005 link."
-status: draft
+status: stable
 order: 396
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4698
     title: "Microsoft Learn — 4698(S): A scheduled task was created"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A scheduled task was created. Malware often uses tasks to come back after a reboot.

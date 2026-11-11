@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4726: A user account was deleted"
 description: "Windows Security event 4726 — a user account was deleted; Microsoft's monitoring advice and the shared Wazuh rule 60111."
-status: draft
+status: stable
 order: 374
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4726
     title: "Microsoft Learn — 4726(S): A user account was deleted"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** An account was deleted. Attackers delete accounts they created to cover tracks, or delete admins to lock defenders out.

@@ -2,8 +2,9 @@
 type: Standard
 title: "MITRE ATT&CK in Wazuh"
 description: "How Wazuh maps alerts to MITRE ATT&CK — rule <mitre> IDs, the rule.mitre fields in an alert, the dashboard module's Framework, Dashboard and Intelligence tabs — and how to use the mapping in triage without over-trusting it."
-status: draft
+status: stable
 order: 606
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-mitre
     title: "Wazuh documentation — MITRE ATT&CK framework"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Many Wazuh rules carry a MITRE technique ID. The alert
