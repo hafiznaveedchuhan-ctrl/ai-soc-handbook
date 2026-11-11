@@ -1,6 +1,6 @@
 # Feature 04 — Auth: spec + tasks
 
-- Status: STOP-04A — owner chooses the provider (ADR-0004, `history/adr/0004-auth-provider.md`)
+- Status: DEFERRED by the owner (2026-11-11). ADR-0004 stays Proposed; resume before Phase 8.
 - Branch: `feat/04-auth` · Plan of record steps 30–33
 
 ## Scope

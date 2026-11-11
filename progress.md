@@ -343,3 +343,4 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - Feature 03 PR #12 MERGED by Naveed.
 ### Session 3 — Feature 04 started (2026-11-11, branch feat/04-auth)
 - ADR-0004 (Proposed): providers compared against the scaffold's needs (OIDC discovery, public PKCE client, browser CORS at token endpoint, later RS256 + aud + M2M). Recommendation Auth0 (ksor has a tested recipe); fallback Keycloak. STOP-04A: owner chooses.
+- Owner chose "abhi login skip karo": Feature 04 deferred (ADR-0004 Proposed-deferred). Next: Wave 2.

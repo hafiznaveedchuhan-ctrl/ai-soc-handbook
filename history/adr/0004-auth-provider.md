@@ -1,6 +1,6 @@
 # ADR-0004 — Sign-in provider for the site and the MCP door
 
-- Status: **Proposed** — waiting for the owner's choice (STOP, plan step 30)
+- Status: **Proposed — deferred** (owner 2026-11-11: "abhi login skip karo"; revisit before Phase 8)
 - Date: 2026-11-11
 - Deciders: human:naveed
 
