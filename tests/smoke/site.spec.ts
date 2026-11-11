@@ -62,3 +62,20 @@ test("markdown twin of a page is served", async ({ request }) => {
   expect(res.status()).toBe(200);
   expect(await res.text()).toContain("4740");
 });
+
+test("quick triage lookup finds an event by its ID and opens it", async ({ page }) => {
+  await page.goto("/");
+  const box = page.getByRole("combobox");
+  await page.keyboard.press("/");
+  await expect(box).toBeFocused();
+  await box.fill("4625");
+  const first = page.getByRole("option").first();
+  await expect(first).toContainText("4625");
+  await box.press("Enter");
+  await expect(page).toHaveURL(/event-4625/);
+});
+
+test("navy dark is the default theme", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveClass(/dark/);
+});
