@@ -1,74 +1,59 @@
 # progress.md — session log
 
-Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt` (v4).
+Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt` (v6).
 Never delete history; append a new session block; keep the Current state table current.
 
-> **NEW SESSION? Read "HANDOFF — start here" (directly below) first — it is current as of end of session 3 (2026-11-11).**
+> **NEW SESSION? Read "HANDOFF — FINAL" directly below — project closed 2026-11-11; next work is the AI-workers project.**
 
-## HANDOFF — start here (written end of session 3, 2026-11-11 ~07:20Z)
+## HANDOFF — FINAL (end of session 4, 2026-11-11 ~13:10Z) — PROJECT CLOSED
 
-> New session: read THIS section fully, then `git switch feat/02-soc-corpus-wave-2`, then do §3.
-> Older "HANDOFF (session 2)" text was replaced; all history blocks below are unchanged.
+> This handbook project is **complete for its scope**. Next work happens in the **AI-workers project
+> (Phase 3)**, which reads this record over MCP. Read this section first; history below is unchanged.
 
-### 1. Git state
-| Branch | Head | Pushed | Status |
-|---|---|---|---|
-| `main` | `914e619`+ | yes | F01, Wave 1, networking (PR #8), CI (#10), F05 MCP (#11), F03 UI (#12), F04 ADR (#13), Wave 2 B1–B5 drafts (#14) |
-| `feat/02-soc-corpus-wave-2` | = `main` (`914e619`) | yes | **CURRENT WORK BRANCH** — B1–B5 (47 drafts) already merged to main via PR #14 (mid-wave, drafts are not published); continue B6+ here and open a NEW PR at the end |
-| `feat/04-auth` | `d55b345` | merged (PR #13) | ADR-0004 (Auth0 recommended) — **DEFERRED by owner** ("abhi login skip karo") |
-| old branches (`feat/02-networking`, `feat/03-site-ui`, `feat/05-agent-surface`, `feat/06-ci-and-release`) | merged | — | ignore |
-
-`gh` is logged in (hafiznaveedchuhan-ctrl). Naveed merges PRs himself on GitHub. CI on every PR: Format checker, gitleaks, Build, Playwright smoke (all must be green). Vercel auto-deploy is OFF (`vercel.json` git.deploymentEnabled=false) until Phase 8.
-
-### 2. Feature status (overall ≈ 70%)
-| Feature | State | Left |
+### 1. Final state in one table
+| Area | State | Evidence |
 |---|---|---|
-| 01 record identity | done, merged | — |
-| 02 Wave 1 (41) | 40 stable | event-7045 draft — TODO-VERIFY closed 2026-11-11 (Microsoft Learn reboot article: SCM + 5 fields); needs Naveed's "approved" |
-| 02 networking (38) | 38 stable, merged | optional reverse links Wave1→networking (`specs/02-soc-corpus/networking-reverse-links.txt`) |
-| 06 CI | done, merged | AC2/AC3 demo (throwaway branches) optional |
-| 05 MCP agent surface | done, merged | abstention gate OFF (calibrate not separable, see `evals/results-2026-11-11.txt`) |
-| 03 site UI | done, merged | mobile Lighthouse perf 74–83 (<90): lazy-hydrate study aids (follow-up) |
-| 04 auth | DEFERRED | resume before Phase 8 (ADR-0004 on `feat/04-auth`) |
-| **02 Wave 2 (55)** | **55 STABLE (approved 2026-11-11T10:43:03Z), decks+quizzes, MCP generation 3** | PR (session 4); optional reverse links onto 20 stable pages (`linkpass-w2.py --stable`, needs Naveed's re-approval) |
-| 02 Wave 3 (7) | 7 STABLE (approved 2026-11-11T11:21:41Z), decks+quizzes, MCP generation 4, PR #16 merged | evals follow-up PR (`feat/02-wave3-evals`) |
+| Record | **141/141 documents `stable`**, all approved by human:naveed; every one with flashcards (5) + quiz (6) | `npx ksor build` → "141 admitted"; `specs/02-soc-corpus/*-review.txt` |
+| Folders | orientation, rules-map, windows-events, sysmon, linux-auth, wazuh, mitre, playbooks, enrichment, triage-note, false-positives, sla, networking (38), soc-fundamentals (7) | `knowledge/` |
+| Owner policy | interviews I1 (2026-11-10) + I2 (2026-11-11), cited as `human:naveed interview <date>` | `specs/02-soc-corpus/interview-i1.md`, `interview-i2.md` |
+| MCP door (agents) | runs **locally** (`npm run serve`, 127.0.0.1:8080, `KSOR_AUTH=disabled-local`); Neon db `soc_handbook_openai`, **generation 7** (155 nodes, 950 chunks), OpenAI `text-embedding-3-small`/1536 | `evals/results-2026-11-11-polish2.txt` |
+| Retrieval evals | **in-scope 80/80 (100%)** (Wave 1 40 + Wave 2 30 + Wave 3 10) | same file; `node evals/run-evals.mjs` |
+| Abstention gate | **OFF — decision C FINAL** (min in-corpus 0.484 < max out-of-corpus 0.650; security-adjacent probes cannot be split by one vector floor). Agent declines via `instance.md` scope text; envelopes say `gate: "off"` | `instance.md` comment; plan v6 |
+| Website | **LIVE** https://ai-soc-handbook.vercel.app (static site; Vercel project `ai-soc-handbook`, team `hafiznaveedchuhans-projects`) | production deploy of `main` dbd4d98 |
+| Login | **button only** ("Sign in" → "not connected yet" notice); provider deliberately not wired | `system/site/components/sign-in.tsx` |
+| Mobile speed (accepted by owner) | home **94**, doc pages **81–84**, desktop 95+ | `specs/03-site-ui/lighthouse.txt` |
+| CI | format checker, gitleaks, build (full history), Playwright smoke **22 tests** — all green | `.github/workflows/ci.yml`, `tests/smoke/site.spec.ts` |
+| PRs | #1–#24 merged; this close-out PR is the last | GitHub |
 
-### 3. EXACT next steps (updated end of session 4, 2026-11-11)
-Feature 02 is DONE (141/141 stable, MCP generation 5, evals 77/80). Owner chooses what is next:
-- **A. Retrieval polish** (needs Naveed's re-approval of the touched STABLE pages): add 0xC0000071 /
-  0xC0000224 rows to event-4776; strengthen wording in playbooks/added-to-admin-group and
-  rules-map/severity-model; apply Wave 2 reverse links (`python3 -I scripts/authoring/linkpass-w2.py --stable`).
-  Then refresh + re-run evals.
-- **B. Feature 04 auth** (ADR-0004 recommends Auth0, on `feat/04-auth`, deferred by owner).
-- **C. Phase 8 deploy** (site + MCP door; Vercel auto-deploy is off in `vercel.json`).
-- Abstention gate: stays OFF until a calibration separates (needs more scope-adjacent in-corpus questions).
+### 2. For the AI-workers project (Phase 3) — what to take from here
+- **Read the record over MCP**, not from files: tools `search` / `read` / `outline` (`system/gateways/content.ts`). Every hit carries `provenance.stable_id` (`knowledge/<path>`) — cite it.
+- **Scope + refusal live in `instance.md`'s body** (it is the MCP server's instructions). The gate is off, so the worker LLM must decline out-of-scope (pentest, exploitation, malware RE, vendor query languages, legal, pricing) itself.
+- **Invariants the workers must keep** (`knowledge/rules-map/invariants.md`): human makes the final decision; AI is read-only and never blocks/deletes/changes; mask IPs/users/hosts before any LLM call (`rules-map/data-handling.md`); every claim cites a page or says "not in this record".
+- **Moved to Phase 3 (owner decision):** login provider (ADR-0004 recommends Auth0; `NEXT_PUBLIC_KSOR_SSO_URL` + client id + redirect URI turn the existing button into real OAuth); **public MCP door** (needs auth — `KSOR_SSO_URL`, `KSOR_MCP_RESOURCE_URL`, `KSOR_JWT_ALLOWED_AUDIENCES` — and DB/OpenAI env vars on the host; restore notes for the Vercel `door` service in `specs/00-final-plan.txt` "PHASE 8 NOTE"); `KSOR_SNAPSHOT_KEYS` for more than one replica.
 
-### 4. Rules Naveed set (never break)
-- Session protocol: start by reading this HANDOFF and telling Naveed in 3 lines where we are; end by updating progress.md (`.claude/rules/session-protocol.md`).
-- **Standing approval (2026-11-11) for Wave 2/3:** no per-batch STOPs, no URL-list approval, no per-command "haan" (refresh/calibrate included). STILL REQUIRED: his explicit "approved …" before any `ksor.approval` (never approve on his behalf); owner-policy numbers confirmed by him; push only when his message says push (he said "push" for this session's work).
-- Never open/print `.env`; check names only (`grep -c '^NAME=.' .env`). Keys pasted in chat (OpenAI, Anthropic) — remind him to rotate them.
-- Every claim cited from a fetched Tier-1 source; unconfirmed → TODO-VERIFY (blocks approval); no employer/client names; numbers computed (Python `ipaddress`), never invented. Link only to pages that EXIST.
-- He writes Roman Urdu/English; answer in simple Roman Urdu. Plans as real .txt files with absolute paths.
+### 3. How to change the record later (pipeline that worked)
+1. Fetch Tier-1 sources to the scratchpad → text (`scripts/authoring/html2txt.py`, `pdf2txt.py`).
+2. Write pages with a generator (`scripts/authoring/example-batch-generator-*.py`), `status: draft`.
+3. `node .agents/skills/add-sources/verify.mjs <source.txt> <page.md>`; `npm run check`; `npx ksor build`.
+4. Decks + quizzes (`study_writer.py`, `study-*.py`); `python3 -I scripts/authoring/quiz_precheck.py knowledge/**/*.quiz.yaml`.
+5. `KSOR_DRAFTS=show npm run build` (in a git worktree if `npm run dev` runs) — the only build that audits draft quizzes.
+6. Review sheet → owner's explicit "approved" → `scripts/authoring/approve-pages.py` (drafts) or `polish-stable.py`-style re-stamp (stable edits).
+7. `npm run refresh` (NODE_OPTIONS below) → `npx ksor calibrate --instance instance.md --check` → `npm run serve` + `node evals/run-evals.mjs`.
+8. PR → owner merges → **deploy is manual** (Vercel git deploys are off): production deploy of `main` via Vercel MCP / dashboard "Redeploy".
 
-### 5. Environment facts
-- `.env`: `KSOR_DB_URL` → Neon db **soc_handbook_openai** (ACTIVE, generation 2, 88 nodes, 590 chunks, OpenAI `text-embedding-3-small` @1536). Also kept: `KSOR_DB_URL_GEMINI_OLD` (neondb, old Gemini tenant), `KSOR_DB_URL_OPENAI_LARGE` (soc_handbook_large, test). Keys: `OPENAI_API_KEY` (works), `ANTHROPIC_API_KEY` (unused by ksor), `GEMINI_API_KEY` (invalid). `KSOR_AUTH=disabled-local`.
-- `instance.md`: `embedding: {provider: openai, model: text-embedding-3-small, dim: 1536}`; no `retrieval:` block on purpose (gate off).
-- WSL + Neon: Node needs `--network-family-autoselection-attempt-timeout=3000` (via NODE_OPTIONS or flag) or connects time out. Sourcing `.env` in bash breaks the DSN (`&`) — read it from Node instead.
-- learn.microsoft.com sometimes fails DNS from WSL (curl exit 6) — retry later with `curl -4`.
+### 4. Rules (never break)
+- Never stamp `ksor.approval` without Naveed's explicit "approved …"; never fill gaps from general knowledge (gap = open question in the page).
+- Push only when his message says push; he merges PRs himself. After a PR is merged, **never push more commits to that branch** — they are lost (happened twice: fixed by cherry-pick).
+- Never open/print `.env`; check names only. Keys pasted in chat earlier (OpenAI, Anthropic) — **rotate them**.
+- Answer in simple Roman Urdu; plans as real `.txt` files with absolute paths.
 
-### 6. Gotchas (save time)
-- **Never run `npm run build` while Naveed's `npm run dev` runs** — it re-stages `system/site/.staged-knowledge/` without drafts and his site loses draft pages. If it happened: `cd system/site && NODE_ENV=development npx fumadocs-mdx` regenerates `.source` without stopping his server. For builds while dev runs: `git worktree add <scratchpad>/wt HEAD && cd <wt> && npm ci && npm run build`.
-- `npx ksor build` alone (indexes + lock) is safe while dev runs; run it after adding pages (fixes `ksor-index-stale`).
-- Generators: quote title/description with `json.dumps` (a `": "` breaks YAML). Footnote ids must match `sources[].id` (`ksor-footnote-unkeyed`).
-- MITRE moved event IDs to Detection Strategy pages (`attack.mitre.org/detectionstrategies/DET####/`) — cite them as separate sources. T1562.001 → T1685. Microsoft has no pages for 4728/4756 (use "Audit Security Group Management").
-- Quiz audit rules: answer position ≤60%, longest/shortest option wins ≤60%, no run >3 → `quiz_precheck.py`; lengthen distractors to fix length bias.
-- Playwright smoke: `npm run smoke` (needs a built `system/site/out`, serves on :4173). Chromium for 1.64.1: `npx playwright install chromium`.
-- `build.lock.json` conflicts on merges: take main's (`git checkout --theirs`), it is regenerated. `progress.md` conflicts: keep both blocks.
-
-### 7. Where things are
-- Plan of record `specs/00-final-plan.txt`; Wave 2 batches `specs/02-soc-corpus/wave2-plan.txt`; source log `specs/02-soc-corpus/sources.md` (Wave 2 rows still to add).
-- Authoring helpers `scripts/authoring/` (generators per batch `example-batch-generator-*.py`, `study_writer.py`, `quiz_precheck.py`, `html2txt.py`, `pdf2txt.py`). Scratchpad is wiped between sessions — re-fetch sources.
-- Feature specs: `specs/03-site-ui/`, `specs/04-auth/`, `specs/05-agent-surface/`, `specs/06-ci-and-release/`; ADRs `history/adr/0001–0004`.
+### 5. Environment facts and gotchas
+- WSL + Neon: Node needs `NODE_OPTIONS="--network-family-autoselection-attempt-timeout=3000"`. Do not `source .env` in bash (DSN has `&`).
+- `ksor calibrate` without `--queries-file`/`--ooc-file` calls Gemini (key invalid) → always pass the files in `evals/`.
+- Vercel: root `Dockerfile` makes Vercel detect "container" → `vercel.json` pins `framework: null`; shallow clone breaks `ksor build` (`ksor-ledger-unverifiable`) → build command unshallows first. `ai-soc-handbook.vercel.app` is public; team-suffixed and preview URLs need a Vercel login. Vercel MCP may not update project settings (403); Claude's production deploys need the owner's explicit "deploy".
+- Never `npm run build` while Naveed's `npm run dev` runs (re-stages without drafts). `pkill -f <pattern>` kills the calling shell — stop servers by PID (`ss -ltnp | grep :8080`).
+- Lighthouse: `npx -y lighthouse@13.6.0` with `CHROME_PATH=~/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome`, gzip static server, median of 3 runs (variance ±5).
+- Neon project also holds `neondb` (old Gemini tenant) and `soc_handbook_large` (test) — can be dropped.
 
 ---
 ## Current state (kept for history — see HANDOFF table above)
@@ -438,3 +423,50 @@ Naveed says "push" → `git push` + `gh pr create` (Wave 2: 55 stable pages + st
 - Vercel: previews READY (feat branch dpl_8zYGjmCTwnZ4EXAfkhfA76CG7GEi; main dpl_HX4HCemJXr4YRsMeigNs2mAB9gM1). Production deploy by Claude was DENIED by the auto-mode safety check → owner promotes in the Vercel dashboard (or allows the action).
 - Vercel Authentication (SSO) is ON for the project ("all except custom domains") → *.vercel.app URLs need a Vercel login. Owner to decide public vs private.
 - Abstention gate: stays OFF (decision C, Feature 05). Stable-page polish (`scripts/authoring/polish-stable.py`, 22 pages) waits for owner's "approved polish".
+
+## Session 4 — FINAL END block (2026-11-11 ~13:10Z)
+
+### Last updated
+2026-11-11 ~13:10Z, session 4 (close-out).
+
+### Done this session (PRs merged: #15–#24)
+- Wave 2 (55) + B6 owner policy (I2) + Wave 3 (7) + event-7045 → all approved; record 141/141 stable.
+- Link pass, 62 decks + quizzes, polish 1 (22 stable pages, 44 reverse links, 4776 codes) and polish 2 (2 headings) — both owner-approved.
+- Site: login button (no provider), lazy study aids, lazy search (preload off), no link prefetch → mobile home 94, docs 81–84.
+- Vercel: static site live at https://ai-soc-handbook.vercel.app (production = main dbd4d98).
+- MCP generations 3 → 7; evals 80/80 in-scope.
+- Close-out branch `chore/final-handoff`: decision C final (instance.md, plan v6), final HANDOFF, 80/80 results file.
+
+### Current state (features)
+| Feature | State |
+|---|---|
+| 01 record identity | done |
+| 02 corpus (Wave 1, networking, Wave 2, Wave 3) | done — 141 stable |
+| 03 site UI | done — mobile accepted by owner |
+| 04 auth | button only (owner); provider → Phase 3 |
+| 05 MCP agent surface | done locally; gate OFF (decision C final); public door → Phase 3 |
+| 06 CI | done |
+| Phase 8 deploy | static site live; door not deployed (Phase 3) |
+
+### Decisions taken
+- Login = button only; provider + public MCP door move to the AI-workers project (owner, 2026-11-11).
+- Abstention gate: decision C final (OFF). Mobile speed accepted as is (owner: "MOBILE SPEED THK HA").
+- Vercel deploys the static site only; deploys are manual (git deploys off).
+
+### Errors hit + fixes
+- Vercel `MISSING_SERVICE_CONFIG` (root Dockerfile) → `framework: null`, site-only `vercel.json`.
+- Vercel `ksor-ledger-unverifiable` (shallow clone) → build command unshallows first.
+- Commits pushed after a PR merged were lost twice → cherry-picked onto the next branch.
+- Claude's production deploy was blocked once by the auto-mode safety check → deployed after the owner's explicit "publish"/"deploy".
+
+### Pending / blocked
+- None for this project. Phase 3 (AI workers): login provider, public MCP door with auth.
+
+### TODO-VERIFY list
+- None open (event-7045 closed; its enabling setting is an explicit open question in the page, not a TODO).
+
+### Exact next step for the next session
+Start the AI-workers project; connect it to this record's MCP door (local first: `npm run serve`).
+
+### Naveed's manual actions needed
+- Merge the close-out PR. Rotate the OpenAI and Anthropic keys pasted in chat. Optionally drop Neon dbs `neondb` and `soc_handbook_large`.
