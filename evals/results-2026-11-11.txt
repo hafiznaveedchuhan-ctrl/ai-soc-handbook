@@ -1,0 +1,22 @@
+FEATURE 05 — FIRST SERVED RUN (2026-11-11)
+Store: Neon database soc_handbook_openai (new; the old neondb holds a Gemini-space tenant, kept untouched).
+Embedding: openai text-embedding-3-small, 1536 dims. Generation 1: 88 nodes, 590 chunks, 0 failed, flipped.
+Server: npm run serve, 127.0.0.1:8080, KSOR_AUTH=disabled-local. /health: store reachable, boot checks passed.
+         /ready: true. abstain_gate: OFF.
+
+CALIBRATE (zero-LLM door, --queries-file evals/calibrate-in.txt = 40 Wave 1 + 15 networking, --ooc-file 20):
+  AURC 0.0424; separation margin -0.133 -> NOT separable.
+  weakest in-corpus 0.425 (SPF softfail); strongest OOC 0.558 (Palo Alto firewall policy).
+  ksor refused to print a floor (any number would leak). Floor NOT pasted; gate stays OFF.
+  NOT pasted either: `vector_floor: uncalibrated` (that makes every serve refuse to boot).
+
+EVALS (evals/run-evals.mjs, k from the gateway):
+  in-scope     39/40 (98%)  target >= 90%  -> MET
+               miss: "What do I do when an account is added to Administrators?" (top 3: t1136-001, new-local-account, event-4720;
+                     expected playbooks/added-to-admin-group)
+  out-of-scope  0/20 (0%)   target >= 90%  -> NOT MET (expected: no floor, so nothing abstains)
+
+NEXT OPTIONS (owner decides):
+  A. Widen probes as ksor advises: scope-adjacent near-miss OOC questions + more in-corpus questions; re-run calibrate.
+  B. Larger embedding model (text-embedding-3-large) for better separation — costs more, needs a new database again.
+  C. Keep the gate OFF and rely on instance.md's scope text (the MCP instructions) for the agent to decline.

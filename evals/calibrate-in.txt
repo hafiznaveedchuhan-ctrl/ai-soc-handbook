@@ -39,3 +39,19 @@ How do I read an AbuseIPDB abuse confidence score?
 Is 172.20.5.4 a private IP address?
 What fields does a triage note contain?
 What is a benign true positive?
+# Networking (added 2026-11-11 after the 38 networking pages were approved)
+Which UDP and TCP port does DNS use?
+What does DNS response code NXDomain mean?
+What is the default port for Remote Desktop Protocol?
+Which IP protocol number is OSPF?
+What are the signs of DNS tunnelling according to NIST?
+What is the difference between an IDS and an IPS?
+What does deny by default mean for a firewall?
+Which private IPv4 ranges are defined in RFC 1918?
+How is the syslog PRI value calculated?
+What does an SPF softfail result mean?
+Which ports does DHCP use for IPv4?
+What does a TCP SYN answered by RST mean?
+What is the X-Forwarded-For header and can it be trusted?
+Which UDP ports does IPsec IKE use?
+What is ARP cache poisoning?

@@ -319,3 +319,6 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - `ksor calibrate` must use the zero-LLM door (`--queries-file evals/calibrate-in.txt`), because question synthesis is Gemini-only.
 - Merged origin/main into feat/05-agent-surface (progress.md: main's version + this branch's notes appended; build.lock.json from main).
 - Next: Naveed's "haan" → `npm run refresh` (ingest) → "haan" → `npm run serve` → "haan" → calibrate → evals.
+- Feature 05 run (Naveed: "baqi k lya haan"): new Neon database `soc_handbook_openai` (old neondb kept; old DSN in .env as KSOR_DB_URL_GEMINI_OLD) — needed because the tenant had persisted gemini-embedding-001. WSL gotcha: Node needs `--network-family-autoselection-attempt-timeout=3000` (NODE_OPTIONS) or Neon connects time out.
+- provision OK; refresh OK: generation 1, 88 nodes, 590 chunks, 0 failed; serve OK (/health reachable, /ready true).
+- calibrate: NOT separable (in-corpus min 0.425 vs OOC max 0.558) → no floor; gate OFF. evals: in-scope 39/40 (98%), OOC 0/20. Details evals/results-2026-11-11.txt. Owner to choose A/B/C there.
