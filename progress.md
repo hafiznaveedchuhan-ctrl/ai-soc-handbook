@@ -431,3 +431,10 @@ Naveed says "push" → `git push` + `gh pr create` (Wave 2: 55 stable pages + st
 
 ### Naveed's manual actions
 - Choose next: A / B / C (HANDOFF §3). Rotate the OpenAI and Anthropic keys pasted in chat.
+
+## Session 4 — Phase 8 + finish block (2026-11-11)
+- Owner: login = button only, provider later in Phase 3 (AI workers); "baqi kaam 100%"; "deploy vercel".
+- PR #20 merged (bdfd4e3): sign-in button with "not connected yet" notice; lazy flashcards/quiz (mobile doc 74→76–77, TBT −25%; ≥90 needs a lighter docs shell — not done); smoke 21 tests; vercel.json = static site only (framework null; build unshallows clone for ksor ledger check). MCP door NOT deployed (needs auth + cost guard) — restore notes in specs/00-final-plan.txt.
+- Vercel: previews READY (feat branch dpl_8zYGjmCTwnZ4EXAfkhfA76CG7GEi; main dpl_HX4HCemJXr4YRsMeigNs2mAB9gM1). Production deploy by Claude was DENIED by the auto-mode safety check → owner promotes in the Vercel dashboard (or allows the action).
+- Vercel Authentication (SSO) is ON for the project ("all except custom domains") → *.vercel.app URLs need a Vercel login. Owner to decide public vs private.
+- Abstention gate: stays OFF (decision C, Feature 05). Stable-page polish (`scripts/authoring/polish-stable.py`, 22 pages) waits for owner's "approved polish".
