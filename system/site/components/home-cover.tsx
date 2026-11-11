@@ -71,7 +71,10 @@ export function HomeCover({
       <div className="relative flex flex-1 items-center">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-16 px-6 py-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
-            <div className="motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+            {/* No entrance animation on the title block or the purpose line:
+              they are the largest paint, and text that starts at opacity 0 is
+              counted late — mobile LCP measured 10.6 s with it (Feature 03). */}
+            <div>
               <div className="flex items-center gap-3">
                 <Image
                   src={mark}
@@ -103,7 +106,7 @@ export function HomeCover({
             </div>
 
             {purpose === null ? null : (
-              <p className="relative mt-7 max-w-xl text-lg/[1.65] text-pretty sm:text-xl/[1.6] text-[var(--ksor-cover-muted)] motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 motion-safe:[animation-delay:120ms] motion-safe:[animation-fill-mode:backwards]">
+              <p className="relative mt-7 max-w-xl text-lg/[1.65] text-pretty sm:text-xl/[1.6] text-[var(--ksor-cover-muted)]">
                 {purpose}
               </p>
             )}
