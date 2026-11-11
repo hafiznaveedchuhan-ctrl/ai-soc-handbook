@@ -13,9 +13,9 @@ Never delete history; append a new session block; keep the Current state table c
 ### 1. Git state
 | Branch | Head | Pushed | Status |
 |---|---|---|---|
-| `main` | `22cfb8f` | yes | contains F01, Wave 1, networking (38 stable, PR #8), CI (PR #10), F05 MCP (PR #11), F03 site UI (PR #12) |
-| `feat/02-soc-corpus-wave-2` | latest (`git log -1`) | yes | **CURRENT WORK** — Wave 2 B1–B5 = 47 draft pages; no PR yet |
-| `feat/04-auth` | `d55b345` | yes | ADR-0004 (Auth0 recommended) — **DEFERRED by owner** ("abhi login skip karo"); no PR |
+| `main` | `914e619`+ | yes | F01, Wave 1, networking (PR #8), CI (#10), F05 MCP (#11), F03 UI (#12), F04 ADR (#13), Wave 2 B1–B5 drafts (#14) |
+| `feat/02-soc-corpus-wave-2` | = `main` (`914e619`) | yes | **CURRENT WORK BRANCH** — B1–B5 (47 drafts) already merged to main via PR #14 (mid-wave, drafts are not published); continue B6+ here and open a NEW PR at the end |
+| `feat/04-auth` | `d55b345` | merged (PR #13) | ADR-0004 (Auth0 recommended) — **DEFERRED by owner** ("abhi login skip karo") |
 | old branches (`feat/02-networking`, `feat/03-site-ui`, `feat/05-agent-surface`, `feat/06-ci-and-release`) | merged | — | ignore |
 
 `gh` is logged in (hafiznaveedchuhan-ctrl). Naveed merges PRs himself on GitHub. CI on every PR: Format checker, gitleaks, Build, Playwright smoke (all must be green). Vercel auto-deploy is OFF (`vercel.json` git.deploymentEnabled=false) until Phase 8.
@@ -380,3 +380,5 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 
 ### Exact next step
 HANDOFF §3 step 1–2 (B6 owner-policy proposals).
+
+- 2026-11-11: PR #14 had a progress.md conflict with main (after #13) — resolved by merging main (kept both blocks); Naveed merged #14 and #13. Branch fast-forwarded to main.
