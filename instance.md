@@ -7,13 +7,21 @@ toolchain:
   requires: ">=0.0.61"
   scaffolded: "0.0.61"
 # `database.dsn_env` names the environment variable holding the Postgres DSN —
-# never the DSN itself, which lives in .env. `embedding:` is left out on
-# purpose: the default (gemini, gemini-embedding-001, 1536 dimensions) is the
-# space this record uses. `retrieval:` is added only by `ksor calibrate` once
-# the record is serving (Feature 05). `mcp_url` and `version` are added only
+# never the DSN itself, which lives in .env. `embedding:` pins OpenAI's
+# text-embedding-3-small at 1536 dimensions (owner's choice 2026-11-11: the free
+# Gemini key stopped working; -large was measured too and was not better:
+# evals 38/40 vs 39/40, neither separable at calibrate). Changing model or dim
+# later means re-embedding the whole corpus. `retrieval:` is left out on
+# purpose: `ksor calibrate` found no floor that separates in-scope from
+# scope-adjacent questions (evals/results-2026-11-11.txt), so the abstention
+# gate is OFF and the scope text below is what tells an agent to decline. `mcp_url` and `version` are added only
 # when the server is actually published.
 database:
   dsn_env: KSOR_DB_URL
+embedding:
+  provider: openai
+  model: text-embedding-3-small
+  dim: 1536
 ---
 
 This record is authoritative for **SOC Level-1 (L1) analyst operations**.

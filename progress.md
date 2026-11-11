@@ -284,6 +284,47 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 ### Session 3 — Feature 06 started (2026-11-11, branch feat/06-ci-and-release)
 - Networking pushed (`920568e`) and PR #8 opened (feat/02-networking → main) — Naveed merges. NOTE: this branch was cut from main BEFORE PR #8; progress.md blocks from feat/02-networking (N4..approval) must be merged by hand when the branches meet.
 - T06-01: specs/06-ci-and-release/{spec,plan,tasks}.md + feature-06-plan.txt. STOP-06A: waiting for Naveed's approval.
+
+---
+
+## feat/05-agent-surface notes (kept when main was merged in, 2026-11-11)
+
+> **The full HANDOFF (start here) is in progress.md on branch `feat/02-networking`** (written end of session 2). This branch holds Feature 05 only; resume it with HANDOFF §3-A when the Gemini key works.
+
+Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-plan.txt`.
+
+| Feature | State |
+|---|---|
+| 01 record-identity | **verified** — PR #1 merged into main (186b665) |
+| 02 soc-corpus Wave 1 | **verified** — 39 pages stable; PR #3 merged (cbe9e46) |
+| 05 agent-surface | implementing — gateway done, provision done; BLOCKED: refresh failed (Gemini 401 invalid key) — Naveed creating a new key |
+| 06 ci-and-release | not started |
+| 03 site-ui | not started |
+| 04 auth | not started |
+| 02 soc-corpus Wave 2 | not started |
+| 02 soc-corpus Wave 3 (soc-fundamentals) | not started — added in plan v3 |
+
+### Session 2 — update (Feature 05 start)
+- `gh auth login` done by Naveed (device flow); I created PR #3 with `gh pr create`; CI "Format checker" pass; Naveed merged (cbe9e46). Earlier PR #2 had been merged at 24abe6a — that is why GitHub showed no compare button.
+- Branch `feat/05-agent-surface` from main. Wrote specs/05-agent-surface/{spec,plan,tasks}.md and evals/{wave1-in-scope.tsv (40), wave1-out-of-scope.txt (20), calibrate-in.txt, run-evals.mjs, README.md}. Calibrate file format confirmed from ksor source (parseQueriesFile: one per line, # comments).
+- .env checked by name only (grep -c): KSOR_DB_URL, GEMINI_API_KEY non-empty; KSOR_AUTH=disabled-local. No value printed.
+- Next: STOP-A (approve Feature 05 docs + eval questions) → T05-02 gateway edit → HAAN steps.
+- T05-02 gateway (`8d52f3f`). T05-04 HAAN: `npm run provision` → "schema: applied 2.5 at dim 1536, text search english"; "granted: sor_content_ingest may now ingest soc-handbook".
+- T05-05 HAAN: `npm run refresh` → generation 1: 49 nodes, 343 chunks, embedded 0, failed 343 → ksor-shrink-guard, NOT flipped. One-word diagnostic call to Gemini: 401 UNAUTHENTICATED "API key not valid". Key format inspection was blocked by the permission classifier (credential materialization) — correctly; Naveed replaces the key in .env (no quotes, LF line endings).
+- Next for 05: Naveed says "done" → repeat one-word test → HAAN → refresh again (fresh generation; failed gen 1 reaped later by gc).
+
+### Session 3 — Feature 05 resumed with OpenAI (2026-11-11)
+- Gemini keys kept failing (401; second one was not an AI Studio key — 53 chars, no `AIza`). Naveed bought an OpenAI key → `.env` `OPENAI_API_KEY` (one test embed: HTTP 200, 1536 dims, 1 token).
+- `instance.md`: `embedding: { provider: openai, model: text-embedding-3-small, dim: 1536 }` (cheapest OpenAI embedding model, per "default version so tokens are less").
+- `ksor calibrate` must use the zero-LLM door (`--queries-file evals/calibrate-in.txt`), because question synthesis is Gemini-only.
+- Merged origin/main into feat/05-agent-surface (progress.md: main's version + this branch's notes appended; build.lock.json from main).
+- Next: Naveed's "haan" → `npm run refresh` (ingest) → "haan" → `npm run serve` → "haan" → calibrate → evals.
+- Feature 05 run (Naveed: "baqi k lya haan"): new Neon database `soc_handbook_openai` (old neondb kept; old DSN in .env as KSOR_DB_URL_GEMINI_OLD) — needed because the tenant had persisted gemini-embedding-001. WSL gotcha: Node needs `--network-family-autoselection-attempt-timeout=3000` (NODE_OPTIONS) or Neon connects time out.
+- provision OK; refresh OK: generation 1, 88 nodes, 590 chunks, 0 failed; serve OK (/health reachable, /ready true).
+- calibrate: NOT separable (in-corpus min 0.425 vs OOC max 0.558) → no floor; gate OFF. evals: in-scope 39/40 (98%), OOC 0/20. Details evals/results-2026-11-11.txt. Owner to choose A/B/C there.
+- Owner: "jo aapko best lage wo karo". Tried A (wider probes) and B (-large in new DB soc_handbook_large): neither separable; -large evals 38/40 vs -small 39/40. Chose C: -small (soc_handbook_openai, generation 2) ACTIVE, gate OFF, no retrieval block (reason recorded in instance.md comment + evals/results-2026-11-11.txt). .env: KSOR_DB_URL -> soc_handbook_openai; KSOR_DB_URL_OPENAI_LARGE and KSOR_DB_URL_GEMINI_OLD kept for rollback.
+- Pending: Feature 05 PR (feat/05-agent-surface → main); optional drop of test DBs (neondb tenant, soc_handbook_large) — Naveed decides; rotate the OpenAI + Anthropic keys pasted in chat.
+
 - STOP-06A approved ("approved"). T06-02..06 done locally: ci.yml (gitleaks binary + build + Playwright smoke), tests/smoke (12 passed locally), gitleaks local: no leaks. Not pushed yet.
 - GitHub red X = **Vercel** deployment check (not GitHub Actions; all Actions runs green). Vercel build error: `[MISSING_SERVICE_CONFIG] Service "site" detected framework "container" in "."` — scaffold vercel.json has site + door both at root "." and the root Dockerfile makes Vercel detect "container" for site. Deployment is Phase 8 in the plan → decision for Naveed.
 - Gemini key test: HTTP 401 again (.env line format is fine: 1 line, no quotes/spaces/CR) → Google rejects the key itself. Feature 05 still blocked.
