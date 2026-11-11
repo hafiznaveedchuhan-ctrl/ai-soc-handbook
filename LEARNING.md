@@ -16,7 +16,7 @@ knowledge/*.md  ───────────────►  npm run build 
                                    │
                                    └─►  npm run refresh  ──────────►  Neon Postgres + pgvector
                                          (ksor build + ksor ingest     (one "generation" of
-                                          --flip + ksor gc)            embedded chunks, Gemini 1536-d)
+                                          --flip + ksor gc)            embedded chunks, OpenAI 1536-d)
                                                                             │
                                                                             ▼   for AGENTS
                                                                        npm run serve  →  MCP server
@@ -44,7 +44,7 @@ knowledge/*.md  ───────────────►  npm run build 
 | `instance.md` | The record's identity: `name`, `title`, `description`, database block; its BODY is the MCP server's system prompt | One place for "what this record is and is not" | `ksor build`, `ksor serve`, site title |
 | `package.json` | npm scripts and the pinned `@panaversity/ksor` version | Reproducible commands | every `npm run …` |
 | `package-lock.json` | Exact dependency versions | Same install on every machine | `npm install` (never edit by hand) |
-| `.env` | Secrets: DB URL, Gemini key, auth mode | Kept out of git (`.gitignore`) | `ksor` reads it; **never opened or committed** |
+| `.env` | Secrets: DB URL, OpenAI key (embeddings), auth mode | Kept out of git (`.gitignore`) | `ksor` reads it; **never opened or committed** |
 | `.env.example` | Names of every variable, no values | Template for `.env` | humans |
 | `Dockerfile`, `.dockerignore` | Container image for the MCP server | Portable deploy of the agent surface | `docker build` |
 | `vercel.json` | Two services: static site + MCP container | Optional Vercel hosting | Vercel (not used yet) |
@@ -113,6 +113,33 @@ ATT&CK changes. On 2026-11-10 `T1070.001` redirected to `T1685.005` and
 IDs from the live site, never from memory, and never copies the IDs written
 inside Wazuh rules into a triage note.
 
+## Inside `knowledge/` (networking, Waves 2 and 3)
+
+| Folder | Holds | Order |
+|---|---|---|
+| `networking/` | 38 pages, OSI to SIEM network logs | 1300+ |
+| `sysmon/`, `linux-auth/` | Sysmon events 1–22; SSH, sudo, useradd | 500+ |
+| `false-positives/`, `sla/` | owner policy from interview I2 (`specs/02-soc-corpus/interview-i2.md`) | 1100+, 1200 |
+| `soc-fundamentals/` | attacks and tactics, phishing, SPF/DKIM/DMARC, NIST IR lifecycle, log sources, IOCs, Active Directory | 1400+ |
+
+On 2026-11-11 the whole record — 141 documents — is `stable`, each with a
+flashcard deck and quiz. MCP generation 5 serves it.
+
+### What Waves 2–3 taught us
+
+- **Drafts are invisible to the normal build**, so its quiz audit never sees
+  them. `KSOR_DRAFTS=show npm run build` (in a git worktree when `npm run dev`
+  is running) is the real audit before approval.
+- **Never stamp approval on the owner's behalf.** Links added to a stable page
+  are a body edit, so they need his re-approval; they wait until he says so.
+- **Standards move.** DMARC is now RFC 9989 (May 2026, replaces RFC 7489), and
+  MITRE lists 15 tactics including Defense Impairment (TA0112).
+- **Some Tier-1 sites refuse automated fetches** (CISA returned Access Denied).
+  A source that cannot be read is not cited; another Tier-1 source is used.
+- **Abstention is still off.** Calibration on 110 in-corpus and 35 out-of-corpus
+  questions did not separate (0.484 vs 0.650), so no floor is set and the agent
+  answers rather than declines. Retrieval in scope is 77/80 (96%).
+
 ## Commands
 
 | Command | Costs money / touches cloud? | What it does |
@@ -123,7 +150,7 @@ inside Wazuh rules into a triage note.
 | `KSOR_DRAFTS=show npm run build` | no | Review build that also renders drafts (noindex); never for shipping |
 | `node .agents/skills/add-sources/verify.mjs <src> <page>` | no | Lists values in a page that are not in its source |
 | `npm run provision` | **yes (Neon) — needs "haan"** | `ksor schema --apply` + `ksor grant`: create tables, authorize ingest (once) |
-| `npm run refresh` | **yes (Neon + Gemini) — needs "haan"** | build + `ksor ingest --flip` + `ksor gc` |
+| `npm run refresh` | **yes (Neon + OpenAI embeddings)** | build + `ksor ingest --flip` + `ksor gc` |
 | `npm run serve` | **yes (Neon) — needs "haan"** | MCP server at 127.0.0.1:8080 |
 | `npx ksor calibrate --instance instance.md` | **yes — needs "haan"** | Measures the abstention floor |
 

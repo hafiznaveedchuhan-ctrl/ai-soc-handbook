@@ -33,15 +33,15 @@ Never delete history; append a new session block; keep the Current state table c
 | **02 Wave 2 (55)** | **55 STABLE (approved 2026-11-11T10:43:03Z), decks+quizzes, MCP generation 3** | PR (session 4); optional reverse links onto 20 stable pages (`linkpass-w2.py --stable`, needs Naveed's re-approval) |
 | 02 Wave 3 (7) | 7 STABLE (approved 2026-11-11T11:21:41Z), decks+quizzes, MCP generation 4, PR #16 merged | evals follow-up PR (`feat/02-wave3-evals`) |
 
-### 3. EXACT next steps (owner gave standing approval for all Wave 2/3 process steps)
-1. `git switch feat/02-soc-corpus-wave-2 && git pull`
-2. **B6 — owner-policy PROPOSALS (8 pages, draft):** `wazuh/geo-and-vpn-caveats`, `wazuh/asset-and-user-context`, `false-positives/{expired-or-mistyped-passwords, service-accounts, backup-jobs, admin-maintenance-windows, vulnerability-scanners}`, `sla/severity-response-matrix`. Write from Tier-1 sources (NIST SP 800-61r3, Wazuh docs, MaxMind/GeoIP caveats if a source exists) + existing pages (severity-model, escalation-policy). Mark every org-specific number (SLA minutes, scanner IPs, windows) as **"Proposed — owner to confirm (interview I2)"**; never invent them as fact. Record the questions in `specs/02-soc-corpus/interview-i2.md`.
-3. **Link pass:** Wave 1 + networking pages ↔ new pages (e.g. 4625→4771/4776, 4720→4722/4726, 7045→4697, playbooks→sysmon). NOTE: Wave 1/networking pages are STABLE → editing their body needs re-approval (`ksor-generated-stale`); prefer adding links FROM the new draft pages, and collect stable-page edits in one list for the final approval.
-4. **Decks + quizzes** for all 55: `scripts/authoring/study_writer.py` (pattern `study-n3.py`), 5 cards + 6 questions each, every answer from the page; run `python3 -I scripts/authoring/quiz_precheck.py knowledge/**/*.quiz.yaml` until all ok.
-5. **Build/verify:** `npm run check`; full `npm run build` ONLY if Naveed's dev server is NOT running (`ss -ltnp | grep :3000`), else build in a git worktree in the scratchpad (see gotchas).
-6. **MCP refresh** (drafts are not ingested; do after approval): `NODE_OPTIONS="--network-family-autoselection-attempt-timeout=3000" npm run refresh`, then `npx ksor calibrate --instance instance.md --check`; extend `evals/` with Wave 2 questions and run `node --network-family-autoselection-attempt-timeout=3000 evals/run-evals.mjs` (server must be running: `npm run serve` in background).
-7. Review sheet `specs/02-soc-corpus/wave2-review.txt` (like `networking-review.txt`) → ask Naveed ONCE for "approved" → stamp `status: stable`, `generated {by: "claude-opus/5.5", at: <last commit of page>}`, `ksor.approval {by: "human:naveed", at: <now UTC>}` (script used for networking is in session-3 history) → build → PR.
-8. Then Wave 3 (same pipeline).
+### 3. EXACT next steps (updated end of session 4, 2026-11-11)
+Feature 02 is DONE (141/141 stable, MCP generation 5, evals 77/80). Owner chooses what is next:
+- **A. Retrieval polish** (needs Naveed's re-approval of the touched STABLE pages): add 0xC0000071 /
+  0xC0000224 rows to event-4776; strengthen wording in playbooks/added-to-admin-group and
+  rules-map/severity-model; apply Wave 2 reverse links (`python3 -I scripts/authoring/linkpass-w2.py --stable`).
+  Then refresh + re-run evals.
+- **B. Feature 04 auth** (ADR-0004 recommends Auth0, on `feat/04-auth`, deferred by owner).
+- **C. Phase 8 deploy** (site + MCP door; Vercel auto-deploy is off in `vercel.json`).
+- Abstention gate: stays OFF until a calibration separates (needs more scope-adjacent in-corpus questions).
 
 ### 4. Rules Naveed set (never break)
 - Session protocol: start by reading this HANDOFF and telling Naveed in 3 lines where we are; end by updating progress.md (`.claude/rules/session-protocol.md`).
@@ -415,3 +415,19 @@ HANDOFF §3 step 1–2 (B6 owner-policy proposals).
 
 ### Exact next step
 Naveed says "push" → `git push` + `gh pr create` (Wave 2: 55 stable pages + study aids + evals). Then Wave 3 (plan v4 [W3]).
+
+## Session 4 — CLOSE-OUT block (2026-11-11)
+
+### Done after the END block above
+- Wave 2 PR #15 merged. Wave 3 (7 soc-fundamentals pages) written, approved ("APPROVE ALL WAVE 3", 2026-11-11T11:21:41Z), PR #16 merged.
+- event-7045 TODO-VERIFY closed (Microsoft Learn "Troubleshoot unexpected reboots using system event logs"), approved ("APPROVE") → record 141/141 stable. PR #17 merged.
+- MCP generations 4 → 5; evals 77/80 in-scope (96%), Wave 3 10/10; out-of-scope 0/35 (gate off). Calibration not separable (min in 0.484 < max OOC 0.650).
+- Close-out (step 50): LEARNING.md, plan v5, this block — branch `chore/wave3-closeout`.
+
+### Errors hit + fixes
+- CISA phishing PDF: Access Denied to curl; ASD logging guide: timeout → not cited; NCSC + NIST SP 800-92 used.
+- `ksor calibrate` without query files calls Gemini (invalid key) → always pass `--queries-file` / `--ooc-file`.
+- `npm run dev` was running → drafts build done in a scratchpad git worktree.
+
+### Naveed's manual actions
+- Choose next: A / B / C (HANDOFF §3). Rotate the OpenAI and Anthropic keys pasted in chat.
