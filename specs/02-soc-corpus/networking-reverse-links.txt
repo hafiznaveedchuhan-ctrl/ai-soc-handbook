@@ -1,0 +1,30 @@
+NETWORKING LINK PASS — REVERSE DIRECTION (Wave 1 stable pages -> networking)   [TN-08 part 2]
+Written 2026-11-10, session 3. NOT applied yet.
+
+WHY NOT NOW
+  - These Wave 1 pages are status: stable (approved by human:naveed). Editing their body makes
+    `ksor build` refuse with ksor-generated-stale until generated.at moves past the edit AND
+    Naveed re-approves each page.
+  - The networking pages are still drafts; a build drops drafts, so a link from a stable page to
+    them would point at a page that is not published.
+  => Apply these in the SAME step as networking approval (TN-11), then Naveed re-approves the
+     edited Wave 1 pages together with the networking pages.
+
+PLANNED "Related networking pages" additions (one short section per page, links only, no new facts)
+  windows-events/event-4624.md     -> remote-access-protocols (logon type 10 / RDP), nat-and-pat, dhcp
+  windows-events/event-4625.md     -> remote-access-protocols, ports-and-services, reading-network-logs-in-siem
+  windows-events/event-4648.md     -> remote-access-protocols
+  playbooks/brute-force.md         -> remote-access-protocols, vpn-and-ipsec, http-https, firewalls
+  playbooks/success-after-failures -> remote-access-protocols, nat-and-pat
+  enrichment/ip-reputation-policy  -> special-ipv4-ranges, ipv6-special-ranges, nat-and-pat, proxies
+  enrichment/private-ip-ranges     -> ipv4-addressing, special-ipv4-ranges, ipv6-special-ranges
+  wazuh/architecture.md            -> ports-and-services, syslog, tcp
+  wazuh/alert-json-anatomy.md      -> reading-network-logs-in-siem
+  triage-note/note-template.md     -> reading-network-logs-in-siem
+  orientation/how-to-use.md        -> networking/networking-overview
+
+Total: 11 stable pages would need re-approval.
+
+NAVEED — at approval time choose:
+  "reverse links yes"  -> apply all 11, you re-approve them with the networking pages
+  "reverse links no"   -> skip; networking pages still link to Wave 1 (one direction only)

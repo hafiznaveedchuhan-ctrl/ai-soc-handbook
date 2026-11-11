@@ -1,0 +1,58 @@
+quiz:
+  title: "TCP — Transmission Control Protocol"
+  questionsPerRound: 6
+questions:
+  - question: "Which flag means 'no more data from sender'?"
+    options:
+      - "RST"
+      - "FIN"
+      - "PSH"
+      - "URG"
+    answer: 1
+    explanation: "RFC 9293 flags: FIN = no more data from sender."
+    source: "Control flags"
+  - question: "What does the ESTABLISHED state mean?"
+    options:
+      - "Waiting for a request"
+      - "No connection at all"
+      - "Closing the connection"
+      - "An open connection"
+    answer: 3
+    explanation: "ESTABLISHED is an open connection."
+    source: "Handshake, reset, states"
+  - question: "Many SYNs with no final ACK suggests …"
+    options:
+      - "half-open connections"
+      - "a finished download"
+      - "a DNS lookup"
+      - "an ARP broadcast"
+    answer: 0
+    explanation: "Many SYNs, no final ACK — check for flooding."
+    source: "Why a SOC analyst cares"
+  - question: "Which state is waiting for a connection request?"
+    options:
+      - "SYN-SENT"
+      - "TIME-WAIT"
+      - "LISTEN"
+      - "CLOSED"
+    answer: 2
+    explanation: "LISTEN: waiting for a connection request."
+    source: "Handshake, reset, states"
+  - question: "ECE stands for …"
+    options:
+      - "End Connection Echo"
+      - "ECN-Echo"
+      - "Error Check Enabled"
+      - "Early Close Event"
+    answer: 1
+    explanation: "RFC 9293 flags: ECE = ECN-Echo."
+    source: "Control flags"
+  - question: "RST from the target means …"
+    options:
+      - "no listener / refused"
+      - "connection succeeded"
+      - "data was pushed"
+      - "window was reduced"
+    answer: 0
+    explanation: "For the agent: RST from the target — no listener."
+    source: "For the agent"

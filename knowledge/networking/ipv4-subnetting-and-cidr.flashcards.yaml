@@ -1,0 +1,14 @@
+deck:
+  title: "IPv4 subnetting and CIDR"
+  description: "Recall checks drawn only from the page IPv4 subnetting and CIDR."
+cards:
+  - front: "What does '/26' mean?"
+    back: "The first 26 bits are the network part."
+  - front: "How many addresses in a /n block?"
+    back: "2^(32 − n)."
+  - front: "Usable hosts in a /n (n ≤ 30)?"
+    back: "2^(32 − n) − 2."
+  - front: "Network and broadcast address?"
+    back: "Host bits all 0 / all 1."
+  - front: "Which /31 note does RFC 4632 give?"
+    back: "p2p link (2 addresses)."

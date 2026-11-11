@@ -1,0 +1,14 @@
+deck:
+  title: "Ethernet and MAC addresses"
+  description: "Recall checks drawn only from the page Ethernet and MAC addresses."
+cards:
+  - front: "How long is a MAC (EUI-48) address?"
+    back: "48 bits — six octets."
+  - front: "Who assigns the prefix of an EUI-48?"
+    back: "The IEEE Registration Authority."
+  - front: "What does the M bit = 1 mean?"
+    back: "Group address — multicast or broadcast."
+  - front: "What does the X bit = 1 mean?"
+    back: "Locally assigned — the prefix does not name a vendor."
+  - front: "Which EtherType is ARP?"
+    back: "0806."

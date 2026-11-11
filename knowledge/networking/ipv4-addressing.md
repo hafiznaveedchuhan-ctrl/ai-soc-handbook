@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv4 addressing and the IPv4 header"
 description: What an IPv4 address is, the historical classes, and the IPv4 header fields an analyst meets in logs — TTL, protocol, flags, fragment offset, identification and length.
-status: draft
+status: stable
 order: 1306
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc791
     title: "RFC 791 — Internet Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** An IPv4 address is 32 bits, written as four numbers
@@ -82,6 +84,12 @@ guarantee; reliability is left to higher layers.[^rfc1122]
 | TTL | Decreases per processing hop; zero = destroyed |
 | Protocol | Decide TCP / UDP / ICMP page |
 | DF / MF, fragment offset | Fragment-related IDS alert context |
+
+## Related pages
+
+- [IPv4 subnetting and CIDR](ipv4-subnetting-and-cidr.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [Private IP ranges](../enrichment/private-ip-ranges.md)
 
 [^rfc791]: IETF, "RFC 791 — Internet Protocol". https://www.rfc-editor.org/rfc/rfc791
 [^rfc6864]: IETF, "RFC 6864 — Updated Specification of the IPv4 ID Field". https://www.rfc-editor.org/rfc/rfc6864

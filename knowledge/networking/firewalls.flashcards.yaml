@@ -1,0 +1,14 @@
+deck:
+  title: "Firewalls"
+  description: "Recall checks drawn only from the page Firewalls."
+cards:
+  - front: "What does a packet filter look at?"
+    back: "Addresses, protocol and ports — not packet content."
+  - front: "What does stateful inspection add?"
+    back: "A state table per connection; blocks packets that deviate from it."
+  - front: "What is deny by default?"
+    back: "Block all traffic not expressly permitted by policy."
+  - front: "What is egress filtering?"
+    back: "Blocking outbound traffic with invalid source addresses."
+  - front: "Where should firewall logs go?"
+    back: "Stored locally and sent to central log management where possible."

@@ -2,8 +2,9 @@
 type: Definition
 title: "DHCP and DHCPv6"
 description: How hosts get addresses — DHCP's DISCOVER/OFFER/REQUEST/ACK exchange on UDP 67/68, leases, the option numbers seen in logs, DHCPv6 on UDP 546/547 — and how DHCP logs map an IP back to a machine.
-status: draft
+status: stable
 order: 1324
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc2131
     title: "RFC 2131 — Dynamic Host Configuration Protocol"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** DHCP hands out IP addresses for a limited time (a
@@ -94,6 +96,12 @@ All rows: [^iana-dhcp]
 | Alert IP is internal and dynamic | Look up the DHCP lease covering the alert time |
 | UDP 67/68 offers from an unknown server | Possible rogue DHCP server — escalate per policy |
 | UDP 546/547, ff02::1:2 | DHCPv6 traffic |
+
+## Related pages
+
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
 
 [^rfc2131]: IETF, "RFC 2131 — Dynamic Host Configuration Protocol". https://www.rfc-editor.org/rfc/rfc2131
 [^iana-dhcp]: IANA, "Dynamic Host Configuration Protocol (DHCP) and Bootstrap Protocol (BOOTP) Parameters". https://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml

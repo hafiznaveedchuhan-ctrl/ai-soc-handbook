@@ -1,0 +1,14 @@
+deck:
+  title: "VPNs and IPsec"
+  description: "Recall checks drawn only from the page VPNs and IPsec."
+cards:
+  - front: "Which IP protocol number is ESP?"
+    back: "50."
+  - front: "Which IP protocol number is AH?"
+    back: "51."
+  - front: "Transport versus tunnel mode?"
+    back: "Transport protects next-layer protocols; tunnel protects whole IP packets."
+  - front: "Which UDP ports does IKE use?"
+    back: "500, and 4500 (NAT traversal)."
+  - front: "What should IPsec log (NIST)?"
+    back: "Successful and failed connection attempts, sent to central log servers."

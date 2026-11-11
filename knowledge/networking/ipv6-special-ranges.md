@@ -2,8 +2,9 @@
 type: Standard
 title: "Special-purpose IPv6 address ranges"
 description: The IPv6 blocks an analyst must recognise — loopback, unspecified, IPv4-mapped (::ffff:), link-local, unique-local, multicast and the documentation prefixes — and what each means in a log.
-status: draft
+status: stable
 order: 1312
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: iana-ipv6-special
     title: "IANA — IANA IPv6 Special-Purpose Address Registry"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** IPv6 also has addresses meaning "this machine", "this
@@ -71,6 +73,12 @@ localhost.[^ms-4625] For example `::ffff:192.0.2.10` is the IPv4 address
 | `ff` | Multicast | Group traffic |
 | `2001:db8:` or inside 3fff::/20 | Documentation | Should not appear |
 | other | Global | Reputation check |
+
+## Related pages
+
+- [IPv6 addressing](ipv6-addressing.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [IP reputation policy](../enrichment/ip-reputation-policy.md)
 
 [^iana-ipv6-special]: IANA, "IANA IPv6 Special-Purpose Address Registry". https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml
 [^rfc4291]: IETF, "RFC 4291 — IP Version 6 Addressing Architecture". https://www.rfc-editor.org/rfc/rfc4291

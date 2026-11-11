@@ -1,0 +1,14 @@
+deck:
+  title: "IPv6 Neighbor Discovery and SLAAC"
+  description: "Recall checks drawn only from the page IPv6 Neighbor Discovery and SLAAC."
+cards:
+  - front: "What does IPv6 use instead of ARP?"
+    back: "Neighbor Discovery — ICMPv6 Neighbor Solicitation and Advertisement."
+  - front: "What is a Router Advertisement?"
+    back: "Routers announcing themselves with link and Internet parameters, including prefixes."
+  - front: "What is SLAAC?"
+    back: "Stateless address autoconfiguration — a host builds its own address (RFC 4862)."
+  - front: "Which message checks for duplicate addresses?"
+    back: "Neighbor Solicitation (Duplicate Address Detection)."
+  - front: "What does a Redirect (137) do?"
+    back: "A router tells a host about a better first hop."

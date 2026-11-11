@@ -1,0 +1,14 @@
+deck:
+  title: "IDS and IPS"
+  description: "Recall checks drawn only from the page IDS and IPS."
+cards:
+  - front: "IDS versus IPS?"
+    back: "An IDS detects; an IPS can also attempt to stop incidents."
+  - front: "What is a false positive?"
+    back: "Benign activity flagged as malicious."
+  - front: "What is a false negative?"
+    back: "Malicious activity that was missed."
+  - front: "Inline versus passive sensor?"
+    back: "Inline: traffic passes through it and can be blocked. Passive: watches a copy."
+  - front: "What can a network IDPS not see?"
+    back: "Attacks inside encrypted traffic — VPN, HTTPS, SSH."

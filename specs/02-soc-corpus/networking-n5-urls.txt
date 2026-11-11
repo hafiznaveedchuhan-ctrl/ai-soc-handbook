@@ -1,0 +1,53 @@
+NETWORKING N5 — SOURCE URL LIST (STOP: needs Naveed's approval before any fetch/write)
+Written 2026-11-10, session 3. Branch feat/02-networking. Order numbers 1340-1345. Last networking batch.
+Every RFC checked live on rfc-editor.org JSON (obsoleted_by); NIST pages checked for "withdrawn".
+
+CHANGES / GAPS FOUND WHILE CHECKING
+  1. RFC 3164 (BSD syslog) is OBSOLETED by RFC 5424 -> use RFC 5424 (+5426 UDP, +5425 TLS).
+  2. PCAP / pcapng file formats are still IETF drafts (no RFC) and tcpdump.org did not answer
+     -> packet-capture page uses NIST SP 800-86 (+ SP 800-94 reuse); no file-format byte details.
+  3. NIST SP 800-92 (log management, 2006) is still the final version (Rev. 1 not published as final).
+
+PAGE -> SOURCES (Tier 1)
+
+1340 network-segmentation-and-zones
+  - NIST SP 800-41 Rev. 1 (DMZ, zones — reuse N4)        https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf
+  - NIST SP 800-207 Zero Trust Architecture               https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
+  - NIST SP 800-215 Guide to a Secure Enterprise Network Landscape  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-215.pdf
+
+1341 syslog
+  - RFC 5424 The Syslog Protocol (facility, severity, PRI) https://www.rfc-editor.org/rfc/rfc5424.txt
+  - RFC 5426 Syslog over UDP (port 514)                   https://www.rfc-editor.org/rfc/rfc5426.txt
+  - RFC 5425 Syslog over TLS (port 6514)                  https://www.rfc-editor.org/rfc/rfc5425.txt
+  - Wazuh docs — syslog log data collection               https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html
+  - Wazuh docs — ossec.conf <remote> reference            https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/remote.html
+
+1342 netflow-and-ipfix
+  - RFC 7011 IPFIX protocol (port 4739)                   https://www.rfc-editor.org/rfc/rfc7011.txt
+  - RFC 7012 IPFIX information model                      https://www.rfc-editor.org/rfc/rfc7012.txt
+  - RFC 3954 NetFlow v9 (Informational, Cisco)            https://www.rfc-editor.org/rfc/rfc3954.txt
+  - IANA IPFIX Information Elements registry              https://www.iana.org/assignments/ipfix/ipfix.xhtml
+
+1343 packet-capture
+  - NIST SP 800-86 Integrating Forensic Techniques into IR (network traffic, packet sniffers)
+                                                          https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf
+  - NIST SP 800-94 (reuse N4: sensors, encrypted traffic) https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf
+  - MITRE ATT&CK T1040 Network Sniffing                   https://attack.mitre.org/techniques/T1040/
+
+1344 network-attacks
+  - RFC 4987 TCP SYN flooding                             https://www.rfc-editor.org/rfc/rfc4987.txt
+  - RFC 4732 Internet Denial-of-Service Considerations    https://www.rfc-editor.org/rfc/rfc4732.txt
+  - RFC 2827 (BCP 38) Ingress filtering / spoofing        https://www.rfc-editor.org/rfc/rfc2827.txt
+  - MITRE ATT&CK T1046 Network Service Discovery (scans)  https://attack.mitre.org/techniques/T1046/
+  - MITRE ATT&CK T1498.002 Reflection Amplification       https://attack.mitre.org/techniques/T1498/002/
+  - MITRE ATT&CK T1557.002 ARP Cache Poisoning            https://attack.mitre.org/techniques/T1557/002/
+  - MITRE ATT&CK T1071.004 Application Layer Protocol: DNS (C2)  https://attack.mitre.org/techniques/T1071/004/
+  - MITRE ATT&CK T1048 Exfiltration Over Alternative Protocol    https://attack.mitre.org/techniques/T1048/
+  (MITRE pages fetched live on the day of writing — renumbering seen before, e.g. T1070.001 -> T1685.005)
+
+1345 reading-network-logs-in-siem
+  - NIST SP 800-92 Guide to Computer Security Log Management  https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf
+  - Wazuh syslog + remote docs (reuse from 1341)
+  - all N1–N5 pages linked (5-tuple, NAT, DHCP, DNS, firewall, proxy) — no new facts without a source
+
+NAVEED — reply "N5 URLs OK" (or name a URL to drop/change).

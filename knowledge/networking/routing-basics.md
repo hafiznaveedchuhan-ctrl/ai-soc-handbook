@@ -2,8 +2,9 @@
 type: Definition
 title: "Routing basics"
 description: How a router picks the next hop — longest matching prefix, default route, static routes — what TTL does at each hop, and what that means for reading source addresses and traceroute-like ICMP in alerts.
-status: draft
+status: stable
 order: 1320
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc1812
     title: "RFC 1812 — Requirements for IP Version 4 Routers"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A router looks at the destination address, finds the
@@ -79,6 +81,12 @@ Worked examples with the same table plus a default route (computed with Python
 | ICMP type 11 code 0 | TTL expired in transit at a router |
 | Route 0.0.0.0/0 | Default route |
 | Two routes match | The longer prefix wins |
+
+## Related pages
+
+- [IPv4 subnetting and CIDR](ipv4-subnetting-and-cidr.md)
+- [Routing protocols overview — OSPF and BGP](routing-protocols-overview.md)
+- [ICMP and ICMPv6](icmp-and-icmpv6.md)
 
 [^rfc1812]: IETF, "RFC 1812 — Requirements for IP Version 4 Routers". https://www.rfc-editor.org/rfc/rfc1812
 [^rfc4632]: IETF, "RFC 4632 — Classless Inter-domain Routing (CIDR)", August 2006. https://www.rfc-editor.org/rfc/rfc4632

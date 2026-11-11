@@ -1,0 +1,14 @@
+deck:
+  title: "ICMP and ICMPv6"
+  description: "Recall checks drawn only from the page ICMP and ICMPv6."
+cards:
+  - front: "Does ICMP use ports?"
+    back: "No — each message has a type number."
+  - front: "IP protocol numbers for ICMP and ICMPv6?"
+    back: "1 and 58."
+  - front: "What is ICMP type 8?"
+    back: "Echo (ping request)."
+  - front: "What is ICMP type 11?"
+    back: "Time Exceeded — TTL expired."
+  - front: "Which ICMPv6 types are Neighbor Discovery?"
+    back: "133–137."

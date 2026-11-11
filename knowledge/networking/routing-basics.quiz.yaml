@@ -1,0 +1,58 @@
+quiz:
+  title: "Routing basics"
+  questionsPerRound: 6
+questions:
+  - question: "Destination 10.144.2.5; routes /24, /16, /8. Which is used?"
+    options:
+      - "10.0.0.0/8"
+      - "10.144.2.0/24"
+      - "10.144.0.0/16"
+      - "The first route listed in the table"
+    answer: 1
+    explanation: "Longest match: the /24 has the longest prefix (RFC 1812's own example)."
+    source: "Longest match"
+  - question: "What prefix length does the default route have?"
+    options:
+      - "8"
+      - "32"
+      - "24"
+      - "0"
+    answer: 3
+    explanation: "The default route is by definition the route whose prefix length is zero."
+    source: "Longest match"
+  - question: "How big is the IPv4 TTL field?"
+    options:
+      - "8 bits"
+      - "16 bits"
+      - "32 bits"
+      - "4 bits"
+    answer: 0
+    explanation: "RFC 1812: TTL is an 8-bit field, in practice a hop-count limit."
+    source: "TTL at every hop"
+  - question: "Which ICMP message reports TTL expiry in transit?"
+    options:
+      - "Destination Unreachable, code 3"
+      - "Echo Reply, code 0"
+      - "Time Exceeded, code 0"
+      - "Redirect, code 1"
+    answer: 2
+    explanation: "When TTL reaches zero the router sends ICMP Time Exceeded, Code 0 (TTL exceeded in transit)."
+    source: "TTL at every hop"
+  - question: "What does a static route define?"
+    options:
+      - "A route learned from OSPF or BGP"
+      - "The next hop for a destination prefix"
+      - "A temporary route made by ICMP"
+      - "The router's own loopback address"
+    answer: 1
+    explanation: "Static routing explicitly defines the next hop for a destination given as a network prefix."
+    source: "Static and dynamic routes"
+  - question: "Destination 198.51.100.7 with only 10/8 routes and a default. Which is used?"
+    options:
+      - "0.0.0.0/0 (default)"
+      - "10.0.0.0/8"
+      - "10.144.0.0/16"
+      - "None — the packet is dropped"
+    answer: 0
+    explanation: "Only the default route matches; worked example on the page (computed)."
+    source: "Longest match"

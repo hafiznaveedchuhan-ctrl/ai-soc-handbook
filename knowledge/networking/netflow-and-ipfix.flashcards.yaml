@@ -1,0 +1,14 @@
+deck:
+  title: "NetFlow and IPFIX"
+  description: "Recall checks drawn only from the page NetFlow and IPFIX."
+cards:
+  - front: "What is a Flow?"
+    back: "Packets passing an observation point in a time interval that share common properties."
+  - front: "Exporter versus Collector?"
+    back: "Exporter hosts the Exporting Process; Collector hosts the Collecting Process."
+  - front: "Default IPFIX collector port?"
+    back: "4739 (4740 for secure connections)."
+  - front: "Which IPFIX element IDs match NetFlow v9?"
+    back: "IDs 1–127."
+  - front: "Does a flow record contain payload?"
+    back: "No — header fields and counts only."

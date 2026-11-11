@@ -1,0 +1,58 @@
+quiz:
+  title: "Routing protocols overview — OSPF and BGP"
+  questionsPerRound: 6
+questions:
+  - question: "Which IP protocol number is OSPF?"
+    options:
+      - "6"
+      - "89"
+      - "17"
+      - "50"
+    answer: 1
+    explanation: "OSPF runs directly over IP using IP protocol 89."
+    source: "OSPF"
+  - question: "Which multicast address is OSPF AllSPFRouters (IPv4)?"
+    options:
+      - "224.0.0.6"
+      - "224.0.0.9"
+      - "224.0.0.1"
+      - "224.0.0.5"
+    answer: 3
+    explanation: "AllSPFRouters is 224.0.0.5; AllDRouters is 224.0.0.6."
+    source: "OSPF"
+  - question: "What is the OSPFv3 AllDRouters address?"
+    options:
+      - "FF02::6"
+      - "FF02::5"
+      - "FF02::1:2"
+      - "FF02::2"
+    answer: 0
+    explanation: "RFC 5340: AllSPFRouters FF02::5, AllDRouters FF02::6."
+    source: "OSPF"
+  - question: "What transport does BGP use?"
+    options:
+      - "UDP, port 179"
+      - "IP protocol 89"
+      - "TCP, port 179"
+      - "UDP, port 520"
+    answer: 2
+    explanation: "BGP uses TCP and listens on TCP port 179."
+    source: "BGP"
+  - question: "What do exterior gateway protocols exchange?"
+    options:
+      - "Routes inside one AS only"
+      - "Routing information between ASes"
+      - "MAC tables between switches"
+      - "Addresses for DHCP clients"
+    answer: 1
+    explanation: "Exterior gateway protocols exchange routing information among ASes (inter-AS routing)."
+    source: "Interior and exterior"
+  - question: "BGP message type 4 is …"
+    options:
+      - "KEEPALIVE"
+      - "OPEN"
+      - "UPDATE"
+      - "NOTIFICATION"
+    answer: 0
+    explanation: "BGP types: 1 OPEN, 2 UPDATE, 3 NOTIFICATION, 4 KEEPALIVE."
+    source: "BGP"

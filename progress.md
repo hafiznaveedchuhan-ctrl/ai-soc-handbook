@@ -22,14 +22,14 @@ Merging tip: `progress.md` differs on `feat/05-agent-surface` and `feat/02-netwo
 |---|---|---|
 | 01 record-identity | verified, merged | — |
 | 02 Wave 1 (41 docs) | 39 stable + overview stable; 15 decks + 15 quizzes; merged | event-7045 (draft, 4 TODO-VERIFY) → waits for Wave 2 page 4697 / T1543.003 |
-| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **N1 (8) + N2 (8) + N3 (8) drafts** | STOP-N3 check, N4 (8), N5 (6), link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
+| 02 networking (38 docs) | plan v4, spec, tasks; instance.md scope; **all 38 STABLE (approved 2026-11-11)** | push + PR; reverse links (D2) optional; then link pass, 38 decks + 38 quizzes, review sheet, owner approval, PR |
 | 05 agent-surface | spec/plan/tasks/evals; gateway (name soc-handbook, scoped description, k=5); `npm run provision` OK | new Gemini key → 1-word test → HAAN refresh → HAAN serve → HAAN calibrate → run evals → PR |
 | 06 ci-and-release | — | all (gitleaks, check, build, Playwright smoke, Docker smoke) |
 | 03 site-ui | — | all (SOC theme, severity tokens, Quick Triage Lookup, Lighthouse ≥90, screenshots) |
 | 04 auth | — | all (provider ADR, sign-in config) |
 | 02 Wave 2 (55 docs) | — | all |
 | 02 Wave 3 (7 docs) | — | all |
-Corpus count now: 65 documents (40 stable, 25 draft = 24 networking + event-7045). Plan total 141. (updated session 3)
+Corpus count now: 79 documents (78 stable, 1 draft = event-7045). (updated 2026-11-11) Plan total 141. (updated session 3)
 Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approval ≈ 45.5.
 
 ### 3. EXACT next step
@@ -59,6 +59,7 @@ Audit score (specs/audit/2026-11-10-audit.txt): 40/100, +5.5 after Wave 1 approv
 - Scratchpad is wiped between sessions → helpers now live in `scripts/authoring/` (see its README); sources must be re-fetched.
 - Run `pkill -f "next dev"` and `npm run build` in **separate** commands (a combined command killed its own shell, exit 144). Restart `npm run dev` after adding pages (new pages 404/500 until restart).
 - `npm run build` rewrites `system/site/next-env.d.ts` → `git checkout -- system/site/next-env.d.ts`.
+- **Never run `npm run build` while Naveed's `npm run dev` is running** (session 3 bug): build re-stages `system/site/.staged-knowledge/` WITHOUT drafts, so the dev site loses every draft page (networking 404). Fix: restart `npm run dev`. Check first with `ss -ltnp | grep :3000`.
 - YAML: quote titles/descriptions containing ": " or "::".
 - Quiz audit (system/site/lib/quiz-audit.ts): ≤60% same answer position, ≤60% wins for unique-longest/shortest option, no run >3 → pre-check with `scripts/authoring/quiz_precheck.py`.
 - Blocked sites: cisa.gov (403 — do not try browser headers), ISO 7498-1 (licence click-through), ITU X.200, IEEE (403/418). MITRE renumbers: T1070.001→T1685.005, T1562.001→T1685 (always fetch live).
@@ -217,6 +218,68 @@ HANDOFF §2 table updated (networking: N1+N2+N3 drafts = 24). Feature 05 still b
 - STOP-N3 2-page check; say "push" to push `feat/02-networking`.
 - New Gemini key → "key done".
 - Optional: a free source for IEEE 802.1Q / 802.11 values (else those stay open questions).
+
+### Session 3 — update (N4)
+- "next and push": pushed `522a9a1` (N3). N4 URL list `specs/02-soc-corpus/networking-n4-urls.txt` → "n4 urls ok".
+- N4 written (8 drafts, order 1330–1337): http-https, tls, email-protocols, remote-access-protocols, firewalls, ids-ips, proxies, vpn-and-ipsec.
+- Source changes: RFC 8446 → RFC 9846 (TLS 1.3, July 2026); RFC 7489 → RFC 9989 (DMARC, May 2026). RDP from Microsoft Learn (no RFC).
+- Disagreement kept as two statements (tls page): RFC 8996 "must not negotiate TLS 1.0/1.1" vs NIST SP 800-52r2 "may support for non-government interoperability" → flagged for owner.
+- verify.mjs flags only shorthand (10/8 for 10.0.0.0/8, "1.0/1.1", "110/143"), URL fragments and event ID 4624 (from the Microsoft 4624 page). Check + build OK (73 documents, 40 admitted).
+- Next: STOP-N4 (2-page check) → N5 URL list (segmentation/zones, syslog, NetFlow/IPFIX, packet capture, network attacks, reading network logs in SIEM).
+
+### Session 3 — update (N5)
+- "next and push": pushed `1092a83` (N4). N5 URL list `specs/02-soc-corpus/networking-n5-urls.txt` → "N5 URLS OK".
+- N5 written (6 drafts, order 1340–1345): network-segmentation-and-zones, syslog, netflow-and-ipfix, packet-capture, network-attacks, reading-network-logs-in-siem (type Procedure). All 38 networking pages now exist as drafts.
+- Source changes: RFC 3164 → RFC 5424. PCAP/pcapng not RFCs yet, tcpdump.org unreachable → packet-capture uses NIST SP 800-86/800-94 + MITRE T1040 only.
+- verify.mjs flags only the computed PRI 134 (labelled "computed with divmod") and MITRE URL fragments. Check + build OK (79 documents, 40 admitted).
+- Next: STOP-N5 (2-page check) → TN-08 link pass (events/Wazuh/playbooks/enrichment ↔ networking) → TN-09 38 decks + 38 quizzes → TN-10 review sheet → owner approval.
+
+### Session 3 — update (link pass)
+- "NEXT AND PUSH": pushed `6117589` (N5).
+- TN-08 part 1: "Related pages" section on 37 networking pages (links to networking pages + Wave 1 events/playbooks/enrichment/wazuh/rules-map/triage-note); networking-overview table now links all 38 pages. Links only, no new facts. Check + build OK.
+- TN-08 part 2 (Wave 1 → networking) NOT applied: 11 stable pages would need re-approval and would link to unpublished drafts → plan in `specs/02-soc-corpus/networking-reverse-links.txt`, decide at approval.
+- Next: TN-09 — 38 flashcard decks + 38 quizzes (quiz_precheck.py, then KSOR_DRAFTS=show build).
+
+### Session 3 — update (study companions)
+- Stale "batch N2 / N5 / later batches" references in N1–N2 pages replaced with real links (arp, ethernet, icmp, ipv6-nd, tcp-ip-model, tcp, udp). ipv6-nd: ND misuse marked as an open question (no source covers it).
+- TN-09: 38 flashcard decks (5 cards each) + 38 quizzes (6 questions each), every card/answer taken from its page. quiz_precheck: 38/38 ok. `KSOR_DRAFTS=show` build exit 0 (site quiz audit passed); normal build re-run so build.lock.json says drafts hidden.
+- Next: TN-10 review sheet `specs/02-soc-corpus/networking-review.txt` → STOP-R (Naveed approves; decide reverse links yes/no; TLS 1.0/1.1 policy question).
+
+### Session 3 — update (review sheet, STOP-R)
+- TN-10: `specs/02-soc-corpus/networking-review.txt` — 38 rows (order, type, source count, description, spot-check) + decisions D1 (TLS 1.0/1.1 policy), D2 (reverse links yes/no), D3 (approve with open questions).
+- STOP-R: waiting for Naveed's approval words. Do NOT write ksor.approval until he says "approved …".
+- After approval (TN-11): set status stable + generated {by: claude-opus/5.5, at: last commit of page} + ksor.approval {by: human:naveed, at: approval time}; apply D2 if yes (and re-stamp those 11 pages); build; progress; push + PR via gh (with OK).
+
+### Session 3 — incident (networking missing in dev site)
+- Naveed: networking gone + error. Cause: my `npm run build` runs while his `npm run dev` (pid 7776, started 20:15 local) was up; production build re-staged `.staged-knowledge/` with drafts hidden, so all 38 draft pages returned 404 in dev. Nothing in `knowledge/` was lost (git clean; 38 pages + 76 companions present).
+- `touch` on a knowledge file made the dev watcher re-stage (115 networking files back), but new pages still need a dev restart.
+- Also expected, not a bug: a BUILT site / llms.txt / MCP shows 0 networking pages until they are approved (status draft).
+- Follow-up: dev's generated page list `system/site/.source/` was still the build's (0 networking). Fixed without stopping his server: `cd system/site && NODE_ENV=development npx fumadocs-mdx` → 38 networking entries; all 38 pages 200 on the running dev server, sidebar lists 38, flashcards + quiz render.
+
+---
+
+## Session 3 — block (approval, 2026-11-11)
+
+### Last updated
+2026-11-11T04:05:00Z — session 3
+
+### Done
+- Naveed: "approved all networking and all topics". 38 networking pages → status stable, `generated: { by: "claude-opus/5.5", at: <last commit of page> }`, `ksor.approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }`.
+- Build: 79 documents, 78 admitted to machine surfaces; llms.txt lists 38 networking pages.
+
+### Decisions taken
+- "all topics": every other page was already stable except event-7045, which still has 4 TODO-VERIFY lines → NOT approved (rule: TODO-VERIFY blocks approval); it waits for Wave 2 (4697 / T1543.003).
+- D1 (TLS 1.0/1.1) not answered → page keeps both cited statements (no change).
+- D2 (reverse links) not answered → not applied; Wave 1 stable pages unchanged. Can be done later (needs re-approval of 11 pages).
+- D3 → approval given with the open questions in place.
+
+### Pending / blocked
+- Push `feat/02-networking` + PR (needs Naveed's "push"). Gemini key → Feature 05 (then refresh to ingest the 38 new stable pages).
+
+### Exact next step
+- On "push": `git push`, `gh pr create` (feat/02-networking → main), Naveed merges; merge the progress.md blocks from feat/05-agent-surface by hand.
+- Then: Feature 06 (CI) spec, or Wave 2, or Feature 05 if "key done".
+- 2026-11-11: vercel.json `"git": { "deploymentEnabled": false }` cherry-picked here from feat/06-ci-and-release (bbb78f0) so this branch's Vercel check stops failing (MISSING_SERVICE_CONFIG). Deployment = Phase 8.
 
 ### Session 3 — Feature 06 started (2026-11-11, branch feat/06-ci-and-release)
 - Networking pushed (`920568e`) and PR #8 opened (feat/02-networking → main) — Naveed merges. NOTE: this branch was cut from main BEFORE PR #8; progress.md blocks from feat/02-networking (N4..approval) must be merged by hand when the branches meet.

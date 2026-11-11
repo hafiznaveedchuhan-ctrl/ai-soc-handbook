@@ -1,0 +1,14 @@
+deck:
+  title: "Common network attacks"
+  description: "Recall checks drawn only from the page Common network attacks."
+cards:
+  - front: "What is T1046?"
+    back: "Network Service Discovery — scanning for services on remote hosts."
+  - front: "How does a SYN flood work?"
+    back: "Bogus half-open connections use up the server's TCP state."
+  - front: "What does BCP 38 do?"
+    back: "Ingress filtering that stops forged source addresses leaving a network."
+  - front: "How does reflection amplification hit the victim?"
+    back: "Reflectors answer packets sent with the victim's spoofed address."
+  - front: "How does ARP cache poisoning work?"
+    back: "The attacker replies to ARP requests with their own MAC address."

@@ -1,0 +1,14 @@
+deck:
+  title: "The OSI model"
+  description: "Recall checks drawn only from the page The OSI model."
+cards:
+  - front: "How many layers does the OSI model have?"
+    back: "Seven — physical (1) up to application (7)."
+  - front: "What does layer 4 (transport) do?"
+    back: "Delivers messages error-free, in sequence, without loss or duplication."
+  - front: "What does layer 3 (network) do?"
+    back: "Decides the path data takes — routing, fragmentation, address mapping."
+  - front: "Which two sublayers split layer 2?"
+    back: "MAC and LLC (IEEE)."
+  - front: "Which layers do Windows network drivers implement?"
+    back: "The bottom four."

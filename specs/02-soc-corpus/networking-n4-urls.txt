@@ -1,0 +1,61 @@
+NETWORKING N4 — SOURCE URL LIST (STOP: needs Naveed's approval before any fetch/write)
+Written 2026-11-10, session 3. Branch feat/02-networking. Order numbers 1330-1337.
+Every RFC checked live on rfc-editor.org JSON (obsoleted_by); NIST pages checked for "withdrawn".
+
+CHANGES FOUND WHILE CHECKING
+  1. RFC 8446 (TLS 1.3) is OBSOLETED by RFC 9846 (July 2026) -> use RFC 9846.
+  2. RFC 7489 (DMARC) is OBSOLETED by RFC 9989 (DMARC), 9990 (aggregate reports), 9991 (failure reports),
+     all May 2026 -> use RFC 9989 (and 9990 only if aggregate reports are described).
+  3. RDP has no RFC -> Microsoft Learn (Tier 1 vendor spec) + IANA port registry (3389 = ms-wbt-server).
+
+PAGE -> SOURCES (all Tier 1)
+
+1330 http-https
+  - RFC 9110 HTTP Semantics (methods, status codes, CONNECT)   https://www.rfc-editor.org/rfc/rfc9110.txt
+  - RFC 9112 HTTP/1.1 (message format)                          https://www.rfc-editor.org/rfc/rfc9112.txt
+  - IANA HTTP Status Code Registry                              https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+  - IANA port registry (80/443, reuse from N2)                  https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+
+1331 tls
+  - RFC 9846 TLS 1.3 (replaces RFC 8446)                        https://www.rfc-editor.org/rfc/rfc9846.txt
+  - RFC 8996 Deprecating TLS 1.0 and 1.1                        https://www.rfc-editor.org/rfc/rfc8996.txt
+  - NIST SP 800-52 Rev. 2 (TLS configuration guidance)          https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r2.pdf
+  - IANA TLS parameters (alert codes, if used)                  https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml
+
+1332 email-protocols
+  - RFC 5321 SMTP                                               https://www.rfc-editor.org/rfc/rfc5321.txt
+  - RFC 5322 Internet Message Format (headers)                  https://www.rfc-editor.org/rfc/rfc5322.txt
+  - RFC 9051 IMAP4rev2                                          https://www.rfc-editor.org/rfc/rfc9051.txt
+  - RFC 1939 POP3                                               https://www.rfc-editor.org/rfc/rfc1939.txt
+  - RFC 7208 SPF                                                https://www.rfc-editor.org/rfc/rfc7208.txt
+  - RFC 6376 DKIM                                               https://www.rfc-editor.org/rfc/rfc6376.txt
+  - RFC 9989 DMARC (replaces RFC 7489)                          https://www.rfc-editor.org/rfc/rfc9989.txt
+
+1333 remote-access-protocols
+  - RFC 4251 SSH architecture                                   https://www.rfc-editor.org/rfc/rfc4251.txt
+  - RFC 4253 SSH transport                                      https://www.rfc-editor.org/rfc/rfc4253.txt
+  - RFC 854  Telnet                                             https://www.rfc-editor.org/rfc/rfc854.txt
+  - Microsoft Learn [MS-RDPBCGR] RDP spec                       https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/5073f4ed-1e93-45e1-b039-6e30c385867c
+  - Microsoft Learn "Change Remote Desktop listening port"      https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/change-listening-port
+
+1334 firewalls
+  - NIST SP 800-41 Rev. 1 Guidelines on Firewalls and Firewall Policy   https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf
+
+1335 ids-ips
+  - NIST SP 800-94 Guide to Intrusion Detection and Prevention Systems  https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf
+
+1336 proxies
+  - RFC 9110 (proxy, gateway, CONNECT, Via — reuse)             https://www.rfc-editor.org/rfc/rfc9110.txt
+  - RFC 7239 Forwarded HTTP Extension                           https://www.rfc-editor.org/rfc/rfc7239.txt
+    (X-Forwarded-For has no RFC -> only mentioned as "non-standard" if RFC 7239 says so)
+
+1337 vpn-and-ipsec
+  - RFC 4301 IPsec architecture                                 https://www.rfc-editor.org/rfc/rfc4301.txt
+  - RFC 4303 ESP                                                https://www.rfc-editor.org/rfc/rfc4303.txt
+  - RFC 4302 AH                                                 https://www.rfc-editor.org/rfc/rfc4302.txt
+  - RFC 7296 IKEv2 (UDP 500)                                    https://www.rfc-editor.org/rfc/rfc7296.txt
+  - RFC 3948 UDP encapsulation of ESP (UDP 4500)                https://www.rfc-editor.org/rfc/rfc3948.txt
+  - NIST SP 800-77 Rev. 1 Guide to IPsec VPNs                   https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-77r1.pdf
+  - IANA protocol numbers (ESP 50, AH 51 — reuse)
+
+NAVEED — reply "N4 URLs OK" (or name a URL to drop/change).

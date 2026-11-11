@@ -2,8 +2,9 @@
 type: Standard
 title: "Special-purpose IPv4 address ranges"
 description: The IPv4 blocks reserved for special purposes — private, shared (CGNAT), loopback, link-local, documentation, benchmarking, reserved and broadcast — and how to classify an address from an alert before looking it up.
-status: draft
+status: stable
 order: 1310
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: iana-ipv4-special
     title: "IANA — IANA IPv4 Special-Purpose Address Registry"
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Some IPv4 addresses are never "someone on the
@@ -85,6 +87,13 @@ All rows: [^iana-ipv4-special]
 | 192.0.2/24, 198.51.100/24, 203.0.113/24 | Documentation | Should not appear — check data quality |
 | 224/4 | Multicast | Group traffic, not one host |
 | anything else | Public | Check IP reputation |
+
+## Related pages
+
+- [IPv4 addressing and the IPv4 header](ipv4-addressing.md)
+- [NAT and PAT (NAPT)](nat-and-pat.md)
+- [Firewalls](firewalls.md)
+- [Private IP ranges](../enrichment/private-ip-ranges.md)
 
 [^iana-ipv4-special]: IANA, "IANA IPv4 Special-Purpose Address Registry". https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
 [^rfc6890]: IETF, "RFC 6890 — Special-Purpose IP Address Registries", updated by RFC 8190. https://www.rfc-editor.org/rfc/rfc6890

@@ -1,0 +1,14 @@
+deck:
+  title: "UDP — User Datagram Protocol"
+  description: "Recall checks drawn only from the page UDP — User Datagram Protocol."
+cards:
+  - front: "What kind of service is UDP?"
+    back: "Connectionless datagrams — no handshake, no delivery guarantee."
+  - front: "IP protocol number for UDP?"
+    back: "17."
+  - front: "Which four fields are in the UDP header?"
+    back: "Source port, destination port, length, checksum."
+  - front: "Is the UDP source port required?"
+    back: "No — it is optional and zero when not used."
+  - front: "Why is a UDP source address weaker evidence?"
+    back: "There is no handshake to confirm both ends."

@@ -2,8 +2,9 @@
 type: Definition
 title: "ARP — Address Resolution Protocol"
 description: How ARP maps an IPv4 address to a MAC address on the local network with a broadcast request and a reply, and why unexpected ARP changes matter to an analyst.
-status: draft
+status: stable
 order: 1305
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc826
     title: "RFC 826 — An Ethernet Address Resolution Protocol"
@@ -17,13 +18,14 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** To send to 192.0.2.10 on the same network, a computer
 > must know that machine's MAC address. It shouts "who has 192.0.2.10?" to
 > everyone (broadcast); the owner answers with its MAC. ARP trusts the
-> answer it gets; how misuse of ARP shows up in logs is covered later, in
-> the network-attacks page.
+> answer it gets; how misuse of ARP shows up is covered in
+> [network attacks](network-attacks.md).
 
 ## How ARP works
 
@@ -43,15 +45,21 @@ ksor:
 
 - The request is broadcast to the stations on the local Ethernet, so ARP is a
   local-network protocol.[^rfc826]
-- How ARP misuse appears in logs is covered, with sources, in network-attacks
-  (batch N5).
+- ARP cache poisoning (MITRE T1557.002) is covered, with sources, in
+  [network attacks](network-attacks.md).
 
 ## For the agent
 
 | Signal | Means | Next action |
 |---|---|---|
 | Normal request (op 1) then reply (op 2) | Address lookup | None |
-| IP → MAC mapping changes without a known reason | Check network-attacks (N5) | Flag; identify both MACs |
+| IP → MAC mapping changes without a known reason | Possible ARP poisoning — see [network attacks](network-attacks.md) | Flag; identify both MACs |
+
+## Related pages
+
+- [Ethernet and MAC addresses](ethernet-and-mac-addresses.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Common network attacks](network-attacks.md)
 
 [^rfc826]: IETF, "RFC 826 — An Ethernet Address Resolution Protocol". https://www.rfc-editor.org/rfc/rfc826
 [^rfc9542]: IETF, "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters", April 2024. https://www.rfc-editor.org/rfc/rfc9542

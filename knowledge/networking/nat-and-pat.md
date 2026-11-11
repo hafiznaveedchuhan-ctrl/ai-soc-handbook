@@ -2,8 +2,9 @@
 type: Definition
 title: "NAT and PAT (NAPT)"
 description: What Basic NAT and NAPT (port address translation) change in a packet, why one public address can stand for many internal hosts, the UDP mapping-timeout rule, and how NAT hides the real source in alerts.
-status: draft
+status: stable
 order: 1322
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc3022
     title: "RFC 3022 — Traditional IP Network Address Translator (Traditional NAT)"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** NAT swaps private addresses for a public one at the
@@ -74,6 +76,13 @@ RFC 4787 names three mapping behaviours:[^rfc4787]
 | Alert source = your public NAT address | Look up the translation log for that port and time |
 | Inbound connection to an inside host | Expect a static mapping; if none, investigate |
 | Same public IP, many ports | Normal for PAT — do not treat as one host |
+
+## Related pages
+
+- [DHCP and DHCPv6](dhcp.md)
+- [Special-purpose IPv4 address ranges](special-ipv4-ranges.md)
+- [VPNs and IPsec](vpn-and-ipsec.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
 
 [^rfc3022]: IETF, "RFC 3022 — Traditional IP Network Address Translator (Traditional NAT)". https://www.rfc-editor.org/rfc/rfc3022
 [^rfc4787]: IETF, "RFC 4787 — Network Address Translation (NAT) Behavioral Requirements for Unicast UDP". https://www.rfc-editor.org/rfc/rfc4787

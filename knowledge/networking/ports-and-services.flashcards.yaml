@@ -1,0 +1,14 @@
+deck:
+  title: "Ports and services"
+  description: "Recall checks drawn only from the page Ports and services."
+cards:
+  - front: "What are the three port ranges (RFC 6335)?"
+    back: "0–1023 System, 1024–49151 User, 49152–65535 Dynamic."
+  - front: "Which port is Remote Desktop?"
+    back: "3389 (ms-wbt-server)."
+  - front: "Which port is Windows file sharing?"
+    back: "445 (microsoft-ds)."
+  - front: "Which Wazuh ports do agents use?"
+    back: "1514/TCP to connect, 1515/TCP to enrol; API on 55000/TCP."
+  - front: "Does a port number prove which program listens?"
+    back: "No — it is a convention."

@@ -1,0 +1,14 @@
+deck:
+  title: "ARP — Address Resolution Protocol"
+  description: "Recall checks drawn only from the page ARP — Address Resolution Protocol."
+cards:
+  - front: "What does ARP convert?"
+    back: "A protocol address (such as IPv4) to a 48-bit Ethernet address."
+  - front: "ARP REQUEST and REPLY op codes?"
+    back: "REQUEST = 1, REPLY = 2."
+  - front: "How is an ARP request sent?"
+    back: "Broadcast to all stations on the local Ethernet."
+  - front: "Which EtherType carries ARP?"
+    back: "0806."
+  - front: "Which MITRE technique is ARP cache poisoning?"
+    back: "T1557.002."

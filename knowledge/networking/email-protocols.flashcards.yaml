@@ -1,0 +1,14 @@
+deck:
+  title: "Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC"
+  description: "Recall checks drawn only from the page Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC."
+cards:
+  - front: "Port for SMTP relay and for submission?"
+    back: "25 (smtp) and 587 (submission); 465 is submission over TLS."
+  - front: "IMAP and POP3 ports?"
+    back: "IMAP 143 / 993 (TLS); POP3 110 / 995 (TLS)."
+  - front: "What is the SMTP envelope?"
+    back: "Originator address, recipient addresses and optional extension material."
+  - front: "What does every receiving SMTP server add?"
+    back: "A Received trace line at the top of the message."
+  - front: "What does DMARC compare?"
+    back: "The From: (Author) domain with a domain authenticated by SPF or DKIM."

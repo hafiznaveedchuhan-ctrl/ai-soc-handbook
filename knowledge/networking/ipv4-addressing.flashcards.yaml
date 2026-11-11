@@ -1,0 +1,14 @@
+deck:
+  title: "IPv4 addressing and the IPv4 header"
+  description: "Recall checks drawn only from the page IPv4 addressing and the IPv4 header."
+cards:
+  - front: "How long is an IPv4 address?"
+    back: "32 bits — four octets."
+  - front: "What replaced address classes?"
+    back: "CIDR, with explicit prefix lengths such as /24."
+  - front: "What happens to a datagram when TTL reaches zero?"
+    back: "It is destroyed."
+  - front: "What does the Protocol field say?"
+    back: "The next-level protocol in the data part (TCP, UDP, ICMP …)."
+  - front: "Does IP guarantee delivery?"
+    back: "No — reliability is left to higher layers."

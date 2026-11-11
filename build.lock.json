@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:1004cba2890af2ef82eb4155ec6ed35562b364ccf22582e9f5ec0b15f5352fa9",
+  "build_id": "sha256:c479e68faeecefe73c15b2244b6444ce0289fbe3cc858382b52fb75ee2daa5dd",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "309dfc57db08726b439fa18675ba3a734143e1b8",
+  "source_commit": "d3b76d7bd707ef86de7bfbe2b36a8855736869c6",
   "dirty": false,
-  "as_of": "2026-11-11T04:12:54.727Z",
+  "as_of": "2026-11-11T04:02:08.484Z",
   "drafts": "hidden",
   "instance_sha256": "7aa990788cd97f71e48b2a388e0d0347b3be1ffd69377ea184cee612eb2c3395",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -137,219 +137,421 @@
     },
     {
       "path": "networking/arp.md",
-      "sha256": "efd90d8f01454daf09eaf532bb0ff163e0c20da158330cdecdd315c4fbf281c9",
-      "status": "draft",
+      "sha256": "23717100e042f554dac6ae6c009346ff6cf53f0f7d28c8f24301b58e24cdbfe6",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/dhcp.md",
-      "sha256": "012fd134826bb26874b4b11ded18d1b4c868638af6a812a370d6d14bdbe9c328",
-      "status": "draft",
+      "sha256": "7f672edb056a6682139f67d49dde28729f6f46fea1372bc8a5e9bcad656e2060",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/dns.md",
-      "sha256": "122ea73a4845d4d486cd24218a5602527f97bcc3a04b73aa1a302e054cb84f2b",
-      "status": "draft",
+      "sha256": "428a7cc84e89e0663c89e83fcce2d3479aa1cde8309da5e110c6a9e0561d0282",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/email-protocols.md",
+      "sha256": "8ccfdad8e7651c79c10108ade64f4854f456fe1f82cefa574cd2c683647d8c17",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ethernet-and-mac-addresses.md",
-      "sha256": "3d105897431d9771fa28f4de10264b15ef7db75fdfd340e5fb223a1e995444df",
-      "status": "draft",
+      "sha256": "e5a86c7cb7e377a3d3f02578884dfc27e35ea76cdf43d62f91edb00100a7c91e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/firewalls.md",
+      "sha256": "c9ccba1bc645e028f97013a0aa9b8d24f8469b7d17cb99ffbc05214c8e020c89",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/http-https.md",
+      "sha256": "a0e22e4a29f6878fb8340e589743a77424724ee611c733d72ef5f10f7091e38f",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/icmp-and-icmpv6.md",
-      "sha256": "391757a2ef63f49ad2b914d693055641d8a776a1f3f0ee5a3530129979930d7e",
-      "status": "draft",
+      "sha256": "f06b39017e0ef7b43ee1e48f6a4248bd906b24e656d9ca58a4ceb65e3b337ed2",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/ids-ips.md",
+      "sha256": "408ca33ee166f11a53224e0b7f1fe7397ee390dcb0da50b888e3ab6cd0405ae7",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv4-addressing.md",
-      "sha256": "145b07ac4fdb18762f785cccac15cba2ff4b02ffb61e25f5e462c91462602c3f",
-      "status": "draft",
+      "sha256": "59b7b424311ba3358aa4d3289a7de9b2ea33638a8c3a6348e73f6e893fad52b5",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv4-subnetting-and-cidr.md",
-      "sha256": "a5695bd4681838d23e3bf102a392bc487c4729c430f346985f1a4535e5ac4751",
-      "status": "draft",
+      "sha256": "6330b4070b266bdba094744603babfaa2e1167ec5180d77b2bf631540a951dad",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-addressing.md",
-      "sha256": "6ce8ed05ac3a85af7af74eda1218c17041abde3f7ec3f6828d57841bc060994c",
-      "status": "draft",
+      "sha256": "b85f15ea15a6e096f93accb9472290753fb9cf81240a1e07210183cfe5902195",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-neighbor-discovery-and-slaac.md",
-      "sha256": "4b88845f0908badb292ed12863cb4e23f5eb545087dd570c3e7528de0ecfd6b7",
-      "status": "draft",
+      "sha256": "c7d484bfde50dc9f9c13517c70ccc29648d86ae9372988a09d41531bffe956e3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ipv6-special-ranges.md",
-      "sha256": "24485bdb63276c6ba176dbb6d97d7c96aababb87d36bbdc1f412bd0cd93e90c6",
-      "status": "draft",
+      "sha256": "c732d8bc71fa5db01d88bb2b310af629d08b5a26591bdf7cbc38683f3e349095",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/nat-and-pat.md",
-      "sha256": "638d5b0507105bf62365323838949c8e16004201a986ebd2668f9399677613a8",
-      "status": "draft",
+      "sha256": "360007e1e901cd26a279955bcb20e04e7958d058faba1d7dd6a60893b10c2e00",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/netflow-and-ipfix.md",
+      "sha256": "58daa02abf99470d63fe697021f0ef58923ecc656d9b5f94ccfd8d2a95424e98",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/network-attacks.md",
+      "sha256": "73e13a783ebee0c0bae9127c5e2e9ba5f95510792fd2d874dbc18ed96b5e04b2",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/network-segmentation-and-zones.md",
+      "sha256": "6fbcb004d24462b424ade86924322ff51f4c623eda47604876b9c7e6c3c778f6",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/networking-overview.md",
-      "sha256": "d51cd003c86531333ddaa9186f2a283afea0ebc2be37d7d791dde1f9a4c55ae5",
-      "status": "draft",
+      "sha256": "39d849344310eae7b2cde4340598e90d14fd166e961feaa3c86cfef933c8319e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ntp-and-time-sync.md",
-      "sha256": "568302780e0f7f05de610dd4499a92c09e9ef9f4232ec268ac6f51753a58375d",
-      "status": "draft",
+      "sha256": "df6a1d20441e38b03157445c011559b2e541ed888980c35b35dc9ecb5366ed01",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/number-systems-binary-decimal-hex.md",
-      "sha256": "ee86771dec931132dc7ee387a2ef3b2522f0af47f5aee5801cc2c6d3b39a30de",
-      "status": "draft",
+      "sha256": "db0b9583f659b2508ff06d43b72d8a3596e7b93dfd76e7b661418c35bb319ab5",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/osi-model.md",
-      "sha256": "1f06afeae5be383fba8aabe07449aadb4ad5afdd221eb0811e65ab54fad5e7f9",
-      "status": "draft",
+      "sha256": "05804db8c8b4ac323eba9df40dac8079b2edd70a964eb4b00651664e2a3c351b",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/packet-capture.md",
+      "sha256": "7d41d830649e2317f31a58ffcdb3506258c3ce84fa5b5c32cea1bf4bc3d919bf",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/ports-and-services.md",
-      "sha256": "6a5750edd1a141145c536d8b4bcb8ca43543bc73cab1b9e4b8d1e59dee219a31",
-      "status": "draft",
+      "sha256": "b2fccb09d37ed3801e8db7984e8324b3283557519a9ba99335a57a0b60489fc3",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/proxies.md",
+      "sha256": "dbdd077de57c2082e44e72525280d8a76e42a50c874ac770acabb0dac5b36f72",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/reading-network-logs-in-siem.md",
+      "sha256": "c2aae150f2b4914b12484d43093b0b8f27645f78e7c0f99b7062ab780e2a9abb",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/remote-access-protocols.md",
+      "sha256": "6d9a7de794f4658e2c0b93e9c6bc39ce10278ac2ccd54a13bd56ef2a18ad2d4e",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/routing-basics.md",
-      "sha256": "60dd0ec8f710f5ebf8e1e5431ead545e8abb9124fd516c6a291b4c7a117531e0",
-      "status": "draft",
+      "sha256": "00888a7e87a821eca0174c9d8662bbfa36ca2da718761b776b02f201e9f2dd02",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/routing-protocols-overview.md",
-      "sha256": "5b028a784f68b176f35831d2e20756017829a5bbf6005287f2defce1687091b9",
-      "status": "draft",
+      "sha256": "38cdc6fc80233389e6d83eb5df60c2c5b923cab721bf9dc6cea8e2d9ad2fc24e",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/special-ipv4-ranges.md",
-      "sha256": "c14a21550c14f81a6f9829a4c522f898b6f884fe1428ae26d07d66b20b9c340f",
-      "status": "draft",
+      "sha256": "4d9e0b79c00d7201f215b10408b58af59d3fd6b23c87a0dc05e56e3371bc6c80",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/syslog.md",
+      "sha256": "949dbad0d05712b969581486abff04a1dd74397cbb5ccf087d3b217bbac873dc",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/tcp.md",
-      "sha256": "7cccda3a0e73ccdb44b0f38ff4368dcf4b5edcbcb9a90ce52846cdfa49b22f60",
-      "status": "draft",
+      "sha256": "4b9216e651952800d85c964ab818e025c2c9a6c360bab6a85852676138e89626",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/tcp-ip-model-and-encapsulation.md",
-      "sha256": "b4d3ace8bf391d98a9fb3838ed14b932ca8bdc4f0b876e91648f73f18626ad4f",
-      "status": "draft",
+      "sha256": "55d41d054d9e8bb368bacce2f0920ce130934d2d99b3ca42ac137b3963a1b027",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/tls.md",
+      "sha256": "99e99e4bc4a782c3ed0bf0afc2c8f1f7556d45fe24eb3ca81179c796ddd7e5a2",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/udp.md",
-      "sha256": "50c23ba3cc2dbeae83239e45ef612ccc208e0390960fab4a2de8f4f32afb195d",
-      "status": "draft",
+      "sha256": "b69f9fffc9b946d4d89c22aa77cea6315dc397fb383e91512afaaf68440c9b9d",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/vlans-and-switching.md",
-      "sha256": "648e8898846f2fc729ef0060cff1050a5035563944ad040b28b5fb6876e711a9",
-      "status": "draft",
+      "sha256": "aaa04c15e3f7cecbe1aa8a94614a7aa4f072a0add6191ecf8dfd1e068c4f47eb",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "networking/vpn-and-ipsec.md",
+      "sha256": "533624b3aad8c36ec28d751a49bbf2c8d48ae1aa661f8fea92e25c19f951996a",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "networking/wireless-basics.md",
-      "sha256": "3d08f0defb47b711dccef32fc5fa7eb1e6efd2e61e5ef68b7a6343a8d31fdd8f",
-      "status": "draft",
+      "sha256": "6e466061c814ea8da4cf451c0952d428ffa2c443df52a6c4c90489fdf64f0456",
+      "status": "stable",
       "audience": [
         "public"
       ],
-      "admitted": []
+      "admitted": [
+        "public"
+      ]
     },
     {
       "path": "orientation/glossary.md",
@@ -693,6 +895,310 @@
   ],
   "companions": [
     {
+      "path": "networking/arp.flashcards.yaml",
+      "sha256": "2292457630e2229fce4d8d8e3bcfc37ca2991a7b4db18fc05ec6474659df9d09"
+    },
+    {
+      "path": "networking/arp.quiz.yaml",
+      "sha256": "f8686d0f524787a91f72dae051e06d52c1435cd72b33e8969a58cec9d61afcae"
+    },
+    {
+      "path": "networking/dhcp.flashcards.yaml",
+      "sha256": "991bdaeb7b0cbb128dca853d81307722f47b0c2eb3b06ff2c40811302071cc72"
+    },
+    {
+      "path": "networking/dhcp.quiz.yaml",
+      "sha256": "6682faa21d5208045b7f7e244b7e2147fc89625c211e732a2031436758a0ba31"
+    },
+    {
+      "path": "networking/dns.flashcards.yaml",
+      "sha256": "a8acfb99bfc3a4ae477a1e3f8976fe18fc4e7ae528636b643638fcf0737badb8"
+    },
+    {
+      "path": "networking/dns.quiz.yaml",
+      "sha256": "d9af58bd4efee7ad25e386e7b43afa5024529e7cd2d3acec1c6127d1823f60cc"
+    },
+    {
+      "path": "networking/email-protocols.flashcards.yaml",
+      "sha256": "3e249c671bb534bceb4bec98b63a27611d118b5da12d6e88ddc23c0ca3ebbcb6"
+    },
+    {
+      "path": "networking/email-protocols.quiz.yaml",
+      "sha256": "6d05050aefb7b724a28494267a7da9e237d91742b7be3143d5618a322b225219"
+    },
+    {
+      "path": "networking/ethernet-and-mac-addresses.flashcards.yaml",
+      "sha256": "8cf01203060413bf0cf28bec4ca8fc545ee5dd645c2fb07682bab0a2080ef279"
+    },
+    {
+      "path": "networking/ethernet-and-mac-addresses.quiz.yaml",
+      "sha256": "cd8635d7c9ebd162550ffb2015eecffeff821ec65dbead1cad274e3023d2ce97"
+    },
+    {
+      "path": "networking/firewalls.flashcards.yaml",
+      "sha256": "466fac2b19896b998f071d0a9111e74297afe1dd3676e6ff48d504f84d18f785"
+    },
+    {
+      "path": "networking/firewalls.quiz.yaml",
+      "sha256": "24ccf56d6d80d417902bedb87e32936453186f006ebe3ed899ab83617deaba84"
+    },
+    {
+      "path": "networking/http-https.flashcards.yaml",
+      "sha256": "53a09f82b74dd2874ccc049db30d8817eb6439e6b1cb175a2d9b30fc7d723fc5"
+    },
+    {
+      "path": "networking/http-https.quiz.yaml",
+      "sha256": "9fdca33a796610f29efe8b98c2adbaf074f793d5cd2e6aa9063dc87c2c51f468"
+    },
+    {
+      "path": "networking/icmp-and-icmpv6.flashcards.yaml",
+      "sha256": "7bf3a21f503f02cd286034901716a3001e6722cc5a6809037a9377770f40bbeb"
+    },
+    {
+      "path": "networking/icmp-and-icmpv6.quiz.yaml",
+      "sha256": "645be4f5257f35528589c53fc976674aab4ed9f9cd7b04e97450358c2c1c2bab"
+    },
+    {
+      "path": "networking/ids-ips.flashcards.yaml",
+      "sha256": "ae40e9cf997615f1220bc1cbc8f3c95216c2f603466177a0935001c5ab36ceb5"
+    },
+    {
+      "path": "networking/ids-ips.quiz.yaml",
+      "sha256": "54e496fca93c66fa25b56f039878b11f2ae13b268bb7f2a55cc6877f613d66ff"
+    },
+    {
+      "path": "networking/ipv4-addressing.flashcards.yaml",
+      "sha256": "27d3c725f5d3fd1af5839079dd2613ae878e431f7f1cdab92f0cba3d8fb99fb0"
+    },
+    {
+      "path": "networking/ipv4-addressing.quiz.yaml",
+      "sha256": "cfa948e31cb62bfa08b6e9d7c42860f94651333ed233b0df3e515258a40791a2"
+    },
+    {
+      "path": "networking/ipv4-subnetting-and-cidr.flashcards.yaml",
+      "sha256": "dae52d204a13bbba5eb464d45060b0dda6f99622e0dd5a33165cde54c3caf7a0"
+    },
+    {
+      "path": "networking/ipv4-subnetting-and-cidr.quiz.yaml",
+      "sha256": "1dbe64b198469def73c877f37fb541a356c5101ea70dbbf37069c26a7c9d8d92"
+    },
+    {
+      "path": "networking/ipv6-addressing.flashcards.yaml",
+      "sha256": "36b7658028e066a9deebf4819dc486012ea55ae48084a9a9002ac2e3a9cca760"
+    },
+    {
+      "path": "networking/ipv6-addressing.quiz.yaml",
+      "sha256": "d1a11ddd760be544278c428813402e8685012d436f4db43a35552cf4bf89e1d4"
+    },
+    {
+      "path": "networking/ipv6-neighbor-discovery-and-slaac.flashcards.yaml",
+      "sha256": "afd1636999f1b9326d8b38a8d5e6e33c3dd950bdd456c6906b199e721400e4e6"
+    },
+    {
+      "path": "networking/ipv6-neighbor-discovery-and-slaac.quiz.yaml",
+      "sha256": "8a026bf728be12366e1ceb375792436a72c0131cae89f8ba4850ad10c08c6da6"
+    },
+    {
+      "path": "networking/ipv6-special-ranges.flashcards.yaml",
+      "sha256": "08bb4a47e2980354323ce864c54578fe58cff26fa97d908a10d07ebcef6eacc1"
+    },
+    {
+      "path": "networking/ipv6-special-ranges.quiz.yaml",
+      "sha256": "09c3e4164e1bc39ca230c78d1b273d0f39cc309f69d12e860acb115945d65d29"
+    },
+    {
+      "path": "networking/nat-and-pat.flashcards.yaml",
+      "sha256": "b9686c93712b0c14a87a0f2d2a3a523836bd7d696770bf18f4c6ab78136185b7"
+    },
+    {
+      "path": "networking/nat-and-pat.quiz.yaml",
+      "sha256": "33051c62bd03468621e8a73f7375312db627ea78c65c266c973469aad438531a"
+    },
+    {
+      "path": "networking/netflow-and-ipfix.flashcards.yaml",
+      "sha256": "761b251774a54c81144af8952fa3f59facc3e63db10614a1f538f866b78a717f"
+    },
+    {
+      "path": "networking/netflow-and-ipfix.quiz.yaml",
+      "sha256": "b1660ede771d329be1b8e2fea122aef035ba9dabebc93e09e6000e44e82a2f1e"
+    },
+    {
+      "path": "networking/network-attacks.flashcards.yaml",
+      "sha256": "a825fced3934c79049c3e4f22ecebf3662a8987b014a706428f12f1c619fecc7"
+    },
+    {
+      "path": "networking/network-attacks.quiz.yaml",
+      "sha256": "388c5df55646a1197f2a9d1bdc8f9d90fc8c54cacdf0f4efaf2caf8864cee266"
+    },
+    {
+      "path": "networking/network-segmentation-and-zones.flashcards.yaml",
+      "sha256": "d5b83e9ac7bd873e2d653f1bb73e54bd18e911ecf0ecd231dbbc2e735125c6bd"
+    },
+    {
+      "path": "networking/network-segmentation-and-zones.quiz.yaml",
+      "sha256": "f722428802db9d3caac549142a1cf4618a57bec17656223a3e7cff312e4c9415"
+    },
+    {
+      "path": "networking/networking-overview.flashcards.yaml",
+      "sha256": "842492256bda6c9c7235ed05449053e0b0776f22f2404ddf1c715d96e0c7ba7b"
+    },
+    {
+      "path": "networking/networking-overview.quiz.yaml",
+      "sha256": "16d801919d0db2d194304e7759cb38aa9504ba3f6b2e89bba14d1737faee01ab"
+    },
+    {
+      "path": "networking/ntp-and-time-sync.flashcards.yaml",
+      "sha256": "f482d396a5c015dd43de43beb8551d51e45534d462d30df794ab74d0f3b3a8b2"
+    },
+    {
+      "path": "networking/ntp-and-time-sync.quiz.yaml",
+      "sha256": "9d3e2dc36645d7f601b9a042c9987b5b1c3695ad90c07cd5c1294a375d3c8f4a"
+    },
+    {
+      "path": "networking/number-systems-binary-decimal-hex.flashcards.yaml",
+      "sha256": "0425771bf9a67a7a2548879b99ba4bbca60606af7d3e1a275e08d3fe00143c30"
+    },
+    {
+      "path": "networking/number-systems-binary-decimal-hex.quiz.yaml",
+      "sha256": "5185e5d5d030e15318f4162e4fbdb0ac9757cdbdcd2128fad125d13dab0271ef"
+    },
+    {
+      "path": "networking/osi-model.flashcards.yaml",
+      "sha256": "071b3d2e0679c6edd00e7f369cb7cd6aff798b691920be91f374edb71cecbc5b"
+    },
+    {
+      "path": "networking/osi-model.quiz.yaml",
+      "sha256": "e3de4b15d8c8c8739d654b3f8ca9b42e38ee2b87f340d715c2fb151bb12cf6bd"
+    },
+    {
+      "path": "networking/packet-capture.flashcards.yaml",
+      "sha256": "fd9c21c6bb97811c64c102f7da1ae3c280a91f21df68906fd79b364b680d4aae"
+    },
+    {
+      "path": "networking/packet-capture.quiz.yaml",
+      "sha256": "750a641a09b88123f10cabe65181d20693678c40eee2d11875c578e158bdbd30"
+    },
+    {
+      "path": "networking/ports-and-services.flashcards.yaml",
+      "sha256": "12ce61e073ef0d0d7e63ad796048a82353cb9af152fde8b2de6208c52c234dbc"
+    },
+    {
+      "path": "networking/ports-and-services.quiz.yaml",
+      "sha256": "e2b7c63d2d8bb18503b7a68eeb57cd19f1981474e082a6f46674194023ffa0de"
+    },
+    {
+      "path": "networking/proxies.flashcards.yaml",
+      "sha256": "e463206c3114df532cead3609ddf8258d98d802e1da2ccd177497021656ea113"
+    },
+    {
+      "path": "networking/proxies.quiz.yaml",
+      "sha256": "f1b27f077f2054ccea8b2d3367e338a885d1ec46968ce4c817a35bde9e108b56"
+    },
+    {
+      "path": "networking/reading-network-logs-in-siem.flashcards.yaml",
+      "sha256": "62db06727e62cbd39358a0bfdf2af32b6dd3ce7c65470cccea836a3526d1390f"
+    },
+    {
+      "path": "networking/reading-network-logs-in-siem.quiz.yaml",
+      "sha256": "efb282efaf0fb0d490a081baf429d555348b9e83785db83ad2ed89de28aabf96"
+    },
+    {
+      "path": "networking/remote-access-protocols.flashcards.yaml",
+      "sha256": "f8fc6451c6313e5e736ca8224f314b52601702d36a8dcd772a4762d35589a739"
+    },
+    {
+      "path": "networking/remote-access-protocols.quiz.yaml",
+      "sha256": "83837847272f4ebd25559822814b50de630639fa576dac6abd014338701620cc"
+    },
+    {
+      "path": "networking/routing-basics.flashcards.yaml",
+      "sha256": "bad7bd7b8d0ea7166c19f16550cd37bb4a3350a5212be61db86d5415a449495a"
+    },
+    {
+      "path": "networking/routing-basics.quiz.yaml",
+      "sha256": "eacb20b955b1096d52bad80b6af7e171817e409ad260ae3d58b5413c66ca0add"
+    },
+    {
+      "path": "networking/routing-protocols-overview.flashcards.yaml",
+      "sha256": "017db0fededa0aaca8a6199fde11b81ed12b4bfa693deb386c8e5f03458a291e"
+    },
+    {
+      "path": "networking/routing-protocols-overview.quiz.yaml",
+      "sha256": "9b7478539ddab2ec2ecd86682e85fda1492812d68ae4d9fb73e10e3390a37557"
+    },
+    {
+      "path": "networking/special-ipv4-ranges.flashcards.yaml",
+      "sha256": "e94d0d8d3fcd088e66dc9575fe8bd8637cf2c17974058f872b999a23c4d4cfac"
+    },
+    {
+      "path": "networking/special-ipv4-ranges.quiz.yaml",
+      "sha256": "d86c1f344d3dc47b6fc3dbe468a21755e38a903ef4c08e4ca1c1a5257a3d6881"
+    },
+    {
+      "path": "networking/syslog.flashcards.yaml",
+      "sha256": "07b2f690ad79037d9094c37f136c5a6b6d11b0ccc64d03c2ace1bc915bc8a4f0"
+    },
+    {
+      "path": "networking/syslog.quiz.yaml",
+      "sha256": "d0bdc80281ca73700413d63836cf351398d3d0de6cf1338ad1ed784376c3b034"
+    },
+    {
+      "path": "networking/tcp-ip-model-and-encapsulation.flashcards.yaml",
+      "sha256": "e4e59637417fe9526285034bf70acb400837fae74793163ce1730a64486e99bd"
+    },
+    {
+      "path": "networking/tcp-ip-model-and-encapsulation.quiz.yaml",
+      "sha256": "8def6e04490ed2288fd6e11a582812c911c94c49404875e6b4cc517a484bc20b"
+    },
+    {
+      "path": "networking/tcp.flashcards.yaml",
+      "sha256": "f03b28e536fd15ca61db49f46db4dd112de94887b8b94ae9996932aafc00dac9"
+    },
+    {
+      "path": "networking/tcp.quiz.yaml",
+      "sha256": "758f73e4e1ff71a0cc9812fc2bce18f1ed643a7648295549774f8cee1591fd3e"
+    },
+    {
+      "path": "networking/tls.flashcards.yaml",
+      "sha256": "be66c95ae1021b0c2bb1e34be849309e852469fe8f6c3fc6075914bf554f1621"
+    },
+    {
+      "path": "networking/tls.quiz.yaml",
+      "sha256": "70964a08222437192245293d63a0b06f4e680733d3e67d1107130cdd637178c1"
+    },
+    {
+      "path": "networking/udp.flashcards.yaml",
+      "sha256": "1df58e64af18e596d01b5aa738f0b36e87e2fe3a13db5ec7debc53a3922bb7a2"
+    },
+    {
+      "path": "networking/udp.quiz.yaml",
+      "sha256": "7fb54ec55aeee3ca81e5b00669a3a0adcc295789c5f625ce037b1ee24b6db10f"
+    },
+    {
+      "path": "networking/vlans-and-switching.flashcards.yaml",
+      "sha256": "a1714a4d33ee9fc4485f596e90b37a271e7fef7975e4fa42ea66b1e8825fbbfc"
+    },
+    {
+      "path": "networking/vlans-and-switching.quiz.yaml",
+      "sha256": "d2cd1d94f02618842ab6db739efde7bbfdf7552abac5147f60e95d01ad61b40c"
+    },
+    {
+      "path": "networking/vpn-and-ipsec.flashcards.yaml",
+      "sha256": "da0ca6f23f4e7d86a7a29e021abaea1a9580e47b42e876b15d89f5a4c54cefa7"
+    },
+    {
+      "path": "networking/vpn-and-ipsec.quiz.yaml",
+      "sha256": "532ea7624bd0eced384ed7d39deab2bd25bdbd21e9815dd532ff335362aa1591"
+    },
+    {
+      "path": "networking/wireless-basics.flashcards.yaml",
+      "sha256": "568dea1e47580901354c626568e17cf937672eb07fcd710b104abbfdec2ece5a"
+    },
+    {
+      "path": "networking/wireless-basics.quiz.yaml",
+      "sha256": "635997ea70385685ddb361b1753e3a567b4e8b52850cb32c9ba781321103561d"
+    },
+    {
       "path": "playbooks/added-to-admin-group.flashcards.yaml",
       "sha256": "e59454447c9b9aaf5b17f605002f2dae4b87be202ef3fb1a9fbdb0a0af87d4f0"
     },
@@ -829,7 +1335,7 @@
     },
     {
       "path": "networking/index.md",
-      "sha256": "8bdcc9b6f02eccdece4fbbba8b22377d8a0c24b295bec847df12e90a9d852be8"
+      "sha256": "a01643fcf2e6ea86488eb4acb0a5f58ce2efbe157ca369179510399d214e8715"
     },
     {
       "path": "orientation/index.md",
@@ -859,8 +1365,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "b390158bcc3f2f4cdb35641289ee7cf6c213817bcc78f85c1e5a7af742ae97c0",
-      "files": 77
+      "sha256": "ee8b05d711be8b41c41fd481827ddc471d7c5183d22e3e976e1fbd08bebd5f01",
+      "files": 192
     }
   ]
 }

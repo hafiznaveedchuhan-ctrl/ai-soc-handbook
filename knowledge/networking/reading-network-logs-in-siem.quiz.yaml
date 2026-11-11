@@ -1,0 +1,58 @@
+quiz:
+  title: "Reading network logs in the SIEM"
+  questionsPerRound: 6
+questions:
+  - question: "Agentless SIEM collection means …"
+    options:
+      - "an agent program runs on every single host"
+      - "hosts push or the server pulls logs"
+      - "logs are typed in by hand"
+      - "only syslog is accepted"
+    answer: 1
+    explanation: "SP 800-92: agentless — no special software on the log-generating hosts."
+    source: "What a SIEM does with logs"
+  - question: "NIST's clock example: logs say A was 45 s before B, but …"
+    options:
+      - "A and B really happened at the same time"
+      - "B never happened at all"
+      - "the logs were from one host"
+      - "A was really two minutes after B"
+    answer: 3
+    explanation: "SP 800-92: inaccurate clocks reversed the real order of events."
+    source: "Steps"
+  - question: "What should keep log sources' clocks consistent?"
+    options:
+      - "NTP time synchronisation"
+      - "DHCP lease renewals"
+      - "DNS record TTLs"
+      - "Firewall deny rules"
+    answer: 0
+    explanation: "SP 800-92: use time synchronisation such as NTP servers."
+    source: "Steps"
+  - question: "Systems in several time zones need …"
+    options:
+      - "separate SIEMs per zone"
+      - "no special handling"
+      - "conversion to one time zone"
+      - "a stratum 16 server"
+    answer: 2
+    explanation: "SP 800-92: convert all logged times to a single time zone."
+    source: "Steps"
+  - question: "Real host behind NAT/DHCP/proxy cannot be found. Then …"
+    options:
+      - "pick the most likely host"
+      - "say 'unresolved', do not name a host"
+      - "use the public NAT IP as the host name instead"
+      - "close the alert"
+    answer: 1
+    explanation: "For the agent: do not name a host — say unresolved."
+    source: "For the agent"
+  - question: "An agent-based SIEM agent does what?"
+    options:
+      - "Filters, normalises and sends logs"
+      - "Only stores logs locally on the host for later"
+      - "Blocks traffic inline"
+      - "Assigns IP addresses"
+    answer: 0
+    explanation: "SP 800-92: the agent filters, aggregates, normalises and transmits."
+    source: "What a SIEM does with logs"

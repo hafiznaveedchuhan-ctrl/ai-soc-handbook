@@ -1,0 +1,58 @@
+quiz:
+  title: "IPv6 Neighbor Discovery and SLAAC"
+  questionsPerRound: 6
+questions:
+  - question: "ICMPv6 type 133 is …"
+    options:
+      - "Router Advertisement"
+      - "Router Solicitation"
+      - "Neighbor Solicitation"
+      - "Redirect"
+    answer: 1
+    explanation: "Types: 133 RS, 134 RA, 135 NS, 136 NA, 137 Redirect."
+    source: "The five Neighbor Discovery messages"
+  - question: "ICMPv6 type 136 is …"
+    options:
+      - "Neighbor Solicitation"
+      - "Router Advertisement"
+      - "Echo Reply"
+      - "Neighbor Advertisement"
+    answer: 3
+    explanation: "136 is Neighbor Advertisement."
+    source: "The five Neighbor Discovery messages"
+  - question: "Can a Neighbor Advertisement be unsolicited?"
+    options:
+      - "Yes, to announce a change"
+      - "No, never"
+      - "Only from routers on the link"
+      - "Only during DHCP"
+    answer: 0
+    explanation: "RFC 4861: may be sent unsolicited to announce a link-layer address change."
+    source: "The five Neighbor Discovery messages"
+  - question: "Which RFC specifies SLAAC?"
+    options:
+      - "RFC 4861"
+      - "RFC 4291"
+      - "RFC 4862"
+      - "RFC 9915"
+    answer: 2
+    explanation: "RFC 4862 specifies stateless address autoconfiguration."
+    source: "SLAAC"
+  - question: "An unexpected Router Advertisement alert points to …"
+    options:
+      - "the DNS server for the link"
+      - "the sending device"
+      - "the DHCP lease"
+      - "the firewall log"
+    answer: 1
+    explanation: "Identify the device that sent it."
+    source: "Why a SOC analyst cares"
+  - question: "Is ND misuse covered by a source in this record?"
+    options:
+      - "Not yet — it is an open question"
+      - "Yes, in RFC 4862"
+      - "Yes, in MITRE T1557.002"
+      - "Yes, in the TCP page"
+    answer: 0
+    explanation: "The page marks Neighbor Discovery misuse as an open question."
+    source: "Why a SOC analyst cares"

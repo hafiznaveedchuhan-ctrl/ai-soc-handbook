@@ -1,0 +1,14 @@
+deck:
+  title: "Special-purpose IPv4 address ranges"
+  description: "Recall checks drawn only from the page Special-purpose IPv4 address ranges."
+cards:
+  - front: "Which IANA registry lists special IPv4 blocks?"
+    back: "The IPv4 Special-Purpose Address Registry (RFC 6890)."
+  - front: "What is 100.64.0.0/10?"
+    back: "Shared Address Space for service providers — not RFC 1918."
+  - front: "What is 169.254.0.0/16?"
+    back: "Link-local — same link only."
+  - front: "What are the three documentation ranges?"
+    back: "192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24."
+  - front: "Which addresses are never sent for reputation lookup?"
+    back: "Private and loopback addresses."

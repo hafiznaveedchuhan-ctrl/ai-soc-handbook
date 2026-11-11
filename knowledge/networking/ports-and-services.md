@@ -2,8 +2,9 @@
 type: Standard
 title: "Ports and services"
 description: The three port ranges, the well-known ports a SOC analyst must recognise with IANA's official names, the IP protocol numbers, and the ports Wazuh itself uses.
-status: draft
+status: stable
 order: 1317
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
 sources:
   - id: rfc6335
     title: "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** A port number says which service a connection is for:
@@ -106,6 +108,15 @@ not prove which program is listening.[^iana-ports]
 | 3389 / 22 / 5985 / 5986 inbound | Remote access — check source and account |
 | 445 between workstations | File sharing — consider escalation condition 5 |
 | Port not listed | Look it up in the IANA registry; the port alone does not prove the program |
+
+## Related pages
+
+- [TCP — Transmission Control Protocol](tcp.md)
+- [UDP — User Datagram Protocol](udp.md)
+- [Remote access protocols — SSH, RDP, Telnet](remote-access-protocols.md)
+- [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
+- [HTTP and HTTPS](http-https.md)
+- [Wazuh architecture](../wazuh/architecture.md)
 
 [^rfc6335]: IETF, "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry". https://www.rfc-editor.org/rfc/rfc6335
 [^iana-ports]: IANA, "Service Name and Transport Protocol Port Number Registry". https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml

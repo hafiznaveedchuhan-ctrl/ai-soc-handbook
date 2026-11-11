@@ -1,0 +1,14 @@
+deck:
+  title: "NAT and PAT (NAPT)"
+  description: "Recall checks drawn only from the page NAT and PAT (NAPT)."
+cards:
+  - front: "What does Basic NAT translate?"
+    back: "IP addresses only, from one group to another."
+  - front: "What does NAPT (PAT) translate?"
+    back: "Addresses and their TCP/UDP ports, many into one address."
+  - front: "Which direction are traditional NAT sessions?"
+    back: "Outbound from the private network; inbound only by static maps."
+  - front: "Minimum NAT UDP mapping timeout (RFC 4787 REQ-5)?"
+    back: "Two minutes (shorter allowed for some well-known ports)."
+  - front: "What is hairpinning?"
+    back: "Two inside hosts talking via each other's external address and port."
