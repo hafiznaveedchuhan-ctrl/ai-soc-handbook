@@ -4,7 +4,7 @@ title: "Playbook: account added to Administrators"
 description: What to do when an account is added to the Administrators group — L1 steps for event 4732 into the local Administrators group (Wazuh 60154) — who added whom, whether it was planned, and why it is an immediate escalation when it was not.
 status: stable
 order: 803
-generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:46:20Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -24,7 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:46:21Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone was made a local administrator. That account
