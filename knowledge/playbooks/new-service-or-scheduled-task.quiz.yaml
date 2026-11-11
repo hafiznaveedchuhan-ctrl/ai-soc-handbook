@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook: new service or scheduled task"
+  questionsPerRound: 6
+questions:
+  - question: "New service on a domain controller. Which condition?"
+    options:
+      - "Condition 2"
+      - "Condition 7"
+      - "Condition 3"
+      - "Condition 5"
+    answer: 1
+    explanation: "New service on DC, AD FS or AD CS → condition 7."
+    source: "Escalate?"
+  - question: "Where are manual or malware tasks often placed?"
+    options:
+      - "System32 folder"
+      - "Startup folder"
+      - "Program Files"
+      - "Library root"
+    answer: 3
+    explanation: "Task Scheduler Library root (\\TASK_NAME)."
+    source: "L1 steps"
+  - question: "Binary in a download folder. Action?"
+    options:
+      - "Escalate"
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+    answer: 0
+    explanation: "User, temp or download folder → escalate."
+    source: "Escalate?"
+  - question: "Created by an account that just logged on remotely?"
+    options:
+      - "Close"
+      - "Note"
+      - "Escalate"
+      - "Wait"
+    answer: 2
+    explanation: "Remote logon just before → escalate."
+    source: "Escalate?"
+  - question: "Matches a documented deployment. Close how?"
+    options:
+      - "False positive"
+      - "Benign, with the ticket"
+      - "Needs-info"
+      - "True positive"
+    answer: 1
+    explanation: "Close as benign with the ticket reference."
+    source: "Escalate?"
+  - question: "Wazuh level for 60228?"
+    options:
+      - "4"
+      - "8"
+      - "5"
+      - "10"
+    answer: 0
+    explanation: "60228 is level 4."
+    source: "Trigger"

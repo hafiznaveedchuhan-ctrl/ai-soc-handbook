@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 7: Image loaded"
+  description: "Recall checks drawn only from the page Sysmon event 7: Image loaded."
+cards:
+  - front: "What does Sysmon 7 log?"
+    back: "A module (DLL) loaded in a process."
+  - front: "Is it on by default?"
+    back: "No — disabled by default; needs configuration."
+  - front: "What does it record?"
+    back: "The process, hashes and signature information."
+  - front: "Downside of logging all image loads?"
+    back: "A significant amount of logging."
+  - front: "Unsigned DLL in a system process?"
+    back: "Escalate."

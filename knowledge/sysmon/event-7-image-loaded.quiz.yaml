@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 7: Image loaded"
+  questionsPerRound: 6
+questions:
+  - question: "Is Sysmon 7 on by default?"
+    options:
+      - "Yes"
+      - "No"
+      - "Only on DCs"
+      - "Only for drivers"
+    answer: 1
+    explanation: "Event 7 is disabled by default."
+    source: "What Microsoft says"
+  - question: "No event 7 at all. Reading?"
+    options:
+      - "Proof of tampering with Sysmon"
+      - "Proof no DLLs loaded"
+      - "A broken agent"
+      - "Expected unless configured"
+    answer: 3
+    explanation: "Expected unless configured — not evidence of absence."
+    source: "For the agent"
+  - question: "Unsigned DLL in a system process. Action?"
+    options:
+      - "Escalate"
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+    answer: 0
+    explanation: "Unsigned DLL in a system process → escalate."
+    source: "For the agent"
+  - question: "Which technique's DET uses Sysmon 7?"
+    options:
+      - "T1046"
+      - "T1566"
+      - "T1548.002"
+      - "T1003.001"
+    answer: 2
+    explanation: "T1548.002 → DET0388."
+    source: "Used by MITRE detections"
+  - question: "Why is logging all loads costly?"
+    options:
+      - "It slows the network"
+      - "It is a lot of logging"
+      - "It needs a licence"
+      - "It disables Sysmon 1"
+    answer: 1
+    explanation: "Monitoring all image loads generates significant logging."
+    source: "What Microsoft says"
+  - question: "What does event 7 record about the DLL?"
+    options:
+      - "Hashes and signature info"
+      - "Its network peers"
+      - "Its registry keys"
+      - "Its DNS queries"
+    answer: 0
+    explanation: "It records the process, hashes and signature information."
+    source: "What Microsoft says"

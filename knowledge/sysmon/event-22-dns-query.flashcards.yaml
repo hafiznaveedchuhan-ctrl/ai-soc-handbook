@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 22: DNS query"
+  description: "Recall checks drawn only from the page Sysmon event 22: DNS query."
+cards:
+  - front: "When is Sysmon 22 generated?"
+    back: "When a process executes a DNS query — successful or failed, cached or not."
+  - front: "Since which Windows version is it available?"
+    back: "Windows 8.1 — not on Windows 7 and earlier."
+  - front: "What does it show that DNS server logs may not?"
+    back: "Which program asked."
+  - front: "Odd random-looking names from one process?"
+    back: "See the DNS page's tunnelling signs."
+  - front: "Known-bad domain queried?"
+    back: "Find what ran just before (event 1)."

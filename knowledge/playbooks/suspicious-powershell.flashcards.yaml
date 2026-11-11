@@ -1,0 +1,14 @@
+deck:
+  title: "Playbook: suspicious PowerShell"
+  description: "Recall checks drawn only from the page Playbook: suspicious PowerShell."
+cards:
+  - front: "The real question for a PowerShell alert?"
+    back: "What did it run, who started it, and what happened next?"
+  - front: "Which event holds the script block text?"
+    back: "4104, with Script Block Logging on."
+  - front: "Where is the full command line?"
+    back: "Sysmon 1 or 4688."
+  - front: "4104 missing?"
+    back: "Script Block Logging may be off — not proof of nothing."
+  - front: "Parent is winword.exe or outlook.exe?"
+    back: "Escalate."

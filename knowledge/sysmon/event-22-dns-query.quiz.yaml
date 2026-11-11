@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 22: DNS query"
+  questionsPerRound: 6
+questions:
+  - question: "Is event 22 available on Windows 7?"
+    options:
+      - "Yes"
+      - "No"
+      - "Only with SP1"
+      - "Only on servers"
+    answer: 1
+    explanation: "Telemetry was added in Windows 8.1."
+    source: "What Microsoft says"
+  - question: "Is a failed or cached query logged?"
+    options:
+      - "Only failed"
+      - "Only cached"
+      - "Neither"
+      - "Yes, both"
+    answer: 3
+    explanation: "Successful or failed, cached or not."
+    source: "What Microsoft says"
+  - question: "Known-bad domain queried. Next step?"
+    options:
+      - "Find what ran before"
+      - "Block all DNS"
+      - "Close as noise"
+      - "Reset the user"
+    answer: 0
+    explanation: "Find what ran just before (event 1)."
+    source: "For the agent"
+  - question: "Random-looking names from one process suggest…"
+    options:
+      - "A port scan"
+      - "A UAC bypass"
+      - "DNS tunnelling"
+      - "A backup job"
+    answer: 2
+    explanation: "See DNS tunnelling signs."
+    source: "For the agent"
+  - question: "Which DET uses event 22 for T1046?"
+    options:
+      - "DET0327"
+      - "DET0376"
+      - "DET0070"
+      - "DET0441"
+    answer: 1
+    explanation: "T1046 → DET0376."
+    source: "Used by MITRE detections"
+  - question: "Does event 22 need the connection to happen?"
+    options:
+      - "No"
+      - "Yes"
+      - "Only for TCP"
+      - "Only for IPv6"
+    answer: 0
+    explanation: "You see which program asked, even if no connection happened."
+    source: "In plain words"

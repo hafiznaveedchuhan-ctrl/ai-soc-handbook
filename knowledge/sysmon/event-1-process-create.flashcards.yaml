@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 1: Process creation"
+  description: "Recall checks drawn only from the page Sysmon event 1: Process creation."
+cards:
+  - front: "What does Sysmon 1 record?"
+    back: "A new process — full command line, parent process and file hash."
+  - front: "What is ProcessGUID for?"
+    back: "A domain-unique process ID that makes correlation easier."
+  - front: "Which field sets the hash algorithms?"
+    back: "HashType."
+  - front: "Office app or browser spawning a shell?"
+    back: "Escalate per the escalation policy."
+  - front: "Encoded command line?"
+    back: "See T1059.001 PowerShell."

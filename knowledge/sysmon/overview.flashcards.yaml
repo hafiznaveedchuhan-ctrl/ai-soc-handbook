@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon overview"
+  description: "Recall checks drawn only from the page Sysmon overview."
+cards:
+  - front: "What is Sysmon?"
+    back: "A Windows service and driver that logs system activity to the event log, resident across reboots."
+  - front: "Does Sysmon analyse its own events?"
+    back: "No — analysis happens in a SIEM."
+  - front: "Where does Sysmon write events?"
+    back: "Applications and Services Logs/Microsoft/Windows/Sysmon/Operational."
+  - front: "Time zone of Sysmon timestamps?"
+    back: "UTC."
+  - front: "Which Sysmon events are off by default?"
+    back: "3 (network connection) and 7 (image loaded)."

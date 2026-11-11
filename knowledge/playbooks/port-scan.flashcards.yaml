@@ -1,0 +1,14 @@
+deck:
+  title: "Playbook: port scan"
+  description: "Recall checks drawn only from the page Playbook: port scan."
+cards:
+  - front: "First question in a port-scan alert?"
+    back: "Where is the source — internal or external?"
+  - front: "Which Sysmon events link a scan to a process?"
+    back: "1, 3 and 22."
+  - front: "Internal workstation scanning other hosts?"
+    back: "Escalate."
+  - front: "External scan, all blocked?"
+    back: "Note; no escalation."
+  - front: "Known scanner on schedule?"
+    back: "Benign — record the scanner and window."

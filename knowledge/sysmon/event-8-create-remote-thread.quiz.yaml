@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 8: CreateRemoteThread"
+  questionsPerRound: 6
+questions:
+  - question: "Why does malware create remote threads?"
+    options:
+      - "To scan many network ports"
+      - "To inject and hide"
+      - "To clear logs"
+      - "To add users"
+    answer: 1
+    explanation: "Malware injects code to hide in other processes."
+    source: "What Microsoft says"
+  - question: "Which fields are inferred and may be empty?"
+    options:
+      - "SourceImage and TargetImage"
+      - "ProcessGuid and Hash"
+      - "User and LogonId"
+      - "StartModule and StartFunction"
+    answer: 3
+    explanation: "StartModule and StartFunction are inferred."
+    source: "What Microsoft says"
+  - question: "Remote thread into a browser. Action?"
+    options:
+      - "Escalate"
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+    answer: 0
+    explanation: "Into lsass, explorer or a browser → escalate."
+    source: "For the agent"
+  - question: "Unknown source binary in a user folder. Action?"
+    options:
+      - "Allow-list it"
+      - "Close it"
+      - "Escalate"
+      - "Wait a day"
+    answer: 2
+    explanation: "Unknown or user-folder source → escalate."
+    source: "For the agent"
+  - question: "Which field holds the thread's start address?"
+    options:
+      - "TargetImage"
+      - "StartAddress"
+      - "CommandLine"
+      - "HashType"
+    answer: 1
+    explanation: "Event 8 records StartAddress."
+    source: "What Microsoft says"
+  - question: "Which target does the agent table name?"
+    options:
+      - "explorer.exe"
+      - "notepad.exe"
+      - "svchost.exe"
+      - "winlogon.exe"
+    answer: 0
+    explanation: "Targets named: lsass.exe, explorer.exe, a browser."
+    source: "For the agent"

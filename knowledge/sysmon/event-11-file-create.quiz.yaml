@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 11: FileCreate"
+  questionsPerRound: 6
+questions:
+  - question: "When is event 11 logged?"
+    options:
+      - "File read by a user"
+      - "File created or overwritten"
+      - "File deleted only"
+      - "File renamed only"
+    answer: 1
+    explanation: "Logged when a file is created or overwritten."
+    source: "What Microsoft says"
+  - question: "Which folder is an autostart location?"
+    options:
+      - "System32\\drivers\\etc"
+      - "Program Files"
+      - "Windows\\Fonts"
+      - "Startup"
+    answer: 3
+    explanation: "Autostart locations such as the Startup folder."
+    source: "What Microsoft says"
+  - question: "Script dropped in Downloads. Next step?"
+    options:
+      - "Check the creating process"
+      - "Delete it at once"
+      - "Close as user file"
+      - "Ignore below level 7"
+    answer: 0
+    explanation: "Check the creating process (ProcessGuid)."
+    source: "For the agent"
+  - question: ".dmp after lsass access. Action?"
+    options:
+      - "Close it as noise"
+      - "Note it only"
+      - "Escalate"
+      - "Ignore it"
+    answer: 2
+    explanation: ".dmp after event 10 on lsass → escalate."
+    source: "For the agent"
+  - question: "Which DET uses event 11 for LSASS dumping?"
+    options:
+      - "DET0070"
+      - "DET0363"
+      - "DET0441"
+      - "DET0376"
+    answer: 1
+    explanation: "T1003.001 → DET0363."
+    source: "Used by MITRE detections"
+  - question: "Where does malware drop files at infection?"
+    options:
+      - "Temp and download folders"
+      - "The recycle bin only"
+      - "Network shares only"
+      - "The registry hive"
+    answer: 0
+    explanation: "Temp and download directories are common drop places."
+    source: "What Microsoft says"
