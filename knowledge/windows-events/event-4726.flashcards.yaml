@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4726: A user account was deleted"
+  description: "Recall checks drawn only from the page Event 4726: A user account was deleted."
+cards:
+  - front: "What does 4726 record?"
+    back: "A user object was deleted."
+  - front: "Why do attackers delete accounts?"
+    back: "To cover tracks, or to lock defenders out by deleting admins."
+  - front: "Wazuh rule?"
+    back: "60111, level 8 (T1098, T1531)."
+  - front: "Account created and deleted within a short time?"
+    back: "Cover-up pattern — escalate."
+  - front: "Admin account deleted?"
+    back: "Escalate."

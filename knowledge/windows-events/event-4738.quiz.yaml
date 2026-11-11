@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4738: A user account was changed"
+  questionsPerRound: 6
+questions:
+  - question: "Wazuh rule for 4738?"
+    options:
+      - "60109"
+      - "60110"
+      - "60111"
+      - "60112"
+    answer: 1
+    explanation: "60110 User account changed."
+    source: "Wazuh rules"
+  - question: "Level of 60110?"
+    options:
+      - "5"
+      - "3"
+      - "10"
+      - "8"
+    answer: 3
+    explanation: "60110 is level 8."
+    source: "Wazuh rules"
+  - question: "Change made by an unexpected account. Do what?"
+    options:
+      - "Ask for the change ticket"
+      - "Close as routine"
+      - "Escalate as Critical"
+      - "Reset the password"
+    answer: 0
+    explanation: "Unexpected changer → ask for the change ticket."
+    source: "For the agent"
+  - question: "Which tag does 60110 carry?"
+    options:
+      - "T1531"
+      - "T1484"
+      - "T1098"
+      - "T1136"
+    answer: 2
+    explanation: "Ruleset tag: T1098."
+    source: "Wazuh rules"
+  - question: "What should you look at in a 4738?"
+    options:
+      - "Only the time of change"
+      - "What changed and who did it"
+      - "Only the computer name"
+      - "Only the logon type"
+    answer: 1
+    explanation: "Look at what changed and who changed it."
+    source: "In plain words"
+  - question: "Change on a high-value account. Action?"
+    options:
+      - "Escalate per policy"
+      - "Note only"
+      - "Close it"
+      - "Ignore it"
+    answer: 0
+    explanation: "High-value account change → escalate."
+    source: "For the agent"

@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4719: System audit policy was changed"
+  description: "Recall checks drawn only from the page Event 4719: System audit policy was changed."
+cards:
+  - front: "What does 4719 record?"
+    back: "The computer's audit policy changed."
+  - front: "Is 4719 logged when Audit Policy Change is off?"
+    back: "Yes — it is always logged."
+  - front: "Wazuh rule?"
+    back: "60112, level 8 — Windows Audit Policy changed."
+  - front: "Microsoft's advice?"
+    back: "Monitor all; any change should be planned — investigate unplanned ones."
+  - front: "4719 then missing events from the host?"
+    back: "Possible defense impairment — see T1685."

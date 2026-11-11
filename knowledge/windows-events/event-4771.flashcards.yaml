@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4771: Kerberos pre-authentication failed"
+  description: "Recall checks drawn only from the page Event 4771: Kerberos pre-authentication failed."
+cards:
+  - front: "What does 4771 record?"
+    back: "The KDC failed to issue a Kerberos TGT."
+  - front: "Failure code 0x18?"
+    back: "KDC_ERR_PREAUTH_FAILED — the wrong password was provided."
+  - front: "Audit subcategory?"
+    back: "Audit Kerberos Authentication Service."
+  - front: "N 0x18 events in N minutes may mean…"
+    back: "A brute-force attack on the account password."
+  - front: "0x18 across many accounts from one client?"
+    back: "Possible spraying — T1110.003."

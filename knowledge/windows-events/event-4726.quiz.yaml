@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4726: A user account was deleted"
+  questionsPerRound: 6
+questions:
+  - question: "Account created then deleted soon after. Reading?"
+    options:
+      - "Normal test account — close"
+      - "Cover-up pattern — escalate"
+      - "Help desk error — note only"
+      - "Backup job — check window"
+    answer: 1
+    explanation: "Short-lived account = cover-up pattern."
+    source: "For the agent"
+  - question: "Which Wazuh rule covers 4726?"
+    options:
+      - "60109"
+      - "60113"
+      - "60141"
+      - "60111"
+    answer: 3
+    explanation: "60111 User account disabled or deleted."
+    source: "Wazuh rules"
+  - question: "Which audit subcategory?"
+    options:
+      - "Audit User Account Management"
+      - "Audit Security Group Management"
+      - "Audit Other Object Access Events"
+      - "Audit Policy Change"
+    answer: 0
+    explanation: "4726: Audit User Account Management."
+    source: "Meaning"
+  - question: "Admin account deleted. Action?"
+    options:
+      - "Close"
+      - "Note"
+      - "Escalate"
+      - "Ignore"
+    answer: 2
+    explanation: "Admin account deleted → escalate."
+    source: "For the agent"
+  - question: "What should be monitored for high-value accounts?"
+    options:
+      - "Only deletions at night"
+      - "Every 4726 for that account"
+      - "Only computer deletions"
+      - "Nothing extra"
+    answer: 1
+    explanation: "Monitor every 4726 for high-value accounts."
+    source: "What Microsoft recommends monitoring"
+  - question: "Which tag besides T1098 does 60111 carry?"
+    options:
+      - "T1531"
+      - "T1136"
+      - "T1078"
+      - "T1484"
+    answer: 0
+    explanation: "60111 carries T1098 and T1531."
+    source: "Wazuh rules"

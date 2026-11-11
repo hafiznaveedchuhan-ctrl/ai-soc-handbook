@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4769: A Kerberos service ticket was requested"
+  questionsPerRound: 6
+questions:
+  - question: "What is encryption type 0x17?"
+    options:
+      - "AES256"
+      - "RC4-HMAC"
+      - "DES-CBC-MD5"
+      - "AES128"
+    answer: 1
+    explanation: "Microsoft's table: 0x17 = RC4-HMAC."
+    source: "What Microsoft recommends monitoring"
+  - question: "Which subcategory logs 4769?"
+    options:
+      - "Audit Kerberos Authentication Service"
+      - "Audit Credential Validation"
+      - "Audit Logoff"
+      - "Audit Kerberos Service Ticket Operations"
+    answer: 3
+    explanation: "4769: Audit Kerberos Service Ticket Operations."
+    source: "Meaning"
+  - question: "Where is 4769 logged?"
+    options:
+      - "Domain controllers only"
+      - "Every client that requests a ticket"
+      - "File servers only"
+      - "The Wazuh manager"
+    answer: 0
+    explanation: "Only on domain controllers."
+    source: "Meaning"
+  - question: "One account, tickets for many services fast. Action?"
+    options:
+      - "Close it as normal browsing"
+      - "Note only"
+      - "Escalate per policy"
+      - "Ignore it"
+    answer: 2
+    explanation: "Many services quickly → escalate."
+    source: "For the agent"
+  - question: "Which Wazuh rule is Windows DC Logon Failure?"
+    options:
+      - "60106"
+      - "60131"
+      - "60137"
+      - "60122"
+    answer: 1
+    explanation: "60131 Windows DC Logon Failure, level 5."
+    source: "Wazuh rules"
+  - question: "RC4 was the default for systems before…"
+    options:
+      - "Server 2008 and Vista"
+      - "Server 2016 and 10"
+      - "Server 2003 and Windows XP"
+      - "Server 2022 and 11"
+    answer: 0
+    explanation: "0x17 RC4 was default before Windows Server 2008 and Vista."
+    source: "What Microsoft recommends monitoring"

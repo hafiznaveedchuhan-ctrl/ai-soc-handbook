@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4738: A user account was changed"
+  description: "Recall checks drawn only from the page Event 4738: A user account was changed."
+cards:
+  - front: "What does 4738 record?"
+    back: "A user object was changed."
+  - front: "Audit subcategory?"
+    back: "Audit User Account Management."
+  - front: "Wazuh rule?"
+    back: "60110, level 8 — User account changed (T1098)."
+  - front: "What does Microsoft say about monitoring it?"
+    back: "Some organizations monitor every 4738 event."
+  - front: "Change on a high-value account?"
+    back: "Escalate per the escalation policy."

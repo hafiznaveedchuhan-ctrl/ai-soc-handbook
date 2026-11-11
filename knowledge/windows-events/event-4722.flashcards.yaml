@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4722: A user account was enabled"
+  description: "Recall checks drawn only from the page Event 4722: A user account was enabled."
+cards:
+  - front: "What does 4722 record?"
+    back: "A user or computer object was enabled."
+  - front: "Audit subcategory?"
+    back: "Audit User Account Management."
+  - front: "Wazuh rule?"
+    back: "60109, level 8 — User account enabled or created (T1098)."
+  - front: "Why do attackers enable accounts?"
+    back: "To get in without creating new ones."
+  - front: "High-value account enabled?"
+    back: "Escalate per the escalation policy."

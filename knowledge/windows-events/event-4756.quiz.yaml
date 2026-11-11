@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4756: A member was added to a security-enabled universal group"
+  questionsPerRound: 6
+questions:
+  - question: "4756 is 4732 for which kind of group?"
+    options:
+      - "Global"
+      - "Universal"
+      - "Local"
+      - "Distribution"
+    answer: 1
+    explanation: "4756 is the same as 4732 for a universal group."
+    source: "Meaning"
+  - question: "Wazuh rule for a universal group member added?"
+    options:
+      - "60141"
+      - "60154"
+      - "60110"
+      - "60151"
+    answer: 3
+    explanation: "60151 Security Enabled Universal Group Member Added."
+    source: "Wazuh rules"
+  - question: "Added to Enterprise Admins. Action?"
+    options:
+      - "Escalate"
+      - "Close"
+      - "Note"
+      - "Wait"
+    answer: 0
+    explanation: "Admin group addition → escalate."
+    source: "For the agent"
+  - question: "Where is 4756 generated?"
+    options:
+      - "Only on workstations"
+      - "Only for local groups"
+      - "Only for domain groups"
+      - "Only on member servers"
+    answer: 2
+    explanation: "Generated only for domain groups."
+    source: "Meaning"
+  - question: "Unexpected adder. Do what?"
+    options:
+      - "Delete the member"
+      - "Ask for the change ticket"
+      - "Lower the severity"
+      - "Close as routine"
+    answer: 1
+    explanation: "Unexpected adder → ask for the change ticket."
+    source: "For the agent"
+  - question: "Which subcategory logs 4756?"
+    options:
+      - "Audit Security Group Management"
+      - "Audit User Account Management"
+      - "Audit Logoff"
+      - "Audit Policy Change"
+    answer: 0
+    explanation: "4756: Audit Security Group Management."
+    source: "Meaning"

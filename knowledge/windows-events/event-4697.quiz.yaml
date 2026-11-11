@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4697: A service was installed in the system"
+  questionsPerRound: 6
+questions:
+  - question: "Which subcategory logs 4697?"
+    options:
+      - "Audit Other Object Access Events"
+      - "Audit Security System Extension"
+      - "Audit User Account Management"
+      - "Audit Process Creation"
+    answer: 1
+    explanation: "4697: Audit Security System Extension."
+    source: "Meaning"
+  - question: "Service File Name outside Program Files. Action?"
+    options:
+      - "Close as a vendor update"
+      - "Note only; check next week"
+      - "Lower the alert level"
+      - "Escalate — suspicious per Microsoft"
+    answer: 3
+    explanation: "Microsoft: monitor services whose file is not in %windir% or Program Files."
+    source: "For the agent"
+  - question: "Which MITRE technique lists 4697 as its source?"
+    options:
+      - "T1543.003"
+      - "T1053.005"
+      - "T1548.002"
+      - "T1003.001"
+    answer: 0
+    explanation: "MITRE's Windows Service detection lists 4697 for Service Creation."
+    source: "MITRE ATT&CK"
+  - question: "Which System-log event is the counterpart?"
+    options:
+      - "4698"
+      - "1102"
+      - "7045"
+      - "4719"
+    answer: 2
+    explanation: "The System-log counterpart is 7045."
+    source: "MITRE ATT&CK"
+  - question: "Where does Microsoft stress monitoring 4697?"
+    options:
+      - "Guest Wi-Fi devices"
+      - "High-value assets"
+      - "Test workstations"
+      - "Printers only"
+    answer: 1
+    explanation: "Monitor especially on high-value assets."
+    source: "What Microsoft recommends monitoring"
+  - question: "Service installed right after a remote logon?"
+    options:
+      - "Possible lateral movement — escalate"
+      - "Normal patching — close"
+      - "Backup job — check window"
+      - "Typo — note only"
+    answer: 0
+    explanation: "The For-the-agent table says escalate."
+    source: "For the agent"

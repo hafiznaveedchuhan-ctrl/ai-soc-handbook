@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4722: A user account was enabled"
+  questionsPerRound: 6
+questions:
+  - question: "Wazuh rule level for 60109?"
+    options:
+      - "5"
+      - "8"
+      - "3"
+      - "10"
+    answer: 1
+    explanation: "60109 is level 8."
+    source: "Wazuh rules"
+  - question: "Which MITRE tag does 60109 carry?"
+    options:
+      - "T1136"
+      - "T1531"
+      - "T1078"
+      - "T1098"
+    answer: 3
+    explanation: "Ruleset tag: T1098."
+    source: "Wazuh rules"
+  - question: "Which accounts should Microsoft-style monitoring cover?"
+    options:
+      - "High-value and never-enable ones"
+      - "Only brand-new accounts"
+      - "Only computer accounts"
+      - "Only service accounts"
+    answer: 0
+    explanation: "High-value accounts and accounts that should never be enabled."
+    source: "What Microsoft recommends monitoring"
+  - question: "Ex-employee account enabled. Next step?"
+    options:
+      - "Close it as HR work"
+      - "Lower severity to Low"
+      - "Ask who and why; check logons"
+      - "Wait for a second event"
+    answer: 2
+    explanation: "Ask who and why; check for a following logon."
+    source: "For the agent"
+  - question: "Which subcategory logs 4722?"
+    options:
+      - "Audit Security Group Management"
+      - "Audit User Account Management"
+      - "Audit Policy Change"
+      - "Audit Logoff"
+    answer: 1
+    explanation: "4722: Audit User Account Management."
+    source: "Meaning"
+  - question: "Where is 4722 generated for user accounts?"
+    options:
+      - "DCs, member servers, workstations"
+      - "Domain controllers only"
+      - "Workstations only"
+      - "Member servers only"
+    answer: 0
+    explanation: "For user accounts it is generated on all three."
+    source: "Meaning"

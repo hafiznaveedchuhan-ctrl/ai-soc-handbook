@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4771: Kerberos pre-authentication failed"
+  questionsPerRound: 6
+questions:
+  - question: "What does code 0x18 mean?"
+    options:
+      - "Password has expired"
+      - "Wrong password provided"
+      - "Account is disabled"
+      - "Clock skew too large"
+    answer: 1
+    explanation: "0x18 KDC_ERR_PREAUTH_FAILED — wrong password."
+    source: "What Microsoft recommends monitoring"
+  - question: "4771 is the Kerberos twin of which event?"
+    options:
+      - "4624"
+      - "4740"
+      - "4634"
+      - "4625"
+    answer: 3
+    explanation: "A 4771 with 0x18 is the Kerberos twin of a 4625."
+    source: "In plain words"
+  - question: "Many 0x18 for one account. Which playbook?"
+    options:
+      - "Brute force"
+      - "Port scan"
+      - "Audit log cleared"
+      - "Suspicious PowerShell"
+    answer: 0
+    explanation: "Many 0x18 for one account → brute-force playbook."
+    source: "For the agent"
+  - question: "0x18 across many accounts from one client?"
+    options:
+      - "Normal typos"
+      - "Expired passwords"
+      - "Possible spraying"
+      - "Clock problem"
+    answer: 2
+    explanation: "Many accounts from one client → T1110.003 spraying."
+    source: "For the agent"
+  - question: "Which subcategory logs 4771?"
+    options:
+      - "Audit Kerberos Service Ticket Operations"
+      - "Audit Kerberos Authentication Service"
+      - "Audit Credential Validation"
+      - "Audit Account Lockout"
+    answer: 1
+    explanation: "4771: Audit Kerberos Authentication Service."
+    source: "Meaning"
+  - question: "Which accounts does Microsoft stress for 0x18 runs?"
+    options:
+      - "Highly critical accounts"
+      - "Guest accounts only"
+      - "Computer accounts"
+      - "Disabled accounts"
+    answer: 0
+    explanation: "Especially for highly critical accounts."
+    source: "What Microsoft recommends monitoring"

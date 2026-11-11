@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4728: A member was added to a security-enabled global group"
+  questionsPerRound: 6
+questions:
+  - question: "4728 is 4732 for which kind of group?"
+    options:
+      - "Universal"
+      - "Global"
+      - "Local"
+      - "Distribution"
+    answer: 1
+    explanation: "4728 is the same as 4732 for a global security group."
+    source: "Meaning"
+  - question: "Wazuh rule for a global group member added?"
+    options:
+      - "60151"
+      - "60154"
+      - "60111"
+      - "60141"
+    answer: 3
+    explanation: "60141 Security Enabled Global Group Member Added."
+    source: "Wazuh rules"
+  - question: "Which subcategory logs 4728?"
+    options:
+      - "Audit Security Group Management"
+      - "Audit User Account Management"
+      - "Audit Policy Change"
+      - "Audit Logon"
+    answer: 0
+    explanation: "4728: Audit Security Group Management."
+    source: "Meaning"
+  - question: "Added by an unexpected account. Do what?"
+    options:
+      - "Close as routine"
+      - "Lower severity"
+      - "Ask for the change ticket"
+      - "Delete the group"
+    answer: 2
+    explanation: "Unexpected adder → ask for the change ticket."
+    source: "For the agent"
+  - question: "Which MITRE tag do the Wazuh rules carry?"
+    options:
+      - "T1098"
+      - "T1484"
+      - "T1136"
+      - "T1078"
+    answer: 1
+    explanation: "60141 and 60113 carry T1484."
+    source: "Wazuh rules"
+  - question: "Level of rule 60113?"
+    options:
+      - "5"
+      - "8"
+      - "3"
+      - "10"
+    answer: 0
+    explanation: "60113 Group Account Changed is level 5."
+    source: "Wazuh rules"

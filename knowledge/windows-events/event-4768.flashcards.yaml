@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4768: A Kerberos authentication ticket (TGT) was requested"
+  description: "Recall checks drawn only from the page Event 4768: A Kerberos authentication ticket (TGT) was requested."
+cards:
+  - front: "What does 4768 record?"
+    back: "The KDC issued a Kerberos Ticket Granting Ticket (TGT)."
+  - front: "Where is 4768 logged?"
+    back: "Only on domain controllers."
+  - front: "Audit subcategory?"
+    back: "Audit Kerberos Authentication Service."
+  - front: "Update that changed 4768 on Server 2016+?"
+    back: "The January 14, 2025 cumulative update."
+  - front: "TGT for a disabled, expired or honeypot account?"
+    back: "Escalate."

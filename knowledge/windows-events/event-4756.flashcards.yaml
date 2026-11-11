@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4756: A member was added to a security-enabled universal group"
+  description: "Recall checks drawn only from the page Event 4756: A member was added to a security-enabled universal group."
+cards:
+  - front: "What does 4756 record?"
+    back: "A member was added to a security-enabled universal group."
+  - front: "Scope of a universal group?"
+    back: "Forest-wide."
+  - front: "Which event has the same fields?"
+    back: "4732."
+  - front: "Wazuh rules?"
+    back: "60151 and 60113, level 5 (T1484)."
+  - front: "Added to Enterprise Admins?"
+    back: "Escalate."

@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4634: An account was logged off"
+  description: "Recall checks drawn only from the page Event 4634: An account was logged off."
+cards:
+  - front: "What does 4634 record?"
+    back: "A logon session was terminated and no longer exists."
+  - front: "Which event is logged when the account itself starts the logoff?"
+    back: "4647."
+  - front: "Audit subcategory?"
+    back: "Audit Logoff."
+  - front: "Wazuh rule for 4634?"
+    back: "60137, level 3 — Windows User Logoff."
+  - front: "Logoff seconds after a suspicious 4624?"
+    back: "Short session — note it and check what ran in between."

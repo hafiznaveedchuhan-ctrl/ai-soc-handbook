@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4776: The computer attempted to validate the credentials for an account"
+  description: "Recall checks drawn only from the page Event 4776: The computer attempted to validate the credentials for an account."
+cards:
+  - front: "What does 4776 record?"
+    back: "An NTLM credential validation."
+  - front: "Where is 4776 logged for domain accounts?"
+    back: "On the domain controller (authoritative for the credentials)."
+  - front: "Error 0xC0000064?"
+    back: "The username does not exist."
+  - front: "Error 0xC0000234?"
+    back: "Account locked."
+  - front: "Many failures from one source?"
+    back: "See the brute-force playbook."
