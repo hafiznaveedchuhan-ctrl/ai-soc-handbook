@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:3b110b0e99bb4eb980e5342f897e404ac36f59e3ba359c234bd3f7df75463966",
+  "build_id": "sha256:778fddbd02b8728e064608e3e3ed549f9fd901f5289414fa48225fa0292488c0",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "533290647865144ebb02aa4e8e581f1919238d02",
+  "source_commit": "5a224234dd2340abab391f26e474e8839f7903fb",
   "dirty": true,
-  "as_of": "2026-11-11T07:07:32.322Z",
+  "as_of": "2026-11-11T07:12:00.911Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -980,6 +980,15 @@
       ]
     },
     {
+      "path": "windows-events/event-4634.md",
+      "sha256": "53355d6afae4d2a8e29a6070a9f46591ff87cc2c34751ee0e2b0f5710e88fcd2",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "windows-events/event-4648.md",
       "sha256": "dc170f1c85b947544d6e983a43610a1d736c460de0376e11e21b91901f42071d",
       "status": "stable",
@@ -1013,6 +1022,33 @@
       ]
     },
     {
+      "path": "windows-events/event-4697.md",
+      "sha256": "e103dcb9cb67993ce3dd1ba7924924512d649b6be645b1a86b528e2ec5471ce6",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4698.md",
+      "sha256": "85b75bf05d4bf477b82163b4eb6ff384d830ab425aae8d2e56cfeb704f180689",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4719.md",
+      "sha256": "5e02976976380e8085cb8d91088b42578c053de2896c1b5f0e4ac520ad0ec386",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "windows-events/event-4720.md",
       "sha256": "71444ce8abd3ef63daca77346c8053e9f4eab559775c5aeae0f66897ba27c884",
       "status": "stable",
@@ -1022,6 +1058,51 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "windows-events/event-4722.md",
+      "sha256": "79b80e5aa79ee06e2814318ee2ece47388d7a350320b13b5521e9867172e7a5a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4724.md",
+      "sha256": "8f3fbff4c34d9bc86f489b05f46a748a117d0f29c2774655737f362555d75d13",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4725.md",
+      "sha256": "c780f36f12b52665fe5c49d5b5526a1beb40d4439b6b207995fc71c00c16d5b4",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4726.md",
+      "sha256": "23148112c935636f32e9e4848d8b39613c74c8c40fdfbbb0d4dcae41fcea1657",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4728.md",
+      "sha256": "2de7ebade5c4ca1d2d9903f27788b297ee7ff3e35ca33f1dd43d53c07688dd01",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "windows-events/event-4732.md",
@@ -1035,6 +1116,15 @@
       ]
     },
     {
+      "path": "windows-events/event-4738.md",
+      "sha256": "646259209a426aa18a24f833becf790829c7272f6487b9e574f11189e2e803ca",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "windows-events/event-4740.md",
       "sha256": "c34e311f56084e9ed6294146ad6dbe67741148b45e76fee826b9af22cdec58c7",
       "status": "stable",
@@ -1046,8 +1136,53 @@
       ]
     },
     {
+      "path": "windows-events/event-4756.md",
+      "sha256": "6385df2cf93f498abf7a4de441b583ee7e55428e75d4d037a66d13e55ed894f5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4768.md",
+      "sha256": "1e9d380de8a4fe86c54c02688826caae68ec790376eeb2df904d681ae04118ce",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4769.md",
+      "sha256": "84d6dc47d13c1dd082cd66c01655be2ba9df28c2e688e826ae532566e9438ad5",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4771.md",
+      "sha256": "dc459b6206c34af9c653a171792252538ede6bf5fc19a588d48d994feb1496f8",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "windows-events/event-4776.md",
+      "sha256": "76a5667d565413834fd0dbd8bf4899045438b0ea9469e4f68bfc357e9a6ad27d",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "windows-events/event-7045.md",
-      "sha256": "8601242e65588ca8eea9be36a55daa796ad3af6fac0c6e789498db6862ce49b1",
+      "sha256": "00b756171c29a1633ea2740c27b0b0a437389015872f2d501fbe9996eb0919f1",
       "status": "draft",
       "audience": [
         "public"
@@ -1525,7 +1660,7 @@
     },
     {
       "path": "windows-events/index.md",
-      "sha256": "5c4e0c08d1e047f0b09a188b71ab54fbe542cf484ded0acf589fc6cd9f572990"
+      "sha256": "c27657ad4f834879b26d8928dfda83fd2c110511f460df58df5056422b7d1590"
     }
   ],
   "bundles": [
