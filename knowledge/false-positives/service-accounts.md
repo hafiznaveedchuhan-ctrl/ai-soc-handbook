@@ -1,7 +1,7 @@
 ---
 type: Policy
 title: "False positives: service accounts"
-description: "Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and a proposed allow-list rule for telling the two apart."
+description: "Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and the handbook allow-list rule for telling the two apart."
 status: draft
 order: 1101
 sources:
@@ -20,15 +20,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** A service account is a login used by a program, not a
 > person. It logs on constantly, from the same machines, the same way. Noise
@@ -62,14 +60,14 @@ A run of failures for one service account from its usual host often follows a
 manual password change on a traditional account — ask whether the password was
 recently rotated and whether a service still holds the old one.
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q9–Q10).*
+Owner policy (interview I2, Q9–Q10).[^naveed-interview-2026-11-11]
 
 1. Keep a CDB list `etc/lists/service-accounts` mapping each account to its
    allowed host(s); Wazuh rules can check a field against it with
    `lookup="match_key_value"`.[^wazuh-cdb]
-2. Proposed naming convention: service accounts start with `svc-`.
+2. Naming convention: service accounts start with `svc-`.
 3. An alert is a **benign candidate** only when the account is listed, the
    source host matches its list value, and the Logon Type is 5 (or 4 for a
    scheduled job the list names).
@@ -88,3 +86,4 @@ the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-20
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^wazuh-cdb]: Wazuh documentation, "Using CDB lists". https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

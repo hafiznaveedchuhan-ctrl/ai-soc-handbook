@@ -1,8 +1,8 @@
-"""Wave 2 batch B6 — 8 owner-policy PROPOSALS (drafts). Sources fetched 2026-11-11.
+"""Wave 2 batch B6 — 8 owner-policy pages (drafts). Sources fetched 2026-11-11.
 
-Every org-specific value (SLA minutes, thresholds, windows, list names) is marked
-"Proposed — owner to confirm (interview I2)" and is NOT cited as fact. The questions
-are in specs/02-soc-corpus/interview-i2.md. Run from the repo root:
+Org-specific values (SLA minutes, thresholds, windows, list names) were proposed by Claude
+and CONFIRMED by human:naveed on 2026-11-11 (interview I2, "her chez ok ha"); they cite
+`naveed-interview-2026-11-11`. Questions and answers: specs/02-soc-corpus/interview-i2.md. Run from the repo root:
     python3 -I scripts/authoring/example-batch-generator-w2b6.py
 """
 import json, os
@@ -11,6 +11,7 @@ MS = "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows
 WD = "https://documentation.wazuh.com/current/user-manual"
 SRC = {
  "naveed-interview-2026-11-10": ("human:naveed interview 2026-11-10", '"human:naveed interview 2026-11-10"', "human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions)."),
+ "naveed-interview-2026-11-11": ("human:naveed interview 2026-11-11", '"human:naveed interview 2026-11-11"', "human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy)."),
  "nist-sp800-61r3": ("NIST SP 800-61 Rev. 3 (April 2025)", "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf", "NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf"),
  "nist-sp800-115": ("NIST SP 800-115 — Technical Guide to Information Security Testing and Assessment", "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf", "NIST SP 800-115 (September 2008), \"Technical Guide to Information Security Testing and Assessment\". https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf"),
  "wazuh-pipeline": ("Wazuh v4.14.10 — Filebeat alerts ingest pipeline", "https://github.com/wazuh/wazuh/blob/v4.14.10/extensions/filebeat/7.x/wazuh-module/alerts/ingest/pipeline.json", "Wazuh, tag v4.14.10, `extensions/filebeat/7.x/wazuh-module/alerts/ingest/pipeline.json` (geoip processors). https://github.com/wazuh/wazuh/blob/v4.14.10/extensions/filebeat/7.x/wazuh-module/alerts/ingest/pipeline.json"),
@@ -39,11 +40,7 @@ def page(path, typ, title, desc, order, ids, body):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w").write("\n".join(fm) + body.strip() + "\n\n" + "\n".join(f"[^{i}]: {SRC[i][2]}" for i in ids) + "\n")
 
-PROPOSAL = """> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-"""
+PROPOSAL = ""
 
 HUMAN = """
 ## AI may suggest / only a human decides
@@ -55,8 +52,8 @@ the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-20
 
 # ---------------------------------------------------------------- wazuh/geo-and-vpn-caveats
 page("knowledge/wazuh/geo-and-vpn-caveats.md", "Standard", "GeoIP and VPN caveats",
-"What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and a proposed rule for using location in a verdict.", 607,
-["wazuh-pipeline", "wazuh-rules-syntax", "maxmind-accuracy", "wazuh-cdb", "naveed-interview-2026-11-10"], PROPOSAL + """
+"What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and the handbook rule for using location in a verdict.", 607,
+["wazuh-pipeline", "wazuh-rules-syntax", "maxmind-accuracy", "wazuh-cdb", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** The country next to an IP address is a guess about where
 > the *network* is, not where the *person* is. A VPN user shows up wherever the
@@ -92,20 +89,20 @@ for its own data:[^maxmind-accuracy]
 Private (RFC 1918) addresses are not routed on the internet, so expect no
 location for them — see [private IP ranges](../enrichment/private-ip-ranges.md).
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q1–Q3).*
+Owner policy (interview I2, Q1–Q3).[^naveed-interview-2026-11-11]
 
 1. **Location never decides a verdict alone.** It may support a verdict that
    other evidence (account, logon type, failures, reputation) already points to.
 2. **Check VPN first.** Before reading a country as unusual, check whether the
    source IP is one of the organisation's VPN or proxy egress addresses. Keep
-   those in a Wazuh CDB list (proposed name `etc/lists/vpn-egress`), which rules
+   those in a Wazuh CDB list (`etc/lists/vpn-egress`; it starts empty and the owner adds ranges), which rules
    can query with `lookup="address_match_key"`.[^wazuh-cdb]
 3. **"Impossible travel" needs two non-VPN, non-mobile logons.** If either side
    is a VPN, proxy or mobile IP, the travel reading does not hold.
 4. **Expected countries list.** Countries the organisation normally works from
-   (proposed: owner names them) — a logon from outside that list raises the
+   (kept by the owner; it starts empty, and while it is empty this rule does not apply) — a logon from outside that list raises the
    alert one step, the same way a high [IP reputation](../enrichment/ip-reputation-policy.md)
    score does; it never lowers one.
 
@@ -114,7 +111,7 @@ location for them — see [private IP ranges](../enrichment/private-ip-ranges.md
 | Signal | Reading |
 |---|---|
 | No `GeoLocation` on the alert | No source IP, private IP, or missing from the database — say "location unknown" |
-| Country outside the expected list, source not in `vpn-egress` | Note it as supporting evidence; proposed one-step raise |
+| Country outside the expected list, source not in `vpn-egress` | Note it as supporting evidence; raise one step |
 | Source in `vpn-egress` | Ignore the country; the user is somewhere behind the VPN |
 | City named in the note | Quote it as "approximate (database estimate)" only |
 
@@ -124,8 +121,8 @@ conditions; location is not one of them.[^naveed-interview-2026-11-10]
 
 # ---------------------------------------------------------------- wazuh/asset-and-user-context
 page("knowledge/wazuh/asset-and-user-context.md", "Standard", "Asset and user context in alerts",
-"How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and a proposed set of labels and lists for this handbook.", 608,
-["nist-sp800-61r3", "wazuh-labels", "wazuh-cdb", "ms-4624", "naveed-interview-2026-11-10"], PROPOSAL + """
+"How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and the set of labels and lists for this handbook.", 608,
+["nist-sp800-61r3", "wazuh-labels", "wazuh-cdb", "ms-4624", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** The same alert means different things on a domain
 > controller and on a test laptop, and for an admin and for an intern. Context
@@ -158,11 +155,11 @@ field against — users, file hashes, IP addresses, domains. A value lets a rule
 use it as a criterion; Wazuh's own example pairs account names with
 departments.[^wazuh-cdb]
 
-## Proposed labels and lists
+## Handbook labels and lists
 
-*Proposed — owner to confirm (interview I2, Q4–Q6).*
+Owner policy (interview I2, Q4–Q6).[^naveed-interview-2026-11-11]
 
-| Kind | Proposed name | Values | Used by |
+| Kind | Name | Values | Used by |
 |---|---|---|---|
 | Agent label | `asset.role` | `domain-controller`, `server`, `workstation`, `network-device` | escalation condition 7, severity (DC rows) |
 | Agent label | `asset.criticality` | `critical`, `high`, `standard` | raises severity one step when `critical` |
@@ -187,8 +184,8 @@ Context may raise a severity, never lower it.[^naveed-interview-2026-11-10]
 
 # ---------------------------------------------------------------- false-positives/expired-or-mistyped-passwords
 page("knowledge/false-positives/expired-or-mistyped-passwords.md", "Policy", "False positives: expired or mistyped passwords",
-"How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and a proposed threshold for closing such alerts.", 1100,
-["ms-4776", "ms-4771", "ms-4625", "nist-sp800-61r3", "naveed-interview-2026-11-10"], PROPOSAL + """
+"How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and the handbook threshold for closing such alerts.", 1100,
+["ms-4776", "ms-4771", "ms-4625", "nist-sp800-61r3", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** People mistype passwords, and passwords expire. A few
 > failures from the user's own machine, followed by a success or a help-desk
@@ -225,15 +222,15 @@ indicate brute force, especially for highly critical accounts,[^ms-4771] and
 recommends watching runs of `0xC000006A` on critical or service
 accounts.[^ms-4625]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q7–Q8).*
+Owner policy (interview I2, Q7–Q8).[^naveed-interview-2026-11-11]
 
 A failed-logon alert is a **false-positive / benign candidate** when **all** hold:
 
 1. One account, from **one** source the user normally uses (their workstation or
    the VPN), and the account is not in the privileged list.
-2. **No more than 5** failures within **15 minutes** (proposed numbers), or the
+2. **No more than 5** failures within **15 minutes**, or the
    codes are expired / must-change (`0xC0000071`, `0xC0000224`, `0x17`).
 3. Followed by a success, a lockout (4740) the help desk reset, or nothing.
 4. None of the [escalation conditions](../rules-map/escalation-policy.md) is
@@ -253,8 +250,8 @@ failure, it is a **benign true positive**.[^naveed-interview-2026-11-10]
 
 # ---------------------------------------------------------------- false-positives/service-accounts
 page("knowledge/false-positives/service-accounts.md", "Policy", "False positives: service accounts",
-"Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and a proposed allow-list rule for telling the two apart.", 1101,
-["ms-service-accounts", "ms-4624", "ms-4625", "wazuh-cdb", "naveed-interview-2026-11-10"], PROPOSAL + """
+"Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and the handbook allow-list rule for telling the two apart.", 1101,
+["ms-service-accounts", "ms-4624", "ms-4625", "wazuh-cdb", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** A service account is a login used by a program, not a
 > person. It logs on constantly, from the same machines, the same way. Noise
@@ -288,14 +285,14 @@ A run of failures for one service account from its usual host often follows a
 manual password change on a traditional account — ask whether the password was
 recently rotated and whether a service still holds the old one.
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q9–Q10).*
+Owner policy (interview I2, Q9–Q10).[^naveed-interview-2026-11-11]
 
 1. Keep a CDB list `etc/lists/service-accounts` mapping each account to its
    allowed host(s); Wazuh rules can check a field against it with
    `lookup="match_key_value"`.[^wazuh-cdb]
-2. Proposed naming convention: service accounts start with `svc-`.
+2. Naming convention: service accounts start with `svc-`.
 3. An alert is a **benign candidate** only when the account is listed, the
    source host matches its list value, and the Logon Type is 5 (or 4 for a
    scheduled job the list names).
@@ -306,8 +303,8 @@ recently rotated and whether a service still holds the old one.
 
 # ---------------------------------------------------------------- false-positives/backup-jobs
 page("knowledge/false-positives/backup-jobs.md", "Policy", "False positives: backup jobs",
-"Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and a proposed rule for recognising a scheduled backup.", 1102,
-["ms-security-groups", "ms-4672", "wazuh-syscheck", "naveed-interview-2026-11-10"], PROPOSAL + """
+"Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and the handbook rule for recognising a scheduled backup.", 1102,
+["ms-security-groups", "ms-4672", "wazuh-syscheck", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** A backup reads (and a restore writes) almost every file,
 > using a right that ignores normal file permissions. That looks a lot like an
@@ -329,11 +326,11 @@ Wazuh FIM runs on a schedule (`frequency`, default 43200 seconds; or
 `scan_time`), and `ignore` paths are still scanned but not
 reported.[^wazuh-syscheck]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q11–Q13).*
+Owner policy (interview I2, Q11–Q13).[^naveed-interview-2026-11-11]
 
-1. **Backup window:** daily 01:00–05:00 UTC (proposed — owner sets the real one).
+1. **Backup window:** daily 01:00–05:00 UTC.
 2. **Backup accounts:** listed in `etc/lists/service-accounts` with the backup
    server as their allowed host.
 3. A 4672 with `SeBackupPrivilege`, or a burst of FIM changes, is a **benign
@@ -350,8 +347,8 @@ Restores outside the window, or by an unlisted account, follow the
 
 # ---------------------------------------------------------------- false-positives/admin-maintenance-windows
 page("knowledge/false-positives/admin-maintenance-windows.md", "Policy", "False positives: admin maintenance windows",
-"How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and a proposed change-ticket rule for maintenance windows.", 1103,
-["wazuh-rules-syntax", "wazuh-custom-rules", "nist-sp800-61r3", "naveed-interview-2026-11-10"], PROPOSAL + """
+"How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and the handbook change-ticket rule for maintenance windows.", 1103,
+["wazuh-rules-syntax", "wazuh-custom-rules", "nist-sp800-61r3", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** When admins patch servers, they create accounts, restart
 > services and sometimes clear logs. The alerts are *correct* — the activity
@@ -378,11 +375,11 @@ NIST asks for tuning to reduce false positives and false negatives "to
 acceptable levels" (DE.CM) — tuning is a deliberate, recorded act, not a
 silence button.[^nist-sp800-61r3]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q14–Q16).*
+Owner policy (interview I2, Q14–Q16).[^naveed-interview-2026-11-11]
 
-1. **Standing window:** Sunday 22:00 – Monday 04:00 UTC (proposed).
+1. **Standing window:** Sunday 22:00 – Monday 04:00 UTC.
 2. **Change ticket required.** An alert inside the window is a benign-true-positive
    candidate only if a change ticket names the host, the admin account and the
    work. No ticket → normal triage.
@@ -405,8 +402,8 @@ silence button.[^nist-sp800-61r3]
 
 # ---------------------------------------------------------------- false-positives/vulnerability-scanners
 page("knowledge/false-positives/vulnerability-scanners.md", "Policy", "False positives: vulnerability scanners",
-"How approved vulnerability scans trip port-scan and logon alerts, what NIST says about identifying scanner IPs in advance, and a proposed allow-list rule for scanner traffic.", 1104,
-["nist-sp800-115", "wazuh-cdb", "naveed-interview-2026-11-10"], PROPOSAL + """
+"How approved vulnerability scans trip port-scan and logon alerts, what NIST says about identifying scanner IPs in advance, and the handbook allow-list rule for scanner traffic.", 1104,
+["nist-sp800-115", "wazuh-cdb", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** A vulnerability scanner knocks on every door on purpose.
 > To the SIEM it looks exactly like an attacker's scan. The only difference is
@@ -424,15 +421,15 @@ page("knowledge/false-positives/vulnerability-scanners.md", "Policy", "False pos
 - If a real incident happens during testing, the guide recommends that testing
   stop until the incident is handled.[^nist-sp800-115]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q17–Q19).*
+Owner policy (interview I2, Q17–Q19).[^naveed-interview-2026-11-11]
 
-1. Keep approved scanner addresses in a Wazuh CDB list (proposed
-   `etc/lists/approved-scanners`). IP keys use dot notation for subnets
+1. Keep approved scanner addresses in a Wazuh CDB list
+   (`etc/lists/approved-scanners`; it starts empty). IP keys use dot notation for subnets
    (`192.168.:` matches 192.168.0.0/16) and rules query them with
    `lookup="address_match_key"`.[^wazuh-cdb]
-2. Keep the scan schedule with the list (proposed: weekly, owner sets the day).
+2. Keep the scan schedule with the list (weekly). Until a schedule is recorded, no scan is benign by schedule.
 3. A [port scan](../playbooks/port-scan.md) alert is a **benign true positive**
    candidate only when the source is on the list **and** inside the schedule.
 4. A listed scanner **outside** its schedule, or doing anything beyond scanning
@@ -446,8 +443,8 @@ Benign-true-positive definition: [^naveed-interview-2026-11-10]
 
 # ---------------------------------------------------------------- sla/severity-response-matrix
 page("knowledge/sla/severity-response-matrix.md", "Policy", "Severity response matrix (SLA)",
-"How fast the SOC acts on each severity — acknowledge, triage note, escalation — as a proposed matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model.", 1200,
-["nist-sp800-61r3", "naveed-interview-2026-11-10"], PROPOSAL + """
+"How fast the SOC acts on each severity — acknowledge, triage note, escalation — as the handbook matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model.", 1200,
+["nist-sp800-61r3", "naveed-interview-2026-11-10", "naveed-interview-2026-11-11"], PROPOSAL + """
 > [!NOTE]
 > **In plain words.** The severity word (Low → Critical) decides the clock. A
 > Critical alert gets a person in minutes; a Low one can wait for the next
@@ -464,7 +461,7 @@ matrix gives the clock.
 
 ## The matrix
 
-*Proposed — owner to confirm (interview I2, Q20–Q22). All times are proposals.*
+Owner policy (interview I2, Q20–Q22).[^naveed-interview-2026-11-11]
 
 | Severity | Acknowledge (L1 picks it up) | Triage note done | Escalate to L2 | Update cadence |
 |---|---|---|---|---|
@@ -477,13 +474,13 @@ matrix gives the clock.
   noticed it.
 - **Escalation conditions win.** Any [escalation condition](../rules-map/escalation-policy.md)
   means escalate now, whatever the row says.[^naveed-interview-2026-11-10]
-- **Coverage hours** (24×7 or business hours) — owner to confirm; "business day"
-  above assumes a business-hours SOC.
+- **Coverage** is business hours: "business day" means a working day within the
+  SOC's coverage hours.
 
 ## Measuring it
 
 MTTD and MTTR are mean time to detect and mean time to respond, measured per
-severity.[^naveed-interview-2026-11-10] Proposed: report them monthly, with the
+severity.[^naveed-interview-2026-11-10] They are reported monthly, with the
 share of alerts that met each column of the matrix.
 
 ## For the agent

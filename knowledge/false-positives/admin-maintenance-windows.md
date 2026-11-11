@@ -1,7 +1,7 @@
 ---
 type: Policy
 title: "False positives: admin maintenance windows"
-description: "How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and a proposed change-ticket rule for maintenance windows."
+description: "How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and the handbook change-ticket rule for maintenance windows."
 status: draft
 order: 1103
 sources:
@@ -17,15 +17,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** When admins patch servers, they create accounts, restart
 > services and sometimes clear logs. The alerts are *correct* — the activity
@@ -52,11 +50,11 @@ NIST asks for tuning to reduce false positives and false negatives "to
 acceptable levels" (DE.CM) — tuning is a deliberate, recorded act, not a
 silence button.[^nist-sp800-61r3]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q14–Q16).*
+Owner policy (interview I2, Q14–Q16).[^naveed-interview-2026-11-11]
 
-1. **Standing window:** Sunday 22:00 – Monday 04:00 UTC (proposed).
+1. **Standing window:** Sunday 22:00 – Monday 04:00 UTC.
 2. **Change ticket required.** An alert inside the window is a benign-true-positive
    candidate only if a change ticket names the host, the admin account and the
    work. No ticket → normal triage.
@@ -86,3 +84,4 @@ the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-20
 [^wazuh-custom-rules]: Wazuh documentation, "Custom rules". https://documentation.wazuh.com/current/user-manual/ruleset/rules/custom.html
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

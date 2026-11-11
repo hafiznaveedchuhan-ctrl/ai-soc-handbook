@@ -1,7 +1,7 @@
 ---
 type: Standard
 title: "Asset and user context in alerts"
-description: "How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and a proposed set of labels and lists for this handbook."
+description: "How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and the set of labels and lists for this handbook."
 status: draft
 order: 608
 sources:
@@ -20,15 +20,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** The same alert means different things on a domain
 > controller and on a test laptop, and for an admin and for an intern. Context
@@ -61,11 +59,11 @@ field against — users, file hashes, IP addresses, domains. A value lets a rule
 use it as a criterion; Wazuh's own example pairs account names with
 departments.[^wazuh-cdb]
 
-## Proposed labels and lists
+## Handbook labels and lists
 
-*Proposed — owner to confirm (interview I2, Q4–Q6).*
+Owner policy (interview I2, Q4–Q6).[^naveed-interview-2026-11-11]
 
-| Kind | Proposed name | Values | Used by |
+| Kind | Name | Values | Used by |
 |---|---|---|---|
 | Agent label | `asset.role` | `domain-controller`, `server`, `workstation`, `network-device` | escalation condition 7, severity (DC rows) |
 | Agent label | `asset.criticality` | `critical`, `high`, `standard` | raises severity one step when `critical` |
@@ -92,3 +90,4 @@ Context may raise a severity, never lower it.[^naveed-interview-2026-11-10]
 [^wazuh-cdb]: Wazuh documentation, "Using CDB lists". https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

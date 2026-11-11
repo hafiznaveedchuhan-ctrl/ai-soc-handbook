@@ -1,7 +1,7 @@
 ---
 type: Policy
 title: "False positives: expired or mistyped passwords"
-description: "How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and a proposed threshold for closing such alerts."
+description: "How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and the handbook threshold for closing such alerts."
 status: draft
 order: 1100
 sources:
@@ -20,15 +20,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** People mistype passwords, and passwords expire. A few
 > failures from the user's own machine, followed by a success or a help-desk
@@ -65,15 +63,15 @@ indicate brute force, especially for highly critical accounts,[^ms-4771] and
 recommends watching runs of `0xC000006A` on critical or service
 accounts.[^ms-4625]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q7–Q8).*
+Owner policy (interview I2, Q7–Q8).[^naveed-interview-2026-11-11]
 
 A failed-logon alert is a **false-positive / benign candidate** when **all** hold:
 
 1. One account, from **one** source the user normally uses (their workstation or
    the VPN), and the account is not in the privileged list.
-2. **No more than 5** failures within **15 minutes** (proposed numbers), or the
+2. **No more than 5** failures within **15 minutes**, or the
    codes are expired / must-change (`0xC0000071`, `0xC0000224`, `0x17`).
 3. Followed by a success, a lockout (4740) the help desk reset, or nothing.
 4. None of the [escalation conditions](../rules-map/escalation-policy.md) is
@@ -101,3 +99,4 @@ the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-20
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

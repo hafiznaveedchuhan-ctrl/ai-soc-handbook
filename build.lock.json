@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:e566aa1b6dc40ec8633a574e209aa6c119e2d5844eb9f04b7e7c154390eef0ba",
+  "build_id": "sha256:f3f8af542d850eecbbd07aabef43ef07e5a7879ffc93b2ba5e9aff6f35a1b051",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "47728b2bb40f27bfb525eec0436ea21037177a34",
+  "source_commit": "2e7a3a9b1e8cb8d1c7350fa40449c4f891862c8f",
   "dirty": true,
-  "as_of": "2026-11-11T07:48:43.938Z",
+  "as_of": "2026-11-11T07:51:33.858Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -49,7 +49,7 @@
     },
     {
       "path": "false-positives/admin-maintenance-windows.md",
-      "sha256": "51881462c0b117c27fef3c397395d6bc63114ac4f85269f0481e864dd65a35f8",
+      "sha256": "e916e15efd2e6fd32e002b875fbec46f1a61ed0167dbf6de395ec5b35c218641",
       "status": "draft",
       "audience": [
         "public"
@@ -58,7 +58,7 @@
     },
     {
       "path": "false-positives/backup-jobs.md",
-      "sha256": "ad5053877748c86ad256f8fb30df772cb7aa97670a17af56a8197c04e9e56f9a",
+      "sha256": "0d7e6b33a33c2ae1c66d8e32c97f33a6dad862ba532dec6745a4e24205fca313",
       "status": "draft",
       "audience": [
         "public"
@@ -67,7 +67,7 @@
     },
     {
       "path": "false-positives/expired-or-mistyped-passwords.md",
-      "sha256": "d8c8e257fb58a4633cf7a25dc0d241fc1b1ee6ee6cb9689cbcf9d2f10033cd0c",
+      "sha256": "ce8ee3bef42e00e5f343700924ac8c0946e40190f441ca0df64e4ea1d84aebea",
       "status": "draft",
       "audience": [
         "public"
@@ -76,7 +76,7 @@
     },
     {
       "path": "false-positives/service-accounts.md",
-      "sha256": "912ee7ce86cdfae66646a28dd2ec3c6ad0623e5a1e464750a411efcacc8e0218",
+      "sha256": "ce51861bf4b62f6a1d9d22babb0d4aa9f0693648d67af030e42d8ec1486df9b9",
       "status": "draft",
       "audience": [
         "public"
@@ -85,7 +85,7 @@
     },
     {
       "path": "false-positives/vulnerability-scanners.md",
-      "sha256": "3f1e6409e09c692b92548ca43786b15684c0c8b1b0cf7bba8e9fe3a75761eb59",
+      "sha256": "524d47644dfc9c6953d05f8ed767632ca31d4237480c0739ddd9bb66aabd48b6",
       "status": "draft",
       "audience": [
         "public"
@@ -912,7 +912,7 @@
     },
     {
       "path": "sla/severity-response-matrix.md",
-      "sha256": "bffaabab701322713759b2249e6026a934a15db5ad2f291f4f7dbca65d557a3d",
+      "sha256": "020cb615de2fccd97c8590aa7abc0b3d93444116ed8890eaeba763baacddea7b",
       "status": "draft",
       "audience": [
         "public"
@@ -1079,7 +1079,7 @@
     },
     {
       "path": "wazuh/asset-and-user-context.md",
-      "sha256": "055498ed678883000871858649d28e58471c7658746dbf6102fef40149000bc8",
+      "sha256": "04691685722c9f56e97b23ca558e60a9b07baa62584d4c21673319f6ae9f292d",
       "status": "draft",
       "audience": [
         "public"
@@ -1088,7 +1088,7 @@
     },
     {
       "path": "wazuh/geo-and-vpn-caveats.md",
-      "sha256": "5f9f249cbfa1857ea1ba34e60362fd26e6bcb59d60c9ebddcc57593532987939",
+      "sha256": "50a382555311a2384234afb9f3658908ad71990d52b78bcd61a827fe854d81dd",
       "status": "draft",
       "audience": [
         "public"
@@ -1822,7 +1822,7 @@
     },
     {
       "path": "false-positives/index.md",
-      "sha256": "3935cb93ec762272f99fd6333eacc2b96439c9898c6110a084daa1d65b2edf95"
+      "sha256": "f468d5789d83409fc48f772a071c379f5bb463a9eb0ba740806ef9a97bbd82f7"
     },
     {
       "path": "index.md",
@@ -1854,7 +1854,7 @@
     },
     {
       "path": "sla/index.md",
-      "sha256": "9c12ae27cfa4a81d0311bdd21df6eff170c97175879b22c6dfcc9c91593c36d2"
+      "sha256": "8f2d8d64082f6bf83dc75019edca2fc050d45725be7992a1421ad5abee62d65c"
     },
     {
       "path": "sysmon/index.md",
@@ -1866,7 +1866,7 @@
     },
     {
       "path": "wazuh/index.md",
-      "sha256": "817673ad3063e49889404b1480110bac47c23ca92d01b663d6047d95a792b9ad"
+      "sha256": "79adad24ceadcfaf0babb376d35efdab6c0a90d09e6d90355b62e9a15058ea29"
     },
     {
       "path": "windows-events/index.md",

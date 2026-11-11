@@ -1,7 +1,7 @@
 ---
 type: Standard
 title: "GeoIP and VPN caveats"
-description: "What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and a proposed rule for using location in a verdict."
+description: "What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and the handbook rule for using location in a verdict."
 status: draft
 order: 607
 sources:
@@ -20,15 +20,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** The country next to an IP address is a guess about where
 > the *network* is, not where the *person* is. A VPN user shows up wherever the
@@ -64,20 +62,20 @@ for its own data:[^maxmind-accuracy]
 Private (RFC 1918) addresses are not routed on the internet, so expect no
 location for them — see [private IP ranges](../enrichment/private-ip-ranges.md).
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q1–Q3).*
+Owner policy (interview I2, Q1–Q3).[^naveed-interview-2026-11-11]
 
 1. **Location never decides a verdict alone.** It may support a verdict that
    other evidence (account, logon type, failures, reputation) already points to.
 2. **Check VPN first.** Before reading a country as unusual, check whether the
    source IP is one of the organisation's VPN or proxy egress addresses. Keep
-   those in a Wazuh CDB list (proposed name `etc/lists/vpn-egress`), which rules
+   those in a Wazuh CDB list (`etc/lists/vpn-egress`; it starts empty and the owner adds ranges), which rules
    can query with `lookup="address_match_key"`.[^wazuh-cdb]
 3. **"Impossible travel" needs two non-VPN, non-mobile logons.** If either side
    is a VPN, proxy or mobile IP, the travel reading does not hold.
 4. **Expected countries list.** Countries the organisation normally works from
-   (proposed: owner names them) — a logon from outside that list raises the
+   (kept by the owner; it starts empty, and while it is empty this rule does not apply) — a logon from outside that list raises the
    alert one step, the same way a high [IP reputation](../enrichment/ip-reputation-policy.md)
    score does; it never lowers one.
 
@@ -86,7 +84,7 @@ location for them — see [private IP ranges](../enrichment/private-ip-ranges.md
 | Signal | Reading |
 |---|---|
 | No `GeoLocation` on the alert | No source IP, private IP, or missing from the database — say "location unknown" |
-| Country outside the expected list, source not in `vpn-egress` | Note it as supporting evidence; proposed one-step raise |
+| Country outside the expected list, source not in `vpn-egress` | Note it as supporting evidence; raise one step |
 | Source in `vpn-egress` | Ignore the country; the user is somewhere behind the VPN |
 | City named in the note | Quote it as "approximate (database estimate)" only |
 
@@ -98,3 +96,4 @@ conditions; location is not one of them.[^naveed-interview-2026-11-10]
 [^maxmind-accuracy]: MaxMind Knowledge Base, "Geolocation accuracy". https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy
 [^wazuh-cdb]: Wazuh documentation, "Using CDB lists". https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

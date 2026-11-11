@@ -1,7 +1,7 @@
 ---
 type: Policy
 title: "False positives: backup jobs"
-description: "Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and a proposed rule for recognising a scheduled backup."
+description: "Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and the handbook rule for recognising a scheduled backup."
 status: draft
 order: 1102
 sources:
@@ -17,15 +17,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** A backup reads (and a restore writes) almost every file,
 > using a right that ignores normal file permissions. That looks a lot like an
@@ -47,11 +45,11 @@ Wazuh FIM runs on a schedule (`frequency`, default 43200 seconds; or
 `scan_time`), and `ignore` paths are still scanned but not
 reported.[^wazuh-syscheck]
 
-## Proposed handbook rule
+## Handbook rule
 
-*Proposed — owner to confirm (interview I2, Q11–Q13).*
+Owner policy (interview I2, Q11–Q13).[^naveed-interview-2026-11-11]
 
-1. **Backup window:** daily 01:00–05:00 UTC (proposed — owner sets the real one).
+1. **Backup window:** daily 01:00–05:00 UTC.
 2. **Backup accounts:** listed in `etc/lists/service-accounts` with the backup
    server as their allowed host.
 3. A 4672 with `SeBackupPrivilege`, or a burst of FIM changes, is a **benign
@@ -75,3 +73,4 @@ the [severity model](../rules-map/severity-model.md) gives.[^naveed-interview-20
 [^ms-4672]: Microsoft Learn, "4672(S): Special privileges assigned to new logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672
 [^wazuh-syscheck]: Wazuh documentation, "syscheck" (local configuration reference). https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/syscheck.html
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

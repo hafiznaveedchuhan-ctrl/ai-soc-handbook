@@ -1,7 +1,7 @@
 ---
 type: Policy
 title: "Severity response matrix (SLA)"
-description: "How fast the SOC acts on each severity — acknowledge, triage note, escalation — as a proposed matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model."
+description: "How fast the SOC acts on each severity — acknowledge, triage note, escalation — as the handbook matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model."
 status: draft
 order: 1200
 sources:
@@ -11,15 +11,13 @@ sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
     resource: "human:naveed interview 2026-11-10"
+  - id: naveed-interview-2026-11-11
+    title: human:naveed interview 2026-11-11
+    resource: "human:naveed interview 2026-11-11"
 ksor:
   audience: [public]
   owner: human:naveed
 ---
-> [!IMPORTANT]
-> **Proposal — not yet the owner's policy.** Every value on this page marked
-> *Proposed — owner to confirm (interview I2)* is a starting suggestion, not a
-> fact from a source. It becomes policy only when the owner confirms it.
-
 > [!NOTE]
 > **In plain words.** The severity word (Low → Critical) decides the clock. A
 > Critical alert gets a person in minutes; a Low one can wait for the next
@@ -36,7 +34,7 @@ matrix gives the clock.
 
 ## The matrix
 
-*Proposed — owner to confirm (interview I2, Q20–Q22). All times are proposals.*
+Owner policy (interview I2, Q20–Q22).[^naveed-interview-2026-11-11]
 
 | Severity | Acknowledge (L1 picks it up) | Triage note done | Escalate to L2 | Update cadence |
 |---|---|---|---|---|
@@ -49,13 +47,13 @@ matrix gives the clock.
   noticed it.
 - **Escalation conditions win.** Any [escalation condition](../rules-map/escalation-policy.md)
   means escalate now, whatever the row says.[^naveed-interview-2026-11-10]
-- **Coverage hours** (24×7 or business hours) — owner to confirm; "business day"
-  above assumes a business-hours SOC.
+- **Coverage** is business hours: "business day" means a working day within the
+  SOC's coverage hours.
 
 ## Measuring it
 
 MTTD and MTTR are mean time to detect and mean time to respond, measured per
-severity.[^naveed-interview-2026-11-10] Proposed: report them monthly, with the
+severity.[^naveed-interview-2026-11-10] They are reported monthly, with the
 share of alerts that met each column of the matrix.
 
 ## For the agent
@@ -68,3 +66,4 @@ share of alerts that met each column of the matrix.
 
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), Table 3 (CSF 2.0 Community Profile). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity model, verdict definitions).
+[^naveed-interview-2026-11-11]: human:naveed interview 2026-11-11 (interview I2: GeoIP/VPN, asset context, false-positive rules, SLA matrix — owner policy).

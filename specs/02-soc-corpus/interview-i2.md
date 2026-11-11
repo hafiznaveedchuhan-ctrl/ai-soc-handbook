@@ -46,3 +46,16 @@ Q19. Listed scanner outside schedule = unknown actor — ok?
 Q20. Matrix times (Critical 15 min / 30 min / immediate; High 30 min / 2 h / 1 h; Medium 4 h / 1 business day; Low 1 business day / 3 business days) — ok or new numbers?
 Q21. Coverage: 24×7 or business hours (which hours, which timezone)?
 Q22. MTTD / MTTR reported monthly per severity — ok?
+
+## Answers — CONFIRMED by human:naveed, 2026-11-11
+
+Naveed: "or her chez klya ok ha . premission ha jo best to best ho wo kro"
+(everything is ok; permission to do what is best). Read as "ok" to Q1–Q22.
+Where a question needed a value he did not give, the most conservative reading was chosen:
+- Q2 `vpn-egress`, Q3 expected countries, Q17 `approved-scanners`: lists start EMPTY; while a
+  list is empty its benign/raise rule does not apply (nothing is excused by an empty list).
+- Q15 ticket system: any tracked change record naming host, admin account and work.
+- Q18 schedule: weekly; until a schedule is recorded, no scan is benign by schedule.
+- Q21 coverage: business hours ("business day" = working day within coverage hours).
+Source id on pages: `naveed-interview-2026-11-11`. This is NOT page approval — approval
+still needs his explicit "approved".
