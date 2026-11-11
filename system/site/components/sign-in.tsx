@@ -3,9 +3,10 @@
 /**
  * The navbar's sign-in control.
  *
- * Renders NOTHING when this record does not configure an issuer, so a scaffold
- * that never sets one looks exactly as it does today — no placeholder, no
- * disabled button, no hint that a feature is missing.
+ * With an issuer configured (NEXT_PUBLIC_KSOR_SSO_URL + client id + redirect
+ * URI) it runs the real OAuth flow. Without one it still shows a "Sign in"
+ * button (owner decision, 2026-11-11) that only explains sign-in is not
+ * connected yet — no request is made and no session is created.
  *
  * What it does NOT do, said here because a sign-in control implies it: gate
  * anything. The record's pages are static files the host serves to whoever
@@ -28,6 +29,27 @@ import { authConfig } from "@/lib/auth/config";
 import { beginSignIn } from "@/lib/auth/flow";
 import { clearSession, readSession, type Session } from "@/lib/auth/session";
 
+function SignInNotConnected(): React.ReactElement {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="sm">
+          <LogIn className="size-4" aria-hidden />
+          Sign in
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-64">
+        <DropdownMenuLabel className="font-normal">
+          <span className="block text-sm font-medium">Sign-in is not connected yet</span>
+          <span className="text-muted-foreground block text-xs">
+            The handbook is open to read. A login provider will be added in a later phase.
+          </span>
+        </DropdownMenuLabel>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
 export function SignIn(): React.ReactElement | null {
   // Read AFTER mount, never during render: the session lives in sessionStorage,
   // which the prerender has no access to. Reading it during render would make
@@ -41,7 +63,10 @@ export function SignIn(): React.ReactElement | null {
     setReady(true);
   }, []);
 
-  if (authConfig === null) return null;
+  // Owner decision (2026-11-11): show the button before a provider exists. With
+  // no issuer configured it opens a notice instead of a login — it never fakes
+  // an identity, and the provider is wired in a later phase.
+  if (authConfig === null) return <SignInNotConnected />;
 
   // Hold the space until mounted, so the navbar does not jump when the session
   // resolves one frame later.
