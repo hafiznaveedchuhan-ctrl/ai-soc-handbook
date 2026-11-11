@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:778fddbd02b8728e064608e3e3ed549f9fd901f5289414fa48225fa0292488c0",
+  "build_id": "sha256:ca0eb87893902c10070e9d92edfb983b601275c60dd041ba5171d08a76013514",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "5a224234dd2340abab391f26e474e8839f7903fb",
+  "source_commit": "eeadf61acfe6dc3584f7a48da3f706d3dee6a7e5",
   "dirty": true,
-  "as_of": "2026-11-11T07:12:00.911Z",
+  "as_of": "2026-11-11T07:13:17.860Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -821,6 +821,87 @@
       ]
     },
     {
+      "path": "sysmon/event-1-process-create.md",
+      "sha256": "c298526bf51930c2d182b7d8427430beedc23ce2ab5d3f1ae7fe3169b9ea1cce",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-10-process-access.md",
+      "sha256": "bedfca1822de743f0afbd1c73c381dde7c4e7fee2630f9814c46ad5c24d3b4c4",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-11-file-create.md",
+      "sha256": "3a0f900513a4af391fa796efb286675a7af847824e776e65e239d297c527a4cd",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-12-13-14-registry.md",
+      "sha256": "a8ec08ccde2ac130b3592c88e0074768aa358fb5dae9050243664b70fb8a8326",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-22-dns-query.md",
+      "sha256": "7ec319ce0654965990a8181e07619ca10c696350e481ae3c8eb8bf12aa792203",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-3-network-connection.md",
+      "sha256": "8dd920f4ab0b3594ab14917a6060335e7e6631ad800460b8038c7f9f621a6431",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-7-image-loaded.md",
+      "sha256": "1f5234915abb2859c98316860f064ab9ad964721201a9419bd103565d3a13b91",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/event-8-create-remote-thread.md",
+      "sha256": "fef601b34db184497017cc0ab90320c77344e0f4a46b14b5db59e9f32ee5b9ab",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "sysmon/overview.md",
+      "sha256": "9966c518359455151536cd32c4a4bfc7f20491de816f5c622fc6ce8f949d391c",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
       "path": "triage-note/example-false-positive.md",
       "sha256": "5a2464f23c18983d2dc6587275f5fe127423985ea6fa798ee35f9512c9dbde9e",
       "status": "stable",
@@ -1624,7 +1705,7 @@
     },
     {
       "path": "index.md",
-      "sha256": "09306e6bd26d4f9d4db88a8841d801f200d09593fbf20620e769fa420b09c58e"
+      "sha256": "c2bf85b0c2aee5199a73e779f3ccfb1515f81cef687ef543fb4675415cdfa6fc"
     },
     {
       "path": "linux-auth/index.md",
@@ -1649,6 +1730,10 @@
     {
       "path": "rules-map/index.md",
       "sha256": "6ab82303eda5feca903b57e5e57f626cabc8003472c421cb801d919a42b1e1f1"
+    },
+    {
+      "path": "sysmon/index.md",
+      "sha256": "e57a339186d5c8f81dd45399c97989395636284bd32e9c9c688b2fc4a2e107b9"
     },
     {
       "path": "triage-note/index.md",
