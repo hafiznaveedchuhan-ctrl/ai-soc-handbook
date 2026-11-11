@@ -1,0 +1,14 @@
+deck:
+  title: "Common attacks and the ATT&CK tactics"
+  description: "Recall checks drawn only from the page Common attacks and the ATT&CK tactics."
+cards:
+  - front: "What does a MITRE tactic represent?"
+    back: "The 'why' — the adversary's tactical goal."
+  - front: "How many enterprise tactics are listed?"
+    back: "Fifteen."
+  - front: "TA0005 is now called…"
+    back: "Stealth."
+  - front: "Which tactic is ransomware (T1486)?"
+    back: "Impact."
+  - front: "Which protocols does adversary-in-the-middle abuse?"
+    back: "ARP, DNS or LLMNR, among others."

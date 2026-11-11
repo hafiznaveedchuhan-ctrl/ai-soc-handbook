@@ -1,0 +1,9 @@
+# Soc fundamentals
+
+* [Common attacks and the ATT&CK tactics](common-attacks.md) - The fifteen MITRE ATT&CK enterprise tactics in plain words, and the common attack types an L1 analyst meets — phishing, brute force, exploited public-facing apps, ransomware, denial of service, adversary-in-the-middle, supply chain and credential dumping.
+* [Phishing e-mail analysis](phishing-email-analysis.md) - How an L1 analyst reads a reported e-mail — From, Sender, Reply-To, Return-Path, Received and Authentication-Results — what the attachment and link variants of phishing look like, and the social-engineering signs NCSC lists.
+* [E-mail authentication: SPF, DKIM and DMARC](email-authentication-spf-dkim-dmarc.md) - What each SPF result means, how a DKIM signature names its domain and key, how DMARC alignment and policy work under RFC 9989 (which replaced RFC 7489 in May 2026), and how to read them in Authentication-Results.
+* [Incident response lifecycle (NIST SP 800-61r3)](incident-response-lifecycle.md) - How NIST SP 800-61 Rev. 3 frames incident response around the six CSF 2.0 Functions, how that maps to the older four-phase lifecycle, and where an L1 triage analyst sits in it.
+* [Security controls and log sources](security-controls-and-log-sources.md) - What a security control is, and which systems produce the logs a SOC reads — security software, operating systems and applications — following NIST SP 800-92.
+* [IOCs and threat intelligence](iocs-and-threat-intel.md) - What indicators of compromise, TTPs, security alerts, threat intelligence reports and tool configurations are, following NIST SP 800-150, and how an L1 analyst uses them.
+* [Active Directory basics](active-directory-basics.md) - What Active Directory Domain Services stores, what domain controllers do, how Kerberos and NTLM authenticate users, and which admin groups matter most to a SOC analyst.

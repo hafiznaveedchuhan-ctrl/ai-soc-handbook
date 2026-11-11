@@ -1,0 +1,26 @@
+WAVE 3 — soc-fundamentals (7 documents, plan v4) — branch feat/02-soc-corpus-wave-3
+Written 2026-11-11 (session 4). Standing approval (2026-11-11) covers process steps; page approval
+still needs Naveed's explicit "approved". Folder knowledge/soc-fundamentals/, order 1400+.
+
+ORDER | PAGE                                   | TYPE       | TIER-1 SOURCES (fetched, re-checked)
+1400  | common-attacks                         | Definition | MITRE ATT&CK tactics list + T1566, T1110, T1190, T1486,
+      |                                        |            | T1498, T1557, T1195, T1003 technique pages
+1401  | phishing-email-analysis                | Procedure  | CISA "Phishing Guidance: Stopping the Attack Cycle at Phase One";
+      |                                        |            | RFC 5322 (header fields), RFC 5321 (Received / trace), RFC 8601
+      |                                        |            | (Authentication-Results), MITRE T1566
+1402  | email-authentication-spf-dkim-dmarc    | Standard   | RFC 7208 (SPF), RFC 6376 (DKIM), RFC 9989 (DMARC — replaces
+      |                                        |            | RFC 7489; re-checked at rfc-editor.org), RFC 8601
+1403  | incident-response-lifecycle            | Standard   | NIST SP 800-61 Rev. 3 (April 2025)
+1404  | security-controls-and-log-sources      | Definition | NIST SP 800-92 (log management); ASD/CISA "Best practices for
+      |                                        |            | event logging and threat detection" (2024); NIST CSRC glossary
+1405  | iocs-and-threat-intel                  | Definition | NIST SP 800-150 (cyber threat information sharing); NIST CSRC
+      |                                        |            | glossary (indicator, IOC); MITRE ATT&CK
+1406  | active-directory-basics                | Definition | Microsoft Learn: AD DS overview, Kerberos authentication
+      |                                        |            | overview, NTLM overview, AD security groups
+
+Each page: + flashcards (5) + quiz (6); cross-links (phishing-email-analysis <-> T1566 and
+networking/email-protocols; common-attacks <-> playbooks; AD basics <-> 4768/4769/4771/4776).
+Gates: verify.mjs per page, npm run check, quiz_precheck, KSOR_DRAFTS=show build, review sheet,
+ONE "approved", stamp, build, refresh + calibrate --check, evals (fundamentals in-scope +
+pentest / reverse-engineering out-of-scope), PR after "push".
+Gaps: anything a source does not say → open question in the page, never general knowledge.

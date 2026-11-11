@@ -1,0 +1,58 @@
+quiz:
+  title: "Security controls and log sources"
+  questionsPerRound: 6
+questions:
+  - question: "Which source logs connect/disconnect times and data sent?"
+    options:
+      - "Web proxies"
+      - "VPN systems"
+      - "Routers"
+      - "Antimalware"
+    answer: 1
+    explanation: "SP 800-92: VPNs log logins, connect/disconnect times and data volumes."
+    source: "Log sources (NIST SP 800-92)"
+  - question: "Which source logs in large batches, not continuously?"
+    options:
+      - "Authentication and single sign-on servers"
+      - "Firewalls"
+      - "Web proxies"
+      - "Vulnerability management"
+    answer: 3
+    explanation: "It runs occasionally and generates large batches."
+    source: "Log sources (NIST SP 800-92)"
+  - question: "Firewalls vs routers?"
+    options:
+      - "Firewalls log more detail"
+      - "Routers log more detail"
+      - "Neither logs blocks"
+      - "Both log only URLs"
+    answer: 0
+    explanation: "Firewalls have more complex policies and more detailed logs."
+    source: "Log sources (NIST SP 800-92)"
+  - question: "Which CSF Function is where safeguards are used?"
+    options:
+      - "Detect"
+      - "Identify"
+      - "Protect"
+      - "Recover"
+    answer: 2
+    explanation: "Protect (PR): safeguards to manage risks are used."
+    source: "Security control"
+  - question: "Which source records quarantined hosts and reasons?"
+    options:
+      - "Authentication and directory servers"
+      - "Network quarantine servers"
+      - "Antimalware software"
+      - "Web proxies"
+    answer: 1
+    explanation: "Quarantine servers log which hosts were quarantined and why."
+    source: "Log sources (NIST SP 800-92)"
+  - question: "What does antimalware software typically record?"
+    options:
+      - "Detections and quarantines"
+      - "Every URL visited by every user"
+      - "Every DNS answer"
+      - "Every VPN session"
+    answer: 0
+    explanation: "Detected malware, disinfection attempts, quarantines, scans, updates."
+    source: "Log sources (NIST SP 800-92)"

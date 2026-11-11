@@ -1,0 +1,45 @@
+SOC TRIAGE HANDBOOK — WAVE 3 REVIEW SHEET (for Naveed)
+Generated 2026-11-11 (session 4). Branch feat/02-soc-corpus-wave-3. 7 pages (soc-fundamentals), all status: draft.
+Read on http://localhost:3000/docs/soc-fundamentals/<page>/  (your dev server shows drafts).
+
+HOW TO APPROVE: reply 'approved all wave 3', or 'approved: <page>, ...', or 'change <X> in <page>'.
+Checks done: npm run check ok; verify.mjs (only link targets/headings unmatched); quiz_precheck 7/7;
+KSOR_DRAFTS=show build ok in an isolated worktree (site quiz audit passed).
+
+NOTES FOR YOU (no decision needed unless you disagree):
+  N1  DMARC is cited from RFC 9989 (May 2026), which obsoletes RFC 7489 and 9091 (checked at rfc-editor.org).
+  N2  MITRE now lists 15 enterprise tactics: TA0005 is "Stealth" and TA0112 "Defense Impairment"
+      (the old "Defense Evasion" name is gone) — the page uses the current names.
+  N3  CISA phishing guidance PDF (Access Denied to automated fetch) and the ASD/CISA logging guide (timeout)
+      could not be read, so they are NOT cited; UK NCSC phishing guidance and NIST SP 800-92 used instead.
+  N4  NIST SP 800-92 is from 2006; the page says so.
+
+ORDER | PAGE  [TYPE, N sources, study aids]
+
+1400 | soc-fundamentals/common-attacks  [Definition, 9 sources, deck+quiz]
+   says:  The fifteen MITRE ATT&CK enterprise tactics in plain words, and the common attack types an L1 analyst meets — phishing, brute force, exploited public-facing apps, ransomware, denial of service, adversary-in-the-middle, supply chain and credential dumping.
+   sources: MITRE ATT&CK — Enterprise tactics; MITRE ATT&CK \u2014 T1566 Phishing; MITRE ATT&CK \u2014 T1110 Brute Force; MITRE ATT&CK \u2014 T1190 Exploit Public-Facing Application; MITRE ATT&CK \u2014 T1486 Data Encrypted for Impact; MITRE ATT&CK \u2014 T1498 Network Denial of Service; MITRE ATT&CK \u2014 T1557 Adversary-in-the-Middle; MITRE ATT&CK \u2014 T1195 Supply Chain Compromise; MITRE ATT&CK \u2014 T1003 OS Credential Dumping
+
+1401 | soc-fundamentals/phishing-email-analysis  [Procedure, 7 sources, deck+quiz]
+   says:  How an L1 analyst reads a reported e-mail — From, Sender, Reply-To, Return-Path, Received and Authentication-Results — what the attachment and link variants of phishing look like, and the social-engineering signs NCSC lists.
+   sources: IETF — RFC 5322: Internet Message Format; IETF — RFC 5321: Simple Mail Transfer Protocol; IETF — RFC 8601: Message Header Field for Indicating Message Authentication Status; MITRE ATT&CK \u2014 T1566.001 Phishing: Spearphishing Attachment; MITRE ATT&CK \u2014 T1566.002 Phishing: Spearphishing Link; NCSC — How to spot a scam email, text message or call; NCSC — Phishing attacks: defending your organisation
+
+1402 | soc-fundamentals/email-authentication-spf-dkim-dmarc  [Standard, 4 sources, deck+quiz]
+   says:  What each SPF result means, how a DKIM signature names its domain and key, how DMARC alignment and policy work under RFC 9989 (which replaced RFC 7489 in May 2026), and how to read them in Authentication-Results.
+   sources: IETF — RFC 7208: Sender Policy Framework (SPF); IETF — RFC 6376: DomainKeys Identified Mail (DKIM) Signatures; IETF — RFC 9989: Domain-Based Message Authentication, Reporting, and Conformance (DMARC); IETF — RFC 8601: Message Header Field for Indicating Message Authentication Status
+
+1403 | soc-fundamentals/incident-response-lifecycle  [Standard, 1 sources, deck+quiz]
+   says:  How NIST SP 800-61 Rev. 3 frames incident response around the six CSF 2.0 Functions, how that maps to the older four-phase lifecycle, and where an L1 triage analyst sits in it.
+   sources: NIST SP 800-61 Rev. 3 (April 2025)
+
+1404 | soc-fundamentals/security-controls-and-log-sources  [Definition, 3 sources, deck+quiz]
+   says:  What a security control is, and which systems produce the logs a SOC reads — security software, operating systems and applications — following NIST SP 800-92.
+   sources: NIST CSRC Glossary — security control; NIST SP 800-92 — Guide to Computer Security Log Management (2006); NIST SP 800-61 Rev. 3 (April 2025)
+
+1405 | soc-fundamentals/iocs-and-threat-intel  [Definition, 2 sources, deck+quiz]
+   says:  What indicators of compromise, TTPs, security alerts, threat intelligence reports and tool configurations are, following NIST SP 800-150, and how an L1 analyst uses them.
+   sources: NIST SP 800-150 — Guide to Cyber Threat Information Sharing; NIST SP 800-61 Rev. 3 (April 2025)
+
+1406 | soc-fundamentals/active-directory-basics  [Definition, 4 sources, deck+quiz]
+   says:  What Active Directory Domain Services stores, what domain controllers do, how Kerberos and NTLM authenticate users, and which admin groups matter most to a SOC analyst.
+   sources: Microsoft Learn — Active Directory Domain Services overview; Microsoft Learn — Kerberos authentication overview; Microsoft Learn — NTLM overview; Microsoft Learn — Active Directory security groups

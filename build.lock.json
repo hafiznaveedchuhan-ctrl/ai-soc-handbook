@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:07371a989aa74387afbfec23dad155ce7c55fef094b0d0951f3e5bc0dc213334",
+  "build_id": "sha256:6c31faf454fadd8757de0fad170aff76d95564347ab19e0bdb37ef8aa302d8f7",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "e2029d1b1d5f0c1a5a2584de0509d41f486d998a",
+  "source_commit": "ea0d49788bd6264de30304c959635b5f0ef10d96",
   "dirty": false,
-  "as_of": "2026-11-11T10:44:00.237Z",
+  "as_of": "2026-11-11T11:21:45.274Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -963,6 +963,83 @@
     {
       "path": "sla/severity-response-matrix.md",
       "sha256": "ad13aec76edbcc66769e7a5ba30ef0f0a7f7663d5b1b80657c8adff45863d0d1",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/active-directory-basics.md",
+      "sha256": "5e57958b10efb02628450bca8e0595d2398af6cc6e85de3b9457b4d6679a2979",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.md",
+      "sha256": "4fc190ededfe61d2a6bde382c5a20a90867228e409419a0b4c61d194ba2c2f27",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.md",
+      "sha256": "c788339c6eaa4fb2e5f19dcf7aa2376d9ed270a66f4ba125c0ccff40ae5058ae",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.md",
+      "sha256": "6e0f0729e1e652df34441d3221be0f25fe36cc64a5edbbd3164780dd21ffd418",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.md",
+      "sha256": "fcbbdec02ade3f591c4c483b674ff63dad230ec173727d08fb053fa5bfe65577",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.md",
+      "sha256": "93eca7a0ac2bb46509e9f16f2a29fe40c47179d65373a029d28d600aacf24a49",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "public"
+      ]
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.md",
+      "sha256": "c2400fe894238eec07c547cb7e9fcac4474d083e4301f29384ae7fb68ef84cfc",
       "status": "stable",
       "audience": [
         "public"
@@ -2052,6 +2129,62 @@
       "sha256": "5467cd341def3ac6529bfbc98b063a1821097165d02289afb9fe52083390df69"
     },
     {
+      "path": "soc-fundamentals/active-directory-basics.flashcards.yaml",
+      "sha256": "4e12a4e993da5d5469729574381777001c3e337420fa122fe439db35ebbc839a"
+    },
+    {
+      "path": "soc-fundamentals/active-directory-basics.quiz.yaml",
+      "sha256": "b0f8087250c7d032c1881495e49c99aa55c5cfb0537e20ee8d86fde742ef30c6"
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.flashcards.yaml",
+      "sha256": "2a4dddd40e801f146694f2d9cdb8c2ab4f2281b5f46657027d52557e2661a310"
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.quiz.yaml",
+      "sha256": "53ebcecff51ba5316f24a9576df6b6392882a0ac1e3f49c5643e2c9957bd8774"
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.flashcards.yaml",
+      "sha256": "4cf53d636cc8a1dfec0639bb59b5f2c21d206c2dc0b2e8a2c60277ae2455dfe9"
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.quiz.yaml",
+      "sha256": "f03b9163ba657ca68b43acdaae4e7a23e4b61a82e5390670e75022dd06736114"
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.flashcards.yaml",
+      "sha256": "d12b741088efabdb99045855fb4c2db4f0e1b2b20e7540550ef437a4e6ee3568"
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.quiz.yaml",
+      "sha256": "0f9ea53aead66f93b2719ec4f027125fada10edb544a5c4a835a082d080b0508"
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.flashcards.yaml",
+      "sha256": "be733148813b3d33acd48b9035198a4226c84377736fd7825322d290f19f647d"
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.quiz.yaml",
+      "sha256": "8acb959dc28caa69874a0df31fc2f89d0d3efd62fe7de5421609edf3a22d5fd3"
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.flashcards.yaml",
+      "sha256": "2cee4f8e9a60cdf3e0cabab2c166ad238f184f9ba51f90c56a5ebd980d688e61"
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.quiz.yaml",
+      "sha256": "57cd67ff15f49e81170c9a2c9517897a88730f34d2b0a7f4a99e3258815bd73f"
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.flashcards.yaml",
+      "sha256": "8adf42fe48b9e411add6719fabca1599ff9e321df4fceccfaf97a2a66d0bd27a"
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.quiz.yaml",
+      "sha256": "c75d3d86d6ed3f3c2274e624e594512fd4afb3e1d03af10a23b205b15b3ce989"
+    },
+    {
       "path": "sysmon/event-1-process-create.flashcards.yaml",
       "sha256": "07a523dc34db58ee2bd983ec085a0f482595a6e767b439427628fd7f21f1b9ce"
     },
@@ -2376,7 +2509,7 @@
     },
     {
       "path": "index.md",
-      "sha256": "d5602db4252d1762d4888d21aa9ffad12aa2b9f87a509a9ed7dd17182dd0a194"
+      "sha256": "fc626cd2af211e8447f477ef2212f6fc68871420600c31b1a704364221d95840"
     },
     {
       "path": "linux-auth/index.md",
@@ -2407,6 +2540,10 @@
       "sha256": "8f2d8d64082f6bf83dc75019edca2fc050d45725be7992a1421ad5abee62d65c"
     },
     {
+      "path": "soc-fundamentals/index.md",
+      "sha256": "857cc0c2936cb66c7bd625bd5fe7071876bf43234d4ca2b53cae294dd4483d16"
+    },
+    {
       "path": "sysmon/index.md",
       "sha256": "e57a339186d5c8f81dd45399c97989395636284bd32e9c9c688b2fc4a2e107b9"
     },
@@ -2426,8 +2563,8 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "4dfff66f0ac40015d54d03f69138b61e0c9d542cdf7f3dce24d8d362c702c66b",
-      "files": 361
+      "sha256": "afae35b57a5bec75353d596f202e860a2c33a26485ce20ab70750c7c261f5e6d",
+      "files": 383
     }
   ]
 }

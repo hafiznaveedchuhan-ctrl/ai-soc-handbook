@@ -1,0 +1,58 @@
+quiz:
+  title: "Incident response lifecycle (NIST SP 800-61r3)"
+  questionsPerRound: 6
+questions:
+  - question: "Which document does SP 800-61r3 supersede?"
+    options:
+      - "SP 800-92"
+      - "SP 800-61r2"
+      - "SP 800-150"
+      - "SP 800-53r5"
+    answer: 1
+    explanation: "SP 800-61r3 supersedes Revision 2."
+    source: "The CSF 2.0 model"
+  - question: "Which Function covers restoring affected assets?"
+    options:
+      - "Respond"
+      - "Protect"
+      - "Identify"
+      - "Recover"
+    answer: 3
+    explanation: "Recover (RC): affected assets and operations are restored."
+    source: "The CSF 2.0 model"
+  - question: "Old 'Detection & Analysis' maps to…"
+    options:
+      - "Detect, Identify (Improvement)"
+      - "Govern and Protect"
+      - "Respond and Recover"
+      - "Identify (all Categories)"
+    answer: 0
+    explanation: "Table 1 maps it to Detect plus the Improvement Category."
+    source: "Mapping to the older lifecycle"
+  - question: "Which element means incidents are contained?"
+    options:
+      - "RS.MI-02"
+      - "RS.MA-03"
+      - "RS.MI-01"
+      - "RS.CO-02"
+    answer: 2
+    explanation: "RS.MI-01: incidents are contained."
+    source: "Key Respond outcomes"
+  - question: "Which category carries continuous improvement?"
+    options:
+      - "DE.CM"
+      - "ID.IM"
+      - "RS.MA"
+      - "GV.SC"
+    answer: 1
+    explanation: "The Improvement Category (ID.IM)."
+    source: "The CSF 2.0 model"
+  - question: "Why did NIST drop the circular lifecycle?"
+    options:
+      - "Incidents are no longer rare or brief"
+      - "CSF 2.0 removed the Respond Function"
+      - "Containment is now automated"
+      - "Rev. 2 had no Preparation phase"
+    answer: 0
+    explanation: "Incidents used to be rare, narrow and over in a day or two."
+    source: "Mapping to the older lifecycle"

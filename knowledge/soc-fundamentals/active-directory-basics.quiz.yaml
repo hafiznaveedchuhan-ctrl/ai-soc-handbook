@@ -1,0 +1,58 @@
+quiz:
+  title: "Active Directory basics"
+  questionsPerRound: 6
+questions:
+  - question: "Which AD DS part defines object classes and attributes?"
+    options:
+      - "The global catalog"
+      - "The schema"
+      - "Replication"
+      - "The KDC"
+    answer: 1
+    explanation: "The schema is the set of rules for classes and attributes."
+    source: "What AD DS is"
+  - question: "Which event records a TGT request?"
+    options:
+      - "4769"
+      - "4776"
+      - "4771"
+      - "4768"
+    answer: 3
+    explanation: "Sign-in gets a TGT — event 4768."
+    source: "Kerberos — the default"
+  - question: "What does Kerberos give that NTLM does not?"
+    options:
+      - "Mutual authentication"
+      - "Password hashing"
+      - "Local logon support"
+      - "Workgroup support"
+    answer: 0
+    explanation: "NTLM does not let a client verify a server's identity."
+    source: "Kerberos — the default"
+  - question: "NTLM authenticates using…"
+    options:
+      - "Ticket-granting tickets"
+      - "Public-key certificates"
+      - "Challenge-response"
+      - "One-time SMS codes"
+    answer: 2
+    explanation: "NTLM is a family of challenge-response protocols."
+    source: "NTLM — still around"
+  - question: "Domain Admins is by default a member of…"
+    options:
+      - "Enterprise Admins in the forest"
+      - "Administrators on domain computers"
+      - "Backup Operators on DCs"
+      - "Guests on every server"
+    answer: 1
+    explanation: "By default it is in Administrators on every domain-joined computer."
+    source: "Admin groups to watch"
+  - question: "Universal group membership change is event…"
+    options:
+      - "4756"
+      - "4728"
+      - "4732"
+      - "4720"
+    answer: 0
+    explanation: "4756 is the universal group event."
+    source: "Admin groups to watch"

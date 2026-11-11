@@ -1,0 +1,58 @@
+quiz:
+  title: "Phishing e-mail analysis"
+  questionsPerRound: 6
+questions:
+  - question: "Which header names the agent that actually transmitted?"
+    options:
+      - "From:"
+      - "Sender:"
+      - "Reply-To:"
+      - "Return-Path:"
+    answer: 1
+    explanation: "RFC 5322: Sender: is the agent responsible for actual transmission."
+    source: "Header fields to read"
+  - question: "Without Reply-To:, where do replies go?"
+    options:
+      - "To the Sender: mailbox"
+      - "To the Return-Path:"
+      - "To the first Received: host"
+      - "To the From: mailbox"
+    answer: 3
+    explanation: "RFC 5322: replies default to the From: mailbox."
+    source: "Header fields to read"
+  - question: "What must SMTP servers do with Received: lines?"
+    options:
+      - "Prepend them"
+      - "Append them at the end"
+      - "Replace the oldest one"
+      - "Sort them by date"
+    answer: 0
+    explanation: "SMTP servers MUST prepend Received lines and not reorder existing ones."
+    source: "Header fields to read"
+  - question: "Why use a link instead of an attachment?"
+    options:
+      - "To make the e-mail smaller"
+      - "To pass the SPF check"
+      - "To avoid attachment inspection"
+      - "To reach more recipients"
+    answer: 2
+    explanation: "T1566.002: links avoid defences that inspect attachments."
+    source: "Two delivery variants"
+  - question: "Which NCSC sign is 'reply within 24 hours'?"
+    options:
+      - "Authority"
+      - "Urgency"
+      - "Scarcity"
+      - "Emotion"
+    answer: 1
+    explanation: "NCSC lists limited-time pressure as urgency."
+    source: "Social-engineering signs"
+  - question: "Reply-To: domain differs from From:. Agent action?"
+    options:
+      - "Note it as a phishing sign"
+      - "Close the alert"
+      - "Escalate as Critical"
+      - "Delete the e-mail"
+    answer: 0
+    explanation: "The For-the-agent table: note it as a phishing sign."
+    source: "For the agent"

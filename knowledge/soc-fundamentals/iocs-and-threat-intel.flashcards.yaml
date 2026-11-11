@@ -1,0 +1,14 @@
+deck:
+  title: "IOCs and threat intelligence"
+  description: "Recall checks drawn only from the page IOCs and threat intelligence."
+cards:
+  - front: "What is an indicator (NIST SP 800-150)?"
+    back: "A technical artifact or observable suggesting an attack is imminent, underway or already happened."
+  - front: "What are TTPs?"
+    back: "The behaviour of an actor — tactics, techniques, procedures."
+  - front: "What is an observable?"
+    back: "An event, benign or malicious, on a network or system."
+  - front: "What makes information 'threat intelligence'?"
+    back: "It has been aggregated, analysed or enriched to give context for decisions."
+  - front: "Before an IP reputation lookup?"
+    back: "Classify private ranges first."

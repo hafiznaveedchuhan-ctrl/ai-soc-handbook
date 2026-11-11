@@ -1,0 +1,14 @@
+deck:
+  title: "Phishing e-mail analysis"
+  description: "Recall checks drawn only from the page Phishing e-mail analysis."
+cards:
+  - front: "What does the From: field specify?"
+    back: "The author(s) — who is responsible for writing the message."
+  - front: "Where does each SMTP server add its Received: line?"
+    back: "It prepends it — at the top; earlier lines must not change."
+  - front: "When is Return-Path: added?"
+    back: "At final delivery; it keeps the reverse-path from the MAIL command."
+  - front: "T1566.001 vs T1566.002?"
+    back: "Attachment carries malware; link sends the user to download or a malicious site."
+  - front: "NCSC's tell-tale signs?"
+    back: "Authority, urgency, emotion, scarcity, current events."
