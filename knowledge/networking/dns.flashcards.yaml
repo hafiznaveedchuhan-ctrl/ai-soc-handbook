@@ -1,0 +1,14 @@
+deck:
+  title: "DNS — Domain Name System"
+  description: "Recall checks drawn only from the page DNS — Domain Name System."
+cards:
+  - front: "Which ports does DNS use?"
+    back: "UDP 53 and TCP 53."
+  - front: "Recursive versus iterative?"
+    back: "Recursive: the server chases the answer. Iterative: it refers the client on."
+  - front: "What happens to a UDP DNS answer over 512 bytes?"
+    back: "It is truncated and the TC bit is set."
+  - front: "What is RCODE 3?"
+    back: "NXDomain — non-existent domain."
+  - front: "Which DNS queries must always be logged (NIST)?"
+    back: "Queries for domains protective DNS classes as malicious."

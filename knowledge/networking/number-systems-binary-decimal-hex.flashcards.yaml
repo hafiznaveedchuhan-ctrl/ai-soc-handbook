@@ -1,0 +1,14 @@
+deck:
+  title: "Number systems: binary, decimal and hexadecimal"
+  description: "Recall checks drawn only from the page Number systems: binary, decimal and hexadecimal."
+cards:
+  - front: "How many bits is one hex digit?"
+    back: "Four — so two hex digits make one byte."
+  - front: "What is 192 in hex?"
+    back: "C0."
+  - front: "What is 255 in binary?"
+    back: "11111111."
+  - front: "How do you convert binary to decimal?"
+    back: "Add the place values of the 1-bits: 128, 64, 32, 16, 8, 4, 2, 1."
+  - front: "192.0.2.10 as one hex number?"
+    back: "C000020A."

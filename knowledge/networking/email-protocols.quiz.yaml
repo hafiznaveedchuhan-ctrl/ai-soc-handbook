@@ -1,0 +1,58 @@
+quiz:
+  title: "Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC"
+  questionsPerRound: 6
+questions:
+  - question: "Which header names the message author?"
+    options:
+      - "Received:"
+      - "From:"
+      - "Return-Path:"
+      - "Message-ID:"
+    answer: 1
+    explanation: "RFC 5322: the From: field specifies the author(s) of the message."
+    source: "Envelope versus header"
+  - question: "SPF result 'softfail' means …"
+    options:
+      - "Explicitly not authorized to send mail"
+      - "No SPF record found"
+      - "Transient DNS error"
+      - "Weakly: probably not authorized"
+    answer: 3
+    explanation: "RFC 7208: softfail is a weak statement that the host is probably not authorized."
+    source: "SPF, DKIM, DMARC"
+  - question: "What does DKIM rely on?"
+    options:
+      - "A signature checked with the signer's key"
+      - "The IP address of the last relay hop only"
+      - "The order of Received lines"
+      - "The SMTP envelope sender"
+    answer: 0
+    explanation: "DKIM validates responsibility with a signature and a key fetched from the signer's domain."
+    source: "SPF, DKIM, DMARC"
+  - question: "DMARC policy 'quarantine' means …"
+    options:
+      - "Deliver failing mail normally"
+      - "Reject all failing mail"
+      - "Treat failing mail as suspicious"
+      - "Send failure reports only"
+    answer: 2
+    explanation: "RFC 9989: quarantine — the Domain Owner considers such mail suspicious."
+    source: "SPF, DKIM, DMARC"
+  - question: "Which RFC is current for DMARC?"
+    options:
+      - "RFC 7489"
+      - "RFC 9989"
+      - "RFC 7208"
+      - "RFC 6376"
+    answer: 1
+    explanation: "RFC 9989 (May 2026) obsoletes RFC 7489."
+    source: "SPF, DKIM, DMARC"
+  - question: "In which order do you read Received lines?"
+    options:
+      - "Bottom up, to follow the path"
+      - "Top down, oldest first"
+      - "Only the top line matters"
+      - "Alphabetical order by the host name"
+    answer: 0
+    explanation: "Each server adds its line at the top, so the oldest hop is at the bottom."
+    source: "Envelope versus header"

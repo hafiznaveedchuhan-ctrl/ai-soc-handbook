@@ -1,0 +1,14 @@
+deck:
+  title: "The TCP/IP model and encapsulation"
+  description: "Recall checks drawn only from the page The TCP/IP model and encapsulation."
+cards:
+  - front: "What does each layer add when sending?"
+    back: "Its own header — TCP ports, IP addresses, Ethernet MAC addresses."
+  - front: "Does IP guarantee delivery?"
+    back: "No — datagrams may be damaged, duplicated, reordered or lost."
+  - front: "What is a TCP unit called?"
+    back: "A TCP segment."
+  - front: "What is the link-layer unit called?"
+    back: "An Ethernet frame."
+  - front: "Which layer is a firewall log mostly?"
+    back: "Internet and transport headers — addresses, ports, protocol."

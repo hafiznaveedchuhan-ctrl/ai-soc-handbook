@@ -2,8 +2,9 @@
 type: Definition
 title: "ICMP and ICMPv6"
 description: What ICMP is for — error reporting and diagnostics — the type numbers analysts see most (echo, destination unreachable, time exceeded, redirect) for IPv4 and IPv6, and how they appear in alerts.
-status: draft
+status: stable
 order: 1314
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc792
     title: "RFC 792 — Internet Control Message Protocol"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** ICMP is how the network reports problems ("can't reach
@@ -68,7 +70,7 @@ All rows: [^iana-icmpv6]
 ## Why a SOC analyst cares
 
 - Echo requests to many addresses in a short time look like host discovery
-  (network-attacks, N5).
+  (scanning patterns: [network attacks](network-attacks.md)).
 - Time Exceeded is the message a router returns when a packet's TTL runs out
   (see [IPv4 addressing](ipv4-addressing.md)).
 - ICMPv6 carries Neighbor Discovery, so it is part of normal IPv6 operation.
@@ -82,6 +84,12 @@ All rows: [^iana-icmpv6]
 | Type 3 bursts | Unreachable replies |
 | Type 11 | TTL expired |
 | ICMPv6 133–137 | Neighbor Discovery |
+
+## Related pages
+
+- [Routing basics](routing-basics.md)
+- [IPv6 Neighbor Discovery and SLAAC](ipv6-neighbor-discovery-and-slaac.md)
+- [Common network attacks](network-attacks.md)
 
 [^rfc792]: IETF, "RFC 792 — Internet Control Message Protocol". https://www.rfc-editor.org/rfc/rfc792
 [^rfc4443]: IETF, "RFC 4443 — Internet Control Message Protocol (ICMPv6) for IPv6". https://www.rfc-editor.org/rfc/rfc4443

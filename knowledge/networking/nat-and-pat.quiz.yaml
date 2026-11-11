@@ -1,0 +1,58 @@
+quiz:
+  title: "NAT and PAT (NAPT)"
+  questionsPerRound: 6
+questions:
+  - question: "Which mapping behaviour must a NAT use (REQ-1)?"
+    options:
+      - "Address-Dependent Mapping"
+      - "Endpoint-Independent Mapping"
+      - "Address and Port-Dependent Mapping"
+      - "Random mapping per packet"
+    answer: 1
+    explanation: "RFC 4787 REQ-1: a NAT MUST have Endpoint-Independent Mapping behaviour."
+    source: "Mapping behaviour (UDP)"
+  - question: "A NAT UDP mapping must not expire in less than …"
+    options:
+      - "ten seconds"
+      - "one hour"
+      - "five seconds"
+      - "two minutes"
+    answer: 3
+    explanation: "REQ-5: not less than two minutes, unless REQ-5a applies."
+    source: "Mapping behaviour (UDP)"
+  - question: "What does NAPT change on an outbound packet?"
+    options:
+      - "Source address and source port"
+      - "Destination address only"
+      - "Only the TTL field"
+      - "The payload contents"
+    answer: 0
+    explanation: "NAPT translates source address and port outbound, destination address and port inbound."
+    source: "Two kinds of traditional NAT"
+  - question: "What cost of NAT does RFC 3022 name?"
+    options:
+      - "Packets lose their checksums"
+      - "DNS stops working"
+      - "IP addresses lose end-to-end meaning"
+      - "TCP becomes connectionless"
+    answer: 2
+    explanation: "NAT takes away the end-to-end significance of an IP address."
+    source: "Two kinds of traditional NAT"
+  - question: "Alert source is your public NAT address. What next?"
+    options:
+      - "Block the NAT address at once"
+      - "Check the NAT log for that port and time"
+      - "Treat it as one single host"
+      - "Close the alert as internal"
+    answer: 1
+    explanation: "Behind NAPT many hosts share one address — use the translation log (address:port and time)."
+    source: "For the agent"
+  - question: "Which RFC defines the private ranges NAT connects?"
+    options:
+      - "RFC 1918"
+      - "RFC 4787"
+      - "RFC 3022"
+      - "RFC 9542"
+    answer: 0
+    explanation: "Private address space is defined in RFC 1918."
+    source: "Two kinds of traditional NAT"

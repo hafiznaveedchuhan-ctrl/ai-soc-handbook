@@ -1,0 +1,173 @@
+SOC TRIAGE HANDBOOK — NETWORKING REVIEW SHEET (for Naveed)
+Generated 2026-11-10 (session 3). Branch feat/02-networking. 38 pages, all status: draft.
+Read on http://localhost:3000/docs/networking/<page>/  (run `npm run dev` first).
+
+HOW TO APPROVE: reply 'approved all networking', or 'approved: <page>, <page>', or 'change <X> in <page>'.
+Each page has a flashcard deck (5 cards) and a quiz (6 questions) drawn only from its own text.
+
+DECISIONS NEEDED FROM YOU (answer with the approval):
+  D1  TLS 1.0/1.1: RFC 8996 says MUST NOT negotiate; NIST SP 800-52r2 allowed them for non-government
+      interoperability. Page shows both. Which is the handbook's policy? (or 'keep both')
+  D2  Reverse links (11 stable Wave 1 pages -> networking), see specs/02-soc-corpus/networking-reverse-links.txt:
+      'reverse links yes' (they need your re-approval too) or 'reverse links no'.
+  D3  Open questions left in pages (no reachable source): IEEE 802.1Q VLAN ID / MAC learning (vlans-and-switching),
+      802.11 details (wireless-basics), IPv6 ND misuse (ipv6-neighbor-discovery-and-slaac). OK to approve with these gaps?
+
+SOURCES: Tier 1 everywhere except OSI layers 5-7 (AWS/IBM, Tier 2, already accepted by you in N1).
+Replaced while writing: RFC 7042->9542, 8415->9915, 8446->9846, 7489->9989, 3164->5424; NIST 800-81-2 -> 800-81r3.
+
+ORDER | PAGE  [TYPE, N sources]
+   says:  <description>
+   check: <what to spot-check>
+
+1300 | networking/networking-overview  [Document, 3 sources]
+   says:  What a network is, how the networking pages in this handbook are organised, and why every alert a SOC analyst triages carries network evidence.
+   check: table links all 38 pages; NIST network definition
+
+1301 | networking/osi-model  [Definition, 4 sources]
+   says:  The seven layers of the OSI reference model, what each does, how they line up with the TCP/IP model, and how analysts use layer numbers when describing alerts.
+   check: layers 5-7 are Tier 2 (AWS/IBM); RFC 1122 vs IBM boundary shown as two statements
+
+1302 | networking/tcp-ip-model-and-encapsulation  [Definition, 2 sources]
+   says:  The four layers of the Internet protocol suite — application, transport, internet, link — what each provides, and how data is wrapped layer by layer on the way out.
+   check: four layers = RFC 1122 table
+
+1303 | networking/number-systems-binary-decimal-hex  [Definition, 4 sources]
+   says:  How the same value is written in binary, decimal and hexadecimal, how to convert between them, and where each notation appears in network data — IPv4 octets, MAC addresses, IPv6 groups and Windows hex fields.
+   check: 192.0.2.10 = 3221225994 = C000020A (computed)
+
+1304 | networking/ethernet-and-mac-addresses  [Definition, 3 sources]
+   says:  How a 48-bit MAC address is built — vendor prefix, unicast versus multicast bit, global versus local bit — and the EtherType values that say what an Ethernet frame carries.
+   check: M / X bits; IANA OUI 00-00-5E; EtherTypes 0800/0806/86DD
+
+1305 | networking/arp  [Definition, 3 sources]
+   says:  How ARP maps an IPv4 address to a MAC address on the local network with a broadcast request and a reply, and why unexpected ARP changes matter to an analyst.
+   check: op codes REQUEST=1, REPLY=2; EtherType 0806
+
+1306 | networking/ipv4-addressing  [Definition, 4 sources]
+   says:  What an IPv4 address is, the historical classes, and the IPv4 header fields an analyst meets in logs — TTL, protocol, flags, fragment offset, identification and length.
+   check: header field table vs RFC 791
+
+1307 | networking/ipv4-subnetting-and-cidr  [Definition, 3 sources]
+   says:  How CIDR prefix notation (/24, /26) defines a network, how to work out the mask, network address, broadcast address and usable hosts, and how to tell whether an address belongs to a subnet — with machine-checked examples.
+   check: worked table row 192.0.2.64/26 (computed)
+
+1310 | networking/special-ipv4-ranges  [Standard, 7 sources]
+   says:  The IPv4 blocks reserved for special purposes — private, shared (CGNAT), loopback, link-local, documentation, benchmarking, reserved and broadcast — and how to classify an address from an alert before looking it up.
+   check: registry table; 100.64/10 not RFC 1918
+
+1311 | networking/ipv6-addressing  [Definition, 4 sources]
+   says:  How an IPv6 address is written — eight 16-bit hex groups, leading-zero and double-colon compression, lowercase — the three address types, and machine-checked examples of the canonical short form.
+   check: RFC 5952 rules; canonical-form examples (computed)
+
+1312 | networking/ipv6-special-ranges  [Standard, 6 sources]
+   says:  The IPv6 blocks an analyst must recognise — loopback, unspecified, IPv4-mapped (::ffff:), link-local, unique-local, multicast and the documentation prefixes — and what each means in a log.
+   check: ::ffff: note from Microsoft 4625; 3fff::/20 (RFC 9637)
+
+1313 | networking/ipv6-neighbor-discovery-and-slaac  [Definition, 4 sources]
+   says:  How IPv6 hosts find routers and neighbours with the five Neighbor Discovery messages (ICMPv6 133–137) and configure their own addresses with SLAAC — the IPv6 counterpart of ARP.
+   check: types 133-137; ND misuse = open question
+
+1314 | networking/icmp-and-icmpv6  [Definition, 6 sources]
+   says:  What ICMP is for — error reporting and diagnostics — the type numbers analysts see most (echo, destination unreachable, time exceeded, redirect) for IPv4 and IPv6, and how they appear in alerts.
+   check: type tables vs IANA
+
+1315 | networking/tcp  [Standard, 3 sources]
+   says:  How TCP opens a connection with the three-way handshake, what each control flag means, the main connection states, and how SYN and RST patterns read in firewall and IDS logs.
+   check: flag table; SYN->RST reading
+
+1316 | networking/udp  [Definition, 4 sources]
+   says:  What UDP is — connectionless datagrams with a four-field header — which common services use it, and why a UDP source address is weaker evidence than a completed TCP connection.
+   check: four header fields; common ports
+
+1317 | networking/ports-and-services  [Standard, 4 sources]
+   says:  The three port ranges, the well-known ports a SOC analyst must recognise with IANA's official names, the IP protocol numbers, and the ports Wazuh itself uses.
+   check: Wazuh 1514/1515/55000; tcp 514 = shell
+
+1320 | networking/routing-basics  [Definition, 3 sources]
+   says:  How a router picks the next hop — longest matching prefix, default route, static routes — what TTL does at each hop, and what that means for reading source addresses and traceroute-like ICMP in alerts.
+   check: longest match example; worked rows are computed
+
+1321 | networking/routing-protocols-overview  [Definition, 5 sources]
+   says:  Interior versus exterior routing, what OSPF (link-state, IP protocol 89) and BGP (path-vector over TCP 179) do, their identifying numbers, and why unexpected OSPF or BGP traffic deserves a look.
+   check: OSPF 89, 224.0.0.5/6; BGP TCP 179
+
+1322 | networking/nat-and-pat  [Definition, 3 sources]
+   says:  What Basic NAT and NAPT (port address translation) change in a packet, why one public address can stand for many internal hosts, the UDP mapping-timeout rule, and how NAT hides the real source in alerts.
+   check: REQ-1, REQ-5 (2 minutes), REQ-9; 'PAT' = handbook name for NAPT
+
+1323 | networking/vlans-and-switching  [Definition, 2 sources]
+   says:  What an 802.1Q VLAN tag is, the EtherType values that mark a customer (C-Tag) or service (S-Tag) VLAN tag, and why a VLAN is a separate network segment when reading logs.
+   check: only 8100/88A8; IEEE values = open question (IEEE blocked)
+
+1324 | networking/dhcp  [Definition, 4 sources]
+   says:  How hosts get addresses — DHCP's DISCOVER/OFFER/REQUEST/ACK exchange on UDP 67/68, leases, the option numbers seen in logs, DHCPv6 on UDP 546/547 — and how DHCP logs map an IP back to a machine.
+   check: RFC 9915 replaces 8415; option numbers 3/6/12/50/51/53/54/61
+
+1325 | networking/dns  [Definition, 4 sources]
+   says:  How DNS works — names, records, recursive versus iterative resolution, UDP/TCP 53, response codes, reverse lookups — and what NIST SP 800-81r3 tells a SOC to log and watch for (tunnelling, exfiltration, protective DNS).
+   check: NIST SP 800-81r3 (replaces withdrawn 800-81-2); tunnelling signs
+
+1326 | networking/ntp-and-time-sync  [Definition, 3 sources]
+   says:  How NTP keeps clocks in step — UDP 123, strata, the 1900 epoch and the 2036 wrap — RFC 8633's best practices (four sources, block control queries), and why correct time is the base of every timeline in triage.
+   check: stratum table; RFC 8633 four sources; Mode 6 amplification
+
+1327 | networking/wireless-basics  [Definition, 1 sources]
+   says:  What NIST SP 800-153 says about WLAN risk — dual-connected devices, rogue access points, passive versus active attacks, WIDPS sensors — and what that means when a wireless alert reaches triage.
+   check: SP 800-153 (2012); 802.11 details = open question
+
+1330 | networking/http-https  [Definition, 4 sources]
+   says:  What an HTTP request and response contain — method, target, status code, Host, User-Agent and Referer headers — the default ports 80 and 443, and how to read web and proxy log lines in an alert.
+   check: method table; status codes from IANA
+
+1331 | networking/tls  [Definition, 4 sources]
+   says:  What TLS gives a connection (server authentication, confidentiality, integrity), what TLS 1.3 encrypts and what stays visible (the ClientHello and its SNI), which versions are deprecated, and the TLS alerts seen in logs.
+   check: RFC 9846 replaces 8446; DECISION: RFC 8996 vs NIST 800-52r2 on TLS 1.0/1.1
+
+1332 | networking/email-protocols  [Definition, 8 sources]
+   says:  How email moves (SMTP, submission, IMAP, POP3 and their ports), the difference between the SMTP envelope and the From header, Received trace lines, and how SPF, DKIM and DMARC results help judge a phishing alert.
+   check: RFC 9989 DMARC replaces 7489; SPF result table
+
+1333 | networking/remote-access-protocols  [Definition, 7 sources]
+   says:  What SSH (TCP 22), RDP (TCP/UDP 3389) and Telnet (TCP 23) are, what each protects, how RDP logons appear as logon type 10, and how to triage remote-access attempts.
+   check: RDP from Microsoft Learn; 4624 type 10
+
+1334 | networking/firewalls  [Definition, 2 sources]
+   says:  The firewall types in NIST SP 800-41r1 (packet filter, stateful inspection, application firewall, proxy gateway, WAF), deny-by-default, which addresses should never cross the perimeter, and what firewall logs tell an analyst.
+   check: SP 800-41r1 (2009); deny by default; perimeter block list
+
+1335 | networking/ids-ips  [Definition, 1 sources]
+   says:  What intrusion detection and prevention systems do (NIST SP 800-94), the four IDPS types, signature versus anomaly versus stateful protocol analysis, inline versus passive sensors, false positives and negatives, and the encrypted-traffic blind spot.
+   check: SP 800-94 (2007); encrypted-traffic limit
+
+1336 | networking/proxies  [Definition, 3 sources]
+   says:  What forward proxies, reverse proxies (gateways) and tunnels are in HTTP, why a proxy hides the real client address, and how to read the Forwarded, X-Forwarded-For and Via headers without trusting them blindly.
+   check: Forwarded cannot be relied on; X-Forwarded-For non-standard
+
+1337 | networking/vpn-and-ipsec  [Definition, 8 sources]
+   says:  How IPsec protects traffic — ESP (IP protocol 50), AH (51), transport versus tunnel mode, IKEv2 on UDP 500 and NAT traversal on 4500 — the VPN architectures in NIST SP 800-77r1, and what VPN logs give a SOC.
+   check: ESP 50 / AH 51; IKE 500/4500; SP 800-77r1 architectures
+
+1340 | networking/network-segmentation-and-zones  [Definition, 3 sources]
+   says:  Why networks are split into zones — the firewall DMZ, internal segments, microsegmentation — and the zero-trust idea that network location alone earns no trust, with what each means for judging lateral movement in an alert.
+   check: SP 800-207 / 800-215 statements
+
+1341 | networking/syslog  [Definition, 5 sources]
+   says:  How syslog messages are built (PRI = facility × 8 + severity, header fields), the facility and severity tables, UDP 514 and TLS 6514, its weaknesses, and how Wazuh receives syslog from devices without an agent.
+   check: PRI rule; table of other PRI values is computed
+
+1342 | networking/netflow-and-ipfix  [Definition, 4 sources]
+   says:  What a flow record is, how IPFIX (RFC 7011) and NetFlow v9 export flows from an exporter to a collector on port 4739, the information elements a flow carries, and what flow data can and cannot show in triage.
+   check: ports 4739/4740; IE numbers from IANA
+
+1343 | networking/packet-capture  [Definition, 3 sources]
+   says:  What packet sniffers and protocol analyzers do (promiscuous mode, filters, reassembly), when an analyst captures traffic, the legal and privacy rules NIST SP 800-86 sets, and how attackers use sniffing (MITRE T1040).
+   check: no PCAP file-format details (drafts only)
+
+1344 | networking/network-attacks  [Definition, 9 sources]
+   says:  The network attacks a SOC sees most — scanning (T1046), SYN floods, spoofing and ingress filtering, reflection amplification (T1498.002), ARP poisoning (T1557.002), DNS command and control (T1071.004) and exfiltration over other protocols (T1048) — and the log signs of each.
+   check: MITRE IDs fetched 2026-11-10 (T1046, T1498.002, T1557.002, T1071.004, T1048)
+
+1345 | networking/reading-network-logs-in-siem  [Procedure, 3 sources]
+   says:  A step-by-step way to read any network log line in the SIEM — check the timestamp, find the 5-tuple, classify the addresses, resolve NAT, DHCP and proxy layers to a real host, and correlate across log sources — built on NIST SP 800-92.
+   check: Procedure type; 8 steps link the other pages

@@ -2,8 +2,9 @@
 type: Definition
 title: "The TCP/IP model and encapsulation"
 description: The four layers of the Internet protocol suite — application, transport, internet, link — what each provides, and how data is wrapped layer by layer on the way out.
-status: draft
+status: stable
 order: 1302
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc1122
     title: "RFC 1122 — Requirements for Internet Hosts — Communication Layers"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** When an application sends data, each layer adds its own
@@ -62,9 +64,17 @@ the link layer. Knowing the layer tells you which device could have seen it.
 | Field seen | Layer | Page |
 |---|---|---|
 | `srcip`, `dstip`, TTL | Internet | [IPv4 addressing](ipv4-addressing.md) |
-| `srcport`, `dstport` | Transport | ports-and-services (batch N2) |
+| `srcport`, `dstport` | Transport | [ports and services](ports-and-services.md) |
 | MAC, EtherType | Link | [Ethernet and MAC](ethernet-and-mac-addresses.md) |
-| URL, query name | Application | later batches |
+| URL, query name | Application | [HTTP](http-https.md), [DNS](dns.md), [email](email-protocols.md) |
+
+## Related pages
+
+- [The OSI model](osi-model.md)
+- [IPv4 addressing and the IPv4 header](ipv4-addressing.md)
+- [TCP — Transmission Control Protocol](tcp.md)
+- [UDP — User Datagram Protocol](udp.md)
+- [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
 
 [^rfc1122]: IETF, "RFC 1122 — Requirements for Internet Hosts — Communication Layers", section 1.1.3. https://www.rfc-editor.org/rfc/rfc1122
 [^rfc1180]: IETF, "RFC 1180 — A TCP/IP Tutorial" (Informational). https://www.rfc-editor.org/rfc/rfc1180

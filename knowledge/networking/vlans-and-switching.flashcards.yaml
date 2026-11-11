@@ -1,0 +1,14 @@
+deck:
+  title: "VLANs and switching"
+  description: "Recall checks drawn only from the page VLANs and switching."
+cards:
+  - front: "What does the C-Tag carry?"
+    back: "Customer VLAN and priority information (formerly the Q-Tag, IEEE 802.1Q)."
+  - front: "Which EtherType marks a C-Tag?"
+    back: "0x8100."
+  - front: "Which EtherType marks an S-Tag?"
+    back: "0x88A8 (Service VLAN tag)."
+  - front: "Who assigns EtherTypes?"
+    back: "The IEEE Registration Authority — not IANA."
+  - front: "Why is the VLAN ID size not on the page?"
+    back: "IEEE 802.1Q could not be fetched; it stays an open question."

@@ -1,0 +1,58 @@
+quiz:
+  title: "VLANs and switching"
+  questionsPerRound: 6
+questions:
+  - question: "EtherType 0x8100 means …"
+    options:
+      - "Service VLAN tag (S-Tag)"
+      - "Customer VLAN tag (C-Tag)"
+      - "IPv6 payload"
+      - "ARP payload"
+    answer: 1
+    explanation: "IANA lists 8100 as Customer VLAN Tag Type (C-Tag, formerly Q-Tag)."
+    source: "Tags and EtherTypes"
+  - question: "EtherType 0x88A8 means …"
+    options:
+      - "Customer VLAN tag (C-Tag)"
+      - "IPv4 payload"
+      - "LLDP frame"
+      - "Service VLAN tag (S-Tag)"
+    answer: 3
+    explanation: "IANA lists 88A8 as IEEE Std 802.1Q Service VLAN tag identifier (S-Tag)."
+    source: "Tags and EtherTypes"
+  - question: "Which body assigns EtherTypes?"
+    options:
+      - "IEEE Registration Authority"
+      - "IANA"
+      - "IETF working groups"
+      - "Each switch vendor"
+    answer: 0
+    explanation: "RFC 9542: EtherTypes are assigned by the IEEE RA, not IANA."
+    source: "Tags and EtherTypes"
+  - question: "What was the C-Tag formerly called?"
+    options:
+      - "The S-Tag"
+      - "The MAC tag"
+      - "The Q-Tag"
+      - "The LLC tag"
+    answer: 2
+    explanation: "RFC 9542: the C-Tag (formerly the Q-Tag)."
+    source: "Tags and EtherTypes"
+  - question: "Can a device safely read past an unknown EtherType?"
+    options:
+      - "Yes, always"
+      - "No, not in general"
+      - "Only for IPv6"
+      - "Only on trunk ports"
+    answer: 1
+    explanation: "RFC 9542: a device cannot, in general, safely process past an EtherType it does not understand."
+    source: "Tags and EtherTypes"
+  - question: "What follows a VLAN tag in a frame?"
+    options:
+      - "Another tag, an EtherType or an LLC indicator"
+      - "Always the IP header"
+      - "A checksum only"
+      - "The destination MAC"
+    answer: 0
+    explanation: "A tag is followed by another tag, an EtherType or an LLC LSAP indicator."
+    source: "Tags and EtherTypes"

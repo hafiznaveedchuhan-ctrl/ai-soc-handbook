@@ -2,8 +2,9 @@
 type: Standard
 title: "TCP — Transmission Control Protocol"
 description: How TCP opens a connection with the three-way handshake, what each control flag means, the main connection states, and how SYN and RST patterns read in firewall and IDS logs.
-status: draft
+status: stable
 order: 1315
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc9293
     title: "RFC 9293 — Transmission Control Protocol (TCP)"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** TCP gives applications a reliable, ordered stream. A
@@ -63,7 +65,7 @@ All rows: [^rfc9293]
 |---|---|
 | SYN → SYN-ACK → ACK, then data | Connection established |
 | SYN answered by RST | Nothing accepting the connection on that port |
-| Many SYNs to many ports, few completed | Scan-like pattern (network-attacks, N5) |
+| Many SYNs to many ports, few completed | Scan-like pattern ([network attacks](network-attacks.md)) |
 | Many SYNs, no final ACK | Half-open connections — check for flooding |
 
 ## For the agent
@@ -75,6 +77,13 @@ All rows: [^rfc9293]
 | SYN only to a port | Connection attempt to that service |
 | RST from the target | No listener / connection refused |
 | ESTABLISHED | Connection succeeded |
+
+## Related pages
+
+- [UDP — User Datagram Protocol](udp.md)
+- [Ports and services](ports-and-services.md)
+- [Common network attacks](network-attacks.md)
+- [TLS — Transport Layer Security](tls.md)
 
 [^rfc9293]: IETF, "RFC 9293 — Transmission Control Protocol (TCP)". https://www.rfc-editor.org/rfc/rfc9293
 [^rfc1122]: IETF, "RFC 1122 — Requirements for Internet Hosts — Communication Layers", section 1.1.3. https://www.rfc-editor.org/rfc/rfc1122

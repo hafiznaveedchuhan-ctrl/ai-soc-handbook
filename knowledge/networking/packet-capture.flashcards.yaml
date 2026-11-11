@@ -1,0 +1,14 @@
+deck:
+  title: "Packet capture"
+  description: "Recall checks drawn only from the page Packet capture."
+cards:
+  - front: "What is promiscuous mode?"
+    back: "A NIC accepts all packets it sees, not only those meant for it."
+  - front: "What does a protocol analyzer add?"
+    back: "It reassembles streams and decodes protocols, live or from files."
+  - front: "What sensitive data can a capture contain?"
+    back: "Passwords and email contents."
+  - front: "What must an analyst do during incident capture?"
+    back: "Follow consistent processes and document every action."
+  - front: "Which MITRE technique is attacker sniffing?"
+    back: "T1040 Network Sniffing."

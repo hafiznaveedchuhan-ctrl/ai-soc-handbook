@@ -1,0 +1,58 @@
+quiz:
+  title: "Firewalls"
+  questionsPerRound: 6
+questions:
+  - question: "Which firewall makes two separate connections?"
+    options:
+      - "Packet filter"
+      - "Application-proxy gateway"
+      - "Stateful inspection"
+      - "Host-based firewall on the client"
+    answer: 1
+    explanation: "The proxy agent creates client↔proxy and proxy↔destination connections."
+    source: "Types"
+  - question: "Inbound traffic with an RFC 1918 source at the perimeter is …"
+    options:
+      - "normal internet traffic to allow"
+      - "always a VPN session"
+      - "traffic for the DMZ"
+      - "an invalid external source"
+    answer: 3
+    explanation: "SP 800-41r1: block invalid external sources, most commonly RFC 1918 ranges."
+    source: "Policy"
+  - question: "What sits in front of a web server to stop HTTP exploits?"
+    options:
+      - "Web application firewall"
+      - "Packet filter"
+      - "NAT router"
+      - "DHCP relay"
+    answer: 0
+    explanation: "Web application firewalls reside in front of the web server."
+    source: "Types"
+  - question: "Should 169.254.0.0/16 traffic cross the perimeter?"
+    options:
+      - "Yes, it is ordinary public address space"
+      - "Only outbound traffic"
+      - "No, link-local should be blocked"
+      - "Only for DNS queries"
+    answer: 2
+    explanation: "SP 800-41r1: traffic using link-local addresses should be blocked."
+    source: "Policy"
+  - question: "Which firewall checks e.g. a banned attachment type?"
+    options:
+      - "Packet filter"
+      - "Application firewall"
+      - "Stateful inspection only"
+      - "Router access list"
+    answer: 1
+    explanation: "Application firewalls analyse application-layer protocols."
+    source: "Types"
+  - question: "Allow line matching an alert means …"
+    options:
+      - "the traffic actually passed"
+      - "the traffic was blocked"
+      - "the firewall is offline"
+      - "the log is a duplicate"
+    answer: 0
+    explanation: "An allow line shows the traffic passed — higher priority than a deny."
+    source: "For the agent"

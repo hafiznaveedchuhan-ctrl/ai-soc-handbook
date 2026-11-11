@@ -1,0 +1,14 @@
+deck:
+  title: "Syslog"
+  description: "Recall checks drawn only from the page Syslog."
+cards:
+  - front: "How is PRI calculated?"
+    back: "Facility × 8 + severity."
+  - front: "What does severity 0 mean?"
+    back: "Emergency: system is unusable."
+  - front: "Which UDP port must syslog receivers accept?"
+    back: "514."
+  - front: "Default port for syslog over TLS?"
+    back: "TCP 6514."
+  - front: "What must a Wazuh syslog <remote> block list?"
+    back: "At least one allowed IP in <allowed-ips>."

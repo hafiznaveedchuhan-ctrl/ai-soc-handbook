@@ -1,0 +1,14 @@
+deck:
+  title: "Reading network logs in the SIEM"
+  description: "Recall checks drawn only from the page Reading network logs in the SIEM."
+cards:
+  - front: "What is the first step for any network log?"
+    back: "Check the time — are the clocks in sync?"
+  - front: "What is the 5-tuple?"
+    back: "Source IP, source port, destination IP, destination port, protocol."
+  - front: "What is log normalisation?"
+    back: "Converting each field to one representation, often one time format."
+  - front: "What is event correlation?"
+    back: "Finding relationships between log entries, most often by rules."
+  - front: "Which layers hide the real host?"
+    back: "NAT/PAT, DHCP leases and proxies."

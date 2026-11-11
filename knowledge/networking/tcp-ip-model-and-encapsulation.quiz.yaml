@@ -1,0 +1,58 @@
+quiz:
+  title: "The TCP/IP model and encapsulation"
+  questionsPerRound: 6
+questions:
+  - question: "Which header adds the ports?"
+    options:
+      - "Internet (IP)"
+      - "Transport (TCP / UDP)"
+      - "Link (Ethernet)"
+      - "Application"
+    answer: 1
+    explanation: "Transport header adds ports; IP adds addresses; Ethernet adds MACs."
+    source: "Encapsulation"
+  - question: "ICMP and IGMP sit in which layer?"
+    options:
+      - "Transport"
+      - "Link"
+      - "Application"
+      - "Internet"
+    answer: 3
+    explanation: "RFC 1122 lists IP, ICMP and IGMP in the internet layer."
+    source: "The four layers"
+  - question: "Which layer gives end-to-end communication?"
+    options:
+      - "Transport"
+      - "Internet"
+      - "Link"
+      - "Physical"
+    answer: 0
+    explanation: "Transport provides end-to-end communication for applications."
+    source: "The four layers"
+  - question: "The receiver removes headers in …"
+    options:
+      - "random order"
+      - "the same order"
+      - "reverse order"
+      - "one single step"
+    answer: 2
+    explanation: "The receiver removes each header in reverse order."
+    source: "Encapsulation"
+  - question: "A proxy or DNS log is mostly which layer?"
+    options:
+      - "Link"
+      - "Application"
+      - "Internet"
+      - "Transport"
+    answer: 1
+    explanation: "A proxy or DNS log is the application layer."
+    source: "Why a SOC analyst cares"
+  - question: "What does the IP header add?"
+    options:
+      - "Addresses, TTL and protocol"
+      - "Ports and sequence numbers"
+      - "MAC addresses and EtherType"
+      - "URLs and user agents"
+    answer: 0
+    explanation: "Internet header adds IP addresses, TTL, protocol."
+    source: "Encapsulation"

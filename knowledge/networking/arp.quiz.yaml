@@ -1,0 +1,58 @@
+quiz:
+  title: "ARP — Address Resolution Protocol"
+  questionsPerRound: 6
+questions:
+  - question: "ARP op code 2 is …"
+    options:
+      - "REQUEST"
+      - "REPLY"
+      - "Gratuitous"
+      - "Probe"
+    answer: 1
+    explanation: "RFC 826: REQUEST = 1, REPLY = 2."
+    source: "How ARP works"
+  - question: "ARP hardware type for Ethernet is …"
+    options:
+      - "2"
+      - "6"
+      - "0806"
+      - "1"
+    answer: 3
+    explanation: "RFC 826: hardware type Ethernet = 1."
+    source: "How ARP works"
+  - question: "What is unknown in an ARP request?"
+    options:
+      - "The target hardware address"
+      - "The sender IP address"
+      - "The sender MAC address"
+      - "The EtherType"
+    answer: 0
+    explanation: "The requester is trying to learn the target hardware address."
+    source: "How ARP works"
+  - question: "Is ARP a local-network protocol?"
+    options:
+      - "No, it crosses the internet"
+      - "Only on IPv6 networks"
+      - "Yes, it is broadcast locally"
+      - "Only through routers"
+    answer: 2
+    explanation: "The request is broadcast to stations on the local Ethernet."
+    source: "Why a SOC analyst cares"
+  - question: "A broadcast MAC has its M bit set to …"
+    options:
+      - "0"
+      - "1"
+      - "either value"
+      - "no M bit"
+    answer: 1
+    explanation: "A broadcast is a groupcast MAC address — M bit 1."
+    source: "How ARP works"
+  - question: "IP → MAC mapping changes for no reason. Do …"
+    options:
+      - "flag it; identify both MACs"
+      - "ignore it as normal"
+      - "block port 0806"
+      - "reboot the router"
+    answer: 0
+    explanation: "For the agent: possible ARP poisoning — flag, identify both MACs."
+    source: "For the agent"

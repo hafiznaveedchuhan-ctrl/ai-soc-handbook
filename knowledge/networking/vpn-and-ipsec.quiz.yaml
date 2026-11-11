@@ -1,0 +1,58 @@
+quiz:
+  title: "VPNs and IPsec"
+  questionsPerRound: 6
+questions:
+  - question: "What does UDP 4500 carry?"
+    options:
+      - "IKE messages only, carried over IPv6 links"
+      - "ESP inside UDP to cross NAT"
+      - "Syslog over TLS"
+      - "RDP over UDP"
+    answer: 1
+    explanation: "RFC 3948: encapsulating ESP in UDP to traverse NATs; port 4500."
+    source: "IPsec parts"
+  - question: "Which IPsec part gives confidentiality?"
+    options:
+      - "AH"
+      - "IKE"
+      - "GRE"
+      - "ESP"
+    answer: 3
+    explanation: "ESP provides confidentiality, data origin authentication, integrity, anti-replay."
+    source: "IPsec parts"
+  - question: "Which VPN architecture serves travelling staff?"
+    options:
+      - "Remote access (host-to-gateway)"
+      - "Gateway-to-gateway"
+      - "Host-to-host"
+      - "Mesh"
+    answer: 0
+    explanation: "SP 800-77r1: remote access connects individual hosts to an organisation network."
+    source: "VPN architectures (NIST SP 800-77r1)"
+  - question: "What does IKEv2 perform between two parties?"
+    options:
+      - "Address assignment by DHCP"
+      - "Packet capture of the whole tunnel traffic"
+      - "Mutual authentication and SA setup"
+      - "DNS lookups for the peer"
+    answer: 2
+    explanation: "RFC 7296: IKE performs mutual authentication and establishes SAs."
+    source: "IPsec parts"
+  - question: "Gateway-to-gateway VPNs protect …"
+    options:
+      - "one laptop and one server inside the office"
+      - "two networks, e.g. office and branch"
+      - "many hosts in a mesh"
+      - "only web traffic"
+    answer: 1
+    explanation: "SP 800-77r1: communications between two specific networks."
+    source: "VPN architectures (NIST SP 800-77r1)"
+  - question: "Why is a network IDS silent on VPN traffic?"
+    options:
+      - "The traffic is encrypted"
+      - "VPNs never carry attacks"
+      - "IKE disables the IDS"
+      - "ESP traffic is dropped"
+    answer: 0
+    explanation: "Network IDPSs cannot detect attacks within encrypted traffic, including VPNs."
+    source: "For the agent"

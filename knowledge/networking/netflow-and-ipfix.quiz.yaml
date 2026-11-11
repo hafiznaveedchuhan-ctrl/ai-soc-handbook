@@ -1,0 +1,58 @@
+quiz:
+  title: "NetFlow and IPFIX"
+  questionsPerRound: 6
+questions:
+  - question: "Element 8 is …"
+    options:
+      - "destinationIPv4Address"
+      - "sourceIPv4Address"
+      - "sourceTransportPort"
+      - "protocolIdentifier"
+    answer: 1
+    explanation: "IANA IPFIX: 8 sourceIPv4Address, 12 destinationIPv4Address."
+    source: "Information elements seen in flow logs"
+  - question: "Element 1 counts …"
+    options:
+      - "packets"
+      - "flows"
+      - "seconds"
+      - "octets (bytes)"
+    answer: 3
+    explanation: "1 octetDeltaCount, 2 packetDeltaCount."
+    source: "Information elements seen in flow logs"
+  - question: "IPFIX secure connections use port …"
+    options:
+      - "4740"
+      - "4739"
+      - "514"
+      - "6514"
+    answer: 0
+    explanation: "RFC 7011: secure connections on SCTP, TCP and/or UDP port 4740."
+    source: "Flows"
+  - question: "Who defined NetFlow version 9?"
+    options:
+      - "IANA"
+      - "NIST SP 800-92"
+      - "Cisco (RFC 3954)"
+      - "The IEEE"
+    answer: 2
+    explanation: "RFC 3954 specifies Cisco Systems' NetFlow v9 export format."
+    source: "Flows"
+  - question: "What can flows NOT show?"
+    options:
+      - "Who talked to whom"
+      - "What was said in the traffic"
+      - "How many bytes moved"
+      - "When the talk started"
+    answer: 1
+    explanation: "Flows carry header fields and counts, not payload."
+    source: "Why a SOC analyst cares"
+  - question: "One source, many destination ports in flows suggests …"
+    options:
+      - "a scan"
+      - "a DNS lookup"
+      - "a normal web visit"
+      - "an NTP sync"
+    answer: 0
+    explanation: "Many ports from one source is the scan pattern."
+    source: "For the agent"

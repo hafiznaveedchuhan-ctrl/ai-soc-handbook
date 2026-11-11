@@ -2,8 +2,9 @@
 type: Definition
 title: "Ethernet and MAC addresses"
 description: How a 48-bit MAC address is built — vendor prefix, unicast versus multicast bit, global versus local bit — and the EtherType values that say what an Ethernet frame carries.
-status: draft
+status: stable
 order: 1304
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc9542
     title: "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** Every network card has a 48-bit MAC address, written
@@ -73,8 +75,8 @@ All rows: [^iana-802]
 - A MAC with the X (local) bit set was assigned by the local network operator,
   not under an IEEE vendor prefix, so its first octets do not name a
   vendor.[^rfc9542]
-- How MAC and [ARP](arp.md) misuse appears in logs is covered in
-  network-attacks (batch N5).
+- ARP cache poisoning (MITRE T1557.002) is covered in
+  [network attacks](network-attacks.md).
 
 ## For the agent
 
@@ -85,6 +87,12 @@ All rows: [^iana-802]
 | X bit = 1 | Locally assigned — prefix does not name a vendor |
 | EtherType 0806 | ARP frame |
 | EtherType 8100 | VLAN-tagged frame |
+
+## Related pages
+
+- [ARP — Address Resolution Protocol](arp.md)
+- [VLANs and switching](vlans-and-switching.md)
+- [The OSI model](osi-model.md)
 
 [^rfc9542]: IETF, "RFC 9542 — IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters", April 2024. https://www.rfc-editor.org/rfc/rfc9542
 [^iana-802]: IANA, "IEEE 802 Numbers" registry (EtherTypes). https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml

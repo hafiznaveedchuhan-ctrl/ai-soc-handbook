@@ -1,0 +1,58 @@
+quiz:
+  title: "Ethernet and MAC addresses"
+  questionsPerRound: 6
+questions:
+  - question: "EtherType 86DD carries …"
+    options:
+      - "IPv4"
+      - "IPv6"
+      - "ARP"
+      - "a VLAN tag"
+    answer: 1
+    explanation: "IANA: 0800 IPv4, 0806 ARP, 86DD IPv6."
+    source: "EtherType: what the frame carries"
+  - question: "How long is an MA-L (classic OUI) prefix?"
+    options:
+      - "28 bits"
+      - "36 bits"
+      - "48 bits"
+      - "24 bits"
+    answer: 3
+    explanation: "MA-L 24 bits, MA-M 28, MA-S 36."
+    source: "The 48-bit MAC address"
+  - question: "What is the IANA OUI?"
+    options:
+      - "00-00-5E"
+      - "00-50-56"
+      - "01-00-5E"
+      - "FF-FF-FF"
+    answer: 0
+    explanation: "RFC 9542: the IANA OUI is 00-00-5E."
+    source: "The special bits in the first octet"
+  - question: "EtherType 0800 carries …"
+    options:
+      - "IPv6"
+      - "ARP"
+      - "IPv4"
+      - "an S-Tag"
+    answer: 2
+    explanation: "0800 is Internet Protocol version 4."
+    source: "EtherType: what the frame carries"
+  - question: "Bits left to the owner of an MA-S prefix?"
+    options:
+      - "24"
+      - "12"
+      - "20"
+      - "36"
+    answer: 1
+    explanation: "MA-S is 36 bits, leaving 12 to the owner."
+    source: "The 48-bit MAC address"
+  - question: "A MAC with X bit 0 has a vendor prefix in …"
+    options:
+      - "the first 24 bits"
+      - "the last 24 bits"
+      - "the EtherType field"
+      - "the M bit only"
+    answer: 0
+    explanation: "For the agent: first 24 bits = vendor prefix (MA-L) if X is 0."
+    source: "For the agent"

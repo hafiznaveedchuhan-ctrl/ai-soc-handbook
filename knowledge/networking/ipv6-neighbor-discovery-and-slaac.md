@@ -2,8 +2,9 @@
 type: Definition
 title: "IPv6 Neighbor Discovery and SLAAC"
 description: How IPv6 hosts find routers and neighbours with the five Neighbor Discovery messages (ICMPv6 133–137) and configure their own addresses with SLAAC — the IPv6 counterpart of ARP.
-status: draft
+status: stable
 order: 1313
+generated: { by: "claude-opus/5.5", at: 2026-11-10T15:47:41Z }
 sources:
   - id: rfc4861
     title: "RFC 4861 — Neighbor Discovery for IP version 6 (IPv6)"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
 ---
 > [!NOTE]
 > **In plain words.** IPv6 has no ARP and no broadcast. Hosts send small
@@ -49,7 +51,8 @@ role.[^rfc4291]
 ## Why a SOC analyst cares
 
 - Neighbor Solicitation and Advertisement do for IPv6 what [ARP](arp.md) does
-  for IPv4; how their misuse appears in logs is covered in network-attacks (N5).
+  for IPv4. Misuse of Neighbor Discovery is not yet covered by a source in this
+  record (open question); ARP misuse is in [network attacks](network-attacks.md).
 - An IDS alert about an unexpected Router Advertisement points to the sending
   device — identify it.
 
@@ -60,6 +63,12 @@ role.[^rfc4291]
 | 133 / 134 | Router discovery |
 | 135 / 136 | Neighbour (link-layer address) discovery — the IPv6 counterpart of ARP |
 | 137 | Redirect — check the sending router |
+
+## Related pages
+
+- [ARP — Address Resolution Protocol](arp.md)
+- [ICMP and ICMPv6](icmp-and-icmpv6.md)
+- [DHCP and DHCPv6](dhcp.md)
 
 [^rfc4861]: IETF, "RFC 4861 — Neighbor Discovery for IP version 6 (IPv6)". https://www.rfc-editor.org/rfc/rfc4861
 [^rfc4862]: IETF, "RFC 4862 — IPv6 Stateless Address Autoconfiguration". https://www.rfc-editor.org/rfc/rfc4862

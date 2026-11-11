@@ -1,0 +1,58 @@
+quiz:
+  title: "Common network attacks"
+  questionsPerRound: 6
+questions:
+  - question: "Which protocols does MITRE name for amplification?"
+    options:
+      - "SSH, RDP, Telnet"
+      - "DNS, NTP, Memcached"
+      - "SMTP, IMAP, POP3"
+      - "OSPF, BGP, RIP"
+    answer: 1
+    explanation: "T1498.002 detection: outbound spoofed traffic to DNS, NTP, Memcached."
+    source: "Reflection amplification — T1498.002"
+  - question: "Hiding C2 inside DNS is …"
+    options:
+      - "T1046"
+      - "T1048"
+      - "T1557.002"
+      - "T1071.004"
+    answer: 3
+    explanation: "T1071.004: Application Layer Protocol: DNS."
+    source: "DNS C2 and exfiltration — T1071.004, T1048"
+  - question: "Exfiltration over a different protocol from C2 is …"
+    options:
+      - "T1048"
+      - "T1040"
+      - "T1071.004"
+      - "T1498.002"
+    answer: 0
+    explanation: "T1048: Exfiltration Over Alternative Protocol."
+    source: "DNS C2 and exfiltration — T1071.004, T1048"
+  - question: "For ARP poisoning to work, the fake reply must be …"
+    options:
+      - "sent on TCP port 53"
+      - "signed with a key"
+      - "faster than the real owner's"
+      - "sent to a DNS server"
+    answer: 2
+    explanation: "MITRE T1557.002: the reply must be faster than the legitimate owner's."
+    source: "ARP cache poisoning — T1557.002"
+  - question: "Many SYNs with few completed handshakes suggests …"
+    options:
+      - "a DNS tunnel"
+      - "a SYN flood"
+      - "normal web traffic"
+      - "an NTP sync"
+    answer: 1
+    explanation: "SYN flood leaves half-open connections."
+    source: "For the agent"
+  - question: "DoS attacks often use …"
+    options:
+      - "forged source addresses"
+      - "valid TLS certificates"
+      - "DHCP option 61"
+      - "IPFIX templates"
+    answer: 0
+    explanation: "RFC 2827: DoS attacks have employed forged source addresses."
+    source: "Floods and spoofing"

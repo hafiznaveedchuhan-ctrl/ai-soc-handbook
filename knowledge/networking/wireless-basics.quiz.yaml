@@ -1,0 +1,58 @@
+quiz:
+  title: "Wireless (WLAN) basics for the SOC"
+  questionsPerRound: 6
+questions:
+  - question: "Eavesdropping is which kind of attack?"
+    options:
+      - "Active"
+      - "Passive"
+      - "Rogue AP"
+      - "Denial of service"
+    answer: 1
+    explanation: "Passive attacks only monitor: eavesdropping and traffic analysis."
+    source: "Attack types"
+  - question: "Which is an active WLAN attack?"
+    options:
+      - "Eavesdropping"
+      - "Traffic analysis"
+      - "Passive listening"
+      - "Replay"
+    answer: 3
+    explanation: "Active attacks: masquerading, replay, message modification, DoS, misappropriation."
+    source: "Attack types"
+  - question: "Why does WLAN monitoring focus on active attacks?"
+    options:
+      - "Passive attacks transmit nothing to detect"
+      - "Active attacks are always sent encrypted on air"
+      - "Passive attacks are illegal"
+      - "Sensors only see wired traffic"
+    answer: 0
+    explanation: "Passive attacks generate no transmissions, so there is nothing to monitor electronically."
+    source: "Attack types"
+  - question: "What can a rogue AP give an attacker?"
+    options:
+      - "A new public IP range"
+      - "A faster wired uplink"
+      - "A backdoor around perimeter firewalls"
+      - "An extra DHCP scope"
+    answer: 2
+    explanation: "SP 800-153: a rogue AP can be a backdoor into the wired network, bypassing firewalls."
+    source: "Attack types"
+  - question: "How should guest and internal WLANs be set up?"
+    options:
+      - "Joined into one single flat network for all"
+      - "Logically separated from each other"
+      - "Given the same password"
+      - "Bridged to the server VLAN"
+    answer: 1
+    explanation: "Guests and internal users should be on logically separated WLANs."
+    source: "Why WLANs need extra care"
+  - question: "Where can WIDPS sensors be found?"
+    options:
+      - "Dedicated, or bundled into APs and switches"
+      - "Only inside the client laptops of each user"
+      - "Only in the core router"
+      - "Only in the cloud"
+    answer: 0
+    explanation: "WIDPS sensors can be dedicated or bundled into APs and wireless switches."
+    source: "Monitoring"
