@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "build_id": "sha256:07371a989aa74387afbfec23dad155ce7c55fef094b0d0951f3e5bc0dc213334",
+  "build_id": "sha256:11bd10417e3ea02af7ffcff157a68cc6dbaa068301cce583afd5a895d09ebe70",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
@@ -8,8 +8,8 @@
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
   "source_commit": "e2029d1b1d5f0c1a5a2584de0509d41f486d998a",
-  "dirty": false,
-  "as_of": "2026-11-11T10:44:00.237Z",
+  "dirty": true,
+  "as_of": "2026-11-11T11:11:03.202Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -970,6 +970,69 @@
       "admitted": [
         "public"
       ]
+    },
+    {
+      "path": "soc-fundamentals/active-directory-basics.md",
+      "sha256": "d311555e7cc25b233d8bb81d6062289ebd4ab9f7adc317c0a7eabdfa1c99f0f7",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/common-attacks.md",
+      "sha256": "c6e9c613143af8951843de2d8c07c88c73abe39065400189031c73223b822e3b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/email-authentication-spf-dkim-dmarc.md",
+      "sha256": "a016eebccb4f397829c6ca1ff208e914b6955c02fbadbb60e00b06da01eb88eb",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/incident-response-lifecycle.md",
+      "sha256": "d2aa3bfec0f1747b2d398de2d89a3324eb88d4d999eac6a8ac332fc15983ab16",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/iocs-and-threat-intel.md",
+      "sha256": "1a2813a29901d559ea6ad0c7535abff68aaea94a1e9a787db24b2cbddbf3f00a",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/phishing-email-analysis.md",
+      "sha256": "b495545b45798404dc7e5c309c8101daa5e4fbd372472b52bbbb8ee536be5931",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
+    },
+    {
+      "path": "soc-fundamentals/security-controls-and-log-sources.md",
+      "sha256": "a4f0fb389e28d07ec6e281df4f0ae98c8d592dd541d5a9c9963514151cf2281b",
+      "status": "draft",
+      "audience": [
+        "public"
+      ],
+      "admitted": []
     },
     {
       "path": "sysmon/event-1-process-create.md",
@@ -2376,7 +2439,7 @@
     },
     {
       "path": "index.md",
-      "sha256": "d5602db4252d1762d4888d21aa9ffad12aa2b9f87a509a9ed7dd17182dd0a194"
+      "sha256": "fc626cd2af211e8447f477ef2212f6fc68871420600c31b1a704364221d95840"
     },
     {
       "path": "linux-auth/index.md",
@@ -2405,6 +2468,10 @@
     {
       "path": "sla/index.md",
       "sha256": "8f2d8d64082f6bf83dc75019edca2fc050d45725be7992a1421ad5abee62d65c"
+    },
+    {
+      "path": "soc-fundamentals/index.md",
+      "sha256": "857cc0c2936cb66c7bd625bd5fe7071876bf43234d4ca2b53cae294dd4483d16"
     },
     {
       "path": "sysmon/index.md",

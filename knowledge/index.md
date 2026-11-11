@@ -17,3 +17,4 @@ okf_version: "0.2"
 * [False positives](false-positives/)
 * [Sla](sla/)
 * [Networking](networking/)
+* [Soc fundamentals](soc-fundamentals/)
