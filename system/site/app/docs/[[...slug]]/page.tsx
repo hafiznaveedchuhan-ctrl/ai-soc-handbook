@@ -29,8 +29,7 @@ import { stagePageOf } from "@/lib/stage-manifest";
 import { RecordBreadcrumb } from "@/components/record-breadcrumb";
 import { RecordToc, TocItems } from "@/components/record-toc";
 import { RecordViews } from "@/components/record-views";
-import { Flashcards } from "@/components/flashcards";
-import { Quiz } from "@/components/quiz";
+import { LazyFlashcards, LazyQuiz } from "@/components/lazy-study-aids";
 import { Slides } from "@/components/slides";
 import { StudyAids } from "@/components/study-aids";
 import { deckFor, quizFor, slidesFor, summaryFor } from "@/lib/attachments";
@@ -211,8 +210,8 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
         {/* What a reader DOES with this document once they have read it.
           Renders nothing at all when the document has no study aids. */}
         <StudyAids>
-          {deck === null ? null : <Flashcards deck={deck} />}
-          {quiz === null ? null : <Quiz quiz={quiz} />}
+          {deck === null ? null : <LazyFlashcards deck={deck} />}
+          {quiz === null ? null : <LazyQuiz quiz={quiz} />}
         </StudyAids>
         {showGovernance ? <Provenance entries={governance.sources} /> : null}
       </DocsPage>
