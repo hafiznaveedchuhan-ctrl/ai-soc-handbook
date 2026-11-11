@@ -2,8 +2,9 @@
 type: Definition
 title: "Common attacks and the ATT&CK tactics"
 description: "The fifteen MITRE ATT&CK enterprise tactics in plain words, and the common attack types an L1 analyst meets — phishing, brute force, exploited public-facing apps, ransomware, denial of service, adversary-in-the-middle, supply chain and credential dumping."
-status: draft
+status: stable
 order: 1400
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: mitre-tactics
     title: "MITRE ATT&CK — Enterprise tactics"
@@ -35,6 +36,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** A *tactic* is the attacker's goal at a moment — get in,

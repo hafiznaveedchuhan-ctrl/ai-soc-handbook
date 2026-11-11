@@ -2,8 +2,9 @@
 type: Standard
 title: "Incident response lifecycle (NIST SP 800-61r3)"
 description: "How NIST SP 800-61 Rev. 3 frames incident response around the six CSF 2.0 Functions, how that maps to the older four-phase lifecycle, and where an L1 triage analyst sits in it."
-status: draft
+status: stable
 order: 1403
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: nist-sp800-61r3
     title: NIST SP 800-61 Rev. 3 (April 2025)
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** An *event* is anything that happens; an *incident* is an

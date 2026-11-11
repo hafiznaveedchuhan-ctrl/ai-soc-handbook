@@ -2,8 +2,9 @@
 type: Definition
 title: "Security controls and log sources"
 description: "What a security control is, and which systems produce the logs a SOC reads — security software, operating systems and applications — following NIST SP 800-92."
-status: draft
+status: stable
 order: 1404
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: nist-glossary-control
     title: "NIST CSRC Glossary — security control"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** A control is anything put in place to protect systems.

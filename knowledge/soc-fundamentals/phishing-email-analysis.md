@@ -2,8 +2,9 @@
 type: Procedure
 title: "Phishing e-mail analysis"
 description: "How an L1 analyst reads a reported e-mail — From, Sender, Reply-To, Return-Path, Received and Authentication-Results — what the attachment and link variants of phishing look like, and the social-engineering signs NCSC lists."
-status: draft
+status: stable
 order: 1401
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: rfc5322
     title: "IETF — RFC 5322: Internet Message Format"
@@ -29,6 +30,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** The name and address you *see* in an e-mail are just

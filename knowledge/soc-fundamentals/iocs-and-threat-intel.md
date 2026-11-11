@@ -2,8 +2,9 @@
 type: Definition
 title: "IOCs and threat intelligence"
 description: "What indicators of compromise, TTPs, security alerts, threat intelligence reports and tool configurations are, following NIST SP 800-150, and how an L1 analyst uses them."
-status: draft
+status: stable
 order: 1405
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: nist-sp800-150
     title: NIST SP 800-150 — Guide to Cyber Threat Information Sharing
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** An IOC is a clue left behind — an IP, a domain, a file

@@ -2,8 +2,9 @@
 type: Definition
 title: "Active Directory basics"
 description: "What Active Directory Domain Services stores, what domain controllers do, how Kerberos and NTLM authenticate users, and which admin groups matter most to a SOC analyst."
-status: draft
+status: stable
 order: 1406
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: ms-adds
     title: "Microsoft Learn — Active Directory Domain Services overview"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** Active Directory is the central phone book and gatekeeper

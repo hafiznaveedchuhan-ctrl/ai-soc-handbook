@@ -2,8 +2,9 @@
 type: Standard
 title: "E-mail authentication: SPF, DKIM and DMARC"
 description: "What each SPF result means, how a DKIM signature names its domain and key, how DMARC alignment and policy work under RFC 9989 (which replaced RFC 7489 in May 2026), and how to read them in Authentication-Results."
-status: draft
+status: stable
 order: 1402
+generated: { by: "claude-opus/5.5", at: 2026-11-11T11:11:10Z }
 sources:
   - id: rfc7208
     title: "IETF — RFC 7208: Sender Policy Framework (SPF)"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T11:21:41Z }
 ---
 > [!NOTE]
 > **In plain words.** SPF asks "was this server allowed to send for that
