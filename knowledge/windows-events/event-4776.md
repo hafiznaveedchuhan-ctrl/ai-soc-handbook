@@ -4,7 +4,7 @@ title: "Event 4776: The computer attempted to validate the credentials for an ac
 description: "Windows Security event 4776 — an NTLM credential validation; logged on the computer authoritative for the account; the error codes that mean bad password, bad username, locked, disabled or expired."
 status: stable
 order: 386
-generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4776
     title: "Microsoft Learn — 4776(S, F): The computer attempted to validate the credentials for an account"
@@ -12,7 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** A computer checked a username and password using NTLM. The error code tells you why it failed.
@@ -26,7 +26,7 @@ ksor:
 
 High-value accounts: you might need to monitor each action.[^ms-4776]
 
-Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC0000064 the username does not exist; 0xC0000234 account locked; 0xC0000072 account disabled by administrator; 0xC0000193 expired account.[^ms-4776]
+Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC0000064 the username does not exist; 0xC0000234 account locked; 0xC0000072 account disabled by administrator; 0xC0000193 expired account; 0xC0000071 expired password; 0xC0000224 "Change Password at Next Logon" flagged.[^ms-4776]
 
 ## For the agent
 
@@ -37,6 +37,8 @@ Error codes from Microsoft's table: 0xC000006A misspelled or bad password; 0xC00
 | 0xC0000234 | Account locked |
 | 0xC0000072 | Account disabled by administrator |
 | 0xC0000193 | Account expired |
+| 0xC0000071 | Expired password — usually a support case ([expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)) |
+| 0xC0000224 | Must change password at next logon |
 | Many failures, one source | See [brute-force playbook](../playbooks/brute-force.md) |
 
 ## Related pages

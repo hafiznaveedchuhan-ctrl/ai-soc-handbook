@@ -4,7 +4,7 @@ title: "Playbook: brute-force logon attempts"
 description: L1 steps for a burst of failed Windows logons — confirm the pattern, collect counts and sources, enrich the source IP, decide guessing vs spraying vs benign, and escalate on success or privileged targets.
 status: stable
 order: 800
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:27:01Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -33,7 +33,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone is trying many passwords. Your job is to find
@@ -149,6 +149,12 @@ These limits come from the handbook's [invariants](../rules-map/invariants.md).[
 | Enrich | Private IP → internal host; public → AbuseIPDB band | Band + reports |
 | Escalate | Success ≤ 60 min (4), privileged target (2), level ≥ 12 (1) | Condition number or "no" |
 | Note | Template + writing rules | Draft note; final decision: human analyst |
+
+## Related pages
+
+- [SSH failed password](../linux-auth/ssh-failed-password.md)
+- [Playbook: account lockout storm](account-lockout-storm.md)
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
 
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1: escalation conditions, severity, masking, verdicts, note template).
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), CSF elements RS.MA-02, RS.MA-03, RS.AN-03, DE.AE-08. https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf

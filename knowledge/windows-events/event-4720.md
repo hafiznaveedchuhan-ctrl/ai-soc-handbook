@@ -4,7 +4,7 @@ title: "Event 4720: A user account was created"
 description: Windows Security event 4720 — a new user account was created; who created it, the new account's attributes, the values Microsoft says are anomalies, and the Wazuh rule that alerts on it.
 status: stable
 order: 370
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4720
     title: "Microsoft Learn — 4720(S): A user account was created"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -137,6 +137,13 @@ reference](../wazuh/windows-rules-reference.md).
 | `UserAccountControl` flags | Defaults | Don't Expire Password, Trusted For Delegation, Don't Require Preauth, Server Trust Account | Flag |
 | Follow-up 4732 | None or expected group | Added to Administrators | Open added-to-admin-group playbook |
 | Wazuh `rule.id` | 60109 (level 8) | — | Triage per above |
+
+## Related pages
+
+- [Event 4722: A user account was enabled](event-4722.md)
+- [Event 4726: A user account was deleted](event-4726.md)
+- [Event 4738: A user account was changed](event-4738.md)
+- [New Linux user or group (useradd, gpasswd)](../linux-auth/new-user-useradd.md)
 
 [^ms-4720]: Microsoft Learn, "4720(S): A user account was created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4720
 [^ms-audit-user-account-management]: Microsoft Learn, "Audit User Account Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-user-account-management

@@ -4,7 +4,7 @@ title: "Event 4625: An account failed to log on"
 description: Windows Security event 4625 — what a failed logon record means, its key fields, Logon Types and the Status / Sub Status codes Microsoft says to monitor, and how to read a run of failures.
 status: stable
 order: 330
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4625
     title: "Microsoft Learn — 4625(F): An account failed to log on"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -177,6 +177,13 @@ reference](../wazuh/windows-rules-reference.md).
 | `LogonType` | Fits the account | Type 4/5 by an admin account | Flag |
 | `ProcessName` | Standard system path | Non-standard folder; restricted words | Flag |
 | Following 4624 | None | Success after failures, same account | Open success-after-failures playbook |
+
+## Related pages
+
+- [Event 4771: Kerberos pre-authentication failed](event-4771.md)
+- [Event 4776: The computer attempted to validate the credentials for an account](event-4776.md)
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
+- [Playbook: account lockout storm](../playbooks/account-lockout-storm.md)
 
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon

@@ -55,4 +55,7 @@ if "--apply" in sys.argv:
     apply_edits()
     touched = [l for l in git("diff", "--name-only").splitlines() if l.startswith("knowledge/")]
     git("add", *touched); git("commit", "-q", "-m", "Stable-page polish + Wave 2 reverse links (text), approved by human:naveed\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
-    restamp(touched, at); print("restamped", len(touched))
+    if at == "now":
+        import time; time.sleep(1)
+        at = subprocess.run(["date", "-u", "+%Y-%m-%dT%H:%M:%SZ"], capture_output=True, text=True).stdout.strip()
+    restamp(touched, at); print("restamped", len(touched), "at", at)

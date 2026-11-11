@@ -4,7 +4,7 @@ title: "Event 4688: A new process has been created"
 description: Windows Security event 4688 — a process started; its creator and target accounts, process names, command line, token elevation type and integrity label, and the patterns that make a process worth checking.
 status: stable
 order: 360
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4688
     title: "Microsoft Learn — 4688(S): A new process has been created"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -143,6 +143,11 @@ start.
 | `MandatoryLabel` | Medium for user programs | High or System for an unexpected user program | Flag |
 | `SubjectUserName` / `TargetUserName` | Expected domain accounts | Local, never-used or high-value account | Check the 4624 for that logon |
 | Wazuh `rule.id` | 67027 | — | Triage per above |
+
+## Related pages
+
+- [Sysmon event 1: Process creation](../sysmon/event-1-process-create.md)
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
 
 [^ms-4688]: Microsoft Learn, "4688(S): A new process has been created". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4688
 [^ms-audit-process-creation]: Microsoft Learn, "Audit Process Creation". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation

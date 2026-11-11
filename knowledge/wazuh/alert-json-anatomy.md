@@ -4,7 +4,7 @@ title: Wazuh alert JSON anatomy
 description: The fields of a Wazuh alert in JSON — rule, agent, manager, decoder, data, full_log, location — and which ones an L1 analyst reads first, including the data.win fields of Windows events.
 status: stable
 order: 601
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:18:01Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: wazuh-rules-syntax
     title: Wazuh documentation — Rules syntax (alert example under same_field)
@@ -27,7 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -142,6 +142,11 @@ use the handbook's MITRE pages for the mapping in a triage note.
 | 6 | `rule.mitre.id`, `rule.mitre.tactic` | Wazuh's tag — check against the handbook's MITRE pages |
 | 7 | `full_log` | Confirm against the original record |
 | — | `timestamp` | Build the time window for evidence |
+
+## Related pages
+
+- [GeoIP and VPN caveats](geo-and-vpn-caveats.md)
+- [Asset and user context in alerts](asset-and-user-context.md)
 
 [^wazuh-rules-syntax]: Wazuh documentation, "Rules syntax", alert example in the `same_field` section. https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^wazuh-event-logging]: Wazuh documentation, "Event logging", Windows event JSON examples. https://documentation.wazuh.com/current/user-manual/manager/event-logging.html

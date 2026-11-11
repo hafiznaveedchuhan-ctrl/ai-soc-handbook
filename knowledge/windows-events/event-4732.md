@@ -4,7 +4,7 @@ title: "Event 4732: A member was added to a security-enabled local group"
 description: Windows Security event 4732 — an account was added to a local security group such as Administrators; its fields, the groups that matter most, and the Wazuh rules that raise the level for privileged groups.
 status: stable
 order: 380
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4732
     title: "Microsoft Learn — 4732(S): A member was added to a security-enabled local group"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -123,6 +123,11 @@ Wazuh's own rule tag is `T1484`.
 | `MemberSid` | Expected account | New, never-used or unexpected account | Flag; check 4720 and 4624 for it |
 | `SubjectUserName` | Known admin | Unexpected account | Flag |
 | Wazuh `rule.id` | 60144 (level 5) | 60154 (level 12) and other privileged-group rules | Prioritise |
+
+## Related pages
+
+- [Event 4728: A member was added to a security-enabled global group](event-4728.md)
+- [Event 4756: A member was added to a security-enabled universal group](event-4756.md)
 
 [^ms-4732]: Microsoft Learn, "4732(S): A member was added to a security-enabled local group". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4732
 [^ms-audit-security-group-management]: Microsoft Learn, "Audit Security Group Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management

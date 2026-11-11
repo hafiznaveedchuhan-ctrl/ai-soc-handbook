@@ -4,7 +4,7 @@ title: Escalation policy
 description: The eight conditions under which an L1 analyst escalates an alert to L2 immediately, with the alert fields and handbook pages that show each one.
 status: stable
 order: 201
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -82,6 +82,11 @@ same line for "a human at L2 must look now".[^naveed-interview-2026-11-10]
 | 7 | 7045 on DC / AD FS / AD CS | Escalate (7) |
 | 8 | Verdict needs-info and severity High/Critical | Escalate (8) |
 | none | — | L1 continues; final decision: human analyst |
+
+## Related pages
+
+- [Severity response matrix (SLA)](../sla/severity-response-matrix.md)
+- [False positives: service accounts](../false-positives/service-accounts.md)
 
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, question 2).
 [^nist-sp800-61r3]: NIST SP 800-61 Rev. 3 (April 2025), CSF elements RS.MA-04 and GV.RM-06 (note N2). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf

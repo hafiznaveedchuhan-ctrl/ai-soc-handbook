@@ -4,7 +4,7 @@ title: "Ports and services"
 description: The three port ranges, the well-known ports a SOC analyst must recognise with IANA's official names, the IP protocol numbers, and the ports Wazuh itself uses.
 status: stable
 order: 1317
-generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: rfc6335
     title: "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** A port number says which service a connection is for:
@@ -117,6 +117,8 @@ not prove which program is listening.[^iana-ports]
 - [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
 - [HTTP and HTTPS](http-https.md)
 - [Wazuh architecture](../wazuh/architecture.md)
+- [Playbook: port scan](../playbooks/port-scan.md)
+- [T1046 Network Service Discovery](../mitre/t1046-network-service-discovery.md)
 
 [^rfc6335]: IETF, "RFC 6335 — IANA Procedures for the Management of the Service Name and Transport Protocol Port Number Registry". https://www.rfc-editor.org/rfc/rfc6335
 [^iana-ports]: IANA, "Service Name and Transport Protocol Port Number Registry". https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml

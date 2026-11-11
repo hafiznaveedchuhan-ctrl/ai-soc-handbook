@@ -4,7 +4,7 @@ title: "Event 4672: Special privileges assigned to new logon"
 description: Windows Security event 4672 — a new logon session received sensitive (administrator-equivalent) privileges; which privileges trigger it, its fields, and when it is not routine.
 status: stable
 order: 350
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4672
     title: "Microsoft Learn — 4672(S): Special privileges assigned to new logon"
@@ -24,7 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -129,6 +129,11 @@ This is the handbook's mapping, set by its owner. Wazuh's own rule tag for
 | `PrivilegeList` | Privileges expected for the role | SeDebugPrivilege or other restricted privileges on an unexpected account | Flag |
 | `SubjectLogonId` | Matches a normal 4624 | Matches a suspicious 4624 | Read the 4624 |
 | Wazuh `rule.id` | 67028 (non-SYSTEM subject) | — | Triage per above |
+
+## Related pages
+
+- [Event 4634: An account was logged off](event-4634.md)
+- [False positives: backup jobs](../false-positives/backup-jobs.md)
 
 [^ms-4672]: Microsoft Learn, "4672(S): Special privileges assigned to new logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672
 [^ms-audit-special-logon]: Microsoft Learn, "Audit Special Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-special-logon

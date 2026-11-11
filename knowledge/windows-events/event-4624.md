@@ -4,7 +4,7 @@ title: "Event 4624: An account was successfully logged on"
 description: Windows Security event 4624 — what a successful logon record means, its key fields and Logon Types, and the patterns that make it worth a second look.
 status: stable
 order: 320
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-4624
     title: "Microsoft Learn — 4624(S): An account was successfully logged on"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -163,6 +163,13 @@ reference](../wazuh/windows-rules-reference.md).
 | `AuthenticationPackageName` / `LmPackageName` | Kerberos, or NTLM V2 where allowed | NTLM where banned; NTLM V1/LM | Flag |
 | `SubjectUserSid` | SYSTEM | Not SYSTEM | Review per Microsoft recommendation |
 | Preceding 4625s | None | Many failures then success | Open success-after-failures playbook |
+
+## Related pages
+
+- [Event 4634: An account was logged off](event-4634.md)
+- [Event 4768: A Kerberos authentication ticket (TGT) was requested](event-4768.md)
+- [False positives: service accounts](../false-positives/service-accounts.md)
+- [T1021.001 Remote Services: Remote Desktop Protocol](../mitre/t1021-001-remote-desktop-protocol.md)
 
 [^ms-4624]: Microsoft Learn, "4624(S): An account was successfully logged on" (Windows 10 auditing reference). https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624
 [^ms-audit-logon]: Microsoft Learn, "Audit Logon". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon

@@ -4,7 +4,7 @@ title: "DNS — Domain Name System"
 description: How DNS works — names, records, recursive versus iterative resolution, UDP/TCP 53, response codes, reverse lookups — and what NIST SP 800-81r3 tells a SOC to log and watch for (tunnelling, exfiltration, protective DNS).
 status: stable
 order: 1325
-generated: { by: "claude-opus/5.5", at: 2026-11-10T15:39:10Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: rfc1034
     title: "RFC 1034 — Domain Names — Concepts and Facilities"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-11T04:01:59Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 > [!NOTE]
 > **In plain words.** DNS turns names into addresses. Almost every connection
@@ -108,6 +108,7 @@ All rows: [^iana-dns]
 - [Email protocols — SMTP, IMAP, POP3, SPF, DKIM, DMARC](email-protocols.md)
 - [Common network attacks](network-attacks.md)
 - [Reading network logs in the SIEM](reading-network-logs-in-siem.md)
+- [Sysmon event 22: DNS query](../sysmon/event-22-dns-query.md)
 
 [^rfc1034]: IETF, "RFC 1034 — Domain Names — Concepts and Facilities". https://www.rfc-editor.org/rfc/rfc1034
 [^rfc1035]: IETF, "RFC 1035 — Domain Names — Implementation and Specification". https://www.rfc-editor.org/rfc/rfc1035

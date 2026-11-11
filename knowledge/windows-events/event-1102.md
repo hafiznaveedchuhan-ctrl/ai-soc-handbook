@@ -4,7 +4,7 @@ title: "Event 1102: The audit log was cleared"
 description: Windows Security event 1102 — the Security audit log was cleared; who cleared it, why it should rarely happen, and the Wazuh rules that alert on it.
 status: stable
 order: 310
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: ms-1102
     title: "Microsoft Learn — 1102(S): The audit log was cleared"
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -115,6 +115,12 @@ Use **T1685.005** in triage notes, not the tags inside the Wazuh rules.
 | `SubjectUserName` | Known admin during maintenance | Unexpected, non-admin or never-used account | Flag; read its 4624 |
 | `SubjectLogonId` | Matches a local admin session | Matches a remote or unusual logon | Trace the logon |
 | Wazuh `rule.id` | 60117 (level 9) or 63103 (level 5) | — | Open audit-log-cleared playbook |
+
+## Related pages
+
+- [Event 4719: System audit policy was changed](event-4719.md)
+- [T1685 Disable or Modify Tools](../mitre/t1685-disable-or-modify-tools.md)
+- [False positives: admin maintenance windows](../false-positives/admin-maintenance-windows.md)
 
 [^ms-1102]: Microsoft Learn, "1102(S): The audit log was cleared". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`, rule 60117. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

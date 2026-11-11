@@ -4,7 +4,7 @@ title: "T1110 Brute Force"
 description: MITRE ATT&CK T1110 Brute Force — guessing or cracking credentials to get into accounts; its sub-techniques, how it shows up in Windows and Wazuh alerts, and what to look for.
 status: stable
 order: 700
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:12:58Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: mitre-t1110
     title: MITRE ATT&CK — T1110 Brute Force
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -84,6 +84,11 @@ Rule rows: [^wazuh-0580]
 | Wazuh 60204 | ≥ 8 failures / 240 s from one `ipAddress` | Open brute-force playbook |
 | 4624 after failures, same account | Possible successful brute force | Escalate per escalation policy |
 | Source IP public | External attempt | Enrich IP reputation |
+
+## Related pages
+
+- [T1110.004 Brute Force: Credential Stuffing](t1110-004-credential-stuffing.md)
+- [SSH failed password](../linux-auth/ssh-failed-password.md)
 
 [^mitre-t1110]: MITRE ATT&CK, "Brute Force, Technique T1110 – Enterprise" (version 2.8). © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1110/
 [^ms-4625]: Microsoft Learn, "4625(F): An account failed to log on". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625

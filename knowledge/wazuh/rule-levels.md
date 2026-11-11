@@ -4,7 +4,7 @@ title: Wazuh rule levels
 description: The seventeen Wazuh rule levels from 0 to 16, what each means, and the default thresholds at which an event becomes an alert or an email.
 status: stable
 order: 602
-generated: { by: "claude-opus/5.5", at: 2026-11-10T08:05:29Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: wazuh-rules-classification
     title: Wazuh documentation — Rules classification
@@ -15,7 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -88,6 +88,11 @@ escalation rules is set in the rules-map section (written in a later batch).
 
 Bands are a reading aid built from the Wazuh table above; severity and
 escalation decisions follow the rules-map section and a human analyst.
+
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [MITRE ATT&CK in Wazuh](mitre-in-wazuh.md)
 
 [^wazuh-rules-classification]: Wazuh documentation, "Rules classification". https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
 [^wazuh-alert-management]: Wazuh documentation, "Alert management" (alert threshold, `log_alert_level`, `email_alert_level`). https://documentation.wazuh.com/current/user-manual/manager/alert-management.html

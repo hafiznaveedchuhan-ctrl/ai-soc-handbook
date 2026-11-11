@@ -1,10 +1,10 @@
 ---
 type: Standard
 title: Severity model
-description: How the handbook rates an alert Low, Medium, High or Critical from its Wazuh rule level and the escalation conditions, and how context may raise but never lower that rating.
+description: How alert severity is decided — the handbook rates an alert Low, Medium, High or Critical from its Wazuh rule level and the escalation conditions, and how context may raise but never lower that rating.
 status: stable
 order: 202
-generated: { by: "claude-opus/5.5", at: 2026-11-10T09:06:15Z }
+generated: { by: "claude-opus/5.5", at: 2026-11-11T12:24:05Z }
 sources:
   - id: naveed-interview-2026-11-10
     title: human:naveed interview 2026-11-10
@@ -21,7 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
-  approval: { by: "human:naveed", at: 2026-11-10T09:30:32Z }
+  approval: { by: "human:naveed", at: 2026-11-11T12:24:06Z }
 ---
 
 > [!NOTE]
@@ -73,6 +73,11 @@ All rows: [^naveed-interview-2026-11-10]
 | `rule.level` 7–9 | no condition | Medium |
 | `rule.level` 3–6 | no condition | Low |
 | AbuseIPDB score ≥ 75 on the source IP | after the table | one step up (max Critical) |
+
+## Related pages
+
+- [Severity response matrix (SLA)](../sla/severity-response-matrix.md)
+- [Asset and user context in alerts](../wazuh/asset-and-user-context.md)
 
 [^naveed-interview-2026-11-10]: human:naveed interview 2026-11-10 (interview I1, questions 3 and 6).
 [^wazuh-rules-classification]: Wazuh documentation, "Rules classification". https://documentation.wazuh.com/current/user-manual/ruleset/rules/rules-classification.html
