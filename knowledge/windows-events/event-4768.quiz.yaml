@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4768: A Kerberos authentication ticket (TGT) was requested"
+  questionsPerRound: 6
+questions:
+  - question: "What does a TGT represent?"
+    options:
+      - "A service ticket to reach one application"
+      - "The first step of a domain logon"
+      - "An NTLM credential check"
+      - "A logoff record"
+    answer: 1
+    explanation: "4768 is the TGT — the first step of a domain logon."
+    source: "In plain words"
+  - question: "Where is 4768 logged?"
+    options:
+      - "Every workstation in the domain"
+      - "Member servers only"
+      - "The Wazuh manager"
+      - "Domain controllers only"
+    answer: 3
+    explanation: "Only on domain controllers."
+    source: "Meaning"
+  - question: "Which subcategory logs 4768?"
+    options:
+      - "Audit Kerberos Authentication Service"
+      - "Audit Kerberos Service Ticket Operations"
+      - "Audit Credential Validation"
+      - "Audit Logon"
+    answer: 0
+    explanation: "4768: Audit Kerberos Authentication Service."
+    source: "Meaning"
+  - question: "TGT for a honeypot account. Action?"
+    options:
+      - "Close"
+      - "Note"
+      - "Escalate"
+      - "Ignore"
+    answer: 2
+    explanation: "Disabled, expired or honeypot account TGT → escalate."
+    source: "For the agent"
+  - question: "Many failed 4768 for one account. Compare with…"
+    options:
+      - "4634"
+      - "4771"
+      - "4719"
+      - "4697"
+    answer: 1
+    explanation: "Possible guessing — compare with 4771."
+    source: "For the agent"
+  - question: "Which update changed 4768 on newer servers?"
+    options:
+      - "January 14, 2025"
+      - "October 8, 2024"
+      - "March 11, 2025"
+      - "July 9, 2024"
+    answer: 0
+    explanation: "Updated 4768 after the January 14, 2025 cumulative update."
+    source: "What Microsoft recommends monitoring"

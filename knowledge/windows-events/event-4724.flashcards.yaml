@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4724: An attempt was made to reset an account's password"
+  description: "Recall checks drawn only from the page Event 4724: An attempt was made to reset an account's password."
+cards:
+  - front: "What does 4724 record?"
+    back: "An account attempted to reset another account's password."
+  - front: "Audit subcategory?"
+    back: "Audit User Account Management."
+  - front: "Why does it matter?"
+    back: "An attacker with admin rights can take over an account this way."
+  - front: "Reset of an admin or service account?"
+    back: "Confirm with a ticket; else escalate."
+  - front: "Reset followed by a logon as that account?"
+    back: "Possible takeover — escalate."

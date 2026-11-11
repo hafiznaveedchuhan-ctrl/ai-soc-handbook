@@ -2,8 +2,9 @@
 type: Definition
 title: "Wazuh sshd rules reference"
 description: "One table of the Wazuh v4.14.10 sshd rules an L1 analyst meets — level, what they match, frequency settings and MITRE tags — with links to the Linux auth pages that explain each."
-status: draft
+status: stable
 order: 605
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0095
     title: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** The quick lookup for SSH alerts: find the rule ID from
@@ -35,5 +37,10 @@ ksor:
 | 5763 | 10 | Brute force, authentication failed | 8 in 120 s, same IP | T1110 | [Failed password](../linux-auth/ssh-failed-password.md) |
 
 All rows: [^wazuh-0095]
+
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [Playbook: brute-force logon attempts](../playbooks/brute-force.md)
 
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 10: ProcessAccess"
+  questionsPerRound: 6
+questions:
+  - question: "Which attack does Microsoft tie to lsass reads?"
+    options:
+      - "Port scanning"
+      - "Pass-the-Hash"
+      - "Phishing"
+      - "UAC bypass"
+    answer: 1
+    explanation: "Tools read lsass memory to steal credentials for Pass-the-Hash."
+    source: "What Microsoft says"
+  - question: "lsass opened by an unusual process. Action?"
+    options:
+      - "Close it as an antivirus scan"
+      - "Note only"
+      - "Ignore it"
+      - "Escalate — T1003.001"
+    answer: 3
+    explanation: "Credential theft → escalate."
+    source: "For the agent"
+  - question: "How should event 10 be collected?"
+    options:
+      - "With filters for expected access"
+      - "With every single access logged, unfiltered"
+      - "Only on domain controllers"
+      - "Only for lsass.exe"
+    answer: 0
+    explanation: "Collect with filters that remove expected accesses."
+    source: "What Microsoft says"
+  - question: "Access from a known backup tool. Reading?"
+    options:
+      - "Certain credential theft in progress"
+      - "Proof of malware on host"
+      - "Likely expected — confirm"
+      - "Sysmon fault"
+    answer: 2
+    explanation: "Known security or backup tool → likely expected; confirm and record."
+    source: "For the agent"
+  - question: "Which DET uses event 10 for UAC bypass?"
+    options:
+      - "DET0363"
+      - "DET0388"
+      - "DET0441"
+      - "DET0497"
+    answer: 1
+    explanation: "T1548.002 → DET0388."
+    source: "Used by MITRE detections"
+  - question: "What often follows the open?"
+    options:
+      - "Reading or writing memory"
+      - "A DNS query for a random domain"
+      - "A logoff"
+      - "A reboot"
+    answer: 0
+    explanation: "Often followed by reading or writing its memory."
+    source: "What Microsoft says"

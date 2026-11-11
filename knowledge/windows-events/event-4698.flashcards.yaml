@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4698: A scheduled task was created"
+  description: "Recall checks drawn only from the page Event 4698: A scheduled task was created."
+cards:
+  - front: "What does 4698 record?"
+    back: "A new scheduled task was created."
+  - front: "Audit subcategory?"
+    back: "Audit Other Object Access Events."
+  - front: "Where are manual or malware tasks often located?"
+    back: "In the Task Scheduler Library root (\\TASK_NAME)."
+  - front: "Wazuh rule for 4698?"
+    back: "60228, level 4 (T1053)."
+  - front: "Event for task modification (MITRE)?"
+    back: "4702."

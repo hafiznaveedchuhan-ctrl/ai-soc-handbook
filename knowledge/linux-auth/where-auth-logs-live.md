@@ -2,8 +2,9 @@
 type: Definition
 title: "Where Linux authentication logs live"
 description: "Which file holds SSH, sudo and login events on Debian/Ubuntu (/var/log/auth.log) and Red Hat (/var/log/secure), why sshd writes to the AUTH facility, and how those logs reach Wazuh."
-status: draft
+status: stable
 order: 500
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ubuntu-rsyslog
     title: Ubuntu rsyslog package — debian/50-default.conf
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** On Linux, SSH logins, sudo and new-user events go to a
@@ -47,6 +49,14 @@ ksor:
 | Alert is about SSH/sudo on Ubuntu | Original line is in `/var/log/auth.log` |
 | Same on RHEL/CentOS/Rocky | `/var/log/secure` |
 | No auth events from a host | Check that the agent or rsyslog forwarding is running |
+
+## Related pages
+
+- [Syslog](../networking/syslog.md)
+- [Wazuh architecture](../wazuh/architecture.md)
+- [SSH accepted (successful login)](ssh-accepted.md)
+- [sudo usage](sudo-usage.md)
+- [Wazuh sshd rules reference](../wazuh/sshd-rules-reference.md)
 
 [^ubuntu-rsyslog]: Ubuntu rsyslog source package, `debian/50-default.conf`. https://git.launchpad.net/ubuntu/+source/rsyslog/plain/debian/50-default.conf
 [^redhat-rsyslog]: rsyslog project, `platform/redhat/rsyslog.conf` (Red Hat default). https://raw.githubusercontent.com/rsyslog/rsyslog/main/platform/redhat/rsyslog.conf

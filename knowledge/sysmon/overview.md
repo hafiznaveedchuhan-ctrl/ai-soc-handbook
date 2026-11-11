@@ -2,8 +2,9 @@
 type: Document
 title: "Sysmon overview"
 description: "What Sysmon (System Monitor) is, where its events are written (Microsoft-Windows-Sysmon/Operational), that timestamps are UTC, which events are off by default, and which Sysmon event IDs this handbook covers."
-status: draft
+status: stable
 order: 400
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Sysmon is a free Microsoft tool that records much more
@@ -44,5 +46,10 @@ Event names and defaults: [^ms-sysmon]
 |---|---|
 | Time zone of Sysmon timestamps | UTC — convert before comparing with local logs |
 | No Sysmon 3 or 7 events at all | They are off by default; check the configuration before concluding "no activity" |
+
+## Related pages
+
+- [Wazuh architecture](../wazuh/architecture.md)
+- [Event 4688: A new process has been created](../windows-events/event-4688.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon

@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon events 12, 13, 14: Registry"
+  description: "Recall checks drawn only from the page Sysmon events 12, 13, 14: Registry."
+cards:
+  - front: "Event 12?"
+    back: "Registry key and value create and delete."
+  - front: "Event 13?"
+    back: "Value modification; records the value for DWORD and QWORD."
+  - front: "Event 14?"
+    back: "Key and value rename, with the new name."
+  - front: "How does Sysmon abbreviate HKEY_LOCAL_MACHINE?"
+    back: "HKLM."
+  - front: "Change under a Run key or the Services key?"
+    back: "Persistence — check the process and value."

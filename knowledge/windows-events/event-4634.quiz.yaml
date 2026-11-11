@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4634: An account was logged off"
+  questionsPerRound: 6
+questions:
+  - question: "Which audit subcategory logs 4634?"
+    options:
+      - "Audit Logon"
+      - "Audit Logoff"
+      - "Audit Special Logon"
+      - "Audit Other Logon Events"
+    answer: 1
+    explanation: "4634 is logged under Audit Logoff."
+    source: "Meaning"
+  - question: "Which event pairs with 4634 to time a session?"
+    options:
+      - "4625"
+      - "4672"
+      - "4648"
+      - "4624"
+    answer: 3
+    explanation: "Pair 4634 with the 4624 that started the session."
+    source: "In plain words"
+  - question: "Wazuh rule level for 60137?"
+    options:
+      - "3"
+      - "5"
+      - "8"
+      - "10"
+    answer: 0
+    explanation: "60137 Windows User Logoff is level 3."
+    source: "Wazuh rules"
+  - question: "Which event means the user started the logoff?"
+    options:
+      - "4634"
+      - "4778"
+      - "4647"
+      - "4779"
+    answer: 2
+    explanation: "4647 is generated when the account initiated the logoff."
+    source: "Meaning"
+  - question: "Domain admin session with Logon Type 5. Microsoft's advice?"
+    options:
+      - "Ignore — normal service"
+      - "Monitor it — unexpected type"
+      - "Close as benign logoff"
+      - "Lower severity to Low"
+    answer: 1
+    explanation: "If a Logon Type should not be used by an account, monitor for it."
+    source: "What Microsoft recommends monitoring"
+  - question: "Logoff seconds after a suspicious logon. Do what?"
+    options:
+      - "Note it; check what ran between"
+      - "Close both events"
+      - "Escalate as Critical"
+      - "Reset the password"
+    answer: 0
+    explanation: "Short session — note it and check what ran in between."
+    source: "For the agent"

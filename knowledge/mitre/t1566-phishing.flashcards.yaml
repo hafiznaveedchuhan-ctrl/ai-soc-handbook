@@ -1,0 +1,14 @@
+deck:
+  title: "T1566 Phishing"
+  description: "Recall checks drawn only from the page T1566 Phishing."
+cards:
+  - front: "Tactic of T1566?"
+    back: "Initial Access."
+  - front: "What is spearphishing?"
+    back: "Targeted phishing."
+  - front: "What matters most for triage?"
+    back: "What runs on the machine after the message is opened."
+  - front: "Endpoint Sysmon sources in DET0070?"
+    back: "11 (file creation) and 1 (process creation)."
+  - front: "Office app spawning a script host?"
+    back: "Escalate."

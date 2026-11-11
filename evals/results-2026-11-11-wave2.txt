@@ -1,0 +1,108 @@
+Wave 1 + Wave 2 retrieval evals — 2026-11-11 (session 4), generation 3 (147 nodes, 897 chunks), OpenAI text-embedding-3-small/1536, k=5, gate OFF
+Summary: in-scope 67/70 (96%) target >= 90% -> MET; out-of-scope 0/30 (gate off, expected).
+Misses: (1) added to Administrators — known since gen 2; (2) 'How is alert severity decided?' now returns sla/severity-response-matrix first, severity-model not in top 5 (new competition); (3) NTLM 0xC0000071 returns event-4776 (the 4776 page does not list 0xC0000071; it is on false-positives/expired-or-mistyped-passwords) — candidate fix: add 0xC0000071/0xC0000224 rows to event-4776 (stable page, needs re-approval).
+
+== in-scope (expected document in top 5, not abstained)
+PASS  What does Windows event 4624 mean?  -> knowledge/playbooks/brute-force, knowledge/windows-events/event-4625, knowledge/windows-events/event-4625
+PASS  Which Logon Type is a Remote Desktop logon?  -> knowledge/networking/remote-access-protocols, knowledge/windows-events/event-4624, knowledge/windows-events/event-4625
+PASS  What does event 4625 status 0xC000006A mean?  -> knowledge/windows-events/event-4625, knowledge/windows-events/event-4625, knowledge/playbooks/brute-force
+PASS  Several 0xC0000064 failures in a row — what could that be?  -> knowledge/windows-events/event-4625, knowledge/windows-events/event-4625, knowledge/windows-events/event-4625
+PASS  What is a logon with explicit credentials, event 4648?  -> knowledge/windows-events/event-4648, knowledge/windows-events/event-4648, knowledge/windows-events/event-4648
+PASS  Why do I see so many 4672 special privileges events?  -> knowledge/windows-events/event-4672, knowledge/windows-events/event-4672, knowledge/windows-events/event-4672
+PASS  How do I see the command line of a new process in 4688?  -> knowledge/windows-events/event-4688, knowledge/windows-events/event-4688, knowledge/windows-events/event-4688
+PASS  What does token elevation type %%1937 mean?  -> knowledge/windows-events/event-4688, knowledge/windows-events/event-4672, knowledge/windows-events/event-4768
+PASS  A new user account was created, event 4720 — what should I check?  -> knowledge/windows-events/event-4720, knowledge/windows-events/event-4720, knowledge/windows-events/event-4720
+PASS  Someone was added to the local Administrators group, event 4732  -> knowledge/windows-events/event-4732, knowledge/windows-events/event-4732, knowledge/windows-events/event-4732
+PASS  What does Caller Computer Name mean in an account lockout?  -> knowledge/playbooks/brute-force, knowledge/windows-events/event-4740, knowledge/playbooks/account-lockout-storm
+PASS  The Security audit log was cleared, event 1102  -> knowledge/windows-events/event-1102, knowledge/playbooks/audit-log-cleared, knowledge/windows-events/event-4719
+FAIL  What do I do when an account is added to Administrators?  -> knowledge/mitre/t1136-001-local-account, knowledge/playbooks/new-local-account, knowledge/windows-events/event-4720
+PASS  How does data flow from a Wazuh agent to the dashboard?  -> knowledge/wazuh/architecture, knowledge/wazuh/architecture, knowledge/wazuh/architecture
+PASS  Which port does the Wazuh agent use to connect to the server?  -> knowledge/wazuh/architecture, knowledge/networking/syslog, knowledge/networking/ports-and-services
+PASS  What is in the full_log field of a Wazuh alert?  -> knowledge/wazuh/alert-json-anatomy, knowledge/wazuh/alert-json-anatomy, knowledge/wazuh/alert-json-anatomy
+PASS  Where are Windows event fields in a Wazuh alert JSON?  -> knowledge/wazuh/alert-json-anatomy, knowledge/wazuh/alert-json-anatomy, knowledge/wazuh/alert-json-anatomy
+PASS  What does Wazuh rule level 10 mean?  -> knowledge/wazuh/rule-levels, knowledge/wazuh/rule-levels, knowledge/linux-auth/sudo-usage
+PASS  What is the default Wazuh alert threshold?  -> knowledge/wazuh/rule-levels, knowledge/rules-map/severity-model, knowledge/wazuh/rule-levels
+PASS  What does Wazuh rule 60204 detect?  -> knowledge/wazuh/windows-rules-reference, knowledge/wazuh/rule-levels, knowledge/wazuh/windows-rules-reference
+PASS  Which Wazuh rule fires when someone joins the Administrators group?  -> knowledge/windows-events/event-4732, knowledge/windows-events/event-4756, knowledge/windows-events/event-4728
+PASS  What is MITRE technique T1110 brute force?  -> knowledge/mitre/t1110-brute-force, knowledge/mitre/t1110-001-password-guessing, knowledge/playbooks/brute-force
+PASS  How is password spraying different from password guessing?  -> knowledge/mitre/t1110-003-password-spraying, knowledge/mitre/t1110-003-password-spraying, knowledge/mitre/t1110-003-password-spraying
+PASS  What is T1078 valid accounts?  -> knowledge/windows-events/event-4624, knowledge/mitre/t1078-valid-accounts, knowledge/mitre/t1021-001-remote-desktop-protocol
+PASS  How do attackers abuse PowerShell, T1059.001?  -> knowledge/mitre/t1059-001-powershell, knowledge/mitre/t1059-001-powershell, knowledge/mitre/t1059-001-powershell
+PASS  What is the MITRE ID for clearing Windows event logs?  -> knowledge/mitre/t1685-005-clear-windows-event-logs, knowledge/windows-events/event-1102, knowledge/mitre/t1685-disable-or-modify-tools
+PASS  What is T1136.001 create local account?  -> knowledge/mitre/t1136-001-local-account, knowledge/playbooks/new-local-account, knowledge/mitre/t1136-001-local-account
+PASS  What is account manipulation T1098?  -> knowledge/playbooks/added-to-admin-group, knowledge/mitre/t1098-account-manipulation, knowledge/windows-events/event-4720
+PASS  How do I triage a brute-force alert?  -> knowledge/mitre/t1110-brute-force, knowledge/mitre/t1110-brute-force, knowledge/playbooks/brute-force
+PASS  A user logged on successfully after many failures — what now?  -> knowledge/playbooks/success-after-failures, knowledge/wazuh/sshd-rules-reference, knowledge/windows-events/event-4624
+PASS  How do I investigate a new local account?  -> knowledge/playbooks/new-local-account, knowledge/mitre/t1136-001-local-account, knowledge/playbooks/new-local-account
+PASS  What do I do when the audit log was cleared?  -> knowledge/playbooks/audit-log-cleared, knowledge/playbooks/audit-log-cleared, knowledge/windows-events/event-1102
+PASS  When must an L1 analyst escalate to L2?  -> knowledge/rules-map/escalation-policy, knowledge/rules-map/escalation-policy, knowledge/rules-map/escalation-policy
+FAIL  How is alert severity decided?  -> knowledge/sla/severity-response-matrix, knowledge/false-positives/service-accounts, knowledge/false-positives/admin-maintenance-windows
+PASS  How must IP addresses and usernames be masked before an LLM?  -> knowledge/rules-map/data-handling, knowledge/rules-map/data-handling, knowledge/windows-events/event-4648
+PASS  What are the rules the AI must never break?  -> knowledge/rules-map/invariants, knowledge/rules-map/invariants, knowledge/rules-map/invariants
+PASS  How do I read an AbuseIPDB abuse confidence score?  -> knowledge/enrichment/ip-reputation-policy, knowledge/enrichment/ip-reputation-policy, knowledge/enrichment/ip-reputation-policy
+PASS  Is 172.20.5.4 a private IP address?  -> knowledge/enrichment/private-ip-ranges, knowledge/networking/special-ipv4-ranges, knowledge/enrichment/private-ip-ranges
+PASS  What fields does a triage note contain?  -> knowledge/rules-map/data-handling, knowledge/triage-note/writing-rules, knowledge/triage-note/note-template
+PASS  What is a benign true positive?  -> knowledge/false-positives/vulnerability-scanners, knowledge/false-positives/admin-maintenance-windows, knowledge/false-positives/expired-or-mistyped-passwords
+PASS  How fast must a Critical alert be acknowledged?  -> knowledge/sla/severity-response-matrix, knowledge/sla/severity-response-matrix, knowledge/rules-map/escalation-policy
+PASS  When does the SLA clock start for an alert?  -> knowledge/sla/severity-response-matrix, knowledge/sla/severity-response-matrix, knowledge/sla/severity-response-matrix
+PASS  A user mistyped their password a few times — is that a false positive?  -> knowledge/false-positives/expired-or-mistyped-passwords, knowledge/false-positives/expired-or-mistyped-passwords, knowledge/false-positives/expired-or-mistyped-passwords
+FAIL  What does NTLM error 0xC0000071 mean?  -> knowledge/windows-events/event-4776, knowledge/windows-events/event-4776, knowledge/windows-events/event-4624
+PASS  Is a service account logon with Logon Type 5 normal?  -> knowledge/false-positives/service-accounts, knowledge/windows-events/event-4624, knowledge/windows-events/event-4625
+PASS  Why do backup jobs trigger SeBackupPrivilege alerts?  -> knowledge/false-positives/backup-jobs, knowledge/false-positives/backup-jobs, knowledge/false-positives/backup-jobs
+PASS  What is the admin maintenance window and does it need a change ticket?  -> knowledge/false-positives/admin-maintenance-windows, knowledge/false-positives/admin-maintenance-windows, knowledge/false-positives/admin-maintenance-windows
+PASS  How do I tell an approved vulnerability scanner from an attacker's scan?  -> knowledge/false-positives/vulnerability-scanners, knowledge/false-positives/vulnerability-scanners, knowledge/false-positives/vulnerability-scanners
+PASS  How accurate is GeoIP city location?  -> knowledge/wazuh/geo-and-vpn-caveats, knowledge/wazuh/geo-and-vpn-caveats, knowledge/wazuh/geo-and-vpn-caveats
+PASS  A logon from a foreign country came through our VPN — what does the location mean?  -> knowledge/wazuh/geo-and-vpn-caveats, knowledge/wazuh/geo-and-vpn-caveats, knowledge/wazuh/geo-and-vpn-caveats
+PASS  How do Wazuh agent labels add asset context to alerts?  -> knowledge/wazuh/asset-and-user-context, knowledge/wazuh/asset-and-user-context, knowledge/wazuh/asset-and-user-context
+PASS  What are Wazuh rule groups and if_group?  -> knowledge/wazuh/rule-groups, knowledge/wazuh/rule-groups, knowledge/wazuh/rule-groups
+PASS  What does Wazuh sshd rule 5763 mean?  -> knowledge/linux-auth/ssh-failed-password, knowledge/wazuh/sshd-rules-reference, knowledge/wazuh/rule-groups
+PASS  Where is the SSH auth log on Red Hat?  -> knowledge/linux-auth/where-auth-logs-live, knowledge/linux-auth/where-auth-logs-live, knowledge/linux-auth/where-auth-logs-live
+PASS  What does Wazuh rule 5710 invalid user mean?  -> knowledge/linux-auth/ssh-invalid-user, knowledge/windows-events/event-4725, knowledge/windows-events/event-4726
+PASS  What does sudo rule 5405 user NOT in sudoers mean?  -> knowledge/linux-auth/sudo-usage, knowledge/linux-auth/sudo-usage, knowledge/linux-auth/sudo-usage
+PASS  A new Linux user was added with useradd — what rule fires?  -> knowledge/linux-auth/new-user-useradd, knowledge/linux-auth/new-user-useradd, knowledge/linux-auth/new-user-useradd
+PASS  A process opened lsass.exe with access 0x1F0FFF — what technique is that?  -> knowledge/sysmon/event-10-process-access, knowledge/mitre/t1003-001-lsass-memory, knowledge/sysmon/event-10-process-access
+PASS  What is credential stuffing?  -> knowledge/mitre/t1110-brute-force, knowledge/mitre/t1110-004-credential-stuffing, knowledge/mitre/t1110-004-credential-stuffing
+PASS  How do attackers bypass UAC with eventvwr.exe?  -> knowledge/mitre/t1548-002-bypass-uac, knowledge/mitre/t1548-002-bypass-uac, knowledge/mitre/t1548-002-bypass-uac
+PASS  What does Windows event 4697 mean?  -> knowledge/windows-events/event-4672, knowledge/windows-events/event-4697, knowledge/windows-events/event-4688
+PASS  What does event 4698 scheduled task created mean?  -> knowledge/windows-events/event-4698, knowledge/windows-events/event-4698, knowledge/windows-events/event-4698
+PASS  Someone changed the audit policy, event 4719 — what now?  -> knowledge/windows-events/event-4719, knowledge/windows-events/event-4719, knowledge/windows-events/event-4719
+PASS  What does Kerberos failure code 0x18 in event 4771 mean?  -> knowledge/false-positives/expired-or-mistyped-passwords, knowledge/windows-events/event-4771, knowledge/windows-events/event-4771
+PASS  What does ticket encryption type 0x17 RC4 in 4769 mean?  -> knowledge/windows-events/event-4769, knowledge/windows-events/event-4769, knowledge/windows-events/event-4769
+PASS  What does Sysmon event 10 ProcessAccess record?  -> knowledge/sysmon/event-10-process-access, knowledge/sysmon/event-10-process-access, knowledge/sysmon/event-10-process-access
+PASS  Is Sysmon event 3 enabled by default?  -> knowledge/sysmon/event-3-network-connection, knowledge/sysmon/overview, knowledge/sysmon/overview
+PASS  What time zone are Sysmon timestamps in?  -> knowledge/sysmon/overview, knowledge/sysmon/overview, knowledge/sysmon/overview
+PASS  Many accounts locked out at once — what do I do?  -> knowledge/windows-events/event-4740, knowledge/playbooks/account-lockout-storm, knowledge/windows-events/event-4740
+PASS  How do I triage a port scan alert?  -> knowledge/playbooks/port-scan, knowledge/playbooks/port-scan, knowledge/networking/network-attacks
+== out-of-scope (must abstain)
+FAIL  How do I reverse engineer a malware sample in Ghidra?
+FAIL  Write a working exploit for a Windows privilege escalation bug.
+FAIL  How do I run a penetration test against an Active Directory domain?
+FAIL  How can I bypass Windows Defender with an obfuscated payload?
+FAIL  Is our company GDPR compliant if we store logs for two years?
+FAIL  What is the legal penalty for a data breach in the United States?
+FAIL  How much does a Wazuh cloud subscription cost per month?
+FAIL  Which SIEM is better, Splunk or Microsoft Sentinel?
+FAIL  How do I crack NTLM hashes with hashcat?
+FAIL  How do I set up a phishing campaign to test employees?
+FAIL  How do I unpack a packed executable to find its configuration?
+FAIL  What is the best antivirus product to buy for a small business?
+FAIL  How do I write a YARA rule for a ransomware family?
+FAIL  How do I configure a Palo Alto firewall policy?
+FAIL  How do I recover deleted files from a hard drive for court evidence?
+FAIL  What salary does a SOC L1 analyst earn in Dubai?
+FAIL  How do I perform lateral movement with Mimikatz pass-the-hash?
+FAIL  How do I decompile an Android app to find hidden API keys?
+FAIL  What insurance policy covers ransomware payments?
+FAIL  How do I build a botnet command and control server?
+FAIL  How do I configure a Cisco ASA access control list?
+FAIL  How do I write a Splunk SPL search for failed logons?
+FAIL  How do I tune a CrowdStrike Falcon prevention policy?
+FAIL  Which Microsoft Sentinel KQL query detects password spraying?
+FAIL  How do I install Suricata on pfSense?
+FAIL  How do I configure BGP neighbours on a Juniper router?
+FAIL  How do I renew a Let's Encrypt certificate with certbot?
+FAIL  How do I add a DMARC record in the GoDaddy DNS panel?
+FAIL  How do I harden an Nginx TLS configuration?
+FAIL  How do I set up a site-to-site VPN on a FortiGate?
+
+in-scope 67/70 (96%) · out-of-scope 0/30 (0%)

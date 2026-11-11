@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 10: ProcessAccess"
+  description: "Recall checks drawn only from the page Sysmon event 10: ProcessAccess."
+cards:
+  - front: "What does Sysmon 10 report?"
+    back: "A process opening another process."
+  - front: "Main use?"
+    back: "Detecting tools that read lsass memory to steal credentials for Pass-the-Hash."
+  - front: "How should it be collected?"
+    back: "With filters that remove expected accesses."
+  - front: "TargetImage lsass.exe from an unusual process?"
+    back: "Credential theft — T1003.001, escalate."
+  - front: "Access from a known security or backup tool?"
+    back: "Likely expected — confirm and record."

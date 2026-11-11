@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4725: A user account was disabled"
+  description: "Recall checks drawn only from the page Event 4725: A user account was disabled."
+cards:
+  - front: "What does 4725 record?"
+    back: "A user or computer object was disabled."
+  - front: "Wazuh rule?"
+    back: "60111, level 8 — disabled or deleted (T1098, T1531)."
+  - front: "When is disabling normal?"
+    back: "For leavers."
+  - front: "Admin or service account disabled?"
+    back: "Escalate per the escalation policy."
+  - front: "Many accounts disabled at once?"
+    back: "Possible impact attack — escalate."

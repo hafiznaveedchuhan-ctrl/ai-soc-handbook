@@ -1,0 +1,14 @@
+deck:
+  title: "Wazuh rule groups"
+  description: "Recall checks drawn only from the page Wazuh rule groups."
+cards:
+  - front: "What does a Wazuh rule group do?"
+    back: "Categorises alerts so related ones can be filtered together, e.g. rule.groups: attack."
+  - front: "What does if_group do?"
+    back: "Makes a rule match only when a rule of that group matched."
+  - front: "What do frequency, timeframe and ignore set?"
+    back: "Matches needed, the window in seconds, and quiet seconds after firing."
+  - front: "Which group holds the SSH brute-force correlations?"
+    back: "authentication_failures (5712, 5720, 5763)."
+  - front: "Which group holds SSH success 5715?"
+    back: "authentication_success."

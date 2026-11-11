@@ -1,0 +1,14 @@
+deck:
+  title: "New Linux user or group (useradd, gpasswd)"
+  description: "Recall checks drawn only from the page New Linux user or group (useradd, gpasswd)."
+cards:
+  - front: "Rule 5902?"
+    back: "New user added to the system (level 8, T1136)."
+  - front: "Rule 2961?"
+    back: "User added to group sudo (level 5, T1136)."
+  - front: "Rule 5905?"
+    back: "useradd failed (level 0)."
+  - front: "Windows counterpart event?"
+    back: "4720 — a user account was created."
+  - front: "2961 (added to sudo) — action?"
+    back: "Privilege change — escalate per policy."

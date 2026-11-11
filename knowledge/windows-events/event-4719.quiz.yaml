@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4719: System audit policy was changed"
+  questionsPerRound: 6
+questions:
+  - question: "Wazuh rule level for 60112?"
+    options:
+      - "3"
+      - "8"
+      - "5"
+      - "12"
+    answer: 1
+    explanation: "60112 Windows Audit Policy changed is level 8."
+    source: "Wazuh rules"
+  - question: "When is 4719 logged?"
+    options:
+      - "Only with auditing on"
+      - "Only on domain controllers"
+      - "Only at system startup"
+      - "Always, whatever the setting"
+    answer: 3
+    explanation: "Always logged regardless of the sub-category setting."
+    source: "Meaning"
+  - question: "Unplanned 4719. Microsoft says…"
+    options:
+      - "Investigate who and why"
+      - "Ignore on workstations"
+      - "Close it as noise"
+      - "Restart the host"
+    answer: 0
+    explanation: "If not planned, investigate the reason."
+    source: "What Microsoft recommends monitoring"
+  - question: "4719 followed by silence from the host. Reading?"
+    options:
+      - "Normal maintenance"
+      - "Network outage only"
+      - "Possible defense impairment"
+      - "Backup window"
+    answer: 2
+    explanation: "Missing events after 4719 → see T1685."
+    source: "For the agent"
+  - question: "Which audit subcategory is 4719 under?"
+    options:
+      - "Audit Logoff"
+      - "Audit Policy Change"
+      - "Audit Credential Validation"
+      - "Audit Logon"
+    answer: 1
+    explanation: "4719: Audit Policy Change."
+    source: "Meaning"
+  - question: "Why does turning auditing off matter?"
+    options:
+      - "It blinds the SOC"
+      - "It slows the host"
+      - "It locks accounts"
+      - "It breaks DNS"
+    answer: 0
+    explanation: "Turning auditing off blinds the SOC."
+    source: "In plain words"

@@ -1,0 +1,14 @@
+deck:
+  title: "T1053.005 Scheduled Task/Job: Scheduled Task"
+  description: "Recall checks drawn only from the page T1053.005 Scheduled Task/Job: Scheduled Task."
+cards:
+  - front: "Tactics of T1053.005?"
+    back: "Execution, Persistence, Privilege Escalation."
+  - front: "Security event for scheduled task creation?"
+    back: "4698."
+  - front: "Security event for task modification?"
+    back: "4702."
+  - front: "Processes that run tasks (per AN1221)?"
+    back: "svchost.exe or taskeng.exe."
+  - front: "New SYSTEM task created by a normal user?"
+    back: "Escalate per the escalation policy."

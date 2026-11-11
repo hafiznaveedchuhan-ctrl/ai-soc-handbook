@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4697: A service was installed in the system"
+  description: "Recall checks drawn only from the page Event 4697: A service was installed in the system."
+cards:
+  - front: "What does 4697 record?"
+    back: "A new service was installed in the system."
+  - front: "Audit subcategory?"
+    back: "Audit Security System Extension."
+  - front: "Where do new services normally live (Microsoft)?"
+    back: "%windir%, Program Files or Program Files (x86)."
+  - front: "MITRE technique?"
+    back: "T1543.003 Windows Service."
+  - front: "System-log counterpart?"
+    back: "7045."

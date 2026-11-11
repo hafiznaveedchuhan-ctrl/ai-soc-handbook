@@ -1,0 +1,58 @@
+quiz:
+  title: "T1046 Network Service Discovery"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1046?"
+    options:
+      - "Reconnaissance"
+      - "Discovery"
+      - "Lateral Movement"
+      - "Collection"
+    answer: 1
+    explanation: "The technique table lists Discovery."
+    source: "The technique"
+  - question: "What does analytic AN1057 correlate?"
+    options:
+      - "Logon failures across many accounts"
+      - "Registry edits under the Services key"
+      - "Scheduled tasks created by SYSTEM"
+      - "Process creation, sockets, sequential IP probing"
+    answer: 3
+    explanation: "AN1057 correlates process creation, socket connections and sequential destination probing."
+    source: "Detection (MITRE DET0376)"
+  - question: "Internal admin host scanning many ports. First step?"
+    options:
+      - "Identify the process"
+      - "Escalate as Critical"
+      - "Close as false positive"
+      - "Block the host"
+    answer: 0
+    explanation: "Identify the process; scanners on admin hosts may be expected."
+    source: "For the agent"
+  - question: "External source scanning the perimeter. Action?"
+    options:
+      - "Escalate immediately"
+      - "Close without a note"
+      - "Note; check if anything was allowed"
+      - "Add it to approved scanners"
+    answer: 2
+    explanation: "Note it and check whether anything was allowed."
+    source: "For the agent"
+  - question: "Which Sysmon event is a DNS query?"
+    options:
+      - "3"
+      - "22"
+      - "1"
+      - "11"
+    answer: 1
+    explanation: "Log sources: Sysmon 1, 3 and 22 (DNS query)."
+    source: "Detection (MITRE DET0376)"
+  - question: "Which DET ID covers T1046?"
+    options:
+      - "DET0376"
+      - "DET0363"
+      - "DET0460"
+      - "DET0552"
+    answer: 0
+    explanation: "Detection strategy DET0376."
+    source: "Detection (MITRE DET0376)"

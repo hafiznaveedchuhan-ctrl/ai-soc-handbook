@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon events 12, 13, 14: Registry"
+  questionsPerRound: 6
+questions:
+  - question: "Which event records a value modification?"
+    options:
+      - "12"
+      - "13"
+      - "14"
+      - "11"
+    answer: 1
+    explanation: "Event 13: value modifications."
+    source: "What Microsoft says"
+  - question: "Which event records a key rename?"
+    options:
+      - "12"
+      - "13"
+      - "10"
+      - "14"
+    answer: 3
+    explanation: "Event 14: key and value renames."
+    source: "What Microsoft says"
+  - question: "Sysmon's abbreviation for HKEY_USERS?"
+    options:
+      - "HKU"
+      - "HKCU"
+      - "HKUS"
+      - "HKLM"
+    answer: 0
+    explanation: "HKEY_USERS → HKU."
+    source: "What Microsoft says"
+  - question: "Change to Sysmon's own keys. Reading?"
+    options:
+      - "Normal update"
+      - "Backup side effect"
+      - "Possible tampering — T1685"
+      - "User typo"
+    answer: 2
+    explanation: "Security tool key change → possible tampering."
+    source: "For the agent"
+  - question: "Run-key change. Reading?"
+    options:
+      - "Normal — close it"
+      - "Persistence — check it"
+      - "Network — check DNS"
+      - "Kerberos — check 4771"
+    answer: 1
+    explanation: "Run or Services key → persistence."
+    source: "For the agent"
+  - question: "For which types does event 13 record the value?"
+    options:
+      - "DWORD and QWORD"
+      - "String and binary"
+      - "All value types"
+      - "Only REG_SZ"
+    answer: 0
+    explanation: "Event 13 records the value written for DWORD and QWORD."
+    source: "What Microsoft says"

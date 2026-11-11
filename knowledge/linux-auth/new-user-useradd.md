@@ -2,8 +2,9 @@
 type: Definition
 title: "New Linux user or group (useradd, gpasswd)"
 description: "Wazuh rules for account changes on Linux — new user (5902, T1136), new group (5901), useradd failed (5905), user added to a group (2960) and to the sudo group (2961)."
-status: draft
+status: stable
 order: 530
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0020
     title: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A new user account or group appeared on a Linux server,
@@ -37,5 +39,10 @@ See also the Windows counterpart [4720](../windows-events/event-4720.md) and the
 |---|---|
 | 5902 outside a change window | Ask who created it; check for a following SSH login |
 | 2961 (added to sudo) | Privilege change — escalate per policy |
+
+## Related pages
+
+- [T1136.001 Create Account: Local Account](../mitre/t1136-001-local-account.md)
+- [sudo usage](sudo-usage.md)
 
 [^wazuh-0020]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0020-syslog_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0020-syslog_rules.xml

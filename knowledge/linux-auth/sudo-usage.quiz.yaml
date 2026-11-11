@@ -1,0 +1,58 @@
+quiz:
+  title: "sudo usage"
+  questionsPerRound: 6
+questions:
+  - question: "Which rule is 'Successful sudo to ROOT'?"
+    options:
+      - "5407"
+      - "5402"
+      - "5401"
+      - "5403"
+    answer: 1
+    explanation: "5402 level 3 — USER=root ; COMMAND=."
+    source: "What Wazuh matches"
+  - question: "Level of 5404?"
+    options:
+      - "5"
+      - "3"
+      - "4"
+      - "10"
+    answer: 3
+    explanation: "Three failed attempts to run sudo is level 10."
+    source: "What Wazuh matches"
+  - question: "A user not in sudoers tried sudo. Rule?"
+    options:
+      - "5405"
+      - "5404"
+      - "5401"
+      - "5402"
+    answer: 0
+    explanation: "5405 — user NOT in sudoers."
+    source: "What Wazuh matches"
+  - question: "MITRE tag on all sudo rules?"
+    options:
+      - "T1548.002"
+      - "T1078"
+      - "T1548.003"
+      - "T1136"
+    answer: 2
+    explanation: "All are tagged T1548.003."
+    source: "What Wazuh matches"
+  - question: "5404 suggests checking for…"
+    options:
+      - "A typo by root"
+      - "A stolen session"
+      - "A broken Wazuh agent"
+      - "An expired certificate"
+    answer: 1
+    explanation: "Repeated wrong sudo password — check for a stolen session."
+    source: "For the agent"
+  - question: "5403 for a new account. Action?"
+    options:
+      - "Escalate per policy"
+      - "Close as normal first use"
+      - "Lower severity to Low"
+      - "Ignore for 60 seconds"
+    answer: 0
+    explanation: "Unexpected first sudo — escalate per policy."
+    source: "For the agent"

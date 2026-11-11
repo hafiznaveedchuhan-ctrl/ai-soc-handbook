@@ -2,8 +2,9 @@
 type: Standard
 title: "T1543.003 Create or Modify System Process: Windows Service"
 description: MITRE ATT&CK T1543.003 Windows Service — creating or changing a Windows service so a payload runs at startup; the log sources MITRE names (4697, Sysmon 1/6/13/14) and how 7045 relates.
-status: draft
+status: stable
 order: 761
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1543-003
     title: "MITRE ATT&CK — T1543.003 Create or Modify System Process: Windows Service"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A Windows service starts automatically, usually as
@@ -55,6 +57,12 @@ The System-log event [7045](../windows-events/event-7045.md) also records a new 
 | New service with a binary in a temp or user folder | Suspicious — identify who installed it |
 | Service created right after a remote logon | Possible lateral movement — escalate per policy |
 | Driver load (Sysmon 6) of an unsigned driver | Escalate |
+
+## Related pages
+
+- [Event 4697: A service was installed in the system](../windows-events/event-4697.md)
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
+- [Sysmon events 12, 13, 14: Registry](../sysmon/event-12-13-14-registry.md)
 
 [^mitre-t1543-003]: MITRE ATT&CK, "Create or Modify System Process: Windows Service, Sub-technique T1543.003". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1543/003/
 [^det0552]: MITRE ATT&CK, "Detection of Windows Service Creation or Modification, Detection Strategy DET0552". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0552/

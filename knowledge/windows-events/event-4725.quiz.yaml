@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4725: A user account was disabled"
+  questionsPerRound: 6
+questions:
+  - question: "Which rule fires for 4725?"
+    options:
+      - "60109"
+      - "60111"
+      - "60110"
+      - "60137"
+    answer: 1
+    explanation: "60111 User account disabled or deleted."
+    source: "Wazuh rules"
+  - question: "Which MITRE tags does 60111 carry?"
+    options:
+      - "T1098 only"
+      - "T1136 and T1078"
+      - "T1484 and T1098"
+      - "T1098 and T1531"
+    answer: 3
+    explanation: "Ruleset tags: T1098, T1531."
+    source: "Wazuh rules"
+  - question: "Many accounts disabled at once. Reading?"
+    options:
+      - "Possible impact attack"
+      - "Routine leaver batch"
+      - "Backup side effect"
+      - "Typo by an admin"
+    answer: 0
+    explanation: "Many disabled at once → possible impact attack — escalate."
+    source: "For the agent"
+  - question: "Which accounts should be monitored (Microsoft)?"
+    options:
+      - "Only guest accounts"
+      - "Only new accounts"
+      - "High-value and never-disable ones"
+      - "Only computer objects"
+    answer: 2
+    explanation: "High-value accounts and accounts that should never be disabled."
+    source: "What Microsoft recommends monitoring"
+  - question: "Service account disabled. Action?"
+    options:
+      - "Close as cleanup"
+      - "Escalate per policy"
+      - "Note only"
+      - "Re-enable it silently"
+    answer: 1
+    explanation: "Admin or service account disabled → escalate."
+    source: "For the agent"
+  - question: "Level of rule 60111?"
+    options:
+      - "8"
+      - "5"
+      - "3"
+      - "12"
+    answer: 0
+    explanation: "60111 is level 8."
+    source: "Wazuh rules"

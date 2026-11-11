@@ -2,8 +2,9 @@
 type: Standard
 title: "MITRE ATT&CK in Wazuh"
 description: "How Wazuh maps alerts to MITRE ATT&CK — rule <mitre> IDs, the rule.mitre fields in an alert, the dashboard module's Framework, Dashboard and Intelligence tabs — and how to use the mapping in triage without over-trusting it."
-status: draft
+status: stable
 order: 606
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-mitre
     title: "Wazuh documentation — MITRE ATT&CK framework"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Many Wazuh rules carry a MITRE technique ID. The alert
@@ -33,6 +35,11 @@ ksor:
 |---|---|
 | Name the technique in the triage note | Use the alert's MITRE ID and link the handbook page if one exists ([mitre/](../mitre/t1110-brute-force.md)) |
 | Decide severity | Do **not** decide on the MITRE tag alone — use the [severity model](../rules-map/severity-model.md) |
+
+## Related pages
+
+- [Wazuh rule groups](rule-groups.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
 
 [^wazuh-mitre]: Wazuh documentation, "MITRE ATT&CK framework". https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

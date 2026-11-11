@@ -2,8 +2,9 @@
 type: Standard
 title: "T1110.004 Brute Force: Credential Stuffing"
 description: MITRE ATT&CK T1110.004 Credential Stuffing — username/password pairs from unrelated breach dumps tried against your accounts; how it differs from guessing and spraying, and how 4625 failures from one source with many distinct pairs reveal it.
-status: draft
+status: stable
 order: 704
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1110-004
     title: "MITRE ATT&CK — T1110.004 Brute Force: Credential Stuffing"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Attackers take username + password pairs leaked from
@@ -47,6 +49,12 @@ All rows: [^mitre-t1110-004]
 | Usernames look like e-mail addresses or ex-employees | Points to a leaked list — note it |
 | Any success (4624) from the same source | Escalate per escalation policy |
 | Parent technique | [T1110 Brute Force](t1110-brute-force.md) |
+
+## Related pages
+
+- [T1110.001 Brute Force: Password Guessing](t1110-001-password-guessing.md)
+- [Playbook: brute-force logon attempts](../playbooks/brute-force.md)
+- [IP reputation policy (AbuseIPDB)](../enrichment/ip-reputation-policy.md)
 
 [^mitre-t1110-004]: MITRE ATT&CK, "Brute Force: Credential Stuffing, Sub-technique T1110.004". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1110/004/
 [^det0460]: MITRE ATT&CK, "Credential Stuffing Detection via Reused Breached Credentials Across Services, Detection Strategy DET0460". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0460/

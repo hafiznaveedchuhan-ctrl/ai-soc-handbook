@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 7: Image loaded"
 description: "Sysmon event 7 — a module (DLL) loaded into a process, with hashes and signature; disabled by default and very noisy unless filtered."
-status: draft
+status: stable
 order: 403
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A DLL was loaded into a running program. Useful to spot unsigned or odd modules in trusted processes.
@@ -35,6 +37,12 @@ ksor:
 |---|---|
 | Unsigned DLL loaded into a system process | Escalate |
 | No event 7 at all | Expected unless configured — not evidence of absence |
+
+## Related pages
+
+- [Sysmon event 1: Process creation](event-1-process-create.md)
+- [T1059.001 Command and Scripting Interpreter: PowerShell](../mitre/t1059-001-powershell.md)
+- [Sysmon overview](overview.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0388]: MITRE ATT&CK, "Detection Strategy for T1548.002 – Bypass User Account Control (UAC), Detection Strategy DET0388". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0388/

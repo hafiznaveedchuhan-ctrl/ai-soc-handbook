@@ -1,0 +1,58 @@
+quiz:
+  title: "Severity response matrix (SLA)"
+  questionsPerRound: 6
+questions:
+  - question: "Critical alert: acknowledge within?"
+    options:
+      - "30 min"
+      - "15 min"
+      - "4 h"
+      - "1 business day"
+    answer: 1
+    explanation: "Matrix: Critical acknowledge 15 min."
+    source: "The matrix"
+  - question: "High alert: triage note done within?"
+    options:
+      - "30 min"
+      - "1 business day"
+      - "3 business days"
+      - "2 h"
+    answer: 3
+    explanation: "Matrix: High note done 2 h."
+    source: "The matrix"
+  - question: "Where does the clock start?"
+    options:
+      - "At the alert timestamp in Wazuh (UTC)"
+      - "When an analyst opens it"
+      - "At the next shift start"
+      - "When the note is started"
+    answer: 0
+    explanation: "Clock starts at the alert's Wazuh timestamp, not when noticed."
+    source: "The matrix"
+  - question: "A Low alert meets an escalation condition. Action?"
+    options:
+      - "Wait one business day"
+      - "Follow the Low row"
+      - "Escalate now"
+      - "Raise to Medium only"
+    answer: 2
+    explanation: "Escalation conditions win over the row."
+    source: "The matrix"
+  - question: "Which NIST element prioritises how quickly to respond?"
+    options:
+      - "ID.AM-02"
+      - "RS.MA-03"
+      - "DE.AE-07"
+      - "DE.CM-01"
+    answer: 1
+    explanation: "RS.MA-03 R2: prioritise response speed by scope, impact, urgency, resources."
+    source: "Why response times are set per severity"
+  - question: "How often are MTTD and MTTR reported?"
+    options:
+      - "Monthly, per severity"
+      - "Daily, for all alerts"
+      - "Yearly, in total"
+      - "Only after an incident"
+    answer: 0
+    explanation: "Owner policy: reported monthly per severity."
+    source: "Measuring it"

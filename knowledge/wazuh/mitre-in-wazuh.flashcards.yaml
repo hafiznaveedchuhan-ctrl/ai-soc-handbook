@@ -1,0 +1,14 @@
+deck:
+  title: "MITRE ATT&CK in Wazuh"
+  description: "Recall checks drawn only from the page MITRE ATT&CK in Wazuh."
+cards:
+  - front: "Is a rule's MITRE tag proof of an attack?"
+    back: "No — it is a label from the rule writer of what the rule might indicate."
+  - front: "What does the Framework tab of the MITRE module show?"
+    back: "Techniques seen per endpoint."
+  - front: "What does the Intelligence tab show?"
+    back: "Threat actors, IOCs and mitigations."
+  - front: "MITRE IDs on sshd rule 5760?"
+    back: "T1110.001 and T1021.004."
+  - front: "Should severity be decided from the MITRE tag?"
+    back: "No — use the severity model."

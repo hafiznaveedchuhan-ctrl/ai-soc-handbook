@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 1: Process creation"
 description: "Sysmon event 1 — a new process with its full command line, hashes and ProcessGuid; the most used event in triage and the base of many MITRE detections."
-status: draft
+status: stable
 order: 401
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -26,6 +27,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A program started. You get the full command line, the parent process and a hash of the file.
@@ -52,6 +54,12 @@ ksor:
 | Office app or browser spawning a script host or shell | Escalate per escalation policy |
 | Encoded or obfuscated command line | See [T1059.001 PowerShell](../mitre/t1059-001-powershell.md) |
 | Correlate with other Sysmon events | Use ProcessGuid |
+
+## Related pages
+
+- [Event 4688: A new process has been created](../windows-events/event-4688.md)
+- [Playbook: suspicious PowerShell](../playbooks/suspicious-powershell.md)
+- [Sysmon overview](overview.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/

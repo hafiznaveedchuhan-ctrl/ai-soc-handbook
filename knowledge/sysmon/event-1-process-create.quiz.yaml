@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 1: Process creation"
+  questionsPerRound: 6
+questions:
+  - question: "Which field correlates Sysmon events for one process?"
+    options:
+      - "ProcessId only"
+      - "ProcessGuid"
+      - "HashType"
+      - "LogonId"
+    answer: 1
+    explanation: "Use ProcessGuid to correlate with other Sysmon events."
+    source: "For the agent"
+  - question: "Which DET uses Sysmon 1 for T1053.005?"
+    options:
+      - "DET0552"
+      - "DET0376"
+      - "DET0070"
+      - "DET0441"
+    answer: 3
+    explanation: "T1053.005 → DET0441."
+    source: "Used by MITRE detections"
+  - question: "Office app spawning a shell. Action?"
+    options:
+      - "Escalate per policy"
+      - "Close as a macro"
+      - "Note only"
+      - "Ignore it"
+    answer: 0
+    explanation: "Office or browser spawning a script host or shell → escalate."
+    source: "For the agent"
+  - question: "What gives context on the execution?"
+    options:
+      - "The ProcessGuid"
+      - "The file hash"
+      - "The full command line"
+      - "The parent's PID"
+    answer: 2
+    explanation: "Microsoft: the full command line provides context on the execution."
+    source: "What Microsoft says"
+  - question: "Encoded command line. Which page?"
+    options:
+      - "T1046 Discovery"
+      - "T1059.001 PowerShell"
+      - "T1003.001 LSASS"
+      - "T1566 Phishing"
+    answer: 1
+    explanation: "Encoded or obfuscated → see T1059.001."
+    source: "For the agent"
+  - question: "Which DET uses Sysmon 1 for T1566?"
+    options:
+      - "DET0070"
+      - "DET0327"
+      - "DET0441"
+      - "DET0552"
+    answer: 0
+    explanation: "T1566 → DET0070."
+    source: "Used by MITRE detections"

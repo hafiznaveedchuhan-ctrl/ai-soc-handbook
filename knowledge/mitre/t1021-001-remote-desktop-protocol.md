@@ -2,8 +2,9 @@
 type: Standard
 title: "T1021.001 Remote Services: Remote Desktop Protocol"
 description: MITRE ATT&CK T1021.001 Remote Desktop Protocol — using valid accounts to log on over RDP and move laterally; the logon events MITRE correlates (4624, 4648, 4778, 4779) and what follows a suspicious RDP session.
-status: draft
+status: stable
 order: 762
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1021-001
     title: "MITRE ATT&CK — T1021.001 Remote Services: Remote Desktop Protocol"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** With a stolen password, an attacker can simply Remote
@@ -53,6 +55,10 @@ See [4624](../windows-events/event-4624.md), [4648](../windows-events/event-4648
 | RDP logon from a public IP | Escalate per escalation policy |
 | RDP logon, then new processes or connections to other hosts | Possible lateral movement — escalate |
 | RDP after many failures | [Success after failures](../playbooks/success-after-failures.md) |
+
+## Related pages
+
+- [T1078 Valid Accounts](t1078-valid-accounts.md)
 
 [^mitre-t1021-001]: MITRE ATT&CK, "Remote Services: Remote Desktop Protocol, Sub-technique T1021.001". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1021/001/
 [^det0327]: MITRE ATT&CK, "Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity, Detection Strategy DET0327". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0327/

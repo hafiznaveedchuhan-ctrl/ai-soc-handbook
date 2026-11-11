@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: suspicious PowerShell"
 description: "L1 steps for a suspicious PowerShell alert — read the full command line (Sysmon 1 / 4688) and script block (4104), check the parent process and what ran next, and decide using MITRE's PowerShell detection chain."
-status: draft
+status: stable
 order: 805
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: det0455
     title: "MITRE ATT&CK — DET0455 Abuse of PowerShell for Arbitrary Execution"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** PowerShell is a normal admin tool, so the question is
@@ -65,6 +67,10 @@ MITRE's log sources for this chain: Sysmon 1 and 7, PowerShell 4103–4106 and 4
 
 The agent may gather evidence and propose a verdict; the escalation decision and any containment
 stay with the analyst, per the [escalation policy](../rules-map/escalation-policy.md).
+
+## Related pages
+
+- [T1566 Phishing](../mitre/t1566-phishing.md)
 
 [^det0455]: MITRE ATT&CK, "Abuse of PowerShell for Arbitrary Execution, Detection Strategy DET0455". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0455/
 [^ms-pslog]: Microsoft Learn, "about_Logging_Windows" (Script Block Logging, event 4104). https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows

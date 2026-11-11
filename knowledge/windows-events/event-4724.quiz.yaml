@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4724: An attempt was made to reset an account's password"
+  questionsPerRound: 6
+questions:
+  - question: "Whose password does 4724 show being reset?"
+    options:
+      - "The actor's own"
+      - "Another account's"
+      - "Only the built-in admin's"
+      - "Only a computer account's"
+    answer: 1
+    explanation: "4724: an account tried to reset another account's password."
+    source: "Meaning"
+  - question: "Admin account reset with no ticket. Action?"
+    options:
+      - "Close it"
+      - "Note only"
+      - "Wait a day"
+      - "Escalate"
+    answer: 3
+    explanation: "Confirm with a ticket; else escalate."
+    source: "For the agent"
+  - question: "Reset, then logon as that account. Reading?"
+    options:
+      - "Possible takeover"
+      - "Normal help desk"
+      - "Scanner noise"
+      - "Backup job"
+    answer: 0
+    explanation: "Reset followed by logon → possible takeover."
+    source: "For the agent"
+  - question: "What does Microsoft monitor for high-value accounts?"
+    options:
+      - "Only failed resets"
+      - "Only resets at night"
+      - "Every 4724 on that target"
+      - "Nothing for 4724"
+    answer: 2
+    explanation: "Monitor every 4724 for the account's Target Account Security ID."
+    source: "What Microsoft recommends monitoring"
+  - question: "Which subcategory logs 4724?"
+    options:
+      - "Audit Credential Validation"
+      - "Audit User Account Management"
+      - "Audit Kerberos Authentication Service"
+      - "Audit Logon"
+    answer: 1
+    explanation: "4724: Audit User Account Management."
+    source: "Meaning"
+  - question: "Which field names the reset account?"
+    options:
+      - "Target Account Security ID"
+      - "Subject Logon ID"
+      - "Workstation Name"
+      - "Ticket Encryption Type"
+    answer: 0
+    explanation: "Microsoft monitors the Target Account Security ID."
+    source: "What Microsoft recommends monitoring"

@@ -1,0 +1,14 @@
+deck:
+  title: "Where Linux authentication logs live"
+  description: "Recall checks drawn only from the page Where Linux authentication logs live."
+cards:
+  - front: "Auth log on Debian/Ubuntu?"
+    back: "/var/log/auth.log."
+  - front: "Auth log on the Red Hat family?"
+    back: "/var/log/secure."
+  - front: "Default sshd SyslogFacility?"
+    back: "AUTH."
+  - front: "Does /var/log/messages on Red Hat hold authpriv?"
+    back: "No — authpriv messages are excluded from it."
+  - front: "Which port does the Wazuh <remote> syslog block listen on?"
+    back: "514, tcp or udp."

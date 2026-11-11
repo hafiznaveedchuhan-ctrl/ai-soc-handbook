@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4769: A Kerberos service ticket was requested"
+  description: "Recall checks drawn only from the page Event 4769: A Kerberos service ticket was requested."
+cards:
+  - front: "What does 4769 record?"
+    back: "A Kerberos service ticket (TGS) request to the KDC."
+  - front: "Audit subcategory?"
+    back: "Audit Kerberos Service Ticket Operations."
+  - front: "Ticket Encryption Type 0x17 means…"
+    back: "RC4-HMAC."
+  - front: "RC4 tickets in a modern domain?"
+    back: "Unusual — note it; many from one account is suspicious."
+  - front: "One account requesting many service tickets quickly?"
+    back: "Escalate per policy."

@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook: port scan"
+  questionsPerRound: 6
+questions:
+  - question: "Which scan matters more?"
+    options:
+      - "External"
+      - "Internal"
+      - "Blocked"
+      - "IPv6-only"
+    answer: 1
+    explanation: "External perimeter scans are common; internal ones matter more."
+    source: "L1 steps"
+  - question: "External scan, all blocked. Action?"
+    options:
+      - "Escalate as High"
+      - "Block the country"
+      - "Reset all passwords"
+      - "Note; no escalation"
+    answer: 3
+    explanation: "External, all blocked → note, no escalation."
+    source: "Escalate?"
+  - question: "Scan then successful logon on a target?"
+    options:
+      - "Escalate"
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+    answer: 0
+    explanation: "Scan followed by logon or exploit → escalate."
+    source: "Escalate?"
+  - question: "Internal source, unknown process. Action?"
+    options:
+      - "Close"
+      - "Note"
+      - "Escalate"
+      - "Wait"
+    answer: 2
+    explanation: "Source internal + unknown process → escalate."
+    source: "For the agent"
+  - question: "Firewall deny only. Record what?"
+    options:
+      - "Only the time"
+      - "Source and port range"
+      - "Only the rule ID"
+      - "Nothing"
+    answer: 1
+    explanation: "Record the source and port range."
+    source: "For the agent"
+  - question: "Which technique does this playbook map to?"
+    options:
+      - "T1046"
+      - "T1110"
+      - "T1566"
+      - "T1078"
+    answer: 0
+    explanation: "MITRE: T1046 Network Service Discovery."
+    source: "MITRE ATT&CK"

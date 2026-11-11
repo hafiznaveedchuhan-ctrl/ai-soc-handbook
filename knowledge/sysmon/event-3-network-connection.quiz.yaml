@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon event 3: Network connection"
+  questionsPerRound: 6
+questions:
+  - question: "Is Sysmon 3 enabled by default?"
+    options:
+      - "Yes"
+      - "No"
+      - "Only on servers"
+      - "Only for UDP"
+    answer: 1
+    explanation: "Event 3 is disabled by default."
+    source: "What Microsoft says"
+  - question: "A document reader connecting out. Action?"
+    options:
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+      - "Escalate"
+    answer: 3
+    explanation: "Unusual process connecting out → escalate."
+    source: "For the agent"
+  - question: "Which fields link the connection to a process?"
+    options:
+      - "ProcessId and ProcessGuid"
+      - "HashType and Image"
+      - "LogonId and SID"
+      - "TargetImage and Access"
+    answer: 0
+    explanation: "Each connection is linked to ProcessId and ProcessGuid."
+    source: "What Microsoft says"
+  - question: "Many destinations from one process. Reading?"
+    options:
+      - "Normal web browsing traffic"
+      - "Backup traffic"
+      - "Possible scan — T1046"
+      - "DNS failure"
+    answer: 2
+    explanation: "Many destinations quickly → possible scan."
+    source: "For the agent"
+  - question: "Before a reputation lookup, do what?"
+    options:
+      - "Block the destination IP"
+      - "Classify with special ranges"
+      - "Ask the user first"
+      - "Restart the process"
+    answer: 1
+    explanation: "Classify the destination with special ranges first."
+    source: "For the agent"
+  - question: "Which DET uses Sysmon 3 for RDP?"
+    options:
+      - "DET0327"
+      - "DET0376"
+      - "DET0363"
+      - "DET0497"
+    answer: 0
+    explanation: "T1021.001 → DET0327."
+    source: "Used by MITRE detections"

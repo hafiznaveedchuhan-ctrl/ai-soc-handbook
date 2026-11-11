@@ -1,0 +1,58 @@
+quiz:
+  title: "False positives: admin maintenance windows"
+  questionsPerRound: 6
+questions:
+  - question: "Wazuh time and weekday options check which time?"
+    options:
+      - "The event's own timestamp"
+      - "The Wazuh server time"
+      - "The agent's local time"
+      - "The analyst's browser time"
+    answer: 1
+    explanation: "Both options check the Wazuh server time, not the event timestamp."
+    source: "What Wazuh offers"
+  - question: "Which attribute keeps a changed default rule across upgrades?"
+    options:
+      - "noalert=\"1\""
+      - "level=\"0\""
+      - "frequency=\"0\""
+      - "overwrite=\"yes\""
+    answer: 3
+    explanation: "Copy the rule to /var/ossec/etc/rules/ and add overwrite=\"yes\"."
+    source: "What Wazuh offers"
+  - question: "An alert inside the window has no ticket. What then?"
+    options:
+      - "Normal triage"
+      - "Benign true positive"
+      - "Close as false positive"
+      - "Lower severity one step"
+    answer: 0
+    explanation: "The window alone proves nothing; without a ticket it is normal triage."
+    source: "For the agent"
+  - question: "A 1102 inside the window has no documented reason. Action?"
+    options:
+      - "Close as maintenance"
+      - "Wait for the next window"
+      - "Escalate — condition 3"
+      - "Add it to FIM ignore"
+    answer: 2
+    explanation: "Condition 3 is a cleared Security log without a documented maintenance reason."
+    source: "For the agent"
+  - question: "Owner standing maintenance window?"
+    options:
+      - "Daily 01:00–05:00 UTC"
+      - "Sunday 22:00 – Monday 04:00 UTC"
+      - "Saturday 18:00 – 23:00 UTC"
+      - "Weekdays 12:00–13:00 UTC"
+    answer: 1
+    explanation: "Owner policy: Sunday 22:00 to Monday 04:00 UTC."
+    source: "Handbook rule"
+  - question: "Use level-0 overrides to hide maintenance noise?"
+    options:
+      - "No — tune with a reviewed custom rule"
+      - "Yes, for every noisy rule"
+      - "Yes, but only during the window"
+      - "Only for level 12 and above"
+    answer: 0
+    explanation: "Owner policy: no level-0 overrides; tune with a reviewed custom rule."
+    source: "Handbook rule"

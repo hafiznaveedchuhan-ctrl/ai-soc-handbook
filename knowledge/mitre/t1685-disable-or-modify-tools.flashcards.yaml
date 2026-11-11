@@ -1,0 +1,14 @@
+deck:
+  title: "T1685 Disable or Modify Tools"
+  description: "Recall checks drawn only from the page T1685 Disable or Modify Tools."
+cards:
+  - front: "Which old ID now redirects to T1685?"
+    back: "T1562.001."
+  - front: "Tactic of T1685?"
+    back: "Defense Impairment."
+  - front: "Sometimes the only sign of T1685?"
+    back: "A machine stops sending logs."
+  - front: "Sub-technique for clearing Windows event logs?"
+    back: "T1685.005."
+  - front: "Wazuh agent or Sysmon stops reporting?"
+    back: "Treat as possible tampering until explained."

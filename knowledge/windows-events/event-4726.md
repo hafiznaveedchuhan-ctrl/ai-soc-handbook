@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4726: A user account was deleted"
 description: "Windows Security event 4726 — a user account was deleted; Microsoft's monitoring advice and the shared Wazuh rule 60111."
-status: draft
+status: stable
 order: 374
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4726
     title: "Microsoft Learn — 4726(S): A user account was deleted"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** An account was deleted. Attackers delete accounts they created to cover tracks, or delete admins to lock defenders out.
@@ -41,6 +43,12 @@ All rows: [^wazuh-0580]
 |---|---|
 | Account created and deleted within a short time | Cover-up pattern — escalate |
 | Admin account deleted | Escalate |
+
+## Related pages
+
+- [Event 4720: A user account was created](event-4720.md)
+- [Event 4725: A user account was disabled](event-4725.md)
+- [Playbook: new local account created](../playbooks/new-local-account.md)
 
 [^ms-4726]: Microsoft Learn, "4726(S): A user account was deleted". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4726
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

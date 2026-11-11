@@ -1,0 +1,58 @@
+quiz:
+  title: "Sysmon overview"
+  questionsPerRound: 6
+questions:
+  - question: "Time zone of Sysmon timestamps?"
+    options:
+      - "Local server time"
+      - "UTC"
+      - "The analyst's time"
+      - "The DC's time zone"
+    answer: 1
+    explanation: "Sysmon event timestamps are in UTC."
+    source: "What Sysmon is"
+  - question: "Does Sysmon hide itself from attackers?"
+    options:
+      - "Yes, always"
+      - "Only as SYSTEM"
+      - "Only on servers"
+      - "No"
+    answer: 3
+    explanation: "It does not hide itself from attackers."
+    source: "What Sysmon is"
+  - question: "Which event ID is a DNS query?"
+    options:
+      - "22"
+      - "3"
+      - "11"
+      - "8"
+    answer: 0
+    explanation: "Event 22 is DNS query."
+    source: "Events in this handbook"
+  - question: "No Sysmon 3 events at all. Conclusion?"
+    options:
+      - "No network activity"
+      - "Sysmon is tampered"
+      - "Check the config first"
+      - "The host is offline"
+    answer: 2
+    explanation: "3 and 7 are off by default; check configuration before concluding."
+    source: "For the agent"
+  - question: "Which event ID is CreateRemoteThread?"
+    options:
+      - "10"
+      - "8"
+      - "7"
+      - "1"
+    answer: 1
+    explanation: "Event 8 is CreateRemoteThread."
+    source: "Events in this handbook"
+  - question: "Where does Sysmon analysis happen?"
+    options:
+      - "In a SIEM"
+      - "Inside Sysmon"
+      - "In the driver"
+      - "On the DC"
+    answer: 0
+    explanation: "Sysmon does not analyse events; a SIEM does."
+    source: "What Sysmon is"

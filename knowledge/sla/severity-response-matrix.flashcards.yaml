@@ -1,0 +1,14 @@
+deck:
+  title: "Severity response matrix (SLA)"
+  description: "Recall checks drawn only from the page Severity response matrix (SLA)."
+cards:
+  - front: "Critical: acknowledge within?"
+    back: "15 minutes."
+  - front: "High: triage note done within?"
+    back: "2 hours."
+  - front: "When does the SLA clock start?"
+    back: "At the alert's timestamp in Wazuh (UTC)."
+  - front: "What overrides the matrix row?"
+    back: "Any escalation condition — escalate now."
+  - front: "SOC coverage?"
+    back: "Business hours; 'business day' = a working day within coverage hours."

@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 3: Network connection"
+  description: "Recall checks drawn only from the page Sysmon event 3: Network connection."
+cards:
+  - front: "What does Sysmon 3 log?"
+    back: "TCP/UDP connections, each linked to a process."
+  - front: "Is it on by default?"
+    back: "No — disabled by default."
+  - front: "What does it add over a firewall log?"
+    back: "Which program made the connection."
+  - front: "Many destinations from one process quickly?"
+    back: "Possible scan — T1046."
+  - front: "Destination IP — first step?"
+    back: "Classify with special ranges before a reputation lookup."

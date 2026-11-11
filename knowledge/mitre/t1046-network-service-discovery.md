@@ -2,8 +2,9 @@
 type: Standard
 title: "T1046 Network Service Discovery"
 description: MITRE ATT&CK T1046 Network Service Discovery — scanning hosts for listening services (port, vulnerability, wordlist scans); the process + connection pattern MITRE correlates and how it shows up in firewall and flow logs.
-status: draft
+status: stable
 order: 764
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1046
     title: "MITRE ATT&CK — T1046 Network Service Discovery"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Before attacking, adversaries find out which services
@@ -45,6 +47,12 @@ See [Common network attacks](../networking/network-attacks.md), [TCP](../network
 | One internal host, many destination ports or hosts | Identify the process; scanners on admin hosts may be expected |
 | Scanning from a workstation | Suspicious — escalate per policy |
 | External source scanning the perimeter | Note; check whether anything was allowed |
+
+## Related pages
+
+- [Playbook: port scan](../playbooks/port-scan.md)
+- [Ports and services](../networking/ports-and-services.md)
+- [False positives: vulnerability scanners](../false-positives/vulnerability-scanners.md)
 
 [^mitre-t1046]: MITRE ATT&CK, "Network Service Discovery, Technique T1046". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1046/
 [^det0376]: MITRE ATT&CK, "Behavioral Detection Strategy for Network Service Discovery Across Platforms, Detection Strategy DET0376". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0376/

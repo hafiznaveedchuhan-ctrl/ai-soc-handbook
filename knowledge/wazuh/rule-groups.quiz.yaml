@@ -1,0 +1,58 @@
+quiz:
+  title: "Wazuh rule groups"
+  questionsPerRound: 6
+questions:
+  - question: "Query for all failed logins?"
+    options:
+      - "rule.groups: authentication_success"
+      - "rule.groups: authentication_failed"
+      - "rule.groups: syscheck OR syslog"
+      - "rule.groups: attack AND sshd"
+    answer: 1
+    explanation: "The For-the-agent table maps all failed logins to authentication_failed."
+    source: "For the agent"
+  - question: "Allowed range of the frequency option?"
+    options:
+      - "1–100"
+      - "0–60"
+      - "8–120"
+      - "2–9999"
+    answer: 3
+    explanation: "frequency takes 2 to 9999 matches."
+    source: "What a group is"
+  - question: "Which group contains rule 5715?"
+    options:
+      - "authentication_success"
+      - "authentication_failed"
+      - "authentication_failures"
+      - "pci_dss_10.2.4"
+    answer: 0
+    explanation: "5715 is the SSH success rule in authentication_success."
+    source: "Groups in the SSH rules"
+  - question: "What does if_matched_group add to if_group?"
+    options:
+      - "A MITRE technique ID to every alert it makes"
+      - "A higher level for the alert"
+      - "A time period for the earlier match"
+      - "A CDB lookup on the user"
+    answer: 2
+    explanation: "if_matched_group means the group matched within a period of time."
+    source: "What a group is"
+  - question: "Rules 5712, 5720 and 5763 share which group?"
+    options:
+      - "authentication_failed"
+      - "authentication_failures"
+      - "authentication_success"
+      - "syscheck"
+    answer: 1
+    explanation: "These are the brute-force correlations."
+    source: "Groups in the SSH rules"
+  - question: "What does ignore set after a rule fires?"
+    options:
+      - "Seconds the rule stays quiet"
+      - "How many matches are needed before it fires"
+      - "The alert's severity level"
+      - "Which groups are excluded"
+    answer: 0
+    explanation: "ignore is the quiet time in seconds after firing."
+    source: "What a group is"

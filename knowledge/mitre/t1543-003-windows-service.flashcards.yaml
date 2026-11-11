@@ -1,0 +1,14 @@
+deck:
+  title: "T1543.003 Create or Modify System Process: Windows Service"
+  description: "Recall checks drawn only from the page T1543.003 Create or Modify System Process: Windows Service."
+cards:
+  - front: "Tactics of T1543.003?"
+    back: "Persistence and Privilege Escalation."
+  - front: "Where is service configuration stored?"
+    back: "In the Registry (HKLM\\System\\CurrentControlSet\\Services)."
+  - front: "Security event for service creation?"
+    back: "4697."
+  - front: "Sysmon event for a driver load?"
+    back: "6."
+  - front: "New service right after a remote logon?"
+    back: "Possible lateral movement — escalate per policy."

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4769: A Kerberos service ticket was requested"
 description: "Windows Security event 4769 — a domain controller received a Kerberos service-ticket (TGS) request; ticket encryption types (0x17 = RC4-HMAC), Wazuh rules 60106/60131, and the 2025 field update."
-status: draft
+status: stable
 order: 384
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4769
     title: "Microsoft Learn — 4769(S, F): A Kerberos service ticket was requested"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A user asked the domain controller for a ticket to reach a specific service. The encryption type in the ticket matters: old RC4 tickets stand out.
@@ -42,6 +44,12 @@ All rows: [^wazuh-0580]
 |---|---|
 | Ticket Encryption Type 0x17 (RC4) in a modern domain | Unusual — note it; many from one account is suspicious |
 | One account requesting tickets for many services quickly | Escalate per policy |
+
+## Related pages
+
+- [Event 4768: A Kerberos authentication ticket (TGT) was requested](event-4768.md)
+- [Event 4624: An account was successfully logged on](event-4624.md)
+- [T1078 Valid Accounts](../mitre/t1078-valid-accounts.md)
 
 [^ms-4769]: Microsoft Learn, "4769(S, F): A Kerberos service ticket was requested". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

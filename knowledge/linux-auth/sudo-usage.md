@@ -2,8 +2,9 @@
 type: Definition
 title: "sudo usage"
 description: "How Wazuh classifies sudo events — failed password (5401), three failures (5404), user not in sudoers (5405), successful sudo to root (5402) and first-time sudo (5403) — all mapped to T1548.003."
-status: draft
+status: stable
 order: 520
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-0020
     title: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** `sudo` runs a command with higher rights. Failed sudo
@@ -39,5 +41,12 @@ All rows: [^wazuh-0020]
 | 5405 | A user tried sudo without permission — check the account and command |
 | 5404 | Repeated wrong sudo password — check for a stolen session |
 | 5403 for a service or new account | Unexpected first sudo — escalate per policy |
+
+## Related pages
+
+- [Where Linux authentication logs live](where-auth-logs-live.md)
+- [New Linux user or group (useradd, gpasswd)](new-user-useradd.md)
+- [T1548.002 Abuse Elevation Control Mechanism: Bypass UAC](../mitre/t1548-002-bypass-uac.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
 
 [^wazuh-0020]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0020-syslog_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0020-syslog_rules.xml

@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook: suspicious PowerShell"
+  questionsPerRound: 6
+questions:
+  - question: "Which event logs PowerShell script blocks?"
+    options:
+      - "4688"
+      - "4104"
+      - "4103"
+      - "400"
+    answer: 1
+    explanation: "With Script Block Logging on, content is logged as 4104."
+    source: "L1 steps"
+  - question: "Parent process is excel.exe. Action?"
+    options:
+      - "Close it as noise"
+      - "Note it only"
+      - "Ignore it"
+      - "Escalate"
+    answer: 3
+    explanation: "Parent is an Office app → escalate."
+    source: "For the agent"
+  - question: "Long base64 argument. Do what?"
+    options:
+      - "Decode and quote it"
+      - "Delete the script"
+      - "Close the alert"
+      - "Block PowerShell"
+    answer: 0
+    explanation: "Decode it and quote it in the triage note."
+    source: "For the agent"
+  - question: "Known admin script, expected user, documented?"
+    options:
+      - "Escalate as High"
+      - "Needs-info"
+      - "Close as benign"
+      - "True positive"
+    answer: 2
+    explanation: "Close as benign with the note."
+    source: "Escalate?"
+  - question: "4104 is missing. Reading?"
+    options:
+      - "Nothing ran"
+      - "Logging may be off"
+      - "Attack proven"
+      - "Agent broken"
+    answer: 1
+    explanation: "Not proof of nothing — Script Block Logging may be off."
+    source: "Escalate?"
+  - question: "Which Sysmon event shows connections after?"
+    options:
+      - "3"
+      - "7"
+      - "11"
+      - "22"
+    answer: 0
+    explanation: "Network connections: Sysmon 3."
+    source: "Evidence to collect"

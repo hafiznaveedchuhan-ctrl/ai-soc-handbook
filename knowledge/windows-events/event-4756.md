@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4756: A member was added to a security-enabled universal group"
 description: "Windows Security event 4756 — a member was added to a universal security group; same as 4732 for universal groups, domain groups only; Wazuh rule 60151."
-status: draft
+status: stable
 order: 382
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4756
     title: "Microsoft Learn — Audit Security Group Management"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone was added to a universal security group (forest-wide). Treat admin-granting groups like 4728.
@@ -44,6 +46,11 @@ All rows: [^wazuh-0580]
 |---|---|
 | Added to Enterprise Admins or another admin group | Escalate |
 | Unexpected adder | Ask for the change ticket |
+
+## Related pages
+
+- [Event 4728: A member was added to a security-enabled global group](event-4728.md)
+- [Playbook: account added to Administrators](../playbooks/added-to-admin-group.md)
 
 [^ms-4756]: Microsoft Learn, "Audit Security Group Management". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

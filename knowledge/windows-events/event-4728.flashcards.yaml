@@ -1,0 +1,14 @@
+deck:
+  title: "Event 4728: A member was added to a security-enabled global group"
+  description: "Recall checks drawn only from the page Event 4728: A member was added to a security-enabled global group."
+cards:
+  - front: "What does 4728 record?"
+    back: "A member was added to a security-enabled global group."
+  - front: "Where is 4728 generated?"
+    back: "Only for domain groups."
+  - front: "Which event has the same fields?"
+    back: "4732 — Microsoft says they are identical."
+  - front: "Wazuh rules?"
+    back: "60141 and 60113, level 5 (T1484)."
+  - front: "Added to Domain Admins?"
+    back: "Escalate — see added to admin group."

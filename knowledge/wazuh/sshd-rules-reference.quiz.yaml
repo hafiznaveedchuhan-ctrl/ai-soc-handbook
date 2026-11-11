@@ -1,0 +1,58 @@
+quiz:
+  title: "Wazuh sshd rules reference"
+  questionsPerRound: 6
+questions:
+  - question: "Level of rule 5763?"
+    options:
+      - "5"
+      - "10"
+      - "8"
+      - "12"
+    answer: 1
+    explanation: "5763 brute force, authentication failed, is level 10."
+    source: "Rule table"
+  - question: "Which rule is 'Login with a non-existent user'?"
+    options:
+      - "5715"
+      - "5731"
+      - "5704"
+      - "5710"
+    answer: 3
+    explanation: "5710 level 5 — login with a non-existent user."
+    source: "Rule table"
+  - question: "Correlation for 5763?"
+    options:
+      - "8 in 120 s, same IP"
+      - "8 × 5716, any IP"
+      - "3 in 60 s, same user"
+      - "10 in 300 s, same host"
+    answer: 0
+    explanation: "5763: 8 matches in 120 seconds from the same IP."
+    source: "Rule table"
+  - question: "Which rule reports SSH scanning (T1046)?"
+    options:
+      - "5706"
+      - "5701"
+      - "5731"
+      - "5758"
+    answer: 2
+    explanation: "5731 SSH scanning, level 6, T1046."
+    source: "Rule table"
+  - question: "Level of the parent rule 5700?"
+    options:
+      - "3"
+      - "0"
+      - "5"
+      - "8"
+    answer: 1
+    explanation: "5700 groups SSHD messages at level 0."
+    source: "Rule table"
+  - question: "Rule 5758 means…"
+    options:
+      - "Maximum auth attempts exceeded"
+      - "Timeout while logging in"
+      - "Login with a denied user"
+      - "Insecure connection attempt"
+    answer: 0
+    explanation: "5758 level 8 — maximum authentication attempts exceeded."
+    source: "Rule table"

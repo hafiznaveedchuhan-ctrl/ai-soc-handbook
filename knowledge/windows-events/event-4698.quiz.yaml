@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4698: A scheduled task was created"
+  questionsPerRound: 6
+questions:
+  - question: "Which subcategory logs 4698?"
+    options:
+      - "Audit Security System Extension"
+      - "Audit Other Object Access Events"
+      - "Audit Policy Change"
+      - "Audit Logoff"
+    answer: 1
+    explanation: "4698: Audit Other Object Access Events."
+    source: "Meaning"
+  - question: "Wazuh rule level for 60228?"
+    options:
+      - "8"
+      - "3"
+      - "10"
+      - "4"
+    answer: 3
+    explanation: "60228 A scheduled task was created is level 4."
+    source: "Wazuh rules"
+  - question: "Task Name like \\Name in the library root. Reading?"
+    options:
+      - "Suspicious — check its action"
+      - "Normal — Windows built-in"
+      - "Benign — close it"
+      - "Scanner — allow-list"
+    answer: 0
+    explanation: "Microsoft: root-level tasks are often manual or malware."
+    source: "For the agent"
+  - question: "Why does malware use scheduled tasks?"
+    options:
+      - "To clear the Security log"
+      - "To read lsass memory"
+      - "To stay after a reboot"
+      - "To scan network ports"
+    answer: 2
+    explanation: "Tasks are used by malware to stay in the system after reboot."
+    source: "What Microsoft recommends monitoring"
+  - question: "Which event records a task change?"
+    options:
+      - "4698"
+      - "4702"
+      - "4697"
+      - "4738"
+    answer: 1
+    explanation: "MITRE lists 4702 for modification."
+    source: "MITRE ATT&CK"
+  - question: "Task runs a script host from a user folder. Action?"
+    options:
+      - "Escalate per policy"
+      - "Close as admin task"
+      - "Note and wait"
+      - "Ignore below level 8"
+    answer: 0
+    explanation: "The For-the-agent table says escalate."
+    source: "For the agent"

@@ -1,0 +1,58 @@
+quiz:
+  title: "New Linux user or group (useradd, gpasswd)"
+  questionsPerRound: 6
+questions:
+  - question: "Level of rule 5902?"
+    options:
+      - "5"
+      - "8"
+      - "2"
+      - "0"
+    answer: 1
+    explanation: "5902 new user added is level 8."
+    source: "What Wazuh matches"
+  - question: "Which rule reports a new group?"
+    options:
+      - "5902"
+      - "2960"
+      - "5905"
+      - "5901"
+    answer: 3
+    explanation: "5901 level 8 — new group added."
+    source: "What Wazuh matches"
+  - question: "Rule for gpasswd 'added by'?"
+    options:
+      - "2960"
+      - "2961"
+      - "5902"
+      - "5401"
+    answer: 0
+    explanation: "2960 level 2 — user added to group."
+    source: "What Wazuh matches"
+  - question: "5902 outside a change window. Next step?"
+    options:
+      - "Close it as admin work"
+      - "Lower its level to 0"
+      - "Ask who created it; check SSH logins"
+      - "Wait for a second 5902"
+    answer: 2
+    explanation: "Ask who created it and check for a following SSH login."
+    source: "For the agent"
+  - question: "Which MITRE technique do 5902 and 2961 carry?"
+    options:
+      - "T1548.003"
+      - "T1136"
+      - "T1078"
+      - "T1110"
+    answer: 1
+    explanation: "5902, 2960 and 2961 are tagged T1136."
+    source: "What Wazuh matches"
+  - question: "2961 fired. Reading?"
+    options:
+      - "Privilege change — escalate"
+      - "Typo — note it"
+      - "Scanner — ignore it"
+      - "Backup — check window"
+    answer: 0
+    explanation: "Added to sudo is a privilege change — escalate per policy."
+    source: "For the agent"

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4697: A service was installed in the system"
 description: "Windows Security event 4697 — a new service was installed; why Microsoft says unexpected installs should alert, the Service File Name check, and the link to T1543.003 and System event 7045."
-status: draft
+status: stable
 order: 395
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4697
     title: "Microsoft Learn — 4697(S): A service was installed in the system"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A new Windows service was installed. Services run at startup, often as SYSTEM, so an unexpected one is a classic persistence step.
@@ -34,5 +36,9 @@ Monitor this event especially on high-value assets: a new service installation s
 |---|---|
 | Service File Name outside %windir% / Program Files | Suspicious per Microsoft — escalate |
 | Service installed right after a remote logon | Possible lateral movement — escalate |
+
+## Related pages
+
+- [Playbook: new service or scheduled task](../playbooks/new-service-or-scheduled-task.md)
 
 [^ms-4697]: Microsoft Learn, "4697(S): A service was installed in the system". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697

@@ -1,0 +1,14 @@
+deck:
+  title: "Playbook: account lockout storm"
+  description: "Recall checks drawn only from the page Playbook: account lockout storm."
+cards:
+  - front: "Wazuh rule for multiple lockouts?"
+    back: "60115, level 9."
+  - front: "Group 4740 lockouts by which field?"
+    back: "Caller Computer Name."
+  - front: "One caller, one account, repeating?"
+    back: "Usually a device or service with a stale password."
+  - front: "One caller, many accounts?"
+    back: "Password spraying (T1110.003) — escalate."
+  - front: "Success from the same source after failures?"
+    back: "Escalation condition 4."

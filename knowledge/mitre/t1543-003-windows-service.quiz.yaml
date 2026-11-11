@@ -1,0 +1,58 @@
+quiz:
+  title: "T1543.003 Create or Modify System Process: Windows Service"
+  questionsPerRound: 6
+questions:
+  - question: "Which Security event is Service Creation?"
+    options:
+      - "4698"
+      - "4697"
+      - "4688"
+      - "4702"
+    answer: 1
+    explanation: "Service Creation: 4697."
+    source: "Detection (MITRE DET0552)"
+  - question: "Which System-log event also records a new service?"
+    options:
+      - "1102"
+      - "4719"
+      - "4634"
+      - "7045"
+    answer: 3
+    explanation: "The System-log event 7045 also records a new service."
+    source: "Detection (MITRE DET0552)"
+  - question: "Which tool does MITRE name for creating services?"
+    options:
+      - "sc.exe"
+      - "schtasks.exe"
+      - "procdump.exe"
+      - "wevtutil.exe"
+    answer: 0
+    explanation: "Adversaries install or modify services with sc.exe, the Registry or the API."
+    source: "The technique"
+  - question: "Unsigned driver loaded (Sysmon 6). Action?"
+    options:
+      - "Close it"
+      - "Note only"
+      - "Escalate"
+      - "Wait a day"
+    answer: 2
+    explanation: "Driver load of an unsigned driver → escalate."
+    source: "For the agent"
+  - question: "Service binary in a temp or user folder. Reading?"
+    options:
+      - "Normal — vendor update"
+      - "Suspicious — who installed it?"
+      - "Backup — check the window"
+      - "Scanner — check the list"
+    answer: 1
+    explanation: "Suspicious; identify who installed it."
+    source: "For the agent"
+  - question: "Which Sysmon events are Registry key changes?"
+    options:
+      - "13 and 14"
+      - "10 and 8"
+      - "3 and 22"
+      - "1 and 11"
+    answer: 0
+    explanation: "Registry Key Modification: Sysmon 13, 14."
+    source: "Detection (MITRE DET0552)"

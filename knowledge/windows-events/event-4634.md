@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4634: An account was logged off"
 description: "Windows Security event 4634 — a logon session ended; how it pairs with 4624 by Logon ID, how it differs from 4647, and what Microsoft says to watch."
-status: draft
+status: stable
 order: 322
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4634
     title: "Microsoft Learn — 4634(S): An account was logged off"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A logon session ended. Pair it with the 4624 that started it to know how long someone was on.
@@ -41,6 +43,11 @@ All rows: [^wazuh-0580]
 |---|---|
 | Logoff seconds after a suspicious 4624 | Short session — note it; check what ran in between |
 | Logon Type not expected for the account | Follow Microsoft's recommendation — investigate |
+
+## Related pages
+
+- [Event 4624: An account was successfully logged on](event-4624.md)
+- [Event 4672: Special privileges assigned to new logon](event-4672.md)
 
 [^ms-4634]: Microsoft Learn, "4634(S): An account was logged off". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4634
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

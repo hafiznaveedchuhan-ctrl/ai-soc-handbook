@@ -1,0 +1,58 @@
+quiz:
+  title: "Playbook: account lockout storm"
+  questionsPerRound: 6
+questions:
+  - question: "Level of Wazuh rule 60115?"
+    options:
+      - "5"
+      - "9"
+      - "12"
+      - "7"
+    answer: 1
+    explanation: "60115 User account locked out (multiple login errors), level 9."
+    source: "Trigger"
+  - question: "Which 4740 field names where failures came from?"
+    options:
+      - "Target Account Name"
+      - "Subject Logon ID"
+      - "Workstation Name"
+      - "Caller Computer Name"
+    answer: 3
+    explanation: "4740 names the caller computer."
+    source: "L1 steps"
+  - question: "Many accounts, one source. Action?"
+    options:
+      - "Escalate (spraying)"
+      - "Note only"
+      - "Close as benign"
+      - "Reset all passwords"
+    answer: 0
+    explanation: "Many accounts from one source → escalate."
+    source: "Escalate?"
+  - question: "Admin accounts locked. Which condition?"
+    options:
+      - "Condition 4"
+      - "Condition 7"
+      - "Condition 2"
+      - "Condition 1"
+    answer: 2
+    explanation: "Admin or service accounts → condition 2."
+    source: "Escalate?"
+  - question: "One user, own device, after password change?"
+    options:
+      - "Escalate as Critical"
+      - "Benign — advise the user"
+      - "Open brute-force playbook"
+      - "Disable the account"
+    answer: 1
+    explanation: "Benign — note and advise the user."
+    source: "Escalate?"
+  - question: "Kerberos failure code to read behind lockouts?"
+    options:
+      - "0x18"
+      - "0x17"
+      - "0x25"
+      - "0x6"
+    answer: 0
+    explanation: "Read 4771 code 0x18 failures."
+    source: "L1 steps"

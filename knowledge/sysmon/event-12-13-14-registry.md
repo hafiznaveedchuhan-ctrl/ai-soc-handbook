@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon events 12, 13, 14: Registry"
 description: "Sysmon registry events — 12 key/value create and delete, 13 value set, 14 rename; Microsoft's abbreviated root key names (HKLM, HKU, HKCR) and autostart monitoring."
-status: draft
+status: stable
 order: 407
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -23,6 +24,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Registry keys or values were created, changed, deleted or renamed. Autostart keys are where persistence hides.
@@ -48,6 +50,11 @@ ksor:
 |---|---|
 | Change under a Run key or the Services key | Persistence — check the process and value |
 | Change to Sysmon's own or a security tool's keys | Possible tampering — [T1685](../mitre/t1685-disable-or-modify-tools.md) |
+
+## Related pages
+
+- [Event 7045: New service installed](../windows-events/event-7045.md)
+- [Sysmon overview](overview.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/

@@ -2,8 +2,9 @@
 type: Standard
 title: "T1003.001 OS Credential Dumping: LSASS Memory"
 description: MITRE ATT&CK T1003.001 LSASS Memory — reading or dumping lsass.exe memory to steal credentials; the Sysmon process-access signal (event 10, full access 0x1F0FFF) and the follow-on dump file MITRE correlates.
-status: draft
+status: stable
 order: 763
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: mitre-t1003-001
     title: "MITRE ATT&CK — T1003.001 OS Credential Dumping: LSASS Memory"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** After a user logs on, Windows keeps credential material in
@@ -53,6 +55,12 @@ All rows: [^det0363]
 | Sysmon 10 with `TargetImage` lsass.exe and access 0x1F0FFF from an unusual process | Treat as credential theft — escalate |
 | A `.dmp` file created right after lsass access | Escalate |
 | Credentials then used from that host | Follow [T1078 Valid Accounts](t1078-valid-accounts.md) |
+
+## Related pages
+
+- [Sysmon event 10: ProcessAccess](../sysmon/event-10-process-access.md)
+- [Sysmon event 8: CreateRemoteThread](../sysmon/event-8-create-remote-thread.md)
+- [Escalation policy](../rules-map/escalation-policy.md)
 
 [^mitre-t1003-001]: MITRE ATT&CK, "OS Credential Dumping: LSASS Memory, Sub-technique T1003.001". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/techniques/T1003/001/
 [^det0363]: MITRE ATT&CK, "Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence, Detection Strategy DET0363". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0363/

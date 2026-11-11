@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 11: FileCreate"
 description: "Sysmon event 11 — a file created or overwritten; Microsoft's advice to watch autostart, temporary and download folders where malware drops files."
-status: draft
+status: stable
 order: 406
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -20,6 +21,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A file was created or overwritten. Malware has to drop files somewhere, usually in a few predictable folders.
@@ -43,6 +45,11 @@ ksor:
 |---|---|
 | Executable or script written to Startup, Temp or Downloads | Check the creating process (ProcessGuid) |
 | `.dmp` file after lsass access (event 10) | Escalate |
+
+## Related pages
+
+- [Playbook: file integrity (FIM) or malware alert](../playbooks/fim-or-malware-alert.md)
+- [Sysmon event 1: Process creation](event-1-process-create.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0441]: MITRE ATT&CK, "Detection of Suspicious Scheduled Task Creation and Execution on Windows, Detection Strategy DET0441". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0441/

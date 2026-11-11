@@ -1,0 +1,14 @@
+deck:
+  title: "GeoIP and VPN caveats"
+  description: "Recall checks drawn only from the page GeoIP and VPN caveats."
+cards:
+  - front: "Which Wazuh fields does the ingest pipeline write from a source IP?"
+    back: "GeoLocation.city_name, country_name, region_name and location."
+  - front: "Behind a VPN, what does a geolocation database locate?"
+    back: "The VPN server, not the end user."
+  - front: "MaxMind's estimated country-level accuracy?"
+    back: "About 99.8%."
+  - front: "Does a missing GeoLocation prove anything?"
+    back: "No — no source IP, a private IP, or an IP missing from the database."
+  - front: "May location decide a verdict alone?"
+    back: "No — it may only support a verdict other evidence already points to."

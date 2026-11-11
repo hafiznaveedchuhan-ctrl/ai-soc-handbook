@@ -1,0 +1,14 @@
+deck:
+  title: "SSH invalid (non-existent) user"
+  description: "Recall checks drawn only from the page SSH invalid (non-existent) user."
+cards:
+  - front: "Rule 5710 matches…"
+    back: "'illegal user' or 'invalid user' — login with a non-existent user (level 5)."
+  - front: "Rule 5712?"
+    back: "5710 seen 8 times in 120 s from the same IP — brute force (level 10)."
+  - front: "Rule 5718 matches…"
+    back: "'not allowed because' — login with a denied user."
+  - front: "Who mostly tries non-existent usernames?"
+    back: "Scripts guessing common names (admin, test, oracle)."
+  - front: "5712 from a public IP — next step?"
+    back: "Brute-force playbook; check for any 5715 from that IP."

@@ -1,0 +1,14 @@
+deck:
+  title: "False positives: admin maintenance windows"
+  description: "Recall checks drawn only from the page False positives: admin maintenance windows."
+cards:
+  - front: "Approved admin work that fired a correct alert — verdict?"
+    back: "Benign true positive."
+  - front: "Which clock do Wazuh time/weekday options check?"
+    back: "The Wazuh server time, not the event timestamp."
+  - front: "Custom rule ID range?"
+    back: "100000–120000."
+  - front: "Owner standing maintenance window?"
+    back: "Sunday 22:00 – Monday 04:00 UTC."
+  - front: "What makes an in-window alert a benign candidate?"
+    back: "A change ticket naming the host, admin account and work."

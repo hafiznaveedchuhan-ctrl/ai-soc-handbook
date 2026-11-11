@@ -1,0 +1,58 @@
+quiz:
+  title: "False positives: backup jobs"
+  questionsPerRound: 6
+questions:
+  - question: "Default frequency of a Wazuh FIM (syscheck) scan?"
+    options:
+      - "3600 seconds"
+      - "43200 seconds"
+      - "86400 seconds"
+      - "600 seconds"
+    answer: 1
+    explanation: "syscheck frequency default: 43200 seconds."
+    source: "Why backups look like attacks"
+  - question: "What happens to files on the FIM ignore list?"
+    options:
+      - "Not scanned and not reported"
+      - "Reported at level 0 only"
+      - "Reported only during the window"
+      - "Scanned, but results are not reported"
+    answer: 3
+    explanation: "Ignored files and directories are still scanned, but the results are not reported."
+    source: "Why backups look like attacks"
+  - question: "Owner backup window?"
+    options:
+      - "Daily 01:00–05:00 UTC"
+      - "Sunday 22:00–Monday 04:00 UTC"
+      - "Weekdays 18:00–08:30 local"
+      - "Any time with a ticket"
+    answer: 0
+    explanation: "Owner policy: daily 01:00–05:00 UTC."
+    source: "Handbook rule"
+  - question: "A Backup Operators membership change is handled by…"
+    options:
+      - "The backup window rule"
+      - "Closing it as benign"
+      - "The added-to-admin-group playbook"
+      - "The FIM ignore list"
+    answer: 2
+    explanation: "Membership changes are never benign by schedule."
+    source: "Handbook rule"
+  - question: "When is SeBackupPrivilege use a benign candidate?"
+    options:
+      - "Whenever it is inside the window"
+      - "Account, host and time all match"
+      - "Whenever the account is a service"
+      - "Whenever FIM shows no change"
+    answer: 1
+    explanation: "All three — account, host and time — must match the window and list."
+    source: "Handbook rule"
+  - question: "Who must approve adding backup paths to FIM ignore?"
+    options:
+      - "The owner"
+      - "Any L1 analyst"
+      - "The backup software vendor"
+      - "No one — it is automatic"
+    answer: 0
+    explanation: "Never add backup paths to ignore without the owner's approval."
+    source: "Handbook rule"

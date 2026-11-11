@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 11: FileCreate"
+  description: "Recall checks drawn only from the page Sysmon event 11: FileCreate."
+cards:
+  - front: "When is Sysmon 11 logged?"
+    back: "When a file is created or overwritten."
+  - front: "Useful locations to watch?"
+    back: "Startup folder, temp and download directories."
+  - front: "Executable written to Startup?"
+    back: "Check the creating process via ProcessGuid."
+  - front: ".dmp file after lsass access?"
+    back: "Escalate."
+  - front: "Which DET uses it for phishing?"
+    back: "DET0070."

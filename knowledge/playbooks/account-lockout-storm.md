@@ -2,8 +2,9 @@
 type: Procedure
 title: "Playbook: account lockout storm"
 description: "L1 steps when many 4740 lockouts arrive together — tell a stale-password device from password guessing or spraying, using the Caller Computer Name, the 4625/4771 failures behind the lockouts and Wazuh 60115."
-status: draft
+status: stable
 order: 807
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4740
     title: "Microsoft Learn — 4740(S): A user account was locked out"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Many accounts locked at once is either one broken
@@ -55,6 +57,11 @@ Several [4740](../windows-events/event-4740.md) lockouts in a short time — Waz
 
 The agent may gather evidence and propose a verdict; the escalation decision and any containment
 stay with the analyst, per the [escalation policy](../rules-map/escalation-policy.md).
+
+## Related pages
+
+- [False positives: expired or mistyped passwords](../false-positives/expired-or-mistyped-passwords.md)
+- [False positives: service accounts](../false-positives/service-accounts.md)
 
 [^ms-4740]: Microsoft Learn, "4740(S): A user account was locked out". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4740
 [^wazuh-0580]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0580-win-security_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0580-win-security_rules.xml

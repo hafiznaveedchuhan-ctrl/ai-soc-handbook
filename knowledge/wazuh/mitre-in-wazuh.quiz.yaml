@@ -1,0 +1,58 @@
+quiz:
+  title: "MITRE ATT&CK in Wazuh"
+  questionsPerRound: 6
+questions:
+  - question: "Which tab totals alerts and lists the top 10 TTPs?"
+    options:
+      - "Framework"
+      - "Dashboard"
+      - "Intelligence"
+      - "Events"
+    answer: 1
+    explanation: "The Dashboard tab shows totals and the top 10 TTPs."
+    source: "How the mapping works"
+  - question: "Which MITRE IDs does sshd success rule 5715 carry?"
+    options:
+      - "T1110.001 and T1021.004"
+      - "T1046 only"
+      - "T1190 and T1110"
+      - "T1078 and T1021"
+    answer: 3
+    explanation: "Ruleset example: 5715 carries T1078 and T1021."
+    source: "How the mapping works"
+  - question: "Can custom rules carry MITRE IDs?"
+    options:
+      - "Yes, they can be given IDs"
+      - "No, only shipped rules"
+      - "Only via the dashboard"
+      - "Only for level 12 and above"
+    answer: 0
+    explanation: "Wazuh ships mapped rules and custom rules can be given IDs too."
+    source: "How the mapping works"
+  - question: "How is the MITRE tag used in the triage note?"
+    options:
+      - "Set the severity from it"
+      - "Close the alert if it is absent"
+      - "Name the technique and link the page"
+      - "Replace the verdict with it"
+    answer: 2
+    explanation: "Use the alert's MITRE ID and link the handbook page if one exists."
+    source: "For the agent"
+  - question: "Which tab shows techniques seen per endpoint?"
+    options:
+      - "Dashboard"
+      - "Framework"
+      - "Intelligence"
+      - "Inventory"
+    answer: 1
+    explanation: "The Framework tab shows techniques per endpoint."
+    source: "How the mapping works"
+  - question: "What decides the alert's severity?"
+    options:
+      - "The severity model"
+      - "The MITRE tactic name"
+      - "The number of MITRE IDs"
+      - "The Intelligence tab"
+    answer: 0
+    explanation: "Do not decide on the MITRE tag alone — use the severity model."
+    source: "For the agent"

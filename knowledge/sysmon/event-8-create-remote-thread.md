@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 8: CreateRemoteThread"
 description: "Sysmon event 8 — one process creating a thread in another, a technique malware uses to inject code; source, target and StartAddress/StartModule/StartFunction."
-status: draft
+status: stable
 order: 404
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** One program started code running inside another program. Malware does this to hide.
@@ -26,5 +28,11 @@ ksor:
 |---|---|
 | Remote thread into lsass.exe, explorer.exe or a browser | Escalate |
 | Source is an unknown or user-folder binary | Escalate |
+
+## Related pages
+
+- [Sysmon event 10: ProcessAccess](event-10-process-access.md)
+- [T1003.001 OS Credential Dumping: LSASS Memory](../mitre/t1003-001-lsass-memory.md)
+- [Sysmon overview](overview.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon

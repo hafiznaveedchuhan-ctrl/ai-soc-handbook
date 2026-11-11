@@ -1,0 +1,14 @@
+deck:
+  title: "T1046 Network Service Discovery"
+  description: "Recall checks drawn only from the page T1046 Network Service Discovery."
+cards:
+  - front: "Tactic of T1046?"
+    back: "Discovery."
+  - front: "Common methods MITRE names?"
+    back: "Port, vulnerability and wordlist scans."
+  - front: "The pattern to look for?"
+    back: "One machine touching many ports or hosts in a short time."
+  - front: "Sysmon log sources for DET0376?"
+    back: "1 (process creation), 3 and 22 (network connection, DNS)."
+  - front: "Scanning from a workstation?"
+    back: "Suspicious — escalate per policy."

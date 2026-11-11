@@ -1,0 +1,58 @@
+quiz:
+  title: "T1685 Disable or Modify Tools"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1685?"
+    options:
+      - "Persistence"
+      - "Defense Impairment"
+      - "Discovery"
+      - "Exfiltration"
+    answer: 1
+    explanation: "The technique table lists Defense Impairment."
+    source: "The technique"
+  - question: "Which Sysmon event is Process Termination?"
+    options:
+      - "1"
+      - "10"
+      - "13"
+      - "5"
+    answer: 3
+    explanation: "Process Termination: Sysmon 5."
+    source: "Detection (MITRE DET0497)"
+  - question: "Which System event is Service Creation here?"
+    options:
+      - "7045"
+      - "4697"
+      - "1102"
+      - "4719"
+    answer: 0
+    explanation: "Service Creation: WinEventLog:System 7045."
+    source: "Detection (MITRE DET0497)"
+  - question: "AV/EDR service stopped. Action?"
+    options:
+      - "Close as update"
+      - "Note only"
+      - "Escalate per policy"
+      - "Restart it silently"
+    answer: 2
+    explanation: "AV/EDR terminated or stopped → escalate."
+    source: "For the agent"
+  - question: "Security log cleared. Which page?"
+    options:
+      - "Port scan playbook"
+      - "Audit log cleared playbook"
+      - "Backup jobs page"
+      - "SLA matrix"
+    answer: 1
+    explanation: "The For-the-agent table points to the audit-log-cleared playbook."
+    source: "For the agent"
+  - question: "AN1369 also watches for which absence?"
+    options:
+      - "Expected telemetry"
+      - "Failed logons"
+      - "New services"
+      - "DNS queries"
+    answer: 0
+    explanation: "The abnormal absence of expected telemetry."
+    source: "Detection (MITRE DET0497)"

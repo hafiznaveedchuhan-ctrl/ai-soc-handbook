@@ -1,0 +1,244 @@
+SOC TRIAGE HANDBOOK — WAVE 2 REVIEW SHEET (for Naveed)
+Generated 2026-11-11 (session 4). Branch feat/02-soc-corpus-wave-2. 55 pages, all status: draft.
+Read on http://localhost:3000/docs/<folder>/<page>/  (run `npm run dev` first).
+
+HOW TO APPROVE: reply 'approved all wave 2', or 'approved: <page>, <page>', or 'change <X> in <page>'.
+Each page has a flashcard deck (5 cards) and a quiz (6 questions) drawn only from its own text,
+and a "Related pages" section (link pass, 172 links). Checks done: npm run check ok; verify.mjs (B6);
+quiz_precheck 108/108 ok; KSOR_DRAFTS=show build ok (site quiz audit passed); normal build ok; smoke 14/14.
+
+DECISIONS NEEDED FROM YOU (answer with the approval):
+  D1  Reverse links onto 20 STABLE pages (Wave 1 + networking -> new Wave 2 pages), list in
+      scripts/authoring/linkpass-w2.py (map S). Editing a stable body needs your re-approval of those
+      20 pages too. Reply 'reverse links yes' (applied in the approval commit) or 'reverse links no'.
+  D2  B6 owner policy (interview I2, confirmed 2026-11-11): lists vpn-egress, expected countries and
+      approved-scanners start EMPTY (no benign/raise rule applies until filled); coverage = business
+      hours. Say 'D2 ok' or give values (VPN ranges, countries, scanner IPs, scan day).
+  D3  event-7045 stays DRAFT (3 TODO-VERIFY: needs a Microsoft source for its audit setting/fields);
+      it is not part of this approval.
+
+SOURCES: Tier 1 (Microsoft Learn, MITRE ATT&CK, Wazuh docs + ruleset v4.14.10, NIST SP 800-61r3 /
+800-115, MaxMind for its own GeoIP limits, Sysmon docs). Owner policy cites human:naveed interviews
+2026-11-10 (I1) and 2026-11-11 (I2).
+
+ORDER | PAGE  [TYPE, N sources, study aids]
+
+322 | windows-events/event-4634  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4634 — a logon session ended; how it pairs with 4624 by Logon ID, how it differs from 4647, and what Microsoft says to watch.
+   sources: Microsoft Learn — 4634(S): An account was logged off; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+371 | windows-events/event-4722  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4722 — a user or computer account was enabled; Microsoft's advice for high-value and never-enable accounts, and the Wazuh rule.
+   sources: Microsoft Learn — 4722(S): A user account was enabled; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+372 | windows-events/event-4724  [Definition, 1 sources, deck+quiz]
+   says:  Windows Security event 4724 — one account reset another account's password; Microsoft's monitoring advice for high-value accounts and why an unexpected reset can mean takeover.
+   sources: Microsoft Learn — 4724(S, F): An attempt was made to reset an account's password
+
+373 | windows-events/event-4725  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4725 — a user or computer account was disabled; Microsoft's advice for accounts that should never be disabled, and the Wazuh rule (T1098, T1531).
+   sources: Microsoft Learn — 4725(S): A user account was disabled; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+374 | windows-events/event-4726  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4726 — a user account was deleted; Microsoft's monitoring advice and the shared Wazuh rule 60111.
+   sources: Microsoft Learn — 4726(S): A user account was deleted; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+375 | windows-events/event-4738  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4738 — a user account's properties changed; Microsoft notes some organisations monitor every 4738; the Wazuh rule 60110 (T1098).
+   sources: Microsoft Learn — 4738(S): A user account was changed; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+381 | windows-events/event-4728  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4728 — a member was added to a domain global security group; same fields and advice as 4732, generated only for domain groups; Wazuh rule 60141.
+   sources: Microsoft Learn — Audit Security Group Management; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+382 | windows-events/event-4756  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4756 — a member was added to a universal security group; same as 4732 for universal groups, domain groups only; Wazuh rule 60151.
+   sources: Microsoft Learn — Audit Security Group Management; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+383 | windows-events/event-4768  [Definition, 1 sources, deck+quiz]
+   says:  Windows Security event 4768 — a domain controller issued (or refused) a Kerberos TGT; the start of every domain logon, Microsoft's high-value-account advice, and the 2025 field update.
+   sources: Microsoft Learn — 4768(S, F): A Kerberos authentication ticket (TGT) was requested
+
+384 | windows-events/event-4769  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4769 — a domain controller received a Kerberos service-ticket (TGS) request; ticket encryption types (0x17 = RC4-HMAC), Wazuh rules 60106/60131, and the 2025 field update.
+   sources: Microsoft Learn — 4769(S, F): A Kerberos service ticket was requested; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+385 | windows-events/event-4771  [Definition, 1 sources, deck+quiz]
+   says:  Windows Security event 4771 — the domain controller refused a Kerberos TGT; failure code 0x18 means a wrong password, and Microsoft's advice that N of them in N minutes can mean brute force.
+   sources: Microsoft Learn — 4771(F): Kerberos pre-authentication failed
+
+386 | windows-events/event-4776  [Definition, 1 sources, deck+quiz]
+   says:  Windows Security event 4776 — an NTLM credential validation; logged on the computer authoritative for the account; the error codes that mean bad password, bad username, locked, disabled or expired.
+   sources: Microsoft Learn — 4776(S, F): The computer attempted to validate the credentials for an account
+
+395 | windows-events/event-4697  [Definition, 1 sources, deck+quiz]
+   says:  Windows Security event 4697 — a new service was installed; why Microsoft says unexpected installs should alert, the Service File Name check, and the link to T1543.003 and System event 7045.
+   sources: Microsoft Learn — 4697(S): A service was installed in the system
+
+396 | windows-events/event-4698  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4698 — a scheduled task was created; Microsoft's advice to watch tasks in the Task Scheduler Library root, the Wazuh rule, and the T1053.005 link.
+   sources: Microsoft Learn — 4698(S): A scheduled task was created; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+397 | windows-events/event-4719  [Definition, 2 sources, deck+quiz]
+   says:  Windows Security event 4719 — the audit policy changed; always logged, Microsoft's advice that every change should be planned, and why turning auditing off is a defense-evasion signal.
+   sources: Microsoft Learn — 4719(S): System audit policy was changed; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+400 | sysmon/overview  [Document, 1 sources, deck+quiz]
+   says:  What Sysmon (System Monitor) is, where its events are written (Microsoft-Windows-Sysmon/Operational), that timestamps are UTC, which events are off by default, and which Sysmon event IDs this handbook covers.
+   sources: Microsoft Learn — Sysmon v15.22
+
+401 | sysmon/event-1-process-create  [Definition, 6 sources, deck+quiz]
+   says:  Sysmon event 1 — a new process with its full command line, hashes and ProcessGuid; the most used event in triage and the base of many MITRE detections.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows; MITRE ATT&CK — DET0552 Detection of Windows Service Creation or Modification; MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms; MITRE ATT&CK — DET0327 Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity; MITRE ATT&CK — DET0070 Detection Strategy for Phishing across platforms
+
+402 | sysmon/event-3-network-connection  [Definition, 3 sources, deck+quiz]
+   says:  Sysmon event 3 — a TCP/UDP connection linked to the process that made it; disabled by default; how it ties network logs back to a program.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms; MITRE ATT&CK — DET0327 Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity
+
+403 | sysmon/event-7-image-loaded  [Definition, 2 sources, deck+quiz]
+   says:  Sysmon event 7 — a module (DLL) loaded into a process, with hashes and signature; disabled by default and very noisy unless filtered.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0388 Detection Strategy for T1548.002 – Bypass User Account Control (UAC)
+
+404 | sysmon/event-8-create-remote-thread  [Definition, 1 sources, deck+quiz]
+   says:  Sysmon event 8 — one process creating a thread in another, a technique malware uses to inject code; source, target and StartAddress/StartModule/StartFunction.
+   sources: Microsoft Learn — Sysmon v15.22
+
+405 | sysmon/event-10-process-access  [Definition, 3 sources, deck+quiz]
+   says:  Sysmon event 10 — a process opening another process; the key signal for LSASS credential theft (T1003.001), best collected with filters.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0363 Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence; MITRE ATT&CK — DET0388 Detection Strategy for T1548.002 – Bypass User Account Control (UAC)
+
+406 | sysmon/event-11-file-create  [Definition, 4 sources, deck+quiz]
+   says:  Sysmon event 11 — a file created or overwritten; Microsoft's advice to watch autostart, temporary and download folders where malware drops files.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows; MITRE ATT&CK — DET0363 Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence; MITRE ATT&CK — DET0070 Detection Strategy for Phishing across platforms
+
+407 | sysmon/event-12-13-14-registry  [Definition, 5 sources, deck+quiz]
+   says:  Sysmon registry events — 12 key/value create and delete, 13 value set, 14 rename; Microsoft's abbreviated root key names (HKLM, HKU, HKCR) and autostart monitoring.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows; MITRE ATT&CK — DET0552 Detection of Windows Service Creation or Modification; MITRE ATT&CK — DET0388 Detection Strategy for T1548.002 – Bypass User Account Control (UAC); MITRE ATT&CK — DET0497 Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms
+
+408 | sysmon/event-22-dns-query  [Definition, 3 sources, deck+quiz]
+   says:  Sysmon event 22 — a DNS query made by a process, successful or failed, cached or not; available from Windows 8.1; ties DNS activity to the program.
+   sources: Microsoft Learn — Sysmon v15.22; MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms; MITRE ATT&CK — DET0327 Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity
+
+500 | linux-auth/where-auth-logs-live  [Definition, 4 sources, deck+quiz]
+   says:  Which file holds SSH, sudo and login events on Debian/Ubuntu (/var/log/auth.log) and Red Hat (/var/log/secure), why sshd writes to the AUTH facility, and how those logs reach Wazuh.
+   sources: Ubuntu rsyslog package — debian/50-default.conf; rsyslog project — platform/redhat/rsyslog.conf; OpenBSD manual — sshd_config(5); Wazuh documentation — Configuring log collection for different operating systems
+
+510 | linux-auth/ssh-failed-password  [Definition, 2 sources, deck+quiz]
+   says:  What an sshd authentication failure looks like to Wazuh (rules 5716, 5760), when repeated failures become a brute-force alert (5720, 5763: 8 from one source), and how to triage it.
+   sources: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml; Wazuh documentation — Rules syntax
+
+511 | linux-auth/ssh-accepted  [Definition, 1 sources, deck+quiz]
+   says:  How Wazuh records a successful SSH login (rule 5715, level 3, mapped to T1078 and T1021), and when a normal-looking success is the most important line in a brute-force story.
+   sources: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
+
+512 | linux-auth/ssh-invalid-user  [Definition, 1 sources, deck+quiz]
+   says:  Wazuh rules 5710 and 5712 for SSH attempts against usernames that do not exist, and 5718/5719 for denied users — the clearest sign of automated username guessing.
+   sources: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
+
+520 | linux-auth/sudo-usage  [Definition, 1 sources, deck+quiz]
+   says:  How Wazuh classifies sudo events — failed password (5401), three failures (5404), user not in sudoers (5405), successful sudo to root (5402) and first-time sudo (5403) — all mapped to T1548.003.
+   sources: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
+
+530 | linux-auth/new-user-useradd  [Definition, 1 sources, deck+quiz]
+   says:  Wazuh rules for account changes on Linux — new user (5902, T1136), new group (5901), useradd failed (5905), user added to a group (2960) and to the sudo group (2961).
+   sources: Wazuh ruleset v4.14.10 — 0020-syslog_rules.xml
+
+604 | wazuh/rule-groups  [Definition, 2 sources, deck+quiz]
+   says:  What the <group> element in a Wazuh rule is, how to filter alerts by rule.groups, the authentication groups the sshd rules use, and how if_group and frequency/timeframe build correlation rules.
+   sources: Wazuh documentation — Rules syntax; Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
+
+605 | wazuh/sshd-rules-reference  [Definition, 1 sources, deck+quiz]
+   says:  One table of the Wazuh v4.14.10 sshd rules an L1 analyst meets — level, what they match, frequency settings and MITRE tags — with links to the Linux auth pages that explain each.
+   sources: Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
+
+606 | wazuh/mitre-in-wazuh  [Standard, 2 sources, deck+quiz]
+   says:  How Wazuh maps alerts to MITRE ATT&CK — rule <mitre> IDs, the rule.mitre fields in an alert, the dashboard module's Framework, Dashboard and Intelligence tabs — and how to use the mapping in triage without over-trusting it.
+   sources: Wazuh documentation — MITRE ATT&CK framework; Wazuh ruleset v4.14.10 — 0095-sshd_rules.xml
+
+607 | wazuh/geo-and-vpn-caveats  [Standard, 6 sources, deck+quiz]
+   says:  What the GeoLocation fields on a Wazuh alert can and cannot tell an analyst — accuracy limits, VPNs, mobile and missing IPs — and the handbook rule for using location in a verdict.
+   sources: Wazuh v4.14.10 — Filebeat alerts ingest pipeline; Wazuh documentation — Rules syntax; MaxMind Knowledge Base — Geolocation accuracy; Wazuh documentation — Using CDB lists; human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+608 | wazuh/asset-and-user-context  [Standard, 6 sources, deck+quiz]
+   says:  How asset and user context reaches a Wazuh alert — agent labels and CDB lists — why NIST asks for it, and the set of labels and lists for this handbook.
+   sources: NIST SP 800-61 Rev. 3 (April 2025); Wazuh documentation — Agent labels; Wazuh documentation — Using CDB lists; Microsoft Learn — 4624(S): An account was successfully logged on; human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+704 | mitre/t1110-004-credential-stuffing  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1110.004 Credential Stuffing — username/password pairs from unrelated breach dumps tried against your accounts; how it differs from guessing and spraying, and how 4625 failures from one source with many distinct pairs reveal it.
+   sources: MITRE ATT&CK — T1110.004 Brute Force: Credential Stuffing; MITRE ATT&CK — DET0460 Credential Stuffing Detection via Reused Breached Credentials Across Services
+
+760 | mitre/t1053-005-scheduled-task  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1053.005 Scheduled Task — abusing Windows Task Scheduler for execution, persistence or privilege escalation; the log sources MITRE names (4698, 4702, Sysmon 1/11/13/14) and what makes a task suspicious.
+   sources: MITRE ATT&CK — T1053.005 Scheduled Task/Job: Scheduled Task; MITRE ATT&CK — DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows
+
+761 | mitre/t1543-003-windows-service  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1543.003 Windows Service — creating or changing a Windows service so a payload runs at startup; the log sources MITRE names (4697, Sysmon 1/6/13/14) and how 7045 relates.
+   sources: MITRE ATT&CK — T1543.003 Create or Modify System Process: Windows Service; MITRE ATT&CK — DET0552 Detection of Windows Service Creation or Modification
+
+762 | mitre/t1021-001-remote-desktop-protocol  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1021.001 Remote Desktop Protocol — using valid accounts to log on over RDP and move laterally; the logon events MITRE correlates (4624, 4648, 4778, 4779) and what follows a suspicious RDP session.
+   sources: MITRE ATT&CK — T1021.001 Remote Services: Remote Desktop Protocol; MITRE ATT&CK — DET0327 Multi-event Detection Strategy for RDP-Based Remote Logins and Post-Access Activity
+
+763 | mitre/t1003-001-lsass-memory  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1003.001 LSASS Memory — reading or dumping lsass.exe memory to steal credentials; the Sysmon process-access signal (event 10, full access 0x1F0FFF) and the follow-on dump file MITRE correlates.
+   sources: MITRE ATT&CK — T1003.001 OS Credential Dumping: LSASS Memory; MITRE ATT&CK — DET0363 Detection of Credential Dumping from LSASS Memory via Access and Dump Sequence
+
+764 | mitre/t1046-network-service-discovery  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1046 Network Service Discovery — scanning hosts for listening services (port, vulnerability, wordlist scans); the process + connection pattern MITRE correlates and how it shows up in firewall and flow logs.
+   sources: MITRE ATT&CK — T1046 Network Service Discovery; MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms
+
+765 | mitre/t1548-002-bypass-uac  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1548.002 Bypass User Account Control — elevating to high integrity without a UAC prompt via auto-elevated binaries and Registry tricks; the log sources MITRE names (4688, 4672, Sysmon 7/10/13/14).
+   sources: MITRE ATT&CK — T1548.002 Abuse Elevation Control Mechanism: Bypass User Account Control; MITRE ATT&CK — DET0388 Detection Strategy for T1548.002 – Bypass User Account Control (UAC)
+
+766 | mitre/t1685-disable-or-modify-tools  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1685 Disable or Modify Tools (formerly T1562.001) — stopping or tampering with EDR, antivirus, logging agents and sensors; the signals MITRE names (7045, Sysmon 5/13/14) and why missing telemetry is itself evidence.
+   sources: MITRE ATT&CK — T1685 Disable or Modify Tools; MITRE ATT&CK — DET0497 Detection of Defense Impairment through Disabled or Modified Tools across OS Platforms
+
+767 | mitre/t1566-phishing  [Standard, 2 sources, deck+quiz]
+   says:  MITRE ATT&CK T1566 Phishing — e-mailed or third-party messages with malicious attachments or links; the post-delivery signals MITRE correlates (new files, new processes, network activity) and the e-mail checks in this handbook.
+   sources: MITRE ATT&CK — T1566 Phishing; MITRE ATT&CK — DET0070 Detection Strategy for Phishing across platforms
+
+805 | playbooks/suspicious-powershell  [Procedure, 2 sources, deck+quiz]
+   says:  L1 steps for a suspicious PowerShell alert — read the full command line (Sysmon 1 / 4688) and script block (4104), check the parent process and what ran next, and decide using MITRE's PowerShell detection chain.
+   sources: MITRE ATT&CK — DET0455 Abuse of PowerShell for Arbitrary Execution; Microsoft Learn — about_Logging_Windows
+
+806 | playbooks/new-service-or-scheduled-task  [Procedure, 3 sources, deck+quiz]
+   says:  L1 steps for a new service (4697 / 7045) or scheduled task (4698) — check the binary path and task location against Microsoft's guidance, find who created it, and escalate on unexpected persistence.
+   sources: Microsoft Learn — 4697(S): A service was installed in the system; Microsoft Learn — 4698(S): A scheduled task was created; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+807 | playbooks/account-lockout-storm  [Procedure, 2 sources, deck+quiz]
+   says:  L1 steps when many 4740 lockouts arrive together — tell a stale-password device from password guessing or spraying, using the Caller Computer Name, the 4625/4771 failures behind the lockouts and Wazuh 60115.
+   sources: Microsoft Learn — 4740(S): A user account was locked out; Wazuh ruleset v4.14.10 — 0580-win-security_rules.xml
+
+808 | playbooks/port-scan  [Procedure, 1 sources, deck+quiz]
+   says:  L1 steps for a port or service scan — identify the scanning host and process, separate an authorised scanner from an intruder, and check whether anything after the scan succeeded.
+   sources: MITRE ATT&CK — DET0376 Behavioral Detection Strategy for Network Service Discovery Across Platforms
+
+809 | playbooks/fim-or-malware-alert  [Procedure, 2 sources, deck+quiz]
+   says:  L1 steps for Wazuh FIM alerts (550 checksum changed, 553 deleted, 554 added) and rootcheck anomalies (510) — what changed, who changed it, and whether the change was expected.
+   sources: Wazuh documentation — File integrity monitoring; Wazuh ruleset v4.14.10 — 0015-ossec_rules.xml
+
+1100 | false-positives/expired-or-mistyped-passwords  [Policy, 6 sources, deck+quiz]
+   says:  How to tell a user who mistyped or let a password expire from a password attack — the Windows failure codes that separate them and the handbook threshold for closing such alerts.
+   sources: Microsoft Learn — 4776(S, F): The computer attempted to validate the credentials for an account; Microsoft Learn — 4771(F): Kerberos pre-authentication failed; Microsoft Learn — 4625(F): An account failed to log on; NIST SP 800-61 Rev. 3 (April 2025); human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+1101 | false-positives/service-accounts  [Policy, 6 sources, deck+quiz]
+   says:  Why service accounts produce noisy logon alerts, what Microsoft says is normal and abnormal for them, and the handbook allow-list rule for telling the two apart.
+   sources: Microsoft Learn — Service accounts in Windows Server; Microsoft Learn — 4624(S): An account was successfully logged on; Microsoft Learn — 4625(F): An account failed to log on; Wazuh documentation — Using CDB lists; human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+1102 | false-positives/backup-jobs  [Policy, 5 sources, deck+quiz]
+   says:  Why backup software trips privilege and file-integrity alerts, what Microsoft and Wazuh say about backup rights and FIM settings, and the handbook rule for recognising a scheduled backup.
+   sources: Microsoft Learn — Active Directory security groups; Microsoft Learn — 4672(S): Special privileges assigned to new logon; Wazuh documentation — syscheck (ossec.conf reference); human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+1103 | false-positives/admin-maintenance-windows  [Policy, 5 sources, deck+quiz]
+   says:  How planned admin work produces alerts that are benign true positives, what Wazuh can and cannot do with time-based rules, and the handbook change-ticket rule for maintenance windows.
+   sources: Wazuh documentation — Rules syntax; Wazuh documentation — Custom rules; NIST SP 800-61 Rev. 3 (April 2025); human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+1104 | false-positives/vulnerability-scanners  [Policy, 4 sources, deck+quiz]
+   says:  How approved vulnerability scans trip port-scan and logon alerts, what NIST says about identifying scanner IPs in advance, and the handbook allow-list rule for scanner traffic.
+   sources: NIST SP 800-115 — Technical Guide to Information Security Testing and Assessment; Wazuh documentation — Using CDB lists; human:naveed interview 2026-11-10; human:naveed interview 2026-11-11
+
+1200 | sla/severity-response-matrix  [Policy, 3 sources, deck+quiz]
+   says:  How fast the SOC acts on each severity — acknowledge, triage note, escalation — as the handbook matrix built on NIST's triage-and-prioritise guidance and the handbook's severity model.
+   sources: NIST SP 800-61 Rev. 3 (April 2025); human:naveed interview 2026-11-10; human:naveed interview 2026-11-11

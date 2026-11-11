@@ -1,0 +1,14 @@
+deck:
+  title: "Playbook: new service or scheduled task"
+  description: "Recall checks drawn only from the page Playbook: new service or scheduled task."
+cards:
+  - front: "Why do attackers use services and tasks?"
+    back: "To survive a reboot."
+  - front: "Wazuh rule for a new scheduled task?"
+    back: "60228, level 4."
+  - front: "Where should new service files live (Microsoft)?"
+    back: "%windir% or Program Files."
+  - front: "New service on a DC, AD FS or AD CS server?"
+    back: "Escalate — escalation condition 7."
+  - front: "Matches a documented deployment?"
+    back: "Close as benign with the ticket reference."

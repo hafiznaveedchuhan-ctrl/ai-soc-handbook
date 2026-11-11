@@ -2,8 +2,9 @@
 type: Definition
 title: "Wazuh rule groups"
 description: "What the <group> element in a Wazuh rule is, how to filter alerts by rule.groups, the authentication groups the sshd rules use, and how if_group and frequency/timeframe build correlation rules."
-status: draft
+status: stable
 order: 604
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: wazuh-rules-xml
     title: "Wazuh documentation — Rules syntax"
@@ -14,6 +15,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Every Wazuh rule carries one or more group labels, such
@@ -45,6 +47,14 @@ The same rules also carry compliance groups (for example `pci_dss_10.2.4`, `nist
 |---|---|
 | All failed logins | `rule.groups: authentication_failed` |
 | All brute-force correlations | `rule.groups: authentication_failures` |
+
+## Related pages
+
+- [Wazuh rule levels](rule-levels.md)
+- [Wazuh Windows rules reference](windows-rules-reference.md)
+- [Wazuh sshd rules reference](sshd-rules-reference.md)
+- [MITRE ATT&CK in Wazuh](mitre-in-wazuh.md)
+- [Wazuh alert JSON anatomy](alert-json-anatomy.md)
 
 [^wazuh-rules-xml]: Wazuh documentation, "Rules" (ruleset XML syntax: group, if_group, frequency, timeframe, ignore). https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html
 [^wazuh-0095]: Wazuh ruleset, tag v4.14.10, `ruleset/rules/0095-sshd_rules.xml`. https://github.com/wazuh/wazuh/blob/v4.14.10/ruleset/rules/0095-sshd_rules.xml

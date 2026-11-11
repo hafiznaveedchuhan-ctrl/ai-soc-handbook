@@ -2,8 +2,9 @@
 type: Definition
 title: "Sysmon event 22: DNS query"
 description: "Sysmon event 22 — a DNS query made by a process, successful or failed, cached or not; available from Windows 8.1; ties DNS activity to the program."
-status: draft
+status: stable
 order: 408
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-sysmon
     title: "Microsoft Learn — Sysmon v15.22"
@@ -17,6 +18,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** A program looked up a domain name. You see which program asked, even if the connection never happened.
@@ -39,6 +41,11 @@ ksor:
 |---|---|
 | Odd, random-looking names from one process | See [DNS](../networking/dns.md) tunnelling signs |
 | Known-bad domain queried | Find what ran just before (event 1) |
+
+## Related pages
+
+- [Sysmon event 3: Network connection](event-3-network-connection.md)
+- [IP reputation policy (AbuseIPDB)](../enrichment/ip-reputation-policy.md)
 
 [^ms-sysmon]: Microsoft Learn (Sysinternals), "Sysmon v15.22", Mark Russinovich and Thomas Garnier, published September 10, 2026. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 [^det0376]: MITRE ATT&CK, "Behavioral Detection Strategy for Network Service Discovery Across Platforms, Detection Strategy DET0376". © The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. https://attack.mitre.org/detectionstrategies/DET0376/

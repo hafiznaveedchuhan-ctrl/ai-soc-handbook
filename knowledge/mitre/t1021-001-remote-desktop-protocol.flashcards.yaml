@@ -1,0 +1,14 @@
+deck:
+  title: "T1021.001 Remote Services: Remote Desktop Protocol"
+  description: "Recall checks drawn only from the page T1021.001 Remote Services: Remote Desktop Protocol."
+cards:
+  - front: "Tactic of T1021.001?"
+    back: "Lateral Movement."
+  - front: "What do adversaries need to use RDP this way?"
+    back: "Valid Accounts — they log in as the user."
+  - front: "Microsoft's name for its RDP implementation?"
+    back: "Remote Desktop Services (RDS)."
+  - front: "What gives an RDP attack away?"
+    back: "What happens after the logon — unusual processes, file access, lateral movement."
+  - front: "RDP logon from a public IP?"
+    back: "Escalate per the escalation policy."

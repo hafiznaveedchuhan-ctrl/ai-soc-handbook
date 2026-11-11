@@ -1,0 +1,14 @@
+deck:
+  title: "Sysmon event 8: CreateRemoteThread"
+  description: "Recall checks drawn only from the page Sysmon event 8: CreateRemoteThread."
+cards:
+  - front: "What does Sysmon 8 detect?"
+    back: "A process creating a thread in another process."
+  - front: "Why does malware do this?"
+    back: "To inject code and hide in other processes."
+  - front: "Which fields may be empty?"
+    back: "StartModule and StartFunction — they are inferred."
+  - front: "Remote thread into lsass.exe?"
+    back: "Escalate."
+  - front: "Source is a user-folder binary?"
+    back: "Escalate."

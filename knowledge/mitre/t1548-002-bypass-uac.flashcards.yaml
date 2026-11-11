@@ -1,0 +1,14 @@
+deck:
+  title: "T1548.002 Abuse Elevation Control Mechanism: Bypass UAC"
+  description: "Recall checks drawn only from the page T1548.002 Abuse Elevation Control Mechanism: Bypass UAC."
+cards:
+  - front: "What is UAC?"
+    back: "The prompt that lets a program elevate to admin rights."
+  - front: "Tactic of T1548.002?"
+    back: "Privilege Escalation."
+  - front: "Auto-elevated binaries MITRE names?"
+    back: "eventvwr.exe and sdclt.exe."
+  - front: "Security events in the detection table?"
+    back: "4688 (process creation) and 4672 (logon metadata)."
+  - front: "eventvwr.exe spawning a shell?"
+    back: "Suspicious — escalate."

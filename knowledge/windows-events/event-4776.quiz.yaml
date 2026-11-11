@@ -1,0 +1,58 @@
+quiz:
+  title: "Event 4776: The computer attempted to validate the credentials for an account"
+  questionsPerRound: 6
+questions:
+  - question: "Which authentication protocol does 4776 cover?"
+    options:
+      - "Kerberos"
+      - "NTLM"
+      - "RADIUS"
+      - "LDAP bind"
+    answer: 1
+    explanation: "4776 is generated for NTLM credential validation."
+    source: "Meaning"
+  - question: "Error 0xC000006A means…"
+    options:
+      - "Account locked"
+      - "Account expired"
+      - "No such user"
+      - "Bad password"
+    answer: 3
+    explanation: "0xC000006A: misspelled or bad password."
+    source: "For the agent"
+  - question: "Error 0xC0000193 means…"
+    options:
+      - "Account expired"
+      - "Account disabled"
+      - "Bad password"
+      - "Account locked"
+    answer: 0
+    explanation: "0xC0000193: expired account."
+    source: "For the agent"
+  - question: "Which subcategory logs 4776?"
+    options:
+      - "Audit Logon"
+      - "Audit Kerberos Authentication Service"
+      - "Audit Credential Validation"
+      - "Audit Account Lockout"
+    answer: 2
+    explanation: "4776: Audit Credential Validation."
+    source: "Meaning"
+  - question: "Error 0xC0000072 means…"
+    options:
+      - "Username does not exist"
+      - "Disabled by administrator"
+      - "Password must change"
+      - "Account locked out"
+    answer: 1
+    explanation: "0xC0000072: account disabled by administrator."
+    source: "For the agent"
+  - question: "Repeated 0xC0000064 suggests…"
+    options:
+      - "Username guessing"
+      - "An expired account"
+      - "A locked account"
+      - "A disabled account"
+    answer: 0
+    explanation: "Username does not exist — guessing?"
+    source: "For the agent"

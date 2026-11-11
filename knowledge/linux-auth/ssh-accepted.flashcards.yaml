@@ -1,0 +1,14 @@
+deck:
+  title: "SSH accepted (successful login)"
+  description: "Recall checks drawn only from the page SSH accepted (successful login)."
+cards:
+  - front: "Rule for SSH success?"
+    back: "5715, level 3."
+  - front: "What does 5715 match?"
+    back: "Lines starting 'Accepted' or ending 'authenticated.'"
+  - front: "MITRE tags on 5715?"
+    back: "T1078 Valid Accounts and T1021 Remote Services."
+  - front: "5715 after 5720/5763 from the same IP?"
+    back: "Success after brute force — escalate."
+  - front: "5715 for root or from a public IP?"
+    back: "Check whether that is expected for this host."

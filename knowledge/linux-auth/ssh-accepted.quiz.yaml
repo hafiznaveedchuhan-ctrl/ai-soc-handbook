@@ -1,0 +1,58 @@
+quiz:
+  title: "SSH accepted (successful login)"
+  questionsPerRound: 6
+questions:
+  - question: "Level of rule 5715?"
+    options:
+      - "5"
+      - "3"
+      - "10"
+      - "0"
+    answer: 1
+    explanation: "5715 authentication success is level 3."
+    source: "What Wazuh matches"
+  - question: "Which MITRE technique is Valid Accounts?"
+    options:
+      - "T1021"
+      - "T1110"
+      - "T1136"
+      - "T1078"
+    answer: 3
+    explanation: "5715 tags T1078 (Valid Accounts) and T1021."
+    source: "What Wazuh matches"
+  - question: "5715 right after 5763 from one IP. Action?"
+    options:
+      - "Escalate — success after brute force"
+      - "Close — the user got in"
+      - "Lower severity to Low"
+      - "Add the IP to the list"
+    answer: 0
+    explanation: "Success after brute force → escalate."
+    source: "For the agent"
+  - question: "5715 at an unusual time for the user?"
+    options:
+      - "Escalate as Critical"
+      - "Close as false positive"
+      - "Note it in the triage note"
+      - "Disable the account"
+    answer: 2
+    explanation: "Unusual time: note it in the triage note."
+    source: "For the agent"
+  - question: "Which log line ending does 5715 match?"
+    options:
+      - "Failed password"
+      - "authenticated."
+      - "invalid user"
+      - "session closed"
+    answer: 1
+    explanation: "5715 matches lines ending 'authenticated.'."
+    source: "What Wazuh matches"
+  - question: "5715 for root from a public IP. First question?"
+    options:
+      - "Is that expected for this host?"
+      - "Was the password typed wrong?"
+      - "Is the scanner list empty?"
+      - "Did FIM run on schedule?"
+    answer: 0
+    explanation: "Check whether root or public-IP logins are expected."
+    source: "For the agent"

@@ -2,8 +2,9 @@
 type: Definition
 title: "Event 4724: An attempt was made to reset an account's password"
 description: "Windows Security event 4724 — one account reset another account's password; Microsoft's monitoring advice for high-value accounts and why an unexpected reset can mean takeover."
-status: draft
+status: stable
 order: 372
+generated: { by: "claude-opus/5.5", at: 2026-11-11T07:53:03Z }
 sources:
   - id: ms-4724
     title: "Microsoft Learn — 4724(S, F): An attempt was made to reset an account's password"
@@ -11,6 +12,7 @@ sources:
 ksor:
   audience: [public]
   owner: human:naveed
+  approval: { by: "human:naveed", at: 2026-11-11T10:43:03Z }
 ---
 > [!NOTE]
 > **In plain words.** Someone reset another person's password. An attacker with admin rights can take over an account this way.
@@ -30,5 +32,11 @@ For high-value domain or local accounts, monitor every 4724 for that account's T
 |---|---|
 | Reset of an admin or service account | Confirm with a ticket; else escalate |
 | Reset followed by a logon as that account | Possible takeover — escalate |
+
+## Related pages
+
+- [Event 4738: A user account was changed](event-4738.md)
+- [Event 4720: A user account was created](event-4720.md)
+- [T1098 Account Manipulation](../mitre/t1098-account-manipulation.md)
 
 [^ms-4724]: Microsoft Learn, "4724(S, F): An attempt was made to reset an account's password". https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4724

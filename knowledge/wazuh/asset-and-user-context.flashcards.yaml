@@ -1,0 +1,14 @@
+deck:
+  title: "Asset and user context in alerts"
+  description: "Recall checks drawn only from the page Asset and user context in alerts."
+cards:
+  - front: "Which NIST 800-61r3 element asks to integrate asset inventories into analysis?"
+    back: "DE.AE-07."
+  - front: "Where do Wazuh agent labels appear in a JSON alert?"
+    back: "Under agent.labels."
+  - front: "Where are agent labels configured?"
+    back: "In the agent's ossec.conf <labels> block, or centrally in agent.conf on the manager."
+  - front: "What is a CDB list?"
+    back: "A key (and optional value) list that rules check a decoded field against."
+  - front: "What does asset.criticality = critical do?"
+    back: "Raises severity one step."
