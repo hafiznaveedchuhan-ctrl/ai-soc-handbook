@@ -332,3 +332,11 @@ Protocol: `.claude/rules/session-protocol.md`. Plan of record: `specs/00-final-p
 - PR #10 (feat/06-ci-and-release → main): 4 checks green (Format checker 6s, gitleaks 5s, Build 1m4s, Browser smoke 50s); Vercel check gone. PR #8 still shows the old red Vercel check on its last commit — harmless; merging #10 first then #8 is fine.
 - Remaining Feature 06: T06-07 Docker smoke (Docker Desktop must be running), T06-09 AC2/AC3 demos. Feature 05 blocked: Gemini key returns 401.
 - T06-07 Docker smoke done ("docker on"): build ok 85 MB; run without DSN → exit 3 `KSOR_DB_URL is not set` (fail-closed, expected); image has no .env/knowledge. Evidence specs/06-ci-and-release/docker-smoke.txt.
+
+### Session 3 — Feature 03 site UI (2026-11-11, branch feat/03-site-ui)
+- Owner: "pehle UI wala sara kaam kar lo, jo best ho wo karo". Spec+tasks: specs/03-site-ui/spec.md.
+- Done: SOC console theme (navy dark DEFAULT via RootProvider theme, teal --primary, light mode teal #0f766e; all pairs >= 4.5:1), severity tokens --sev-* (defined; consumer = Phase 3), Quick Triage Lookup on home (ARIA combobox, `/` focus, 78 admitted docs indexed at build time, nothing authored), smoke +2 tests (14 pass).
+- Lighthouse (lighthouse.txt): desktop 95/97 perf, 100 a11y/BP/SEO everywhere; mobile perf 83 home / 74 doc (TBT from React hydration) — mobile perf >= 90 NOT met; follow-up noted.
+- Fixed scaffold a11y (flashcard name/focus, quiz progress label, governance dl) and LCP (no fade on title/purpose).
+- Screens: specs/03-site-ui/screens/ (home, lookup, doc × desktop/mobile × dark/light = 12).
+- Built in an isolated git worktree in the scratchpad because Naveed's `npm run dev` was running (no shared .staged-knowledge disturbed).

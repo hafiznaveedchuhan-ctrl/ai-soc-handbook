@@ -28,8 +28,9 @@ Out: auth (Feature 04), deployment (Phase 8), new authored copy.
 ## Tasks
 
 - [x] T03-01 This spec.
-- [ ] T03-02 Theme tokens (dark default, teal, navy), severity tokens.
-- [ ] T03-03 Quick Triage Lookup component + build-time index from admitted documents.
-- [ ] T03-04 Smoke test extended (lookup finds 4625; theme default dark).
-- [ ] T03-05 Screenshots (8) + Lighthouse report.
-- [ ] STOP-03 Naveed reviews screenshots → push + PR.
+- [x] T03-02 Theme tokens (dark default, teal, navy), severity tokens.
+- [x] T03-03 Quick Triage Lookup component + build-time index from admitted documents.
+- [x] T03-04 Smoke test extended (lookup finds 4625; theme default dark).
+- [x] T03-05 Screenshots (8) + Lighthouse report.
+- [ ] STOP-03 Naveed reviews screenshots (specs/03-site-ui/screens/, 12 PNG) + lighthouse.txt → merges the PR.
+- [ ] Follow-up (separate): lazy hydration of study aids to lift mobile performance to >= 90.

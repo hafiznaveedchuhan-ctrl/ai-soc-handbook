@@ -1,0 +1,22 @@
+FEATURE 03 — LIGHTHOUSE 13.6.0 (2026-11-11, built site from feat/03-site-ui, Chromium 156 headless)
+Served by a gzip static server with immutable caching for /_next/static (what any real host does);
+the scaffold's `npm run preview` sends no compression, which alone cost ~30 mobile performance points.
+
+                                   perf  a11y  best-practices  seo   LCP     TBT
+home        desktop                  95   100             100  100   0.3 s   180 ms
+home        mobile (simulated 4G)    83   100             100  100   0.9 s   670 ms
+doc (dns)   desktop                  97   100             100  100   0.3 s   140 ms
+doc (dns)   mobile (simulated 4G)    74   100             100  100   1.0 s  1530 ms
+
+Fixed during this feature (before -> after):
+- home mobile LCP 10.6 s -> 0.9 s: removed the opacity fade-in from the title block and purpose line
+  (text that starts at opacity 0 is counted as painted late).
+- doc accessibility 90 -> 100: flashcard button's aria-label replaced its visible question
+  (label-content-name-mismatch); the hidden card face's copy action was tabbable (aria-hidden-focus);
+  quiz progress bar had no name (aria-progressbar-name); governance <dl> held non-dt/dd children
+  (definition-list).
+
+Not met: mobile PERFORMANCE >= 90. Remaining cost is Total Blocking Time from React hydration
+(chunk 606, ~240 KB, 0.8 s on home / 1.8 s on a document under 4x CPU throttling). A document page
+hydrates its whole tree (tables, flashcards, quiz, slides). Follow-up idea: hydrate the study aids
+lazily (on visibility) — an architectural change, left for a separate task.
