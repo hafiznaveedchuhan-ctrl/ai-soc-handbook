@@ -33,7 +33,7 @@ await rpc("initialize", { protocolVersion: "2025-06-18", capabilities: {}, clien
 
 let pass = 0, total = 0;
 console.log(`== in-scope (expected document in top ${K}, not abstained)`);
-for (const line of lines("evals/wave1-in-scope.tsv")) {
+for (const line of ["evals/wave1-in-scope.tsv", "evals/wave2-in-scope.tsv"].flatMap(lines)) {
   const [q, expected] = line.split("\t");
   const out = await search(q);
   const ids = (out.hits ?? []).map((h) => h.provenance?.stable_id ?? h.stable_id ?? h.slug);

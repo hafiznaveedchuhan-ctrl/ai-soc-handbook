@@ -30,7 +30,7 @@ Never delete history; append a new session block; keep the Current state table c
 | 05 MCP agent surface | done, merged | abstention gate OFF (calibrate not separable, see `evals/results-2026-11-11.txt`) |
 | 03 site UI | done, merged | mobile Lighthouse perf 74–83 (<90): lazy-hydrate study aids (follow-up) |
 | 04 auth | DEFERRED | resume before Phase 8 (ADR-0004 on `feat/04-auth`) |
-| **02 Wave 2 (55)** | **55 drafts written (B1–B6); B6 = proposals awaiting interview I2** | **I2 answers, link pass, 55 decks+quizzes, refresh+calibrate --check, evals, review sheet, ONE owner "approved", PR** |
+| **02 Wave 2 (55)** | **55 STABLE (approved 2026-11-11T10:43:03Z), decks+quizzes, MCP generation 3** | PR (session 4); optional reverse links onto 20 stable pages (`linkpass-w2.py --stable`, needs Naveed's re-approval) |
 | 02 Wave 3 | not started | plan v4 says 7 docs (soc-fundamentals) — check `specs/00-final-plan.txt` [W3] list |
 
 ### 3. EXACT next steps (owner gave standing approval for all Wave 2/3 process steps)
@@ -385,3 +385,33 @@ HANDOFF §3 step 1–2 (B6 owner-policy proposals).
 
 - 2026-11-11 (session 4): B6 done — 8 owner-policy proposal drafts (wazuh/geo-and-vpn-caveats, wazuh/asset-and-user-context, false-positives/×5, sla/severity-response-matrix), commit 2e7a3a9; questions in `specs/02-soc-corpus/interview-i2.md` (Q1–Q22, waiting on Naveed). Wave 2 now 55/55 drafts. Next: HANDOFF §3 step 3 (link pass).
 - 2026-11-11 (session 4, cont.): Naveed stopped dev + said "her chez ok ha / jo best ho wo kro" → I2 confirmed (c02f97b; empty-list readings in interview-i2.md). Link pass on 55 drafts, 172 links (fe57f64; stable reverse links staged in `scripts/authoring/linkpass-w2.py --stable`, apply ONLY in the approval commit). 55 decks+quizzes (f4b6bb3, 6bdd796, 405d294; `study-w2-*.py`). quiz_precheck 108/108 ok; KSOR_DRAFTS=show build ok; normal build ok; smoke 14/14. Review sheet `specs/02-soc-corpus/wave2-review.txt`. WAITING: Naveed's "approved all wave 2" + D1/D2. After approval: stamp stable, run linkpass --stable (if D1 yes), build, refresh + calibrate --check, evals, PR.
+
+## Session 4 — END block (2026-11-11)
+
+### Last updated
+2026-11-11 ~11:00Z, session 4.
+
+### Done this session (branch feat/02-soc-corpus-wave-2, NOT pushed)
+- B6: 8 owner-policy pages (2e7a3a9); interview I2 confirmed by Naveed ("her chez ok ha") → policy (c02f97b).
+- Link pass on 55 drafts, 172 links (fe57f64); `scripts/authoring/linkpass-w2.py`.
+- 55 decks + 55 quizzes (f4b6bb3, 6bdd796, 405d294); `study-w2-*.py`; quiz_precheck 108/108; drafts-shown build ok.
+- Review sheet `specs/02-soc-corpus/wave2-review.txt`; Naveed: "approved all wave 2" → 55 pages stable, approval.at 2026-11-11T10:43:03Z (`scripts/authoring/approve-pages.py`).
+- Build 133/134 admitted (7045 draft); smoke 14/14. MCP refresh → generation 3 (147 nodes, 897 chunks, 310 embedded); gen 1 reaped.
+- Evals: in-scope 67/70 (96%), out-of-scope 0/30 (gate off) → `evals/results-2026-11-11-wave2.txt`.
+
+### Decisions taken
+- D1 (delegated by Naveed: "baqi approval aap pe chori"): reverse links onto 20 STABLE pages NOT applied — doing so would mean stamping re-approval on his behalf. Ready: `python3 -I scripts/authoring/linkpass-w2.py --stable` + re-approve those 20 when he says so.
+- D2: vpn-egress / expected countries / approved-scanners lists start EMPTY; coverage business hours.
+
+### Errors hit + fixes
+- Quiz length bias in ~10 quizzes → lengthened distractors until quiz_precheck ok.
+- `KSOR_DRAFTS=show` pages live under `system/site/out/docs/<folder>/` (not `out/<folder>`).
+- `pkill -f "ksor serve"` killed the calling shell too (exit 144) — use `ss -ltnp | grep 8080` + `kill <pid>`.
+
+### Pending / blocked
+- PR for Wave 2: needs Naveed's "push" (rule: push only when he says so).
+- Retrieval misses: severity-model vs new SLA page; 4776 lacks 0xC0000071/0xC0000224 (stable page edit → re-approval); added-to-admin-group (known).
+- event-7045 TODO-VERIFY (Microsoft source). Rotate OpenAI + Anthropic keys (Naveed).
+
+### Exact next step
+Naveed says "push" → `git push` + `gh pr create` (Wave 2: 55 stable pages + study aids + evals). Then Wave 3 (plan v4 [W3]).

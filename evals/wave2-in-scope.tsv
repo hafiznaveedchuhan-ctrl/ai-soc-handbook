@@ -1,0 +1,31 @@
+# question<TAB>expected stable_id (knowledge/<path>) — Wave 2, 30 in-scope questions
+How fast must a Critical alert be acknowledged?	knowledge/sla/severity-response-matrix
+When does the SLA clock start for an alert?	knowledge/sla/severity-response-matrix
+A user mistyped their password a few times — is that a false positive?	knowledge/false-positives/expired-or-mistyped-passwords
+What does NTLM error 0xC0000071 mean?	knowledge/false-positives/expired-or-mistyped-passwords
+Is a service account logon with Logon Type 5 normal?	knowledge/false-positives/service-accounts
+Why do backup jobs trigger SeBackupPrivilege alerts?	knowledge/false-positives/backup-jobs
+What is the admin maintenance window and does it need a change ticket?	knowledge/false-positives/admin-maintenance-windows
+How do I tell an approved vulnerability scanner from an attacker's scan?	knowledge/false-positives/vulnerability-scanners
+How accurate is GeoIP city location?	knowledge/wazuh/geo-and-vpn-caveats
+A logon from a foreign country came through our VPN — what does the location mean?	knowledge/wazuh/geo-and-vpn-caveats
+How do Wazuh agent labels add asset context to alerts?	knowledge/wazuh/asset-and-user-context
+What are Wazuh rule groups and if_group?	knowledge/wazuh/rule-groups
+What does Wazuh sshd rule 5763 mean?	knowledge/wazuh/sshd-rules-reference
+Where is the SSH auth log on Red Hat?	knowledge/linux-auth/where-auth-logs-live
+What does Wazuh rule 5710 invalid user mean?	knowledge/linux-auth/ssh-invalid-user
+What does sudo rule 5405 user NOT in sudoers mean?	knowledge/linux-auth/sudo-usage
+A new Linux user was added with useradd — what rule fires?	knowledge/linux-auth/new-user-useradd
+A process opened lsass.exe with access 0x1F0FFF — what technique is that?	knowledge/mitre/t1003-001-lsass-memory
+What is credential stuffing?	knowledge/mitre/t1110-004-credential-stuffing
+How do attackers bypass UAC with eventvwr.exe?	knowledge/mitre/t1548-002-bypass-uac
+What does Windows event 4697 mean?	knowledge/windows-events/event-4697
+What does event 4698 scheduled task created mean?	knowledge/windows-events/event-4698
+Someone changed the audit policy, event 4719 — what now?	knowledge/windows-events/event-4719
+What does Kerberos failure code 0x18 in event 4771 mean?	knowledge/windows-events/event-4771
+What does ticket encryption type 0x17 RC4 in 4769 mean?	knowledge/windows-events/event-4769
+What does Sysmon event 10 ProcessAccess record?	knowledge/sysmon/event-10-process-access
+Is Sysmon event 3 enabled by default?	knowledge/sysmon/event-3-network-connection
+What time zone are Sysmon timestamps in?	knowledge/sysmon/overview
+Many accounts locked out at once — what do I do?	knowledge/playbooks/account-lockout-storm
+How do I triage a port scan alert?	knowledge/playbooks/port-scan
