@@ -7,13 +7,18 @@ toolchain:
   requires: ">=0.0.61"
   scaffolded: "0.0.61"
 # `database.dsn_env` names the environment variable holding the Postgres DSN —
-# never the DSN itself, which lives in .env. `embedding:` is left out on
-# purpose: the default (gemini, gemini-embedding-001, 1536 dimensions) is the
-# space this record uses. `retrieval:` is added only by `ksor calibrate` once
+# never the DSN itself, which lives in .env. `embedding:` pins OpenAI's
+# text-embedding-3-small at 1536 dimensions (owner's choice 2026-11-11: the free
+# Gemini key stopped working; the cheapest OpenAI embedding model). Changing
+# model or dim later means re-embedding the whole corpus. `retrieval:` is added only by `ksor calibrate` once
 # the record is serving (Feature 05). `mcp_url` and `version` are added only
 # when the server is actually published.
 database:
   dsn_env: KSOR_DB_URL
+embedding:
+  provider: openai
+  model: text-embedding-3-small
+  dim: 1536
 ---
 
 This record is authoritative for **SOC Level-1 (L1) analyst operations**.
@@ -34,8 +39,12 @@ chiefly Wazuh, from Windows, Sysmon and Linux hosts:
 It **also** covers the fundamentals an L1 analyst needs in order to triage,
 explained at that depth and no deeper:
 
-- networking basics — the OSI and TCP/IP models, common ports and protocols,
-  DNS, HTTP and HTTPS;
+- networking — addressing (IPv4, IPv6, binary, decimal and hexadecimal
+  notation, subnetting and CIDR), routing, switching, the core protocols and
+  their ports, network devices and the logs they produce (firewall, IDS/IPS,
+  proxy, VPN, NetFlow/IPFIX, syslog), time synchronisation and packet capture
+  — at the depth a SOC analyst or SIEM engineer needs to read and correlate
+  network evidence;
 - common attack types — brute force, phishing, malware, lateral movement,
   privilege escalation;
 - phishing email analysis — reading headers, and SPF, DKIM and DMARC;
@@ -50,8 +59,8 @@ pricing or licensing, and anything outside SOC L1 operations. It holds no
 client or company data and no real IP addresses, usernames or hostnames from
 any organisation; examples are illustrative lab examples with masked values.
 
-Two kinds of reader use it: SOC analysts reading the website, and the
-soc-worker AI agent, which reads it over MCP to explain an alert, map it to
+Two kinds of reader use it: SOC analysts and SIEM engineers reading the
+website, and the soc-worker AI agent, which reads it over MCP to explain an alert, map it to
 MITRE ATT&CK, follow a playbook and draft a cited triage note.
 
 How to use it:

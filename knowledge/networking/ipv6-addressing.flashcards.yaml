@@ -1,0 +1,14 @@
+deck:
+  title: "IPv6 addressing"
+  description: "Recall checks drawn only from the page IPv6 addressing."
+cards:
+  - front: "How long is an IPv6 address?"
+    back: "128 bits — eight 16-bit pieces in hex."
+  - front: "Does IPv6 have broadcast addresses?"
+    back: "No — unicast, anycast and multicast only."
+  - front: "How many times may '::' appear?"
+    back: "Once — to replace the longest run of zero fields."
+  - front: "Upper or lower case for a–f (RFC 5952)?"
+    back: "Lowercase."
+  - front: "Why normalise IPv6 before comparing?"
+    back: "Different strings can be the same address."

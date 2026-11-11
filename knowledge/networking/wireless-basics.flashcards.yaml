@@ -1,0 +1,14 @@
+deck:
+  title: "Wireless (WLAN) basics for the SOC"
+  description: "Recall checks drawn only from the page Wireless (WLAN) basics for the SOC."
+cards:
+  - front: "Why are WLANs usually less secure than wired networks?"
+    back: "Easy to reach and often weakly configured for convenience."
+  - front: "What is a dual-connected device?"
+    back: "One connected to a wired network and a WLAN at the same time."
+  - front: "What is a rogue AP?"
+    back: "An attacker's access point set up to look like part of the organisation's WLAN."
+  - front: "What does a WIDPS do?"
+    back: "Sensors watch WLAN bands and channels to find attacks and some vulnerabilities."
+  - front: "How often should WLAN security be assessed?"
+    back: "At least annually."

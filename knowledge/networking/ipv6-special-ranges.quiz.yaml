@@ -1,0 +1,58 @@
+quiz:
+  title: "Special-purpose IPv6 address ranges"
+  questionsPerRound: 6
+questions:
+  - question: "An address starting with ff is …"
+    options:
+      - "Loopback"
+      - "Multicast"
+      - "Link-local"
+      - "Unique-local"
+    answer: 1
+    explanation: "ff00::/8 is multicast."
+    source: "The ranges"
+  - question: "::/128 is the …"
+    options:
+      - "Loopback Address"
+      - "IPv4-mapped prefix"
+      - "Multicast prefix"
+      - "Unspecified Address"
+    answer: 3
+    explanation: "IANA registry: ::/128 Unspecified Address."
+    source: "The ranges"
+  - question: "Before an IPv4 reputation check on ::ffff:x, do …"
+    options:
+      - "strip ::ffff: and use the IPv4"
+      - "look up the whole IPv6"
+      - "drop the address"
+      - "convert it to fe80::"
+    answer: 0
+    explanation: "Strip ::ffff: before checking IPv4 lists or reputation."
+    source: "Why a SOC analyst cares"
+  - question: "Which RFC added 3fff::/20?"
+    options:
+      - "RFC 3849"
+      - "RFC 4193"
+      - "RFC 9637"
+      - "RFC 4291"
+    answer: 2
+    explanation: "RFC 9637 (2024) added 3fff::/20 for documentation."
+    source: "The ranges"
+  - question: "An fd… address should get …"
+    options:
+      - "a reputation check"
+      - "no external lookup"
+      - "a GeoIP lookup"
+      - "an abuse report"
+    answer: 1
+    explanation: "fc00::/7 (fc/fd) is unique-local — internal."
+    source: "For the agent"
+  - question: "Which Microsoft event page notes ::ffff: addresses?"
+    options:
+      - "4625"
+      - "4720"
+      - "1102"
+      - "4688"
+    answer: 0
+    explanation: "Microsoft's 4625 page: Source Network Address may be ::ffff: plus IPv4."
+    source: "Reading ::ffff: in Windows logs"

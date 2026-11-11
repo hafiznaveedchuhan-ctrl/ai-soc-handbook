@@ -1,0 +1,58 @@
+quiz:
+  title: "Packet capture"
+  questionsPerRound: 6
+questions:
+  - question: "Normally a NIC accepts …"
+    options:
+      - "every packet on the wire it can see"
+      - "only packets meant for it"
+      - "only broadcast packets"
+      - "only encrypted packets"
+    answer: 1
+    explanation: "SP 800-86: normally a NIC accepts only packets intended for it."
+    source: "How capture works"
+  - question: "A capture can be limited to …"
+    options:
+      - "only one byte per packet"
+      - "only encrypted traffic"
+      - "only IPv6 traffic"
+      - "certain ports or addresses"
+    answer: 3
+    explanation: "Sniffers can capture all packets or only those with given ports or addresses."
+    source: "How capture works"
+  - question: "Why do captures need policies?"
+    options:
+      - "They can expose sensitive data"
+      - "They slow down DNS"
+      - "They delete the firewall logs automatically"
+      - "They change IP addresses"
+    answer: 0
+    explanation: "SP 800-86: captures can include passwords and email contents."
+    source: "Rules"
+  - question: "How may attackers capture more traffic (T1040)?"
+    options:
+      - "Use a DHCP lease"
+      - "Use a TLS alert"
+      - "Use span ports"
+      - "Use a DNS PTR record"
+    answer: 2
+    explanation: "MITRE T1040: promiscuous mode or span ports."
+    source: "Attackers sniff too (T1040)"
+  - question: "Which data is most at risk from sniffing?"
+    options:
+      - "Encrypted TLS payloads"
+      - "Credentials on unencrypted protocols"
+      - "Hashes in Windows events"
+      - "SNMP traps sent from the network switches"
+    answer: 1
+    explanation: "MITRE: credentials, especially over insecure, unencrypted protocols."
+    source: "Attackers sniff too (T1040)"
+  - question: "When might an analyst record traffic between two hosts?"
+    options:
+      - "When IDS shows unusual activity"
+      - "Never, it is not allowed"
+      - "Only during backups"
+      - "Only for DHCP leases"
+    answer: 0
+    explanation: "SP 800-86 example: IDS alerts on unusual activity between two hosts."
+    source: "How capture works"

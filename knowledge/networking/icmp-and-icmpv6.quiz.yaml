@@ -1,0 +1,58 @@
+quiz:
+  title: "ICMP and ICMPv6"
+  questionsPerRound: 6
+questions:
+  - question: "ICMP type 0 is …"
+    options:
+      - "Echo"
+      - "Echo Reply"
+      - "Redirect"
+      - "Time Exceeded"
+    answer: 1
+    explanation: "IANA: 0 Echo Reply, 8 Echo."
+    source: "Common ICMP (IPv4) types"
+  - question: "ICMPv6 type 2 is …"
+    options:
+      - "Time Exceeded"
+      - "Echo Request"
+      - "Destination Unreachable"
+      - "Packet Too Big"
+    answer: 3
+    explanation: "ICMPv6: 1 Dest Unreachable, 2 Packet Too Big, 3 Time Exceeded."
+    source: "Common ICMPv6 types"
+  - question: "ICMPv6 Echo Request is type …"
+    options:
+      - "128"
+      - "8"
+      - "129"
+      - "133"
+    answer: 0
+    explanation: "128 Echo Request, 129 Echo Reply."
+    source: "Common ICMPv6 types"
+  - question: "Type 8 to many destinations suggests …"
+    options:
+      - "normal DNS traffic"
+      - "a TLS handshake"
+      - "a possible sweep"
+      - "an NTP sync"
+    answer: 2
+    explanation: "For the agent: possible sweep — check source."
+    source: "For the agent"
+  - question: "ICMP type 5 is …"
+    options:
+      - "Echo"
+      - "Redirect"
+      - "Destination Unreachable"
+      - "Time Exceeded"
+    answer: 1
+    explanation: "IANA: 5 Redirect."
+    source: "Common ICMP (IPv4) types"
+  - question: "ICMP is considered …"
+    options:
+      - "an integral part of IP"
+      - "a transport protocol"
+      - "an application protocol"
+      - "part of the link layer"
+    answer: 0
+    explanation: "RFC 1122: ICMP is an integral part of IP."
+    source: "What ICMP is"

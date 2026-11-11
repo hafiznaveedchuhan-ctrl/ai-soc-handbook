@@ -1,0 +1,14 @@
+deck:
+  title: "Proxies and reverse proxies"
+  description: "Recall checks drawn only from the page Proxies and reverse proxies."
+cards:
+  - front: "What is a forward proxy?"
+    back: "An intermediary chosen by the client to forward its requests."
+  - front: "What is a gateway (reverse proxy)?"
+    back: "Acts as the origin server and forwards requests inbound to other servers."
+  - front: "Which header standardises the original client address?"
+    back: "Forwarded (RFC 7239)."
+  - front: "Is X-Forwarded-For standard?"
+    back: "No — RFC 7239 calls it non-standard."
+  - front: "Can Forwarded be trusted as correct?"
+    back: "No — any node on the way, including the client, can change it."

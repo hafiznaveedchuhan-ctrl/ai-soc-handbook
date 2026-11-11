@@ -1,0 +1,14 @@
+deck:
+  title: "Network segmentation and zones"
+  description: "Recall checks drawn only from the page Network segmentation and zones."
+cards:
+  - front: "What is a DMZ?"
+    back: "A firewall interface like the protected side; its traffic still passes the firewall."
+  - front: "What usually sits in a DMZ?"
+    back: "Public-facing servers such as web and email servers."
+  - front: "What is microsegmentation?"
+    back: "Dividing an internal network into isolated segments so traffic can be monitored and controlled."
+  - front: "What does zero trust assume?"
+    back: "No implicit trust from network location or ownership."
+  - front: "Why is perimeter-only security not enough?"
+    back: "Once the perimeter is breached, lateral movement is unhindered."

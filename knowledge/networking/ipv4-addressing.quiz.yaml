@@ -1,0 +1,58 @@
+quiz:
+  title: "IPv4 addressing and the IPv4 header"
+  questionsPerRound: 6
+questions:
+  - question: "Class C addresses start with bits …"
+    options:
+      - "10"
+      - "110"
+      - "0"
+      - "1110"
+    answer: 1
+    explanation: "RFC 791: A starts 0, B starts 10, C starts 110."
+    source: "The address"
+  - question: "How big is the Total Length field?"
+    options:
+      - "8 bits"
+      - "32 bits"
+      - "13 bits"
+      - "16 bits"
+    answer: 3
+    explanation: "Total Length is 16 bits — up to 65,535 octets."
+    source: "The IPv4 header fields"
+  - question: "Minimum correct IHL value?"
+    options:
+      - "5"
+      - "4"
+      - "20"
+      - "1"
+    answer: 0
+    explanation: "IHL is in 32-bit words; minimum correct value 5."
+    source: "The IPv4 header fields"
+  - question: "Which flag says 'more fragments follow'?"
+    options:
+      - "DF"
+      - "RST"
+      - "MF"
+      - "SYN"
+    answer: 2
+    explanation: "Flags: DF = Don't Fragment, MF = More Fragments."
+    source: "The IPv4 header fields"
+  - question: "How big is the Fragment Offset field?"
+    options:
+      - "16 bits"
+      - "13 bits"
+      - "8 bits"
+      - "3 bits"
+    answer: 1
+    explanation: "Fragment Offset is 13 bits."
+    source: "The IPv4 header fields"
+  - question: "Which RFC updates the Identification field?"
+    options:
+      - "RFC 6864"
+      - "RFC 791"
+      - "RFC 1918"
+      - "RFC 4632"
+    answer: 0
+    explanation: "RFC 6864 updates the rules for the IPv4 ID field."
+    source: "The IPv4 header fields"

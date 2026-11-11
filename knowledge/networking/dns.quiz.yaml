@@ -1,0 +1,58 @@
+quiz:
+  title: "DNS — Domain Name System"
+  questionsPerRound: 6
+questions:
+  - question: "Record type 28 is …"
+    options:
+      - "A (IPv4 address)"
+      - "AAAA (IPv6 address)"
+      - "MX (mail exchange)"
+      - "PTR (pointer)"
+    answer: 1
+    explanation: "IANA: AAAA = 28, A = 1, MX = 15, PTR = 12."
+    source: "Record types (IANA)"
+  - question: "RCODE 5 means …"
+    options:
+      - "Server failure"
+      - "Format error"
+      - "Non-existent domain"
+      - "Refused"
+    answer: 3
+    explanation: "IANA: RCODE 5 Refused, 2 ServFail, 1 FormErr, 3 NXDomain."
+    source: "Response codes (RCODE)"
+  - question: "How long may one DNS label be?"
+    options:
+      - "63 octets or less"
+      - "255 octets or less"
+      - "512 octets or less"
+      - "32 octets or less"
+    answer: 0
+    explanation: "RFC 1035: labels 63 octets or less, names 255 octets or less."
+    source: "Basics"
+  - question: "Reverse name for 192.0.2.10?"
+    options:
+      - "192.0.2.10.in-addr.arpa"
+      - "10.2.0.192.ip6.arpa"
+      - "10.2.0.192.in-addr.arpa"
+      - "in-addr.arpa.192.0.2.10"
+    answer: 2
+    explanation: "Octets in reverse order under IN-ADDR.ARPA (computed example on the page)."
+    source: "Reverse lookup"
+  - question: "Which is a NIST sign of DNS tunnelling?"
+    options:
+      - "Queries on TCP port 53 only"
+      - "Odd high-entropy query names"
+      - "An SOA record in the zone"
+      - "Answers with a TTL of zero"
+    answer: 1
+    explanation: "NIST SP 800-81r3 lists high volume, unusual patterns, odd high-entropy names, known-bad domains."
+    source: "What NIST SP 800-81r3 says for security"
+  - question: "What does protective DNS do?"
+    options:
+      - "Analyses queries and blocks malicious sites"
+      - "Encrypts every DNS answer"
+      - "Replaces DHCP for addressing"
+      - "Speeds up zone transfers"
+    answer: 0
+    explanation: "Protective DNS analyses queries and responses and blocks access to malicious sites."
+    source: "What NIST SP 800-81r3 says for security"

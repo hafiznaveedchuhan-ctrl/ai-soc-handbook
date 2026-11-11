@@ -1,0 +1,58 @@
+quiz:
+  title: "Networking for SOC analysts — overview"
+  questionsPerRound: 6
+questions:
+  - question: "Which layer list is the Internet protocol suite?"
+    options:
+      - "Physical, data link, network, session"
+      - "Application, transport, internet, link"
+      - "Presentation, session, transport, link"
+      - "Application, session, network, cable"
+    answer: 1
+    explanation: "RFC 1122: application, transport, internet and link layers."
+    source: "What a network is"
+  - question: "Where do you start for 'is this an attack pattern?'"
+    options:
+      - "osi-model"
+      - "number-systems"
+      - "vlans-and-switching"
+      - "network-attacks"
+    answer: 3
+    explanation: "The overview's agent table points attack-pattern questions to network-attacks."
+    source: "For the agent"
+  - question: "Which field in 4625 says inside or outside?"
+    options:
+      - "IpAddress (source address)"
+      - "Logon Type only"
+      - "Process ID"
+      - "Subject Logon ID"
+    answer: 0
+    explanation: "The source address of a failed logon decides inside or outside."
+    source: "Why a SOC analyst cares"
+  - question: "What is the answer to an exploitation how-to question?"
+    options:
+      - "A step-by-step guide"
+      - "A link to the attack page"
+      - "\"not in this record\""
+      - "The closest RFC section"
+    answer: 2
+    explanation: "Out of networking scope questions get 'not in this record'."
+    source: "For the agent"
+  - question: "Which group holds syslog and NetFlow pages?"
+    options:
+      - "Foundations"
+      - "SOC / SIEM"
+      - "Link layer"
+      - "Infrastructure"
+    answer: 1
+    explanation: "The overview table lists syslog and NetFlow/IPFIX under SOC / SIEM."
+    source: "How this section is organised"
+  - question: "Where do you go for 'internal or external IP?'"
+    options:
+      - "enrichment/private-ip-ranges"
+      - "ports-and-services"
+      - "routing-basics"
+      - "tls"
+    answer: 0
+    explanation: "The agent table points that question to the private IP ranges page."
+    source: "For the agent"

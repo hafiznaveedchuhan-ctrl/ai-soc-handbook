@@ -1,0 +1,14 @@
+deck:
+  title: "Special-purpose IPv6 address ranges"
+  description: "Recall checks drawn only from the page Special-purpose IPv6 address ranges."
+cards:
+  - front: "What is ::1?"
+    back: "The IPv6 loopback address."
+  - front: "What is ::ffff:192.0.2.10?"
+    back: "The IPv4 address 192.0.2.10 written as an IPv4-mapped IPv6 address."
+  - front: "What is fe80::/10?"
+    back: "Link-local unicast."
+  - front: "What is fc00::/7?"
+    back: "Unique-local (internal) addresses."
+  - front: "Which two prefixes are for documentation?"
+    back: "2001:db8::/32 and 3fff::/20 (RFC 9637, 2024)."

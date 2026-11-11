@@ -1,0 +1,58 @@
+quiz:
+  title: "DHCP and DHCPv6"
+  questionsPerRound: 6
+questions:
+  - question: "Which message does a client broadcast to find servers?"
+    options:
+      - "DHCPOFFER"
+      - "DHCPDISCOVER"
+      - "DHCPACK"
+      - "DHCPINFORM broadcast"
+    answer: 1
+    explanation: "DHCPDISCOVER: client broadcast to locate available servers."
+    source: "DHCP (IPv4)"
+  - question: "What does DHCPDECLINE mean?"
+    options:
+      - "The lease has expired"
+      - "The client wants a brand new lease"
+      - "The server is shutting down"
+      - "The address is already in use"
+    answer: 3
+    explanation: "DHCPDECLINE: client to server, the network address is already in use."
+    source: "DHCP (IPv4)"
+  - question: "Option 61 in a DHCP log is …"
+    options:
+      - "Client Identifier"
+      - "DHCP Message Type"
+      - "Requested IP Address"
+      - "Domain Server"
+    answer: 0
+    explanation: "IANA: option 61 is Client Identifier."
+    source: "Option numbers often seen in logs"
+  - question: "DHCPv6 clients send to which multicast address?"
+    options:
+      - "ff02::1"
+      - "ff02::5"
+      - "ff02::1:2"
+      - "ff02::2"
+    answer: 2
+    explanation: "All_DHCP_Relay_Agents_and_Servers is ff02::1:2."
+    source: "DHCPv6"
+  - question: "Which DHCPv6 message type is SOLICIT?"
+    options:
+      - "7"
+      - "1"
+      - "3"
+      - "11"
+    answer: 1
+    explanation: "SOLICIT (1), ADVERTISE (2), REQUEST (3), … REPLY (7), INFORMATION-REQUEST (11)."
+    source: "DHCPv6"
+  - question: "What risk does RFC 2131 name for DHCP?"
+    options:
+      - "Unauthorized servers easily set up"
+      - "Leases can never expire once given"
+      - "Port 67 is always encrypted"
+      - "Clients cannot release addresses"
+    answer: 0
+    explanation: "Unauthorized DHCP servers may be easily set up and send false information."
+    source: "Security"

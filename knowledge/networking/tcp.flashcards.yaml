@@ -1,0 +1,14 @@
+deck:
+  title: "TCP — Transmission Control Protocol"
+  description: "Recall checks drawn only from the page TCP — Transmission Control Protocol."
+cards:
+  - front: "What service does TCP give?"
+    back: "Reliable, connection-oriented, with resequencing and flow control."
+  - front: "IP protocol number for TCP?"
+    back: "6."
+  - front: "What is the three-way handshake?"
+    back: "SYN, then SYN-ACK, then ACK."
+  - front: "What does a closed port answer to a SYN?"
+    back: "A reset (RST)."
+  - front: "Which RFC is the current TCP specification?"
+    back: "RFC 9293."

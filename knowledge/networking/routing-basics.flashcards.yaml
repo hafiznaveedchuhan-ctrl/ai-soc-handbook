@@ -1,0 +1,14 @@
+deck:
+  title: "Routing basics"
+  description: "Recall checks drawn only from the page Routing basics."
+cards:
+  - front: "Which route does a router use when several match?"
+    back: "The most specific one — the longest matching prefix."
+  - front: "What is the default route?"
+    back: "The route to all networks with no explicit route; its prefix length is zero (0.0.0.0/0)."
+  - front: "What must a router do to TTL on every packet it handles?"
+    back: "Lower it by at least one."
+  - front: "What happens when TTL reaches zero?"
+    back: "The packet is discarded and (unless multicast) ICMP Time Exceeded, code 0, goes to the source."
+  - front: "What happens if no route matches at all?"
+    back: "The packet is discarded and an ICMP error is generated."

@@ -1,0 +1,58 @@
+quiz:
+  title: "IPv4 subnetting and CIDR"
+  questionsPerRound: 6
+questions:
+  - question: "Mask for /26?"
+    options:
+      - "255.255.255.128"
+      - "255.255.255.192"
+      - "255.255.255.224"
+      - "255.255.255.240"
+    answer: 1
+    explanation: "Worked example: 192.0.2.64/26 has mask 255.255.255.192."
+    source: "Worked examples (machine-checked)"
+  - question: "Broadcast of 192.0.2.64/26?"
+    options:
+      - "192.0.2.128"
+      - "192.0.2.255"
+      - "192.0.2.126"
+      - "192.0.2.127"
+    answer: 3
+    explanation: "192.0.2.64/26 runs 192.0.2.64 to 192.0.2.127."
+    source: "Worked examples (machine-checked)"
+  - question: "255.255.240.0 is which prefix?"
+    options:
+      - "/20"
+      - "/22"
+      - "/18"
+      - "/24"
+    answer: 0
+    explanation: "Masks to prefixes: 255.255.240.0 = /20."
+    source: "Worked examples (machine-checked)"
+  - question: "Usable hosts in 198.51.100.0/27?"
+    options:
+      - "32"
+      - "62"
+      - "30"
+      - "14"
+    answer: 2
+    explanation: "/27 = 32 addresses, 30 usable."
+    source: "Worked examples (machine-checked)"
+  - question: "Is 192.0.2.77 inside 192.0.2.64/26?"
+    options:
+      - "No"
+      - "Yes"
+      - "Only as broadcast"
+      - "Only if /24"
+    answer: 1
+    explanation: "192.0.2.64/26 covers 192.0.2.64 to 192.0.2.127."
+    source: "Worked examples (machine-checked)"
+  - question: "Addresses in a /16 (legacy Class B)?"
+    options:
+      - "65536"
+      - "256"
+      - "16777216"
+      - "4096"
+    answer: 0
+    explanation: "RFC 4632 table: /16 = 65536."
+    source: "Block sizes (from RFC 4632)"

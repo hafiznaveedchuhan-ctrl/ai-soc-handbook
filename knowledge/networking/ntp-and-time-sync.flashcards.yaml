@@ -1,0 +1,14 @@
+deck:
+  title: "NTP and time synchronisation"
+  description: "Recall checks drawn only from the page NTP and time synchronisation."
+cards:
+  - front: "Which port does NTP use?"
+    back: "123 (IANA: ntp on UDP 123)."
+  - front: "What stratum is a primary server?"
+    back: "Stratum 1 — synchronized to a reference clock such as GPS."
+  - front: "What does stratum 16 mean?"
+    back: "Unsynchronized."
+  - front: "When does the NTP epoch start?"
+    back: "0 h 1 January 1900 UTC."
+  - front: "How many time sources does RFC 8633 advise?"
+    back: "At least four independent, diverse sources."

@@ -22,6 +22,11 @@ unattributed blogs, AI text) are never cited.
 | B4 | (dropped) | CISA IR playbooks page — 403 to automated requests; not used | 2026-11-10 |
 | B5 | playbooks | https://documentation.wazuh.com/current/proof-of-concept-guide/detect-brute-force-attack.html (+ all earlier approved sources reused) | 2026-11-10 |
 | B5+ | wazuh, mitre | https://documentation.wazuh.com/current/user-manual/ruleset/mitre.html (rule.mitre alert fields); https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows (4104) | 2026-11-10 |
+| N1 | networking | RFC 791, 1122, 1180, 826, 9542 (replaces obsolete 7042), 4632, 1918, 5737, 4291, 6864 (rfc-editor.org); IANA IEEE 802 Numbers; NIST glossary "network"; Microsoft Learn OSI model (ISO/IEC 7498-1 behind a licence click-through and ITU X.200 blocked — not used) | 2026-11-10 |
+| N2 | networking | IANA IPv4 + IPv6 special-purpose registries, ICMP + ICMPv6 parameters, protocol numbers, service names and port numbers; RFC 6890 (+8190), 3927, 6598, 1112, 8200, 4291, 5952, 3849 (+9637), 4193, 4861, 4862, 792, 4443, 9293, 768, 6335 | 2026-11-10 |
+| N3 | networking | RFC 1812, 4632, 792, 2328, 5340, 4271, 3022, 4787, 1918, 9542, 2131, 9915 (replaces obsolete 8415), 4862, 1034, 1035, 5905, 8633 (rfc-editor.org); IANA protocol numbers, IEEE 802 numbers, BOOTP/DHCP parameters, DNS parameters, port numbers; NIST SP 800-81r3 (replaces withdrawn 800-81-2), NIST SP 800-153. IEEE 802.1Q/802.11 blocked — not used | 2026-11-10 |
+| N4 | networking | RFC 9110, 9112, 9846 (replaces obsolete 8446), 8996, 5321, 5322, 9051, 1939, 7208, 6376, 9989 (replaces obsolete 7489), 4251, 4253, 854, 7239, 4301, 4303, 4302, 7296, 3948, 1918 (rfc-editor.org); IANA HTTP status codes, TLS parameters, port numbers, protocol numbers; Microsoft Learn MS-RDPBCGR + RDP listening port + event 4624; NIST SP 800-52r2, 800-41r1, 800-94, 800-77r1 | 2026-11-10 |
+| N5 | networking | RFC 5424 (replaces obsolete 3164), 5425, 5426, 7011, 7012, 3954, 4987, 4732, 2827, 5905 (rfc-editor.org); IANA IPFIX entities; Wazuh syslog + ossec.conf remote docs; MITRE ATT&CK T1040, T1046, T1498.002, T1557.002, T1071.004, T1048 (fetched 2026-11-10); NIST SP 800-41r1, 800-207, 800-215, 800-86, 800-94, 800-92, 800-81r3. PCAP/pcapng are IETF drafts only and tcpdump.org did not answer — not used | 2026-11-10 |
 
 ## Tier 2 log
 
@@ -38,3 +43,5 @@ unattributed blogs, AI text) are never cited.
 | https://car.mitre.org/analytics/CAR-2021-05-010/ | 2026-11-10 | t1136-001 → local admin via net.exe | MITRE DET0447 | 2 |
 | https://car.mitre.org/analytics/CAR-2021-01-003/ | 2026-11-10 | t1685-005 → wevtutil log clearing | MITRE DET0532 | 2 |
 | https://redcanary.com/threat-detection-report/techniques/powershell/ | 2026-11-10 | t1059-001 → -encodedcommand, HTTP download; logging (event IDs TODO-VERIFY) | MITRE DET0455 | 2 |
+| https://aws.amazon.com/what-is/osi-model/ | 2026-11-10 | networking/osi-model → layers 5–7 descriptions | IBM page (and RFC 1122 for the application-layer boundary, shown as a disagreement) | 2 |
+| https://www.ibm.com/think/topics/osi-model | 2026-11-10 | networking/osi-model → layers 5–7; TCP/IP application layer includes session | AWS page; RFC 1122 disagrees on session — both shown | 2 |
