@@ -1,0 +1,58 @@
+quiz:
+  title: "T1548.002 Abuse Elevation Control Mechanism: Bypass UAC"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1548.002?"
+    options:
+      - "Defense Impairment"
+      - "Privilege Escalation"
+      - "Execution"
+      - "Credential Access"
+    answer: 1
+    explanation: "The technique table lists Privilege Escalation."
+    source: "The technique"
+  - question: "Which binary is a known auto-elevate abuse target?"
+    options:
+      - "lsass.exe"
+      - "taskeng.exe"
+      - "svchost.exe"
+      - "sdclt.exe"
+    answer: 3
+    explanation: "The pattern names eventvwr.exe and sdclt.exe."
+    source: "Detection (MITRE DET0388)"
+  - question: "Which Sysmon event is Module Load?"
+    options:
+      - "7"
+      - "10"
+      - "13"
+      - "1"
+    answer: 0
+    explanation: "Module Load: Sysmon 7."
+    source: "Detection (MITRE DET0388)"
+  - question: "Which Security event is Logon Session Metadata here?"
+    options:
+      - "4688"
+      - "4624"
+      - "4672"
+      - "4697"
+    answer: 2
+    explanation: "Logon Session Metadata: 4672."
+    source: "Detection (MITRE DET0388)"
+  - question: "Auto-elevate handler key changed, then elevated process?"
+    options:
+      - "Close as update"
+      - "Escalate"
+      - "Note only"
+      - "Ignore it"
+    answer: 1
+    explanation: "Registry change then elevated process → escalate."
+    source: "For the agent"
+  - question: "UAC integrity levels run from…"
+    options:
+      - "Low to high"
+      - "High to low"
+      - "User to kernel"
+      - "Guest to domain"
+    answer: 0
+    explanation: "Integrity levels from low to high."
+    source: "The technique"

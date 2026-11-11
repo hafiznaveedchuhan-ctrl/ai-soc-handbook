@@ -1,0 +1,58 @@
+quiz:
+  title: "Where Linux authentication logs live"
+  questionsPerRound: 6
+questions:
+  - question: "Where is the original SSH line on Ubuntu?"
+    options:
+      - "/var/log/secure"
+      - "/var/log/auth.log"
+      - "/var/log/messages"
+      - "/var/log/syslog.d"
+    answer: 1
+    explanation: "Debian/Ubuntu: /var/log/auth.log."
+    source: "The file, by distribution"
+  - question: "Where is it on RHEL, CentOS or Rocky?"
+    options:
+      - "/var/log/auth.log"
+      - "/var/log/audit.log"
+      - "/var/log/wtmp"
+      - "/var/log/secure"
+    answer: 3
+    explanation: "Red Hat family: /var/log/secure."
+    source: "The file, by distribution"
+  - question: "Which sshd setting controls how much it writes?"
+    options:
+      - "LogLevel"
+      - "SyslogFacility"
+      - "MaxAuthTries"
+      - "PermitRootLogin"
+    answer: 0
+    explanation: "LogLevel sets how much sshd writes."
+    source: "The file, by distribution"
+  - question: "Default syslog facility of sshd?"
+    options:
+      - "DAEMON"
+      - "LOCAL7"
+      - "AUTH"
+      - "AUTHPRIV"
+    answer: 2
+    explanation: "SyslogFacility defaults to AUTH."
+    source: "The file, by distribution"
+  - question: "Wazuh syslog listener default port?"
+    options:
+      - "1514"
+      - "514"
+      - "1515"
+      - "55000"
+    answer: 1
+    explanation: "The <remote> syslog block listens on port 514."
+    source: "Getting them into Wazuh"
+  - question: "A host sends no auth events. First check?"
+    options:
+      - "Agent or rsyslog forwarding running"
+      - "Whether the user changed password"
+      - "The AbuseIPDB score of the host"
+      - "The MITRE module's Framework tab"
+    answer: 0
+    explanation: "Check that the agent or rsyslog forwarding is running."
+    source: "For the agent"

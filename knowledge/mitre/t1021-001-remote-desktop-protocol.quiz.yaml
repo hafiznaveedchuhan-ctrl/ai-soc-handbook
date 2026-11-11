@@ -1,0 +1,58 @@
+quiz:
+  title: "T1021.001 Remote Services: Remote Desktop Protocol"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1021.001?"
+    options:
+      - "Credential Access"
+      - "Lateral Movement"
+      - "Initial Access"
+      - "Discovery"
+    answer: 1
+    explanation: "The technique table lists Lateral Movement."
+    source: "The technique"
+  - question: "Which Security events cover Logon Session Creation?"
+    options:
+      - "4778 and 4779"
+      - "4625 and 4740"
+      - "4688 and 4672"
+      - "4624 and 4648"
+    answer: 3
+    explanation: "Logon Session Creation: 4624, 4648."
+    source: "Detection (MITRE DET0327)"
+  - question: "Which events are Logon Session Metadata (RDP reconnect)?"
+    options:
+      - "4778 and 4779"
+      - "4624 and 4648"
+      - "4697 and 7045"
+      - "4720 and 4726"
+    answer: 0
+    explanation: "Logon Session Metadata: 4778, 4779."
+    source: "Detection (MITRE DET0327)"
+  - question: "RDP logon, then connections to other hosts. Reading?"
+    options:
+      - "Normal admin work — close"
+      - "Scanner traffic — allow-list"
+      - "Possible lateral movement — escalate"
+      - "Typo noise — note only"
+    answer: 2
+    explanation: "New processes or connections after RDP = possible lateral movement."
+    source: "For the agent"
+  - question: "Sysmon events for network connections and DNS?"
+    options:
+      - "1 and 11"
+      - "3 and 22"
+      - "10 and 8"
+      - "12 and 13"
+    answer: 1
+    explanation: "Network Connection Creation: Sysmon 3, 22."
+    source: "Detection (MITRE DET0327)"
+  - question: "RDP success after many failures. Which page?"
+    options:
+      - "Success after failures"
+      - "Port scan"
+      - "Backup jobs"
+      - "Audit log cleared"
+    answer: 0
+    explanation: "The For-the-agent table points to the success-after-failures playbook."
+    source: "For the agent"

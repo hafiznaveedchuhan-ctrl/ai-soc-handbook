@@ -1,0 +1,14 @@
+deck:
+  title: "Wazuh sshd rules reference"
+  description: "Recall checks drawn only from the page Wazuh sshd rules reference."
+cards:
+  - front: "Rule 5715?"
+    back: "Level 3 — SSH authentication success (T1078, T1021)."
+  - front: "Rule 5716?"
+    back: "Level 5 — SSH authentication failed."
+  - front: "Rule 5720?"
+    back: "Level 10 — multiple authentication failures (8 × 5716, same IP)."
+  - front: "Rule 5712?"
+    back: "Level 10 — brute force with a non-existent user (8 in 120 s, same IP)."
+  - front: "Rule 5731?"
+    back: "Level 6 — SSH scanning (T1046)."

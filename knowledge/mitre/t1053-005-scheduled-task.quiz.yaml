@@ -1,0 +1,58 @@
+quiz:
+  title: "T1053.005 Scheduled Task/Job: Scheduled Task"
+  questionsPerRound: 6
+questions:
+  - question: "Which event records a scheduled task being created?"
+    options:
+      - "4702"
+      - "4698"
+      - "4697"
+      - "7045"
+    answer: 1
+    explanation: "Scheduled Job Creation: 4698."
+    source: "Detection (MITRE DET0441)"
+  - question: "Which event records a task being modified?"
+    options:
+      - "4698"
+      - "4719"
+      - "4738"
+      - "4702"
+    answer: 3
+    explanation: "Scheduled Job Modification: 4702."
+    source: "Detection (MITRE DET0441)"
+  - question: "Which PowerShell cmdlet does MITRE name?"
+    options:
+      - "Invoke-CimMethod"
+      - "Invoke-WebRequest"
+      - "Start-Process"
+      - "New-Service"
+    answer: 0
+    explanation: "Tasks can be made with the PowerShell cmdlet Invoke-CimMethod."
+    source: "The technique"
+  - question: "Task runs a binary from a user-writable path. Reading?"
+    options:
+      - "Normal — close it"
+      - "Backup — check window"
+      - "Suspicious — check who made it"
+      - "Scanner — allow-list it"
+    answer: 2
+    explanation: "Treat as suspicious and check who created it."
+    source: "For the agent"
+  - question: "Which tactic is NOT listed for T1053.005?"
+    options:
+      - "Persistence"
+      - "Credential Access"
+      - "Execution"
+      - "Privilege Escalation"
+    answer: 1
+    explanation: "Tactics: Execution, Persistence, Privilege Escalation."
+    source: "The technique"
+  - question: "Process from taskeng.exe right after a new task. Do what?"
+    options:
+      - "Link the task to the process"
+      - "Ignore the process"
+      - "Close both alerts"
+      - "Lower the task's level"
+    answer: 0
+    explanation: "Link the task to the process."
+    source: "For the agent"

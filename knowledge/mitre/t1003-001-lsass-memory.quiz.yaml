@@ -1,0 +1,58 @@
+quiz:
+  title: "T1003.001 OS Credential Dumping: LSASS Memory"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1003.001?"
+    options:
+      - "Lateral Movement"
+      - "Credential Access"
+      - "Persistence"
+      - "Discovery"
+    answer: 1
+    explanation: "The technique table lists Credential Access."
+    source: "The technique"
+  - question: "MITRE's example for an offline dump?"
+    options:
+      - "sc.exe create lsass binPath="
+      - "schtasks /create /tn lsass"
+      - "wevtutil cl Security"
+      - "procdump -ma lsass.exe lsass_dump"
+    answer: 3
+    explanation: "MITRE's example uses procdump -ma lsass.exe."
+    source: "The technique"
+  - question: "Which Sysmon event shows a handle opened to lsass?"
+    options:
+      - "10"
+      - "1"
+      - "11"
+      - "3"
+    answer: 0
+    explanation: "Process Access is Sysmon event 10."
+    source: "Detection (MITRE DET0363)"
+  - question: "Which Security event covers User Account Metadata here?"
+    options:
+      - "4624"
+      - "4688"
+      - "4673"
+      - "4672"
+    answer: 2
+    explanation: "The data-component table maps User Account Metadata to 4673."
+    source: "Detection (MITRE DET0363)"
+  - question: "A .dmp file appears right after lsass access. Action?"
+    options:
+      - "Close as a crash dump"
+      - "Escalate"
+      - "Note it and wait"
+      - "Lower the severity"
+    answer: 1
+    explanation: "The For-the-agent table says escalate."
+    source: "For the agent"
+  - question: "Which DET ID does MITRE use for this detection?"
+    options:
+      - "DET0363"
+      - "DET0327"
+      - "DET0376"
+      - "DET0441"
+    answer: 0
+    explanation: "Detection strategy DET0363."
+    source: "Detection (MITRE DET0363)"

@@ -1,0 +1,14 @@
+deck:
+  title: "T1003.001 OS Credential Dumping: LSASS Memory"
+  description: "Recall checks drawn only from the page T1003.001 OS Credential Dumping: LSASS Memory."
+cards:
+  - front: "Where does Windows keep credential material after logon?"
+    back: "In the memory of lsass.exe."
+  - front: "Tactic of T1003.001?"
+    back: "Credential Access."
+  - front: "Access mask that MITRE's analytic flags on lsass?"
+    back: "Full access, 0x1F0FFF."
+  - front: "Main Sysmon event for this detection?"
+    back: "Sysmon 10 — Process Access."
+  - front: "Credentials then used from that host?"
+    back: "Follow T1078 Valid Accounts."

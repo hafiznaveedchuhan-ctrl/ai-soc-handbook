@@ -1,0 +1,14 @@
+deck:
+  title: "False positives: backup jobs"
+  description: "Recall checks drawn only from the page False positives: backup jobs."
+cards:
+  - front: "What can Backup Operators members do?"
+    back: "Back up and restore all files regardless of permissions, sign in and shut down."
+  - front: "Default membership of Backup Operators?"
+    back: "None — the group has no members by default."
+  - front: "Which privilege in 4672 relates to backups?"
+    back: "SeBackupPrivilege — Back up files and directories."
+  - front: "Wazuh FIM default frequency?"
+    back: "43200 seconds."
+  - front: "Owner backup window?"
+    back: "Daily 01:00–05:00 UTC."

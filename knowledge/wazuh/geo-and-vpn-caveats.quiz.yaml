@@ -1,0 +1,58 @@
+quiz:
+  title: "GeoIP and VPN caveats"
+  questionsPerRound: 6
+questions:
+  - question: "Behind a VPN, which location does the GeoIP field show?"
+    options:
+      - "The end user's home city or street address"
+      - "The VPN server's location"
+      - "The SOC's own location"
+      - "The ISP's head office"
+    answer: 1
+    explanation: "MaxMind: behind a VPN it can geolocate the VPN server, not the end user."
+    source: "What a geolocation database cannot do"
+  - question: "MaxMind's estimate for city accuracy of US IPs (within 50 km)?"
+    options:
+      - "About 99.8%"
+      - "About 80%"
+      - "About 95%"
+      - "About 66%"
+    answer: 3
+    explanation: "Country ~99.8%, US state ~80%, US city ~66% within 50 km."
+    source: "What a geolocation database cannot do"
+  - question: "An alert has no GeoLocation fields. What should the note say?"
+    options:
+      - "Location unknown"
+      - "The IP is malicious"
+      - "The IP is internal and safe"
+      - "The user is abroad"
+    answer: 0
+    explanation: "Missing location can mean no source IP, a private IP or a missing database row — it is not evidence."
+    source: "For the agent"
+  - question: "Source IP is in the vpn-egress list. How is the country read?"
+    options:
+      - "Raise severity one step for the foreign country"
+      - "Close as false positive"
+      - "Ignore it — the user is behind the VPN"
+      - "Escalate under condition 2"
+    answer: 2
+    explanation: "A vpn-egress source means the country is the VPN's, not the user's."
+    source: "For the agent"
+  - question: "What does the Wazuh rule option srcgeoip compare?"
+    options:
+      - "Two logons for impossible travel"
+      - "A regex with a value decoded as srcgeoip"
+      - "An IP against AbuseIPDB"
+      - "A country against the CDB list"
+    answer: 1
+    explanation: "Wazuh rules syntax: srcgeoip compares a regular expression with a value decoded as srcgeoip."
+    source: "Where the location on an alert comes from"
+  - question: "When does the expected-countries raise NOT apply?"
+    options:
+      - "While the expected-countries list is empty"
+      - "When the alert level is 12 or above on that host"
+      - "When the source is a private address"
+      - "When the user is an administrator"
+    answer: 0
+    explanation: "Owner policy: the list starts empty, and while it is empty the rule does not apply."
+    source: "Handbook rule"

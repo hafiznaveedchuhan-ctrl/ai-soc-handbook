@@ -1,0 +1,58 @@
+quiz:
+  title: "T1566 Phishing"
+  questionsPerRound: 6
+questions:
+  - question: "Which tactic is T1566?"
+    options:
+      - "Execution"
+      - "Initial Access"
+      - "Discovery"
+      - "Command and Control"
+    answer: 1
+    explanation: "The technique table lists Initial Access."
+    source: "The technique"
+  - question: "Non-targeted phishing includes…"
+    options:
+      - "Spearphishing only"
+      - "Password spraying"
+      - "Port scanning"
+      - "Mass malware spam"
+    answer: 3
+    explanation: "Non-targeted phishing includes mass malware spam."
+    source: "The technique"
+  - question: "Which Sysmon event is file creation?"
+    options:
+      - "11"
+      - "1"
+      - "3"
+      - "22"
+    answer: 0
+    explanation: "Endpoint sources: Sysmon 11 (file) and 1 (process)."
+    source: "Detection (MITRE DET0070)"
+  - question: "SPF/DMARC fail and attachment opened. Action?"
+    options:
+      - "Close it as ordinary spam"
+      - "Note only"
+      - "Escalate per policy"
+      - "Wait for more"
+    answer: 2
+    explanation: "SPF/DMARC fail + attachment opened → escalate."
+    source: "For the agent"
+  - question: "User reports a mail; nothing executed. Do what?"
+    options:
+      - "Escalate as Critical"
+      - "Record it; check other recipients"
+      - "Close without a note"
+      - "Reimage the machine"
+    answer: 1
+    explanation: "Record in the note and check other recipients."
+    source: "For the agent"
+  - question: "Which third-party channel can carry phishing?"
+    options:
+      - "Calendar invites"
+      - "NTP time replies"
+      - "DHCP lease offers"
+      - "ARP replies"
+    answer: 0
+    explanation: "Phishing can come through social media or calendar invites."
+    source: "The technique"

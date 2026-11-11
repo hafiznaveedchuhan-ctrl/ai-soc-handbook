@@ -1,0 +1,58 @@
+quiz:
+  title: "Asset and user context in alerts"
+  questionsPerRound: 6
+questions:
+  - question: "In a JSON alert, where do agent labels appear?"
+    options:
+      - "Under data.labels"
+      - "Under agent.labels"
+      - "Under rule.groups"
+      - "Under GeoLocation"
+    answer: 1
+    explanation: "Wazuh docs show the labels nested under the agent object of the alert."
+    source: "Two Wazuh mechanisms"
+  - question: "Which NIST element asks for current hardware inventories?"
+    options:
+      - "RS.MA-02"
+      - "DE.AE-08"
+      - "RS.AN-03"
+      - "ID.AM-01"
+    answer: 3
+    explanation: "ID.AM-01: inventories of hardware managed by the organisation are maintained."
+    source: "Why context belongs in triage"
+  - question: "Which list feeds escalation condition 2?"
+    options:
+      - "etc/lists/privileged-users"
+      - "etc/lists/vpn-egress"
+      - "etc/lists/approved-scanners"
+      - "etc/lists/audit-keys"
+    answer: 0
+    explanation: "The privileged-users list maps accounts to roles for condition 2."
+    source: "Handbook labels and lists"
+  - question: "An alert has no labels. What does the agent do?"
+    options:
+      - "Guess the role from hostname"
+      - "Treat the asset as critical"
+      - "Note 'asset context missing'"
+      - "Close the alert as noise"
+    answer: 2
+    explanation: "Do not guess the role from the hostname; say asset context is missing."
+    source: "For the agent"
+  - question: "Which accounts does Microsoft say to monitor on every logon?"
+    options:
+      - "Every guest and test account"
+      - "High-value ones, e.g. domain admins"
+      - "Only accounts created this week"
+      - "Only local non-admin accounts"
+    answer: 1
+    explanation: "Microsoft names high-value accounts — DB admins, built-in admin, domain admins, service and DC accounts."
+    source: "Why context belongs in triage"
+  - question: "What may context do to a severity?"
+    options:
+      - "Raise it, never lower it"
+      - "Lower it when the asset is minor"
+      - "Replace the severity model"
+      - "Nothing — it is ignored"
+    answer: 0
+    explanation: "Context may raise a severity, never lower it."
+    source: "For the agent"

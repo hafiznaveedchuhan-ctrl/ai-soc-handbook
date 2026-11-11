@@ -1,0 +1,58 @@
+quiz:
+  title: "SSH invalid (non-existent) user"
+  questionsPerRound: 6
+questions:
+  - question: "Which rule fires on repeated denied-user attempts?"
+    options:
+      - "5712"
+      - "5719"
+      - "5710"
+      - "5716"
+    answer: 1
+    explanation: "5719 level 10 — multiple access attempts with a denied user."
+    source: "What Wazuh matches"
+  - question: "Level of 5710?"
+    options:
+      - "10"
+      - "3"
+      - "8"
+      - "5"
+    answer: 3
+    explanation: "5710 is level 5."
+    source: "What Wazuh matches"
+  - question: "Text matched by 5718?"
+    options:
+      - "not allowed because"
+      - "invalid user"
+      - "Failed password"
+      - "Accepted publickey"
+    answer: 0
+    explanation: "5718 matches 'not allowed because'."
+    source: "What Wazuh matches"
+  - question: "MITRE tags on 5710?"
+    options:
+      - "T1110 only"
+      - "T1078 and T1021"
+      - "T1110.001 and T1021.004"
+      - "T1046 and T1190"
+    answer: 2
+    explanation: "5710 → T1110.001 and T1021.004."
+    source: "What Wazuh matches"
+  - question: "5710 for a name like a real employee's. Reading?"
+    options:
+      - "Certain typo — close it"
+      - "Possible targeted attempt — note it"
+      - "Scanner noise — ignore it"
+      - "Service account — allow-list it"
+    answer: 1
+    explanation: "A real-looking name suggests a targeted attempt."
+    source: "For the agent"
+  - question: "After 5712 from a public IP, which rule to look for?"
+    options:
+      - "5715 from that IP"
+      - "5731 from any IP"
+      - "5700 from the same host"
+      - "5404 from the same user"
+    answer: 0
+    explanation: "Check for any 5715 (success) from that IP."
+    source: "For the agent"

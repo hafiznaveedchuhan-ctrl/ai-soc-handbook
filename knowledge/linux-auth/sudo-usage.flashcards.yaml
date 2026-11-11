@@ -1,0 +1,14 @@
+deck:
+  title: "sudo usage"
+  description: "Recall checks drawn only from the page sudo usage."
+cards:
+  - front: "Rule 5404?"
+    back: "Three failed sudo password attempts (level 10)."
+  - front: "Rule 5405?"
+    back: "user NOT in sudoers — unauthorized sudo attempt (level 5)."
+  - front: "Rule 5403?"
+    back: "First time a user executed sudo (level 4)."
+  - front: "MITRE tag on all sudo rules?"
+    back: "T1548.003."
+  - front: "5403 for a service or new account?"
+    back: "Unexpected first sudo — escalate per policy."
