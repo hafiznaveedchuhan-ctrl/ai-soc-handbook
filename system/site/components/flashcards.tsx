@@ -372,7 +372,10 @@ export function Flashcards({ deck }: { deck: DeckEntry }): ReactElement {
                 type="button"
                 onClick={() => setRevealed((r) => !r)}
                 aria-expanded={revealed}
-                aria-label={revealed ? "Hide the answer" : "Reveal the answer"}
+                // No aria-label: it replaced the card's own visible text as its
+                // accessible name, so a screen reader never heard the question
+                // (Lighthouse label-content-name-mismatch). The visible face is
+                // the name; aria-expanded says whether the answer is showing.
                 // The focus ring is drawn on the FACES, not here: an outline on
                 // a preserve-3d element rotates with it and renders as a
                 // sheared rectangle mid-flip.
@@ -553,7 +556,9 @@ function CardFace({
         otherwise flip the card out from under the reader. */}
       <span
         role="button"
-        tabIndex={0}
+        // The hidden face is aria-hidden, so its copy action must not be
+        // reachable by Tab either (Lighthouse aria-hidden-focus).
+        tabIndex={hidden ? -1 : 0}
         aria-label={copied ? "Copied" : "Copy this card"}
         onClick={(event) => {
           event.stopPropagation();

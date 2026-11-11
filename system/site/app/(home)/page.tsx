@@ -3,8 +3,24 @@ import type { ReactElement } from "react";
 import mark from "@/app/icon.png";
 import { FooterMark } from "@/components/footer-mark";
 import { HomeCover } from "@/components/home-cover";
+import { TriageLookup, type LookupEntry } from "@/components/triage-lookup";
 import { appName, appPurpose, appTitle } from "@/lib/shared";
 import { entriesUnder, entryFor, getSortedPages } from "@/lib/source";
+
+/**
+ * The Quick Triage Lookup's index (Feature 03), built here at build time from
+ * the staged record: every document the machine surfaces admit (no lifecycle
+ * badge), labelled with its top-level folder's own title. Nothing authored.
+ */
+function lookupIndex(pages: ReturnType<typeof getSortedPages>): LookupEntry[] {
+  const folders = entriesUnder("").filter((entry) => entry.documents > 0);
+  return pages.flatMap((page): LookupEntry[] => {
+    const entry = entryFor(page);
+    if (entry.badge !== null) return [];
+    const folder = folders.find((f) => entry.url.startsWith(`${f.url.replace(/\/$/, "")}/`));
+    return [{ url: entry.url, title: entry.title, description: entry.description ?? "", section: folder?.title ?? "" }];
+  });
+}
 
 /**
  * The front door of a system of record.
@@ -65,6 +81,7 @@ export default function HomePage(): ReactElement {
         firstUrl={first.url}
         lead={lead}
         behind={behind}
+        lookup={<TriageLookup entries={lookupIndex(pages)} />}
         // Signed from inside the cover, so the front door is one screen rather
         // than a band with a strip of page beneath it.
         foot={

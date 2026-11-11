@@ -238,7 +238,11 @@ export function GovernanceMeta({
    */
   return (
     <div className="mb-7 border-b border-fd-border pb-4">
-      <dl className="flex flex-wrap items-baseline gap-x-8 gap-y-2.5">
+      {/* The facts are a <dl>; the actions beside them are not facts, so they
+        sit OUTSIDE it (a <dl> may only hold dt/dd groups — Lighthouse
+        definition-list). `contents` keeps the one flex row it always was. */}
+      <div className="flex flex-wrap items-baseline gap-x-8 gap-y-2.5">
+      <dl className="contents">
         {state === null && alsoBadge === null ? null : (
           <Fact label="Status">
             <span className="flex flex-wrap items-baseline gap-1.5">
@@ -265,6 +269,7 @@ export function GovernanceMeta({
             )}
           </span>
         </Fact>
+      </dl>
         {/* Actions ride tier ONE: a reader who wants the bytes wants them
           immediately, and this is the row with room. */}
         {markdownUrl === undefined && minutes === undefined ? null : (
@@ -278,7 +283,7 @@ export function GovernanceMeta({
             )}
           </div>
         )}
-      </dl>
+      </div>
       {/* Tier two RECEDES. It is provenance — who let this in, when it takes
           effect, what it replaced — and it is read when a reader goes looking,
           not scanned. At full `--foreground` weight it competed with the two

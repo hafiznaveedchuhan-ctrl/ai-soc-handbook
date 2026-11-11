@@ -187,7 +187,11 @@ export function Quiz({ quiz }: { quiz: QuizEntry }): ReactElement {
             {answeredCount} answered
           </p>
         </div>
-        <Progress value={(answeredCount / round.length) * 100} className="mb-8 h-1" />
+        <Progress
+          value={(answeredCount / round.length) * 100}
+          aria-label={`${answeredCount} of ${round.length} answered`}
+          className="mb-8 h-1"
+        />
 
         <Card>
           <CardContent className="flex flex-col gap-6 py-8">

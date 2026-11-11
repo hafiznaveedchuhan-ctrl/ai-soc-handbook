@@ -43,6 +43,11 @@ export default function Layout({ children }: LayoutProps<"/">) {
           }}
         />
         <RootProvider
+          // SOC console (Feature 03): navy dark is the default — analysts work
+          // in dim rooms on long shifts. A reader's own choice (the theme
+          // toggle) still wins and is remembered; "system" is not the default
+          // because most OSes report light during the day.
+          theme={{ defaultTheme: "dark", enableSystem: false }}
           search={{
             // Static search: the browser downloads the index that
             // app/api/search exports at build time (staticGET) and runs
