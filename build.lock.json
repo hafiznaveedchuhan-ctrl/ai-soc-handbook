@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:9a8af4e42af6d51caeae9de29f20a4f32112b0b679150a83513c30008ae9df6e",
+  "build_id": "sha256:eb5344c3fb916f5e4b2be6ba0266ee57dc28f44a516f02f29b6f51c87ab127cd",
   "ksor_version": "0.0.61",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "6e736f8f4df1fc59be66bb3e34a2b28e418719fa",
+  "source_commit": "1115e2ef1fd47436a8250901539705befc4d337f",
   "dirty": false,
-  "as_of": "2026-11-11T12:24:22.231Z",
+  "as_of": "2026-11-11T12:46:32.876Z",
   "drafts": "hidden",
   "instance_sha256": "fabfc6a639ba77d79617c1a5d02e6fae1f7e9c574e334eb59d7f512322a876d6",
   "policy_sha256": "3f87e224caee77e6d0c4efb564faf933e5386959ade9f08db7b5cb615ebefebd",
@@ -819,7 +819,7 @@
     },
     {
       "path": "playbooks/added-to-admin-group.md",
-      "sha256": "c87241e4f7725bc512029773267e23d30bf9ae84e43d7e3f733b41c321128387",
+      "sha256": "70e851d118f1100330ec2a16b9da8115e0bfa9d28b4eb9a75f3f4c8a109e0076",
       "status": "stable",
       "audience": [
         "public"
@@ -951,7 +951,7 @@
     },
     {
       "path": "rules-map/severity-model.md",
-      "sha256": "7b6d97589e54c3c8c2e2fbd5cbce2ff8df2f9739b3f49dcaa871aff9f947ae0f",
+      "sha256": "71a34a54092ef164379e9ff2721bad876d76dce8d08f29803f15361b780a5ec5",
       "status": "stable",
       "audience": [
         "public"
@@ -2565,7 +2565,7 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "a7e7985b60c46e513017141802a7766894a71cdcd381e9b247ea58ca40b2fc54",
+      "sha256": "e39106fb83f260b26ad040ab0b9187efc620339d59c9273deca1a43d53bebc7e",
       "files": 386
     }
   ]
